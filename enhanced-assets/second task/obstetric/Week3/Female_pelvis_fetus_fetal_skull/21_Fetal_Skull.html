@@ -406,52 +406,10 @@ details.study-section > :not(summary) {
 
   
   
-  /* ===== SCROLL TO TABLE OF CONTENTS BUTTON (right side) ===== */
-  .scroll-toc-btn {
-    position: fixed;
-    right: 24px;
-    bottom: 80px; /* above the theme toggle */
-    z-index: 99999;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: none;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    color: #ffffff;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(37,99,235,0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    line-height: 1;
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
-  }
-  .scroll-toc-btn.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-  .scroll-toc-btn:hover {
-    transform: translateY(-2px) scale(1.08);
-    box-shadow: 0 6px 24px rgba(37,99,235,0.5);
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  }
-  body.dark .scroll-toc-btn {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    box-shadow: 0 4px 16px rgba(59,130,246,0.3);
-  }
-  body.dark .scroll-toc-btn:hover {
-    box-shadow: 0 6px 24px rgba(59,130,246,0.5);
-  }
+  
 </style>
 </head>
 <body>
-<button class="scroll-toc-btn" id="scrollTocBtn" title="Jump to Table of Contents">📋</button>
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
 
@@ -462,6 +420,7 @@ details.study-section > :not(summary) {
 <nav class="topic-navigation">
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+<a href="#" onclick="document.querySelector('nav.toc')?.scrollIntoView({behavior:'smooth',block:'start'}) || window.scrollTo({top:0,behavior:'smooth'}); return false;" title="Go to Table of Contents">⬆ TOC</a>
 </nav>
 
 <div class="wrap">
@@ -496,7 +455,8 @@ details.study-section > :not(summary) {
       <li><a href="#s9">Transverse diameters (4)</a></li>
       <li><a href="#s10">Student activity · Assessment · References</a></li>
     </ol>
-  </nav>
+  <a href="#" onclick="document.querySelector('nav.toc')?.scrollIntoView({behavior:'smooth',block:'start'}) || window.scrollTo({top:0,behavior:'smooth'}); return false;" title="Go to Table of Contents">⬆ TOC</a>
+</nav>
 
   <!-- ============================================================ s1 -->
   <section id="s1">
@@ -2362,37 +2322,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 </script>
 
-  /* Scroll to Table of Contents button */
-  (function() {
-    var tocBtn = document.getElementById('scrollTocBtn');
-    if (!tocBtn) return;
-
-    /* Show button when scrolled past the TOC */
-    var tocNav = document.querySelector('nav.toc');
-    var checkVisibility = function() {
-      if (!tocNav) { tocBtn.classList.add('visible'); return; }
-      var rect = tocNav.getBoundingClientRect();
-      /* Show button when TOC is above viewport (scrolled past it) */
-      if (rect.bottom < 0) {
-        tocBtn.classList.add('visible');
-      } else {
-        tocBtn.classList.remove('visible');
-      }
-    };
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility();
-
-    /* Smooth scroll to TOC on click */
-    tocBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (tocNav) {
-        tocNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        /* fallback: scroll to top of page */
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-  })();
+  
 
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ObsTaric — Obstetrics Study</title>
+  <meta http-equiv="refresh" content="0; url=dashboard-enhanced.html">
+  <script>
+    window.location.replace('dashboard-enhanced.html');
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #4a5568;
+    }
+    .loading {
+      text-align: center;
+    }
+    .loading .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid #e2e8f0;
+      border-top-color: #2563eb;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading p { font-size: 14px; }
+    .loading a { color: #2563eb; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>جاري التحميل...</p>
+    <p><a href="dashboard-enhanced.html">اضغط هنا إذا لم يتم التحويل تلقائياً</a></p>
+  </div>
+</body>
+</html>

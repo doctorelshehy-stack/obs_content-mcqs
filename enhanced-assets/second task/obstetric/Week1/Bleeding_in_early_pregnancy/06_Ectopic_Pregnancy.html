@@ -706,47 +706,53 @@ details.study-section > :not(summary) {
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
   
-  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
-  .back-content-btn {
+  
+  /* ===== SCROLL TO TABLE OF CONTENTS BUTTON (right side) ===== */
+  .scroll-toc-btn {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    right: 24px;
+    bottom: 80px; /* above the theme toggle */
     z-index: 99999;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.92);
-    color: #1a202c;
-    font-size: 18px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #ffffff;
+    font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(37,99,235,0.35);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
-    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
     text-decoration: none;
     line-height: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
   }
-  .back-content-btn:hover {
-    background: #ffffff;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
-    transform: scale(1.1);
+  .scroll-toc-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
-  body.dark .back-content-btn {
-    background: rgba(30,30,46,0.92);
-    color: #e2e8f0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  .scroll-toc-btn:hover {
+    transform: translateY(-2px) scale(1.08);
+    box-shadow: 0 6px 24px rgba(37,99,235,0.5);
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   }
-  body.dark .back-content-btn:hover {
-    background: #1e1e2e;
+  body.dark .scroll-toc-btn {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    box-shadow: 0 4px 16px rgba(59,130,246,0.3);
+  }
+  body.dark .scroll-toc-btn:hover {
+    box-shadow: 0 6px 24px rgba(59,130,246,0.5);
   }
 </style>
 </head>
 <body>
-<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
-
+<button class="scroll-toc-btn" id="scrollTocBtn" title="Jump to Table of Contents">📋</button>
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
 
@@ -4251,5 +4257,38 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
+
+  /* Scroll to Table of Contents button */
+  (function() {
+    var tocBtn = document.getElementById('scrollTocBtn');
+    if (!tocBtn) return;
+
+    /* Show button when scrolled past the TOC */
+    var tocNav = document.querySelector('nav.toc');
+    var checkVisibility = function() {
+      if (!tocNav) { tocBtn.classList.add('visible'); return; }
+      var rect = tocNav.getBoundingClientRect();
+      /* Show button when TOC is above viewport (scrolled past it) */
+      if (rect.bottom < 0) {
+        tocBtn.classList.add('visible');
+      } else {
+        tocBtn.classList.remove('visible');
+      }
+    };
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+
+    /* Smooth scroll to TOC on click */
+    tocBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (tocNav) {
+        tocNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        /* fallback: scroll to top of page */
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  })();
+
 </body>
 </html>

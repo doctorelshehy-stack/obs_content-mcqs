@@ -451,11 +451,49 @@ details.study-section > :not(summary) {
 }
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
+
+
+  /* ===== SIDEBAR BACK BUTTON ===== */
+  .sidebar-back-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 99997;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    color: #1a202c;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+  }
+  .sidebar-back-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    transform: scale(1.05);
+  }
+  body.dark .sidebar-back-btn {
+    background: rgba(30,30,46,0.9);
+    color: #e2e8f0;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  }
+  body.dark .sidebar-back-btn:hover {
+    background: #1e1e2e;
+  }
 </style></head>
 <body>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
+
+<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -2744,5 +2782,28 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
+
+  /* Sidebar back button */
+  var backBtn = document.getElementById('sidebarBackBtn');
+  if (backBtn) {
+    backBtn.addEventListener('click', function() {
+      try {
+        if (window.parent && window.parent !== window) {
+          /* Inside iframe -- try to open parent sidebar */
+          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
+                 || window.parent.document.getElementById('sidebarCollapseBtn');
+          if (pBtn) { pBtn.click(); return; }
+          /* fallback: navigate parent to dashboard */
+          window.parent.location.href = 'dashboard-enhanced.html';
+        } else {
+          /* Direct load -- go to dashboard */
+          window.location.href = '../../../../../dashboard-enhanced.html';
+        }
+      } catch(e) {
+        /* Cross-origin or error fallback */
+        window.location.href = '../../../../../dashboard-enhanced.html';
+      }
+    });
+  }
 </body>
 </html>

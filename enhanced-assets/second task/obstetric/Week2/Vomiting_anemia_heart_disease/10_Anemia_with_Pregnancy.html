@@ -504,7 +504,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -618,7 +617,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -717,49 +715,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -769,7 +768,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -822,7 +820,6 @@ details.study-section > :not(summary) {
   <div class="lead">
     Decrease in the total red blood cells (RBCs) or hemoglobin in the blood during pregnancy leading to decrease in oxygen carrying capacity.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -1028,7 +1025,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>The 2<sup>nd</sup>-trimester cutoff of 10.5 g/dL (not 11) is the most commonly forgotten — any value below this in the middle three months is anemia, even though 10.6 g/dL would be acceptable in early pregnancy.</div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1227,7 +1223,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout danger"><span class="label">Danger</span>In severe cases, congestive heart failure can occur. Always auscultate the heart and check for a flow murmur / gallop rhythm in any pregnant patient with profound anemia.</div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1429,7 +1424,6 @@ details.study-section > :not(summary) {
     <li><strong>Acquired</strong> — iron-deficiency anemia.</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1614,7 +1608,6 @@ details.study-section > :not(summary) {
     <p>There is an increase in overall blood volume during pregnancy, there is an increase in plasma more than red blood cell mass. The red cell mass rises, but plasma rises <em>more</em> — the resulting hemodilution lowers the hemoglobin concentration without any true RBC deficit.</p>
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>Dilutional anemia is <strong>physiologic</strong>, not pathologic — the body's way of improving placental perfusion by reducing blood viscosity. The mid-pregnancy Hb nadir (~10.5 g/dL) is when it is most pronounced.</div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1826,7 +1819,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout warn"><span class="label">Warn</span>Uterine inertia and postpartum atony share the same mechanism — the myometrium is a working muscle that fails in hypoxia. Anemic mothers bleed more, contract less, and tolerate blood loss worse than non-anemic mothers.</div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2010,7 +2002,6 @@ details.study-section > :not(summary) {
     <li>Aggravation of pre-existing anemia.</li>
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>Pregnancy is a <strong>stress test</strong> for the hematopoietic system. Iron stores that comfortably carry a non-pregnant woman become inadequate when the red-cell mass must expand by ~30% — unmasking latent deficiencies.</div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -2272,7 +2263,6 @@ details.study-section > :not(summary) {
   <div class="callout cyan"><span class="label">Pearl</span>The 1-hour-before-meals rule plus vitamin C co-administration can <strong>double</strong> oral iron absorption — the cheapest intervention in iron-deficiency anemia, often missed.</div>
   <div class="callout danger"><span class="label">Danger</span>Anaphylaxis to IV iron dextran, while uncommon, is the reason it is contraindicated in the 1<sup>st</sup> trimester — every maternal life lost this way is preventable by using the safer sucrose complex in the 2<sup>nd</sup>/3<sup>rd</sup> trimesters only.</div>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2499,7 +2489,6 @@ details.study-section > :not(summary) {
 
   <div class="callout cyan"><span class="label">Pearl</span>Hypersegmented neutrophils (&gt;5 lobes) on a routine blood film are often the <strong>earliest</strong> sign of folate deficiency — they appear before the macrocytosis and before the hemoglobin falls.</div>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2709,7 +2698,6 @@ details.study-section > :not(summary) {
 
   <div class="callout warn"><span class="label">Warn</span>Subacute combined degeneration of the spinal cord (dorsal columns + corticospinal tracts) is the <strong>neurologic hallmark</strong> of B12 deficiency — numbness, paresthesia, ataxia, and spastic weakness. It is potentially <em>irreversible</em> if treatment is delayed, distinguishing B12 deficiency from the more easily corrected folate deficiency.</div>
 
-
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2893,7 +2881,6 @@ details.study-section > :not(summary) {
     An autosomal inherited disorder resulted from failure of production of either α chain (α-thalassemia) or β chain (β-thalassemia) of the hemoglobin molecule and their replacement with other polypeptide chains.
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>Thalassemia is a <strong>quantitative</strong> disorder — the globin chains are made in the wrong numbers — whereas sickle cell disease is a <strong>qualitative</strong> disorder — the chains are made but defective. Both are autosomal, but the underlying molecular pathology is different.</div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -3091,7 +3078,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout danger"><span class="label">Danger</span>α-Thalassemia major is incompatible with extrauterine life — the fetus cannot make any functional hemoglobin (HbF still requires α-chains). The obstetric implication is severe fetal hydrops and stillbirth, and the family must be offered genetic counseling.</div>
 
-
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3286,7 +3272,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>Unlike α-thalassemia major, β-thalassemia major is <em>not</em> a fetal disease — the fetus survives on HbF (γ-chains) and only becomes symptomatic in the first year of life as HbF declines. Hence the source's note "starts in childhood."</div>
-
 
         <div class="mcq-block" data-subtopic="s14">
           <div class="mcq-header">
@@ -3490,7 +3475,6 @@ details.study-section > :not(summary) {
   </ul>
 
   <div class="callout warn"><span class="label">Warn</span>Thalassemia and iron-deficiency anemia share a <strong>microcytic hypochromic</strong> blood film. The discriminating test is <em>not</em> the MCV or the MCH — it is <strong>serum ferritin</strong> (low in IDA, normal/high in thalassemia trait) and <strong>hemoglobin electrophoresis</strong> (diagnostic in thalassemia).</div>
-
 
         <div class="mcq-block" data-subtopic="s15">
           <div class="mcq-header">
@@ -3720,7 +3704,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -3764,7 +3747,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -3793,28 +3775,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

@@ -79,7 +79,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -193,7 +192,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -292,49 +290,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -392,7 +391,6 @@
 <li>Despite the name, it is <b>NOT a true embolism</b> in the classical sense — the dominant mechanism is <b>anaphylaxis-like reaction</b> to fetal antigens (similar to anaphylactic shock) combined with mechanical obstruction of pulmonary vessels by fetal debris.</li>
 </ul>
 <div class="pearl"><b>Why "via the placental bed"?</b> The placenta is a high-flow, low-resistance vascular interface between mother and fetus. Disruption of this barrier (e.g., by placental abruption, uterine trauma, or operative delivery) is the gateway for fetal material to enter the maternal venous circulation.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -585,7 +583,6 @@
 <h3 class="sub">Potentiation by meconium</h3>
 <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"The above factors also lead to <b>fetal distress → meconium stained amniotic fluid → this potentiate the toxic nature of amniotic fluid and worsen the condition.</b>"</p>
 <div class="danger"><b>Meconium = potentiator, not initiator.</b> Meconium-stained AF carries vasoactive substances (bile acids, free fatty acids) and particulate matter that amplify the anaphylactoid reaction. Fetal distress is therefore both a consequence of the entry conditions and a worsening factor once AF enters the circulation.</div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -881,7 +878,6 @@
 <h3 class="sub">Verbatim clinical-picture description (from source)</h3>
 <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Immediately or shortly after difficult delivery: <b>Respiratory distress (RDS) (severe dyspnea and cyanosis), circulatory collapse (extensive pulmonary vascular obstruction due to the amniotic fluid particulate matter → acute core pulmonale → abrupt hypoxia and CHF.</b> <b>DIC → bleeding from genital tract and all other sites of trauma, deep coma and immediate death in more than 50% of cases.</b>"</p>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1107,7 +1103,6 @@
 </div>
 <div class="warn"><b>Source caveat:</b> AFE can occur in <b>any</b> pregnancy — most cases occur in women with NO identifiable risk factor. The list above describes <i>statistical associations</i>, not deterministic causes. A "low-risk" patient is not protected.</div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1328,7 +1323,6 @@
 </tr>
 </table>
 <div class="anchor"><b>Mnemonic: "H-C-D" — Hypoxia, Collapse, DIC.</b> Any 2 of 3 within minutes of delivery should trigger AFE protocol.</div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1563,7 +1557,6 @@
 <p style="font-size:11.5px;color:#475569;margin-top:6px"><i>This is the only histopathologically confirmatory test. In survivors, the diagnosis remains presumptive (clinical + lab + imaging).</i></p>
 </div>
 <div class="pearl"><b>No test confirms AFE in real time.</b> The clinical triad (hypoxia + collapse + DIC) within minutes of a difficult delivery, in the absence of another clear cause, is the working definition used to start AFE resuscitation.</div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -1905,7 +1898,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -1934,28 +1926,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

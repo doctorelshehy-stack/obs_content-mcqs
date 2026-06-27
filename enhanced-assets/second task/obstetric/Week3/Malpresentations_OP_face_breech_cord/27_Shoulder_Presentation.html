@@ -268,7 +268,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -382,7 +381,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -481,49 +479,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -590,7 +589,6 @@
 <h4>💡 CLINICAL PEARL — "Perpendicular"</h4>
 <p style="font-size:13px">The key word in the definition is <strong>perpendicular</strong>: the fetal spine forms a 90° angle to the maternal spine. In contrast to a breech or cephalic lie (both longitudinal), in a transverse lie the long axis of the fetus is across the uterine cavity — the fetal head sits in one maternal iliac fossa and the buttocks in the other.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -782,7 +780,6 @@
 <div class="cause-card"><b>8. Feto-pelvic disproportion</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Disproportion between fetus and pelvis.</p></div>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -968,7 +965,6 @@
 </div>
 <div class="cap">Figure 1 — 3D-rendered medical illustration of a fetus in a <strong>transverse lie</strong> inside the pregnant uterus. The fetal head sits in one maternal iliac fossa and the buttocks in the other, with the fetal vertebral column oriented <strong>perpendicular</strong> to the maternal spine — the exact arrangement described in §2 Definition. The illustration is placed on the title page of the chapter to anchor the reader's mental model of what a "transverse lie" looks like before the etiology, positions, and management sections begin.</div>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1163,7 +1159,6 @@
 <h4>💡 CLINICAL PEARL — Commonest position is LScA</h4>
 <p style="font-size:13px">The <strong>left scapulo-anterior (LScA)</strong> position is the commonest position for a shoulder presentation — i.e., the fetal scapula is directed toward the mother's left front. This mirrors the breech pattern, where the left sacro-anterior (LSA) position is also the commonest. (Both LScA and LSA share the underlying reason: the maternal rectosigmoid on the left displaces the fetus toward the right side of the uterus during the third trimester, so the fetal "back" tends to face the maternal left front.)</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1368,7 +1363,6 @@
 <p style="font-size:13.5px"><strong>Confirm the diagnosis, and may indicate possible causes</strong> such as multiple gestation or a tumor.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1565,7 +1559,6 @@
 </div>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1758,7 +1751,6 @@
 <h4>⚠ EXAM NOTE — Why ECV at 36 weeks</h4>
 <p style="font-size:13px">In a singleton pregnancy, ECV is performed at 36 weeks (slightly earlier than the 37 weeks for breech) because if ECV fails or the fetus reverts to transverse, there is still ~3-4 weeks for a planned cesarean before spontaneous labor. After 36 weeks, the risk of spontaneous reversion back to transverse is lower than at earlier gestations.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -1958,7 +1950,6 @@
 <p style="font-size:13px">A 1st twin in transverse lie <strong>cannot be delivered vaginally</strong> under any circumstance. The only safe delivery is cesarean. (Internal podalic version is reserved for the 2nd twin only, after the 1st twin has already been delivered vaginally — by which point the uterus is open and access is direct.)</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2144,7 +2135,6 @@
 <h4>💡 CLINICAL PEARL — "Even if the baby is dead"</h4>
 <p style="font-size:13px">This is a striking statement that has historical and practical importance. In the era before modern obstetrics, a dead fetus in transverse lie was often delivered by destructive operations (decapitation, evisceration). The source explicitly states that <strong>CS is the safest option even in that scenario</strong> — which reflects modern risk-benefit analysis: the maternal morbidity and mortality of destructive procedures (uterine rupture, sepsis, hemorrhage) is now considered to outweigh the morbidity of a straightforward cesarean, even for a non-viable fetus.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
@@ -2342,7 +2332,6 @@
 <div class="cap">Figure 2 — Black-and-white line drawing of a <strong>neglected shoulder presentation</strong>: the fetus lies transversely with the shoulder impacted in the maternal pelvis and a fetal arm prolapsing below. This is the classic finding in obstructed labor with shoulder presentation — the fetus is severely distressed or already dead, the amniotic fluid has drained, and vaginal delivery is impossible without destructive operation or cesarean.</div>
 </div>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
@@ -2560,7 +2549,6 @@
 <h4>🚨 CRITICAL — Explore uterus after delivery</h4>
 <p style="font-size:13px"><strong>Manually explore the uterus after delivery of the placenta to look for uterine rupture, and administer routinely antibiotic prophylaxis.</strong> Internal podalic version carries a non-trivial risk of uterine rupture — the bimanual manipulation can tear the lower segment, especially in a primigravida or with a tightly retracted uterus. Routine manual exploration is therefore the standard of care.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -2841,7 +2829,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2870,28 +2857,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

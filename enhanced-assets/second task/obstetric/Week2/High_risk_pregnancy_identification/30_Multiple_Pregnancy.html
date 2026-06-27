@@ -238,7 +238,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -352,7 +351,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -451,49 +449,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -596,7 +595,6 @@
 </ul>
 <p style="font-size:13px;margin:6px 0 0">The <strong>timing</strong> of the monozygotic embryo's cleavage (see §5 + Figure 2) determines the chorionicity and amnionicity — the later the cleavage, the more structures the twins share. The clinical importance of chorionicity is that <strong>monochorionic twins share a placenta</strong> and can therefore develop <strong>twin-to-twin transfusion syndrome (TTTS)</strong> — see §12.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -788,7 +786,6 @@
 <h4>🧠 MEMORY ANCHOR — Why start with this comparison?</h4>
 <p style="font-size:13px">The chapter opens with this comparison because the entire downstream management is driven by one question: <strong>how many fetuses?</strong> Antenatal care frequency, ultrasound schedule, delivery route, delivery timing, third-stage precautions, and complication surveillance <em>all</em> change when the answer is 2 (or 3+) instead of 1. The smiley-face icons below each panel are the simplest possible "count" — and they remind the clinician that everything that follows in the chapter is a consequence of that count being greater than 1.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -1007,7 +1004,6 @@
 <p style="font-size:13px">The source lists "Maternal weight and height" as a single risk factor, with the specific quantitative criterion <strong>BMI ≥ 30 kg/m² AND ≥ 165 cm</strong> applying to <strong>dizygotic twin births</strong> only. It is easy to misread this as two separate risk factors (one for weight, one for height), but the source treats it as a single combined criterion — both the BMI threshold <em>and</em> the height threshold must be met for the increased dizygotic risk to apply.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1221,7 +1217,6 @@
 <h4>💡 CLINICAL PEARL — "The later, the more shared" — the unifying rule</h4>
 <p style="font-size:13px">Notice the pattern in the 4 stages: as the cleavage day number goes up (1-3 → 4-8 → 8-12 → &gt;12), the number of shared structures goes up (dichorionic-diamniotic → monochorionic-diamniotic → monochorionic-monoamniotic → conjoined). The biological reason is intuitive: the earlier the split, the more time each half-embryo has to develop its own membranes before the next membrane forms around it. Clinically, the more structures the twins share, the higher the risk of complications — so monochorionic-monoamniotic twins are higher-risk than monochorionic-diamniotic twins, which in turn are higher-risk than dichorionic-diamniotic twins.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1448,7 +1443,6 @@
 <p style="font-size:13px;margin:6px 0 0">When all three findings are present, multiple pregnancy is highly likely at the bedside — and ultrasound is the next step to confirm and to determine chorionicity (see §7).</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1670,7 +1664,6 @@
 <p style="font-size:13px"><strong>Lambda (λ) = thick wedge = dichorionic</strong> (two placentas, the wedge is the chorion between them). <strong>T = thin interface = monochorionic</strong> (one placenta, the T is where the two amniotic membranes meet the shared placenta). This is the single most important ultrasound distinction in multiple pregnancy, because <strong>monochorionic = shared placenta = risk of TTTS</strong> (see §12).</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1866,7 +1859,6 @@
 <h4>🧠 MEMORY ANCHOR — "7 Antenatal care adjustments" (the rule of "more")</h4>
 <p style="font-size:13px">Notice that the theme running through all 7 adjustments is <strong>"more"</strong> — more visits, more ultrasounds, more nutrition, more monitoring (for both maternal and fetal complications), and more active prevention (of preterm delivery). The principle is: a multiple pregnancy concentrates the risks of a singleton pregnancy and adds new risks of its own, so antenatal care is intensified proportionally.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -2103,7 +2095,6 @@
 <p style="font-size:13px">The source's "Timing of delivery" subsection begins with the phrase "Depending on chorionicity and <strong>amnioniticy</strong>." The correct spelling is <strong>"amnionicity"</strong> (the property of having one or more amnions — parallel to "chorionicity"). The source's typo is preserved verbatim in the §9 heading below, and this inline DANGER callout explains the correction.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2302,7 +2293,6 @@
 <p style="font-size:13px">A useful clinical rule of thumb: most of the complications in the list above (GDM, preeclampsia, anemia, PPH, preterm labor) occur <strong>2-3 times more often</strong> in twin pregnancies than in singleton pregnancies. The biological reason is that two fetuses effectively <strong>double</strong> the placental mass, the blood volume demand, the iron demand, the mechanical load on the uterus, and the cardiovascular workload — so every complication that scales with placental mass or cardiovascular demand is amplified proportionally.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2496,7 +2486,6 @@
 <h4>🚨 DANGER — "Neonatal death" is the only fatal complication on the list</h4>
 <p style="font-size:13px">Of the 5 fetal complications, 4 (preterm labor, anomalies, LBW, discordant growth) are <strong>morbidities</strong> that may resolve with appropriate neonatal care — but <strong>neonatal death</strong> is a <strong>mortality</strong>, and it is what all the upstream interventions (intensified antenatal care, chorionicity-determined delivery timing, TTTS surveillance) are designed to prevent. Every other complication on the list is a risk factor for this one.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
@@ -2726,7 +2715,6 @@
 <h4>🧠 MEMORY ANCHOR — "Anastomosis = imbalance = Donor vs Recipient"</h4>
 <p style="font-size:13px">Three nested facts to remember about TTTS: (1) <strong>Anastomosis</strong> in the shared placenta is the anatomic prerequisite. (2) When the anastomoses are <strong>imbalanced</strong> (blood flows in one direction), the result is TTTS. (3) The clinical picture is always asymmetric — one twin (the donor) becomes deficient, the other (the recipient) becomes excessive. Fetoscopic laser occlusion is the definitive treatment because it eliminates the anatomic prerequisite by ablating the anastomoses themselves.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -3023,7 +3011,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -3052,28 +3039,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

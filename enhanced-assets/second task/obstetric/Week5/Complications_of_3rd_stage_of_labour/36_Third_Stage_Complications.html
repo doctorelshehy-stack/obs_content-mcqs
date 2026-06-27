@@ -85,7 +85,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -199,7 +198,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -298,49 +296,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -410,7 +409,6 @@
 <b>The 24-hour boundary is the key clinical pivot.</b> Primary PPH is the <b>acute life-threatening</b> emergency (atonic PPH, trauma, retained tissue) requiring resuscitation <i>now</i>. Secondary PPH is the <b>subacute infection/retention</b> problem (retained placental remnants, sepsis, choriocarcinoma) — same volume, different timeframe, different workup.
     </div>
 <div class="note">Volume thresholds (500 ml vaginal / 1000 ml CS) are <b>classical</b> definitions. In practice, PPH is also diagnosed when bleeding causes <b>hemodynamic compromise</b> (tachycardia, hypotension) regardless of absolute volume — <i>any</i> blood loss making the mother unstable is PPH.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -634,7 +632,6 @@
 </div>
 </div>
 <p style="font-size:12px;color:#64748B"><i>All 13 risk factors preserved verbatim from source. The "13" count is one more than the textbook’s 4 T’s + 12 listed; here the 13th is "General anesthesia" (a separate item in the source list).</i></p>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -863,7 +860,6 @@
 </ul>
 </div>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1109,7 +1105,6 @@
 <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Uterine balloon tamponade using <b>Sengstaken–Blakemore tube or Bakri balloon</b> can stop postpartum hemorrhage."</p>
 <div class="anchor"><b>Step-wise approach to atonic PPH (mnemonic — "4 + 1"):</b> <b>(1)</b> Resuscitate (IV/blood) · <b>(2)</b> Massage + bimanual compression · <b>(3)</b> Aortic compression if severe · <b>(4)</b> Medications (oxytocin → ergometrine → carboprost → misoprostol) · <b>(+1)</b> Surgery (B-Lynch → artery ligation → hysterectomy) <i>or</i> balloon tamponade (Bakri / Sengstaken-Blakemore).</div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1324,7 +1319,6 @@
 <h4>Treatment</h4>
 <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Treatment of the cause."</p>
 <p style="font-size:12.5px;color:#64748B"><i>The source’s treatment-of-secondary-PPH entry is one line: "Treatment of the cause." Diagnosis-specific interventions (evacuation of retained tissue, antibiotics for sepsis, chemotherapy for choriocarcinoma, repositioning for inversion) are implied.</i></p>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1602,7 +1596,6 @@
 </ul>
 <p style="font-size:12.5px;color:#64748B"><i>Source differential diagnosis is two items; both preserved verbatim. In practice, the key is whether the mass has the <b>uterine body attached</b> (inversion) or is a separate pedunculated mass (fibroid) / vaginal-wall descent (prolapse).</i></p>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1879,7 +1872,6 @@
 <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"<b>Cardiopulmonary resuscitation (CPR) then treatment of the cause.</b> If there is no response within <b>5 minutes of maternal collapse during pregnancy, delivery should be done to assist maternal resuscitation. This should be achieved within 5 minutes of the collapse</b>."</p>
 <div class="pearl"><b>The "5-minute rule" for in-pregnancy collapse:</b> If no response to CPR within 5 minutes, perform an <b>emergency perimortem cesarean section</b>. The rationale: the gravid uterus compresses the IVC, preventing effective cardiac output — emptying the uterus restores venous return. The fetus is essentially a bystander benefit; the operation is for the mother.</div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2137,7 +2129,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2166,28 +2157,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

@@ -214,7 +214,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -313,54 +312,54 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
 
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
-
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
 </div>
-
 
 <header class="hero">
   <h1>Contraceptive Methods in Family Practice</h1>
@@ -414,7 +413,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <div class="too-item t3">TOO Many<span class="lbl">5th pregnancy or more</span></div>
     <div class="too-item t4">TOO Old<span class="lbl">&gt; 35 years</span></div>
   </div>
-
 
         <div class="mcq-block" data-subtopic="s1">
           <div class="mcq-header">
@@ -640,7 +638,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <li>Male Sterilization (Vasectomy)</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -852,7 +849,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <li>Baby is less than 6 months old</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1056,7 +1052,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <li>Increased vaginal infection and UTI</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1245,7 +1240,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     </ol>
   </div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1432,7 +1426,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <div class="card green"><h4>Combined Patch</h4><p>Small adhesive patch worn on the body. New patch weekly × 3 weeks, then patch-free week. Side effect: skin irritation.</p></div>
     <div class="card green"><h4>Combined Vaginal Ring</h4><p>Flexible ring placed in vagina. Releases 2 hormones absorbed through vaginal wall. 3 weeks in, 1 week off.</p></div>
   </div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1710,7 +1703,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <li><strong>Management:</strong> Take pill at same time daily; proper missed-pill correction; ibuprofen 800 mg TID × 5 days when bleeding starts</li>
     <li>If persists &gt; few months and NSAIDs fail → consider different COC formulation</li>
   </ul>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -2020,7 +2012,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <li>Start new ring immediately after removing previous one</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2288,7 +2279,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <li>High risk for STIs at insertion</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2477,7 +2467,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <tr><td><strong>Copper IUD</strong></td><td>Up to 5 days (120 hrs)</td><td>Inserted by provider</td></tr>
   </table>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2663,7 +2652,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <div class="card blue"><h4>Female Sterilization</h4><p>Tubal ligation — the fallopian tubes are tied, blocked, or cut to prevent eggs from reaching the uterus.</p></div>
     <div class="card blue"><h4>Male Sterilization</h4><p>Vasectomy — the vas deferens is cut or blocked to prevent sperm from entering the semen.</p></div>
   </div>
-
 
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
@@ -2871,7 +2859,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
     <p><strong>Important:</strong> A woman may fall into different categories depending on whether she is <strong>initiating</strong> or <strong>continuing</strong> a method. Each condition is assessed individually against the chosen method.</p>
   </div>
 
-
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3057,8 +3044,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
   <p>Key areas to cover: physiological (periodic abstinence, withdrawal, LAM) → barrier (condoms, diaphragm, spermicide) → hormonal (combined pills/injectable/patch/ring, progestin-only injectable/implants/pills/ring) → IUDs (copper, LNG) → emergency contraception (POPs, COCs, IUD) → permanent (tubal ligation, vasectomy). For each method, know: mechanism, effectiveness, side effects, advantages, contraindications, and special situations.</p>
 </div>
 
-
-
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3239,7 +3224,6 @@ body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height
 function toggleTOC(){document.getElementById('toc').classList.toggle('collapsed')}
 </script>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".mcq-option").forEach(function(opt) {
@@ -3271,7 +3255,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -3300,28 +3283,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

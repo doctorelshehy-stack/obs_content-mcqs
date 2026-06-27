@@ -332,11 +332,9 @@
 }
 /* ====== End Table of Contents ====== */
 
-
 .topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
-
 
   /* ===== MCQ STYLES ===== */
   .mcq-block {
@@ -449,6 +447,43 @@
     .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
     .mcq-option.show-correct .mcq-letter { color: #4ade80; }
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 99999;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.92);
+    color: #1a202c;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
+  }
+  .back-content-btn:hover {
+    background: #ffffff;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
+  }
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
+    color: #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  }
+  body.dark .back-content-btn:hover {
+    background: #1e1e2e;
   }
 </style>
 <style>/* === HERMES-ACCORDION: study-section accordion panels === */
@@ -603,48 +638,49 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style></head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -734,7 +770,6 @@ details.study-section > :not(summary) {
 <div class="card-caption">Fertilization, Cleavage, Morula, Blastocyst &amp; Implantation</div>
 <div class="card-source">Source: Provided Material — Book Obstetrics 2025-2026, Ch. 1 (p. 1)</div>
 </div>
-
 
         <div class="mcq-block" data-subtopic="1-fertilization">
           <div class="mcq-header">
@@ -924,7 +959,6 @@ details.study-section > :not(summary) {
 </ul>
 </li>
 </ul>
-
 
         <div class="mcq-block" data-subtopic="2-implantation">
           <div class="mcq-header">
@@ -1126,7 +1160,6 @@ details.study-section > :not(summary) {
 <p>The cytotrophoblast is the inner cellular layer that retains mitotic activity. The syncytiotrophoblast is the outer multinucleated layer formed by fusion of cytotrophoblast cells. It is the syncytiotrophoblast that secretes HCG, HPL, estrogen, and progesterone.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="3-formation-of-the-villi">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1313,7 +1346,6 @@ details.study-section > :not(summary) {
 <div class="callout-title">Note</div>
 <p>Failure of the 2° wave of trophoblastic invasion of spiral arteries is a key mechanism in pre-eclampsia and IUGR (intrauterine growth restriction).</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="4-formation-of-choriodecidual-spaces">
           <div class="mcq-header">
@@ -1567,7 +1599,6 @@ details.study-section > :not(summary) {
 <li>Abnormal attachment of the cord.</li>
 </ul>
 
-
         <div class="mcq-block" data-subtopic="5-placenta">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1778,7 +1809,6 @@ details.study-section > :not(summary) {
 <div class="callout-title">Warning</div>
 <p>Single umbilical artery (SUA) is associated with congenital fetal malformations and IUGR — warrants detailed ultrasound assessment.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="6-umbilical-cord">
           <div class="mcq-header">
@@ -2027,7 +2057,6 @@ details.study-section > :not(summary) {
 <li><strong>Inflammation</strong> → chorioamnionitis.</li>
 </ul>
 
-
         <div class="mcq-block" data-subtopic="7-amniotic-fluid">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2263,7 +2292,6 @@ details.study-section > :not(summary) {
 <li>Synthetized by syncytiotrophoblast from maternal cholesterol.</li>
 <li>Provides a precursor for the fetal adrenal to produce glucocorticoids and mineralocorticoids.</li>
 </ul>
-
 
         <div class="mcq-block" data-subtopic="8-hormones">
           <div class="mcq-header">
@@ -2506,7 +2534,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2535,28 +2562,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

@@ -87,7 +87,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -201,7 +200,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -300,49 +298,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -397,7 +396,6 @@
 <li>To be able to describe the management and prevention of puerperal sepsis</li>
 </ul>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s1">
           <div class="mcq-header">
@@ -588,7 +586,6 @@
 <div class="callout callout-pearl">
 <span class="pill pill-pearl">CLINICAL PEARL</span> "Puerperal sepsis" is specifically a <em>genital tract</em> infection — distinct from generalised sepsis which can originate elsewhere. The timing window is broad: <strong>during</strong> labor, <strong>after</strong> labor, or <strong>after</strong> abortion.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -818,7 +815,6 @@
 <span class="pill pill-anchor">MEMORY ANCHOR</span> Remember <strong>A-G-A</strong>: <strong>A</strong>erobic Gram+ / <strong>G</strong>ram− / <strong>A</strong>naerobic Gram+ (commonest) + Gram− (Cl. Welchii, Bacteroids). Anaerobic streptococci = the single most common organism.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1015,7 +1011,6 @@
 <div class="callout callout-pearl">
 <span class="pill pill-pearl">CLINICAL PEARL</span> The endogenous pathway is the more insidious: organisms that were harmless commensals <em>before</em> delivery become virulent once devitalised tissue (lacerations, retained products) provides a substrate.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1220,7 +1215,6 @@
 <span class="pill pill-anchor">MEMORY ANCHOR</span> Mnemonic <strong>P-P-I-L-M-R-I</strong>: <strong>P</strong>PROM → <strong>P</strong>rolonged labor → <strong>I</strong>nstrumental delivery → <strong>L</strong>acerations → <strong>M</strong>arked blood loss → <strong>R</strong>etained products → <strong>I</strong>mproper aseptic technique.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1422,7 +1416,6 @@
 <div class="callout callout-danger">
 <span class="pill pill-danger">DANGER</span> Blood spread can rapidly progress to septicemia → septic shock → multi-organ failure. Early recognition of secondary spread is critical.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1632,7 +1625,6 @@
 <span class="pill pill-warn">WARN</span> The 48–72 hour window after labor/abortion is the classic presentation time. Any fever &gt; 38°C persisting for 24 hours in this window should raise immediate suspicion of puerperal sepsis.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1841,7 +1833,6 @@
 <span class="pill pill-pearl">CLINICAL PEARL</span> <strong>Sheehan's syndrome</strong> = postpartum pituitary necrosis due to hemorrhage + hypotension + sepsis — remember the triad: hemorrhage + sepsis + hypotension.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2038,7 +2029,6 @@
 <div class="callout callout-note">
 <span class="pill pill-note">NOTE</span> Swab must cover <em>both</em> aerobic and anaerobic cultures — most cases are caused by anaerobic streptococci, which a standard aerobic-only culture would miss.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
@@ -2255,7 +2245,6 @@
 <div class="callout callout-anchor">
 <span class="pill pill-anchor">MEMORY ANCHOR</span> Prevention follows a chronological triad: <strong>A</strong>ntenatal → <strong>I</strong>ntranatal → <strong>P</strong>ostnatal (A-I-P). Each phase has its own specific measures.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
@@ -2502,7 +2491,6 @@
 <div class="callout callout-danger">
 <span class="pill pill-danger">DANGER</span> Failure to drain a pelvic/parametric abscess leads to ongoing sepsis despite antibiotics. Drainage is definitive — antibiotics alone are insufficient for abscess.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
@@ -2766,7 +2754,6 @@
 <p>Topic 39 — Puerperal Sepsis · Source: Book Obstetrics 2025-2026, pp. 209–213 · Generated by Hermes Agent</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2982,7 +2969,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -3011,28 +2997,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

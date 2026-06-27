@@ -357,7 +357,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -471,7 +470,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -570,49 +568,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -622,7 +621,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -694,7 +692,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>Always consider the non-pregnancy causes first in any patient with severe vomiting — missing appendicitis or pyelonephritis in pregnancy is a recognised cause of maternal mortality.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -887,7 +884,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout pearl"><span class="label">Pearl</span>Time of onset is the bedside clue: emesis gravidarum classically begins around the 12<sup>th</sup> week, peaks, and resolves — while hyperemesis begins earlier, persists beyond the 1<sup>st</sup> trimester, and produces measurable metabolic derangement.</div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -1104,7 +1100,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout pearl"><span class="label">Pearl</span>The <strong>allergic theory</strong> explains two otherwise puzzling clinical observations — that antihistamines help, and that symptoms often resolve in the 2<sup>nd</sup> trimester when the corpus luteum involutes and placental progesterone takes over.</div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1288,7 +1283,6 @@ details.study-section > :not(summary) {
     <li>Multivitamin with folic acid in early pregnancy.</li>
     <li>Treating heartburn and acid reflux.</li>
   </ul>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1479,7 +1473,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout danger"><span class="label">Danger</span><strong>Wernicke encephalopathy</strong> is the most feared complication of HG — it is preventable with thiamine <em>before</em> any glucose is given. Glucose without thiamine precipitates the encephalopathy by exhausting the last remaining thiamine stores in oxidative metabolism.</div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1669,7 +1662,6 @@ details.study-section > :not(summary) {
   <p>To exclude multiple pregnancy &amp; vesicular mole.</p>
   <div class="callout warn"><span class="label">Warn</span>Ultrasound is essential — molar pregnancy and multiple gestation are two of the most common correctable causes of severe HG, and the scan is the only reliable way to exclude them early.</div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1855,7 +1847,6 @@ details.study-section > :not(summary) {
     <li><strong>Trigger avoidance</strong> (Section 10, part B)</li>
     <li><strong>Pharmacotherapy</strong> (Section 10, part C → Section 11)</li>
   </ol>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -2044,7 +2035,6 @@ details.study-section > :not(summary) {
     <li><strong>Fluids:</strong> fluids at least 30 minutes before or after solid food to minimize the effect of a full stomach. Fluids are better tolerated if <strong>cold, clear, and carbonated.</strong></li>
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>Suspending iron supplementation until vomiting settles is a simple change that often produces a dramatic improvement — iron tablets are among the most common avoidable triggers of NVP.</div>
-
 
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
@@ -2240,7 +2230,6 @@ details.study-section > :not(summary) {
     <li><strong>Serotonin antagonist — Ondansetron</strong> — for refractory cases.</li>
     <li><strong>Acid-reducing agents</strong> — antacids, H2 blockers, proton pump inhibitors.</li>
   </ol>
-
 
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
@@ -2512,7 +2501,6 @@ details.study-section > :not(summary) {
   </ol>
   <div class="callout danger"><span class="label">Danger</span>Thiamine (100 mg IM/IV) MUST be given <strong>before</strong> glucose in any patient with persistent vomiting — administering glucose first risks precipitating Wernicke encephalopathy in a thiamine-depleted patient.</div>
 
-
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2705,7 +2693,6 @@ details.study-section > :not(summary) {
     </ul>
   </div>
   <div class="callout danger"><span class="label">Danger</span>These six signs indicate that conservative management is failing — the patient is developing end-organ damage (liver, kidney, brain, retina). Delaying termination beyond this point risks irreversible multi-organ failure.</div>
-
 
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
@@ -2924,7 +2911,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -2968,7 +2954,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2997,28 +2982,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

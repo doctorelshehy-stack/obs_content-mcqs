@@ -214,7 +214,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -328,7 +327,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -427,49 +425,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -534,7 +533,6 @@
 <h4>📝 NOTE · The 3 P's of dystocia (recall from Chapter 33)</h4>
 <p style="font-size:13.5px;margin:0">Whenever labor is not progressing, systematically evaluate the 3 P's: <strong>Power</strong> (contractions), <strong>Passages</strong> (maternal pelvis + soft tissues), and <strong>Passenger</strong> (fetus). Obstructed labor is a <em>Passages</em> and/or <em>Passenger</em> problem <em>with</em> a normal <em>Power</em> — that combination is the diagnostic signature.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -747,7 +745,6 @@
 <h4>📝 MEMORY ANCHOR · Source spelling preserved</h4>
 <p style="font-size:13.5px;margin:0">The source uses <strong>"hydrocephalos"</strong>, <strong>"ascitis"</strong> (not "ascites"), and <strong>"conjoint twins"</strong> (one word, not "conjoined"). All three forms are preserved verbatim in the lists above. The terms are clinically well-understood despite the variant spellings; what matters is the underlying pathology — an enlarged or distorted fetal part that cannot pass the pelvic inlet or outlet.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -967,7 +964,6 @@
 <p style="font-size:13.5px;margin:0">The combination of <strong>large caput succedaneum</strong> (edematous swelling of the presenting scalp from prolonged pressure against the pelvic bones) and <strong>moulding</strong> (over-riding of the fetal skull bones) is the <strong>cardinal vaginal sign of obstructed labor</strong>. It tells you two things simultaneously: (1) the head has been <em>trying</em> to descend for a long time, and (2) the pelvis is <em>too small</em> to let it through. <strong>Continuing to push in this scenario risks uterine rupture</strong> — the decision must shift to cesarean section.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1184,7 +1180,6 @@
 <p style="font-size:13.5px;margin:0">In obstructed labor, the presenting part is either <strong>high and unengaged</strong> or <strong>impacted</strong> in the pelvis — neither is a safe situation for forceps or ventouse. Attempted instrumental delivery in this setting risks: <strong>fetal intracranial hemorrhage</strong>, <strong>shoulder dystocia</strong>, <strong>maternal soft-tissue injuries</strong> (cervical, vaginal, perineal), and <strong>uterine rupture</strong> if a fetal part is forcibly pulled through. <strong>Cesarean section is the only safe route</strong>.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1392,7 +1387,6 @@
 <h4>💡 CLINICAL PEARL · Vesicovaginal fistula — the social devastation</h4>
 <p style="font-size:13.5px;margin:0">Of all four maternal complications, <strong>vesicovaginal fistula (VVF)</strong> is the one with the most lasting social impact: a young woman is left with <strong>continuous urinary incontinence</strong> for the rest of her life (unless surgically repaired). The mechanism is <strong>pressure necrosis</strong> — the fetal head compresses the bladder base against the pubic symphysis, cutting off blood supply; the ischemic tissue sloughs 5–7 days postpartum, leaving a fistula. It is almost entirely <strong>preventable</strong> by timely CS, which is the strongest argument for the prevention pillar in §5.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1669,7 +1663,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -1698,28 +1691,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

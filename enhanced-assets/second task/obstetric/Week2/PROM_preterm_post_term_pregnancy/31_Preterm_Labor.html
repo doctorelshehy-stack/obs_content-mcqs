@@ -210,7 +210,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -324,7 +323,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -423,49 +421,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -536,7 +535,6 @@
 <h4>🔑 KEY DEFINITION — memorize this</h4>
 <p style="margin:0">The <strong>20-week lower bound</strong> distinguishes preterm labor from late miscarriage. The <strong>37-week upper bound</strong> distinguishes preterm labor from term labor. <strong>Effacement + dilatation</strong> distinguishes true labor from Braxton-Hicks contractions.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -730,7 +728,6 @@
 <div class="risk-card mat" style="grid-column:1 / -1"><b>Second- or third-trimester bleeding</b>Placenta previa or placental abruption — bleeding triggers uterine irritability and prostaglandin release.</div>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -913,7 +910,6 @@
 <div class="risk-card fet"><b>Fetal anomalies</b>Congenital structural malformations (e.g., neural tube defects, cardiac anomalies) can be associated with preterm labor.</div>
 <div class="risk-card fet"><b>IUGR</b>Intrauterine growth restriction — a compromised fetus may trigger earlier delivery.</div>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1110,7 +1106,6 @@
 <h4>💎 CLINICAL PEARL — "4 in 20 / 8 in 60" rule</h4>
 <p style="margin:0">This contraction-frequency threshold is the textbook definition of active preterm labor — memorize it because it is the trigger to start tocolysis + corticosteroids. Below this frequency, Braxton-Hicks contractions or false labor are more likely.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1325,7 +1320,6 @@
 <p style="margin:0">The test is useful only <strong>between 24 and 34 weeks</strong> — before 24 weeks, fibronectin may normally be present; after 34 weeks, its presence is no longer predictive of preterm labor because term delivery is imminent regardless.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1516,7 +1510,6 @@
 <h4>📝 Note on cerclage</h4>
 <p style="margin:0">Cerclage (e.g., McDonald or Shirodkar suture) is placed <strong>prophylactically</strong> in women with a history of cervical insufficiency, typically at 12–14 weeks, and removed at 36–37 weeks. It mechanically keeps the cervical os closed.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -1714,7 +1707,6 @@
 <h4>⚠️ Sequence of drug therapy</h4>
 <p style="margin:0">In established preterm labor, all three drug-therapy pillars are often combined: <strong>corticosteroids</strong> (for fetal lung maturity), <strong>tocolytics</strong> (to delay delivery 48 hours — the time window corticosteroids need to act), and <strong>antibiotics</strong> (for GBS prophylaxis).</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -1915,7 +1907,6 @@
 <h4>💎 CLINICAL PEARL — Why 48 hours?</h4>
 <p style="margin:0">Corticosteroids need <strong>~48 hours</strong> to complete their effect on fetal lung surfactant production. This is also why tocolytics are given — to <strong>buy those 48 hours</strong> even when labor is actively established.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
@@ -2203,7 +2194,6 @@
 <p style="margin:0">Before 34 weeks, the preterm fetal head and body are <strong>disproportionately small and fragile</strong> — vaginal breech delivery carries higher risk of head entrapment, intracranial hemorrhage, and birth trauma. Cesarean is the safer route. After 34 weeks, fetal size is large enough for safe vaginal breech delivery.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2461,7 +2451,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2490,28 +2479,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

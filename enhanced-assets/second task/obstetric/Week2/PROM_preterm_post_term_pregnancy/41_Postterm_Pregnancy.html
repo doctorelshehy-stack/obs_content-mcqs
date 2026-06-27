@@ -65,7 +65,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -179,7 +178,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -278,49 +276,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -365,7 +364,6 @@
 <li>To be able to describe the clinical picture and management of this obstetrical situation</li>
 </ul>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s1">
           <div class="mcq-header">
@@ -554,7 +552,6 @@
 <div class="callout callout-anchor">
 <span class="pill pill-anchor">MEMORY ANCHOR</span> <strong>41–42 = Prolonged</strong> · <strong>&gt; 42 = Postterm</strong>. Do not confuse the two — management differs. Prolonged pregnancy is monitored; postterm pregnancy requires intervention.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -762,7 +759,6 @@
 <span class="pill pill-pearl">CLINICAL PEARL</span> Anencephaly causes postterm pregnancy because the fetal hypothalamic-pituitary-adrenal axis is disrupted — without fetal cortisol, labor is not initiated. This is why dating must be confirmed before diagnosing postterm pregnancy.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -967,7 +963,6 @@
 <span class="pill pill-danger">DANGER</span> Oligohydramnios + placental insufficiency in a postterm pregnancy = high risk for cord compression, fetal hypoxia, and meconium aspiration. Delivery should not be delayed.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1161,7 +1156,6 @@
 <div class="callout callout-anchor">
 <span class="pill pill-anchor">MEMORY ANCHOR</span> Postterm postnatal signs: <strong>L-W-S-F</strong>: <strong>L</strong>ength &gt; 54 cm · <strong>W</strong>eight &gt; 4.5 kg · <strong>S</strong>kull well ossified / small fontanelles · <strong>F</strong>inger nails beyond tips.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1361,7 +1355,6 @@
 <span class="pill pill-warn">WARN</span> "Postpartum hge" — source abbreviation for "hemorrhage". Macrosomic postterm babies (&gt; 4.5 kg) carry high risk of shoulder dystocia and birth trauma.
   </div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1550,7 +1543,6 @@
 <div class="callout callout-note">
 <span class="pill pill-note">NOTE</span> The source is brief: management of postterm pregnancy is termination of pregnancy — induction of labor or cesarean section depending on cervical readiness and fetal status.
   </div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -1784,7 +1776,6 @@
 <p>Topic 41 — Postterm Pregnancy · Source: Book Obstetrics 2025-2026, pp. 218–219 · Generated by Hermes Agent</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2000,7 +1991,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2029,28 +2019,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

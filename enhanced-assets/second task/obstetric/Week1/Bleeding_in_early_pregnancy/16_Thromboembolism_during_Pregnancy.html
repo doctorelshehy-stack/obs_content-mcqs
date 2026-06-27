@@ -501,7 +501,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -615,7 +614,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -714,49 +712,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -766,7 +765,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -832,7 +830,6 @@ details.study-section > :not(summary) {
     <li><strong>Give heparin if DVT is confirmed.</strong></li>
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>Superficial thrombophlebitis is often considered a "benign" condition, but in pregnancy it is a <strong>marker of prothrombotic risk</strong> — confirmed DVT triggers a switch from local measures to therapeutic anticoagulation. The single most important clinical action: <strong>rule out DVT</strong> (compression duplex US) before settling on a management plan.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -1042,7 +1039,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>The mechanical compression of the <strong>left iliac vein</strong> by the right iliac artery and the gravid uterus (May–Thurner physiology) is the reason <strong>most DVTs in pregnancy are left-sided</strong> — the most common in deep veins of the left side (see §5 below).</div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1236,7 +1232,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout pearl"><span class="label">Pearl</span>The single most powerful predictor of a pregnancy-associated DVT is a <strong>prior VTE</strong> — recurrent risk is markedly elevated. Combined with <strong>thrombophilia</strong> (factor V Leiden, antiphospholipid syndrome, protein C/S deficiency), the recurrence risk may justify prophylactic LMWH throughout pregnancy.</div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1428,7 +1423,6 @@ details.study-section > :not(summary) {
   <div class="callout danger"><span class="label">Danger</span><strong>50 % of DVTs in pregnancy are asymptomatic</strong> — the absence of leg swelling or pain does <strong>not</strong> rule out DVT. A high index of suspicion is required, especially in patients with risk factors (see §4) or unexplained tachycardia, tachypnea, or hypoxia (consider concurrent PE).</div>
   <div class="callout warn"><span class="label">Note</span>The source contains the typographical variant <em>"dorsiflexsion"</em> (Homan's sign) — clinically the correct term is <strong>dorsiflexion</strong>. Preserved verbatim in card #5 for source-faithfulness, and corrected in the visual label.</div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1618,7 +1612,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout pearl"><span class="label">Pearl</span><strong>Compression duplex ultrasonography</strong> is the first-line imaging modality for suspected DVT in pregnancy — non-invasive, no ionizing radiation, and high sensitivity for proximal lower-limb DVT. <strong>Venography</strong> and <strong>MRI</strong> are reserved for suspected pelvic-vein thrombosis (the duplex window for iliac and IVC thrombi is limited).</div>
   <div class="callout cyan"><span class="label">Note</span>The "If pulmonary embolism is obvious → start heparin immediately" line in the source is presented as an investigation step in the original layout, but the action it describes (starting heparin) is a <strong>treatment</strong> decision that precedes definitive imaging. The card preserves the source's ordering while a NOTE callout in §10 (PE) reminds readers that PE is a clinical diagnosis that may require empirical anticoagulation before imaging returns.</div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1816,7 +1809,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>Graduated compression stockings are an <strong>adjunct</strong> to anticoagulation — they reduce post-thrombotic syndrome and edema but do not dissolve or prevent propagation of the clot. Anticoagulation (heparin, never warfarin in pregnancy) is the <strong>primary</strong> active treatment.</div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -2023,7 +2015,6 @@ details.study-section > :not(summary) {
   <div class="callout danger"><span class="label">Danger</span><strong>Heparin-induced thrombocytopenia (HIT)</strong> is a paradoxical, immune-mediated reaction in which heparin therapy itself triggers platelet activation and thrombosis. Platelet counts should be monitored periodically throughout UFH therapy; a > 50 % fall from baseline is a red flag and mandates immediate switch to a non-heparin anticoagulant (e.g. argatroban, fondaparinux).</div>
   <div class="callout pearl"><span class="label">Pearl</span><strong>Protamine sulphate 1 % — 10 mg</strong> neutralizes approximately 1,000 IU of UFH (1 mg of protamine per 100 IU of heparin given in the last 2 hours). It is the only clinically available UFH antidote. There is no comparable effective antidote for LMWH (only partial reversal with protamine).</div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2225,7 +2216,6 @@ details.study-section > :not(summary) {
 
   <div class="callout cyan"><span class="label">Pearl</span>Enoxaparin is the most commonly used LMWH in pregnancy because it does <strong>not cross the placenta</strong> (heparin molecules are too large to cross) and is <strong>not teratogenic</strong>. <strong>Warfarin is contraindicated in pregnancy</strong> (teratogenic, crosses placenta, causes warfarin embryopathy and fetal hemorrhage) — UFH and LMWH are the only safe options for anticoagulation in pregnancy.</div>
   <div class="callout pearl"><span class="label">Note</span>The 6–12 week postpartum extension reflects the prolonged prothrombotic window of the puerperium — the maternal VTE risk remains elevated for at least 6 weeks after delivery, and remains above baseline until 12 weeks postpartum.</div>
-
 
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
@@ -2457,7 +2447,6 @@ details.study-section > :not(summary) {
   <div class="callout danger"><span class="label">Danger</span><strong>Massive PE</strong> (sustained hypotension, shock, cardiac arrest) is a clinical diagnosis — do not delay empirical anticoagulation while awaiting definitive imaging. The first two treatment steps (stabilization + IV UFH) are time-critical and should be initiated on clinical suspicion alone. <strong>Thrombolysis</strong> and <strong>pulmonary embolectomy</strong> are last-resort interventions reserved for massive PE with hemodynamic collapse.</div>
   <div class="callout cyan"><span class="label">Note</span>The source's "IVC filter" step is included as a treatment option in pregnancy when anticoagulation is contraindicated (e.g. active hemorrhage, very recent surgery, or recurrent PE despite therapeutic anticoagulation). The filter traps thrombi before they reach the pulmonary circulation, but does not treat the existing clot.</div>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2686,7 +2675,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -2730,7 +2718,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2759,28 +2746,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

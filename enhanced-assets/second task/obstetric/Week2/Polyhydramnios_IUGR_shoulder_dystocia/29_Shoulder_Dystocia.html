@@ -208,7 +208,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -322,7 +321,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -421,49 +419,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -532,7 +531,6 @@
 <h4>🚨 DANGER — "Unpredictable and unpreventable"</h4>
 <p style="font-size:13px">The two most important adjectives in the definition are <strong>unpredictable</strong> and <strong>unpreventable</strong>. <strong>Unpredictable</strong> means: even with all known risk factors present (macrosomia, diabetes, previous shoulder dystocia, etc.), the event cannot be reliably forecast; conversely, shoulder dystocia can occur in deliveries with no risk factors at all. <strong>Unpreventable</strong> means: there is no prophylactic intervention (e.g., elective cesarean for suspected macrosomia) that reliably prevents it; the only effective response is to recognize it quickly and execute the management algorithm. <em>Note: this is why all delivery personnel — obstetrician, midwife, anesthetist, pediatric team — must be familiar with the maneuvers in §6-§7 even if they have never personally seen a case.</em></p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -725,7 +723,6 @@
 <p style="font-size:13px">The natural instinct when the head is delivered is to keep pulling. <strong>Resist this urge.</strong> Continued axial traction on the head stretches the brachial plexus against the pubic symphysis and dramatically increases the risk of <strong>Erb's palsy</strong> and other nerve injuries. Once the turtle sign is recognized, the correct sequence is: (1) call for help (§6 step 1), (2) <strong>stop pulling</strong>, (3) ask the mother to stop pushing, (4) start with McRobert's maneuver (§6 step 3) — these four steps together typically resolve 90% of cases without any internal manipulation.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -915,7 +912,6 @@
 <h4>🧠 MECHANISM — Why McRobert's works</h4>
 <p style="font-size:13px">Looking at Figure 2, you can see that the obstruction is the <strong>pubic symphysis</strong> catching the anterior shoulder. The <strong>McRobert's maneuver</strong> (next section) works because hyperflexing the maternal hips <strong>rotates the pubic symphysis cephalad</strong> (upward, away from the shoulder), effectively shortening the distance the shoulder needs to travel. Suprapubic pressure (also next section) then pushes the anterior shoulder <strong>down and laterally</strong> so it slips under the symphysis. This is why these two maneuvers together — and not internal rotation — are the <strong>first-line</strong> approach.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1119,7 +1115,6 @@
 <p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Intrapartum (5):</strong> <strong>P</strong>rolonged 1st stage · <strong>S</strong>econdary arrest · <strong>P</strong>rolonged 2nd stage · <strong>O</strong>xytocin augmentation · <strong>A</strong>ssisted vaginal delivery — <em>(mnemonic: PSPOA = "Prolonged-Slow-Pushed-Out-Assisted")</em></p>
 <p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Unifying principle:</strong> every risk factor — antepartum or intrapartum — is a factor that <strong>increases the size of the fetus</strong> (macrosomia, DM, obesity), <strong>changes the dynamics of labor</strong> (induction, prolonged stages, oxytocin, arrest), or <strong>increases the operator's force</strong> (assisted delivery, previous SD). All three mechanisms ultimately converge on the same anatomic event shown in Figure 2: the anterior shoulder is too big to fit under the pubic symphysis.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1362,7 +1357,6 @@
 <p style="font-size:13px">This is a more aggressive maneuver than McRobert's + suprapubic pressure, and it carries a higher risk of <strong>fracturing the humerus or clavicle</strong> of the posterior arm. The fractures usually heal well in newborns, but they should be acknowledged in the documentation. If the posterior arm cannot be reached easily, do not pull hard — proceed to the rotational maneuvers in §7 (Rubin, Wood's corkscrew) or delivery of the posterior shoulder instead.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1599,7 +1593,6 @@
 <p style="font-size:13px">The source's Wood corkscrew step says "with a <strong>Vaginal hand</strong>" (with a capital V and using "Vaginal" as a noun). The corrected form is "with a vaginal hand" (lowercase, used as an adjective). The source's odd capitalization is preserved verbatim here per the source-fidelity rule. It does not change the meaning — both refer to the operator's hand placed inside the vagina to rotate the posterior fetal shoulder through 180°.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1804,7 +1797,6 @@
 <h4>⚠ CLINICAL NOTE — Documentation is part of management</h4>
 <p style="font-size:13px">Every shoulder dystocia case must be <strong>documented in detail</strong> — the maneuvers used, the order they were used, the time from recognition to delivery, the neonatal assessment (Apgar, cord pH, evidence of injury), and the maternal assessment (blood loss, perineal trauma). This documentation serves three purposes: (1) clinical handover to the pediatric and postnatal teams, (2) medico-legal record (shoulder dystocia is one of the most litigated obstetric events), and (3) counseling for future pregnancies (a mother who had shoulder dystocia has a ~10% recurrence risk — §5 risk factor 1).</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -2093,7 +2085,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2122,28 +2113,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

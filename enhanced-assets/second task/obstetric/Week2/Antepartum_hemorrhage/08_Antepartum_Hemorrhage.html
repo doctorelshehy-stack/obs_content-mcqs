@@ -364,7 +364,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -478,7 +477,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -577,49 +575,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -629,7 +628,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -695,7 +693,6 @@ details.study-section > :not(summary) {
   <p class="lead"><strong>Bleeding from the vagina occurring at any time after 20<sup>th</sup> week of pregnancy and before the child birth.</strong></p>
   <p>Bleeding before 20 weeks (early pregnancy bleeding) is conventionally classified as a threatened/missed/inevitable abortion and is covered in Chapter 05. Bleeding after 20 weeks — APH — is a separate clinical entity because the fetus is potentially viable, the bleeding is more likely to be severe, and the differential diagnosis is dominated by placental causes.</p>
   <div class="callout pearl"><span class="label">Pearl</span>The 20-week cut-off corresponds approximately to the lower limit of fetal viability — it is the threshold at which neonatal intensive care can offer a chance of survival and at which obstetric management shifts from "preserve the pregnancy" to "preserve the mother <em>and</em> the fetus."</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -896,7 +893,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1084,7 +1080,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout warn"><span class="label">Warn</span>The lower uterine segment is a relatively passive, poorly contractile area. When the placenta implants here, the vessels that anchor it cannot constrict after separation — leading to profuse, sometimes catastrophic, bleeding.</div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1312,7 +1307,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>Types I &amp; II are sometimes grouped as "minor" previa (vaginal delivery may be possible) and Types III &amp; IV as "major" previa (cesarean delivery is mandatory).</div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1517,7 +1511,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>The classic bedside triad for placenta previa is <strong>(1) painless vaginal bleeding, (2) soft lax abdomen, (3) malpresentation/non-engagement</strong>. Any one should prompt ultrasound before digital vaginal examination.</div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1702,7 +1695,6 @@ details.study-section > :not(summary) {
     <li>Magnetic resonant imaging (MRI).</li>
   </ul>
   <div class="callout warn"><span class="label">Warn</span><strong>Never perform a digital vaginal examination in suspected placenta previa</strong> — it can provoke catastrophic hemorrhage. The diagnosis is made by imaging (transvaginal ultrasound), not by palpation.</div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -1921,7 +1913,6 @@ details.study-section > :not(summary) {
 
   <div class="callout danger"><span class="label">Danger</span>Failure to keep a fully cross-matched unit of blood available for a major placenta previa is a recognised cause of maternal mortality — the lower-segment bleeding can be torrential within minutes.</div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2134,7 +2125,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>Concealed abruptio is the more dangerous form: less bleeding is seen externally, but the retroplacental hematoma can be large — the abdomen becomes tense, the uterus "board-like," and coagulopathy (DIC) can develop rapidly from consumption of clotting factors.</div>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2323,7 +2313,6 @@ details.study-section > :not(summary) {
     <li>Idiopathic.</li>
   </ul>
   <div class="callout warn"><span class="label">Warn</span>Pre-eclampsia is the single most important risk factor for abruptio placentae — abruption is several-fold more common in women with hypertensive disorders of pregnancy.</div>
-
 
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
@@ -2525,7 +2514,6 @@ details.study-section > :not(summary) {
 
   <div class="callout danger"><span class="label">Danger</span>A "board-like" rigid tender uterus with fetal distress is an obstetric emergency — immediate resuscitation and delivery are required regardless of gestational age.</div>
 
-
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2712,7 +2700,6 @@ details.study-section > :not(summary) {
     <li>Ultrasonography — it can show retroplacental hematoma.</li>
   </ul>
   <div class="callout warn"><span class="label">Warn</span>Ultrasound has limited sensitivity for abruptio placentae (a normal scan does not exclude it) — the diagnosis is largely <strong>clinical</strong> (painful bleeding + tense uterus + fetal distress).</div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -2910,7 +2897,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout danger"><span class="label">Danger</span>Consumptive coagulopathy (DIC) is the most feared complication — coagulation factors and fibrinogen are consumed by the retroplacental clot, producing a profound bleeding diathesis that can become uncontrollable.</div>
 
-
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3098,7 +3084,6 @@ details.study-section > :not(summary) {
   </ul>
   <h3>Conservative treatment</h3>
   <p><strong>If both fetal and maternal hemodynamics are stable with preterm gestational age.</strong></p>
-
 
         <div class="mcq-block" data-subtopic="s14">
           <div class="mcq-header">
@@ -3291,7 +3276,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout pearl"><span class="label">Pearl</span>The "95% in multipara" figure reflects the cumulative weakening of the uterine wall from repeated pregnancies and labors — the primigravid uterus is rarely affected except in the presence of a congenital anomaly, trauma, or invasive procedure.</div>
-
 
         <div class="mcq-block" data-subtopic="s15">
           <div class="mcq-header">
@@ -3511,7 +3495,6 @@ details.study-section > :not(summary) {
     <li>Forceps or Ventouse application.</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s16">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3702,7 +3685,6 @@ details.study-section > :not(summary) {
     <li>Shoulder dystocia.</li>
     <li>Forceps delivery.</li>
   </ul>
-
 
         <div class="mcq-block" data-subtopic="s17">
           <div class="mcq-header">
@@ -3911,7 +3893,6 @@ details.study-section > :not(summary) {
   </ol>
   <div class="callout danger"><span class="label">Danger</span>A "mild bleeding" rupture is a trap — although external bleeding is minimal, fetal death, broad-ligament hematoma, and consumptive coagulopathy can still develop rapidly. The absence of brisk bleeding does <em>not</em> exclude a catastrophic rupture.</div>
 
-
         <div class="mcq-block" data-subtopic="s18">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -4111,7 +4092,6 @@ details.study-section > :not(summary) {
 
   <div class="callout danger"><span class="label">Danger</span>"Cessation of contractions" is a paradoxical but classic sign: the uterine muscle has torn and can no longer generate effective contractions. Combined with sudden maternal tachycardia + hypotension, it is a clinical emergency requiring immediate laparotomy.</div>
 
-
         <div class="mcq-block" data-subtopic="s19">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -4308,7 +4288,6 @@ details.study-section > :not(summary) {
     <li>Internal iliac artery ligation in cases of broad ligament hematoma.</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s20">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -4495,7 +4474,6 @@ details.study-section > :not(summary) {
     <li><strong>During labor:</strong> if there is sudden fetal distress with minimal amount of vaginal bleeding (highly suspect it).</li>
   </ul>
   <div class="callout danger"><span class="label">Danger</span>Fetal blood volume is small — even 100 mL of fetal blood loss represents a major fraction of total fetal blood volume and can cause hypovolemic shock and death within minutes.</div>
-
 
         <div class="mcq-block" data-subtopic="s21">
           <div class="mcq-header">
@@ -4692,7 +4670,6 @@ details.study-section > :not(summary) {
     <li>Pregnancies resulting from in vitro fertilization.</li>
   </ul>
 
-
         <div class="mcq-block" data-subtopic="s22">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -4874,7 +4851,6 @@ details.study-section > :not(summary) {
   <h2><span class="num">23</span>Vasa Previa — Management</h2>
   <p class="lead"><strong>When vasa previa is diagnosed prior to labor, elective C.S. is the delivery method of choice.</strong></p>
   <div class="callout pearl"><span class="label">Pearl</span>Unlike placenta previa (where trial of labor may be considered for minor types), vasa previa mandates cesarean delivery whenever it is antenatally diagnosed — the fetal vessels are unsupported and can rupture at the onset of labor with catastrophic fetal exsanguination.</div>
-
 
         <div class="mcq-block" data-subtopic="s23">
           <div class="mcq-header">
@@ -5061,7 +5037,6 @@ details.study-section > :not(summary) {
     <li>Used for detecting fetomaternal hemorrhage.</li>
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>The Kleihauer–Betke test exploits the fact that fetal hemoglobin resists acid elution, whereas adult hemoglobin does not — fetal cells remain pink after acid treatment, adult cells become "ghost" outlines.</div>
-
 
         <div class="mcq-block" data-subtopic="s24">
           <div class="mcq-header">
@@ -5253,7 +5228,6 @@ details.study-section > :not(summary) {
   <p><strong>Result:</strong> Maternal (adult) blood turns <strong>yellow-green-brown</strong> while fetal blood <strong>stays pink.</strong></p>
   <p><strong>If fetal blood → rapid delivery.</strong></p>
   <div class="callout warn"><span class="label">Warn</span>The Apt test is a rapid bedside test using alkali denaturation of adult hemoglobin — it does not require a lab and is the test of choice in acute vasa-previa suspicion in the labor ward.</div>
-
 
         <div class="mcq-block" data-subtopic="s25">
           <div class="mcq-header">
@@ -5498,7 +5472,6 @@ details.study-section > :not(summary) {
   </table>
   <div class="callout pearl"><span class="label">Pearl</span>Painless vs. painful bleeding is the single most useful bedside distinction between the two leading causes of APH — but ultrasound confirmation is always required before any definitive management decision.</div>
 
-
         <div class="mcq-block" data-subtopic="s26">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -5727,7 +5700,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -5771,7 +5743,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -5800,28 +5771,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

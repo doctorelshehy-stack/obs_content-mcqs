@@ -212,7 +212,6 @@
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -326,7 +325,6 @@
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -425,49 +423,50 @@
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -545,7 +544,6 @@
 <h4>🔑 KEY DEFINITION — memorize this</h4>
 <p style="margin:0">"<strong>PROM</strong>" = <u>P</u>remature <u>R</u>upture of <u>M</u>embranes, in which the rupture occurs <strong>before the onset of labor</strong>. When the rupture occurs before 37 weeks it is called <strong>preterm PROM (PPROM)</strong>; when it occurs after 37 weeks it is called <strong>term PROM</strong>. The phrase "before the onset of labor" is what distinguishes PROM from the normal rupture of membranes that occurs <em>during</em> labor.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -737,7 +735,6 @@
 <p style="margin:0"><strong>INFECTION · PRIOR PPROM · TRAUMA · AMNIOCENTESIS · POLYHYDRAMNIOS</strong> — the classic 5-item etiology list. <strong>Intrauterine infection</strong> is the most important clinically because it is both a cause <em>and</em> a complication of PROM (chorioamnionitis, §11).</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -924,7 +921,6 @@
 <h4>💎 CLINICAL PEARL — what to ask</h4>
 <p style="margin:0">A history of a sudden, single, large gush followed by continued leakage distinguishes PROM from urinary incontinence (continuous, no gush) or excessive vaginal discharge (gradual, no gush). The <strong>color</strong> — clear or pale yellow — is also characteristic: meconium-stained (green/brown) fluid suggests fetal distress, while foul-smelling fluid suggests chorioamnionitis (see §11).</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1146,7 +1142,6 @@
 <p style="margin:0">Fetal fibronectin is detected in <strong>only 39% of females with PROM</strong> — its sensitivity is limited. It is more useful as a <em>rule-out</em> test than a rule-in test. A negative fetal fibronectin result does not exclude PROM.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1335,7 +1330,6 @@
 <h4>🚨 DANGER — Pulmonary hypoplasia is irreversible</h4>
 <p style="margin:0">Pulmonary hypoplasia from prolonged severe oligohydramnios is <strong>not reversible</strong> after birth. This is why <strong>very early PPROM (&lt; 24 weeks)</strong> carries a very high neonatal mortality — the lungs never develop adequately. This is also why <strong>before-26-weeks management</strong> (§8) leans toward termination: the fetal lung is too immature to develop outside, and severe oligohydramnios will prevent lung maturation in utero.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1526,7 +1520,6 @@
 </div>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1712,7 +1705,6 @@
 <li><strong>Fetal viability is below 24–26 weeks</strong> — most units cannot provide intensive care for a fetus delivered below this threshold.</li>
 </ul>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -1951,7 +1943,6 @@
 <p style="margin:0">The 34-week cutoff is the same as in the management of preterm labor (Chapter 31) and is anchored on the lung-maturation data for antenatal corticosteroids: by 34 weeks, most fetuses have produced enough endogenous surfactant that additional benefit from corticosteroids is minimal, and the risk of ongoing oligohydramnios + ascending infection becomes the dominant clinical concern.</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2161,7 +2152,6 @@
 <p style="margin:0">The source's CRP cutoff of <strong>&gt; 2.5</strong> is presented verbatim. In modern clinical practice the upper limit varies by laboratory; many labs report normal CRP as &lt; 5 mg/L and consider &gt; 10 mg/L suspicious. The source's <strong>&gt; 2.5</strong> is preserved here as a relative elevation in the context of pregnancy (where baseline CRP may be slightly higher).</p>
 </div>
 
-
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2360,7 +2350,6 @@
 <h4>💎 CLINICAL PEARL — Why ± clindamycin only at cesarean?</h4>
 <p style="margin:0">Ampicillin + gentamicin already cover the most common ascending pathogens (Group B Strep, <em>E. coli</em>, other gram-negatives). <strong>Anaerobic coverage is added only at cesarean</strong> because the surgical incision breaches the skin and exposes deep pelvic tissues to anaerobic flora from the vagina. After a vaginal delivery, the same anaerobes have not been introduced to deep tissues, so additional anaerobic coverage is not required.</p>
 </div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -2619,7 +2608,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2648,28 +2636,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

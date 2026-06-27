@@ -366,7 +366,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -480,7 +479,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -579,49 +577,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -631,7 +630,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -687,7 +685,6 @@ details.study-section > :not(summary) {
   <p class="lead"><strong>Tumors arising from the trophoblastic cells of the placenta.</strong></p>
   <p>Gestational Trophoblastic Disease (GTD) is an umbrella term for a spectrum of pregnancy-related tumors that originate from the abnormal proliferation of trophoblast — the outer layer of the blastocyst that would normally form the placenta.</p>
   <div class="callout pearl"><span class="label">Pearl</span>Although GTD arises from placental tissue, it is a <em>tumor</em>, not a true pregnancy, and is unique in that it is a <strong>fetal allograft</strong> — the host (mother) is exposed to paternal antigens.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -888,7 +885,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout warn"><span class="label">Warn</span>Although the <em>benign</em> moles are histologically non-invasive, they still carry a measurable risk of malignant transformation: <strong>~16%</strong> for complete mole and <strong>~0.5%</strong> for partial mole. Strict postmolar follow-up is mandatory.</div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1071,7 +1067,6 @@ details.study-section > :not(summary) {
   <h3>Definition</h3>
   <p class="lead">It is a <strong>benign tumor of trophoblastic tissue</strong> in which <strong>hydropic degeneration of the chorionic villi</strong> occurs.</p>
   <p>The word "hydatid" derives from the Greek <em>hydatis</em> ("a drop of water") — referring to the characteristic fluid-filled vesicles that replace normal chorionic villi. "Vesicular mole" is the descriptive synonym.</p>
-
 
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
@@ -1264,7 +1259,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <p style="font-size:13px;color:var(--gray-700)">Reported per pregnancy. The partial mole is roughly three times more common than the complete mole, but the complete mole has a much higher risk of malignant sequelae.</p>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1483,7 +1477,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>Complete mole = <strong>androgenetic</strong> (only paternal DNA, no embryo). Partial mole = <strong>triploid</strong> (paternal + maternal DNA, embryo present).</div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1678,7 +1671,6 @@ details.study-section > :not(summary) {
     <li><strong>Ethnic groups:</strong> more common in Asian populations.</li>
   </ol>
   <div class="callout warn"><span class="label">Warn</span>A patient with a history of <em>two or more</em> molar pregnancies has a substantial risk of recurrence — careful pre-conception counselling and early first-trimester ultrasound in subsequent pregnancies are indicated.</div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -1882,7 +1874,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>The triad of (1) trophoblastic proliferation, (2) theca lutein cysts, and (3) exaggerated pregnancy symptoms is explained by a single mechanism — <strong>massive hCG secretion</strong>.</div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2085,7 +2076,6 @@ details.study-section > :not(summary) {
     </tbody>
   </table>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2280,7 +2270,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>All three unusual features (hyperemesis, hyperthyroidism, early pre-eclampsia) are explained by <strong>excess hCG</strong>, which cross-reacts with the TSH receptor (thyrotrophic effect) and stimulates the corpus luteum / ovarian theca cells.</div>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2473,7 +2462,6 @@ details.study-section > :not(summary) {
   </ul>
 
   <div class="callout warn"><span class="label">Warn</span>The "size &gt; dates" discrepancy (uterus larger than expected for gestational age) combined with absent fetal heart sounds is a classic bedside clue.</div>
-
 
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
@@ -2679,7 +2667,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>The "snowstorm" and "bunch of grapes" descriptors are <em>different visual angles of the same pathology</em> — the snowstorm is the low-resolution view; the bunch-of-grapes is the high-resolution view where individual vesicles become distinguishable.</div>
 
-
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2872,7 +2859,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout warn"><span class="label">Warn</span>Quantitative β-hCG is also the cornerstone of <em>postmolar surveillance</em> — any rise or plateau after evacuation signals possible persistent GTD / choriocarcinoma and is an indication for chemotherapy.</div>
-
 
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
@@ -3079,7 +3065,6 @@ details.study-section > :not(summary) {
 
   <div class="callout danger"><span class="label">Danger</span>Failure to perform histopathological examination on the evacuated specimen is a medico-legal pitfall — a hidden focus of choriocarcinoma may be missed and present months later with metastatic disease.</div>
 
-
         <div class="mcq-block" data-subtopic="s14">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3273,7 +3258,6 @@ details.study-section > :not(summary) {
 
   <div class="callout warn"><span class="label">Warn</span>Contraception must be used during the entire 1-year surveillance period — a new pregnancy would invalidate the β-hCG trend and delay detection of malignancy.</div>
 
-
         <div class="mcq-block" data-subtopic="s15">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3459,7 +3443,6 @@ details.study-section > :not(summary) {
     <li>They are highly effective at preventing pregnancy (which would confuse hCG follow-up).</li>
     <li>They regulate withdrawal bleeding, allowing earlier detection of abnormal uterine bleeding as a warning sign.</li>
   </ul>
-
 
         <div class="mcq-block" data-subtopic="s16">
           <div class="mcq-header">
@@ -3648,7 +3631,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>Gestational trophoblastic neoplasia is one of the most chemotherapy-curable solid tumors in humans — even metastatic choriocarcinoma has a cure rate &gt; 90% with appropriate single-agent or multi-agent chemotherapy (e.g. methotrexate, actinomycin-D, EMA-CO).</div>
 
-
         <div class="mcq-block" data-subtopic="s17">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3836,7 +3818,6 @@ details.study-section > :not(summary) {
     <li>Send the placenta / products of conception for histopathology after delivery.</li>
   </ul>
   <div class="callout warn"><span class="label">Warn</span>A "false-positive" β-hCG from a recurrent mole must be excluded by ultrasound before the new pregnancy is allowed to continue unmonitored.</div>
-
 
         <div class="mcq-block" data-subtopic="s18">
           <div class="mcq-header">
@@ -4065,7 +4046,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -4109,7 +4089,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -4138,28 +4117,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

@@ -420,7 +420,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -534,7 +533,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -633,49 +631,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -685,7 +684,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -765,7 +763,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>The classic TORCH screen (a single IgM / IgG panel) has been replaced in modern practice by <strong>pathogen-specific testing</strong> — maternal IgM + IgG with IgG avidity for CMV and toxoplasmosis, PCR on amniotic fluid for definitive fetal diagnosis, and viral PCR for HSV in active lesions. The acronym is still useful for memorization and clinical reasoning, but treatment decisions should be pathogen-specific.</div>
   <div class="callout warn"><span class="label">Note</span>Modern additions to the "Others" category include <strong>Zika virus</strong> (associated with microcephaly and other CNS defects), <strong>hepatitis B and C</strong> (vertical transmission at delivery, not classically teratogenic), and <strong>syphilis</strong> (congenital syphilis can produce a wide spectrum of findings — the "great imitator"). Not all of these are in the source's "Others" list; the visual retains the source's original list for source-faithfulness.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -999,7 +996,6 @@ details.study-section > :not(summary) {
 
   <div class="callout pearl"><span class="label">Pearl</span>Toxoplasmosis has an <strong>inverse relationship between transmission rate and severity</strong>: 1st-trimester transmission is rare but severe (classic triad), while 3rd-trimester transmission is common but subclinical at birth — the same principle that explains why rubella is severe in the 1st trimester (active organogenesis) but mild later. <strong>Spiramycin</strong> is used for primary maternal infection <em>before</em> fetal transmission is documented; once fetal infection is confirmed by amniotic PCR at ≥ 18 weeks, the regimen is typically switched to <strong>pyrimethamine + sulfadiazine + folinic acid</strong> (with the triple regimen usually deferred until after the 1st trimester due to teratogenicity risk).</div>
   <div class="callout cyan"><span class="label">Note</span>The source notes that <em>"Primary infection causes a life-long immunity and usually prevents re-infection."</em> This is preserved verbatim in §3 lead. Clinically this means <strong>pre-pregnancy IgG seropositivity is protective</strong> — only primary infection in pregnancy is teratogenic. Reactivation in immunocompromised patients is rare but documented.</div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -1241,7 +1237,6 @@ details.study-section > :not(summary) {
   <div class="callout danger"><span class="label">Danger</span><strong>First-trimester rubella infection has a ~ 85 % risk of congenital rubella syndrome.</strong> The combination of the source's "induction of abortion" recommendation with the severity of CRS (IUGR, microcephaly, cataracts, PDA, neuro disease) makes first-trimester primary rubella infection one of the few infections where <strong>termination of pregnancy is a medically and ethically legitimate discussion</strong>. The MMR vaccine remains the cornerstone of prevention — it is a <strong>live attenuated vaccine</strong> and is contraindicated in pregnancy (the source's "It should not be given to pregnant women").</div>
   <div class="callout pearl"><span class="label">Pearl</span>The diagnostic algorithm in the source ("IgM negative + IgG did not rise → no acute infection", etc.) is a classic example of <strong>paired-serology interpretation</strong> — a single IgM is unreliable because of false positives and persistent IgM after vaccination. The gold standard is a <strong>≥ 4-fold rise in IgG titer</strong> between acute and convalescent samples drawn 2–3 weeks apart. The source's 3-week repeat interval matches this standard.</div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1478,7 +1473,6 @@ details.study-section > :not(summary) {
   <div class="callout danger"><span class="label">Danger</span><strong>Congenital CMV is the leading non-genetic cause of sensorineural hearing loss in children.</strong> Even asymptomatic congenital CMV infection carries a 10–15 % risk of late-onset hearing loss and neurodevelopmental sequelae. The combination of high prevalence (1–2 % of all live births) and the absence of an effective vaccine makes CMV the single most important congenital infection in the developed world.</div>
   <div class="callout cyan"><span class="label">Note</span>The source mentions <em>"Passive immunization with CMV specific immunoglobulin."</em> This reflects the <strong>CMV hyperimmune globulin</strong> literature (Nigro et al. 2005, Reveno et al. 2014) — a therapy that remains <strong>investigational and not standard of care</strong> in most guidelines. The visual preserves the source's recommendation verbatim, while this note flags the current evidence base for clinical readers.</div>
 
-
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1697,7 +1691,6 @@ details.study-section > :not(summary) {
 
   <div class="callout danger"><span class="label">Danger</span><strong>The 50 % vs 0–4 % vertical transmission differential is the single most clinically important number in this section.</strong> It is the rationale for the source's "Cesarean section delivery is recommended for all pregnancies complicated by primary genital HSV in labor" — the dramatic risk difference between primary and recurrent HSV reflects the <strong>absence of protective maternal IgG in primary infection</strong>. In recurrent HSV, maternal IgG crosses the placenta and provides partial fetal protection, reducing vertical transmission to single-digit percentages.</div>
   <div class="callout pearl"><span class="label">Pearl</span><strong>Acyclovir is safe in pregnancy</strong> — it is a category B drug with extensive safety data in pregnancy registries. Suppressive acyclovir therapy from 36 weeks gestation is commonly used in women with a history of recurrent genital HSV to <strong>reduce the risk of recurrence at delivery</strong> and the need for cesarean delivery. The visual preserves the source's "In pregnancy: Acyclovir" recommendation and pairs it with the "In labor: cesarean delivery" decision-making rule.</div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1927,7 +1920,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -1971,7 +1963,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -2000,28 +1991,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

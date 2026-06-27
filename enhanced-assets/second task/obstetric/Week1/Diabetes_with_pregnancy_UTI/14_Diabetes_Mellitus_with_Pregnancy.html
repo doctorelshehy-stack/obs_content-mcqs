@@ -473,7 +473,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -587,7 +586,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -686,49 +684,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -738,7 +737,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -794,7 +792,6 @@ details.study-section > :not(summary) {
     <li><strong>0.5–1 %</strong> are complicated by <strong>pregestational diabetes.</strong></li>
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>Gestational diabetes is roughly <strong>5–10× more common</strong> than pregestational diabetes, because the placenta is a strong insulin-resistant organ in the second half of pregnancy — any woman with even subtle pre-existing β-cell dysfunction will be unmasked.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -996,7 +993,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout cyan"><span class="label">Note</span>Any GDM diagnosed before the 24-week threshold is <strong>reclassified as pregestational</strong> because the placental insulin-resistant hormones have not yet had time to drive the hyperglycemia — so the disease must have pre-existed.</div>
 
-
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1187,7 +1183,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>The placenta is the <strong>main driver of pregnancy-induced insulin resistance</strong> via human placental lactogen (HPL) — HPL acts as a "counter-insulin" hormone to shunt glucose preferentially to the fetus. The clinical implication: <strong>insulin requirements rise through pregnancy</strong> and the diabetic woman's doses must be titrated upward.</div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1376,7 +1371,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout danger"><span class="label">Danger</span>Diabetic ketoacidosis (DKA) in pregnancy can occur at <strong>lower blood glucose levels than in non-pregnant patients</strong> (sometimes &lt; 200 mg/dL) because of the accelerated starvation metabolism and the buffering effect of the fetus. <strong>Any unexplained nausea, vomiting, or Kussmaul breathing in a pregnant diabetic is DKA until proven otherwise.</strong></div>
   <div class="callout warn"><span class="label">Warn</span>Insulin requirements fall sharply within hours of placental delivery — <strong>resume pre-pregnancy doses or lower</strong> in the immediate postpartum to avoid hypoglycemia.</div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1592,7 +1586,6 @@ details.study-section > :not(summary) {
   <div class="callout danger"><span class="label">Danger</span>The single highest-yield maternal-fetal risk combination: <strong>poor first-trimester glycemic control → doubled congenital anomaly rate (cardiovascular &amp; neural tube defects).</strong> This is the clinical rationale for <em>preconception counseling and tight HbA1C &lt; 6.5 % before pregnancy</em>.</div>
   <div class="callout cyan"><span class="label">Pearl</span>Macrosomia (Pedersen hypothesis) is driven by <strong>fetal hyperinsulinemia in response to maternal hyperglycemia</strong> → anabolic growth. The same fetal hyperinsulinemia is what causes <strong>neonatal hypoglycemia</strong> in the first 24 h after delivery (insulin is still high but the maternal glucose supply is cut).</div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1782,7 +1775,6 @@ details.study-section > :not(summary) {
     <li>Current macrosomia and polyhydramnios.</li>
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>The two highest-yield risk factors for boards are <strong>prior macrosomic infant ≥ 4.5 kg</strong> and <strong>previous GDM (recurrence 30–84 %)</strong> — both indicate pre-existing β-cell dysfunction that pregnancy will unmask.</div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -2010,7 +2002,6 @@ details.study-section > :not(summary) {
   </table>
   <div class="callout cyan"><span class="label">Note</span>The Carpenter–Coustan thresholds are <strong>lower</strong> than the older NDDG values, so use of Carpenter–Coustan detects more GDM. <strong>Any two or more</strong> of the four time-point values must be met or exceeded for the diagnosis.</div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2237,7 +2228,6 @@ details.study-section > :not(summary) {
   <p>Ultrasound and nonstress test in the last trimester <strong>every 2 weeks.</strong></p>
   <div class="callout cyan"><span class="label">Pearl</span>The mnemonic <strong>"A1 = diet, A2 = diet + meds"</strong> captures the entire GDM classification. GDM-A1 is by far the more common and milder form.</div>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2455,7 +2445,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>The morning dose is <strong>2/3 NPH + 1/3 rapid</strong> (NPH-heavy to cover breakfast and lunch); the evening dose is <strong>½ NPH + ½ rapid</strong> (more balanced to avoid overnight hypoglycemia).</div>
 
-
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2668,7 +2657,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout danger"><span class="label">Danger</span>The <strong>Pedersen cascade</strong> (maternal hyperglycemia → fetal hyperglycemia → fetal hyperinsulinemia → neonatal hypoglycemia → seizures &amp; death) is the entire rationale for tight intrapartum glucose control (80–100 mg/dL, checked every 1–2 h). Failure to achieve this is a leading cause of preventable neonatal morbidity.</div>
 
-
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2870,7 +2858,6 @@ details.study-section > :not(summary) {
     <li>If the threshold values are met or exceeded in postpartum testing, the patient is given a diagnosis of <strong>type 2 diabetes.</strong></li>
   </ul>
   <div class="callout pearl"><span class="label">Pearl</span>Combined oral contraceptives are contraindicated in diabetic women (estrogen + progestin increase thrombotic and vascular risk in a population already predisposed). <strong>Progesterone-only pills (POP) and barrier methods are the preferred options.</strong></div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -3100,7 +3087,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -3144,7 +3130,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -3173,28 +3158,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

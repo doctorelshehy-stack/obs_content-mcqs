@@ -498,7 +498,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -612,7 +611,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -711,49 +709,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -763,7 +762,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -823,7 +821,6 @@ details.study-section > :not(summary) {
   </div>
   <p style="margin-top:8px"><strong>Incidence:</strong> 10–20 % of all pregnancies.</p>
   <div class="callout danger"><span class="label">Danger</span>It is the <strong>second leading cause of maternal death and perinatal morbidity and mortality after severe bleeding.</strong> Every antenatal clinic must screen for it at every visit.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -1024,7 +1021,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>The <strong>20-week threshold</strong> is the pivot of the classification: HTN appearing <em>before</em> 20 weeks = chronic; <em>after</em> 20 weeks with proteinuria = preeclampsia.</div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -1239,7 +1235,6 @@ details.study-section > :not(summary) {
   </table>
   <div class="callout warn"><span class="label">Warn</span>Target BP in severe chronic HTN is <strong>&lt; 160/100 mmHg</strong> — over-treating below this risks reduced uteroplacental perfusion and IUGR. The "lower is better" rule of chronic HTN in non-pregnant patients does <em>not</em> apply here.</div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1421,7 +1416,6 @@ details.study-section > :not(summary) {
   <h2><span class="num">5</span>Chronic HTN + Superimposed Preeclampsia</h2>
   <p>Pre-existing hypertension associated with further worsening of BP after 20 weeks of gestation, followed by proteinuria (≥ 3 g/24 h).</p>
   <div class="callout cyan"><span class="label">Note</span>Management is the same as preeclampsia (see §13). The superimposed category is reserved for the chronic hypertensive who develops new proteinuria or end-organ involvement — it carries the worst prognosis of the four categories.</div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1620,7 +1614,6 @@ details.study-section > :not(summary) {
   <h3>Time of Delivery</h3>
   <p>At term by either vaginal delivery if the cervix is favorable or by cesarean section.</p>
   <div class="callout warn"><span class="label">Warn</span>Up to <strong>25–50%</strong> of gestational hypertension eventually progresses to preeclampsia — do not stop monitoring until 42 days postpartum. BP that persists &gt; 42 days reclassifies the patient as chronic hypertensive.</div>
-
 
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
@@ -1829,7 +1822,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>The unifying hypothesis: <strong>incomplete trophoblastic invasion of spiral arteries</strong> → placental hypoperfusion → release of anti-angiogenic factors → systemic endothelial dysfunction → hypertension, proteinuria, edema.</div>
 
-
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2033,7 +2025,6 @@ details.study-section > :not(summary) {
     <li><strong>7. Endocrine glands:</strong> necrosis and hemorrhage in pituitary, pancreas and adrenal glands.</li>
   </ul>
   <div class="callout danger"><span class="label">Danger</span>Every organ system is a target — but the <strong>brain, liver, kidney, and coagulation system</strong> drive most of the maternal mortality. <strong>Glomerular filtration rate drops by ~50%</strong> even in "mild" preeclampsia.</div>
-
 
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
@@ -2252,7 +2243,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout warn"><span class="label">Warn</span>Symptoms are the <strong>RED FLAGS</strong>: headache + blurred vision + epigastric pain is the classic preeclampsia-with-severe-features triad — do not wait for BP to climb further.</div>
 
-
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2439,7 +2429,6 @@ details.study-section > :not(summary) {
     <li><strong>Doppler velocimetry</strong> to detect uteroplacental hypoperfusion.</li>
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>Uterine artery Doppler in the 2nd trimester (22–24 w) showing <strong>notch or raised resistance index</strong> is the single best non-invasive screen for preeclampsia in a primigravida.</div>
-
 
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
@@ -2638,7 +2627,6 @@ details.study-section > :not(summary) {
     <li>Thrombocytopenia (&lt;100,000 platelets/ µL).</li>
   </ul>
   <div class="callout cyan"><span class="label">Note</span>In 2013, The ACOG replaces the term of severe PE with a new term <strong>"preeclampsia with severe features".</strong></div>
-
 
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
@@ -2842,7 +2830,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout danger"><span class="label">Danger</span><strong>HELLP syndrome</strong> (Hemolysis, Elevated Liver enzymes, Low Platelet count) is the most feared maternal complication — and the only cure is <em>delivery</em>, regardless of gestational age.</div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -3052,7 +3039,6 @@ details.study-section > :not(summary) {
     <li>Induction of labor to initiate delivery.</li>
   </ul>
   <div class="callout danger"><span class="label">Danger</span><strong>MgSO<sub>4</sub> is the only drug that prevents eclampsia</strong> — every preeclampsia admission should be on a MgSO<sub>4</sub> protocol. Antihypertensives control BP; they do not prevent fits.</div>
-
 
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
@@ -3268,7 +3254,6 @@ details.study-section > :not(summary) {
     </tbody>
   </table>
   <div class="callout warn"><span class="label">Warn</span>The therapeutic target in pregnancy is <strong>NOT</strong> "normal BP" — it is <strong>diastolic 90–100 / systolic 140–150</strong>. Drop below that and uteroplacental perfusion falls, risking fetal distress and IUGR.</div>
-
 
         <div class="mcq-block" data-subtopic="s14">
           <div class="mcq-header">
@@ -3492,7 +3477,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout warn"><span class="label">Warn</span>The two strongest maternal triggers for delivery are <strong>HELLP (20%) and eclampsia (2%)</strong> — both make delivery non-negotiable regardless of gestational age.</div>
 
-
         <div class="mcq-block" data-subtopic="s15">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3680,7 +3664,6 @@ details.study-section > :not(summary) {
     <li>Following delivery, the patient should be monitored under close observation for a minimum of <strong>24 hours</strong> and magnesium sulphate should be continued for <strong>48 hours</strong>.</li>
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>The classic fluid-restriction rule (1 ml/kg/h) prevents iatrogenic pulmonary edema — the leading immediate cause of maternal death in severe preeclampsia is fluid overload, not BP.</div>
-
 
         <div class="mcq-block" data-subtopic="s16">
           <div class="mcq-header">
@@ -3928,7 +3911,6 @@ details.study-section > :not(summary) {
   <p>Delivery remains the ultimate treatment for eclampsia.</p>
   <div class="callout danger"><span class="label">Danger</span>The 3-monitor check for MgSO<sub>4</sub> toxicity: <strong>reflexes (patellar first to go) + urine output (&lt;30 ml/h) + respiratory rate</strong>. The antidote is <strong>10 ml of 10% calcium gluconate IV</strong>.</div>
 
-
         <div class="mcq-block" data-subtopic="s17">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -4157,7 +4139,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -4201,7 +4182,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -4230,28 +4210,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

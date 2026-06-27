@@ -474,7 +474,6 @@ details.study-section > :not(summary) {
 .topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
 .topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
 
-
   /* ===== MCQ STYLES ===== */
   .mcq-block {
     background: #f8fafc;
@@ -588,7 +587,6 @@ details.study-section > :not(summary) {
     .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
   }
 
-
   /* ===== PROGRESS BAR ===== */
   .progress-wrap {
     position: fixed;
@@ -687,49 +685,50 @@ details.study-section > :not(summary) {
 
 /* ===== BACK COMPAT - all existing rules below stay ===== */
 
-
-  /* ===== SIDEBAR BACK BUTTON ===== */
-  .sidebar-back-btn {
+  
+  /* ===== BACK TO CONTENT TABLE BUTTON (standalone, not inside progress-wrap) ===== */
+  .back-content-btn {
     position: fixed;
     top: 10px;
     left: 10px;
-    z-index: 99997;
+    z-index: 99999;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #1a202c;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
     backdrop-filter: blur(4px);
+    text-decoration: none;
+    line-height: 1;
   }
-  .sidebar-back-btn:hover {
+  .back-content-btn:hover {
     background: #ffffff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    transform: scale(1.05);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    transform: scale(1.1);
   }
-  body.dark .sidebar-back-btn {
-    background: rgba(30,30,46,0.9);
+  body.dark .back-content-btn {
+    background: rgba(30,30,46,0.92);
     color: #e2e8f0;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   }
-  body.dark .sidebar-back-btn:hover {
+  body.dark .back-content-btn:hover {
     background: #1e1e2e;
   }
 </style>
 </head>
 <body>
+<a class="back-content-btn" id="backContentBtn" href="../../../../../dashboard-enhanced.html" title="Back to content table (Dashboard)">←</a>
 
 <div class="progress-wrap" id="progressWrap">
   <div class="progress-bar" id="progressBar"></div>
-
-<button class="sidebar-back-btn" id="sidebarBackBtn" title="Back to dashboard / Open sidebar">☰</button>
 
 <button class="theme-float" id="themeFloatToggle" title="Toggle dark/light mode">🌙</button>
 
@@ -739,7 +738,6 @@ details.study-section > :not(summary) {
     <button onclick="history.back()">← Back</button>
     <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
 </nav>
-
 
 <header class="hero">
   <div class="wrap">
@@ -799,7 +797,6 @@ details.study-section > :not(summary) {
     </ul>
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>The cardiac output rises ~30–50% by the third trimester, peaking at delivery. This is why cardiac decompensation most often occurs at <strong>28–32 weeks</strong>, during labor, and immediately postpartum — when blood volume and venous return are at their highest.</div>
-
 
         <div class="mcq-block" data-subtopic="s2">
           <div class="mcq-header">
@@ -993,7 +990,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout danger"><span class="label">Danger</span>Rheumatic heart disease accounts for <strong>85%</strong> of acquired cardiac disease in pregnancy — and mitral stenosis is the most common valve lesion. In any pregnant patient with new dyspnea + opening snap + diastolic rumble, the diagnosis is mitral stenosis until proven otherwise.</div>
-
 
         <div class="mcq-block" data-subtopic="s3">
           <div class="mcq-header">
@@ -1195,7 +1191,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout cyan"><span class="label">Pearl</span>NYHA class is <strong>dynamic</strong> in pregnancy — a Class II patient can deteriorate to Class III as blood volume rises, then improve again postpartum. Re-classify at every antenatal visit, not just at booking.</div>
 
-
         <div class="mcq-block" data-subtopic="s4">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1384,7 +1379,6 @@ details.study-section > :not(summary) {
     <li>Hemoptysis</li>
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>Paroxysmal nocturnal dyspnea and orthopnea are the two symptoms that point away from "physiologic pregnancy" and toward true left-sided heart failure — ask about them in every antenatal cardiac review.</div>
-
 
         <div class="mcq-block" data-subtopic="s5">
           <div class="mcq-header">
@@ -1576,7 +1570,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout warn"><span class="label">Warn</span>The classic triad of <em>decompensation</em> is <strong>tachycardia &gt;100/min + crepitations at lung bases + displaced apex</strong>. This is the "earliest evidence of decompensation" the source flags — admit to hospital immediately when it appears.</div>
 
-
         <div class="mcq-block" data-subtopic="s6">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -1762,7 +1755,6 @@ details.study-section > :not(summary) {
     <li><strong>Echocardiography:</strong> for cardiac structure and function.</li>
   </ul>
   <div class="callout cyan"><span class="label">Pearl</span>Echocardiography is the <strong>investigation of choice</strong> in pregnancy — it is non-ionizing, gives structural and functional information, and is safe to repeat serially. Reserve CXR and CT for cases where the echo is inconclusive.</div>
-
 
         <div class="mcq-block" data-subtopic="s7">
           <div class="mcq-header">
@@ -1962,7 +1954,6 @@ details.study-section > :not(summary) {
   </div>
   <div class="callout warn"><span class="label">Warn</span>A systolic ejection murmur and a third heart sound are <strong>physiologic</strong> in most pregnancies. Do not admit every pregnant woman with a "new murmur" — but do an echo to confirm, because missing a true MS or AS is far more dangerous than over-imaging.</div>
 
-
         <div class="mcq-block" data-subtopic="s8">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2148,7 +2139,6 @@ details.study-section > :not(summary) {
     <li>Increase risk of <strong>subacute bacterial endocarditis, thromboembolism and rheumatic attacks.</strong></li>
   </ul>
   <div class="callout danger"><span class="label">Danger</span>Three high-risk windows for decompensation: <strong>28–32 weeks</strong> (peak blood volume), the <strong>2nd stage of labor</strong> (Valsalva + tachycardia), and the <strong>immediate postpartum</strong> (autotransfusion from the contracted uterus). Plan extra monitoring in all three.</div>
-
 
         <div class="mcq-block" data-subtopic="s9">
           <div class="mcq-header">
@@ -2354,7 +2344,6 @@ details.study-section > :not(summary) {
     </div>
   </div>
   <div class="callout danger"><span class="label">Danger</span>Congenital heart disease in the mother is associated with an <strong>increased incidence of congenital malformation (CFMF) in the fetus</strong> — preconception counseling and a detailed anatomy scan at 20–22 weeks are mandatory in this group.</div>
-
 
         <div class="mcq-block" data-subtopic="s10">
           <div class="mcq-header">
@@ -2562,7 +2551,6 @@ details.study-section > :not(summary) {
   <div class="callout cyan"><span class="label">Pearl</span>The simplest, cheapest, and most evidence-based intervention: <strong>prevent and treat anemia</strong>. Volume overload of pregnancy is poorly tolerated when every extra gram of hemoglobin is already missing.</div>
   <div class="callout warn"><span class="label">Warn</span>Warfarin is <strong>teratogenic</strong> in the 1<sup>st</sup> trimester (warfarin embryopathy) — switch to heparin before conception or as soon as pregnancy is confirmed in patients with mechanical valves.</div>
 
-
         <div class="mcq-block" data-subtopic="s11">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -2759,7 +2747,6 @@ details.study-section > :not(summary) {
   <h3>Timing of Delivery</h3>
   <p>Usually at term except if heart failure happened which may need preterm termination of pregnancy. Patient is <strong>not allowed to go postterm.</strong></p>
   <div class="callout danger"><span class="label">Danger</span>The "no postterm" rule matters — every additional day of pregnancy adds blood volume, cardiac output, and risk of decompensation. Induce at 38–39 weeks in compensated cardiac patients; do not wait for spontaneous labor.</div>
-
 
         <div class="mcq-block" data-subtopic="s12">
           <div class="mcq-header">
@@ -2969,7 +2956,6 @@ details.study-section > :not(summary) {
   <div class="callout warn"><span class="label">Warn</span>Avoid ergot alkaloids (methylergometrine) at the 3rd stage — they cause <strong>vasoconstriction and hypertension</strong> that can precipitate acute decompensation. Use oxytocin infusion and controlled cord traction instead.</div>
   <div class="callout pearl"><span class="label">Pearl</span>"Shorten the 2nd stage" is a euphemism for <strong>instrumental delivery (forceps or ventouse)</strong> at the right station — a long, exhausting 2nd stage is the single most common precipitant of acute pulmonary edema in labor.</div>
 
-
         <div class="mcq-block" data-subtopic="s13">
           <div class="mcq-header">
             <span class="mcq-counter">📝 Question 1 of 5</span>
@@ -3161,7 +3147,6 @@ details.study-section > :not(summary) {
   </ul>
   <div class="callout danger"><span class="label">Danger</span>The 48-hour postpartum window is when autotransfusion from the contracted uterus can throw a borderline cardiac patient into frank pulmonary edema. <strong>Continuous monitoring for 48 hours postpartum</strong> is not optional — it is the standard of care.</div>
   <div class="callout cyan"><span class="label">Pearl</span>Avoid estrogen-containing contraceptives in any patient with a high thromboembolic risk (mechanical valves, atrial fibrillation, Eisenmenger, Fontan). <strong>Progesterone-only</strong> methods (DMPA, implant, levonorgestrel IUD) are safe.</div>
-
 
         <div class="mcq-block" data-subtopic="s14">
           <div class="mcq-header">
@@ -3391,7 +3376,6 @@ details.study-section > :not(summary) {
   </div>
 </footer>
 
-
 <!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
 <script>
 (function() {
@@ -3435,7 +3419,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
 <script>
 (function() {
   'use strict';
@@ -3464,28 +3447,5 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
-
-  /* Sidebar back button */
-  var backBtn = document.getElementById('sidebarBackBtn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function() {
-      try {
-        if (window.parent && window.parent !== window) {
-          /* Inside iframe -- try to open parent sidebar */
-          var pBtn = window.parent.document.getElementById('sidebarToggleBtn')
-                 || window.parent.document.getElementById('sidebarCollapseBtn');
-          if (pBtn) { pBtn.click(); return; }
-          /* fallback: navigate parent to dashboard */
-          window.parent.location.href = 'dashboard-enhanced.html';
-        } else {
-          /* Direct load -- go to dashboard */
-          window.location.href = '../../../../../dashboard-enhanced.html';
-        }
-      } catch(e) {
-        /* Cross-origin or error fallback */
-        window.location.href = '../../../../../dashboard-enhanced.html';
-      }
-    });
-  }
 </body>
 </html>

@@ -1,0 +1,629 @@
+{
+  "s2": [
+    {
+      "q": "Which of the following is NOT a compartment of the true pelvis?",
+      "options": [
+        "Pelvic inlet",
+        "Pelvic cavity",
+        "Pelvic outlet",
+        "Pelvic diaphragm"
+      ],
+      "correct": 3,
+      "explain": "The true pelvis is divided into three compartments: pelvic inlet (brim), pelvic cavity, and pelvic outlet. The pelvic diaphragm is a muscular structure forming the pelvic floor, not a compartment."
+    },
+    {
+      "q": "The pelvic inlet is also known as the:",
+      "options": [
+        "Pelvic diaphragm",
+        "Pelvic brim",
+        "Obstetric outlet",
+        "Perineal body"
+      ],
+      "correct": 1,
+      "explain": "The pelvic inlet is also called the pelvic brim and represents the superior opening into the true pelvis."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which anteroposterior diameter of the pelvic inlet is the shortest?",
+      "options": [
+        "True conjugate (11 cm)",
+        "Obstetric conjugate (10.5 cm)",
+        "Diagonal conjugate (12.5 cm)",
+        "Anatomical transverse (13 cm)"
+      ],
+      "correct": 1,
+      "explain": "The obstetric conjugate is 10.5 cm — the shortest anteroposterior diameter of the inlet, measured from the sacral promontory to the most bulging point on the back of the symphysis pubis."
+    },
+    {
+      "q": "Which conjugate can be measured clinically on vaginal examination?",
+      "options": [
+        "True conjugate",
+        "Obstetric conjugate",
+        "Diagonal conjugate",
+        "Anatomical conjugate"
+      ],
+      "correct": 2,
+      "explain": "The diagonal conjugate (12.5 cm) is the only one that can be directly measured clinically. The true conjugate is inferred as diagonal minus 1.5 cm."
+    },
+    {
+      "q": "The diagonal conjugate measures:",
+      "options": [
+        "10.5 cm",
+        "11 cm",
+        "12 cm",
+        "12.5 cm"
+      ],
+      "correct": 3,
+      "explain": "The diagonal conjugate measures 12.5 cm, from the tip of the sacral promontory to the lower border of the symphysis pubis."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "What is the largest diameter in the pelvis?",
+      "options": [
+        "Obstetric conjugate (10.5 cm)",
+        "Anatomical transverse diameter (13 cm)",
+        "Interspinous diameter (10.5 cm)",
+        "Bituberous diameter (11 cm)"
+      ],
+      "correct": 1,
+      "explain": "The anatomical transverse diameter (13 cm) is the largest diameter in the pelvis, measured between the farthest two points on the iliopectineal lines."
+    },
+    {
+      "q": "The obstetric transverse diameter of the inlet measures:",
+      "options": [
+        "11 cm",
+        "12 cm",
+        "13 cm",
+        "10.5 cm"
+      ],
+      "correct": 1,
+      "explain": "The obstetric transverse diameter of the inlet measures 12 cm. It is slightly shorter than the anatomical transverse diameter (13 cm) and bisects the true conjugate."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Each oblique diameter of the pelvic inlet measures:",
+      "options": [
+        "9.5 cm",
+        "11 cm",
+        "12 cm",
+        "13 cm"
+      ],
+      "correct": 2,
+      "explain": "Both right and left oblique diameters measure 12 cm. The right oblique runs from the right sacroiliac joint to the left iliopectineal eminence, and the left oblique runs opposite."
+    },
+    {
+      "q": "The sacro-cotyloid diameters measure:",
+      "options": [
+        "9.5 cm",
+        "10.5 cm",
+        "12 cm",
+        "13 cm"
+      ],
+      "correct": 0,
+      "explain": "The sacro-cotyloid diameters measure 9.5 cm, from the promontory of the sacrum to the right or left iliopectineal eminence."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The pelvic cavity is best described as:",
+      "options": [
+        "A flat plane between inlet and outlet",
+        "The space between symphysis pubis and sacrum",
+        "The area below the pelvic outlet",
+        "The space between the ischial spines"
+      ],
+      "correct": 1,
+      "explain": "The pelvic cavity is the space between the symphysis pubis and the sacrum, with the roof being the plane of the pelvic brim and the floor being the plane of least pelvic dimension."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The anatomical outlet of the pelvis is described as:",
+      "options": [
+        "Circular",
+        "Oval",
+        "Lozenge-shaped",
+        "Heart-shaped"
+      ],
+      "correct": 2,
+      "explain": "The anatomical outlet is lozenge-shaped, bounded by the lower border of the symphysis pubis, pubic arch, ischial tuberosities, sacrotuberous and sacrospinous ligaments, and the tip of the coccyx."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s9": [
+    {
+      "q": "During the second stage of labor, what happens to the coccyx to increase the obstetric AP diameter of the outlet?",
+      "options": [
+        "It fractures",
+        "It moves backwards",
+        "It moves forwards",
+        "It remains fixed"
+      ],
+      "correct": 1,
+      "explain": "The coccyx moves backwards during the second stage of labor, increasing the obstetric anteroposterior diameter of the outlet from 11 cm (anatomical) to 13 cm (obstetric)."
+    },
+    {
+      "q": "The interspinous diameter (between ischial spines) measures:",
+      "options": [
+        "9.5 cm",
+        "10.5 cm",
+        "11 cm",
+        "12 cm"
+      ],
+      "correct": 1,
+      "explain": "The interspinous diameter measures 10.5 cm and is widely cited as the smallest pelvic dimension, the plane at which the fetal head most commonly arrests in the second stage."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s10": [
+    {
+      "q": "The obstetric axis (Curve of Carus) is described as:",
+      "options": [
+        "Straight line",
+        "S-shaped",
+        "J-shaped",
+        "C-shaped"
+      ],
+      "correct": 2,
+      "explain": "The Curve of Carus is J-shaped: it passes downwards and backwards along the axis of the inlet to the ischial spines, then downwards and forwards along the axis of the pelvic outlet."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s11": [
+    {
+      "q": "Which Caldwell-Moloy pelvic type is most common and optimally suited for vaginal delivery?",
+      "options": [
+        "Android (20%)",
+        "Anthropoid (25%)",
+        "Gynecoid (50%)",
+        "Platypelloid (5%)"
+      ],
+      "correct": 2,
+      "explain": "The Gynecoid pelvis occurs in 50% of women and is the classic female pelvis optimally suited for vaginal delivery. Mnemonic: GAAAP (Gynecoid 50, Android 20, Anthropoid 25, Platypelloid 5)."
+    },
+    {
+      "q": "Which pelvic type has an anteroposterior diameter greater than the transverse (ape-like inlet)?",
+      "options": [
+        "Gynecoid",
+        "Android",
+        "Anthropoid",
+        "Platypelloid"
+      ],
+      "correct": 2,
+      "explain": "Anthropoid pelvis (25%) has an AP diameter greater than the transverse — an ape-like inlet shape."
+    },
+    {
+      "q": "Platypelloid pelvis is characterized by:",
+      "options": [
+        "Round inlet",
+        "Transverse diameter greater than AP (flat pelvis)",
+        "Heart-shaped inlet",
+        "AP diameter greater than transverse"
+      ],
+      "correct": 1,
+      "explain": "Platypelloid pelvis (5%) is a flat pelvis where the transverse diameter is greater than the anteroposterior diameter."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The most common type is:",
+      "options": [
+        "Type 1 — mild form",
+        "Type 2 — moderate form",
+        "Type 3 — severe form",
+        "Depends on the specific condition and classification system"
+      ],
+      "correct": 3,
+      "explain": "Classification varies by condition — each has its own typing system."
+    }
+  ],
+  "s12": [
+    {
+      "q": "What is the minimum diagonal conjugate measurement suggesting an adequate pelvis?",
+      "options": [
+        "10.5 cm",
+        "11 cm",
+        "11.5 cm",
+        "12.5 cm"
+      ],
+      "correct": 2,
+      "explain": "A diagonal conjugate ≥ 11.5 cm is the practical clinical cut-off suggesting the true conjugate is adequate for vaginal delivery."
+    },
+    {
+      "q": "An adequate subpubic angle for vaginal delivery should be:",
+      "options": [
+        "Less than 60°",
+        "About 75°",
+        "≥ 90° (wide)",
+        "Exactly 45°"
+      ],
+      "correct": 2,
+      "explain": "A wide subpubic angle ≥ 90° allows the pubic arch to admit two fingers and the fetal head to emerge."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>04 - Antenatal Care | Infographic</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+    color: #1f2a37;
+    background: #f5f7fa;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: #1e6091; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 36px 64px;
+    background: #ffffff;
+  }
+
+  .topic-header {
+    background: linear-gradient(135deg, #0f3a5f 0%, #1e6091 60%, #2a8fb5 100%);
+    color: #ffffff;
+    padding: 28px 32px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+  }
+  .topic-header .eyebrow {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #cfe6f3; font-weight: 600; margin-bottom: 8px;
+  }
+  .topic-header h1 { margin: 0 0 10px; font-size: 32px; line-height: 1.2; font-weight: 700; }
+  .topic-header .meta { font-size: 13px; color: #d4e6f1; }
+  .topic-header .meta span { margin-right: 18px; }
+
+  .section {
+    margin-bottom: 32px; padding: 24px 28px;
+    background: #fafbfc; border-left: 6px solid #1e6091; border-radius: 10px;
+  }
+  .section h2 { margin: 0 0 16px; font-size: 22px; color: #0f3a5f; border-bottom: 2px solid #d4e2ec; padding-bottom: 8px; }
+  .section h3 { margin: 18px 0 8px; font-size: 17px; color: #1e6091; }
+  .section h4 { margin: 14px 0 6px; font-size: 15px; color: #2a8fb5; }
+  .section p { margin: 8px 0; }
+
+  ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+  ul li, ol li { margin: 4px 0; }
+  ul.il-list { list-style: none; padding-left: 0; }
+  ul.il-list > li { position: relative; padding-left: 22px; margin: 6px 0; }
+  ul.il-list > li::before { content: "♦"; color: #1e6091; position: absolute; left: 0; top: 0; font-size: 14px; }
+  ul.bullet-list { list-style: none; padding-left: 0; }
+  ul.bullet-list > li { position: relative; padding-left: 20px; margin: 5px 0; }
+  ul.bullet-list > li::before { content: "•"; color: #2a8fb5; position: absolute; left: 6px; top: 0; font-size: 18px; line-height: 1; }
+  ul.dash-list { list-style: none; padding-left: 0; }
+  ul.dash-list > li { position: relative; padding-left: 22px; margin: 5px 0; }
+  ul.dash-list > li::before { content: "—"; color: #1e6091; position: absolute; left: 0; top: 0; font-weight: 600; }
+
+  .callout {
+    border-left: 4px solid; padding: 12px 16px; margin: 14px 0;
+    border-radius: 6px; background: #ffffff;
+  }
+  .callout-note { border-color: #1e6091; background: #eef5fa; }
+  .callout-warn { border-color: #c62828; background: #fdecea; }
+  .callout-pearl { border-color: #2e7d32; background: #eaf6ec; }
+  .callout-title {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+    font-weight: 700; margin-bottom: 4px;
+  }
+  .callout-note .callout-title { color: #0f3a5f; }
+  .callout-warn .callout-title { color: #b71c1c; }
+  .callout-pearl .callout-title { color: #1b5e20; }
+
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: #ffffff; }
+  th, td { border: 1px solid #d4e2ec; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #1e6091; color: #ffffff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f5f8fb; }
+
+  .grid-2 {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .references {
+    background: #f0f3f7; border-radius: 10px; padding: 20px 24px;
+    margin-top: 32px; border: 1px solid #d4e2ec;
+  }
+  .references h2 { margin: 0 0 10px; font-size: 18px; color: #0f3a5f; }
+  .references ul { margin: 4px 0 0 18px; padding: 0; }
+  .references li { font-size: 13px; margin: 3px 0; color: #374151; }
+
+  .footer-note {
+    margin-top: 28px; padding-top: 16px; border-top: 1px solid #d4e2ec;
+    font-size: 12px; color: #6b7280; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 18px 16px 32px; }
+    .topic-header { padding: 18px 20px; }
+    .topic-header h1 { font-size: 24px; }
+    .section { padding: 16px 18px; }
+    .section h2 { font-size: 18px; }
+  }
+
+  @media print {
+    body { background: #ffffff; }
+    .page { box-shadow: none; padding: 18px; max-width: none; }
+    .section { break-inside: avoid; }
+  }
+
+/* ====== Table of Contents (matches 05_Abortion.html premium design) ====== */
+.toc{
+  background:#FFFFFF;
+  border:1px solid #E5E7EB;
+  border-radius:12px;
+  padding:22px 28px 24px;
+  margin-bottom:28px;
+  box-shadow:0 1px 2px rgba(15,23,42,.04);
+}
+.toc-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  padding-bottom:14px;border-bottom:1px solid #E5E7EB;
+}
+.toc-head .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:#EFF6FF;color:#3B82F6;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.toc-head h2{margin:0;font-size:15px;font-weight:700;color:#0F172A;letter-spacing:.005em}
+.toc-head .count{margin-left:auto;font-size:12.5px;color:#64748B;font-weight:500}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  columns:2;column-gap:36px;
+  font-size:14px;
+}
+.toc-list li{margin:6px 0;break-inside:avoid}
+.toc-list a{
+  display:flex;align-items:center;gap:10px;
+  color:#334155;text-decoration:none;
+  padding:5px 0;border-bottom:1px dashed transparent;
+  transition:color .15s ease, border-color .15s ease;
+}
+.toc-list a:hover{color:#3B82F6;border-bottom-color:#60A5FA}
+.toc-list .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:6px;
+  background:#F8FAFC;color:#64748B;
+  font-size:11.5px;font-weight:700;flex-shrink:0;
+}
+@media (max-width:900px){
+  .toc-list{columns:1}
+}
+/* ====== End Table of Contents ====== */
+
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+<style>/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+}
+details.study-section > summary {
+    cursor: pointer;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: #1e293b;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    list-style: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+    display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+    list-style: none;
+}
+details.study-section > summary::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.75em;
+    color: #64748b;
+    transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+    transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+    padding: 0;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */</style></head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<header class="topic-header">
+<div class="eyebrow">Topic 04 · Obstetrics</div>
+<h1>Antenatal Care</h1>
+<div class="meta">
+<span>📚 Source: Book Obstetrics 2025-2026, Ch. 4</span>
+<span>📄 3 pages</span>
+<span>🏥 Medical / Educational Infographic</span>
+</div>
+</header>
+<nav class="toc">
+<div class="toc-head">
+<span class="ico">🗂</span>
+<h2>Table of Contents</h2>
+<span class="count">15 sections</span>
+</div>
+<ol class="toc-list">
+<li><a href="#intended-learning-objectives-ilos"><span class="n">1</span>Intended Learning Objectives (ILOs)</a></li>
+<li><a href="#1-definition-and-objectives-of-antenatal-care"><span class="n">1</span>1. Definition &amp; Objectives of Antenatal Care</a></li>
+<li><a href="#2-frequency-of-visits"><span class="n">3</span>2. Frequency of Visits</a></li>
+<li><a href="#3-initial-visit"><span class="n">4</span>3. Initial Visit</a></li>
+<li><a href="#4-subsequent-visits"><span class="n">5</span>4. Subsequent Visits</a></li>
+<li><a href="#5-screening-tests"><span class="n">6</span>5. Screening Tests</a></li>
+<li><a href="#6-antenatal-advice-nutrition"><span class="n">7</span>6. Antenatal Advice — Nutrition</a></li>
+<li><a href="#7-antenatal-advice-lifestyle"><span class="n">8</span>7. Antenatal Advice — Lifestyle</a></li>
+<li><a href="#8-immunization-during-pregnancy"><span class="n">9</span>8. Immunization During Pregnancy</a></li>
+<li><a href="#9-exposure-to-infection"><span class="n">10</span>9. Exposure to Infection</a></li>
+<li><a href="#10-exposure-to-irradiation"><span class="n">11</span>10. Exposure to Irradiation</a></li>
+<li><a href="#11-medications"><span class="n">12</span>11. Medications</a></li>
+<li><a href="#12-warning-symptoms-of-pregnancy"><span class="n">13</span>12. Warning Symptoms of Pregnancy</a></li>
+<li><a href="#13-student-activity"><span class="n">14</span>13. Student Activity</a></li>
+<li><a href="#14-questions"><span class="n">15</span>14. Questions</a></li>
+</ol>
+</nav>
+<!-- ILOs -->
+<section class="section" id="intended-learning-objectives-ilos">
+<h2>Intended Learning Objectives (ILOs)</h2>
+<p>At the end of this chapter, the student should be able to:</p>
+<ul class="il-list">
+<li>Understand the goal of antenatal care together with different components of the antenatal program.</li>
+</ul>
+</section>
+<!-- 1. Definition + Objectives -->
+<section class="section" id="1-definition-and-objectives-of-antenatal-care">
+<h2>1. Definition &amp; Objectives of Antenatal Care</h2>
+<h3>Definition</h3>
+<p>Preventive obstetric program including a group of observations, medical care, investigations and advices aiming at getting pregnancy, labor and puerperium as near to normal as possible.</p>
+<h3>Objectives</h3>
+<ul class="bullet-list">
+<li>Identification of high risk pregnancy.</li>
+<li>Monitoring of high risk pregnancy.</li>
+<li>Early detection of complications.</li>
+<li>Giving advice for all pregnant patients.</li>
+<li>Management of common minor problems.</li>
+</ul>
+</section>
+<!-- 2. Frequency of visits -->
+<section class="section" id="2-frequency-of-visits">
+<h2>2. Frequency of Visits</h2>
+<div class="grid-2">
+<div>
+<h3>Low-Risk Group</h3>
+<ul class="bullet-list">
+<li>Every month till 28 weeks.</li>
+<li>Then every 2 weeks till 36 weeks.</li>
+<li>Then every week till delivery.</li>
+</ul>
+</div>
+<div>
+<h3>High-Risk Group</h3>
+<ul class="bullet-list">
+<li>Every 2 weeks till 28 weeks.</li>
+<li>Then every week till 36 weeks.</li>
+<li>Then <strong>hospitalization till delivery</strong>.</li>
+</ul>
+</div>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Gestational Window</th><th>Low Risk</th><th>High Risk</th></tr>
+</thead>
+<tbody>
+<tr><td>0 – 28 weeks</td><td>Every month</td><td>Every 2 weeks</td></tr>
+<tr><td>28 – 36 weeks</td><td>Every 2 weeks</td><td>Every week</td></tr>
+<tr><td>36 weeks – delivery</td><td>Every week</td><td>Hospitalization till delivery</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 3. Initial visit -->
+<section class="section" id="3-initial-visit">
+<h2>3. Initial Visit</h2>
+<ul class="bullet-list">
+<li>Diagnosis of pregnancy and accurate dating.</li>
+<li>Complete clinical evaluation: history, general, abdominal, and local examination.</li>
+</ul>
+</section>
+<!-- 4. Subsequent visits -->
+<section class="section" id="4-subsequent-visits">
+<h2>4. Subsequent Visits</h2>
+<ul class="bullet-list">
+<li>Ask about any complaints.</li>
+<li>BP, weight, edema, and abdominal examination.</li>
+<li>Local examination (if indicated).</li>
+<li>Urine for albumin, sugar, and other investigations according to the situation.</li>
+</ul>
+</section>
+<!-- 5. Screening tests -->
+<section class="section" id="5-screening-tests">
+<h2>5. Screening Tests</h2>
+<h3>5.1 Routine Tests</h3>
+<ul class="bullet-list">
+<li>ABO grouping and Rh typing.</li>
+<li>Urine analysis for albumin, sugar and bacterial count.</li>
+<li>CBC.</li>
+<li>One-hour postprandial glucose test.</li>
+<li>HBsAg.</li>
+<li>Rubella antibodies.</li>
+<li>Cervicovaginal smear.</li>
+</ul>
+<h3>5.2 For Specific Populations</h3>
+<ul class="bullet-list">
+<li>Sexually transmitted diseases (HIV, Syphilis, …etc).</li>
+<li>Thalassemia (A in Asians; B in Mediterranean).</li>
+<li>Sickle cell anemia (in black women).</li>
+<li>Tuberculin skin test.</li>
+<li>Screen for short cervix by transvaginal ultrasound.</li>
+<li>Screening or diagnostic testing for trisomy 21 and other genetic disorders.</li>
+<li>Screen for red blood cell antibodies and administer anti-D immune globulin to D-negative patients.</li>
+</ul>
+</section>
+<!-- 6. Antenatal advice: Nutrition -->
+<section class="section" id="6-antenatal-advice-nutrition">
+<h2>6. Antenatal Advice — Nutrition</h2>
+<h3>Daily Requirements</h3>
+<ul class="bullet-list">
+<li><strong>Total calories:</strong> 2700 cal / day.</li>
+<li><strong>Protein:</strong> 1.5 g / kg / day (at least half should be of animal source).</li>
+<li><strong>Iron:</strong> 30–60 mg / day.</li>
+<li><strong>Calcium:</strong> 1.5 g / day.</li>
+<li><strong>Folic acid:</strong> 400 µg / day.</li>
+<li><strong>Weight gain:</strong> 10–12 kg.</li>
+</ul>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Nutrient</th><th>Daily Requirement</th></tr>
+</thead>
+<tbody>
+<tr><td>Total calories</td><td>2700 cal / day</td></tr>
+<tr><td>Protein</td><td>1.5 g / kg / day (≥ ½ from animal source)</td></tr>
+<tr><td>Iron</td><td>30–60 mg / day</td></tr>
+<tr><td>Calcium</td><td>1.5 g / day</td></tr>
+<tr><td>Folic acid</td><td>400 µg / day</td></tr>
+<tr><td>Weight gain</td><td>10–12 kg</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 7. Other advice -->
+<section class="section" id="7-antenatal-advice-lifestyle">
+<h2>7. Antenatal Advice — Lifestyle</h2>
+<ul class="bullet-list">
+<li><strong>Teeth care:</strong> daily cleaning by tooth paste.</li>
+<li><strong>Clothing:</strong> light clothes, avoid high-heeled shoes.</li>
+<li><strong>Bathing:</strong> avoid hot bathing and swimming pools.</li>
+<li><strong>Sexual activity:</strong> whenever there is a threat of abortion or preterm labor, coitus should be avoided. Otherwise, it is allowed with less frequency.</li>
+<li><strong>Sleep:</strong> 8 hours at night and 2 in the afternoon.</li>
+<li><strong>Travelling:</strong> avoided if there is a risk of abortion or PTL (preterm labor).</li>
+<li><strong>Special habits:</strong> avoid smoking, alcohol.</li>
+</ul>
+</section>
+<!-- 8. Immunization -->
+<section class="section" id="8-immunization-during-pregnancy">
+<h2>8. Immunization During Pregnancy</h2>
+<ul class="bullet-list">
+<li><strong>Live attenuated viral vaccines</strong> such as MMR &amp; polio are <strong>contraindicated</strong>.</li>
+<li><strong>Inactivated viral vaccines</strong> such as influenza and rabies are <strong>safe</strong>.</li>
+</ul>
+<div class="callout callout-warn">
+<div class="callout-title">Warning — Live Vaccines Contraindicated</div>
+<p>Live attenuated vaccines (MMR, polio) are contraindicated in pregnancy. Inactivated vaccines (influenza, rabies) are safe.</p>
+</div>
+</section>
+<!-- 9. Exposure to infection -->
+<section class="section" id="9-exposure-to-infection">
+<h2>9. Exposure to Infection</h2>
+<p>Avoided for fear of teratogenicity — e.g. <strong>Rubella</strong>, <strong>Cytomegalovirus</strong>, …etc.</p>
+</section>
+<!-- 10. Exposure to irradiation -->
+<section class="section" id="10-exposure-to-irradiation">
+<h2>10. Exposure to Irradiation</h2>
+<p>Avoided whether diagnostic or therapeutic.</p>
+<ul class="bullet-list">
+<li><strong>&lt; 5 rads:</strong> may not harm.</li>
+<li><strong>5 – 50 rads:</strong> may harm.</li>
+<li><strong>50 – 100 rads:</strong> CFMF (Central Nervous System MalFormation).</li>
+</ul>
+<div class="callout callout-pearl">
+<div class="callout-title">Clinical Pearl — Radiation Thresholds</div>
+<p>Below 5 rads is generally considered safe; 5–50 rads is a harm-risk window; above 50 rads is associated with <strong>CFMF</strong> (CNS malformation). Note: 1 rad = 0.01 Gy.</p>
+</div>
+</section>
+<!-- 11. Medications -->
+<section class="section" id="11-medications">
+<h2>11. Medications</h2>
+<ul class="bullet-list">
+<li>Not to be taken without obstetrician advice.</li>
+<li>All drugs should be avoided in the first trimester.</li>
+<li>Give the smallest effective dose for the smallest time.</li>
+</ul>
+</section>
+<!-- 12. Warning symptoms -->
+<section class="section" id="12-warning-symptoms-of-pregnancy">
+<h2>12. Warning Symptoms of Pregnancy</h2>
+<ol class="bullet-list">
+<li>Any symptoms suggestive of PIH: persistent headache, blurring of vision, vomiting, and epigastric pain.</li>
+<li>Swelling of the face, fingers and limbs.</li>
+<li>Excessive watery vaginal discharge.</li>
+<li>Vaginal bleeding.</li>
+<li>Fever, dyspnea.</li>
+<li>Severe abdominal pain.</li>
+<li>Decreased fetal kicks.</li>
+</ol>
+<div class="callout callout-warn">
+<div class="callout-title">Warning — Seek Immediate Care</div>
+<p>Any of the seven symptoms above warrants urgent review. Headaches + visual changes + epigastric pain = think <strong>PIH / pre-eclampsia</strong>. Decreased fetal kicks may signal fetal compromise.</p>
+</div>
+</section>
+<!-- 13. Student activity -->
+<section class="section" id="13-student-activity">
+<h2>13. Student Activity</h2>
+<p>Each student is requested to pay a visit to the departmental outpatient clinic to identify different activities performed during antenatal care of a pregnant woman.</p>
+</section>
+<!-- 14. Questions -->
+<section class="section" id="14-questions">
+<h2>14. Questions</h2>
+<p>Practice questions for this chapter are available at the following link:</p>
+<p>🔗 <a href="https://forms.gle/i5V3wrpzzQXfSPBN6" rel="noopener noreferrer" target="_blank">https://forms.gle/i5V3wrpzzQXfSPBN6</a></p>
+</section>
+<!-- REFERENCES -->
+<details class="study-section"><summary>References &amp; Visual Sources</summary><section class="references">
+<h2>References &amp; Visual Sources</h2>
+<p>The following sources were used in the preparation of this infographic. Every external resource consulted is cited below.</p>
+<ul>
+<li><strong>Primary source material:</strong> Book Obstetrics 2025-2026, Chapter 4 — <em>Antenatal Care</em> (3 pages).</li>
+<li><strong>Source images:</strong> This chapter contains no embedded source images; the entire infographic is built from the source text. Educational callouts (radiation thresholds, vaccine safety, warning-symptom triage) were added as teaching aids — every source fact remains present verbatim.</li>
+<li><strong>External resource (questions / online quiz):</strong> Google Forms — <a href="https://forms.gle/i5V3wrpzzQXfSPBN6" rel="noopener noreferrer" target="_blank">https://forms.gle/i5V3wrpzzQXfSPBN6</a></li>
+</ul>
+</section></details>
+<div class="footer-note">
+    Generated as Topic 04 of the Sequential Infographic Generation System. All source content has been preserved verbatim; no information was summarized, compressed, or omitted.
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script><!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 26 — Breech Presentation</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;
+    border-radius:0 0 22px 22px;
+    padding:28px 32px 30px;
+    margin:0 -28px 22px;
+    box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{
+    font-size:34px;line-height:1.15;margin:14px 0 10px;
+    font-weight:800;letter-spacing:-0.01em;
+  }
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;
+    font-weight:500;letter-spacing:0.01em;
+  }
+
+  /* TOC */
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);
+    border-radius:12px;padding:16px 22px;margin:0 0 22px;
+    box-shadow:var(--shadow);
+  }
+  .toc h2{
+    font-size:14px;color:var(--prim2);margin:0 0 8px;
+    text-transform:uppercase;letter-spacing:0.08em;font-weight:700;
+  }
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  /* Section */
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;
+    padding:8px 0 8px 14px;border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{
+    font-size:15.5px;color:var(--prim2);margin:16px 0 8px;
+    font-weight:700;letter-spacing:0.01em;
+  }
+
+  /* Cards / boxes */
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 18px;margin:0 0 14px;
+    box-shadow:var(--shadow);
+  }
+  .keydef{
+    background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);
+    border:1px solid #DDD6FE;border-left:5px solid #7C3AED;
+  }
+  .pearl{
+    background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);
+    border:1px solid #FBCFE8;border-left:5px solid #DB2777;
+  }
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{
+    background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);
+    border:1px solid #FDE68A;border-left:5px solid #D97706;
+  }
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{
+    background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);
+    border:1px solid #A5F3FC;border-left:5px solid #0891B2;
+  }
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .green-card{
+    background:linear-gradient(180deg,#ECFDF5 0%,#D1FAE5 100%);
+    border:1px solid #6EE7B7;border-left:5px solid #059669;
+  }
+  .green-card h4{color:#065F46;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .red-card{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .red-card h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+
+  /* Definition block specifically */
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  /* Lists */
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;
+    border-radius:50%;text-align:center;line-height:24px;font-size:12px;
+    font-weight:700;
+  }
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;
+    background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;
+    margin:0 0 16px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:540px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;
+    color:#fff;padding:3px 9px;border-radius:999px;
+    font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  /* Two-column grid for pairs */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+  .cause-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:10px 14px;box-shadow:var(--shadow);
+    border-left:4px solid var(--prim);
+  }
+  .cause-card b{color:var(--prim2);font-size:13.5px}
+  .cause-card p{font-size:12.5px;color:#475569;margin:4px 0 0}
+
+  .indication{
+    background:#FEF2F2;border:1px solid #FECACA;border-left:4px solid #DC2626;
+    border-radius:10px;padding:8px 12px;margin:6px 0;font-size:13.5px;
+  }
+  .indication b{color:#991B1B}
+
+  .qref{font-size:14px;line-height:1.6;margin:6px 0}
+
+  /* Clickable expand/collapse cards */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;
+    font-size:15px;font-weight:700;color:var(--prim2);
+    background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;
+    display:flex;align-items:center;gap:10px;user-select:none;
+    position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,var(--primLite),#fff 40%);
+  }
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{
+    margin-left:auto;font-size:11px;font-weight:600;
+    color:#64748B;letter-spacing:0.04em;text-transform:uppercase;
+  }
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  /* Type cards for §4 (4 breech types) */
+  .type-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:4px solid var(--accent);
+  }
+  .type-card .name{color:var(--prim2);font-size:14px;font-weight:700;margin:0 0 4px}
+  .type-card .pct{color:#059669;font-size:12px;font-weight:600;margin:0 0 6px}
+  .type-card .desc{font-size:12.5px;color:#475569;margin:0}
+
+  /* Position cards for §5 (4 positions) */
+  .pos-card{
+    background:#fff;border:1px solid var(--line);border-radius:8px;
+    padding:8px 12px;box-shadow:var(--shadow);
+    border-left:4px solid var(--prim);
+    font-size:13px;
+  }
+  .pos-card b{color:var(--prim2);font-size:14px;display:block;margin-bottom:2px}
+
+  /* Diagnosis grid */
+  .dx-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:5px solid var(--prim);
+  }
+  .dx-card h3{font-size:14px;color:var(--prim2);margin:0 0 6px;font-weight:700}
+  .dx-card p{font-size:13px;color:#475569;margin:4px 0}
+
+  /* Method card (MSV, Burns-Marshall, Piper) */
+  .method-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 16px;box-shadow:var(--shadow);
+    border-left:5px solid var(--prim);
+    margin:0 0 12px;
+  }
+  .method-card h3{font-size:15px;color:var(--prim2);margin:0 0 8px;font-weight:700}
+
+  /* Footer */
+  footer{
+    margin-top:30px;padding:14px 16px;
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-radius:10px;font-size:12px;color:#1E40AF;
+    text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.cause-card,.indication,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- ============ HERO ============ -->
+<div class="hero">
+<span class="pill">Topic 26 · Chapter 26 · Breech Presentation</span>
+<h1>Breech Presentation</h1>
+<p>Fetus in a longitudinal lie in which the presenting part is the buttocks or feet (podalic part). Occurs in 3-4% of all deliveries. This chapter covers etiology, types, positions, diagnosis, mechanism of labor, ECV, vaginal breech delivery, complications, and management of complicated breech.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 132-145 (14 pages)</span>
+<span class="chip">🟢 Source visuals: 7 (all embedded)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 20 content sections preserved</span>
+</div>
+</div>
+<!-- ============ TOC ============ -->
+<div class="toc">
+<h2>📑 Table of Contents · 20 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definition &amp; Incidence</a></li>
+<li><a href="#s3">Etiology &amp; Predisposing factors</a></li>
+<li><a href="#s4">Types of breech</a></li>
+<li><a href="#s5">Positions</a></li>
+<li><a href="#s6">Diagnosis</a></li>
+<li><a href="#s7">Figure · Leopold maneuvers</a></li>
+<li><a href="#s8">Mechanism of labor in breech</a></li>
+<li><a href="#s9">Methods to deliver the head</a></li>
+<li><a href="#s10">External Cephalic Version (ECV)</a></li>
+<li><a href="#s11">Vaginal breech delivery</a></li>
+<li><a href="#s12">Assisted delivery technique</a></li>
+<li><a href="#s13">Arm delivery — Løvset maneuver</a></li>
+<li><a href="#s14">Aftercoming head — MSV &amp; Piper</a></li>
+<li><a href="#s15">Piper's forceps</a></li>
+<li><a href="#s16">Complications of vaginal breech delivery</a></li>
+<li><a href="#s17">Total breech extraction</a></li>
+<li><a href="#s18">Indications for cesarean section</a></li>
+<li><a href="#s19">Complicated breech delivery</a></li>
+<li><a href="#s20">Student activity · Assessment · References</a></li>
+</ol>
+</div>
+<!-- ============ §1 ILOs ============ -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To understand the <strong>definition of breech malpresentation</strong>.</li>
+<li>To be able to explain <strong>possible etiologies of such malpresentation</strong>.</li>
+<li>To be able to outline the <strong>external cephalic version</strong>.</li>
+<li>To be able to describe the <strong>diagnosis and management</strong> of breech malpresentation.</li>
+<li>To be able to ouline the <strong>complications</strong> of breech malpresentation. <span style="color:#94A3B8;font-size:12px">(sic — source typo preserved)</span></li>
+</ol>
+</div>
+</section>
+<!-- ============ §2 Definition & Incidence ============ -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definition &amp; Incidence</h2>
+<div class="card keydef def-block">
+<p><strong>Breech presentation</strong> is a <strong>fetus in a longitudinal lie in which the presenting part is the buttocks or feet (podalic part)</strong>.</p>
+</div>
+<div class="grid-2">
+<div class="card green-card">
+<h4>📊 INCIDENCE</h4>
+<p style="font-size:14px"><strong>This occurs in 3-4% of all deliveries.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0">Breech is the most common malpresentation at term but decreases with advancing gestational age as most fetuses spontaneously turn to cephalic by 36-37 weeks.</p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Why "podalic"?</h4>
+<p style="font-size:13px">"Podalic" comes from Greek <em>pous/podos</em> = foot. The podalic part is whatever is presenting at the pelvic inlet — in a breech, that's the <strong>buttocks (frank)</strong>, <strong>buttocks + feet (complete)</strong>, or a <strong>foot/feet (footling)</strong>.</p>
+</div>
+</div>
+</section>
+<!-- ============ §3 Etiology & Predisposing factors ============ -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Etiology &amp; Predisposing factors</h2>
+<div class="card keydef">
+<h4 style="color:#6D28D9;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em">📐 ACCOMMODATION THEORY</h4>
+<p style="font-size:14px"><strong>The fetus is usually adapted to the pyriform shape of the uterus with the large buttock in the fundus and the smaller head in the lower uterine segment.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0">When this normal accommodation is disrupted — by prematurity, excess fluid, malformed uterus, or a fetal abnormality — the fetus may end up presenting breech.</p>
+</div>
+<h3 class="sub">Predisposing factors (source lists 8)</h3>
+<div class="grid-4">
+<div class="cause-card"><b>1. Prematurity</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Smaller fetus, easier to flip — breech is more common in preterm.</p></div>
+<div class="cause-card"><b>2. Uterine malformations or fibroids</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Distorted uterine cavity prevents the fetus from settling into the normal cephalic lie.</p></div>
+<div class="cause-card"><b>3. Polyhydramnios</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Excess fluid → fetus is mobile and can flip to breech.</p></div>
+<div class="cause-card"><b>4. Placenta previa</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Placenta in the lower segment blocks the head from engaging → fetus sits breech.</p></div>
+<div class="cause-card"><b>5. Fetal abnormalities</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">e.g., CNS malformations, neck masses, aneuploidy — affect the way the fetus fits.</p></div>
+<div class="cause-card"><b>6. Multiple gestations</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Crowding + one twin's presentation can affect the other.</p></div>
+<div class="cause-card"><b>7. Cord around the neck</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Nuchal cord can prevent the head from descending into the pelvis.</p></div>
+<div class="cause-card"><b>8. Pelvic tumors</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Space-occupying lesion in the pelvis blocks head engagement.</p></div>
+</div>
+</section>
+<!-- ============ §4 Types of breech ============ -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Types of breech</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source enumerates 4 types, distinguished by the position of the hips and knees of the fetus.</p>
+<div class="grid-2">
+<div class="type-card">
+<p class="name">Frank breech</p>
+<p class="pct">50-70% of breech presentations</p>
+<p class="desc"><strong>Hips flexed, knees extended</strong> (pike position). The legs are extended along the fetal abdomen with feet near the head. <em>The commonest type.</em></p>
+</div>
+<div class="type-card" style="border-left-color:#7C3AED">
+<p class="name" style="color:#5B21B6">Complete breech</p>
+<p class="pct">5-10% of breech presentations</p>
+<p class="desc"><strong>Hips flexed, knees flexed</strong> (cannonball position). The fetus is sitting cross-legged, with feet beside the buttocks.</p>
+</div>
+<div class="type-card" style="border-left-color:#DC2626">
+<p class="name" style="color:#991B1B">Footling / incomplete breech</p>
+<p class="pct">10-30% of breech presentations</p>
+<p class="desc"><strong>One or both hips extended, foot is presenting</strong>. One or both feet present below the buttocks. <em>Higher risk of cord prolapse.</em></p>
+</div>
+<div class="type-card" style="border-left-color:#D97706">
+<p class="name" style="color:#92400E">Knee presentation</p>
+<p class="pct">(rare — no % given in source)</p>
+<p class="desc"><strong>Hip extended, knee flexed</strong> on one or both sides. The knee presents at the pelvic inlet. Rare in practice.</p>
+</div>
+</div>
+<div class="card warn" style="margin-top:4px">
+<h4>⚠ EXAM NOTE — Why footling is dangerous</h4>
+<p style="font-size:13px">In a footling breech, the presenting part is a <em>small foot</em> — it does not fill the pelvic inlet, so the umbilical cord can slip past it and prolapse. This is one of the standard <strong>indications for cesarean section</strong> (see §18).</p>
+</div>
+</section>
+<!-- ============ §5 Positions ============ -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Positions</h2>
+<div class="card keydef">
+<p style="font-size:14px"><strong>The denominator is the sacrum.</strong></p>
+<p style="font-size:13px;color:#475569;margin:6px 0 0">In a breech, the <strong>sacrum</strong> is used as the reference point (denominator) for naming the position — analogous to the occiput in a cephalic presentation.</p>
+</div>
+<h3 class="sub">4 positions of the sacrum (LSA / RSA / LSP / RSP)</h3>
+<div class="grid-2">
+<div class="pos-card"><b>LSA</b>Left Sacro-Anterior — sacrum points to the mother's <strong>left anterior</strong> quadrant</div>
+<div class="pos-card"><b>RSA</b>Right Sacro-Anterior — sacrum points to the mother's <strong>right anterior</strong> quadrant</div>
+<div class="pos-card"><b>LSP</b>Left Sacro-Posterior — sacrum points to the mother's <strong>left posterior</strong> quadrant</div>
+<div class="pos-card"><b>RSP</b>Right Sacro-Posterior — sacrum points to the mother's <strong>right posterior</strong> quadrant</div>
+</div>
+<div class="card pearl" style="margin-top:8px">
+<h4>💡 CLINICAL PEARL — Commonest position is LSA</h4>
+<p style="font-size:13px">The <strong>left sacro-anterior (LSA)</strong> position is the commonest position for a breech fetus — i.e., the fetal sacrum is directed toward the mother's left front. This is the position most often described in mechanism-of-labor discussions.</p>
+</div>
+</section>
+<!-- ============ §6 Diagnosis ============ -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Diagnosis</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Diagnosis is made by clinical examination (palpation, auscultation, pelvic exam) and confirmed by ultrasonography.</p>
+<h3 class="sub">📋 Palpation — 4 grips (Leopold maneuvers)</h3>
+<div class="grid-2">
+<div class="dx-card">
+<h3>Fundal level</h3>
+<p>Corresponds to the period of amenorrhea <strong>except in frank breech</strong>, the fundal level may be lower due to early engagement.</p>
+</div>
+<div class="dx-card">
+<h3>Fundal grip</h3>
+<p>The head is felt as a <strong>smooth, hard, rounded &amp; ballottable mass</strong> in the fundus.</p>
+</div>
+<div class="dx-card">
+<h3>Umbilical grip</h3>
+<p>In <strong>sacro-anterior</strong> position, the back is felt on one side &amp; the limbs on the opposite side. A depression corresponds to the neck may be felt above the umbilicus.</p>
+<p>In <strong>sacro-posterior</strong> position, the limbs are felt on both sides of the midline.</p>
+</div>
+<div class="dx-card">
+<h3>First pelvic grip</h3>
+<p>The breech is felt as a <strong>smooth, soft mass continuous with the back, not ballottable and not tender</strong>. In frank breech, the breech may be felt due to early engagement.</p>
+</div>
+</div>
+<h3 class="sub">🔊 Auscultation</h3>
+<p style="font-size:13.5px"><strong>Fetal heart heard higher in the abdomen</strong> (because the fetal chest is high in the uterine fundus in a breech).</p>
+<h3 class="sub">🤚 Pelvic examination (PV)</h3>
+<p style="font-size:13.5px"><strong>Head is not felt in the pelvis, very thick meconium after rupture of membranes.</strong></p>
+<h3 class="sub">🖥 Ultrasonography</h3>
+<p style="font-size:13.5px"><strong>Confirm the diagnosis, identify the type of breech and it reveals any fetal or uterine abnormalities that may predispose to breech presentation.</strong></p>
+</section>
+<!-- ============ §7 Figure · Leopold maneuvers ============ -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Figure · Leopold maneuvers (Diagnosis by palpation)</h2>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-000</span>
+<div class="img-frame">
+<img alt="Three-panel line drawing demonstrating Leopold maneuvers 2, 3, and 4 — a clinician's hands palpating a pregnant abdomen, with the fetus shown in dashed outline." src="../../../../extracted_images/26_breech_presentation/leopold_maneuvers_3panel.jpg"/>
+</div>
+<div class="cap">Figure 1 — Three-panel instructional line drawing of the <strong>Leopold maneuvers</strong> (a subset: maneuvers 2, 3, and 4), the classic bedside technique used to determine fetal lie, presentation, position of the back, and engagement. <strong>Left panel:</strong> the third maneuver — suprapubic palpation to identify the presenting part at the pelvic inlet. <strong>Center panel:</strong> the second maneuver — bilateral uterine palpation to locate the fetal back and limbs. <strong>Right panel:</strong> the fourth maneuver — deep pelvic grip to assess engagement and identify the cephalic prominence. The fetus is shown in dashed outline to indicate its position inside the uterus. This illustration is the visual companion to §6 Diagnosis (palpation).</div>
+</div>
+</section>
+<!-- ============ §8 Mechanism of labor in breech ============ -->
+<section id="s8">
+<h2 class="sec"><span class="n">8</span>Mechanism of labor in breech presentation (sacro-anterior position)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The mechanism of labor in breech is described for the <strong>sacro-anterior position</strong> and proceeds in three stages: buttocks, shoulders, head.</p>
+<div class="method-card">
+<h3>A) Buttocks</h3>
+<ul>
+<li><strong>Descent</strong></li>
+<li><strong>Engagement:</strong> by the bi-trochanteric diameter <strong>10 cm</strong>, in the oblique diameters 12 cm of the pelvis.</li>
+<li><strong>Internal rotation:</strong> of the anterior buttock through <strong>1/8th of a circle</strong> so that the bitrochanteric diameter comes to lie in the anteroposterior diameter of the pelvic outlet.</li>
+<li>The anterior buttock <strong>hinges under the symphysis pubis</strong>.</li>
+<li>By lateral flexion of the fetal spine over the symphysis pubis, the <strong>posterior buttock is delivered</strong>.</li>
+<li>By straightening of the spine, the <strong>anterior buttock is also delivered</strong>.</li>
+<li><strong>External rotation</strong> occurs, so that the sacrum lies anterior.</li>
+</ul>
+</div>
+<div class="method-card">
+<h3>B) Shoulders</h3>
+<ul>
+<li>The shoulders engage by the <strong>bisacromial diameter (11.8 cm)</strong> in the same oblique diameter of the pelvis as the buttock.</li>
+<li><strong>Internal rotation:</strong> when the anterior shoulder reaches the pelvic floor, it will rotate <strong>1/8 of a circle anteriorly</strong> (as a result of levator ani contraction), so that the bisacromial diameter comes to lie in the anteroposterior diameter of the pelvic outlet.</li>
+<li>The anterior shoulder <strong>hinges under the symphysis pubis</strong>.</li>
+<li>By lateral flexion of the fetal spine over the symphysis pubis, the <strong>posterior shoulder is delivered</strong>.</li>
+<li>By straightening of the spine, the <strong>anterior shoulder is also delivered</strong>.</li>
+</ul>
+</div>
+<div class="method-card">
+<h3>C) Head</h3>
+<ul>
+<li>The head engages by the <strong>occipto-frontal diameter (11.5 cm)</strong> in the opposite (to the buttock &amp; shoulder) oblique diameter of the pelvic inlet.</li>
+<li><strong>Internal rotation:</strong> the occiput rotates <strong>1/8 of a circle in sacro-anterior position</strong> and <strong>3/8 of a circle in sacro-posterior position</strong>.</li>
+<li>The <strong>suboccipital region</strong> reaches the symphysis pubis.</li>
+<li>The head is then <strong>delivered by flexion</strong>.</li>
+</ul>
+</div>
+<div class="card danger">
+<h4>🚨 CRITICAL — The head is the most difficult part to deliver per vaginally</h4>
+<p style="font-size:13px">As the head is the most difficult part to deliver per vaginally, there are various methods to deliver it (covered in §9). Unlike the buttocks and shoulders, the head is a <strong>rigid, non-compressible structure</strong> that must pass through the pelvis with its smallest diameter (suboccipito-bregmatic) presenting — any deflexion risks entrapment.</p>
+</div>
+</section>
+<!-- ============ §9 Methods to deliver the head ============ -->
+<section id="s9">
+<h2 class="sec"><span class="n">9</span>Methods to deliver the head</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Three classical methods for delivering the aftercoming head in a vaginal breech delivery:</p>
+<div class="method-card" style="border-left-color:#7C3AED">
+<h3 style="color:#5B21B6">1. Jaw flexion and shoulder traction [Mauriceau-Smellie-Veit technique (MSV)]</h3>
+<ul>
+<li>Two fingers of the <strong>left hand</strong> are put on the <strong>maxilla</strong> to avoid dislocation of the jaw.</li>
+<li>The index and ring finger of the <strong>right hand</strong> are placed on each shoulder while the middle finger is pressing against the <strong>occiput</strong> to promote flexion and act as a splint for the neck, preventing hyperextension and hence cervical spine injury.</li>
+<li>Traction is commenced <strong>downwards and backwards</strong> till the nape of the fetus appears, the body is lifted towards the mother's abdomen.</li>
+</ul>
+</div>
+<div class="method-card" style="border-left-color:#D97706">
+<h3 style="color:#92400E">2. Burns-Marshall Method</h3>
+<ul>
+<li>Let the baby hanging down by its own weight, and <strong>suprapubic pressure</strong> is given by the flat hand in the downward and backward direction.</li>
+<li>As the nape of the neck is visible, grasp the feet and lift the body towards the mother's abdomen.</li>
+</ul>
+</div>
+<div class="method-card" style="border-left-color:#059669">
+<h3 style="color:#065F46">3. Forceps Delivery (Piper's forceps)</h3>
+<p style="font-size:13.5px">A specially designed forceps is applied to the aftercoming head. Detailed in §14 and §15 with source images.</p>
+</div>
+</section>
+<!-- ============ §10 External Cephalic Version (ECV) ============ -->
+<section id="s10">
+<h2 class="sec"><span class="n">10</span>External Cephalic Version (ECV)</h2>
+<div class="card keydef def-block">
+<h3 class="sub" style="margin-top:0;color:#5B21B6">📋 Definition</h3>
+<p><strong>Manipulation of the fetus to a cephalic presentation through the maternal abdomen aiming for vaginal delivery.</strong></p>
+</div>
+<h3 class="sub">⏱ Timing</h3>
+<p style="font-size:13.5px">ECV should be offered from <strong>37 weeks' gestation</strong>. In <strong>primiparous</strong> women, ECV can be offered from <strong>36 weeks gestation</strong>.</p>
+<h3 class="sub">🚫 Contraindications</h3>
+<div class="grid-2">
+<div class="indication"><b>1. Ruptured membranes.</b></div>
+<div class="indication"><b>2. Severe pre-eclampsia.</b></div>
+<div class="indication"><b>3. Abnormal cardiotocograph (CTG) or Doppler.</b></div>
+<div class="indication"><b>4. Lack of maternal consent.</b></div>
+<div class="indication"><b>5. Any absolute indication for caesarean section.</b></div>
+<div class="indication"><b>6. Multiple pregnancy (except after delivery of the first twin).</b></div>
+<div class="indication"><b>7. Scarred uterus.</b></div>
+<div class="indication"><b>8. Placenta previa or current or recent (within one week) vaginal bleeding.</b></div>
+<div class="indication"><b>9. Rhesus isoimmunization.</b></div>
+<div class="indication"><b>10. Lack of access to ultrasound, or capability to perform emergency cesarean section or equipment or personnel to perform fetal monitoring.</b></div>
+</div>
+<h3 class="sub">⚠ Complications</h3>
+<div class="indication"><b>1. Fetal heart abnormalities (e.g. fetal bradycardia).</b></div>
+<div class="indication"><b>2. Placental abruption.</b></div>
+<div class="indication"><b>3. Uterine rupture.</b></div>
+<div class="indication"><b>4. Preterm labor.</b></div>
+<div class="indication"><b>5. PPROM and cord prolapse.</b></div>
+<h3 class="sub">📝 Precautions and technique</h3>
+<ol class="step-list">
+<li><strong>Informed written consent</strong> from the patient.</li>
+<li>Perform an <strong>ultrasound</strong> to verify the presentation and any abnormality.</li>
+<li>Perform a <strong>CTG prior to the procedure</strong>.</li>
+<li><strong>Use tocolysis.</strong></li>
+<li>Administer <strong>Anti-D immunoglobulin</strong> if the woman is rhesus negative.</li>
+<li>Do not make more than <strong>four attempts at ECV</strong>, for a suggested maximum time of <strong>ten minutes in total</strong>.</li>
+<li>Undertake <strong>CTG monitoring post-procedure</strong>.</li>
+</ol>
+</section>
+<!-- ============ §11 Vaginal breech delivery ============ -->
+<section id="s11">
+<h2 class="sec"><span class="n">11</span>Vaginal breech delivery</h2>
+<h3 class="sub">✅ Criteria for a planned vaginal breech birth</h3>
+<div class="grid-2">
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">Documentation of informed consent</b>, including written consent from the woman.</div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">Estimated fetal weight of 2500-3800 gm.</b></div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">Flexed fetal head.</b></div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">Emergency theatre facilities for doing CS.</b></div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">Availability of suitably skilled healthcare professional.</b></div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">Frank or complete breech presentation.</b></div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">No previous cesarean section.</b></div>
+</div>
+<h3 class="sub">🚫 Contraindications for vaginal breech delivery</h3>
+<div class="indication"><b>1. Cord presentation.</b></div>
+<div class="indication"><b>2. Fetal growth restriction or macrosomia.</b></div>
+<div class="indication"><b>3. Any presentation other than a frank or complete breech.</b></div>
+<div class="indication"><b>4. Extension of the fetal head.</b></div>
+<div class="indication"><b>5. Fetal anomaly incompatible with vaginal delivery.</b></div>
+<div class="indication"><b>6. Contracted pelvis.</b></div>
+<div class="indication"><b>7. Previous cesarean section.</b></div>
+<h3 class="sub">📖 Methods of vaginal breech delivery</h3>
+<div class="grid-3">
+<div class="type-card">
+<p class="name">Spontaneous breech delivery</p>
+<p class="desc"><strong>No traction or manipulation of the infant is used.</strong> This occurs predominantly in very preterm.</p>
+</div>
+<div class="type-card" style="border-left-color:#7C3AED">
+<p class="name" style="color:#5B21B6">Assisted breech delivery</p>
+<p class="desc"><strong>This is the most common type of vaginal breech delivery.</strong> The infant is allowed to spontaneously deliver up to the umbilicus, and then maneuvers are initiated to assist in the delivery of the remainder of the body, arms, and head.</p>
+</div>
+<div class="type-card" style="border-left-color:#DC2626">
+<p class="name" style="color:#991B1B">Total breech extraction</p>
+<p class="desc"><strong>The fetal feet are grasped, and the entire fetus is extracted.</strong> Total breech extraction should be used only for a noncephalic second twin; it should not be used for a singleton fetus.</p>
+</div>
+</div>
+</section>
+<!-- ============ §12 Assisted delivery technique ============ -->
+<section id="s12">
+<h2 class="sec"><span class="n">12</span>Assisted delivery technique — step by step</h2>
+<ol class="step-list">
+<li>The fetal membranes should be <strong>left intact as long as possible</strong> to act as a dilating wedge and to prevent overt cord prolapse.</li>
+<li>An <strong>anesthesiologist and a pediatrician should be immediately available</strong> for all vaginal breech deliveries.</li>
+<li><strong>Warm towels, forceps and means to perform an episiotomy should be available.</strong></li>
+<li>The <strong>Ritgen maneuver is applied to take pressure off the perineum</strong> during vaginal delivery to avoid perineal tear. Episiotomies are often performed for assisted vaginal breech deliveries, even in multiparous women, to prevent soft tissue dystocia.</li>
+<li>The <strong>Pinard maneuver may be needed with a frank breech to facilitate delivery of the legs but only after the fetal umbilicus has been reached.</strong> Pressure is exerted in the popliteal space of the knee. Flexion of the knee follows, and the lower leg is swept medially and out of the vagina.</li>
+<li><strong>No traction should be exerted on the infant until the fetal umbilicus is past the perineum.</strong> Maternal expulsive efforts should be used along with gentle downward and outward traction of the infant until the scapula and axilla are visible (see §13 for the arm-delivery phase).</li>
+</ol>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-001</span>
+<div class="img-frame">
+<img alt="Clinical photograph showing the MSV / traction phase of vaginal breech delivery — the body has been delivered, the aftercoming head is being delivered with controlled traction." src="../../../../extracted_images/26_breech_presentation/breech_msv_traction.jpg"/>
+</div>
+<div class="cap">Figure 2 — Clinical photograph of the <strong>traction phase of an assisted vaginal breech delivery</strong>. With a towel wrapped around the fetal hips, gentle downward and outward traction is applied in conjunction with maternal expulsive efforts until the scapula is reached. An assistant is applying gentle fundal pressure to keep the fetal head flexed. This is the moment in the breech delivery between the body delivery and the head delivery, immediately before the Løvset maneuver for arm extraction (§13).</div>
+</div>
+</section>
+<!-- ============ §13 Arm delivery — Løvset maneuver ============ -->
+<section id="s13">
+<h2 class="sec"><span class="n">13</span>Arm delivery — Løvset maneuver (with source figures)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Once the body is delivered to the level of the scapula, the arms must be delivered before the head. The Løvset maneuver is the standard technique.</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-002</span>
+<div class="img-frame">
+<img alt="Clinical photograph of Løvset maneuver step 1 — fetus rotated 90° to bring the anterior scapula into view." src="../../../../extracted_images/26_breech_presentation/breech_lovset_step1_90deg.jpg"/>
+</div>
+<div class="cap">Figure 3 — <strong>Løvset maneuver, step 1.</strong> Once the scapula is visible, <strong>rotate the infant 90°</strong> and gently sweep the anterior arm out of the vagina by pressing on the inner aspect of the arm or elbow. (Source text: "rotate the infant 90° and gently sweep the anterior arm out of the vagina by pressing on the inner aspect of the arm or elbow.")</div>
+</div>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-003</span>
+<div class="img-frame">
+<img alt="Clinical photograph of Løvset maneuver step 2 — fetus rotated 180° in the reverse direction to bring the second arm anteriorly for delivery." src="../../../../extracted_images/26_breech_presentation/breech_lovset_step2_180deg.jpg"/>
+</div>
+<div class="cap">Figure 4 — <strong>Løvset maneuver, step 2.</strong> <strong>Rotate the infant 180° in the reverse direction</strong>, and sweep the other arm out of the vagina. Once the arms are delivered, rotate the infant back 90° so that the back is anterior. (Source text: "Rotate the infant 180° in the reverse direction, and sweep the other arm out of the vagina. Once the arms are delivered, rotate the infant back 90° so that the back is anterior.")</div>
+</div>
+</section>
+<!-- ============ §14 Aftercoming head — MSV & Piper ============ -->
+<section id="s14">
+<h2 class="sec"><span class="n">14</span>Aftercoming head — MSV &amp; Piper forceps application</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The fetal head should be <strong>maintained in a flexed position during delivery</strong> to allow passage of the smallest diameter of the head. Two methods are illustrated in the source:</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-004</span>
+<div class="img-frame">
+<img alt="Clinical photograph of the Mauriceau-Smellie-Veit (MSV) maneuver — operator's fingers on the fetal maxilla, assistant applies suprapubic pressure." src="../../../../extracted_images/26_breech_presentation/breech_msv_maneuver.jpg"/>
+</div>
+<div class="cap">Figure 5 — <strong>Mauriceau-Smellie-Veit (MSV) maneuver.</strong> The flexed position can be accomplished by using the Mauriceau Smellie Veit maneuver, in which the operator's index and middle fingers are over the maxilla, while the assistant applies suprapubic pressure. This keeps the aftercoming head flexed so the smallest diameter (suboccipito-bregmatic) presents to the pelvic outlet.</div>
+</div>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-005</span>
+<div class="img-frame">
+<img alt="Clinical photograph showing Piper forceps being applied to the aftercoming fetal head." src="../../../../extracted_images/26_breech_presentation/breech_piper_forceps_application.jpg"/>
+</div>
+<div class="cap">Figure 6 — <strong>Application of Piper forceps.</strong> Alternatively, Piper forceps can be used to maintain the head in a flexed position. The blades are applied to the sides of the aftercoming head while an assistant holds the fetal body elevated, allowing the operator to maintain flexion and apply controlled traction along the pelvic curve. See §15 for the advantages of this method.</div>
+</div>
+</section>
+<!-- ============ §15 Piper's forceps ============ -->
+<section id="s15">
+<h2 class="sec"><span class="n">15</span>Piper's forceps</h2>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-006</span>
+<div class="img-frame">
+<img alt="Clinical photograph of Piper's forceps applied to the aftercoming fetal head, with the forceps blades visible on either side of the head." src="../../../../extracted_images/26_breech_presentation/breech_piper_forceps_applied.jpg"/>
+</div>
+<div class="cap">Figure 7 — <strong>Piper's forceps in situ</strong> on the aftercoming fetal head. The forceps have unusually long shanks and a pronounced downward (perineal) curve so that the blades can be applied to the sides of the fetal head while an assistant holds the body elevated. This keeps the head flexed and protected during extraction.</div>
+</div>
+<h3 class="sub">⭐ Advantages of Piper's forceps</h3>
+<div class="grid-2">
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">1. Protect the head</b> from sudden compression decompression and intracranial hemorrhage.</div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">2. Minimize traction</b> on the fetal neck.</div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">3. Maintain flexion</b> of the head.</div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:10px 14px;font-size:13.5px"><b style="color:#065F46">4. Decrease incidence of perineal tears.</b></div>
+</div>
+<div class="card danger" style="margin-top:4px">
+<h4>🚨 DANGER — Avoid extreme elevation of the body</h4>
+<p style="font-size:13px"><strong>During delivery of the head, avoid extreme elevation of the body, which may result in hyperextension of the cervical spine and potential neurologic injury.</strong></p>
+</div>
+</section>
+<!-- ============ §16 Complications ============ -->
+<section id="s16">
+<h2 class="sec"><span class="n">16</span>Complications of vaginal breech delivery</h2>
+<div class="grid-2">
+<div class="red-card" style="background:#FEF2F2;border:1px solid #FECACA;border-left:5px solid #DC2626;border-radius:10px;padding:12px 14px">
+<h4 style="color:#991B1B;margin:0 0 6px;font-size:14px">🤰 MATERNAL</h4>
+<ol style="font-size:13.5px;margin:0;padding-left:20px;line-height:1.7">
+<li>Vaginal &amp; cervical wall laceration.</li>
+<li>Deep perineal tears.</li>
+<li>Increase infection risks.</li>
+<li>Prolonged labor and maternal distress.</li>
+<li>Obstructed labor.</li>
+<li>Anesthesia complications.</li>
+<li>Uterine relaxation, uterine atony, and postpartum hemorrhage.</li>
+</ol>
+</div>
+<div class="red-card" style="background:#FEF2F2;border:1px solid #FECACA;border-left:5px solid #DC2626;border-radius:10px;padding:12px 14px">
+<h4 style="color:#991B1B;margin:0 0 6px;font-size:14px">👶 FETAL</h4>
+<ol style="font-size:13.5px;margin:0;padding-left:20px;line-height:1.7">
+<li>Fractures of the humerus, clavicle &amp; femur.</li>
+<li>Brachial plexus stretching (upper extremity paralysis and Erb's palsy).</li>
+<li>Asphyxia.</li>
+<li>Skull depression or fracture, intracranial hemorrhage.</li>
+<li>Spinal cord injury, vertebral fracture.</li>
+<li>Umbilical cord prolapse.</li>
+<li>Rupture liver and spleen.</li>
+</ol>
+</div>
+</div>
+</section>
+<!-- ============ §17 Total breech extraction ============ -->
+<section id="s17">
+<h2 class="sec"><span class="n">17</span>Total breech extraction</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The obstetrician carries out the entire delivery of the baby. (In modern practice this is reserved for very specific indications — see below.)</p>
+<h3 class="sub">📋 Indications</h3>
+<ol class="step-list">
+<li>Delivery of the <strong>second twin</strong> (main indication nowadays).</li>
+<li><strong>Maternal or fetal distress</strong> e.g. prolapsed pulsating cord + fully dilated cervix.</li>
+<li><strong>Uterine inertia</strong> with prolonged second stage of labor.</li>
+</ol>
+<h3 class="sub">🔧 Technique <span style="font-size:12.5px;color:#64748B">(The cervix must be fully dilated)</span></h3>
+<div class="card note">
+<h4>STEP 1 — Delivery of the buttocks</h4>
+<ul style="font-size:13.5px">
+<li><strong>General anesthesia + generous episiotomy.</strong></li>
+<li><strong>Dislodge the breech upwards</strong>, bring down one leg and then the other leg, direct the back forwards, traction on the legs and fundal pressure helps delivery of the trunk up to the umbilicus.</li>
+</ul>
+</div>
+<div class="card note">
+<h4>STEP 2 — Delivery of shoulders &amp; aftercoming head</h4>
+<p style="font-size:13.5px"><strong>As assisted breech delivery.</strong> (See §12-§14 for the standard assisted breech delivery maneuvers.)</p>
+</div>
+</section>
+<!-- ============ §18 Indications for cesarean section ============ -->
+<section id="s18">
+<h2 class="sec"><span class="n">18</span>Indications for cesarean section</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source enumerates 10 specific indications for cesarean section in the context of breech presentation:</p>
+<div class="grid-2">
+<div class="indication"><b>1. Breech in primigravida.</b></div>
+<div class="indication"><b>2. Premature, viable infant.</b></div>
+<div class="indication"><b>3. Footling presentation.</b></div>
+<div class="indication"><b>4. Hyperextension of fetal head</b> (vaginal delivery → injury of fetal cervical spines).</div>
+<div class="indication"><b>5. Estimated fetal weight by ultrasound &gt; 3800 gm.</b></div>
+<div class="indication"><b>6. Contracted pelvis.</b></div>
+<div class="indication"><b>7. History of difficult delivery.</b></div>
+<div class="indication"><b>8. Chronic fetal distress</b> (IUGR, DM and hypertensive disorders).</div>
+<div class="indication"><b>9. General indications of CS.</b></div>
+<div class="indication"><b>10. Prolapsed pulsating cord with incompletely dilated cervix.</b></div>
+</div>
+</section>
+<!-- ============ §19 Complicated breech delivery ============ -->
+<section id="s19">
+<h2 class="sec"><span class="n">19</span>Complicated Breech Delivery</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source classifies complicated breech delivery by the level of arrest — at the pelvic inlet, at the outlet, at the shoulders, or at the aftercoming head.</p>
+<h3 class="sub">A) Arrest of the buttocks at the pelvic inlet</h3>
+<table>
+<thead>
+<tr><th>Cause</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Uterine inertia</strong></td><td>Oxytocin drip.</td></tr>
+<tr><td><strong>Contracted pelvis</strong></td><td>Cesarean section.</td></tr>
+<tr><td><strong>Large fetus</strong></td><td>Cesarean section.</td></tr>
+</tbody>
+</table>
+<h3 class="sub">B) Arrest of the buttocks at the pelvic outlet <span style="font-size:12px;color:#64748B">(Impacted breech)</span></h3>
+<table>
+<thead>
+<tr><th>Cause</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Uterine inertia</strong></td><td>Groin traction with oxytocin drip, if fails → Bring down the legs.</td></tr>
+<tr><td><strong>Rigid perineum</strong></td><td>Episiotomy.</td></tr>
+<tr><td><strong>Pelvic outlet contraction</strong></td><td>Cesarean section.</td></tr>
+<tr><td><strong>Large fetus</strong></td><td>Cesarean section.</td></tr>
+<tr><td><strong>Frank Breech</strong> (extension of legs)</td><td>Deeply impacted → groin traction.<br/>Not deeply impacted → Bring down legs.</td></tr>
+</tbody>
+</table>
+<h3 class="sub">📌 Bringing down a leg &amp; breech extraction (Pinard method)</h3>
+<p style="font-size:13.5px"><strong>Under general anesthesia, evacuation of the bladder and episiotomy.</strong> The hand is passed along the anterior thigh to the popliteal fossa. Press by 2 fingers to flex the leg, the foot is grasped and brought down. Then breech extraction is performed. <strong>It is better to bring the anterior leg first</strong> because if we bring down the posterior leg, labor becomes obstructed.</p>
+<h3 class="sub">📌 Groin traction</h3>
+<p style="font-size:13.5px">Used when the breech is <strong>deeply impacted in the pelvis</strong>. The index finger is put in the anterior groin for traction during uterine contraction. Traction is downward and backward until the anterior buttock appears below the symphysis pubis, and to deliver the posterior buttock the traction is upward. <strong>Traction is directed towards the trunk and not towards the thigh to avoid fracture of the femur.</strong> When the fetus is dead, a breech hook may be used for traction.</p>
+<h3 class="sub">C) Arrest of the shoulders</h3>
+<div class="grid-2">
+<div class="card warn">
+<h4>1. Extension of the arms</h4>
+<p style="font-size:13px">Due to traction on breech before full cervical dilatation. Two methods are used:</p>
+<p style="font-size:13px"><strong>→ Classical method</strong> — Under general anesthesia, the posterior arm is brought down at first because there is more space in the concavity of the sacrum. The hand is passed along the arm to the cubital fossa. Press by 2 fingers to flex the forearm. The hand is grasped and pulled down to be followed by the anterior arm from behind the symphysis pubis. If there is no enough space anteriorly, hold the fetus by its chest and rotate it to bring the anterior arm posteriorly and bring it down as the posterior arm.</p>
+<p style="font-size:13px"><strong>→ Lovset maneuver</strong> — Downward traction is done until the inferior angle of the anterior scapula appears below the symphysis pubis. Then, to bring the posterior shoulder below the symphysis pubis where the arm can be brought down, the fetus is rotated 180°. To bring the other shoulder anteriorly where the arm can be delivered, the fetus is rotated 180° in the opposite direction. <strong>During rotation, the fetal back should always remain anterior.</strong></p>
+</div>
+<div class="card warn">
+<h4>2. Nuchal position of the arms <span style="font-size:12px;color:#64748B">(forearm displacement behind neck)</span></h4>
+<p style="font-size:13px">Due to rotation of the neck in wrong direction → <strong>Rotation of the fetal trunk in the direction of the fingertips of the displaced arm.</strong></p>
+</div>
+</div>
+<h3 class="sub">D) Arrest of the aftercoming head</h3>
+<table>
+<thead>
+<tr><th>Cause</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Contracted pelvis &amp; large head</strong></td>
+<td>If the fetus is alive, it is saved by <strong>symphysiotomy</strong> and if dead, <strong>craniotomy</strong> is performed.</td>
+</tr>
+<tr>
+<td><strong>Extension of the head</strong></td>
+<td>Burns-Marshall technique. Jaw flexion &amp; shoulder traction. Application of the forceps.</td>
+</tr>
+<tr>
+<td><strong>Rigid perineum</strong></td>
+<td>Episiotomy.</td>
+</tr>
+<tr>
+<td><strong>Incompletely dilated cervix</strong></td>
+<td>Incisions of the cervix: <strong>Duhrssen incisions made at 2, 6 &amp; 10 o'clock.</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- ============ §20 Student activity + Assessment + References ============ -->
+<section id="s20">
+<h2 class="sec"><span class="n">20</span>Student activity · Assessment · References</h2>
+<details class="click-card activity">
+<summary>🎓 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p>Each group of students is requested to <strong>prepare a diagrammatic algorithm for diagnosis and management of breech malpresentation with the aid of their tutor of bedside part of the clinical round</strong>.</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Why this activity matters:</strong> Drawing a single integrated algorithm forces you to wire together 8 distinct clinical scenarios (4 breech types × 2 main management pathways — ECV vs vaginal delivery) into one decision tree. The act of drawing the boxes and arrows reveals which steps you've memorised vs which you've only read about.</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested structure for the algorithm:</strong></p>
+<ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>START:</strong> Breech presentation suspected on abdominal palpation / US.</li>
+<li><strong>Confirm diagnosis:</strong> US confirms type (frank / complete / footling / knee) + position (LSA / RSA / LSP / RSP) + EFW + placental location + any fetal abnormality.</li>
+<li><strong>Decision 1 — Is the patient a candidate for ECV?</strong> Check all 10 contraindications in §10. If any → CS. If none → offer ECV at 36-37 weeks.</li>
+<li><strong>Decision 2 — If ECV is declined / unsuccessful → planned vaginal breech delivery?</strong> Check the 7 criteria in §11. If all met → proceed with assisted breech delivery; if not → CS.</li>
+<li><strong>Decision 3 — In labor, monitor for complications:</strong> cord prolapse, arrest at inlet/outlet/shoulders/head, fetal distress, cord prolapse with incomplete dilation → immediate CS.</li>
+<li><strong>End of algorithm.</strong></li>
+</ol>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>✅ Self-assessment Google Form <span class="hint"></span></summary>
+<div class="click-body">
+<p>Please complete the self-assessment Google Form:</p>
+<p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/DCuNX1usVDvgftui6" style="color:#15803D;font-weight:700">https://forms.gle/DCuNX1usVDvgftui6</a></p>
+<p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+<ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+<li>Definition of breech presentation (longitudinal lie, podalic part).</li>
+<li>Incidence (3-4% of all deliveries).</li>
+<li>The 4 breech types with their percentages (Frank 50-70%, Complete 5-10%, Footling 10-30%, Knee — rare).</li>
+<li>The 4 positions (LSA, RSA, LSP, RSP) and commonest (LSA).</li>
+<li>Diagnosis by Leopold maneuvers, auscultation, PV, and US.</li>
+<li>External cephalic version (ECV) — timing, contraindications, complications, precautions.</li>
+<li>Criteria and contraindications for vaginal breech delivery.</li>
+<li>Methods to deliver the aftercoming head (MSV, Burns-Marshall, Piper's forceps).</li>
+<li>Løvset maneuver for arm delivery.</li>
+<li>10 indications for cesarean section.</li>
+<li>Management of complicated breech (arrest at inlet, outlet, shoulders, aftercoming head).</li>
+<li>Pinard method, groin traction, symphysiotomy, Duhrssen incisions.</li>
+</ul>
+</div>
+</details>
+<details class="click-card references">
+<summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+<div class="click-body">
+<ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+<li>The <strong>PDF source</strong> for this chapter is a 14-page document (p. 132-145) — one of the longest chapters in the book.</li>
+<li>The source contains <strong>7 embedded images</strong> on pages 4, 7, 8, 8, 9, 9, 10 of the PDF. <strong>All 7 are embedded</strong> in this infographic as green <code>.src-viz</code> cards. Each image was extracted to <code>extracted_images/26_breech_presentation/</code> for archival.</li>
+<li><strong>No external images were used</strong> in this chapter — all visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+<li><strong>Image inventory and disposition (all embedded):</strong>
+<ul>
+<li><strong>Figure 1 (img-000):</strong> Three-panel line drawing of Leopold maneuvers (2, 3, 4) — EMBEDDED in §7. Provided material — no watermark or signature.</li>
+<li><strong>Figure 2 (img-001):</strong> Clinical photograph of MSV / traction phase of breech delivery — EMBEDDED in §12. Source attribution: provided material from the book.</li>
+<li><strong>Figure 3 (img-002):</strong> Clinical photograph of Løvset maneuver step 1 (90° rotation, sweep anterior arm) — EMBEDDED in §13. Provided material.</li>
+<li><strong>Figure 4 (img-003):</strong> Clinical photograph of Løvset maneuver step 2 (180° reverse rotation, sweep second arm) — EMBEDDED in §13. Provided material.</li>
+<li><strong>Figure 5 (img-004):</strong> Clinical photograph of MSV maneuver for aftercoming head (operator's fingers on maxilla, suprapubic pressure) — EMBEDDED in §14. Provided material.</li>
+<li><strong>Figure 6 (img-005):</strong> Clinical photograph of Piper forceps being applied to aftercoming head — EMBEDDED in §14. Provided material.</li>
+<li><strong>Figure 7 (img-006):</strong> Clinical photograph of Piper's forceps in situ on the aftercoming head — EMBEDDED in §15. Provided material.</li>
+</ul>
+</li>
+<li>Google Form self-assessment URL: <code>https://forms.gle/DCuNX1usVDvgftui6</code> (reproduced verbatim from source).</li>
+<li>Source typographical note: ILO #5 contains a typo in the source ("ouline" instead of "outline") — preserved verbatim with an inline annotation, never auto-corrected.</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer>
+    Topic 26 — Breech Presentation · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 26 (p. 132-145, 14 pages) · Source-only visuals (7 of 7 in source) · 0 external visuals · Definition: fetus in longitudinal lie, presenting part is buttocks or feet · Incidence: 3-4% of all deliveries · 4 types (Frank 50-70%, Complete 5-10%, Footling 10-30%, Knee) · 4 positions (denominator = sacrum, commonest LSA) · ECV from 37 weeks (or 36 in primips) · Methods: MSV, Burns-Marshall, Piper's forceps · 10 CS indications · Complicated breech: arrest at inlet/outlet/shoulders/aftercoming head
+  </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

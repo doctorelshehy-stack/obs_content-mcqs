@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 43 — Intrauterine Fetal Death (IUFD)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(180deg, #F0FDFA 0%, #F8FAFC 240px); color: #0F172A; line-height: 1.6; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 28px 64px 28px; }
+  .hero { background: linear-gradient(135deg, #134E4A 0%, #0F766E 50%, #0D9488 100%); color: white; border-radius: 18px; padding: 28px 32px; box-shadow: 0 6px 20px rgba(15,118,110,0.28); margin-bottom: 18px; }
+  .hero h1 { margin: 0 0 6px 0; font-size: 30px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 15.5px; opacity: 0.95; font-weight: 500; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32); padding: 5px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+  .toc { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .toc h2 { margin: 0 0 12px 0; font-size: 17px; color: #1E293B; display: flex; align-items: center; gap: 8px; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 14px; }
+  .toc-grid a { display: block; padding: 6px 10px; border-radius: 8px; text-decoration: none; color: #0F766E; font-size: 13.5px; font-weight: 500; border: 1px solid transparent; }
+  .toc-grid a:hover { background: #F1F5F9; border-color: #CBD5E1; }
+  .toc-grid .num { display: inline-block; min-width: 22px; color: #64748B; font-weight: 700; }
+  section { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px 26px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  section h2.sec { margin: 0 0 14px 0; font-size: 22px; color: #0F766E; display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 2px solid #CCFBF1; }
+  section h2.sec .num { background: #0F766E; color: white; border-radius: 8px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; }
+  h3.sub { font-size: 16px; color: #1E293B; margin: 18px 0 8px 0; padding-left: 10px; border-left: 4px solid #0D9488; font-weight: 700; }
+  h4 { font-size: 14.5px; color: #1E293B; margin: 14px 0 6px 0; font-weight: 700; }
+  p { margin: 6px 0; font-size: 13.5px; }
+  ul, ol { margin: 6px 0 10px 0; padding-left: 24px; }
+  li { margin: 3px 0; font-size: 13.5px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .keydef { background: #ECFDF5; border-left: 5px solid #059669; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .keydef::before { content: "KEY DEFINITION"; display: block; font-weight: 800; color: #065F46; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .pearl { background: #ECFEFF; border-left: 5px solid #0891B2; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .pearl::before { content: "CLINICAL PEARL"; display: block; font-weight: 800; color: #155E75; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .anchor { background: #FEF9C3; border-left: 5px solid #CA8A04; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .anchor::before { content: "MEMORY ANCHOR"; display: block; font-weight: 800; color: #713F12; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .warn { background: #FEF3C7; border-left: 5px solid #D97706; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .warn::before { content: "WARN"; display: block; font-weight: 800; color: #92400E; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .danger { background: #FEE2E2; border-left: 5px solid #DC2626; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .danger::before { content: "DANGER"; display: block; font-weight: 800; color: #991B1B; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .note { background: #F3E8FF; border-left: 5px solid #8B5CF6; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .note::before { content: "NOTE"; display: block; font-weight: 800; color: #6D28D9; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  th { background: #F0FDFA; color: #134E4A; text-align: left; padding: 9px 12px; font-weight: 700; border-bottom: 2px solid #99F6E4; }
+  td { padding: 9px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  .footer { text-align: center; color: #64748B; font-size: 12.5px; padding: 18px 0 4px 0; }
+  .footer a { color: #0F766E; text-decoration: none; font-weight: 600; }
+  .qform-btn { display: inline-block; background: linear-gradient(135deg, #0F766E, #0D9488); color: white; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13.5px; margin: 6px 0; }
+  .qform-btn:hover { filter: brightness(1.1); }
+  .qform-code { display: inline-block; background: #F0FDFA; color: #134E4A; padding: 4px 10px; border-radius: 6px; font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; font-size: 12.5px; margin-left: 8px; border: 1px solid #99F6E4; }
+  .click-card { background: #FAFBFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 0; margin: 10px 0; overflow: hidden; }
+  .click-card.green { border-left: 4px solid #22C55E; }
+  .click-card.blue { border-left: 4px solid #3B82F6; }
+  .click-card.purple { border-left: 4px solid #8B5CF6; }
+  .click-card summary { padding: 12px 18px; cursor: pointer; font-weight: 700; font-size: 14.5px; color: #1E293B; list-style: none; display: flex; align-items: center; gap: 10px; user-select: none; }
+  .click-card summary::before { content: "▶"; color: #64748B; transition: transform 0.2s; font-size: 11px; }
+  .click-card[open] summary::before { content: "▼"; }
+  .click-card[open] summary { border-bottom: 1px solid #E2E8F0; }
+  .click-card .body { padding: 14px 18px; font-size: 13.5px; }
+  .step { background: #F0FDFA; border: 1px solid #99F6E4; border-radius: 10px; padding: 12px 16px; margin: 8px 0; }
+  .step .stepnum { display: inline-block; background: #0D9488; color: white; border-radius: 50%; width: 24px; height: 24px; text-align: center; line-height: 24px; font-size: 12.5px; font-weight: 800; margin-right: 8px; }
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Topic 43 — Intrauterine Fetal Death (IUFD)</h1>
+    <div class="sub">Fetal death in-utero after 20 weeks or >500 g: etiology, diagnosis, and delivery considerations
+Source: Book Obstetrics 2025-2026, p. 222-224</div>
+    <div class="meta">
+      <span class="chip">Chapter · p. 222-224</span>
+      <span class="chip">3 ILOs</span>
+      <span class="chip">0 source images</span>
+      <span class="chip">8 sections</span>
+    </div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">§1</span> ILOs of this chapter</a>
+      <a href="#s2"><span class="num">§2</span> Definition</a>
+      <a href="#s3"><span class="num">§3</span> Causes</a>
+      <a href="#s4"><span class="num">§4</span> Diagnosis</a>
+      <a href="#s5"><span class="num">§5</span> Investigations</a>
+      <a href="#s6"><span class="num">§6</span> Complications</a>
+      <a href="#s7"><span class="num">§7</span> Management</a>
+      <a href="#s8"><span class="num">§8</span> Student activity · Questions · References</a>
+    </div>
+  </div>
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h2 class="sec"><span class="num">1</span> ILOs of this chapter</h2>
+    <ol>
+      <li>To understand the definition of intrauterine fetal death</li>
+      <li>To be able to explain the etiology of this obstetric mishap</li>
+      <li>To be able to describe the diagnosis & management of this obstetrical problem</li>
+    </ol>
+  </section>
+
+  <!-- §2 Definition -->
+  <section id="s2">
+    <h2 class="sec"><span class="num">2</span> Definition</h2>
+    <div class="keydef">
+      <p><strong>Intrauterine Fetal Death (IUFD):</strong> It is death of the fetus <strong>in-utero</strong> after <strong>20 weeks of pregnancy</strong> or if the fetus weight is <strong>&gt; 500 gm</strong>.</p>
+    </div>
+  </section>
+
+  <!-- §3 Causes -->
+  <section id="s3">
+    <h2 class="sec"><span class="num">3</span> Causes</h2>
+
+    <h3 class="sub">Maternal</h3>
+    <ul>
+      <li>Diabetes (poorly controlled)</li>
+      <li>Systemic lupus erythematosus</li>
+      <li>Antiphospholipid syndrome</li>
+      <li>Infection</li>
+      <li>Hypertension</li>
+      <li>Preeclampsia</li>
+      <li>Eclampsia</li>
+      <li>Uterine rupture</li>
+      <li>Maternal trauma or death</li>
+      <li>Thrombophilias</li>
+    </ul>
+
+    <h3 class="sub">Fetal</h3>
+    <ul>
+      <li>Intrauterine growth restriction</li>
+      <li>Congenital abnormality</li>
+      <li>Genetic abnormality</li>
+      <li>Infection (i.e. Parvovirus B19, CMV, Listeria)</li>
+      <li>Hydrops</li>
+    </ul>
+
+    <h3 class="sub">Placental</h3>
+    <ul>
+      <li>Cord accident</li>
+      <li>Abruption</li>
+      <li>Premature rupture of membranes</li>
+      <li>Vasa previa</li>
+      <li>Feto-maternal hemorrhage</li>
+      <li>Placental insufficiency</li>
+    </ul>
+  </section>
+
+  <!-- §4 Diagnosis -->
+  <section id="s4">
+    <h2 class="sec"><span class="num">4</span> Diagnosis</h2>
+
+    <h3 class="sub">Symptoms</h3>
+    <ul>
+      <li>History of the cause.</li>
+      <li>Gradual disappearance of pregnancy symptoms.</li>
+      <li>Breast milk secretion may start.</li>
+      <li>Failure of abdominal enlargement.</li>
+      <li>Cessation of fetal movements.</li>
+    </ul>
+
+    <h3 class="sub">Signs</h3>
+    <ul>
+      <li>Uterus &lt; the period of amenorrhea.</li>
+      <li>Difficult palpation of fetal parts due to absent muscle tone.</li>
+      <li>Inaudible FHS by Doppler.</li>
+    </ul>
+  </section>
+
+  <!-- §5 Investigations -->
+  <section id="s5">
+    <h2 class="sec"><span class="num">5</span> Investigations</h2>
+    <ul>
+      <li>Spalding sign: overlapping of fetal skull bones due to shrinkage of cerebrum after fetal death.</li>
+      <li>Robert sign: presence of gas in fetal large vessels.</li>
+      <li>Ball sign: hyperflexion of fetal spine.</li>
+    </ul>
+
+    <div class="anchor">
+      <strong>X-ray signs recall:</strong> <strong>S</strong>palding (skull overlap), <strong>R</strong>obert (gas), <strong>B</strong>all (spine). SRB — scan the bones last when IUFD is suspected.
+    </div>
+  </section>
+
+  <!-- §6 Complications -->
+  <section id="s6">
+    <h2 class="sec"><span class="num">6</span> Complications</h2>
+    <ul>
+      <li>Intrauterine infection.</li>
+      <li>DIC and hypofibrinogenemia (after 3 weeks).</li>
+    </ul>
+
+    <div class="danger">
+      <strong>DIC time bomb:</strong> Once fetal death has persisted for &gt; 3 weeks, the risk of maternal DIC and hypofibrinogenemia rises sharply. This is why delivery is usually offered — either to prevent DIC or, if it has already begun, to remove the antigenic stimulus. Back-to-back clotting screens plus fibrinogen are essential if expectant management is chosen.
+    </div>
+  </section>
+
+  <!-- §7 Management -->
+  <section id="s7">
+    <h2 class="sec"><span class="num">7</span> Management</h2>
+
+    <div class="keydef">
+      <p><strong>First principle:</strong> Termination of pregnancy should be offered after diagnosis.</p>
+    </div>
+
+    <h3 class="sub">1. Mode of Delivery</h3>
+    <p>Mode of delivery will depend on the <strong>gestational age</strong> and <strong>obstetric history</strong>.</p>
+
+    <h3 class="sub">2. Induction of Labor</h3>
+    <p>Induction of labor can be accomplished with <strong>preinduction cervical ripening</strong> followed by <strong>intravenous oxytocin</strong>.</p>
+
+    <h3 class="sub">3. Failed Induction</h3>
+    <p>If failed induction, <strong>cesarean section</strong> is done.</p>
+
+    <div class="warn">
+      <strong>Expectant management is conditional:</strong> Most modern protocols offer delivery within 1–2 weeks of confirmed IUFD to minimise DIC risk. Expectant management beyond 3–4 weeks without close surveillance is dangerous and rarely practiced.
+    </div>
+  </section>
+
+  <!-- §8 Student activity + Questions + References -->
+  <section id="s8">
+    <h2 class="sec"><span class="num">8</span> Student activity · Questions · References</h2>
+
+    <div class="pearl">
+      <strong>Student activity</strong><br>
+      Each group of the students is requested to search the web in order to design a summarized leaflet of postmortem examination steps for a stillborn fetus.
+    </div>
+
+    <p>Test yourself with the official Google Form:</p>
+    <a class="qform-btn" href="https://forms.gle/4Mk9vJtGSw9UqR2g7" target="_blank" rel="noopener">Open Questions Form ↗</a>
+    <span class="qform-code">forms.gle/4Mk9vJtGSw9UqR2g7</span>
+
+    <div class="footer">Source: Book Obstetrics 2025-2026, Chapter 43 — Intrauterine Fetal Death (IUFD) (p. 222-224)</div>
+  </section>
+
+</div>
+</body>
+</html>

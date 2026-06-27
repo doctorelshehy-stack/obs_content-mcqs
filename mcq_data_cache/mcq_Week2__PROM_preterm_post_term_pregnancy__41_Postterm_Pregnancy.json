@@ -1,0 +1,455 @@
+{
+  "s2": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Postterm pregnancy is defined as a pregnancy continuing beyond:",
+      "options": [
+        "40 weeks",
+        "41 weeks",
+        "42 weeks",
+        "43 weeks"
+      ],
+      "correct": 2,
+      "explain": "Postterm pregnancy is a pregnancy continuing beyond 42 weeks. Pregnancy between 41 to 42 weeks is called prolonged pregnancy."
+    },
+    {
+      "q": "A pregnancy between 41 to 42 weeks is called:",
+      "options": [
+        "Postterm pregnancy",
+        "Prolonged pregnancy",
+        "Term pregnancy",
+        "Preterm pregnancy"
+      ],
+      "correct": 1,
+      "explain": "Pregnancy between 41 to 42 weeks is called prolonged pregnancy, while beyond 42 weeks is postterm pregnancy."
+    },
+    {
+      "q": "What is the key difference between prolonged and postterm pregnancy?",
+      "options": [
+        "There is no difference — the terms are interchangeable",
+        "Prolonged is 41-42 weeks (monitored); postterm is >42 weeks (requires intervention)",
+        "Prolonged requires induction; postterm is observed expectantly",
+        "Prolonged has higher fetal risk than postterm"
+      ],
+      "correct": 1,
+      "explain": "Prolonged pregnancy (41-42 weeks) is monitored; postterm pregnancy (>42 weeks) requires intervention. Do not confuse the two — management differs."
+    }
+  ],
+  "s4": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The most common cause of postterm pregnancy is:",
+      "options": [
+        "Fetal anencephaly",
+        "Maternal diabetes",
+        "Wrong date (incorrect gestational age calculation)",
+        "Adrenal hypoplasia"
+      ],
+      "correct": 2,
+      "explain": "The most common cause of postterm pregnancy is wrong date, so a careful review of menstrual history is important in all such cases."
+    },
+    {
+      "q": "Which fetal condition can cause postterm pregnancy?",
+      "options": [
+        "Fetal macrosomia",
+        "Anencephaly and adrenal hypoplasia",
+        "Fetal hydrops",
+        "Polyhydramnios"
+      ],
+      "correct": 1,
+      "explain": "Fetal factors causing postterm pregnancy include anencephaly and adrenal hypoplasia (diminished fetal cortisol response). Anencephaly disrupts the fetal hypothalamic-pituitary-adrenal axis — without fetal cortisol, labor is not initiated."
+    },
+    {
+      "q": "Maternal factors associated with postterm pregnancy include all EXCEPT:",
+      "options": [
+        "Primipara",
+        "History of previous prolonged pregnancy",
+        "Sedentary life",
+        "Multiple gestation"
+      ],
+      "correct": 3,
+      "explain": "Maternal factors include primipara, history of previous prolonged pregnancy, and sedentary life. Multiple gestation is associated with preterm labor, not postterm pregnancy."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is NOT an antenatal ultrasound finding in postterm pregnancy?",
+      "options": [
+        "Biparietal diameter more than 9.6 cm",
+        "Oligohydramnios",
+        "Increased placental calcification",
+        "Polyhydramnios"
+      ],
+      "correct": 3,
+      "explain": "Antenatal ultrasound findings in postterm pregnancy include BPD > 9.6 cm, increased fetal weight, oligohydramnios, increased placental calcification, and Doppler evidence of placental insufficiency."
+    },
+    {
+      "q": "Increased placental calcification on ultrasound in postterm pregnancy reflects:",
+      "options": [
+        "Normal aging of the placenta",
+        "Placental aging and insufficiency",
+        "Placental abruption",
+        "Placenta previa"
+      ],
+      "correct": 1,
+      "explain": "Increased placental calcification on US is a hallmark of placental aging — it reflects the pathophysiology of postterm pregnancy where the placenta becomes insufficient."
+    },
+    {
+      "q": "Oligohydramnios in a postterm pregnancy poses risk for all EXCEPT:",
+      "options": [
+        "Cord compression",
+        "Fetal hypoxia",
+        "Fetal macrosomia",
+        "Meconium aspiration"
+      ],
+      "correct": 2,
+      "explain": "Oligohydramnios + placental insufficiency in a postterm pregnancy = high risk for cord compression, fetal hypoxia, and meconium aspiration. Fetal macrosomia is a separate complication of postterm pregnancy."
+    }
+  ],
+  "s6": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "A postnatal sign of a postterm baby is:",
+      "options": [
+        "Birth weight more than 4.5 kg",
+        "Birth weight less than 2.5 kg",
+        "Head circumference less than 33 cm",
+        "Skin that is thin and transparent"
+      ],
+      "correct": 0,
+      "explain": "Postnatal signs of a postterm baby include weight more than 4.5 kg, length more than 54 cm, well ossified skull with smaller fontanelles, and finger nails projecting beyond finger tips."
+    },
+    {
+      "q": "Which mnemonic helps recall the postnatal signs of a postterm baby?",
+      "options": [
+        "L-W-S-F (Length, Weight, Skull, Fingernails)",
+        "H-A-I-R (Head, Arms, Inches, Reflexes)",
+        "B-A-B-Y (Breathing, Activity, Body, Yell)",
+        "A-P-G-A-R (Appearance, Pulse, Grimace, Activity, Respiration)"
+      ],
+      "correct": 0,
+      "explain": "L-W-S-F: Length > 54 cm, Weight > 4.5 kg, Skull well ossified/small fontanelles, Fingernails beyond tips."
+    },
+    {
+      "q": "A postterm baby's skull is characterized by:",
+      "options": [
+        "Wide open fontanelles",
+        "Well ossified with smaller fontanelles",
+        "Soft and compressible bones",
+        "Overlapping sutures (Spalding sign)"
+      ],
+      "correct": 1,
+      "explain": "The skull is well ossified with smaller fontanelles in a postterm baby. (Spalding sign — overlapping skull bones — is seen in IUFD, not postterm.)"
+    }
+  ],
+  "s7": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The cascade of complications in postterm pregnancy begins with:",
+      "options": [
+        "Fetal macrosomia",
+        "Aging of placenta leading to placental insufficiency",
+        "Oligohydramnios",
+        "Postpartum hemorrhage"
+      ],
+      "correct": 1,
+      "explain": "The cascade: placental aging → placental insufficiency → fetal hypoxia → acidosis → stillbirth. Each day past 42 weeks increases this risk."
+    },
+    {
+      "q": "Fetal macrosomia in postterm pregnancy increases the risk of:",
+      "options": [
+        "Preterm labor",
+        "Shoulder dystocia and birth trauma",
+        "['Chorioamnionitis', 'Cord prolapse']"
+      ],
+      "correct": 1,
+      "explain": "Fetal macrosomia leads to shoulder dystocia, increases the chances of birth trauma (intracranial hemorrhage) and increases the chances of operative delivery."
+    },
+    {
+      "q": "Complications of postterm pregnancy include all EXCEPT:",
+      "options": [
+        "Placental insufficiency and stillbirth",
+        "Oligohydramnios and cord compression",
+        "Pulmonary hypoplasia",
+        "Postpartum hemorrhage and infection"
+      ],
+      "correct": 2,
+      "explain": "Pulmonary hypoplasia is a complication of preterm PROM, not postterm pregnancy. Postterm complications include placental insufficiency, fetal hypoxia/acidosis/stillbirth, oligohydramnios, cord compression, meconium aspiration, fetal macrosomia, shoulder dystocia, operative delivery, postpartum hemorrhage, and infection."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The management of postterm pregnancy is:",
+      "options": [
+        "Expectant observation until spontaneous labor",
+        "Termination of pregnancy (induction of labor or cesarean)",
+        "Administration of corticosteroids",
+        "Tocolysis to prevent labor"
+      ],
+      "correct": 1,
+      "explain": "The source states management of postterm pregnancy is termination of pregnancy — induction of labor or cesarean section depending on cervical readiness and fetal status."
+    },
+    {
+      "q": "The decision between induction of labor and cesarean section in postterm pregnancy depends on:",
+      "options": [
+        "Maternal preference alone",
+        "Gestational age only",
+        "Cervical readiness and fetal status",
+        "Fetal gender"
+      ],
+      "correct": 2,
+      "explain": "Management depends on cervical readiness and fetal status, and the type of termination (induction of labor or cesarean section) is individualized."
+    },
+    {
+      "q": "Why must dating be confirmed before diagnosing postterm pregnancy?",
+      "options": [
+        "Because management differs significantly between true postterm and wrong dates",
+        "Because ultrasound is unreliable after 40 weeks",
+        "Because the definition changes by country",
+        "Because postterm cannot be diagnosed without a first-trimester scan"
+      ],
+      "correct": 0,
+      "explain": "The most common cause of postterm pregnancy is wrong date, so careful review of menstrual history and dating confirmation is essential before making the diagnosis."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

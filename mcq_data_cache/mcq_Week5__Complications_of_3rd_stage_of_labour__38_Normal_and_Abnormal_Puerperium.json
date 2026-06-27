@@ -1,0 +1,287 @@
+{
+  "s2": [
+    {
+      "q": "The puerperium is defined as:",
+      "options": [
+        "The period from delivery until 2 weeks postpartum",
+        "The time from delivery until 6 weeks (42 days) postpartum",
+        "The period of labor and delivery",
+        "The first 24 hours after delivery"
+      ],
+      "correct": 1,
+      "explain": "Puerperium = time from delivery till 6 weeks (42 days) postpartum when pregnancy changes resolve and the body reverts to the non-pregnant state."
+    },
+    {
+      "q": "Which statement about the puerperium is TRUE?",
+      "options": [
+        "All pregnancy changes reverse within 2 weeks",
+        "Six weeks is the standard duration of the puerperium",
+        "Lactation prevents all uterine involution",
+        "The uterus returns to normal size by 2 weeks"
+      ],
+      "correct": 1,
+      "explain": "Six weeks is the standard duration. Uterine involution takes the full 6 weeks (1000g at delivery → 60-80g by 6 weeks)."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Immediately after labor, the uterine fundus is at:",
+      "options": [
+        "The xiphisternum",
+        "The umbilicus",
+        "2 cm below the umbilicus",
+        "The symphysis pubis"
+      ],
+      "correct": 1,
+      "explain": "Immediately after labor the fundus is at the umbilicus. It descends ~1-2 cm per day and should not be palpable abdominally by day 10-14."
+    },
+    {
+      "q": "The uterine weight at the end of the puerperium is:",
+      "options": [
+        "1000 g",
+        "500 g",
+        "250 g",
+        "60-80 g"
+      ],
+      "correct": 3,
+      "explain": "Uterine involution: 1000 g (immediately) → 500 g (1 wk) → 250 g (2 wks) → 60-80 g (6 wks, non-pregnant)."
+    },
+    {
+      "q": "In non-lactating women, ovulation and menses typically return:",
+      "options": [
+        "Within 4 weeks",
+        "1.5-2 months postpartum",
+        "6 months postpartum",
+        "12 months postpartum"
+      ],
+      "correct": 1,
+      "explain": "Non-lactating: menses return at 1.5-2 months. Lactating: 6 months or earlier (LAM criteria apply)."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which of the following is a normal general body change during the puerperium?",
+      "options": [
+        "Bradycardia (<60 bpm) is common in the first week",
+        "Tachycardia always indicates infection",
+        "Striae remain red and prominent",
+        "Blood volume increases"
+      ],
+      "correct": 0,
+      "explain": "Bradycardia (not tachycardia) is normal in early puerperium. Tachycardia >100 bpm suggests infection or anemia."
+    },
+    {
+      "q": "After-pains in the puerperium are:",
+      "options": [
+        "Abnormal and require investigation",
+        "Painful uterine contractions that increase with suckling due to oxytocin release",
+        "Always a sign of retained products",
+        "Treated with oxytocin"
+      ],
+      "correct": 1,
+      "explain": "After-pains are normal painful contractions, increasing with suckling (oxytocin release). Commoner in multiparas."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s6": [
+    {
+      "q": "How frequently should uterine massage and bleeding monitoring be done in the immediate postpartum period?",
+      "options": [
+        "Every 5 minutes for 30 minutes",
+        "Every 15 minutes for at least 1 hour",
+        "Every 30 minutes for 2 hours",
+        "Once on the first day"
+      ],
+      "correct": 1,
+      "explain": "Every 15 min for at least 1 hr — this covers the highest-risk window for primary PPH."
+    },
+    {
+      "q": "Anti-D immunoglobulin should be given to Rh-negative mothers with Rh-positive babies within:",
+      "options": [
+        "24 hours",
+        "72 hours post-delivery",
+        "1 week",
+        "At the 6-week check"
+      ],
+      "correct": 1,
+      "explain": "Anti-D must be given within the first 72 hours post-delivery. Ideally dose by Kleihauer-Betke test if fetomaternal hemorrhage is suspected."
+    },
+    {
+      "q": "Which of the following is part of the 11-pillar management of normal puerperium?",
+      "options": [
+        "Semi-sitting position to encourage lochia drainage",
+        "NPO for 24 hours after vaginal delivery",
+        "Ambulation should be avoided for 3 days",
+        "Constipation is encouraged to promote uterine involution"
+      ],
+      "correct": 0,
+      "explain": "Semi-sitting position encourages drainage of lochia. Diet is allowed 2 hrs after uncomplicated vaginal delivery and ambulation is encouraged to prevent DVT."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The MOST common cause of puerperal pyrexia is:",
+      "options": [
+        "Puerperal sepsis",
+        "Milk engorgement",
+        "Urinary tract infection",
+        "Respiratory infection"
+      ],
+      "correct": 1,
+      "explain": "Milk engorgement (days 3-5) is the most common cause. However, puerperal sepsis is the most serious — 'sepsis until proved otherwise' is the rule."
+    },
+    {
+      "q": "Puerperal pyrexia is defined as temperature of ≥38°C lasting ≥24 hours during the first:",
+      "options": [
+        "3 days of puerperium",
+        "7 days of puerperium",
+        "10 days of puerperium",
+        "14 days of puerperium"
+      ],
+      "correct": 2,
+      "explain": "Definition: temperature reaching 38°C or more AND lasting 24 hours or more during the first 10 days of puerperium."
+    },
+    {
+      "q": "Which of the following is NOT a cause of uterine subinvolution?",
+      "options": [
+        "Retained placental fragments",
+        "Infection",
+        "Antepartum overdistension (e.g. multiple pregnancy)",
+        "Lactation"
+      ],
+      "correct": 3,
+      "explain": "Subinvolution causes (RIAN): Retained products, Infection, Antepartum overdistension, Non-lactating women. Lactation actually promotes involution."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

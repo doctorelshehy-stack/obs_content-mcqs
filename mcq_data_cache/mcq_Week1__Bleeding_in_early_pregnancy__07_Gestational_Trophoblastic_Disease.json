@@ -1,0 +1,971 @@
+{
+  "s2": [
+    {
+      "q": "Gestational trophoblastic disease (GTD) originates from:",
+      "options": [
+        "Uterine epithelium",
+        "Trophoblastic tissue of the placenta",
+        "Ovarian tissue",
+        "Endometrial stroma"
+      ],
+      "correct": 1,
+      "explain": "GTD originates from trophoblastic tissue of the placenta."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The most common type is:",
+      "options": [
+        "Type 1 — mild form",
+        "Type 2 — moderate form",
+        "Type 3 — severe form",
+        "Depends on the specific condition and classification system"
+      ],
+      "correct": 3,
+      "explain": "Classification varies by condition — each has its own typing system."
+    },
+    {
+      "q": "Classification is based on:",
+      "options": [
+        "Anatomical location",
+        "Severity of symptoms",
+        "Both anatomical and clinical criteria",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Most classifications combine anatomical and clinical parameters."
+    }
+  ],
+  "s7": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which maternal characteristic increases risk?",
+      "options": [
+        "Advanced maternal age",
+        "High parity",
+        "Previous obstetric history",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Multiple maternal factors contribute to obstetric risk."
+    },
+    {
+      "q": "Modifiable risk factors include:",
+      "options": [
+        "Smoking and obesity",
+        "Age and parity",
+        "Genetic predisposition",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explain": "Smoking, obesity, and nutritional status are modifiable risk factors."
+    }
+  ],
+  "s8": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s9": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s10": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s11": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s12": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which laboratory test is most relevant?",
+      "options": [
+        "Hemoglobin level",
+        "Coagulation profile",
+        "Specific test depends on the condition being investigated",
+        "All of the above should be checked routinely"
+      ],
+      "correct": 2,
+      "explain": "Investigations are guided by clinical suspicion and differential diagnosis."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s13": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The first-line investigation is:",
+      "options": [
+        "Ultrasound",
+        "Complete blood count",
+        "Urine analysis",
+        "Depends on the clinical suspicion"
+      ],
+      "correct": 3,
+      "explain": "Choice of investigation depends on the suspected condition."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s14": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The definitive treatment involves:",
+      "options": [
+        "Medical therapy",
+        "Surgical intervention",
+        "Combined medical and surgical care",
+        "Depends on the specific condition and gestational age"
+      ],
+      "correct": 3,
+      "explain": "Treatment depends on the diagnosis, severity, gestational age, and patient factors."
+    }
+  ],
+  "s15": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s16": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s17": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s18": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "s2": [
+    {
+      "q": "Obstructed labor is defined as:",
+      "options": [
+        "Failure of delivery due to weak uterine contractions",
+        "Failure of delivery of the fetus in spite of good uterine contractions due to mechanical obstruction",
+        "Labor lasting more than 24 hours",
+        "Failure of cervical dilation"
+      ],
+      "correct": 1,
+      "explain": "Key: 'in spite of good uterine contractions' — obstructed labor is mechanical, not due to inefficient contractions (uterine inertia)."
+    },
+    {
+      "q": "Why is it critical to distinguish obstructed labor from prolonged labor due to uterine inertia?",
+      "options": [
+        "Both are treated the same way",
+        "In obstructed labor, more oxytocin will not help and may rupture the uterus",
+        "Obstructed labor only occurs in primigravidas",
+        "Prolonged labor always requires cesarean section"
+      ],
+      "correct": 1,
+      "explain": "In obstructed labor, more oxytocin will not help and may cause uterine rupture. The definitive treatment is cesarean section."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is a maternal cause of obstructed labor?",
+      "options": [
+        "Macrosomic baby",
+        "Contracted pelvis",
+        "Malpresentation",
+        "Locked twins"
+      ],
+      "correct": 1,
+      "explain": "Maternal (passages) causes: contracted pelvis, abnormal pelvis, pelvic tumor, cervical stenosis, vaginal septum. The others are fetal (passenger) causes."
+    },
+    {
+      "q": "Which of the following is a fetal cause of obstructed labor?",
+      "options": [
+        "Contracted pelvis",
+        "Pelvic tumor",
+        "Hydrocephalos (hydrocephalus)",
+        "Cervical stenosis"
+      ],
+      "correct": 2,
+      "explain": "Fetal causes: macrosomia, malpresentation, malposition, malformed fetus (hydrocephalos, conjoint twins, fetal ascitis), locked twins."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The cardinal vaginal sign of obstructed labor is:",
+      "options": [
+        "Complete cervical dilation",
+        "Dry and hot vagina",
+        "Large caput succedaneum and moulding",
+        "Ruptured membranes"
+      ],
+      "correct": 2,
+      "explain": "Large caput + moulding = the cardinal vaginal sign. It tells you the head has been trying to descend but the pelvis is too small."
+    },
+    {
+      "q": "Which of the following is an abdominal examination finding in obstructed labor?",
+      "options": [
+        "Soft, non-tender uterus",
+        "Pathological retraction ring (Bandl's ring)",
+        "Fetal heart sounds are always normal",
+        "Bladder is empty"
+      ],
+      "correct": 1,
+      "explain": "Abdominal findings: uterus hard and tender, pathological retraction ring, distended bladder, fetal distress or absent FHS."
+    },
+    {
+      "q": "According to the source, the first diagnostic criterion for obstructed labor is labor lasting more than:",
+      "options": [
+        "6 hours",
+        "12 hours",
+        "24 hours",
+        "48 hours"
+      ],
+      "correct": 1,
+      "explain": "The source's first diagnostic criterion: labor lasting more than 12 hours — an operationalization of the WHO partogram's action line."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "The MOST effective single tool for prevention of obstructed labor is:",
+      "options": [
+        "Ultrasound at every visit",
+        "Strict partogram use",
+        "Hospital delivery for all women",
+        "Early induction of labor"
+      ],
+      "correct": 1,
+      "explain": "The partogram is the single most effective bedside tool for early detection of prolonged labor and prevention of obstructed labor."
+    },
+    {
+      "q": "General management of obstructed labor includes all EXCEPT:",
+      "options": [
+        "Correction of dehydration with IV fluids",
+        "Broad-spectrum antibiotics",
+        "Oxytocin augmentation",
+        "Assessment of general condition"
+      ],
+      "correct": 2,
+      "explain": "Oxytocin augmentation is contraindicated in obstructed labor (may rupture uterus). General management: IV fluids, antibiotics, assess the mother."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "A maternal complication of obstructed labor is:",
+      "options": [
+        "Neonatal jaundice",
+        "Uterine rupture",
+        "Fetal fracture",
+        "Cerebral palsy"
+      ],
+      "correct": 1,
+      "explain": "Maternal complications: uterine rupture, postpartum hemorrhage, puerperal sepsis, vesicovaginal fistula, maternal death."
+    },
+    {
+      "q": "A fetal complication of obstructed labor is:",
+      "options": [
+        "Maternal sepsis",
+        "Vesicovaginal fistula",
+        "Asphyxia and neonatal death",
+        "Uterine rupture"
+      ],
+      "correct": 2,
+      "explain": "Fetal complications: asphyxia, intracranial hemorrhage, fractures, nerve palsies, and neonatal death."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    },
+    {
+      "q": "A potential maternal complication includes:",
+      "options": [
+        "Hemorrhage",
+        "Infection",
+        "Thromboembolism",
+        "All of the above are possible"
+      ],
+      "correct": 3,
+      "explain": "Obstetric conditions can lead to hemorrhage, infection, thromboembolism, and other complications."
+    }
+  ]
+}

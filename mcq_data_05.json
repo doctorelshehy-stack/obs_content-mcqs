@@ -1,0 +1,244 @@
+{
+  "definition": [
+    {
+      "q": "Abortion is defined as termination of pregnancy before:",
+      "options": [
+        "12 weeks",
+        "20 weeks",
+        "24 weeks",
+        "28 weeks"
+      ],
+      "correct": 1,
+      "explain": "Abortion is termination of pregnancy before viability of the fetus, i.e. before 20 weeks."
+    },
+    {
+      "q": "The most common cause of early spontaneous abortion is:",
+      "options": [
+        "Maternal infections",
+        "Trauma",
+        "Chromosomal abnormalities",
+        "Endocrine disorders"
+      ],
+      "correct": 2,
+      "explain": "Chromosomal abnormalities account for approximately 50% of early abortions."
+    }
+  ],
+  "threatened": [
+    {
+      "q": "The defining feature of threatened abortion is:",
+      "options": [
+        "Heavy bleeding with clots",
+        "Closed cervix with a living fetus on ultrasound",
+        "Dilated cervix",
+        "Absent fetal heart sounds"
+      ],
+      "correct": 1,
+      "explain": "Threatened abortion is characterized by slight vaginal bleeding, absent or slight pain, closed cervix, and a living fetus on ultrasound."
+    },
+    {
+      "q": "Management of threatened abortion includes all EXCEPT:",
+      "options": [
+        "Bed rest",
+        "Avoid sexual intercourse",
+        "Immediate evacuation",
+        "Progesterone"
+      ],
+      "correct": 2,
+      "explain": "Threatened abortion is managed conservatively with bed rest, avoiding strenuous activity and intercourse, progesterone, and follow-up. Evacuation is not indicated."
+    }
+  ],
+  "inevitable": [
+    {
+      "q": "Inevitable abortion is characterized by:",
+      "options": [
+        "Closed cervix with slight bleeding",
+        "Heavy vaginal bleeding with clots and dilated cervix",
+        "Empty uterine cavity",
+        "Prune juice discharge"
+      ],
+      "correct": 1,
+      "explain": "Inevitable abortion presents with heavy vaginal bleeding with clots, suprapubic colic, and a dilated cervix \u2014 the pregnancy cannot be saved."
+    }
+  ],
+  "complete": [
+    {
+      "q": "In complete abortion, the uterus on ultrasound shows:",
+      "options": [
+        "Retained products",
+        "An empty cavity",
+        "A gestational sac",
+        "A collapsed sac"
+      ],
+      "correct": 1,
+      "explain": "In complete abortion, all products of conception have been expelled, so ultrasound shows an empty cavity."
+    },
+    {
+      "q": "Management of complete abortion includes:",
+      "options": [
+        "Surgical evacuation",
+        "Ecbolics and antibiotics with no evacuation",
+        "Hysterectomy",
+        "Chemotherapy"
+      ],
+      "correct": 1,
+      "explain": "Complete abortion requires only ecbolics (uterotonics) and antibiotics \u2014 no evacuation is needed since the cavity is empty."
+    }
+  ],
+  "incomplete": [
+    {
+      "q": "In incomplete abortion, the uterus is:",
+      "options": [
+        "Larger than period of amenorrhea",
+        "Smaller than period of amenorrhea",
+        "Normal size",
+        "Not palpable"
+      ],
+      "correct": 1,
+      "explain": "The uterus is smaller than the period of amenorrhea because some products have already been passed."
+    },
+    {
+      "q": "The cervix in incomplete abortion is:",
+      "options": [
+        "Closed",
+        "Open",
+        "Soft but closed",
+        "Firm and closed"
+      ],
+      "correct": 1,
+      "explain": "In incomplete abortion, the cervix is open with continuous bleeding, requiring evacuation."
+    }
+  ],
+  "cervical": [
+    {
+      "q": "Cervical abortion is defined as:",
+      "options": [
+        "Abortion with cervical infection",
+        "Products of conception retained inside the cervical canal",
+        "Abortion caused by cervical incompetence",
+        "Abortion after cervical cerclage"
+      ],
+      "correct": 1,
+      "explain": "In cervical abortion, the products of conception are separated from the uterus but retained inside the cervical canal."
+    }
+  ],
+  "missed": [
+    {
+      "q": "A classic symptom of missed abortion is:",
+      "options": [
+        "Heavy vaginal bleeding",
+        "Prune juice discharge",
+        "Offensive discharge",
+        "Bright red bleeding"
+      ],
+      "correct": 1,
+      "explain": "Missed abortion presents with regression of pregnancy symptoms, prune juice discharge (dark brown), and absent FHS."
+    },
+    {
+      "q": "In missed abortion >12 weeks, treatment is:",
+      "options": [
+        "Surgical evacuation",
+        "Medical evacuation with prostaglandins or oxytocin",
+        "Antibiotics only",
+        "Expectant management"
+      ],
+      "correct": 1,
+      "explain": "For missed abortion less than 12 weeks: surgical evacuation. Greater than 12 weeks: medical evacuation (prostaglandins or oxytocin)."
+    },
+    {
+      "q": "After fetal death in missed abortion, the pregnancy test becomes negative within:",
+      "options": [
+        "1 week",
+        "2 weeks",
+        "4 weeks",
+        "6 weeks"
+      ],
+      "correct": 1,
+      "explain": "Pregnancy test becomes negative within two weeks from ovum death in missed abortion."
+    }
+  ],
+  "septic": [
+    {
+      "q": "Septic abortion is defined as:",
+      "options": [
+        "Any abortion with heavy bleeding",
+        "Any abortion complicated by infection",
+        "Recurrent abortion",
+        "Abortion after 20 weeks"
+      ],
+      "correct": 1,
+      "explain": "Septic abortion is any type of abortion complicated by infection, which can be life-threatening."
+    },
+    {
+      "q": "The immediate priority in managing septic abortion is:",
+      "options": [
+        "Immediate surgical evacuation",
+        "Resuscitation and IV broad-spectrum antibiotics before evacuation",
+        "Hysterectomy",
+        "Oral antibiotics alone"
+      ],
+      "correct": 1,
+      "explain": "Resuscitation and IV broad-spectrum antibiotics must be started before evacuation. Hysterectomy is the last resort to save life."
+    },
+    {
+      "q": "Positioning for a patient with septic abortion is:",
+      "options": [
+        "Flat supine",
+        "Semi-sitting",
+        "Trendelenburg",
+        "Left lateral"
+      ],
+      "correct": 1,
+      "explain": "The patient should rest in a semi-sitting position with observation for vital signs."
+    }
+  ],
+  "other": [
+    {
+      "q": "Therapeutic abortion is:",
+      "options": [
+        "Abortion induced for a non-medical reason",
+        "Abortion induced for a medical indication",
+        "Spontaneous abortion before 12 weeks",
+        "Abortion that resolves without intervention"
+      ],
+      "correct": 1,
+      "explain": "Therapeutic abortion is induced for a medical indication, while criminal abortion is illegal and for non-medical reasons."
+    }
+  ],
+  "recurrent": [
+    {
+      "q": "Recurrent (habitual) abortion is defined as:",
+      "options": [
+        "Two consecutive abortions",
+        "Three or more consecutive spontaneous abortions",
+        "Any abortion with retained products",
+        "Abortion with infection"
+      ],
+      "correct": 1,
+      "explain": "Habitual abortion is defined as three or more consecutive spontaneous abortions."
+    },
+    {
+      "q": "Causes of recurrent abortion include all EXCEPT:",
+      "options": [
+        "Cervical incompetence",
+        "Uterine septum",
+        "Acute infection in current pregnancy",
+        "Antiphospholipid syndrome"
+      ],
+      "correct": 2,
+      "explain": "Recurrent abortion causes include cervical incompetence (painless mid-trimester loss), uterine anomalies, chromosomal abnormalities, and APLS."
+    }
+  ],
+  "management": [
+    {
+      "q": "General rules for managing abortion include all EXCEPT:",
+      "options": [
+        "Shock: treat its cause with resuscitation",
+        "Hemorrhage: stop bleeding and replace blood loss",
+        "Pain: give analgesics",
+        "Always perform immediate evacuation regardless of type"
+      ],
+      "correct": 3,
+      "explain": "Management depends on type. Threatened abortion is conservative (no evacuation). General rules include treat shock, stop hemorrhage, give analgesics, and evacuate when indicated."
+    }
+  ]
+}

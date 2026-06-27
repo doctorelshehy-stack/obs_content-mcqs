@@ -1,0 +1,344 @@
+{
+  "s2": [
+    {
+      "q": "Fetal macrosomia is defined as weight greater than:",
+      "options": [
+        "3,500 g",
+        "4,000 g",
+        "4,500 g",
+        "5,000 g"
+      ],
+      "correct": 1,
+      "explain": "Macrosomia is defined as fetal weight > 4,000 grams."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which is a risk factor for fetal macrosomia?",
+      "options": [
+        "Primiparity",
+        "Female infant",
+        "Maternal age > 35",
+        "Low maternal BMI"
+      ],
+      "correct": 2,
+      "explain": "Risk factors: history of macrosomia, obesity, excessive weight gain, multiparity, male infants, and maternal age > 35."
+    },
+    {
+      "q": "Male infants are at higher risk for macrosomia because:",
+      "options": [
+        "Larger head circumference",
+        "They typically weigh slightly more",
+        "Faster early growth",
+        "Higher DM rates"
+      ],
+      "correct": 1,
+      "explain": "Male infants typically weigh slightly more than female infants, increasing macrosomia risk."
+    },
+    {
+      "q": "The risk of macrosomia increases with:",
+      "options": [
+        "Decreasing maternal age",
+        "Each subsequent pregnancy",
+        "Low pre-pregnancy weight",
+        "Female fetal gender"
+      ],
+      "correct": 1,
+      "explain": "The risk of macrosomia increases with each subsequent pregnancy."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which maternal condition can cause fetal macrosomia?",
+      "options": [
+        "Chronic hypertension",
+        "Diabetes",
+        "SLE",
+        "Sickle cell disease"
+      ],
+      "correct": 1,
+      "explain": "Maternal diabetes can cause fetal macrosomia. Other causes: genetic factors, multiparity, and postterm pregnancy."
+    },
+    {
+      "q": "All are causes of macrosomia EXCEPT:",
+      "options": [
+        "Genetic factors",
+        "Maternal diabetes",
+        "Postterm pregnancy",
+        "Placental insufficiency"
+      ],
+      "correct": 3,
+      "explain": "Placental insufficiency is associated with IUGR, not macrosomia."
+    },
+    {
+      "q": "Which is a cause of macrosomia?",
+      "options": [
+        "Preterm labor",
+        "Postterm pregnancy",
+        "Oligohydramnios",
+        "IUGR"
+      ],
+      "correct": 1,
+      "explain": "Postterm pregnancy causes continued fetal growth beyond term, resulting in a large-for-gestational-age fetus."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which is a clinical feature of macrosomia?",
+      "options": [
+        "Decreased fundal height",
+        "Large fundal height",
+        "Oligohydramnios",
+        "Decreased movements"
+      ],
+      "correct": 1,
+      "explain": "Clinical features: large fundal height and excessive amniotic fluid (polyhydramnios)."
+    },
+    {
+      "q": "Which finding on examination may suggest macrosomia?",
+      "options": [
+        "Small fundal height",
+        "Oligohydramnios",
+        "Polyhydramnios",
+        "Breech presentation"
+      ],
+      "correct": 2,
+      "explain": "Polyhydramnios (excessive AF) is a clinical feature of macrosomia along with large fundal height."
+    },
+    {
+      "q": "The most common presenting symptom is:",
+      "options": [
+        "Pain",
+        "Abnormal bleeding",
+        "Both pain and abnormal bleeding",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation varies — pain and bleeding are common but not universal symptoms."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which sign on examination is characteristic?",
+      "options": [
+        "Abnormal vital signs",
+        "Palpable abdominal mass",
+        "Specific findings vary by condition",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Examination findings depend heavily on the specific obstetric condition."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which is a maternal complication of macrosomia?",
+      "options": [
+        "Fetal fractures",
+        "Brachial plexus injury",
+        "Postpartum hemorrhage",
+        "Meconium aspiration"
+      ],
+      "correct": 2,
+      "explain": "PPH is a maternal complication. Fetal injuries, meconium aspiration, and shoulder dystocia are fetal/neonatal complications."
+    },
+    {
+      "q": "Shoulder dystocia in macrosomia can cause:",
+      "options": [
+        "Maternal hypertension",
+        "Fetal injuries including fractures and brachial plexus injury",
+        "Gestational diabetes",
+        "Preterm labor"
+      ],
+      "correct": 1,
+      "explain": "Shoulder dystocia can cause fetal injuries including fractures and brachial plexus injuries."
+    },
+    {
+      "q": "All are complications of macrosomia EXCEPT:",
+      "options": [
+        "Shoulder dystocia",
+        "Uterine rupture",
+        "Fetal growth restriction",
+        "PPH"
+      ],
+      "correct": 2,
+      "explain": "IUGR/fetal growth restriction is the opposite condition. Macrosomia complications include shoulder dystocia, fetal injuries, PPH, and uterine rupture."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Which delivery mode is recommended for macrosomia?",
+      "options": [
+        "Induction of labor",
+        "Cesarean section",
+        "Vacuum extraction",
+        "Forceps"
+      ],
+      "correct": 1,
+      "explain": "Cesarean section is safe for both mother and fetus in cases of macrosomia."
+    },
+    {
+      "q": "Which is part of antenatal management of macrosomia?",
+      "options": [
+        "Immediate delivery at 37 weeks",
+        "Proper antenatal care to prevent and diagnose before labor",
+        "ECV",
+        "Amnio-reduction"
+      ],
+      "correct": 1,
+      "explain": "Proper antenatal care aims to prevent macrosomia and diagnose it before labor."
+    },
+    {
+      "q": "Postnatal management of a macrosomic neonate includes:",
+      "options": [
+        "Immediate CS",
+        "Proper examination and management of any problem",
+        "Induction of labor",
+        "Amnio-infusion"
+      ],
+      "correct": 1,
+      "explain": "Postnatal management involves proper examination of the neonate and management of any identified problems."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When is conservative management appropriate?",
+      "options": [
+        "In mild cases without complications",
+        "Always as first-line",
+        "Never — all cases require intervention",
+        "Only after 37 weeks"
+      ],
+      "correct": 0,
+      "explain": "Conservative management is reserved for mild, uncomplicated cases."
+    }
+  ]
+}

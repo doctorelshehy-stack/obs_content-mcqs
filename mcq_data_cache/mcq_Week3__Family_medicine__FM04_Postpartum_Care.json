@@ -1,0 +1,513 @@
+{
+  "s3": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "When does the postpartum period (puerperium) begin and how long does it last?",
+      "options": [
+        "Begins after delivery of placenta and continues for 4 weeks",
+        "Begins about 2 hours after delivery of placenta and continues for 6 weeks",
+        "Begins immediately after delivery and continues for 8 weeks",
+        "Begins 24 hours after delivery and continues for 6 weeks"
+      ],
+      "correct": 1,
+      "explain": "The postpartum period starts about two hours after delivery of the placenta and continues for six weeks."
+    },
+    {
+      "q": "Which of the following is an objective of postnatal care for the mother?",
+      "options": [
+        "Establishment of paternity",
+        "Reproductive health promotion and prevention of complications",
+        "Guarantee return to pre-pregnancy weight",
+        "Ensure exclusive formula feeding"
+      ],
+      "correct": 1,
+      "explain": "Objectives for the mother include: reproductive health promotion, prevention of postpartum complications, early detection and referral, psychological support, and health education."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which sign on examination is characteristic?",
+      "options": [
+        "Abnormal vital signs",
+        "Palpable abdominal mass",
+        "Specific findings vary by condition",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Examination findings depend heavily on the specific obstetric condition."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The most common presenting symptom is:",
+      "options": [
+        "Pain",
+        "Abnormal bleeding",
+        "Both pain and abnormal bleeding",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation varies — pain and bleeding are common but not universal symptoms."
+    },
+    {
+      "q": "On Day 1 postpartum, which item should be checked as given?",
+      "options": [
+        "Iron supplementation",
+        "Vitamin A capsule (200,000 IU)",
+        "Folic acid",
+        "Calcium supplement"
+      ],
+      "correct": 1,
+      "explain": "On Day 1, the nurse should check that Vitamin A capsule (200,000 IU) has been given to the mother."
+    },
+    {
+      "q": "On Day 4 postpartum, which symptom should be specifically asked about?",
+      "options": [
+        "Breast engorgement",
+        "Calf pain (suggesting thrombosis)",
+        "Umbilical stump condition",
+        "Infant jaundice"
+      ],
+      "correct": 1,
+      "explain": "On Day 4, the nurse asks about calf pain (thrombotic), chest pain, foul-smelling discharge, and fever/chills."
+    }
+  ],
+  "s5": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "What laboratory investigations are performed on Day 40 postpartum?",
+      "options": [
+        "Complete blood count and liver function tests",
+        "Hemoglobin level and complete urine analysis",
+        "Blood glucose and lipid profile",
+        "Thyroid function tests and vitamin D level"
+      ],
+      "correct": 1,
+      "explain": "On Day 40, hemoglobin level and complete urine analysis are the recommended lab investigations."
+    },
+    {
+      "q": "On Day 1 postpartum, what abdominal finding should be assessed?",
+      "options": [
+        "Abdominal musculature tone",
+        "Fundal height and firmness by palpation",
+        "C-section incision inspection",
+        "Liver span"
+      ],
+      "correct": 1,
+      "explain": "On Day 1, fundal height and firmness by palpation and abdominal tenderness should be assessed to check uterine involution."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "What newborn screening should be performed within the first week of life?",
+      "options": [
+        "Hearing screening",
+        "Congenital hypothyroidism screening",
+        "Critical congenital heart disease screening",
+        "Bilirubin level"
+      ],
+      "correct": 1,
+      "explain": "The mother should be counseled to have the infant screened for congenital hypothyroidism within the first week."
+    },
+    {
+      "q": "By Day 7, what should have happened to the umbilical stump?",
+      "options": [
+        "It should be completely healed",
+        "It should have fallen off or totally dried",
+        "It should be covered with antibiotic ointment",
+        "It needs surgical removal"
+      ],
+      "correct": 1,
+      "explain": "By Day 7, the umbilical stump should have fallen off or be totally dried."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a danger symptom in the mother requiring immediate medical care?",
+      "options": [
+        "Mild fatigue",
+        "Painful calf muscle",
+        "Slight breast tenderness",
+        "Occasional headache"
+      ],
+      "correct": 1,
+      "explain": "Danger symptoms for the mother include: vaginal bleeding, severe headache, blurring of vision, convulsions, fever, foul discharge, painful calf muscle, chest pain, dyspnea, and fainting."
+    },
+    {
+      "q": "Which of the following is a red flag in an infant requiring referral?",
+      "options": [
+        "Frequent breastfeeding",
+        "Respiratory rate >60/min",
+        "Mild jaundice resolving by Day 7",
+        "Sleeping 16-18 hours per day"
+      ],
+      "correct": 1,
+      "explain": "Infant red flags include: temperature 38°C, RR >60/min, flaccid/non-reactive, jaundice/cyanosis/pallor, nasal flaring, chest retraction, purulent umbilical discharge."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When should contraception counseling be provided to postpartum mothers?",
+      "options": [
+        "Day 1 postpartum",
+        "Day 7 postpartum",
+        "Only on Day 40",
+        "After 6 months"
+      ],
+      "correct": 1,
+      "explain": "Counseling about contraception should be done at Day 7 visit."
+    },
+    {
+      "q": "Which of the following is a health education message for the mother?",
+      "options": [
+        "Avoid breastfeeding for the first week",
+        "Encourage early ambulation",
+        "Remain in bed for 40 days",
+        "Restrict fluid intake"
+      ],
+      "correct": 1,
+      "explain": "Health education includes: encourage early ambulation, successful breastfeeding, good nutrition, abdominal exercises, contraception counseling, and day 40 visit."
+    }
+  ],
+  "s9": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "For home deliveries, on which days does the nurse visit?",
+      "options": [
+        "Days 1, 3, and 7",
+        "Days 1, 4, and 7",
+        "Days 2, 5, and 10",
+        "Days 1, 7, and 14"
+      ],
+      "correct": 1,
+      "explain": "For home deliveries, nurse visits on Day 1 (within 24 hours), Day 4, and Day 7. Then mother visits center on Day 40."
+    },
+    {
+      "q": "What is the purpose of the Day 40 visit?",
+      "options": [
+        "Routine weight check only",
+        "Complete assessment and initiation of contraception",
+        "Only infant vaccination",
+        "Removal of sutures"
+      ],
+      "correct": 1,
+      "explain": "On Day 40, the mother visits the health facility for complete assessment and initiation of contraception."
+    }
+  ],
+  "s10": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "According to the postpartum care flowchart, what happens if a risk factor is detected?",
+      "options": [
+        "Continue routine care",
+        "Refer to a higher level of health care facility",
+        "Start iron supplementation",
+        "Schedule a follow-up in 2 weeks"
+      ],
+      "correct": 1,
+      "explain": "If any risk factor (maternal or neonatal) is detected, the patient should be referred to a higher level of health care facility."
+    },
+    {
+      "q": "What is the first step in the postpartum care protocol flowchart?",
+      "options": [
+        "Physical examination",
+        "Postpartum care visits (home: Days 1, 4, 7; clinic: Day 40)",
+        "Laboratory investigations",
+        "Health education"
+      ],
+      "correct": 1,
+      "explain": "The first step is scheduling and conducting postpartum care visits: home visits on Days 1, 4, 7 and clinic visit on Day 40."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

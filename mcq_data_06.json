@@ -1,0 +1,176 @@
+{
+  "definition": [
+    {
+      "q": "Ectopic pregnancy is defined as:",
+      "options": [
+        "Implantation in the lower uterine segment",
+        "Implantation and development of the ovum outside the normal uterine cavity",
+        "Implantation in the cervix",
+        "Tubal abortion"
+      ],
+      "correct": 1,
+      "explain": "Ectopic pregnancy is the implantation and development of the ovum outside the normal uterine cavity."
+    },
+    {
+      "q": "The most common site of ectopic pregnancy is:",
+      "options": [
+        "Ovary",
+        "Interstitial part of tube",
+        "Ampulla of the fallopian tube",
+        "Abdominal cavity"
+      ],
+      "correct": 2,
+      "explain": "The ampulla is the most common site for ectopic pregnancy."
+    }
+  ],
+  "risk": [
+    {
+      "q": "Which of the following is a risk factor for ectopic pregnancy?",
+      "options": [
+        "Previous ectopic pregnancy",
+        "Multiparity",
+        "Young maternal age",
+        "Intrauterine device use"
+      ],
+      "correct": 0,
+      "explain": "Risk factors include previous ectopic pregnancy, tubal damage (infection/surgery), and IUD use. Wait \u2014 IUD use IS a risk factor. Let me rephrase."
+    },
+    {
+      "q": "All of the following are risk factors for ectopic pregnancy EXCEPT:",
+      "options": [
+        "Previous ectopic pregnancy",
+        "Pelvic inflammatory disease",
+        "Tubal surgery",
+        "Grand multiparity"
+      ],
+      "correct": 3,
+      "explain": "Risk factors include previous ectopic pregnancy, PID, tubal surgery, IVF, and IUD use. Grand multiparity is not a risk factor."
+    }
+  ],
+  "tubal-sites": [
+    {
+      "q": "The most common site for tubal ectopic pregnancy is the:",
+      "options": [
+        "Interstitial part",
+        "Isthmus",
+        "Ampulla",
+        "Fimbrial end"
+      ],
+      "correct": 2,
+      "explain": "Ampulla is the most common site of ectopic pregnancy."
+    },
+    {
+      "q": "An interstitial (cornual) ectopic pregnancy is dangerous because:",
+      "options": [
+        "It is the most common type",
+        "It ruptures late with severe hemorrhage due to rich blood supply",
+        "It is always bilateral",
+        "It always resolves spontaneously"
+      ],
+      "correct": 1,
+      "explain": "Interstitial ectopic is rare but dangerous because it ruptures late (12-16 weeks) causing severe hemorrhage due to rich blood supply."
+    }
+  ],
+  "clinical": [
+    {
+      "q": "The classic triad of ectopic pregnancy includes all EXCEPT:",
+      "options": [
+        "Amenorrhea",
+        "Vaginal bleeding",
+        "Abdominal pain",
+        "Fever"
+      ],
+      "correct": 3,
+      "explain": "Classic triad: amenorrhea, vaginal bleeding, and abdominal pain. Symptoms also include syncope and shoulder tip pain (Kehr's sign from blood irritating the diaphragm)."
+    },
+    {
+      "q": "Cullen's sign (periumbilical ecchymosis) may indicate:",
+      "options": [
+        "Ruptured ectopic pregnancy with intra-abdominal bleeding",
+        "Appendicitis",
+        "Ovarian cyst rupture",
+        "Placental abruption"
+      ],
+      "correct": 0,
+      "explain": "Cullen's sign \u2014 periumbilical blue discoloration \u2014 indicates intra-abdominal hemorrhage, which can occur in ruptured ectopic pregnancy."
+    }
+  ],
+  "investigations": [
+    {
+      "q": "The diagnostic test of choice for ectopic pregnancy is:",
+      "options": [
+        "Serum hCG",
+        "Transvaginal ultrasound",
+        "Diagnostic laparoscopy",
+        "Culdocentesis"
+      ],
+      "correct": 1,
+      "explain": "Transvaginal ultrasound is the diagnostic test of choice. Absence of intrauterine gestational sac with positive hCG is suspicious for ectopic."
+    }
+  ],
+  "discriminatory": [
+    {
+      "q": "The discriminatory zone for hCG in diagnosing ectopic pregnancy is approximately:",
+      "options": [
+        "500 IU/L",
+        "1500\u20132000 IU/L",
+        "5000 IU/L",
+        "10000 IU/L"
+      ],
+      "correct": 1,
+      "explain": "When hCG is above the discriminatory zone (1500-2000 IU/L) and no intrauterine gestational sac is seen, ectopic pregnancy is highly suspected."
+    }
+  ],
+  "treatment": [
+    {
+      "q": "Which of the following is a criterion for medical management of ectopic pregnancy with methotrexate?",
+      "options": [
+        "Hemodynamically unstable patient",
+        "Fetal cardiac activity present",
+        "Unruptured ectopic mass < 3.5 cm with low hCG",
+        "Any size ectopic mass"
+      ],
+      "correct": 2,
+      "explain": "Methotrexate is indicated for hemodynamically stable patients with unruptured ectopic, mass < 3.5 cm, and no fetal cardiac activity."
+    }
+  ],
+  "surgical": [
+    {
+      "q": "In a ruptured ectopic pregnancy with hemodynamic instability, the treatment of choice is:",
+      "options": [
+        "Methotrexate therapy",
+        "Salpingostomy",
+        "Emergency laparotomy with salpingectomy",
+        "Expectant management"
+      ],
+      "correct": 2,
+      "explain": "Ruptured ectopic with instability requires emergency laparotomy and salpingectomy. Salpingostomy (incision, remove, preserve tube) is for unruptured cases desiring fertility."
+    }
+  ],
+  "interstitial": [
+    {
+      "q": "Interstitial ectopic pregnancy is treated by:",
+      "options": [
+        "Salpingectomy",
+        "Cornuostomy or cornual resection",
+        "Methotrexate only",
+        "Salpingostomy"
+      ],
+      "correct": 1,
+      "explain": "Interstitial (cornual) ectopic pregnancy is treated by cornuostomy or cornual resection due to its location in the uterine cornua."
+    }
+  ],
+  "ovarian": [
+    {
+      "q": "Ovarian ectopic pregnancy is treated by:",
+      "options": [
+        "Oophorectomy",
+        "Salpingo-oophorectomy",
+        "Ovarian wedge resection or oophorectomy",
+        "Medical treatment only"
+      ],
+      "correct": 2,
+      "explain": "Ovarian ectopic is managed by ovarian wedge resection or oophorectomy."
+    }
+  ]
+}

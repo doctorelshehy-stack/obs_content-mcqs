@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>01 - Physiology of Reproduction | Infographic</title>
+<style>
+  /* ============== ROOT & RESET ============== */
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+    color: #1f2a37;
+    background: #f5f7fa;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: #1e6091; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ============== PAGE LAYOUT ============== */
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 36px 64px;
+    background: #ffffff;
+  }
+
+  /* ============== HEADER ============== */
+  .topic-header {
+    background: linear-gradient(135deg, #0f3a5f 0%, #1e6091 60%, #2a8fb5 100%);
+    color: #ffffff;
+    padding: 28px 32px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 18px rgba(15, 58, 95, 0.18);
+  }
+  .topic-header .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #cfe6f3;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .topic-header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .topic-header .meta {
+    font-size: 13px;
+    color: #d4e6f1;
+  }
+  .topic-header .meta span { margin-right: 18px; }
+
+  /* ============== SECTION GRID ============== */
+  .section {
+    margin-bottom: 32px;
+    padding: 24px 28px;
+    background: #fafbfc;
+    border-left: 6px solid #1e6091;
+    border-radius: 10px;
+  }
+  .section h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    color: #0f3a5f;
+    border-bottom: 2px solid #d4e2ec;
+    padding-bottom: 8px;
+  }
+  .section h3 {
+    margin: 18px 0 8px;
+    font-size: 17px;
+    color: #1e6091;
+  }
+  .section h4 {
+    margin: 14px 0 6px;
+    font-size: 15px;
+    color: #2a8fb5;
+  }
+  .section p { margin: 8px 0; }
+
+  /* ============== LISTS ============== */
+  ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+  ul li, ol li { margin: 4px 0; }
+  ul.il-list { list-style: none; padding-left: 0; }
+  ul.il-list > li {
+    position: relative;
+    padding-left: 22px;
+    margin: 6px 0;
+  }
+  ul.il-list > li::before {
+    content: "♦";
+    color: #1e6091;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+  }
+  ul.bullet-list { list-style: none; padding-left: 0; }
+  ul.bullet-list > li {
+    position: relative;
+    padding-left: 20px;
+    margin: 5px 0;
+  }
+  ul.bullet-list > li::before {
+    content: "•";
+    color: #2a8fb5;
+    position: absolute;
+    left: 6px;
+    top: 0;
+    font-size: 18px;
+    line-height: 1;
+  }
+  ul.dash-list { list-style: none; padding-left: 0; }
+  ul.dash-list > li {
+    position: relative;
+    padding-left: 22px;
+    margin: 5px 0;
+  }
+  ul.dash-list > li::before {
+    content: "—";
+    color: #1e6091;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 600;
+  }
+  ul.dash-sub > li::before { content: "•"; color: #6b8aa3; left: 8px; font-size: 14px; }
+  ul.dash-sub { list-style: none; padding-left: 18px; margin-top: 4px; }
+
+  /* ============== VISUAL CARD SYSTEM ============== */
+  .card {
+    border-radius: 10px;
+    padding: 14px;
+    margin: 14px 0;
+    background: #ffffff;
+    border: 2px solid;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    /* Cap image footprint to 20% of page width using aspect-ratio + max-width */
+  }
+  .card .card-header {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .card .card-img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  .card .card-img-wrap img {
+    max-width: 100%;
+    max-height: 360px;     /* 20% of an 1800px page */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  .card .card-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2a37;
+  }
+  .card .card-source {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #4b5563;
+  }
+
+  /* SOURCE IMAGE — GREEN */
+  .card.source-image {
+    background: #eaf6ec;
+    border-color: #2e7d32;
+  }
+  .card.source-image .card-header {
+    background: #2e7d32;
+    color: #ffffff;
+  }
+  .card.source-image .card-source { color: #1b5e20; }
+
+  /* EXTERNAL IMAGE — RED */
+  .card.external-image {
+    background: #fdecea;
+    border-color: #c62828;
+  }
+  .card.external-image .card-header {
+    background: #c62828;
+    color: #ffffff;
+  }
+  .card.external-image .card-source { color: #b71c1c; }
+
+  /* ============== INFO CALLOUTS ============== */
+  .callout {
+    border-left: 4px solid;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 6px;
+    background: #ffffff;
+  }
+  .callout-note { border-color: #1e6091; background: #eef5fa; }
+  .callout-warn { border-color: #c62828; background: #fdecea; }
+  .callout-pearl { border-color: #2e7d32; background: #eaf6ec; }
+  .callout-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .callout-note .callout-title { color: #0f3a5f; }
+  .callout-warn .callout-title { color: #b71c1c; }
+  .callout-pearl .callout-title { color: #1b5e20; }
+
+  /* ============== TABLE ============== */
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: #ffffff;
+  }
+  th, td {
+    border: 1px solid #d4e2ec;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #1e6091;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: #f5f8fb; }
+
+  /* ============== FOOTER ============== */
+  .references {
+    background: #f0f3f7;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 32px;
+    border: 1px solid #d4e2ec;
+  }
+  .references h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #0f3a5f;
+  }
+  .references ul { margin: 4px 0 0 18px; padding: 0; }
+  .references li { font-size: 13px; margin: 3px 0; color: #374151; }
+
+  .footer-note {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid #d4e2ec;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+  }
+
+  /* ============== RESPONSIVE ============== */
+  @media (max-width: 768px) {
+    .page { padding: 18px 16px 32px; }
+    .topic-header { padding: 18px 20px; }
+    .topic-header h1 { font-size: 24px; }
+    .section { padding: 16px 18px; }
+    .section h2 { font-size: 18px; }
+  }
+
+  /* ============== PRINT ============== */
+  @media print {
+    body { background: #ffffff; }
+    .page { box-shadow: none; padding: 18px; max-width: none; }
+    .section { break-inside: avoid; }
+    .card { break-inside: avoid; }
+  }
+
+/* ====== Table of Contents (matches 05_Abortion.html premium design) ====== */
+.toc{
+  background:#FFFFFF;
+  border:1px solid #E5E7EB;
+  border-radius:12px;
+  padding:22px 28px 24px;
+  margin-bottom:28px;
+  box-shadow:0 1px 2px rgba(15,23,42,.04);
+}
+.toc-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  padding-bottom:14px;border-bottom:1px solid #E5E7EB;
+}
+.toc-head .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:#EFF6FF;color:#3B82F6;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.toc-head h2{margin:0;font-size:15px;font-weight:700;color:#0F172A;letter-spacing:.005em}
+.toc-head .count{margin-left:auto;font-size:12.5px;color:#64748B;font-weight:500}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  columns:2;column-gap:36px;
+  font-size:14px;
+}
+.toc-list li{margin:6px 0;break-inside:avoid}
+.toc-list a{
+  display:flex;align-items:center;gap:10px;
+  color:#334155;text-decoration:none;
+  padding:5px 0;border-bottom:1px dashed transparent;
+  transition:color .15s ease, border-color .15s ease;
+}
+.toc-list a:hover{color:#3B82F6;border-bottom-color:#60A5FA}
+.toc-list .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:6px;
+  background:#F8FAFC;color:#64748B;
+  font-size:11.5px;font-weight:700;flex-shrink:0;
+}
+@media (max-width:900px){
+  .toc-list{columns:1}
+}
+/* ====== End Table of Contents ====== */
+
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+<style>/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+}
+details.study-section > summary {
+    cursor: pointer;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: #1e293b;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    list-style: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+    display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+    list-style: none;
+}
+details.study-section > summary::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.75em;
+    color: #64748b;
+    transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+    transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+    padding: 0;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */</style></head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- =========================== HEADER =========================== -->
+<header class="topic-header">
+<div class="eyebrow">Topic 01 · Obstetrics</div>
+<h1>Physiology of Reproduction</h1>
+<div class="meta">
+<span>📚 Source: Book Obstetrics 2025-2026, Ch. 1</span>
+<span>📄 7 pages</span>
+<span>🏥 Medical / Educational Infographic</span>
+</div>
+</header>
+<nav class="toc">
+<div class="toc-head">
+<span class="ico">🗂</span>
+<h2>Table of Contents</h2>
+<span class="count">11 sections</span>
+</div>
+<ol class="toc-list">
+<li><a href="#intended-learning-objectives-ilos"><span class="n">1</span>Intended Learning Objectives (ILOs)</a></li>
+<li><a href="#1-fertilization"><span class="n">2</span>1. Fertilization</a></li>
+<li><a href="#2-implantation"><span class="n">3</span>2. Implantation</a></li>
+<li><a href="#3-formation-of-the-villi"><span class="n">4</span>3. Formation of the Villi</a></li>
+<li><a href="#4-formation-of-choriodecidual-spaces"><span class="n">5</span>4. Formation of Choriodecidual Spaces</a></li>
+<li><a href="#5-placenta"><span class="n">6</span>5. Placenta</a></li>
+<li><a href="#6-umbilical-cord"><span class="n">7</span>6. Umbilical Cord</a></li>
+<li><a href="#7-amniotic-fluid"><span class="n">8</span>7. Amniotic Fluid</a></li>
+<li><a href="#8-hormones"><span class="n">9</span>8. Hormones</a></li>
+<li><a href="#9-student-activity"><span class="n">10</span>9. Student Activity</a></li>
+<li><a href="#10-questions"><span class="n">11</span>10. Questions</a></li>
+</ol>
+</nav>
+<!-- ====================== ILOs ====================== -->
+<section class="section" id="intended-learning-objectives-ilos">
+<h2>Intended Learning Objectives (ILOs)</h2>
+<p>At the end of this chapter, the student should be able to:</p>
+<ul class="il-list">
+<li>Understand the important milestones of reproduction, fertilization and implantation.</li>
+<li>Describe the early stages of placental development.</li>
+<li>Understand the anatomy and different functions of the placenta together with its abnormal shapes.</li>
+<li>Understand the origin, contents and functions of amniotic fluid.</li>
+<li>Describe the anatomy of umbilical cord.</li>
+<li>Understand the endocrinal function of the placenta.</li>
+</ul>
+</section>
+<!-- ====================== FERTILIZATION ====================== -->
+<section class="section" id="1-fertilization">
+<h2>1. Fertilization</h2>
+<ul class="bullet-list">
+<li>Ovum is surrounded by Zona pellucida.</li>
+<li>Sperm undergoes capacitation, head swells, ↑ hyaluronidase enzymes.</li>
+<li>Fertilization occurs at the ampulla of the fallopian tube → zygote.</li>
+<li>Zygote rapidly divides → morula (round mass of cells).
+        <ul class="dash-sub">
+<li>The morula reaches the uterine cavity 3 days after fertilization.</li>
+<li>Movement is aided by the cilia motility.</li>
+</ul>
+</li>
+<li>Fluid will accumulate in morula → blastocyst.
+        <ul class="dash-sub">
+<li>It remains free for 3 days in the uterine cavity.</li>
+<li>It is nourished by secretions from the endometrium.</li>
+</ul>
+</li>
+<li>The blastocyst will be divided into 2 masses:
+        <ul class="dash-sub">
+<li>Inner cell mass → embryonic mass → will form the embryo.</li>
+<li>Outer cell mass → trophoblast → responsible for nutrition.</li>
+</ul>
+</li>
+</ul>
+<!-- SOURCE IMAGE: Fertilization diagram -->
+<div class="card source-image">
+<div class="card-header">Source Image</div>
+<div class="card-img-wrap">
+<img alt="Diagram showing fertilization, cell division, morula, blastocyst and implantation" src="../../../../../extracted/assets/extracted_images/01_physiology_of_reproduction/fertilization_diagram.jpg"/>
+</div>
+<div class="card-caption">Fertilization, Cleavage, Morula, Blastocyst &amp; Implantation</div>
+<div class="card-source">Source: Provided Material — Book Obstetrics 2025-2026, Ch. 1 (p. 1)</div>
+</div>
+
+
+        <div class="mcq-block" data-subtopic="1-fertilization">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Where does fertilization normally occur?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-1-fertilization-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ampulla of the fallopian tube</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Uterine cavity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Fimbriae of the fallopian tube</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Cervical canal</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Fertilization occurs at the ampulla of the fallopian tube, forming a zygote.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="1-fertilization">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">How many days after fertilization does the morula reach the uterine cavity?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1 day</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">2 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-1-fertilization-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">3 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">5 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The morula reaches the uterine cavity 3 days after fertilization, aided by cilia motility.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="1-fertilization">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The inner cell mass of the blastocyst will form:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The placenta</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-1-fertilization-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The embryo</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">The trophoblast</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The chorion</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The inner cell mass (embryonic mass) will form the embryo, while the outer cell mass (trophoblast) provides nutrition.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="1-fertilization">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">What enzyme is released by the sperm during capacitation to aid fertilization?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Protease</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Lipase</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-1-fertilization-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Hyaluronidase</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Amylase</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The sperm head swells and increases hyaluronidase enzymes during capacitation to penetrate the ovum.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="1-fertilization">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The blastocyst remains free in the uterine cavity for how long before implantation?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1 day</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-1-fertilization-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">3 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">5 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-1-fertilization-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">7 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The blastocyst remains free for 3 days in the uterine cavity, nourished by secretions from the endometrium.</div>
+        </div>
+</section>
+<!-- ====================== IMPLANTATION ====================== -->
+<section class="section" id="2-implantation">
+<h2>2. Implantation</h2>
+<ul class="bullet-list">
+<li>This occurs on 6<sup>th</sup> – 7<sup>th</sup> days after ovulation by penetration of the trophoblast into the secretory endometrium (decidua basalis).</li>
+<li>Functions of the decidua:
+        <ul class="dash-sub">
+<li>Site of implantation &amp; nutrition of the blastocyst.</li>
+<li>Shares in formation of the placenta.</li>
+<li>Protective layer against the invasive power of trophoblast.</li>
+</ul>
+</li>
+</ul>
+
+
+        <div class="mcq-block" data-subtopic="2-implantation">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-2-implantation-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="2-implantation">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-2-implantation-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="2-implantation">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-2-implantation-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="2-implantation">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-2-implantation-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="2-implantation">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-2-implantation-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-2-implantation-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== FORMATION OF VILLI ====================== -->
+<section class="section" id="3-formation-of-the-villi">
+<h2>3. Formation of the Villi</h2>
+<ul class="bullet-list">
+<li>The trophoblast is differentiated into 2 layers →
+        <ul class="dash-sub">
+<li>Cytotrophoblast (inner).</li>
+<li>Syncytiotrophoblast (outer).</li>
+</ul>
+</li>
+<li>Trophoblast forms finger-like projections into decidua → 1° villus.</li>
+<li>Mesoderm develops in the 1° villus (CT core) → 2° villus.</li>
+<li>Vascularization of 2° villus with fetal vessels → 3° villus.</li>
+<li>There are two types of villi:
+        <ul class="dash-sub">
+<li>Anchoring villi: fixation &amp; attachment.</li>
+<li>Free villi: food &amp; nutrition (highly vascular). Functional unit (HCG → maintain CL for 10 weeks).</li>
+</ul>
+</li>
+</ul>
+<div class="callout callout-pearl">
+<div class="callout-title">Clinical Pearl</div>
+<p>The cytotrophoblast is the inner cellular layer that retains mitotic activity. The syncytiotrophoblast is the outer multinucleated layer formed by fusion of cytotrophoblast cells. It is the syncytiotrophoblast that secretes HCG, HPL, estrogen, and progesterone.</p>
+</div>
+
+
+        <div class="mcq-block" data-subtopic="3-formation-of-the-villi">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-3-formation-of-the-villi-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="3-formation-of-the-villi">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-3-formation-of-the-villi-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="3-formation-of-the-villi">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-3-formation-of-the-villi-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="3-formation-of-the-villi">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-3-formation-of-the-villi-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="3-formation-of-the-villi">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-3-formation-of-the-villi-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-3-formation-of-the-villi-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== CHORIODECIDUAL SPACES ====================== -->
+<section class="section" id="4-formation-of-choriodecidual-spaces">
+<h2>4. Formation of Choriodecidual Spaces</h2>
+<ul class="bullet-list">
+<li>The trophoblast invades the mouth of endometrial vessels → delivers maternal blood into the chorio-decidual space → <strong>1° wave of invasion</strong>.</li>
+<li>At 20 weeks, the trophoblast invades &amp; destroys the media of spiral vessels which convert into wide-mouthed sinuses → <strong>2° wave of invasion</strong>.</li>
+</ul>
+<div class="callout callout-note">
+<div class="callout-title">Note</div>
+<p>Failure of the 2° wave of trophoblastic invasion of spiral arteries is a key mechanism in pre-eclampsia and IUGR (intrauterine growth restriction).</p>
+</div>
+
+
+        <div class="mcq-block" data-subtopic="4-formation-of-choriodecidual-spaces">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="4-formation-of-choriodecidual-spaces">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="4-formation-of-choriodecidual-spaces">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="4-formation-of-choriodecidual-spaces">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="4-formation-of-choriodecidual-spaces">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-4-formation-of-choriodecidual-spaces-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== PLACENTA ====================== -->
+<section class="section" id="5-placenta">
+<h2>5. Placenta</h2>
+<h3>5.1 Structure</h3>
+<ul class="bullet-list">
+<li><strong>Shape:</strong> discoid, 500 g, 20–25 cm in diameter.</li>
+<li><strong>Thickness:</strong> 2 cm in center, gradually thins towards periphery.</li>
+<li><strong>Cord insertion:</strong> eccentric.</li>
+<li><strong>2 Surfaces:</strong>
+<ul class="dash-sub">
+<li>Fetal surface is smooth &amp; covered by membranes.</li>
+<li>Maternal surface is divided into 12–15 cotyledons.</li>
+</ul>
+</li>
+<li><strong>2 Parts:</strong>
+<ul class="dash-sub">
+<li>Fetal part → Chorion frondosum.</li>
+<li>Maternal part → Decidua basalis.</li>
+</ul>
+</li>
+</ul>
+<h3>5.2 Decidual Subdivisions</h3>
+<ul class="bullet-list">
+<li>The rest of chorion which is not sharing in placental formation → <strong>Chorion laeve</strong>.</li>
+<li>The rest of the decidua overlying the developing ovum → <strong>Decidua capsularis</strong>.</li>
+<li>The decidua covering the rest of uterine cavity → <strong>Decidua parietalis (vera)</strong>.</li>
+</ul>
+<h3>5.3 Functions of Placenta</h3>
+<h4>Gas transport, Nutrition, and Excretion</h4>
+<ul class="bullet-list">
+<li>Water &amp; electrolytes by simple diffusion.</li>
+<li>Glucose, amino acids by facilitated diffusion.</li>
+<li>Ca, Fe, minerals by active transport.</li>
+<li>Immunoglobulins &amp; LDL by pinocytosis.</li>
+</ul>
+<h4>Hormones</h4>
+<ul class="bullet-list">
+<li>HCG, HPL, estrogen and progesterone.</li>
+</ul>
+<h4>Placental Barrier</h4>
+<ul class="bullet-list">
+<li>Trophoblast, villous stroma, and fetal blood-vessel endothelium.</li>
+</ul>
+<h3>5.4 Abnormalities of Placenta</h3>
+<h4>5.4.1 Abnormal Shape</h4>
+<ol>
+<li><strong>Bipartite:</strong> two parts united by vessels &amp; membranes.</li>
+<li><strong>Bilobate:</strong> two lobes connected by placental tissue.</li>
+<li><strong>Placenta succenturiata (accessory lobe).</strong></li>
+<li><strong>Placenta circumvallate:</strong> a whitish ring composed of decidua is seen around the placenta from its fetal surface.</li>
+<li><strong>Placenta fenestrate:</strong> an opening in the placenta is present (a part of placenta is missed).</li>
+</ol>
+<!-- SOURCE IMAGE: Placenta variations -->
+<div class="card source-image">
+<div class="card-header">Source Image</div>
+<div class="card-img-wrap">
+<img alt="Placenta variations diagram showing bipartite, battledore, succenturiate, circummarginate, circumvallate and fenestrate shapes" src="../../../../../extracted/assets/extracted_images/01_physiology_of_reproduction/placenta_variations.jpg"/>
+</div>
+<div class="card-caption">Placenta Variations — Shape Abnormalities</div>
+<div class="card-source">Source: Provided Material — Book Obstetrics 2025-2026, Ch. 1 (p. 3)</div>
+</div>
+<h4>5.4.2 Abnormal Site of Implantation</h4>
+<ul class="bullet-list">
+<li>In the lower uterine segment (LUS) → <strong>placenta previa</strong>.</li>
+</ul>
+<h4>5.4.3 Abnormal Size</h4>
+<ul class="bullet-list">
+<li><strong>Small</strong> (associated with IUGR or infarcts).</li>
+<li><strong>Large (hyperplacentosis):</strong> Rh, DM, twins, syphilis.</li>
+</ul>
+<h4>5.4.4 Other Abnormalities</h4>
+<ul class="bullet-list">
+<li>Abnormal adherence → <strong>placenta accreta</strong>.</li>
+<li>Tumors of placenta → <strong>vesicular mole, choriocarcinoma, chorioangioma</strong>.</li>
+<li>Abnormal attachment of the cord.</li>
+</ul>
+
+
+        <div class="mcq-block" data-subtopic="5-placenta">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-5-placenta-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="5-placenta">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-5-placenta-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="5-placenta">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-5-placenta-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="5-placenta">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-5-placenta-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="5-placenta">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-5-placenta-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-5-placenta-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== UMBILICAL CORD ====================== -->
+<section class="section" id="6-umbilical-cord">
+<h2>6. Umbilical Cord</h2>
+<h3>6.1 Structure</h3>
+<ul class="bullet-list">
+<li><strong>Shape:</strong> 50 cm long &amp; 2 cm in diameter.</li>
+<li><strong>Contents:</strong> 2 arteries &amp; 1 vein in Wharton jelly.</li>
+</ul>
+<div class="callout callout-pearl">
+<div class="callout-title">Mnemonic — AVA</div>
+<p><strong>A</strong>rteries (×2, carry deoxygenated blood <strong>A</strong>way from fetus) and <strong>V</strong>ein (×1, brings oxygenated blood <strong>V</strong>ia to fetus). The single vein carries oxygenated blood to the fetus; two arteries carry reduced (deoxygenated) blood from the fetus to placenta.</p>
+</div>
+<h3>6.2 Abnormalities</h3>
+<h4>6.2.1 Length</h4>
+<ul class="bullet-list">
+<li><strong>Very long</strong> → coiling around fetus, cord prolapse.</li>
+<li><strong>Short cord</strong> → malpresentation &amp; non-engagement.</li>
+</ul>
+<h4>6.2.2 Abnormal Attachment</h4>
+<ul class="bullet-list">
+<li>Central, marginal (battledore), velamentous (vasa previa).</li>
+</ul>
+<h4>6.2.3 Knots in Cord</h4>
+<ul class="bullet-list">
+<li>True and false (false knot = localized collection of Wharton's jelly).</li>
+</ul>
+<h4>6.2.4 Other</h4>
+<ul class="bullet-list">
+<li>Congenital tumors or cysts.</li>
+<li>Absence of one umbilical artery → congenital fetal malformation (CFMF), intrauterine growth restriction (IUGR).</li>
+</ul>
+<div class="callout callout-warn">
+<div class="callout-title">Warning</div>
+<p>Single umbilical artery (SUA) is associated with congenital fetal malformations and IUGR — warrants detailed ultrasound assessment.</p>
+</div>
+
+
+        <div class="mcq-block" data-subtopic="6-umbilical-cord">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-6-umbilical-cord-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="6-umbilical-cord">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-6-umbilical-cord-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="6-umbilical-cord">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-6-umbilical-cord-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="6-umbilical-cord">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-6-umbilical-cord-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="6-umbilical-cord">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-6-umbilical-cord-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-6-umbilical-cord-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== AMNIOTIC FLUID ====================== -->
+<section class="section" id="7-amniotic-fluid">
+<h2>7. Amniotic Fluid</h2>
+<h3>7.1 Source of Amniotic Fluid</h3>
+<ul class="bullet-list">
+<li><strong>Maternal:</strong> transudation through placenta &amp; cord (mainly 1st half of pregnancy).</li>
+<li><strong>Fetal:</strong> urine (mainly in the 2nd half of pregnancy).</li>
+<li>Then it is removed by transudation + fetal swallowing — a dynamic circulation.</li>
+<li>Balance between production &amp; absorption keeps its volume at normal range.</li>
+</ul>
+<h3>7.2 Volume by Gestational Age</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Gestational Age</th>
+<th>Volume (mL)</th>
+<th>Gestational Age</th>
+<th>Volume (mL)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>6 weeks</td><td>5 mL</td><td>10 weeks</td><td>30 mL</td></tr>
+<tr><td>20 weeks</td><td>300 mL</td><td>30 weeks</td><td>600 mL</td></tr>
+<tr><td>36 weeks</td><td>1000 mL</td><td>38–40 weeks</td><td>800 mL</td></tr>
+</tbody>
+</table>
+</div>
+<h3>7.3 Composition</h3>
+<ul class="bullet-list">
+<li>98% clear water.</li>
+<li>1–2% crystalloids (slightly alkaline), enzymes, lipids, hormones, and proteins.</li>
+</ul>
+<h3>7.4 Functions of Amniotic Fluid</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>During Pregnancy</th>
+<th>During Labor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<ul class="bullet-list">
+<li>Protection against trauma.</li>
+<li>Prevents adhesions between fetal skin &amp; amnion.</li>
+<li>Prevents infection.</li>
+<li>Thermoregulation.</li>
+<li>Allows free movement of fetus → muscular development.</li>
+<li>Development of alveoli.</li>
+</ul>
+</td>
+<td>
+<ul class="bullet-list">
+<li>Helps cervical dilatation.</li>
+<li>Prevents direct fetal &amp; placental compression by the uterine wall.</li>
+<li>Wash of birth canal.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>7.5 Abnormalities</h3>
+<ul class="bullet-list">
+<li><strong>Volume:</strong> ↑ → polyhydramnios; ↓ → oligohydramnios.</li>
+<li><strong>Meconium staining</strong> → meconium aspiration syndrome.</li>
+<li><strong>Inflammation</strong> → chorioamnionitis.</li>
+</ul>
+
+
+        <div class="mcq-block" data-subtopic="7-amniotic-fluid">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-7-amniotic-fluid-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="7-amniotic-fluid">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-7-amniotic-fluid-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="7-amniotic-fluid">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-7-amniotic-fluid-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="7-amniotic-fluid">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-7-amniotic-fluid-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="7-amniotic-fluid">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-7-amniotic-fluid-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-7-amniotic-fluid-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== HORMONES ====================== -->
+<section class="section" id="8-hormones">
+<h2>8. Hormones</h2>
+<h3>8.1 Proteins (Glycoproteins)</h3>
+<h4>8.1.1 Human Chorionic Gonadotrophin (HCG)</h4>
+<ul class="bullet-list">
+<li><strong>Source:</strong> syncytiotrophoblast.</li>
+<li>Can be detected one week before the missed period.</li>
+<li>It is composed of 2 subunits:
+        <ul class="dash-sub">
+<li>α subunit — similar to that of FSH, LH and TSH.</li>
+<li>β subunit — specific to hCG.</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maintenance of corpus luteum (luteotropic).</td>
+<td>Diagnosis of pregnancy.</td>
+</tr>
+<tr>
+<td>Immunological suppressive action.</td>
+<td>Diagnoses of pregnancy abnormalities (↑ in Down syndrome).</td>
+</tr>
+<tr>
+<td>Stimulates fetal testosterone secretion.</td>
+<td>Diagnoses and follow-up of vesicular mole.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4>8.1.2 Human Placental Lactogen (HPL)</h4>
+<ul class="bullet-list">
+<li><strong>Source:</strong> syncytiotrophoblast.</li>
+<li><strong>Functions:</strong>
+<ul class="dash-sub">
+<li>Very similar to GH &amp; prolactin → may stimulate growth of breasts.</li>
+<li>On CHO &amp; fat (anti-insulin effect) → spares glucose &amp; fatty acids for the fetus.</li>
+</ul>
+</li>
+</ul>
+<h3>8.2 Steroid Hormones</h3>
+<h4>8.2.1 Estrogen</h4>
+<ul class="bullet-list">
+<li>Estrogens are formed by the conversion of DHEAS (dehydroepiandrosterone) from maternal and fetal sources (adrenal gland mainly) to estradiol (E2) and estriol (E3).</li>
+<li>It is responsible with progesterone for most of the maternal changes due to pregnancy, especially in the genital tract and breasts.</li>
+</ul>
+<h4>8.2.2 Progesterone</h4>
+<ul class="bullet-list">
+<li>Synthetized by syncytiotrophoblast from maternal cholesterol.</li>
+<li>Provides a precursor for the fetal adrenal to produce glucocorticoids and mineralocorticoids.</li>
+</ul>
+
+
+        <div class="mcq-block" data-subtopic="8-hormones">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-8-hormones-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="8-hormones">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-8-hormones-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="8-hormones">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-8-hormones-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="8-hormones">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-8-hormones-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="8-hormones">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-8-hormones-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-8-hormones-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- ====================== STUDENT ACTIVITY ====================== -->
+<section class="section" id="9-student-activity">
+<h2>9. Student Activity</h2>
+<p>Each student should bring five pictures representing five anatomical abnormalities of the placenta, then provide them online at a website determined by the lecturer of this chapter.</p>
+</section>
+<!-- ====================== QUESTIONS ====================== -->
+<section class="section" id="10-questions">
+<h2>10. Questions</h2>
+<p>Practice questions for this chapter are available at the following link:</p>
+<p>🔗 <a href="https://forms.gle/Z9ymeNgWJ8ZPjHNu9" rel="noopener noreferrer" target="_blank">https://forms.gle/Z9ymeNgWJ8ZPjHNu9</a></p>
+</section>
+<!-- ====================== REFERENCES ====================== -->
+<details class="study-section"><summary>References &amp; Visual Sources</summary><section class="references">
+<h2>References &amp; Visual Sources</h2>
+<p>The following sources were used in the preparation of this infographic. Every external image, diagram, and website consulted is cited below.</p>
+<ul>
+<li><strong>Primary source material:</strong> Book Obstetrics 2025-2026, Chapter 1 — <em>Physiology of Reproduction</em> (7 pages).</li>
+<li><strong>Source image 1 — Fertilization, Cleavage, Morula, Blastocyst &amp; Implantation diagram:</strong> Provided Material — Book Obstetrics 2025-2026, Ch. 1 (p. 1).</li>
+<li><strong>Source image 2 — Placenta Variations diagram:</strong> Provided Material — Book Obstetrics 2025-2026, Ch. 1 (p. 3).</li>
+<li><strong>Source image 3 (withheld):</strong> Chorionic villi development illustration contained in the source PDF carried a third-party stock-photography watermark; it has been deliberately omitted to comply with the rule against watermarked images. All educational content it conveyed (1°, 2°, 3° villi; anchoring vs. free villi) is preserved in the textual sections above.</li>
+<li><strong>External resource (questions / online quiz):</strong> Google Forms — <a href="https://forms.gle/Z9ymeNgWJ8ZPjHNu9" rel="noopener noreferrer" target="_blank">https://forms.gle/Z9ymeNgWJ8ZPjHNu9</a></li>
+</ul>
+</section></details>
+<div class="footer-note">
+    Generated as Topic 01 of the Sequential Infographic Generation System. All source content has been preserved verbatim; no information was summarized, compressed, or omitted.
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script><!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

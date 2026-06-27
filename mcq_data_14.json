@@ -1,0 +1,117 @@
+{
+  "s2": [
+    {
+      "q": "Gestational diabetes mellitus (GDM) is defined as:",
+      "options": [
+        "Pre-existing diabetes diagnosed before pregnancy",
+        "Carbohydrate intolerance of variable severity with onset during pregnancy",
+        "Type 1 diabetes diagnosed during pregnancy",
+        "Diabetes only during labor"
+      ],
+      "correct": 1,
+      "explain": "GDM is carbohydrate intolerance of variable severity with onset or first recognition during pregnancy."
+    }
+  ],
+  "s3": [
+    {
+      "q": "White's classification of diabetes in pregnancy includes all EXCEPT:",
+      "options": [
+        "Class A (GDM)",
+        "Class B (onset age >20, duration <10 years)",
+        "Class R (proliferative retinopathy)",
+        "Class O (obesity-related)"
+      ],
+      "correct": 3,
+      "explain": "White's classification includes A (GDM), B (onset >20, duration <10 yrs), C (onset 10-19, duration 10-19 yrs), D (>20 yrs duration), F (nephropathy), R (retinopathy), H (heart disease)."
+    }
+  ],
+  "s4": [
+    {
+      "q": "During pregnancy, the physiologic change that increases risk for GDM is:",
+      "options": [
+        "Increased insulin sensitivity",
+        "Increased insulin resistance from placental hormones (hPL, cortisol)",
+        "Decreased glucose production",
+        "Increased glucose excretion"
+      ],
+      "correct": 1,
+      "explain": "Placental hormones (hPL, estrogen, progesterone, cortisol) cause increasing insulin resistance as pregnancy advances."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Effects of diabetes on pregnancy include all EXCEPT:",
+      "options": [
+        "Macrosomia",
+        "Congenital anomalies",
+        "Intrauterine growth restriction",
+        "Polyhydramnios"
+      ],
+      "correct": 2,
+      "explain": "DM in pregnancy is associated with macrosomia (not IUGR), polyhydramnios, congenital anomalies, and preeclampsia."
+    },
+    {
+      "q": "A classic congenital anomaly associated with pregestational DM is:",
+      "options": [
+        "Anencephaly",
+        "Sacral agenesis",
+        "Cleft palate",
+        "Club foot"
+      ],
+      "correct": 1,
+      "explain": "Sacral agenesis (caudal regression syndrome) is a classic anomaly associated with pregestational diabetes."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Risk factors for GDM include all EXCEPT:",
+      "options": [
+        "Maternal age >35",
+        "Previous GDM",
+        "First-trimester weight loss",
+        "Family history of DM"
+      ],
+      "correct": 2,
+      "explain": "Risk factors: age >35, obesity, previous GDM, family history of DM, and high-risk ethnicity."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Screening for GDM is performed with:",
+      "options": [
+        "Fasting blood glucose at booking",
+        "Glucose challenge test (GCT) at 24-28 weeks",
+        "HbA1c at 12 weeks",
+        "Random blood glucose"
+      ],
+      "correct": 1,
+      "explain": "Universal screening with GCT (50g glucose, 1-hour plasma glucose) at 24-28 weeks. Abnormal result is followed by diagnostic GTT."
+    }
+  ],
+  "s9": [
+    {
+      "q": "First-line treatment for gestational diabetes is:",
+      "options": [
+        "Insulin",
+        "Metformin",
+        "Medical nutrition therapy and lifestyle modification",
+        "Sulfonylureas"
+      ],
+      "correct": 2,
+      "explain": "MNT and lifestyle modification with blood glucose monitoring is first-line. Insulin is added if glycemic targets are not met."
+    }
+  ],
+  "s12": [
+    {
+      "q": "Postpartum management of GDM includes:",
+      "options": [
+        "Start insulin immediately",
+        "OGTT at 6-12 weeks postpartum and lifestyle counseling",
+        "Continue GDM diet indefinitely",
+        "No follow-up needed"
+      ],
+      "correct": 1,
+      "explain": "OGTT should be performed at 6-12 weeks postpartum to reclassify glucose tolerance, with lifestyle modification and surveillance."
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "s2": [
+    {
+      "q": "Intrauterine Fetal Death (IUFD) is defined as fetal death in-utero after:",
+      "options": [
+        "16 weeks of pregnancy or fetus weight > 350 gm",
+        "20 weeks of pregnancy or fetus weight > 500 gm",
+        "24 weeks of pregnancy or fetus weight > 600 gm",
+        "28 weeks of pregnancy or fetus weight > 1000 gm"
+      ],
+      "correct": 1,
+      "explain": "IUFD is death of the fetus in-utero after 20 weeks of pregnancy or if the fetus weight is > 500 gm."
+    },
+    {
+      "q": "The weight threshold defining IUFD is:",
+      "options": [
+        "> 350 gm",
+        "> 500 gm",
+        "> 750 gm",
+        "> 1000 gm"
+      ],
+      "correct": 1,
+      "explain": "IUFD is defined when the fetus weight is > 500 gm (in addition to gestational age > 20 weeks)."
+    },
+    {
+      "q": "Fetal death occurring before 20 weeks is classified as:",
+      "options": [
+        "IUFD",
+        "Miscarriage or spontaneous abortion",
+        "Stillbirth",
+        "Neonatal death"
+      ],
+      "correct": 1,
+      "explain": "Fetal death before 20 weeks is classified as miscarriage or spontaneous abortion. IUFD specifically refers to death after 20 weeks or > 500 gm."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is a maternal cause of IUFD?",
+      "options": [
+        "Cord accident",
+        "IUGR",
+        "Antiphospholipid syndrome",
+        "Congenital abnormality"
+      ],
+      "correct": 2,
+      "explain": "Maternal causes include diabetes, SLE, antiphospholipid syndrome, infection, hypertension, preeclampsia, eclampsia, uterine rupture, maternal trauma/death, and thrombophilias."
+    },
+    {
+      "q": "Fetal causes of IUFD include all EXCEPT:",
+      "options": [
+        "Intrauterine growth restriction",
+        "Congenital abnormality",
+        "Cord accident",
+        "Hydrops"
+      ],
+      "correct": 2,
+      "explain": "Fetal causes include IUGR, congenital abnormality, genetic abnormality, infection (Parvovirus B19, CMV, Listeria), and hydrops. Cord accident is a placental cause."
+    },
+    {
+      "q": "Which infection is associated with IUFD?",
+      "options": [
+        "Group B Streptococcus",
+        "Parvovirus B19",
+        "Candida albicans",
+        "Staphylococcus aureus"
+      ],
+      "correct": 1,
+      "explain": "Fetal infections associated with IUFD include Parvovirus B19, CMV, and Listeria."
+    },
+    {
+      "q": "Placental causes of IUFD include:",
+      "options": [
+        "Diabetes and hypertension",
+        "Cord accident, abruption, vasa previa, and placental insufficiency",
+        "SLE and antiphospholipid syndrome",
+        "Uterine rupture and maternal trauma"
+      ],
+      "correct": 1,
+      "explain": "Placental causes include cord accident, abruption, PROM, vasa previa, feto-maternal hemorrhage, and placental insufficiency."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which of the following is a symptom of IUFD?",
+      "options": [
+        "Increased fetal movements",
+        "Cessation of fetal movements",
+        "Polyhydramnios",
+        "Maternal weight gain"
+      ],
+      "correct": 1,
+      "explain": "Symptoms of IUFD include history of the cause, gradual disappearance of pregnancy symptoms, breast milk secretion, failure of abdominal enlargement, and cessation of fetal movements."
+    },
+    {
+      "q": "A key sign of IUFD on examination is:",
+      "options": [
+        "Uterus larger than expected for dates",
+        "Uterus smaller than the period of amenorrhea",
+        "Easily palpable fetal parts",
+        "Fetal heart rate > 160 bpm"
+      ],
+      "correct": 1,
+      "explain": "Signs of IUFD include uterus smaller than the period of amenorrhea, difficult palpation of fetal parts (due to absent muscle tone), and inaudible FHS by Doppler."
+    },
+    {
+      "q": "In IUFD, fetal parts are difficult to palpate because of:",
+      "options": [
+        "Polyhydramnios",
+        "Absent fetal muscle tone",
+        "Maternal obesity",
+        "Uterine hypertonicity"
+      ],
+      "correct": 1,
+      "explain": "Difficult palpation of fetal parts is due to absent muscle tone after fetal death."
+    },
+    {
+      "q": "Which clinical finding is most suggestive of this diagnosis?",
+      "options": [
+        "Pain and bleeding",
+        "Asymptomatic presentation",
+        "Abnormal laboratory values",
+        "Varies by condition — specific findings guide diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation differs by condition and guides diagnostic testing."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Spalding sign on X-ray in IUFD refers to:",
+      "options": [
+        "Gas in fetal large vessels",
+        "Hyperflexion of fetal spine",
+        "Overlapping of fetal skull bones due to shrinkage of cerebrum",
+        "Absence of fetal subcutaneous tissue"
+      ],
+      "correct": 2,
+      "explain": "Spalding sign is overlapping of fetal skull bones due to shrinkage of cerebrum after fetal death."
+    },
+    {
+      "q": "Robert sign on X-ray in IUFD refers to:",
+      "options": [
+        "Overlapping of fetal skull bones",
+        "Presence of gas in fetal large vessels",
+        "Hyperflexion of fetal spine",
+        "Collapse of fetal thoracic cage"
+      ],
+      "correct": 1,
+      "explain": "Robert sign is the presence of gas in fetal large vessels."
+    },
+    {
+      "q": "Ball sign on X-ray in IUFD refers to:",
+      "options": [
+        "Overlapping of fetal skull bones",
+        "Gas in fetal large vessels",
+        "Hyperflexion of fetal spine",
+        "Ballooning of fetal abdomen"
+      ],
+      "correct": 2,
+      "explain": "Ball sign is hyperflexion of fetal spine. The mnemonic SRB helps recall: Spalding (skull overlap), Robert (gas), Ball (spine)."
+    },
+    {
+      "q": "The first-line investigation is:",
+      "options": [
+        "Ultrasound",
+        "Complete blood count",
+        "Urine analysis",
+        "Depends on the clinical suspicion"
+      ],
+      "correct": 3,
+      "explain": "Choice of investigation depends on the suspected condition."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "After how many weeks of fetal death does the risk of maternal DIC and hypofibrinogenemia rise sharply?",
+      "options": [
+        "1 week",
+        "2 weeks",
+        "3 weeks",
+        "4 weeks"
+      ],
+      "correct": 2,
+      "explain": "Once fetal death has persisted for > 3 weeks, the risk of maternal DIC and hypofibrinogenemia rises sharply."
+    },
+    {
+      "q": "Complications of IUFD include all EXCEPT:",
+      "options": [
+        "Intrauterine infection",
+        "DIC and hypofibrinogenemia",
+        "Pulmonary hypoplasia",
+        "Maternal coagulopathy"
+      ],
+      "correct": 2,
+      "explain": "Complications of IUFD include intrauterine infection and DIC/hypofibrinogenemia (after 3 weeks). Pulmonary hypoplasia is a complication of PROM."
+    },
+    {
+      "q": "Why is DIC a concern in prolonged IUFD?",
+      "options": [
+        "The dead fetus releases thromboplastin into maternal circulation",
+        "The placenta stops producing clotting factors",
+        "Maternal liver failure occurs",
+        "Fetal bone marrow releases thrombogenic substances"
+      ],
+      "correct": 0,
+      "explain": "DIC occurs because the retained dead fetus releases thromboplastin into the maternal circulation, triggering disseminated intravascular coagulation. This is why delivery is usually offered."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The first principle in management of IUFD is:",
+      "options": [
+        "Expectant management for 4 weeks",
+        "Termination of pregnancy should be offered after diagnosis",
+        "Immediate cesarean section",
+        "Administration of corticosteroids"
+      ],
+      "correct": 1,
+      "explain": "The first principle is that termination of pregnancy should be offered after diagnosis."
+    },
+    {
+      "q": "Induction of labor for IUFD is accomplished with:",
+      "options": [
+        "Tocolysis followed by observation",
+        "Preinduction cervical ripening followed by IV oxytocin",
+        "Immediate cesarean section",
+        "Manual vacuum extraction"
+      ],
+      "correct": 1,
+      "explain": "Induction of labor can be accomplished with preinduction cervical ripening followed by intravenous oxytocin."
+    },
+    {
+      "q": "If induction of labor fails in IUFD management, what is the next step?",
+      "options": [
+        "Repeat induction after 24 hours",
+        "Cesarean section",
+        "Continue expectant management",
+        "Administer prostaglandin analogues"
+      ],
+      "correct": 1,
+      "explain": "If induction fails, cesarean section is done."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

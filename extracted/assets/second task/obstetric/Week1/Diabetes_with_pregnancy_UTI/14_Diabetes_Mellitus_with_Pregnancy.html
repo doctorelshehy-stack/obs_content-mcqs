@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Diabetes Mellitus with Pregnancy — Infographic</title>
+<style>
+:root{
+  --navy:#0b2545;
+  --teal:#0e7c7b;
+  --blue:#1e88e5;
+  --yellow:#f4b400;
+  --red:#c0392b;
+  --green:#1b5e20;
+  --orange:#e67e22;
+  --purple:#8e44ad;
+  --gray-50:#fafbfc;
+  --gray-100:#f1f3f5;
+  --gray-200:#e4e7eb;
+  --gray-700:#495057;
+  --gray-900:#212529;
+  --shadow:0 2px 6px rgba(0,0,0,.08);
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--gray-50);
+  color:var(--gray-900);
+  line-height:1.6;
+  font-size:15px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 60%,var(--blue) 100%);
+  color:#fff;
+  padding:48px 0 36px;
+  text-align:center;
+  border-bottom:6px solid var(--yellow);
+}
+header.hero .eyebrow{
+  display:inline-block;
+  background:rgba(255,255,255,.15);
+  padding:4px 14px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+header.hero h1{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:-.5px;
+  margin-bottom:10px;
+  line-height:1.15;
+}
+header.hero .sub{
+  font-size:17px;
+  color:#d6f0ef;
+  max-width:880px;
+  margin:0 auto 8px;
+}
+header.hero .meta{
+  font-size:13px;
+  color:#b3d9d8;
+  margin-top:8px;
+}
+nav.toc{
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:22px 26px;
+  margin:30px 0;
+  box-shadow:var(--shadow);
+}
+nav.toc h2{
+  font-size:18px;
+  color:var(--navy);
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+nav.toc h2::before{content:"📑"}
+nav.toc ol{
+  columns:2;
+  column-gap:30px;
+  margin-left:0;
+  padding-left:24px;
+}
+nav.toc ol li{
+  margin-bottom:5px;
+  font-size:13px;
+  color:var(--gray-700);
+  break-inside:avoid;
+}
+nav.toc ol li a{color:var(--teal);text-decoration:none}
+nav.toc ol li a:hover{text-decoration:underline}
+section{
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:28px 30px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow);
+  scroll-margin-top:20px;
+}
+section h2{
+  font-size:24px;
+  color:var(--navy);
+  border-bottom:3px solid var(--teal);
+  padding-bottom:10px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+section h2 .num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;height:36px;
+  background:var(--teal);
+  color:#fff;
+  border-radius:50%;
+  font-size:15px;
+  font-weight:700;
+  flex-shrink:0;
+}
+section h3{
+  font-size:17px;
+  color:var(--teal);
+  margin:16px 0 8px;
+  padding-left:12px;
+  border-left:4px solid var(--yellow);
+}
+section p{margin-bottom:8px}
+section ul,section ol{margin:6px 0 12px 24px}
+section ul li,section ol li{margin-bottom:4px}
+section .lead{
+  font-size:15px;
+  color:var(--gray-700);
+  background:var(--gray-100);
+  border-left:4px solid var(--teal);
+  padding:10px 14px;
+  border-radius:6px;
+  margin-bottom:12px;
+}
+.callout{
+  border-left:5px solid var(--yellow);
+  background:#fff8e1;
+  padding:10px 14px;
+  border-radius:6px;
+  margin:12px 0;
+  font-size:14px;
+}
+.callout.pearl{border-left-color:#0e7c7b;background:#e0f2f1}
+.callout.warn{border-left-color:#f4b400;background:#fff8e1}
+.callout.danger{border-left-color:#c0392b;background:#ffebee}
+.callout.cyan{border-left-color:var(--blue);background:#e3f2fd}
+.callout.purple{border-left-color:var(--purple);background:#f4ecf7}
+.callout.green{border-left-color:var(--green);background:#e8f5e9}
+.callout strong{color:var(--navy)}
+.callout .label{
+  display:inline-block;
+  font-size:10px;
+  letter-spacing:1px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin-right:6px;
+  padding:1px 6px;
+  border-radius:3px;
+  background:rgba(0,0,0,.08);
+}
+.defn-card{
+  border:2px solid var(--teal);
+  background:#e0f2f1;
+  border-radius:var(--radius);
+  padding:14px 16px;
+  margin:10px 0;
+}
+.defn-card h4{color:var(--teal);margin:0 0 6px;font-size:15px}
+.defn-card p{margin:0;font-size:14.5px}
+.class-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+.class-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+}
+.class-card.a{border-color:var(--red);background:#ffebee}
+.class-card.a h4{color:var(--red)}
+.class-card.b{border-color:var(--blue);background:#e3f2fd}
+.class-card.b h4{color:var(--blue)}
+.class-card h4{margin:0 0 6px;font-size:14px}
+.class-card .sub{font-size:12.5px;color:var(--gray-700);margin:0 0 4px}
+.class-card ul{font-size:13px;margin:4px 0 0 18px}
+.twin-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:10px;
+}
+.risk-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+}
+.risk-card.fetal{border-color:var(--purple);background:#f4ecf7}
+.risk-card.fetal h4{color:var(--purple)}
+.risk-card.maternal{border-color:var(--red);background:#ffebee}
+.risk-card.maternal h4{color:var(--red)}
+.risk-card h4{margin:0 0 6px;font-size:14px}
+.risk-card ul{font-size:13px;margin:4px 0 0 18px}
+.risk-card ul li{margin-bottom:2px}
+.rx-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+.rx-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+}
+.rx-card.a1{border-color:var(--green);background:#e8f5e9}
+.rx-card.a1 h4{color:var(--green)}
+.rx-card.a2{border-color:var(--orange);background:#fdf2e9}
+.rx-card.a2 h4{color:var(--orange)}
+.rx-card h4{margin:0 0 6px;font-size:14px}
+.rx-card .doses{font-size:13px;margin:4px 0 0 18px}
+.rx-card .doses li{margin-bottom:2px}
+.rx-card p{font-size:13.5px;margin:4px 0}
+.lab-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+  font-size:14px;
+}
+.lab-table th{
+  background:var(--navy);
+  color:#fff;
+  padding:9px 12px;
+  text-align:left;
+  font-weight:600;
+  border:1px solid var(--navy);
+}
+.lab-table td{
+  border:1px solid var(--gray-200);
+  padding:8px 12px;
+  vertical-align:top;
+}
+.lab-table tr:nth-child(even) td{background:var(--gray-100)}
+.lab-table .b{font-weight:700;color:var(--teal)}
+.lab-table .ct{font-style:italic;font-size:12.5px;color:var(--gray-700)}
+.gdm-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+  font-size:14px;
+}
+.gdm-table th{
+  background:var(--teal);
+  color:#fff;
+  padding:9px 12px;
+  text-align:center;
+  font-weight:600;
+  border:1px solid var(--teal);
+}
+.gdm-table td{
+  border:1px solid var(--gray-200);
+  padding:8px 12px;
+  text-align:center;
+}
+.gdm-table tr:nth-child(even) td{background:var(--gray-100)}
+.timing-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+  font-size:14px;
+}
+.timing-table th{
+  background:var(--teal);
+  color:#fff;
+  padding:9px 12px;
+  text-align:left;
+  font-weight:600;
+  border:1px solid var(--teal);
+}
+.timing-table td{
+  border:1px solid var(--gray-200);
+  padding:8px 12px;
+  vertical-align:top;
+}
+.timing-table tr:nth-child(even) td{background:var(--gray-100)}
+.timing-table .ok{border-left:4px solid var(--green)}
+.timing-table .caution{border-left:4px solid var(--red)}
+.insulin-doses{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+.insulin-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+  text-align:center;
+}
+.insulin-card.t1{border-color:var(--blue);background:#e3f2fd}
+.insulin-card.t1 h4{color:var(--blue)}
+.insulin-card.t2{border-color:var(--teal);background:#e0f2f1}
+.insulin-card.t2 h4{color:var(--teal)}
+.insulin-card.t3{border-color:var(--orange);background:#fdf2e9}
+.insulin-card.t3 h4{color:var(--orange)}
+.insulin-card h4{margin:0 0 4px;font-size:13.5px}
+.insulin-card .big{font-size:22px;font-weight:800;color:var(--navy);margin:4px 0}
+.insulin-card p{font-size:12.5px;margin:0;color:var(--gray-700)}
+.morning-dose{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:8px;
+}
+.morning-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:10px 12px;
+  background:var(--gray-50);
+}
+.morning-card.bk{border-color:var(--yellow);background:#fff8e1}
+.morning-card.bk h5{color:#b8860b}
+.morning-card.dn{border-color:var(--purple);background:#f4ecf7}
+.morning-card.dn h5{color:var(--purple)}
+.morning-card h5{margin:0 0 4px;font-size:13.5px}
+.morning-card p{font-size:13px;margin:0}
+.activity-card{
+  background:linear-gradient(135deg,#fff8e1 0%,#fff3cd 100%);
+  border:2px solid var(--yellow);
+  border-radius:var(--radius);
+  padding:18px 22px;
+  margin-top:10px;
+}
+.activity-card h3{
+  color:#b8860b;
+  margin:0 0 8px;
+  border:none;
+  padding:0;
+  font-size:17px;
+}
+.activity-card p{margin:0;font-size:14px}
+.quiz-card{
+  background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);
+  border:2px solid var(--blue);
+  border-radius:var(--radius);
+  padding:18px 22px;
+  margin-top:12px;
+  text-align:center;
+}
+.quiz-card h3{
+  color:var(--navy);
+  margin:0 0 8px;
+  border:none;
+  padding:0;
+  font-size:18px;
+}
+.quiz-card a{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:8px 18px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  margin-top:6px;
+}
+.quiz-card a:hover{background:#1565c0}
+.refs{
+  font-size:14px;
+  background:var(--gray-100);
+  padding:16px 20px;
+  border-radius:6px;
+  border-left:4px solid var(--gray-700);
+}
+.refs h3{margin-top:0}
+.refs ol{margin-left:24px}
+.refs li{margin-bottom:5px}
+.refs a{color:var(--blue);text-decoration:none;word-break:break-all}
+.refs a:hover{text-decoration:underline}
+footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:12px;
+  color:var(--gray-700);
+  border-top:1px solid var(--gray-200);
+  margin-top:30px;
+  background:#fff;
+}
+footer .paths{font-family:monospace;font-size:11px;color:var(--teal);margin-top:8px}
+@media (max-width:760px){
+  .class-grid,.twin-grid,.rx-grid,.insulin-doses,.morning-dose{grid-template-columns:1fr}
+  nav.toc ol{columns:1}
+  header.hero h1{font-size:30px}
+}
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Obstetrics · Chapter 14</span>
+    <h1>Diabetes Mellitus with Pregnancy</h1>
+    <p class="sub">A carbohydrate-metabolism disorder in which pregnancy and diabetes interact in both directions — the disease threatens the fetus (macrosomia, anomalies, IUFD, neonatal hypoglycemia) and pregnancy modifies the disease (insulin requirements rise, microangiopathy worsens, ketoacidosis can occur at lower glucose levels).</p>
+    <p class="meta">Premium Medical-Reference Infographic · Source: <em>Book Obstetrics 2025-2026-014</em></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1">ILOs of this chapter</a></li>
+    <li><a href="#s2">Definition &amp; Incidence</a></li>
+    <li><a href="#s3">Classification</a></li>
+    <li><a href="#s4">Physiologic Changes During Pregnancy</a></li>
+    <li><a href="#s5">Effect of Pregnancy on DM</a></li>
+    <li><a href="#s6">Effects of DM on Pregnancy — Fetal &amp; Maternal Risks</a></li>
+    <li><a href="#s7">Risk Factors for GDM</a></li>
+    <li><a href="#s8">Screening &amp; Diagnosis — GCT &amp; GTT</a></li>
+    <li><a href="#s9">Management of Gestational DM</a></li>
+    <li><a href="#s10">Management of Pregestational DM (HbA1C + Insulin Regimen)</a></li>
+    <li><a href="#s11">Management of Labor &amp; Delivery</a></li>
+    <li><a href="#s12">Postpartum Care, Breastfeeding &amp; Contraception</a></li>
+    <li><a href="#s13">Student Activity &amp; References</a></li>
+  </ol>
+</nav>
+
+<!-- ========== 1. ILOs ========== -->
+<section id="s1">
+  <h2><span class="num">1</span>ILOs of this chapter</h2>
+  <p class="lead">By the end of this chapter the student should be able to:</p>
+  <ul>
+    <li>To understand the effect of diabetes on pregnancy and vice versa</li>
+    <li>To be able to describe how to screen for diabetes mellitus in pregnancy</li>
+    <li>To be able to explain the management of diabetic pregnant woman</li>
+  </ul>
+</section>
+
+<!-- ========== 2. Definition & Incidence ========== -->
+<section id="s2">
+  <h2><span class="num">2</span>Definition &amp; Incidence</h2>
+  <div class="defn-card">
+    <h4>Definition</h4>
+    <p>A disorder in the carbohydrate metabolism characterized by hyperglycemia and glucosuria.</p>
+  </div>
+  <h3>Incidence</h3>
+  <ul>
+    <li><strong>3–5 %</strong> of pregnancies are associated with <strong>gestational diabetes.</strong></li>
+    <li><strong>0.5–1 %</strong> are complicated by <strong>pregestational diabetes.</strong></li>
+  </ul>
+  <div class="callout pearl"><span class="label">Pearl</span>Gestational diabetes is roughly <strong>5–10× more common</strong> than pregestational diabetes, because the placenta is a strong insulin-resistant organ in the second half of pregnancy — any woman with even subtle pre-existing β-cell dysfunction will be unmasked.</div>
+</section>
+
+<!-- ========== 3. Classification ========== -->
+<section id="s3">
+  <h2><span class="num">3</span>Classification</h2>
+  <div class="class-grid">
+    <div class="class-card a">
+      <h4>[A] Pregestational diabetes</h4>
+      <p class="sub">Diabetes that exists <em>before</em> pregnancy.</p>
+      <ul>
+        <li><strong>Type 1</strong> → Juvenile onset (autoimmune).</li>
+        <li><strong>Type 2</strong> → Adult onset (insulin resistance).</li>
+      </ul>
+    </div>
+    <div class="class-card b">
+      <h4>[B] Gestational diabetes</h4>
+      <p class="sub">First diagnosed in pregnancy.</p>
+      <ul>
+        <li><strong>Definition:</strong> Carbohydrate intolerance of variable severity first diagnosed during pregnancy.</li>
+        <li><strong>Classic GDM</strong> diagnosed at <strong>24–28 weeks.</strong></li>
+        <li><strong>GDM diagnosed before 24 weeks</strong> → probably undiagnosed type 2 DM and is managed as pregestational diabetes.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout cyan"><span class="label">Note</span>Any GDM diagnosed before the 24-week threshold is <strong>reclassified as pregestational</strong> because the placental insulin-resistant hormones have not yet had time to drive the hyperglycemia — so the disease must have pre-existed.</div>
+</section>
+
+<!-- ========== 4. Physiologic Changes ========== -->
+<section id="s4">
+  <h2><span class="num">4</span>Physiologic Changes During Pregnancy</h2>
+  <ul>
+    <li>Hyperplasia of the pancreatic islet cells which leads to a <strong>doubling in insulin production</strong> between the first and the third trimesters.</li>
+    <li>Initial increase in insulin sensitivity during first trimester.</li>
+    <li>Progressive glucose intolerance with advanced gestation due to release of <strong>insulin-resistant hormones (HPL, glucagon, progesterone and corticotrophin releasing hormone)</strong> from the placenta.</li>
+    <li>Increased glucose uptake of the fetus and increased peripheral uptake.</li>
+    <li>Increased glycogenesis and reduced hepatic gluconeogenesis.</li>
+    <li>Reduced renal tubular threshold for glucose → <strong>glucosuria.</strong></li>
+    <li>Overall, <strong>fasting glucose levels fall by 10–20 %,</strong> and postprandial levels are higher.</li>
+  </ul>
+  <div class="callout cyan"><span class="label">Pearl</span>The placenta is the <strong>main driver of pregnancy-induced insulin resistance</strong> via human placental lactogen (HPL) — HPL acts as a "counter-insulin" hormone to shunt glucose preferentially to the fetus. The clinical implication: <strong>insulin requirements rise through pregnancy</strong> and the diabetic woman's doses must be titrated upward.</div>
+</section>
+
+<!-- ========== 5. Effect of Pregnancy on DM ========== -->
+<section id="s5">
+  <h2><span class="num">5</span>Effect of Pregnancy on Diabetes Mellitus</h2>
+  <ul>
+    <li>The disease <strong>may appear for the first time during pregnancy.</strong></li>
+    <li>The insulin requirements gradually <strong>increase after the 3rd month until term</strong> and ketoacidosis can occur with lower levels of blood glucose.</li>
+    <li><strong>Aggravation of diabetic microangiopathy</strong> (nephropathy, retinopathy &amp; neuropathy).</li>
+    <li>During delivery, there is liability to <strong>hypoglycemia</strong> because of uterine activity.</li>
+    <li>After delivery, insulin requirement <strong>decreases due to drop in the placental hormones.</strong></li>
+  </ul>
+  <div class="callout danger"><span class="label">Danger</span>Diabetic ketoacidosis (DKA) in pregnancy can occur at <strong>lower blood glucose levels than in non-pregnant patients</strong> (sometimes &lt; 200 mg/dL) because of the accelerated starvation metabolism and the buffering effect of the fetus. <strong>Any unexplained nausea, vomiting, or Kussmaul breathing in a pregnant diabetic is DKA until proven otherwise.</strong></div>
+  <div class="callout warn"><span class="label">Warn</span>Insulin requirements fall sharply within hours of placental delivery — <strong>resume pre-pregnancy doses or lower</strong> in the immediate postpartum to avoid hypoglycemia.</div>
+</section>
+
+<!-- ========== 6. Effects of DM on Pregnancy ========== -->
+<section id="s6">
+  <h2><span class="num">6</span>Effects of DM on Pregnancy</h2>
+  <div class="twin-grid">
+    <div class="risk-card fetal">
+      <h4>Fetal Risks</h4>
+      <ul>
+        <li>Miscarriage.</li>
+        <li>Congenital anomaly (doubled) (cardiovascular &amp; NTDs).</li>
+        <li>Macrosomia.</li>
+        <li>Prematurity.</li>
+        <li>Shoulder dystocia &amp; birth injury.</li>
+        <li>Respiratory distress.</li>
+        <li>Neonatal hypoglycemia.</li>
+        <li>IUFD.</li>
+        <li>IUGR.</li>
+        <li>Neonatal hyperbilirubinemia, hypocalcemia, and hypothermia.</li>
+        <li><strong>Risk of having diabetes: 15 % in type 2 &amp; 2 % in type 1.</strong></li>
+      </ul>
+    </div>
+    <div class="risk-card maternal">
+      <h4>Maternal Risks</h4>
+      <ul>
+        <li>Hypoglycemia.</li>
+        <li>Diabetic ketoacidosis.</li>
+        <li>Polyhydramnios.</li>
+        <li>Obstructed labor.</li>
+        <li>Operative delivery.</li>
+        <li>Worsening of retinal disease.</li>
+        <li>Worsening of renal disease.</li>
+        <li>Pre-eclampsia.</li>
+        <li>Postpartum hemorrhage, and infection.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout danger"><span class="label">Danger</span>The single highest-yield maternal-fetal risk combination: <strong>poor first-trimester glycemic control → doubled congenital anomaly rate (cardiovascular &amp; neural tube defects).</strong> This is the clinical rationale for <em>preconception counseling and tight HbA1C &lt; 6.5 % before pregnancy</em>.</div>
+  <div class="callout cyan"><span class="label">Pearl</span>Macrosomia (Pedersen hypothesis) is driven by <strong>fetal hyperinsulinemia in response to maternal hyperglycemia</strong> → anabolic growth. The same fetal hyperinsulinemia is what causes <strong>neonatal hypoglycemia</strong> in the first 24 h after delivery (insulin is still high but the maternal glucose supply is cut).</div>
+</section>
+
+<!-- ========== 7. Risk Factors for GDM ========== -->
+<section id="s7">
+  <h2><span class="num">7</span>Risk Factors for GDM</h2>
+  <ul>
+    <li><strong>BMI &gt; 30 kg/m².</strong></li>
+    <li>Previous macrosomic infant <strong>≥ 4.5 kg.</strong></li>
+    <li>Previous G.D. <strong>(30–84 %).</strong></li>
+    <li>First degree relative with diabetes.</li>
+    <li><strong>Glycosuria 2+.</strong></li>
+    <li>Unexplained IUFD.</li>
+    <li>Current macrosomia and polyhydramnios.</li>
+  </ul>
+  <div class="callout pearl"><span class="label">Pearl</span>The two highest-yield risk factors for boards are <strong>prior macrosomic infant ≥ 4.5 kg</strong> and <strong>previous GDM (recurrence 30–84 %)</strong> — both indicate pre-existing β-cell dysfunction that pregnancy will unmask.</div>
+</section>
+
+<!-- ========== 8. Screening and Diagnosis ========== -->
+<section id="s8">
+  <h2><span class="num">8</span>Screening &amp; Diagnosis — GCT &amp; GTT</h2>
+  <h3>One-hour Glucose Challenge Test (GCT)</h3>
+  <ul>
+    <li>A <strong>50-g one-hour glucose challenge test at 24 to 28 weeks of gestation.</strong></li>
+    <li>Patients <strong>do not have to fast</strong> for this test.</li>
+    <li>To be considered normal, serum or plasma glucose values should be <strong>less than 140 mg/dL.</strong></li>
+    <li>Positive screening test require confirmation with oral glucose tolerance test.</li>
+  </ul>
+  <h3>Three-hour Oral Glucose Tolerance Test (GTT)</h3>
+  <ul>
+    <li>If the GCT ≥ 140 mg/dL, then the <strong>3-hour diagnostic GTT should be done by administering 100 g of glucose orally after fasting for 8 hours.</strong></li>
+    <li>The American Diabetes Association has recommended the use of <strong>Carpenter and Coustan values.</strong></li>
+    <li>If <strong>any two or more of the diagnostic values are met or exceeded, then the diagnosis of GDM is made.</strong></li>
+  </ul>
+  <h3>Diagnostic Cut-offs (NDDG vs. Carpenter–Coustan)</h3>
+  <table class="gdm-table">
+    <thead>
+      <tr>
+        <th>Blood sample</th>
+        <th>National Diabetes Data Group</th>
+        <th>Carpenter and Coustan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fasting</strong></td>
+        <td>105 mg/dl (5.8 mmol/l)</td>
+        <td>95 mg/dl (5.3 mmol/l)</td>
+      </tr>
+      <tr>
+        <td><strong>1-hour</strong></td>
+        <td>190 mg/dl (10.5 mmol/l)</td>
+        <td>180 mg/dl (10.0 mmol/l)</td>
+      </tr>
+      <tr>
+        <td><strong>2-hour</strong></td>
+        <td>165 mg/dl (9.2 mmol/l)</td>
+        <td>155 mg/dl (8.6 mmol/l)</td>
+      </tr>
+      <tr>
+        <td><strong>3-hour</strong></td>
+        <td>145 mg/dl (8.0 mmol/l)</td>
+        <td>140 mg/dl (7.8 mmol/l)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout cyan"><span class="label">Note</span>The Carpenter–Coustan thresholds are <strong>lower</strong> than the older NDDG values, so use of Carpenter–Coustan detects more GDM. <strong>Any two or more</strong> of the four time-point values must be met or exceeded for the diagnosis.</div>
+</section>
+
+<!-- ========== 9. Management of GDM ========== -->
+<section id="s9">
+  <h2><span class="num">9</span>Management of Gestational DM</h2>
+  <h3>Antenatal care by:</h3>
+  <ol>
+    <li>Frequent antenatal care visits.</li>
+    <li>Glycemic control.</li>
+  </ol>
+  <h3>Targets for daily capillary plasma glucose</h3>
+  <table class="lab-table">
+    <thead>
+      <tr><th style="width:55%">Time</th><th>Target</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Fasting</strong></td><td class="b">95 mg/dl.</td></tr>
+      <tr><td><strong>1 hour after meals</strong></td><td class="b">140 mg/dl.</td></tr>
+      <tr><td><strong>2 hours after meals</strong></td><td class="b">115 mg/dl.</td></tr>
+    </tbody>
+  </table>
+  <h3>GDM is divided into two categories</h3>
+  <div class="rx-grid">
+    <div class="rx-card a1">
+      <h4>I. GDM-A1 — Euglycemia achieved by diet alone</h4>
+      <p><strong>Diet:</strong> Daily intake of <strong>1,800 to 2,400 kilocalories (30 kcal/kg/day)</strong> made up of:</p>
+      <ul class="doses">
+        <li><strong>15 % to 20 %</strong> protein</li>
+        <li><strong>50 % to 60 %</strong> carbohydrates</li>
+        <li><strong>20 %</strong> fat</li>
+        <li>A nutritional consultation should be provided.</li>
+      </ul>
+      <p style="margin-top:8px"><strong>Exercise:</strong> Moderate exercise has been shown to lower maternal glucose concentrations in women with GDM.</p>
+    </div>
+    <div class="rx-card a2">
+      <h4>II. GDM-A2 — Glycemic status inadequately controlled by diet alone</h4>
+      <p><strong>Glucose monitoring:</strong> is carried out using a glucometer. The patient should record fasting glucose values and 1-hour (or 2-hour) postprandial glucose values with each meal to determine the adequacy of diabetic control for goal values.</p>
+      <p><strong>Goal values for adequacy of control:</strong></p>
+      <ul class="doses">
+        <li><strong>Fasting:</strong> 60–90 mg/dl.</li>
+        <li><strong>1 hour postprandial:</strong> &lt; 140 mg/dl.</li>
+        <li><strong>2 hours postprandial:</strong> &lt; 120 mg/dl.</li>
+        <li><strong>Bedtime:</strong> &lt; 120 mg/dl.</li>
+        <li><strong>2:00–6:00 A.M.:</strong> 60–90 mg/dl.</li>
+      </ul>
+      <p style="margin-top:8px"><strong>Oral hypoglycemic agents:</strong> Metformin (an oral agent) for women who decline insulin therapy.</p>
+    </div>
+  </div>
+  <h3>3 · Assessment of fetal wellbeing</h3>
+  <p>Ultrasound and nonstress test in the last trimester <strong>every 2 weeks.</strong></p>
+  <div class="callout cyan"><span class="label">Pearl</span>The mnemonic <strong>"A1 = diet, A2 = diet + meds"</strong> captures the entire GDM classification. GDM-A1 is by far the more common and milder form.</div>
+</section>
+
+<!-- ========== 10. Management of Pregestational DM ========== -->
+<section id="s10">
+  <h2><span class="num">10</span>Management of Pregestational DM</h2>
+  <h3>HbA1C</h3>
+  <p><strong>HbA1C reflects glycemic control over the past 8 to 12 weeks,</strong> and is used to assess risk of fetal anomalies in the first trimester of pregnancy. Measurement of HbA1C is advised to be done every trimester. <strong>A diagnosis of overt diabetes is made when A1C is ≥ 6.5 %.</strong></p>
+  <h3>Insulin dosage — the two dose regimen (the classical method)</h3>
+  <ul>
+    <li>Depending on the maternal weight and recorded glucose levels, the insulin dosage should be initiated as follows:</li>
+  </ul>
+  <div class="insulin-doses">
+    <div class="insulin-card t1">
+      <h4>1st Trimester</h4>
+      <div class="big">0.7</div>
+      <p>units / kg</p>
+    </div>
+    <div class="insulin-card t2">
+      <h4>2nd Trimester</h4>
+      <div class="big">0.8</div>
+      <p>units / kg</p>
+    </div>
+    <div class="insulin-card t3">
+      <h4>3rd Trimester</h4>
+      <div class="big">0.9 – 1.1</div>
+      <p>units / kg</p>
+    </div>
+  </div>
+  <ul style="margin-top:10px">
+    <li><strong>Total daily dose should be divided in half,</strong> given every morning and evening.</li>
+  </ul>
+  <div class="morning-dose">
+    <div class="morning-card bk">
+      <h5>Morning dose (before breakfast)</h5>
+      <p><strong>Two-thirds</strong> of the dose is given as <strong>intermediate acting insulin (NPH)</strong>, and <strong>one-third</strong> of the dose is given as a <strong>rapid acting insulin.</strong></p>
+    </div>
+    <div class="morning-card dn">
+      <h5>Evening dose (before dinner)</h5>
+      <p><strong>One-half</strong> of the dose is given as <strong>NPH</strong> and <strong>one-half</strong> of the dose is given as <strong>rapid acting insulin.</strong></p>
+    </div>
+  </div>
+  <div class="callout cyan"><span class="label">Pearl</span>The morning dose is <strong>2/3 NPH + 1/3 rapid</strong> (NPH-heavy to cover breakfast and lunch); the evening dose is <strong>½ NPH + ½ rapid</strong> (more balanced to avoid overnight hypoglycemia).</div>
+</section>
+
+<!-- ========== 11. Management of Labor ========== -->
+<section id="s11">
+  <h2><span class="num">11</span>Management of Labor &amp; Delivery</h2>
+  <h3>Timing of delivery</h3>
+  <table class="timing-table">
+    <thead>
+      <tr><th>Timing</th><th>Indication</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="ok"><strong>At 38 weeks</strong></td>
+        <td>In controlled DM with no fetal or maternal complications.</td>
+      </tr>
+      <tr>
+        <td class="caution"><strong>Delivery before 38 w</strong></td>
+        <td>In uncontrolled DM, fetal complications (as IUGR), maternal complications (as preeclampsia).</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Route of delivery</h3>
+  <ul>
+    <li><strong>Induction of labor:</strong> in controlled DM (no maternal or fetal indications as macrosomia or malpresentation).</li>
+    <li><strong>C.S.:</strong> uncontrolled DM, maternal or fetal complications, failed induction, macrosomia, malpresentations, presence of obstetric indication.</li>
+  </ul>
+  <h3>Glucose control and monitoring during labor</h3>
+  <ul>
+    <li>The patient must be <strong>euglycemic during the intrapartum period</strong> because <strong>maternal hyperglycemia → fetal hyperglycemia → fetal hyperinsulinemia → neonatal hypoglycemia → neonatal seizures and death.</strong></li>
+    <li>The infusion fluid is adjusted based on blood glucose levels. <strong>Short-acting insulin boluses</strong> may be added to bring glucose levels to the target range of <strong>80 to 100 mg/dl.</strong> Blood glucose values should be checked <strong>every 1 to 2 hours.</strong></li>
+    <li>The patient should receive her normal insulin dose during the previous evening. <strong>On the morning of her induction, the patient's usual insulin dose should be withheld.</strong></li>
+  </ul>
+  <h3>Management of elective cesarean section</h3>
+  <ul>
+    <li>The patient should <strong>withhold her morning insulin dose.</strong> Glucose levels should be monitored frequently during and immediately after surgery.</li>
+  </ul>
+  <div class="callout danger"><span class="label">Danger</span>The <strong>Pedersen cascade</strong> (maternal hyperglycemia → fetal hyperglycemia → fetal hyperinsulinemia → neonatal hypoglycemia → seizures &amp; death) is the entire rationale for tight intrapartum glucose control (80–100 mg/dL, checked every 1–2 h). Failure to achieve this is a leading cause of preventable neonatal morbidity.</div>
+</section>
+
+<!-- ========== 12. Postpartum Care ========== -->
+<section id="s12">
+  <h2><span class="num">12</span>Postpartum Care, Breastfeeding &amp; Contraception</h2>
+  <h3>Glucose monitoring</h3>
+  <ul>
+    <li>After delivery, glucose levels should be checked <strong>every 4 to 6 hours,</strong> while administering <strong>5 % dextrose with lactated Ringer's or normal saline (at approximately 125 mL/hr).</strong></li>
+    <li>During the initial postpartum period, <strong>short-acting insulin is used only when glucose levels are higher than 150 mg/dL.</strong></li>
+    <li>Once the patient is taking a full diabetic diet, <strong>insulin can be started at one third to one-half of the antepartum dosage.</strong></li>
+  </ul>
+  <h3>Breastfeeding</h3>
+  <ul>
+    <li>Breastfeeding increases the frequency of <strong>hypoglycemia in insulin-dependent diabetics,</strong> thus women should have a <strong>snack before or during breastfeeding.</strong></li>
+    <li>Women with pre-existing <strong>type 2 diabetes can safely take metformin while breastfeeding.</strong></li>
+  </ul>
+  <h3>Contraception</h3>
+  <ul>
+    <li><strong>Progesterone only methods and mechanical methods can be used.</strong></li>
+    <li>The IUCD can cause <strong>pelvic inflammatory disease</strong> and <strong>combined pills are contraindicated.</strong></li>
+  </ul>
+  <h3>Postpartum evaluation in GDM</h3>
+  <ul>
+    <li>In the postpartum period, a woman with GDM should have a follow-up <strong>fasting blood glucose and 2-hour 75-g glucose tolerance test (6 to 12 weeks postpartum)</strong> to assess for persistent diabetes.</li>
+    <li>If the threshold values are met or exceeded in postpartum testing, the patient is given a diagnosis of <strong>type 2 diabetes.</strong></li>
+  </ul>
+  <div class="callout pearl"><span class="label">Pearl</span>Combined oral contraceptives are contraindicated in diabetic women (estrogen + progestin increase thrombotic and vascular risk in a population already predisposed). <strong>Progesterone-only pills (POP) and barrier methods are the preferred options.</strong></div>
+</section>
+
+<!-- ========== 13. Student Activity + References ========== -->
+<details class="study-section"><summary>Student Activity & References</summary><section id="s13">
+  <h2><span class="num">13</span>Student Activity &amp; References</h2>
+  <div class="activity-card">
+    <h3>Bedside / Lab Audit Task</h3>
+    <p>Each student should check the blood glucose measurements investigations of admitted departmental pregnant women to pick up either suspected or confirmed cases of diabetes and explain the next steps during bedside teaching part of the clinical rounds.</p>
+  </div>
+  <div class="callout cyan"><span class="label">Note</span>For each case, identify: (1) the diagnostic category (GDM-A1 vs A2 vs pregestational), (2) the current glycemic control vs the targets, (3) the fetal wellbeing tests done, and (4) the appropriate timing of delivery.</div>
+
+  <div class="quiz-card">
+    <h3>Chapter 14 Self-Test</h3>
+    <p>Test your knowledge of DM screening, GDM vs pregestational DM management, intrapartum glucose control, and postpartum care.</p>
+    <a href="https://forms.gle/dkWSDYMMerr6GEG87" target="_blank" rel="noopener">Open Google Form →</a>
+  </div>
+
+  <div class="refs" style="margin-top:18px">
+    <h3>Source &amp; Files</h3>
+    <ol>
+      <li>Book Obstetrics 2025-2026, Chapter 14 — <em>Diabetes Mellitus with Pregnancy</em> (source PDF: <code>raw materal/Book Obstetrics 2025-2026-014.pdf</code>, 7 pages, ~14.6 KB source text).</li>
+      <li>Source `pdftotext -layout` extract (215 lines, ~11.7 KB) at <code>raw materal/14_Diabetes_Mellitus_with_Pregnancy/source.txt</code>.</li>
+    </ol>
+    <h3 style="margin-top:12px">Practice questions</h3>
+    <ol start="3">
+      <li>Chapter 14 self-test (Google Form): <a href="https://forms.gle/dkWSDYMMerr6GEG87" target="_blank" rel="noopener">https://forms.gle/dkWSDYMMerr6GEG87</a></li>
+    </ol>
+    <h3 style="margin-top:12px">Image / Visual Audit</h3>
+    <ol start="4">
+      <li><strong>No source images retained.</strong> <code>pdfimages -list</code> returns 0 images. The source PDF is a text-only chapter. No SOURCE IMAGE (green-bordered) cards were required.</li>
+      <li><strong>No external images used.</strong> No EXTERNAL IMAGE (red-bordered) cards were required.</li>
+    </ol>
+    <h3 style="margin-top:12px">Files in this topic</h3>
+    <ol start="6">
+      <li><code>raw materal/14_Diabetes_Mellitus_with_Pregnancy/source.pdf</code></li>
+      <li><code>raw materal/14_Diabetes_Mellitus_with_Pregnancy/source.txt</code> (215 lines, full pdftotext -layout extract)</li>
+      <li><code>html/14_Diabetes_Mellitus_with_Pregnancy.html</code> (this file)</li>
+      <li><code>images/14_Diabetes_Mellitus_with_Pregnancy.png</code> (rendered PNG infographic)</li>
+      <li><code>quality_reports/14_Diabetes_Mellitus_with_Pregnancy_quality_report.md</code></li>
+    </ol>
+  </div>
+</section></details>
+
+</main>
+
+<footer>
+  <div>Generated as part of the <strong>Sequential Infographic Generation System</strong> (Topic 14: Diabetes Mellitus with Pregnancy) — Premium Medical-Reference Infographic.</div>
+  <div class="paths">
+    Source: <code>raw materal/Book Obstetrics 2025-2026-014.pdf</code> &nbsp;·&nbsp;
+    HTML: <code>html/14_Diabetes_Mellitus_with_Pregnancy.html</code> &nbsp;·&nbsp;
+    PNG: <code>images/14_Diabetes_Mellitus_with_Pregnancy.png</code>
+  </div>
+</footer>
+
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 46 — Assessment of Fetal Well-being</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#0F766E; --prim2:#115E59; --primLite:#F0FDFA; --primBorder:#99F6E4;
+    --accent:#0891B2;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#F0FDFA 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  .hero{
+    background:linear-gradient(135deg,#134E4A 0%,#0F766E 100%);
+    color:#fff;border-radius:0 0 22px 22px;padding:28px 32px 30px;
+    margin:0 -28px 22px;box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:34px;line-height:1.15;margin:14px 0 10px;font-weight:800;letter-spacing:-0.01em}
+  .hero p{font-size:14.5px;color:#CCFBF1;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:500;
+  }
+
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);border-radius:12px;
+    padding:16px 22px;margin:0 0 22px;box-shadow:var(--shadow);
+  }
+  .toc h2{font-size:14px;color:var(--prim2);margin:0 0 8px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#115E59;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;padding:8px 0 8px 14px;
+    border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{font-size:15.5px;color:var(--prim2);margin:16px 0 8px;font-weight:700;letter-spacing:0.01em}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 14px;box-shadow:var(--shadow)}
+  .keydef{background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid #DDD6FE;border-left:5px solid #7C3AED}
+  .keydef h4{color:#5B21B6;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .pearl{background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid #FBCFE8;border-left:5px solid #DB2777}
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid #FECACA;border-left:5px solid #DC2626}
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);border:1px solid #FDE68A;border-left:5px solid #D97706}
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);border:1px solid #A5F3FC;border-left:5px solid #0891B2}
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;border-radius:50%;
+    text-align:center;line-height:24px;font-size:12px;font-weight:700;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;margin:0 0 16px;
+    overflow:hidden;background:#fff;box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:520px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;color:#fff;
+    padding:3px 9px;border-radius:999px;font-size:10.5px;letter-spacing:0.06em;
+    text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+  .defn-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:5px solid #7C3AED;margin:0 0 12px}
+  .defn-card.cyan{border-left-color:#0891B2;background:linear-gradient(180deg,#ECFEFF 0%,#fff 100%)}
+  .defn-card.cyan h3{color:#155E75}
+  .defn-card.pink{border-left-color:#DB2777;background:linear-gradient(180deg,#FDF2F8 0%,#fff 100%)}
+  .defn-card.pink h3{color:#9D174D}
+  .defn-card.green{border-left-color:#16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  .defn-card.green h3{color:#166534}
+  .defn-card.red{border-left-color:#DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .defn-card.red h3{color:#991B1B}
+  .defn-card.orange{border-left-color:#D97706;background:linear-gradient(180deg,#FFFBEB 0%,#fff 100%)}
+  .defn-card.orange h3{color:#92400E}
+  .defn-card.purple{border-left-color:#7C3AED;background:linear-gradient(180deg,#F5F3FF 0%,#fff 100%)}
+  .defn-card.purple h3{color:#5B21B6}
+  .defn-card h3{font-size:14.5px;margin:0 0 6px;font-weight:700;color:#5B21B6}
+  .defn-card p{font-size:13px;color:#475569;margin:0}
+
+  .mono{font-family:"JetBrains Mono","Consolas","Courier New",monospace;background:#0F172A;color:#E0F2FE;padding:8px 12px;border-radius:6px;font-size:13px;line-height:1.5;margin:4px 0;display:block;white-space:pre-wrap;word-break:break-word}
+
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;font-size:15px;font-weight:700;
+    color:var(--prim2);background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;display:flex;align-items:center;
+    gap:10px;user-select:none;position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{border-bottom:1px solid var(--line);background:linear-gradient(90deg,var(--primLite),#fff 40%)}
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+
+  footer{
+    margin-top:30px;padding:14px 16px;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:10px;
+    font-size:12px;color:#1E40AF;text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- HERO -->
+<div class="hero">
+<span class="pill">Topic 46 · Chapter 46 · Assessment of Fetal Well-being</span>
+<h1>Assessment of Fetal Well-being</h1>
+<p>Objective fetal surveillance: movement counting, non-stress test (NST), contraction stress test (CST), cardiotocography (CTG), fetal biophysical profile (BPP), umbilical artery Doppler velocimetry, and fetal scalp blood sampling.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 236-245 (10 pages)</span>
+<span class="chip">🟢 Source visuals: 13 (manual extraction)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 9 content sections preserved</span>
+</div>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>📑 Table of Contents · 9 sections</h2>
+<ol>
+<li><a href="#s1">ILOs &amp; Fetal movement counting</a></li>
+<li><a href="#s2">Non-stress Test (NST)</a></li>
+<li><a href="#s3">Contraction Stress Test (CST)</a></li>
+<li><a href="#s4">Cardiotocography (CTG)</a></li>
+<li><a href="#s5">CTG parameters &amp; interpretation (NICE, 2022)</a></li>
+<li><a href="#s6">Fetal Biophysical Profile (BPP)</a></li>
+<li><a href="#s7">Umbilical Artery Doppler Velocimetry</a></li>
+<li><a href="#s8">Scalp blood sample &amp; Fetal Hypoxia/Acidosis</a></li>
+<li><a href="#s9">Student activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs & Fetal movement counting -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs &amp; Fetal movement counting</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Intended Learning Outcome</h4>
+<p class="def-block" style="font-size:15px;margin:0">To be able to describe various fetal well-being tests regarding the indications, procedure steps and its interpretation.</p>
+</div>
+<div class="defn-card green">
+<h3>I. Fetal movement counting</h3>
+<p style="font-size:13.5px;margin:0 0 6px"><strong>Timing:</strong> After 30 weeks' gestation.</p>
+<p style="font-size:13.5px;margin:0"><strong>Method:</strong> The mother counts the fetal kicks in 3 hours during the period of 12 hours, from 9 a.m. to 9 p.m. for one hour at the beginning, one hour at the middle and one hour at the end of this period. The count is multiplied by 4 to get fetal kicks in 12 hours. If it is less than 10 kicks, this needs further testing with non-stress test (NST).</p>
+</div>
+</section>
+<!-- §2 Non-stress Test (NST) -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Non-stress Test (NST)</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Non-stress Test (NST)</h4>
+<p class="def-block" style="font-size:15px;margin:0">The non-stress test is used to describe fetal heart rate acceleration in response to fetal movement as a sign of fetal health typically after 32 weeks' gestation.</p>
+</div>
+<div class="defn-card cyan">
+<h3>Method</h3>
+<p style="font-size:13.5px;margin:0">This test involves the use of Doppler-detected fetal heart rate acceleration coincident with fetal movements perceived by the mother.</p>
+</div>
+<h3 class="sub">Results</h3>
+<div class="grid-2">
+<div class="defn-card green">
+<h3>Normal (reactive) NST</h3>
+<p style="font-size:13px;margin:0">The presence of two or more fetal heart rate accelerations that peak at 15 beat per minute (bpm) or more above the baseline, each lasting 15 seconds or more, and all occurring within 20 minutes of beginning the test.</p>
+</div>
+<div class="defn-card red">
+<h3>Abnormal NST</h3>
+<p style="font-size:13px;margin:0">A fetal heart rate baseline that oscillated less than 5 beats per minute.</p>
+</div>
+</div>
+<div class="defn-card orange">
+<h3>Frequency of testing</h3>
+<p style="font-size:13.5px;margin:0">The interval between tests for fetal well-being, was set at 7 days. But, more frequent testing is recommended for women with post-term pregnancy, type 1 diabetes mellitus, fetal growth restriction, or maternal hypertension.</p>
+</div>
+</section>
+<!-- §3 Contraction Stress Test (CST) -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Contraction Stress Test (CST)</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Contraction Stress Test (CST)</h4>
+<p class="def-block" style="font-size:15px;margin:0">The CST evaluates fetal heart rate in response to uterine contractions induced by breast stimulation or oxytocin infusion. Once 3 contractions occur in a 10-minute period, the fetal heart rate is observed for reactivity and the occurrence of late or variable decelerations.</p>
+</div>
+<h3 class="sub">Interpretation</h3>
+<table>
+<tr>
+<th>Result</th>
+<th>Definition</th>
+</tr>
+<tr>
+<td><strong>Negative</strong></td>
+<td>No late or significant variable decelerations.</td>
+</tr>
+<tr>
+<td><strong>Positive</strong></td>
+<td>Late decelerations following 50% or more of contractions, even if the contraction frequency is fewer than three in 10 min.</td>
+</tr>
+<tr>
+<td><strong>Equivocal</strong></td>
+<td>Intermittent late decelerations or significant variable suspicious decelerations.</td>
+</tr>
+<tr>
+<td><strong>Equivocal</strong></td>
+<td>Fetal heart rate decelerations that occur in the presence of hyperstimulatory contractions more frequent than every 2 min or lasting longer than 90 seconds.</td>
+</tr>
+<tr>
+<td><strong>Unsatisfactory</strong></td>
+<td>Fewer than three contractions in 10 min or an uninterpretable tracing.</td>
+</tr>
+</table>
+</section>
+<!-- §4 Cardiotocography (CTG) -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Cardiotocography (CTG)</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Cardiotocography (CTG)</h4>
+<p class="def-block" style="font-size:15px;margin:0">Cardiotocography (CTG) is a technical means of recording the fetal heart beat (cardio-) and the uterine contractions (-toco-) during pregnancy, typically in the third trimester. Simultaneous recordings are performed by two separate transducers, one for the measurement of the fetal heart rate and a second one for the uterine contractions.</p>
+</div>
+<div class="defn-card purple">
+<h3>Five components of CTG interpretation</h3>
+<ol style="font-size:13.5px;margin:0;padding-left:20px">
+<li>Uterine activity (contractions).</li>
+<li>Baseline fetal heart rate.</li>
+<li>Baseline FHR variability.</li>
+<li>Presence of accelerations.</li>
+<li>Periodic or episodic decelerations.</li>
+</ol>
+</div>
+<h3 class="sub">Uterine activity</h3>
+<div class="grid-2">
+<div class="defn-card green">
+<h3>Normal</h3>
+<p style="font-size:13.5px;margin:0">≤ to 5 contractions in 10 minutes, averaged over a 30-minute window.</p>
+</div>
+<div class="defn-card red">
+<h3>Tachysystole</h3>
+<p style="font-size:13.5px;margin:0">&gt;5 contractions in 10 minutes, averaged over a 30 minute window.</p>
+</div>
+</div>
+<h3 class="sub">Source visuals — CTG monitoring &amp; tracing parameters</h3>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="CTG monitor and transducers" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/gtc.png"/></div>
+<div class="cap">FIGURE 1 — CTG monitor and transducers. Continuous electronic fetal monitoring using two separate transducers: Doppler sensor for fetal heart rate (top) and tocodynamometer for uterine contractions (bottom). Source: Book Obstetrics 2025-2026, p. 237.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Baseline fetal heart rate and uterine contractions" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/uterine contraction.png"/></div>
+<div class="cap">FIGURE 2 — CTG tracing showing baseline fetal heart rate (top channel, 60-180 bpm) and uterine contractions (bottom channel, TOCO). Normal baseline FHR ~130-140 bpm with moderate variability. Annotation shows "UTERINE CONTRACTIONS 2 IN 10 MINUTES". Source: Book Obstetrics 2025-2026, p. 237.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Baseline fetal heart rate" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/baslne hr.png"/></div>
+<div class="cap">FIGURE 3 — Baseline fetal heart rate recording. Baseline FHR = 120 bpm (normal range 110-160 bpm). Moderate baseline variability (6-25 bpm) present. Source: Book Obstetrics 2025-2026, p. 238.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Normal baseline FHR variability" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/variability.png"/></div>
+<div class="cap">FIGURE 4 — Normal baseline FHR variability. Fluctuations in the baseline FHR that are irregular in amplitude and frequency between 6-25 bpm. Source: Book Obstetrics 2025-2026, p. 238.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Reduced baseline FHR variability" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/reduced variability.png"/></div>
+<div class="cap">FIGURE 5 — Reduced baseline FHR variability. Reduced variability indicates possible fetal hypoxia or CNS depression. Source: Book Obstetrics 2025-2026, p. 238.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Accelerations" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/accelations.png"/></div>
+<div class="cap">FIGURE 6 — CTG tracing showing accelerations. An abrupt increase from the onset of acceleration to the peak in &lt;= 30 seconds. The peak must be &gt;= 15 bpm, and the acceleration must last &gt;= 15 seconds from the onset to return. Source: Book Obstetrics 2025-2026, p. 239.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Early deceleration" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/early decellartion.png"/></div>
+<div class="cap">FIGURE 7 — Early deceleration. Symmetrical and gradual decrease and return of the FHR associated with uterine contraction. The nadir of the deceleration occurs at the same time as the peak of the contraction. Source: Book Obstetrics 2025-2026, p. 240.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Late deceleration" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/late deccelartions.png"/></div>
+<div class="cap">FIGURE 8 — Late deceleration. Gradual decrease and return of the FHR associated with a uterine contraction. The deceleration is delayed in timing, with the nadir occurring after the peak of the contraction. Source: Book Obstetrics 2025-2026, p. 240.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Variable deceleration" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/variable decellarations.png"/></div>
+<div class="cap">FIGURE 9 — Variable deceleration. Abrupt decrease in FHR that may be associated or not related to uterine contractions. Source: Book Obstetrics 2025-2026, p. 241.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Prolonged deceleration" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/prolonged decelartons.png"/></div>
+<div class="cap">FIGURE 10 — Prolonged deceleration. A visually apparent decrease in FHR from the baseline that is &gt;= 15 bpm, lasting &gt;= 2 minutes, but &lt; 10 minutes. Source: Book Obstetrics 2025-2026, p. 241.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Periodic or episodic decelerations overview" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/periodic deccealartion.png"/></div>
+<div class="cap">FIGURE 11 — Periodic or episodic decelerations overview. Includes early, late, variable, and prolonged deceleration types. Source: Book Obstetrics 2025-2026, p. 241.</div>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Sinusoidal pattern" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/sinasudal.png"/></div>
+<div class="cap">FIGURE 12 — Sinusoidal pattern. Sinusoidal patterns are rare ominous patterns that occur with severe fetal anemia and associated hypoxia. Source: Book Obstetrics 2025-2026, p. 242.</div>
+</div>
+</section>
+<!-- §5 CTG parameters & interpretation (NICE, 2022) -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>CTG parameters &amp; interpretation (NICE, 2022)</h2>
+<h3 class="sub">CTG interpretation (NICE, 2022)</h3>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Parameter White Amber Red</p>
+<p class="mono" style="margin:0 0 12px">(Normal) (Intermediate) (Abnormal)</p>
+<table>
+<tr>
+<th>Parameter</th>
+<th style="background:#ECFDF5;color:#065F46;">White (Normal)</th>
+<th style="background:#FEF9C3;color:#713F12;">Amber (Intermediate)</th>
+<th style="background:#FEE2E2;color:#991B1B;">Red (Abnormal)</th>
+</tr>
+<tr>
+<td><strong>Uterine contractions</strong></td>
+<td>Fewer than 5 contractions in 10 minutes.</td>
+<td>5 or more contractions in 10 minutes or hypertonus.</td>
+<td>5 or more contractions in 10 minutes or hypertonus.</td>
+</tr>
+<tr>
+<td><strong>Baseline fetal heart rate (FHR)</strong></td>
+<td>Stable baseline 110 to 160 beats a minute.</td>
+<td>- Increase in baseline of fetal heart rate of 20 beats a minute or more from the start of labor or since the last review an hour ago.<br/>- 100 to 109 beats a minute.<br/>- Unable to determine baseline.</td>
+<td>- Below 100 beats a minute.<br/>- Above 160 beats a minute.</td>
+</tr>
+<tr>
+<td><strong>FHR Variability</strong></td>
+<td>5 to 25 beats a minute.</td>
+<td>- Fewer than 5 beats a minute for between 30 and 50 minutes.<br/>- More than 25 beats a minute for up to 10 minutes.</td>
+<td>- Fewer than 5 beats a minute for more than 50 minutes.<br/>- More than 25 beats a minute for more than 10 minutes.</td>
+</tr>
+<tr>
+<td><strong>Decelerations</strong></td>
+<td>- No decelerations.<br/>- Early decelerations.</td>
+<td>- Repetitive variable decelerations less than 30 minutes.<br/>- Repetitive late decelerations for less than 30 minutes.</td>
+<td>- Repetitive variable decelerations more than 30 minutes.<br/>- Repetitive late decelerations for more than 30 minutes.</td>
+</tr>
+</table>
+<h3 class="sub">Fetal Hypoxia/Acidosis</h3>
+<div class="defn-card red">
+<p style="font-size:13.5px;margin:0">Fetal acid-base determination is currently available from a scalp blood sample during labor but it has risks like fetal infection and hemorrhage.</p>
+</div>
+</section>
+<!-- §6 Fetal Biophysical Profile (BPP) -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Fetal Biophysical Profile (BPP)</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Fetal Biophysical Profile (BPP)</h4>
+<p class="def-block" style="font-size:15px;margin:0">The combined use of five fetal components gives accurate method for assessing fetal health than any one used alone. Typically, these tests require 30 minutes of examiner time.</p>
+</div>
+<table>
+<tr>
+<th>Parameter</th>
+<th>Score 2 (Normal)</th>
+<th>Score 0 (Abnormal)</th>
+</tr>
+<tr>
+<td><strong>Fetal heart rate reactivity</strong></td>
+<td>Presence of reactivity, without or without presence of decelerations.</td>
+<td>Absence of reactivity.</td>
+</tr>
+<tr>
+<td><strong>Fetal tone — Extremity extension/flexion</strong></td>
+<td>At least one episode of fetal extremity extension and flexion within 30 minutes.</td>
+<td>No episodes of fetal extremity extension/flexion.</td>
+</tr>
+<tr>
+<td><strong>Fetal movement</strong></td>
+<td>At least three gross body movements observed within 30 minutes.</td>
+<td>Fewer than three gross body movements within 30 minutes.</td>
+</tr>
+<tr>
+<td><strong>Fetal breathing</strong></td>
+<td>Sustained episode of breathing &gt;30 s in duration, occurring at least once during a 30-min period.</td>
+<td>Absence of sustained episode of fetal breathing.</td>
+</tr>
+<tr>
+<td><strong>Amniotic fluid index</strong></td>
+<td>At least one pocket of fluid &gt;2.0 cm or an amniotic fluid index &gt;5.0 cm.</td>
+<td>Less fluid.</td>
+</tr>
+</table>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL · BPP score interpretation</h4>
+<p style="font-size:13.5px;margin:0">Scores of <strong>8 or 10</strong> indicates good fetal well-being and associated with normal pH. An equivocal test result (a score of <strong>6</strong>), needs to be repeated. A score of <strong>4 or less</strong> is predictor of abnormal outcome.</p>
+</div>
+</section>
+<!-- §7 Umbilical Artery Doppler Velocimetry -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Umbilical Artery Doppler Velocimetry</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Umbilical Artery Doppler Velocimetry</h4>
+<p class="def-block" style="font-size:15px;margin:0">Doppler ultrasonography is a non-invasive technique to assess blood flow in the umbilical artery.</p>
+</div>
+<div class="defn-card purple">
+<h3>S/D ratio — most commonly used index</h3>
+<p style="font-size:13.5px;margin:0">The umbilical artery systolic diastolic (S/D) ratio, the most commonly used index, is considered abnormal if it is above the 95th percentile for gestational age.</p>
+</div>
+<div class="card danger">
+<h4>🚨 DANGER · Absent or reversed end-diastolic flow</h4>
+<p style="font-size:13.5px;margin:0"><strong>Absent or reversed end-diastolic flow</strong> indicates increased resistance to umbilical artery blood flow. It is reported to result from poorly vascularized placental villi and is seen in the most extreme cases of fetal growth restriction.</p>
+</div>
+<div class="img-card src-viz">
+<div class="badge">SOURCE IMAGE</div>
+<div class="img-frame"><img alt="Umbilical artery Doppler waveforms" src="../../../../extracted_images/46_Assessment_of_Fetal_Well-being/bpp.png"/></div>
+<div class="cap">FIGURE 13 — Umbilical artery Doppler velocimetry waveforms. A) Normal forward end-diastolic flow. B) Absent end-diastolic flow. C) Reversed end-diastolic flow. Reversed flow indicates the highest resistance and is seen in the most extreme cases of fetal growth restriction. Source: Book Obstetrics 2025-2026, p. 244.</div>
+</div>
+</section>
+<!-- §8 Scalp blood sample & Fetal Hypoxia/Acidosis -->
+<section id="s8">
+<h2 class="sec"><span class="n">8</span>Scalp blood sample &amp; Fetal Hypoxia/Acidosis</h2>
+<div class="card note">
+<h4>📝 NOTE · Fetal acid-base determination</h4>
+<p style="font-size:13.5px;margin:0">Fetal acid-base determination is currently available from a scalp blood sample during labor but it has risks like fetal infection and hemorrhage.</p>
+</div>
+</section>
+<!-- §9 Student activity · Questions · References -->
+<section id="s9">
+<h2 class="sec"><span class="n">9</span>Student activity · Questions · References</h2>
+<details class="click-card">
+<summary>📚 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p style="font-size:14px;margin:0 0 8px">Each student is requested to attend during bedside part of the clinical round a session of non-stress test by CTG or biophysical ultrasonographic profile guided by clinical round tutor.</p>
+</div>
+</details>
+<details class="click-card">
+<summary>📝 Self-assessment Questions <span class="hint"></span></summary>
+<div class="click-body">
+<p style="font-size:14px;margin:0 0 8px">Test yourself with the official Google Form:</p>
+<p style="margin:8px 0 0"><a href="https://forms.gle/Uy7xHrKqM6uPcCNY8" rel="noopener" style="display:inline-block;background:#16A34A;color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13.5px" target="_blank">📝 Open Questions Form ↗</a></p>
+<p style="font-size:12px;color:#475569;margin:8px 0 0">Link: <code style="background:#F1F5F9;padding:2px 6px;border-radius:4px">https://forms.gle/Uy7xHrKqM6uPcCNY8</code></p>
+</div>
+</details>
+<details class="click-card">
+<summary>📖 References &amp; Visual Sources <span class="hint"></span></summary>
+<div class="click-body">
+<h3 class="sub" style="margin-top:0">Source material</h3>
+<ul style="font-size:13px;margin:0 0 12px">
+<li>Book Obstetrics 2025-2026, Chapter 46, <strong>"Assessment of Fetal Well-being"</strong>, pages 236-245 (10 pages).</li>
+</ul>
+<h3 class="sub">Source visuals (manual extraction)</h3>
+<p style="font-size:13px;margin:0 0 8px"><strong>13 source medical images embedded</strong> from manual extraction, all shown in §4 and §7 with green-bordered SOURCE IMAGE cards.</p>
+<ul style="font-size:13px;margin:0 0 12px">
+<li>Manual extraction folder: <code>image 46/</code></li>
+<li>Canonical location: <code>extracted_images/46_Assessment_of_Fetal_Well-being/</code></li>
+<li>No automated PDF extraction errors — all images copied verbatim from manual folder.</li>
+<li>No external images added.</li>
+</ul>
+<h3 class="sub">External visuals</h3>
+<p style="font-size:13px;margin:0 0 12px"><strong>None.</strong> No external images were added to this infographic.</p>
+</div>
+</details>
+</section>
+<!-- FOOTER -->
+<footer>
+<strong>Topic 46 · Assessment of Fetal Well-being</strong> · Book Obstetrics 2025-2026, p. 236-245 (10 pages) · 🟢 Source visuals: 13 (manual extraction) · 🔴 External visuals: 0 · Self-assessment: <a href="https://forms.gle/Uy7xHrKqM6uPcCNY8" rel="noopener" style="color:#115E59" target="_blank">forms.gle/Uy7xHrKqM6uPcCNY8</a>
+</footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

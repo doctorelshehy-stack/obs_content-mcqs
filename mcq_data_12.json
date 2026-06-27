@@ -1,0 +1,167 @@
+{
+  "s2": [
+    {
+      "q": "Hypertensive disorders of pregnancy are a leading cause of:",
+      "options": [
+        "Post-term pregnancy",
+        "Maternal and perinatal morbidity and mortality",
+        "Congenital anomalies",
+        "Preterm labor only"
+      ],
+      "correct": 1,
+      "explain": "Hypertensive disorders are a leading cause of maternal and perinatal morbidity and mortality worldwide."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Classification of hypertension in pregnancy includes all EXCEPT:",
+      "options": [
+        "Chronic hypertension",
+        "Gestational hypertension",
+        "Preeclampsia/eclampsia",
+        "Pulmonary hypertension"
+      ],
+      "correct": 3,
+      "explain": "Classification: chronic HTN, gestational HTN, preeclampsia/eclampsia, and chronic HTN with superimposed preeclampsia."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Chronic hypertension in pregnancy is diagnosed when BP is elevated:",
+      "options": [
+        "Before 20 weeks of gestation",
+        "After 20 weeks of gestation",
+        "Only during labor",
+        "Only postpartum"
+      ],
+      "correct": 0,
+      "explain": "Chronic HTN is hypertension present before 20 weeks of gestation or that predates pregnancy."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Superimposed preeclampsia on chronic HTN is characterized by:",
+      "options": [
+        "Decreased BP from baseline",
+        "New-onset proteinuria or sudden increase in BP after 20 weeks",
+        "Normal uric acid levels",
+        "Improved renal function"
+      ],
+      "correct": 1,
+      "explain": "Superimposed preeclampsia is diagnosed by new-onset proteinuria, sudden increase in BP, or worsening of preexisting HTN after 20 weeks."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Gestational hypertension is defined as:",
+      "options": [
+        "BP elevation before 20 weeks with proteinuria",
+        "New-onset hypertension after 20 weeks without proteinuria",
+        "Chronic HTN with new proteinuria",
+        "BP elevation only during labor"
+      ],
+      "correct": 1,
+      "explain": "Gestational HTN is new-onset hypertension after 20 weeks without significant proteinuria, which resolves postpartum."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Risk factors for preeclampsia include all EXCEPT:",
+      "options": [
+        "Nulliparity",
+        "Multiple pregnancy",
+        "Multiparity",
+        "Previous preeclampsia"
+      ],
+      "correct": 2,
+      "explain": "Risk factors: nulliparity, previous preeclampsia, multiple pregnancy, chronic HTN, diabetes, obesity, and family history."
+    },
+    {
+      "q": "The primary etiology of preeclampsia involves:",
+      "options": [
+        "Excessive fetal growth",
+        "Abnormal placentation with defective trophoblastic invasion",
+        "Maternal cardiac disease",
+        "Placental abruption"
+      ],
+      "correct": 1,
+      "explain": "Preeclampsia etiology involves abnormal placentation with defective trophoblastic invasion of spiral arteries."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The underlying pathology of preeclampsia includes all EXCEPT:",
+      "options": [
+        "Generalized vasospasm",
+        "Endothelial dysfunction",
+        "Increased placental perfusion",
+        "Activation of coagulation cascade"
+      ],
+      "correct": 2,
+      "explain": "Pathology: vasospasm, endothelial dysfunction, reduced placental perfusion, and coagulation activation leading to multi-organ dysfunction."
+    }
+  ],
+  "s9": [
+    {
+      "q": "The diagnostic criteria for preeclampsia include:",
+      "options": [
+        "BP >140/90 after 20 weeks with proteinuria",
+        "BP >160/100 alone",
+        "Headache alone",
+        "Edema alone"
+      ],
+      "correct": 0,
+      "explain": "Preeclampsia = BP \u2265140/90 after 20 weeks AND proteinuria (\u2265300 mg/24h) or evidence of end-organ dysfunction."
+    }
+  ],
+  "s12": [
+    {
+      "q": "A serious complication of severe preeclampsia is:",
+      "options": [
+        "Macrosomia",
+        "Polyhydramnios",
+        "HELLP syndrome",
+        "Post-term pregnancy"
+      ],
+      "correct": 2,
+      "explain": "HELLP syndrome (Hemolysis, Elevated Liver enzymes, Low Platelets) is a serious complication of severe preeclampsia."
+    }
+  ],
+  "s13": [
+    {
+      "q": "The definitive treatment for preeclampsia is:",
+      "options": [
+        "Antihypertensives",
+        "Delivery",
+        "Bed rest",
+        "Magnesium sulfate"
+      ],
+      "correct": 1,
+      "explain": "Delivery is the definitive treatment. Magnesium sulfate is used for seizure prophylaxis, and antihypertensives for BP control."
+    }
+  ],
+  "s17": [
+    {
+      "q": "Eclampsia is defined as:",
+      "options": [
+        "Hypertension with proteinuria",
+        "Generalized tonic-clonic seizures in a patient with preeclampsia",
+        "Hypertension without proteinuria",
+        "Postpartum seizures only"
+      ],
+      "correct": 1,
+      "explain": "Eclampsia is the occurrence of generalized tonic-clonic seizures in a patient with preeclampsia that cannot be attributed to other causes."
+    },
+    {
+      "q": "The drug of choice for seizure prophylaxis and treatment in eclampsia is:",
+      "options": [
+        "Diazepam",
+        "Magnesium sulfate",
+        "Phenytoin",
+        "Carbamazepine"
+      ],
+      "correct": 1,
+      "explain": "Magnesium sulfate is the drug of choice for eclampsia prophylaxis and treatment."
+    }
+  ]
+}

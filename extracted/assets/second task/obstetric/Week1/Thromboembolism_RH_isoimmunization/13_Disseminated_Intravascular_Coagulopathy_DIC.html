@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disseminated Intravascular Coagulopathy (DIC) — Infographic</title>
+<style>
+:root{
+  --navy:#0b2545;
+  --teal:#0e7c7b;
+  --blue:#1e88e5;
+  --yellow:#f4b400;
+  --red:#c0392b;
+  --green:#1b5e20;
+  --orange:#e67e22;
+  --purple:#8e44ad;
+  --gray-50:#fafbfc;
+  --gray-100:#f1f3f5;
+  --gray-200:#e4e7eb;
+  --gray-700:#495057;
+  --gray-900:#212529;
+  --shadow:0 2px 6px rgba(0,0,0,.08);
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--gray-50);
+  color:var(--gray-900);
+  line-height:1.6;
+  font-size:15px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--red) 60%,var(--orange) 100%);
+  color:#fff;
+  padding:48px 0 36px;
+  text-align:center;
+  border-bottom:6px solid var(--yellow);
+}
+header.hero .eyebrow{
+  display:inline-block;
+  background:rgba(255,255,255,.15);
+  padding:4px 14px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+header.hero h1{
+  font-size:42px;
+  font-weight:800;
+  letter-spacing:-.5px;
+  margin-bottom:10px;
+  line-height:1.15;
+}
+header.hero .sub{
+  font-size:17px;
+  color:#f1d3d3;
+  max-width:880px;
+  margin:0 auto 8px;
+}
+header.hero .meta{
+  font-size:13px;
+  color:#d8b9b9;
+  margin-top:8px;
+}
+nav.toc{
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:22px 26px;
+  margin:30px 0;
+  box-shadow:var(--shadow);
+}
+nav.toc h2{
+  font-size:18px;
+  color:var(--navy);
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+nav.toc h2::before{content:"📑"}
+nav.toc ol{
+  columns:2;
+  column-gap:30px;
+  margin-left:0;
+  padding-left:24px;
+}
+nav.toc ol li{
+  margin-bottom:5px;
+  font-size:13px;
+  color:var(--gray-700);
+  break-inside:avoid;
+}
+nav.toc ol li a{color:var(--teal);text-decoration:none}
+nav.toc ol li a:hover{text-decoration:underline}
+section{
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:28px 30px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow);
+  scroll-margin-top:20px;
+}
+section h2{
+  font-size:24px;
+  color:var(--navy);
+  border-bottom:3px solid var(--red);
+  padding-bottom:10px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+section h2 .num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;height:36px;
+  background:var(--red);
+  color:#fff;
+  border-radius:50%;
+  font-size:15px;
+  font-weight:700;
+  flex-shrink:0;
+}
+section h3{
+  font-size:17px;
+  color:var(--teal);
+  margin:16px 0 8px;
+  padding-left:12px;
+  border-left:4px solid var(--yellow);
+}
+section p{margin-bottom:8px}
+section ul,section ol{margin:6px 0 12px 24px}
+section ul li,section ol li{margin-bottom:4px}
+section .lead{
+  font-size:15px;
+  color:var(--gray-700);
+  background:var(--gray-100);
+  border-left:4px solid var(--red);
+  padding:10px 14px;
+  border-radius:6px;
+  margin-bottom:12px;
+}
+.callout{
+  border-left:5px solid var(--yellow);
+  background:#fff8e1;
+  padding:10px 14px;
+  border-radius:6px;
+  margin:12px 0;
+  font-size:14px;
+}
+.callout.pearl{border-left-color:#0e7c7b;background:#e0f2f1}
+.callout.warn{border-left-color:#f4b400;background:#fff8e1}
+.callout.danger{border-left-color:#c0392b;background:#ffebee}
+.callout.cyan{border-left-color:var(--blue);background:#e3f2fd}
+.callout.purple{border-left-color:var(--purple);background:#f4ecf7}
+.callout strong{color:var(--navy)}
+.callout .label{
+  display:inline-block;
+  font-size:10px;
+  letter-spacing:1px;
+  font-weight:700;
+  text-transform:uppercase;
+  margin-right:6px;
+  padding:1px 6px;
+  border-radius:3px;
+  background:rgba(0,0,0,.08);
+}
+.defn-card{
+  border:2px solid var(--red);
+  background:#ffebee;
+  border-radius:var(--radius);
+  padding:14px 16px;
+  margin:10px 0;
+}
+.defn-card h4{color:var(--red);margin:0 0 6px;font-size:15px}
+.defn-card p{margin:0;font-size:14.5px}
+.clin-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+.clin-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+}
+.clin-card.s1{border-color:var(--red);background:#ffebee}
+.clin-card.s1 h4{color:var(--red)}
+.clin-card.s2{border-color:var(--purple);background:#f4ecf7}
+.clin-card.s2 h4{color:var(--purple)}
+.clin-card h4{margin:0 0 5px;font-size:14px}
+.clin-card p{font-size:13.5px;margin:0}
+.eti-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+.eti-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+  text-align:center;
+}
+.eti-card.acc{border-color:var(--red);background:#ffebee}
+.eti-card.acc h4{color:var(--red)}
+.eti-card.obst{border-color:var(--purple);background:#f4ecf7}
+.eti-card.obst h4{color:var(--purple)}
+.eti-card.surg{border-color:var(--blue);background:#e3f2fd}
+.eti-card.surg h4{color:var(--blue)}
+.eti-card h4{margin:0 0 3px;font-size:13.5px}
+.eti-card p{font-size:12.5px;margin:0;color:var(--gray-700)}
+.lab-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:12px 0;
+  font-size:14px;
+}
+.lab-table th{
+  background:var(--navy);
+  color:#fff;
+  padding:9px 12px;
+  text-align:left;
+  font-weight:600;
+  border:1px solid var(--navy);
+}
+.lab-table td{
+  border:1px solid var(--gray-200);
+  padding:8px 12px;
+  vertical-align:top;
+}
+.lab-table .inc{color:var(--red);font-weight:700}
+.lab-table .dec{color:var(--blue);font-weight:700}
+.lab-table tr:nth-child(even) td{background:var(--gray-100)}
+.rx-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+.rx-card{
+  border:2px solid var(--gray-200);
+  border-radius:var(--radius);
+  padding:12px 14px;
+  background:var(--gray-50);
+}
+.rx-card.r1{border-color:var(--blue);background:#e3f2fd}
+.rx-card.r1 h4{color:var(--blue)}
+.rx-card.r2{border-color:var(--green);background:#e8f5e9}
+.rx-card.r2 h4{color:var(--green)}
+.rx-card.r3{border-color:var(--orange);background:#fdf2e9}
+.rx-card.r3 h4{color:var(--orange)}
+.rx-card h4{margin:0 0 5px;font-size:14px}
+.rx-card p{font-size:13px;margin:0}
+.activity-card{
+  background:linear-gradient(135deg,#fff8e1 0%,#fff3cd 100%);
+  border:2px solid var(--yellow);
+  border-radius:var(--radius);
+  padding:18px 22px;
+  margin-top:10px;
+}
+.activity-card h3{
+  color:#b8860b;
+  margin:0 0 8px;
+  border:none;
+  padding:0;
+  font-size:17px;
+}
+.activity-card p{margin:0;font-size:14px}
+.quiz-card{
+  background:linear-gradient(135deg,#e3f2fd 0%,#bbdefb 100%);
+  border:2px solid var(--blue);
+  border-radius:var(--radius);
+  padding:18px 22px;
+  margin-top:12px;
+  text-align:center;
+}
+.quiz-card h3{
+  color:var(--navy);
+  margin:0 0 8px;
+  border:none;
+  padding:0;
+  font-size:18px;
+}
+.quiz-card a{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  padding:8px 18px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  margin-top:6px;
+}
+.quiz-card a:hover{background:#1565c0}
+.refs{
+  font-size:14px;
+  background:var(--gray-100);
+  padding:16px 20px;
+  border-radius:6px;
+  border-left:4px solid var(--gray-700);
+}
+.refs h3{margin-top:0}
+.refs ol{margin-left:24px}
+.refs li{margin-bottom:5px}
+.refs a{color:var(--blue);text-decoration:none;word-break:break-all}
+.refs a:hover{text-decoration:underline}
+footer{
+  text-align:center;
+  padding:30px 20px;
+  font-size:12px;
+  color:var(--gray-700);
+  border-top:1px solid var(--gray-200);
+  margin-top:30px;
+  background:#fff;
+}
+footer .paths{font-family:monospace;font-size:11px;color:var(--teal);margin-top:8px}
+@media (max-width:760px){
+  .clin-grid,.eti-grid,.rx-grid{grid-template-columns:1fr}
+  nav.toc ol{columns:1}
+  header.hero h1{font-size:30px}
+}
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Obstetrics · Chapter 13</span>
+    <h1>Disseminated Intravascular Coagulopathy (DIC)</h1>
+    <p class="sub">A consumption coagulopathy unique to its obstetric triggers — abruptio placentae, amniotic fluid embolism, severe preeclampsia, vesicular mole, and IUFD. Recognizing the lab pattern (↑PT/↑PTT/↑D-dimer, ↓platelets/↓fibrinogen) early is the difference between life and death.</p>
+    <p class="meta">Premium Medical-Reference Infographic · Source: <em>Book Obstetrics 2025-2026-013</em></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1">ILOs of this chapter</a></li>
+    <li><a href="#s2">Definition of DIC</a></li>
+    <li><a href="#s3">Clinical Picture</a></li>
+    <li><a href="#s4">Etiology — Obstetric Triggers</a></li>
+    <li><a href="#s5">Investigations — Lab Pattern</a></li>
+    <li><a href="#s6">Treatment</a></li>
+    <li><a href="#s7">Student Activity &amp; References</a></li>
+  </ol>
+</nav>
+
+<!-- ========== 1. ILOs ========== -->
+<section id="s1">
+  <h2><span class="num">1</span>ILOs of this chapter</h2>
+  <p class="lead">By the end of this chapter the student should be able to:</p>
+  <ul>
+    <li>To understand the meaning of DIC</li>
+    <li>To be able to outline variable causes of DIC in a pregnant woman</li>
+    <li>To be able to explain the management of such disorder with pregnancy</li>
+  </ul>
+</section>
+
+<!-- ========== 2. Definition ========== -->
+<section id="s2">
+  <h2><span class="num">2</span>Definition of DIC</h2>
+  <div class="defn-card">
+    <h4>Definition</h4>
+    <p>A disorder of hemostasis in which intravascular activation of both clotting and fibrinolytic systems occurs leading to consumption of coagulation factors and platelets.</p>
+  </div>
+  <div class="callout danger"><span class="label">Danger</span>DIC is a <strong>consumption coagulopathy</strong> — both the clotting and the fibrinolytic cascades are activated simultaneously, so the patient bleeds <em>and</em> micro-thromboses at the same time. The single best description is "running out of coagulation factors while the system is still turned on."</div>
+</section>
+
+<!-- ========== 3. Clinical picture ========== -->
+<section id="s3">
+  <h2><span class="num">3</span>Clinical Picture</h2>
+  <div class="clin-grid">
+    <div class="clin-card s1">
+      <h4>1 · Surgical / Operative</h4>
+      <p>The patient will experience <strong>systemic hemorrhage and oozing during operations.</strong></p>
+    </div>
+    <div class="clin-card s2">
+      <h4>2 · Obstetric</h4>
+      <p><strong>Postpartum hemorrhage.</strong></p>
+    </div>
+  </div>
+  <div class="callout warn"><span class="label">Warn</span>The single most distinctive bedside clue is <strong>oozing from every puncture site, suture line, and raw surface at once</strong> — a feature not seen in ordinary postpartum hemorrhage. When the surgeon reports "everything is bleeding," think DIC.</div>
+</section>
+
+<!-- ========== 4. Etiology ========== -->
+<section id="s4">
+  <h2><span class="num">4</span>Etiology — Obstetric Triggers</h2>
+  <p class="lead">DIC in obstetrics is almost always <strong>secondary</strong> — the trigger is one of a small list of well-defined obstetric events.</p>
+  <div class="eti-grid">
+    <div class="eti-card obst">
+      <h4>1</h4>
+      <p>Preeclampsia and eclampsia.</p>
+    </div>
+    <div class="eti-card obst">
+      <h4>2</h4>
+      <p>Amniotic fluid embolism.</p>
+    </div>
+    <div class="eti-card obst">
+      <h4>3</h4>
+      <p>Abruptio placenta.</p>
+    </div>
+    <div class="eti-card obst">
+      <h4>4</h4>
+      <p>Vesicular mole.</p>
+    </div>
+    <div class="eti-card obst">
+      <h4>5</h4>
+      <p>IUFD and missed abortion.</p>
+    </div>
+    <div class="eti-card acc">
+      <h4>6</h4>
+      <p>Incompatible blood transfusion.</p>
+    </div>
+    <div class="eti-card surg">
+      <h4>7</h4>
+      <p>Rupture uterus and placenta accreta.</p>
+    </div>
+  </div>
+  <div class="callout cyan"><span class="label">Pearl</span>The two highest-yield triggers to memorize are <strong>abruptio placentae</strong> and <strong>amniotic fluid embolism</strong> — both release massive thromboplastin into the maternal circulation and can flip a stable patient into fulminant DIC within minutes.</div>
+  <div class="callout pearl"><span class="label">Pearl</span>Retained dead fetus syndrome is the <strong>chronic</strong> form — low-grade consumptive coagulopathy over days, classically seen with IUFD retained &gt; 4 weeks. Coagulopathy corrects within hours of delivery of the fetus.</div>
+</section>
+
+<!-- ========== 5. Investigations ========== -->
+<section id="s5">
+  <h2><span class="num">5</span>Investigations — Lab Pattern</h2>
+  <p class="lead">The classical DIC panel is a <strong>mirror image</strong> — clotting factors up, the components that get consumed down.</p>
+  <table class="lab-table">
+    <thead>
+      <tr><th style="width:55%">Test</th><th>Direction in DIC</th><th>Mechanism</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Prothrombin time (PT)</strong></td>
+        <td><span class="inc">↑ Increased</span></td>
+        <td>Consumption of extrinsic-pathway factors (V, VII, X, II / fibrinogen).</td>
+      </tr>
+      <tr>
+        <td><strong>Partial thromboplastin time (PTT)</strong></td>
+        <td><span class="inc">↑ Increased</span></td>
+        <td>Consumption of intrinsic-pathway factors (VIII, IX, XI, XII).</td>
+      </tr>
+      <tr>
+        <td><strong>Fibrin degradation products (D-dimer)</strong></td>
+        <td><span class="inc">↑ Increased</span></td>
+        <td>Fibrinolysis of cross-linked fibrin — the most sensitive single marker.</td>
+      </tr>
+      <tr>
+        <td><strong>Platelet count</strong></td>
+        <td><span class="dec">↓ Decreased</span></td>
+        <td>Consumed in micro-thrombi and by splenic/hepatic sequestration.</td>
+      </tr>
+      <tr>
+        <td><strong>Fibrinogen</strong></td>
+        <td><span class="dec">↓ Decreased</span></td>
+        <td>Converted to fibrin faster than the liver can replace it.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout cyan"><span class="label">Pearl</span>The single most useful test to order first is the <strong>D-dimer</strong> — a normal D-dimer effectively rules out DIC in pregnancy (it has very high negative predictive value). A fibrinogen &lt; 100 mg/dL in pregnancy is highly suggestive of DIC, because normal pregnancy fibrinogen is elevated (400–600 mg/dL).</div>
+</section>
+
+<!-- ========== 6. Treatment ========== -->
+<section id="s6">
+  <h2><span class="num">6</span>Treatment</h2>
+  <p class="lead">Three pillars — and the order matters: stop the trigger first, then replace what's been consumed.</p>
+  <div class="rx-grid">
+    <div class="rx-card r1">
+      <h4>1 · Treatment of the cause</h4>
+      <p>Remove the obstetric trigger (deliver the fetus in abruptio, evacuate the mole, deliver in IUFD, etc.).</p>
+    </div>
+    <div class="rx-card r2">
+      <h4>2 · Replacement transfusion</h4>
+      <p>Transfusion of fresh blood, fresh frozen plasma, cryoprecipitate and platelets.</p>
+    </div>
+    <div class="rx-card r3">
+      <h4>3 · Anticoagulant</h4>
+      <p>Used selectively — typically low-dose heparin in chronic consumptive states (e.g., retained IUFD, vesicular mole) to slow further consumption. Avoid in active hemorrhage.</p>
+    </div>
+  </div>
+  <div class="callout danger"><span class="label">Danger</span><strong>Treatment of the cause comes first</strong> — no amount of plasma or platelets will stop DIC if the trigger (e.g., retained dead fetus, undiagnosed abruption, molar tissue) is still in place. Delivery of the fetus in abruptio placentae is itself the cure.</div>
+  <div class="callout warn"><span class="label">Warn</span>Anticoagulation in DIC is a <strong>double-edged sword</strong> — useful in chronic low-grade consumptive states, but <em>dangerous</em> in fulminant obstetric DIC with active bleeding. Junior clinicians often over-anticoagulate. Follow local Massive Transfusion Protocol (MTP) and hematology guidance.</div>
+</section>
+
+<!-- ========== 7. Student Activity + References ========== -->
+<details class="study-section"><summary>Student Activity & References</summary><section id="s7">
+  <h2><span class="num">7</span>Student Activity &amp; References</h2>
+  <div class="activity-card">
+    <h3>Bedside / Lab Audit Task</h3>
+    <p>Each group of students is assigned a task to check the investigations of five departmental admitted pregnant cases in order to identify whether they had DIC or not.</p>
+  </div>
+  <div class="callout cyan"><span class="label">Note</span>For each case, look for the <strong>full DIC pattern</strong> (↑PT, ↑PTT, ↑D-dimer, ↓platelets, ↓fibrinogen) — a single abnormal value is not DIC. Then identify the underlying obstetric trigger.</div>
+
+  <div class="quiz-card">
+    <h3>Chapter 13 Self-Test</h3>
+    <p>Test your knowledge of DIC pathophysiology, obstetric triggers, lab interpretation, and treatment pillars.</p>
+    <a href="https://forms.gle/YtkyrT7QnGwrmSVf8" target="_blank" rel="noopener">Open Google Form →</a>
+  </div>
+
+  <div class="refs" style="margin-top:18px">
+    <h3>Source &amp; Files</h3>
+    <ol>
+      <li>Book Obstetrics 2025-2026, Chapter 13 — <em>Disseminated Intravascular Coagulopathy (DIC)</em> (source PDF: <code>raw materal/Book Obstetrics 2025-2026-013.pdf</code>, 2 pages, ~3.4 KB source text).</li>
+      <li>Source `pdftotext -layout` extract (44 lines, ~1.7 KB) at <code>raw materal/13_Disseminated_Intravascular_Coagulopathy_DIC/source.txt</code>.</li>
+    </ol>
+    <h3 style="margin-top:12px">Practice questions</h3>
+    <ol start="3">
+      <li>Chapter 13 self-test (Google Form): <a href="https://forms.gle/YtkyrT7QnGwrmSVf8" target="_blank" rel="noopener">https://forms.gle/YtkyrT7QnGwrmSVf8</a></li>
+    </ol>
+    <h3 style="margin-top:12px">Image / Visual Audit</h3>
+    <ol start="4">
+      <li><strong>No source images retained.</strong> <code>pdfimages -list</code> returns 0 images. The source PDF is a text-only chapter. No SOURCE IMAGE (green-bordered) cards were required.</li>
+      <li><strong>No external images used.</strong> No EXTERNAL IMAGE (red-bordered) cards were required.</li>
+    </ol>
+    <h3 style="margin-top:12px">Files in this topic</h3>
+    <ol start="6">
+      <li><code>raw materal/13_Disseminated_Intravascular_Coagulopathy_DIC/source.pdf</code></li>
+      <li><code>raw materal/13_Disseminated_Intravascular_Coagulopathy_DIC/source.txt</code> (44 lines, full pdftotext -layout extract)</li>
+      <li><code>html/13_Disseminated_Intravascular_Coagulopathy_DIC.html</code> (this file)</li>
+      <li><code>images/13_Disseminated_Intravascular_Coagulopathy_DIC.png</code> (rendered PNG infographic)</li>
+      <li><code>quality_reports/13_Disseminated_Intravascular_Coagulopathy_DIC_quality_report.md</code></li>
+    </ol>
+  </div>
+</section></details>
+
+</main>
+
+<footer>
+  <div>Generated as part of the <strong>Sequential Infographic Generation System</strong> (Topic 13: Disseminated Intravascular Coagulopathy) — Premium Medical-Reference Infographic.</div>
+  <div class="paths">
+    Source: <code>raw materal/Book Obstetrics 2025-2026-013.pdf</code> &nbsp;·&nbsp;
+    HTML: <code>html/13_Disseminated_Intravascular_Coagulopathy_DIC.html</code> &nbsp;·&nbsp;
+    PNG: <code>images/13_Disseminated_Intravascular_Coagulopathy_DIC.png</code>
+  </div>
+</footer>
+
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

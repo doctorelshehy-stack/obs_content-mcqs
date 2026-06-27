@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 21 — Fetal Skull</title>
+<style>
+  :root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --primary:#60A5FA; --primary-soft:#DBEAFE; --accent:#22C55E; --accent-soft:#DCFCE7;
+    --warn:#F59E0B; --warn-soft:#FEF3C7; --danger:#EF4444; --danger-soft:#FEE2E2;
+    --pearl:#8B5CF6; --pearl-soft:#EDE9FE; --note:#0E7490; --note-soft:#CFFAFE;
+    --border:#E2E8F0; --soft:#F1F5F9;
+    --src:#22C55E; --src-bg:#DCFCE7;       /* GREEN — SOURCE visuals (per second_task.md) */
+    --ext:#EF4444; --ext-bg:#FEE2E2;       /* RED   — EXTERNAL visuals (per second_task.md) */
+    --shadow:0 1px 2px rgba(15,23,42,.04), 0 4px 14px rgba(15,23,42,.05);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:15px;}
+  .wrap{max-width:1180px;margin:0 auto;padding:36px 28px 80px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,#1E3A8A 0%,#22C55E 60%,#60A5FA 100%);
+    color:#fff;border-radius:18px;padding:32px 36px;box-shadow:var(--shadow);
+    margin-bottom:28px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+    background:radial-gradient(circle,rgba(255,255,255,.18),transparent 60%);}
+  .hero .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.92;font-weight:700;}
+  .hero h1{margin:8px 0 6px;font-size:34px;line-height:1.18;font-weight:800;}
+  .hero .sub{opacity:.95;font-size:15px;max-width:820px;}
+  .chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);
+    color:#fff;font-size:12px;padding:5px 10px;border-radius:999px;font-weight:600;}
+
+  /* ---------- TOC ---------- */
+  .toc{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:18px 22px;box-shadow:var(--shadow);margin-bottom:28px;}
+  .toc h2{margin:0 0 10px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:30px;}
+  .toc li{margin:4px 0;break-inside:avoid;}
+  .toc a{color:var(--primary);text-decoration:none;font-weight:600;font-size:14px;}
+  .toc a:hover{text-decoration:underline;}
+
+  /* ---------- Section ---------- */
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:24px 28px;box-shadow:var(--shadow);margin-bottom:22px;scroll-margin-top:20px;}
+  section h2{margin:0 0 14px;font-size:22px;color:var(--ink);
+    border-left:5px solid var(--primary);padding-left:12px;font-weight:800;background:#F8FAFC;
+    border-radius:0 10px 10px 0;padding-top:6px;padding-bottom:6px;}
+  section h3{margin:18px 0 8px;font-size:16px;color:#0E7490;font-weight:700;}
+  section h4{margin:14px 0 6px;font-size:14px;color:var(--ink);font-weight:700;}
+  section p{margin:8px 0;color:#243049;}
+  section ul,section ol{margin:8px 0 8px 22px;padding:0;}
+  section li{margin:4px 0;}
+
+  /* ---------- Sub-blocks ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .card{background:var(--soft);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .card h4{margin:0 0 6px;font-size:14px;color:var(--ink);font-weight:700;}
+  .card p, .card li{font-size:14px;color:#243049;}
+  .card.alt{background:#F0F4FB;}
+  .card.green{background:var(--accent-soft);border-color:#86EFAC;}
+  .card.blue{background:var(--primary-soft);border-color:#93C5FD;}
+  .card.amber{background:var(--warn-soft);border-color:#FCD9A1;}
+
+  /* ---------- Table ---------- */
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px;
+    background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+  th,td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--primary-soft);color:var(--ink);font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.04em;}
+  tr:nth-child(even) td{background:#FAFBFE;}
+  td.center, th.center{text-align:center;}
+  td.num, th.num{text-align:center;width:90px;}
+
+  /* ---------- Callouts ---------- */
+  .pearl,.warn,.danger,.note{border-radius:10px;padding:12px 16px;margin:14px 0;
+    border-left:6px solid;font-size:14px;}
+  .pearl{background:var(--pearl-soft);border-color:var(--pearl);color:#4C1D95;}
+  .warn{background:var(--warn-soft);border-color:var(--warn);color:#7C2D12;}
+  .danger{background:var(--danger-soft);border-color:var(--danger);color:#7F1D1D;}
+  .note{background:var(--note-soft);border-color:var(--note);color:#155E75;}
+  .pearl::before{content:"💎 PEARL  ";font-weight:800;letter-spacing:.04em;}
+  .warn::before{content:"⚠ WARN   ";font-weight:800;letter-spacing:.04em;}
+  .danger::before{content:"⛔ DANGER ";font-weight:800;letter-spacing:.04em;}
+  .note::before{content:"📝 NOTE   ";font-weight:800;letter-spacing:.04em;}
+
+  /* ---------- Visual markers (per second_task.md) ---------- */
+  .src-viz{background:var(--src-bg);border:2px solid var(--src);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .ext-viz{background:var(--ext-bg);border:2px solid var(--ext);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .src-viz .tag,.ext-viz .tag{display:inline-block;font-size:11px;font-weight:800;
+    letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+    margin-bottom:8px;}
+  .src-viz .tag{background:var(--src);color:#fff;}
+  .ext-viz .tag{background:var(--ext);color:#fff;}
+  .viz-caption{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px;line-height:1.4;}
+  .src-viz img,.ext-viz img{max-width:100%;height:auto;display:block;margin:6px auto 0;
+    border-radius:6px;object-fit:contain;}
+  .src-viz .src-info,.ext-viz .ext-info{font-size:12px;margin-top:6px;font-weight:600;}
+  .src-viz .src-info{color:#15803D;}
+  .ext-viz .ext-info{color:#B91C1C;}
+
+  /* ---------- Misc ---------- */
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;}
+  .pill{background:var(--primary-soft);color:var(--primary);font-size:12px;font-weight:700;
+    padding:4px 10px;border-radius:999px;border:1px solid #BFD3F5;}
+  .pill.alt{background:var(--accent-soft);color:#15803D;border-color:#86EFAC;}
+  .pill.warn{background:var(--warn-soft);color:var(--warn);border-color:#FCD9A1;}
+  .pill.danger{background:var(--danger-soft);color:var(--danger);border-color:#F4B8B8;}
+  .pill.purple{background:var(--pearl-soft);color:var(--pearl);border-color:#DDD6FE;}
+
+  .meta{font-size:12px;color:var(--muted);margin-top:6px;}
+
+  /* ---------- References ---------- */
+  .ref-list{font-size:13px;line-height:1.7;color:#243049;padding-left:20px;}
+  .ref-list li{margin:4px 0;}
+  .ref-list a{color:var(--primary);text-decoration:none;}
+  .ref-list a:hover{text-decoration:underline;}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:30px;text-align:center;color:var(--muted);font-size:12px;}
+
+  @media (max-width:900px){
+    .grid2,.grid3,.grid4{grid-template-columns:1fr;}
+    .toc ol{columns:1;}
+    .hero h1{font-size:26px;}
+  }
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ============================================================ HERO -->
+  <header class="hero">
+    <div class="kicker">Topic 21 · Chapter 21 · Obstetrics</div>
+    <h1>Fetal Skull — Bones, Sutures, Fontanelles &amp; Diameters</h1>
+    <div class="sub">The three parts of the fetal skull (Base, Face, Vault), the bones of the vault and the sutures that join them, the vertex and brow landmarks, the anterior and posterior fontanelles and their clinical importance, and the longitudinal and transverse diameters of the fetal skull relevant to engagement and delivery.</div>
+    <div class="chips">
+      <span class="chip">3 parts of the skull (Base · Face · Vault)</span>
+      <span class="chip">5 vault sutures (frontal · sagittal · lambdoid · coronal · temporal)</span>
+      <span class="chip">6 fontanelles (2 obstetrically important)</span>
+      <span class="chip">6 longitudinal diameters</span>
+      <span class="chip">4 transverse diameters</span>
+      <span class="chip">2 source diagrams · 0 external visuals</span>
+    </div>
+  </header>
+
+  <!-- ============================================================ TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of contents</h2>
+    <ol>
+      <li><a href="#s1">Intended learning outcomes (ILOs)</a></li>
+      <li><a href="#s2">The fetal skull — three parts (Base, Face, Vault)</a></li>
+      <li><a href="#s3">Bones of the vault and the sutures between them</a></li>
+      <li><a href="#s4">The vertex and the brow</a></li>
+      <li><a href="#s5">The fontanelles — 6 areas, 2 clinically important</a></li>
+      <li><a href="#s6">Anterior vs posterior fontanelle — comparison</a></li>
+      <li><a href="#s7">Diameters of the fetal skull — overview</a></li>
+      <li><a href="#s8">Longitudinal diameters (6)</a></li>
+      <li><a href="#s9">Transverse diameters (4)</a></li>
+      <li><a href="#s10">Student activity · Assessment · References</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================================================ s1 -->
+  <section id="s1">
+    <h2>1 · Intended Learning Outcomes (ILOs)</h2>
+    <p>At the end of this chapter the student should be able to:</p>
+    <ul>
+      <li>To understand the components of fetal skull</li>
+      <li>To be able to differentiate between anterior and posterior fontanelle.</li>
+      <li>To be able to describe various diameters of fetal skull</li>
+    </ul>
+  </section>
+
+  <!-- ============================================================ s2 -->
+  <section id="s2">
+    <h2>2 · The fetal skull — three parts separated by sutures and fontanelles</h2>
+    <p>The fetal skull consists of <strong>3 parts</strong> separated by <strong>sutures</strong> and <strong>fontanelles</strong>:</p>
+    <div class="grid3">
+      <div class="card blue">
+        <h4>1. Base</h4>
+        <p>From the <strong>chin</strong> to the <strong>foramen magnum</strong>.</p>
+      </div>
+      <div class="card green">
+        <h4>2. Face</h4>
+        <p>From the <strong>chin</strong> to the <strong>root of the nose</strong> and the <strong>suborbital margin</strong>.</p>
+      </div>
+      <div class="card amber">
+        <h4>3. Vault</h4>
+        <p>Consists of <strong>three regions</strong> (see §3) and is compressible during labour, allowing the fetal head to mould through the birth canal.</p>
+      </div>
+    </div>
+
+    <div class="pearl">
+      <strong>Clinical pearl:</strong> The base of the skull is a <strong>rigid, non-compressible</strong> ring (because the bones are fused at the base), while the <strong>vault is compressible</strong> — this is what allows the fetal head to undergo <em>moulding</em> as it passes through the pelvis.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which part of the fetal skull is compressible during labour, allowing moulding?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Base</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Face</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Vault</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Foramen magnum</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The vault is compressible during labour — its five flat bones are joined by fibrous sutures that allow sliding. The base is rigid and non-compressible because bones are fused.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The base of the fetal skull extends from:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Chin to foramen magnum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Chin to root of nose</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Root of nose to occiput</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Foramen magnum to vertex</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The base extends from the chin to the foramen magnum and is a rigid, non-compressible ring.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s3 -->
+  <section id="s3">
+    <h2>3 · Bones of the vault and the sutures between them</h2>
+    <p>The vault is built from <strong>five flat bones</strong> joined by fibrous sutures that allow the bones to slide over each other during labour (moulding):</p>
+
+    <div class="src-viz">
+      <span class="tag">Source Image</span>
+      <img src="../../../../../extracted/assets/extracted_images/21_fetal_skull/img-000.jpg" alt="Lateral (side) view line drawing of a fetal skull labelling the frontal, parietal, temporal, and occipital bones; the coronal and lambdoid sutures; the anterior and posterior fontanelles; the vertex; and the inion (external occipital protuberance)" loading="lazy">
+      <div class="src-info">Source: Provided Material (Chapter 21 — Fetal Skull)</div>
+      <div class="viz-caption">Figure 1 — Lateral (side) view of the fetal skull, identifying the bones (frontal, parietal, temporal, occipital), the coronal and lambdoid sutures, the anterior and posterior fontanelles, the vertex, and the inion. Orientation arrow points to the <em>face</em>.</div>
+    </div>
+
+    <h3>Composition of the vault — 5 bones joined by 5 named sutures</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Bones (how many)</th>
+          <th>Separating suture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>2 frontal bones</strong></td>
+          <td>separated by the <strong>frontal suture</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2 parietal bones</strong></td>
+          <td>separated by the <strong>sagittal suture</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Occipital bone</strong></td>
+          <td>separated from the parietal bones by the <strong>lambdoid suture</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Frontal ↔ parietal bones</strong></td>
+          <td>joined by the <strong>coronal suture</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2 parietal ↔ temporal bone</strong> on each side</td>
+          <td>joined by the <strong>temporal suture</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <strong>Note:</strong> The exact phrasing of the source is preserved: the lambdoid suture separates the occipital bone from the parietal bones; the coronal suture separates the frontal from the parietal bones; each parietal bone is separated from the temporal bone on each side by the temporal suture.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">How many bones form the vault of the fetal skull?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">3</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">4</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">5</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">6</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The vault is built from 5 flat bones: 2 frontal bones, 2 parietal bones, and 1 occipital bone.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which suture separates the two frontal bones?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Sagittal suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Coronal suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Frontal suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Lambdoid suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The frontal suture separates the two frontal bones. The sagittal suture separates the two parietal bones.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The lambdoid suture separates:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Frontal from parietal bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The two parietal bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Parietal from temporal bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Occipital from parietal bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The lambdoid suture separates the occipital bone from the parietal bones.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s4 -->
+  <section id="s4">
+    <h2>4 · The vertex and the brow</h2>
+
+    <h3>The vertex</h3>
+    <p>The <strong>vertex</strong> is the area of the vault bounded:</p>
+    <ul>
+      <li><strong>Anteriorly</strong> — by the anterior fontanelle and the coronal suture.</li>
+      <li><strong>Posteriorly</strong> — by the posterior fontanelle and lambdoid suture.</li>
+      <li><strong>Laterally</strong> — by 2 lines passing by the parietal eminencies.</li>
+    </ul>
+
+    <h3>The brow</h3>
+    <p>The <strong>brow</strong> is the area from the <strong>nose and supra-orbital ridges</strong> to the <strong>anterior fontanelle and coronal suture</strong>.</p>
+
+    <div class="danger">
+      <strong>Why these landmarks matter:</strong> The <strong>vertex</strong> is the <em>presenting area</em> in a well-flexed vertex (occipito-anterior) delivery — the smallest possible plane. The <strong>brow</strong> is the presenting area in <em>brow presentation</em> — a malpresentation (see §8 — Mento-vertical diameter 13.5 cm).
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The vertex of the fetal skull is bounded anteriorly by:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Posterior fontanelle and lambdoid suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Anterior fontanelle and coronal suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Nose and supra-orbital ridges</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Parietal eminences</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The vertex is bounded anteriorly by the anterior fontanelle and coronal suture, posteriorly by the posterior fontanelle and lambdoid suture, and laterally by lines through the parietal eminences.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The brow presentation has which engagement diameter?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Suboccipito-bregmatic (9.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Submento-bregmatic (9.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Mento-vertical (13.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Occipito-frontal (11.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In brow presentation, the presenting diameter is the mento-vertical (13.5 cm), which exceeds the largest pelvic inlet diameter, so the head cannot enter the pelvis.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s5 -->
+  <section id="s5">
+    <h2>5 · The fontanelles — 6 areas, 2 clinically important</h2>
+    <p>Fontanelles are <strong>6 areas that lie at the meeting of the sutures</strong>.</p>
+
+    <h3>Of the 6 fontanelles:</h3>
+    <div class="grid2">
+      <div class="card alt">
+        <h4>4 fontanelles — no obstetric importance</h4>
+        <p>Lie at the <strong>anterior and posterior end of the temporal sutures on each side</strong>. Useful anatomically but not palpable from below during labour.</p>
+      </div>
+      <div class="card green">
+        <h4>2 fontanelles — obstetrically important</h4>
+        <p>The <strong>anterior</strong> and <strong>posterior</strong> fontanelles are important to diagnose on vaginal examination.</p>
+      </div>
+    </div>
+
+    <h3>The anterior and posterior fontanelles are used to diagnose:</h3>
+    <ul>
+      <li><strong>The vertex presentation</strong> — the anterior and posterior fontanelles are both palpable in vertex presentation.</li>
+      <li><strong>The position of the occiput</strong> — the diamond anterior fontanelle can be distinguished from the triangular posterior fontanelle on palpation.</li>
+      <li><strong>The degree of flexion of the head</strong> — the relative position of the two fontanelles tells the examiner how flexed the head is.</li>
+    </ul>
+  
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">How many fontanelles are there in the fetal skull, and how many are obstetrically important?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">4 fontanelles, 2 important</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">6 fontanelles, 2 important</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">6 fontanelles, 4 important</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">4 fontanelles, 4 important</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">There are 6 fontanelles in the fetal skull. Only 2 are obstetrically important: the anterior and posterior fontanelles. The other 4 lie at the ends of the temporal sutures.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The anterior and posterior fontanelles help diagnose all EXCEPT:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Vertex presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Position of the occiput</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Sex of the fetus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Degree of flexion of the head</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The fontanelles help diagnose vertex presentation, the position of the occiput (by distinguishing diamond vs triangular shape), and the degree of flexion. They do not determine fetal sex.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s6 -->
+  <section id="s6">
+    <h2>6 · Anterior vs posterior fontanelle — comparison</h2>
+
+    <div class="src-viz">
+      <span class="tag">Source Image</span>
+      <img src="../../../../../extracted/assets/extracted_images/21_fetal_skull/img-001.jpg" alt="Superior (top-down) view of the normal skull of the newborn showing the frontal bones, parietal bones and occipital bone with the metopic, coronal, sagittal and lambdoid sutures and the diamond-shaped anterior fontanelle and triangular posterior fontanelle labelled" loading="lazy">
+      <div class="src-info">Source: Provided Material (Chapter 21 — Fetal Skull)</div>
+      <div class="viz-caption">Figure 2 — <em>"Normal Skull of the Newborn"</em> — superior (top-down) view. The <strong>anterior fontanelle</strong> is the large lozenge/diamond-shaped membranous area at the junction of the metopic, coronal, and sagittal sutures. The <strong>posterior fontanelle</strong> is the smaller triangular area at the junction of the sagittal and lambdoid sutures.</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="center">Anterior Fontanelle<br>(Bregma)</th>
+          <th class="center">Posterior Fontanelle<br>(Lambda)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Shape</strong></td>
+          <td class="center"><strong>Large, and lozenge shaped.</strong></td>
+          <td class="center"><strong>Small and triangular.</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Floor</strong></td>
+          <td class="center">Its floor is <strong>membranous</strong>.</td>
+          <td class="center">Its floor is <strong>bony</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Bones surrounding it</strong></td>
+          <td class="center">Surrounded by <strong>4 bones</strong>.<br>(2 frontal and 2 parietal).</td>
+          <td class="center">Surrounded by <strong>3 bones</strong>.<br>(2 parietal and occipital).</td>
+        </tr>
+        <tr>
+          <td><strong>Closure</strong></td>
+          <td class="center">The floor is completely ossified <strong>1.5 years after birth</strong>.</td>
+          <td class="center">The floor is completely ossified at <strong>full term</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Behaviour during moulding</strong></td>
+          <td class="center">The surrounding bones are <strong>not overlapping during moulding</strong>.</td>
+          <td class="center">The surrounding bones are <strong>overlapping during moulding</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pearl">
+      <strong>Memory aid:</strong> <strong>Anterior</strong> → <em>"<strong>A</strong>fter birth" </em>(closes ~1.5 years); <strong>Posterior</strong> → <em>"<strong>P</strong>re-birth / at term"</em> (closes at term). Shape: <em>Anterior = Diamond</em>, <em>Posterior = Triangle</em>.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The anterior fontanelle (bregma) is surrounded by how many bones?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">2 bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">3 bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">4 bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">5 bones</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The anterior fontanelle is surrounded by 4 bones: 2 frontal and 2 parietal. It is large, lozenge-shaped, and closes about 1.5 years after birth.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which fontanelle has a bony floor at term?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Anterior fontanelle</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Posterior fontanelle</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both are membranous</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Neither — both are bony</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The posterior fontanelle has a bony floor and its surrounding bones overlap during moulding. The anterior fontanelle has a membranous floor.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The posterior fontanelle closes:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1.5 years after birth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">At full term</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">6 months after birth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">At 2 years of age</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The posterior fontanelle closes (is completely ossified) at full term. Memory aid: Posterior = Pre-birth/at term.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s7 -->
+  <section id="s7">
+    <h2>7 · Diameters of the fetal skull — overview</h2>
+    <p>The diameters of the fetal skull are divided into two groups:</p>
+    <div class="grid2">
+      <div class="card blue">
+        <h4>A · Longitudinal diameters (6)</h4>
+        <p>Run from the chin / occiput down the long axis of the skull — determine whether the head can <strong>engage</strong> and through which presentation.</p>
+      </div>
+      <div class="card green">
+        <h4>B · Transverse diameters (4)</h4>
+        <p>Run side-to-side across the skull — relevant to <strong>asynclitism</strong> and the lateral fit of the head in the pelvis.</p>
+      </div>
+    </div>
+    <p>Each group is described in detail in §8 and §9.</p>
+  
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s8 -->
+  <section id="s8">
+    <h2>8 · Longitudinal diameters (6)</h2>
+
+    <h3>Suboccipito-bregmatic = 9.5 cm</h3>
+    <p>From <strong>below the occipital protuberance</strong> to the <strong>center of the anterior fontanelle (bregma)</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in occipito-anterior with complete flexion</strong>.</li>
+    </ul>
+
+    <h3>Suboccipito-frontal = 10 cm</h3>
+    <p>From <strong>below the occipital protuberance</strong> to the <strong>anterior end of the bregma</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in occipito anterior with incomplete flexion</strong>.</li>
+      <li>It is the diameter that <strong>distends the vulva in occipito anterior if the head is allowed to extend after crowning</strong>.</li>
+    </ul>
+
+    <h3>Occipito-frontal = 11.5 cm</h3>
+    <p>From the <strong>occipital protuberance</strong> to the <strong>root of the nose</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in occipito-posterior position</strong>.</li>
+      <li>It is the diameter that <strong>distends the vulva in face to pubis delivery</strong>.</li>
+      <li>It is the diameter that <strong>distends the vulva if the head extends before crowing in occipito anterior</strong>.</li>
+    </ul>
+
+    <h3>Submento-bregmatic = 9.5 cm</h3>
+    <p>From the <strong>junction of the chin and neck</strong> to the <strong>center of the bregma</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in face presentation when the head is completely extended</strong>.</li>
+    </ul>
+
+    <h3>Submento-vertical = 11.5 cm</h3>
+    <p>From the <strong>junction of the chin and neck</strong> to the <strong>vertical point</strong> — which is a point on the <strong>sagittal suture midway between anterior and posterior fontanelles</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in the incompletely extended face</strong>.</li>
+      <li>It is the diameter that <strong>distends the vulva during face delivery</strong>.</li>
+    </ul>
+
+    <h3>Mento-vertical = 13.5 cm</h3>
+    <p>From the <strong>tip of the chin</strong> to the <strong>vertical point</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in brow presentation</strong>. As it is <strong>longer than the largest diameter of the pelvic brim</strong>, the head <strong>cannot enter the pelvis</strong>.</li>
+    </ul>
+
+    <div class="warn">
+      <strong>Why the mento-vertical (13.5 cm) is the "danger" diameter:</strong> Because it exceeds the largest pelvic inlet diameter (anatomical transverse = 13 cm, true conjugate = 11 cm), <strong>brow presentation is not engaged in the pelvis</strong> — the fetal head cannot pass through the brim. The obstetrician must wait for spontaneous flexion to vertex, or extension to face, or perform caesarean section.
+    </div>
+
+    <h3>Quick reference — longitudinal diameters</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Diameter</th>
+          <th>Length</th>
+          <th>Engagement / clinical role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Suboccipito-bregmatic</strong></td>
+          <td class="num">9.5 cm</td>
+          <td>Engagement in <strong>OA with complete flexion</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Suboccipito-frontal</strong></td>
+          <td class="num">10 cm</td>
+          <td>Engagement in <strong>OA with incomplete flexion</strong>; distends vulva if head extends after crowning.</td>
+        </tr>
+        <tr>
+          <td><strong>Occipito-frontal</strong></td>
+          <td class="num">11.5 cm</td>
+          <td>Engagement in <strong>OP position</strong>; distends vulva in face-to-pubis delivery &amp; if head extends before crowning in OA.</td>
+        </tr>
+        <tr>
+          <td><strong>Submento-bregmatic</strong></td>
+          <td class="num">9.5 cm</td>
+          <td>Engagement in <strong>face presentation, head completely extended</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Submento-vertical</strong></td>
+          <td class="num">11.5 cm</td>
+          <td>Engagement in <strong>incompletely extended face</strong>; distends vulva during face delivery.</td>
+        </tr>
+        <tr>
+          <td><strong>Mento-vertical</strong></td>
+          <td class="num">13.5 cm</td>
+          <td>Engagement in <strong>brow presentation</strong> — <em>head cannot enter the pelvis</em>.</td>
+        </tr>
+      </tbody>
+    </table>
+  
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which diameter is the engagement diameter in occipito-anterior position with complete flexion?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Suboccipito-frontal (10 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Suboccipito-bregmatic (9.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Occipito-frontal (11.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Mento-vertical (13.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The suboccipito-bregmatic diameter (9.5 cm) is the engagement diameter in occipito-anterior position with complete flexion — it is the smallest diameter presenting.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The occipito-frontal diameter (11.5 cm) is the engagement diameter in:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">OA with complete flexion</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">OA with incomplete flexion</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Occipito-posterior position</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Face presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The occipito-frontal diameter (11.5 cm) is the engagement diameter in occipito-posterior position and also distends the vulva in face-to-pubis delivery.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Why is brow presentation dangerous?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The mento-vertical diameter (13.5 cm) exceeds the pelvic inlet diameters</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The head cannot flex</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">The face presents first</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It causes cord prolapse</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The mento-vertical diameter (13.5 cm) is longer than the largest pelvic inlet diameter (anatomical transverse = 13 cm), so the head cannot enter the pelvis in brow presentation.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s9 -->
+  <section id="s9">
+    <h2>9 · Transverse diameters (4)</h2>
+
+    <h3>Biparietal = 9.5 cm</h3>
+    <p>Between the <strong>2 parietal eminencies</strong>.</p>
+    <ul>
+      <li>The <strong>most important transverse diameter</strong> — the value used in ultrasound to estimate fetal head size and confirm engagement.</li>
+    </ul>
+
+    <h3>Subparietal supraparietal = 9 cm</h3>
+    <p>From <strong>below one parietal eminence</strong> to <strong>above the opposite eminence</strong>.</p>
+    <ul>
+      <li>It is the <strong>engagement diameter in case of asynclitism</strong>.</li>
+    </ul>
+
+    <h3>Bitemporal = 8 cm</h3>
+    <p>Between the <strong>anterior ends of the temporal sutures</strong>.</p>
+
+    <h3>Bimastoid = 7.5 cm</h3>
+    <p>Between the <strong>tips of the 2 mastoid processes</strong>.</p>
+
+    <h3>Quick reference — transverse diameters</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Diameter</th>
+          <th>Length</th>
+          <th>Landmarks / clinical role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Biparietal</strong></td>
+          <td class="num">9.5 cm</td>
+          <td>Between the 2 parietal eminencies. The <strong>standard sonographic head measurement</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Subparietal supraparietal</strong></td>
+          <td class="num">9 cm</td>
+          <td>Below one parietal eminence to above the opposite eminence. <strong>Engagement diameter in asynclitism</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Bitemporal</strong></td>
+          <td class="num">8 cm</td>
+          <td>Between the anterior ends of the temporal sutures.</td>
+        </tr>
+        <tr>
+          <td><strong>Bimastoid</strong></td>
+          <td class="num">7.5 cm</td>
+          <td>Between the tips of the 2 mastoid processes.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <strong>Note:</strong> The values 9.5 / 9 / 8 / 7.5 cm come directly from the source material and are preserved verbatim.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which is the most important transverse diameter of the fetal skull?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Bitemporal (8 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Biparietal (9.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Bimastoid (7.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Subparietal supraparietal (9 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The biparietal diameter (9.5 cm) is the most important transverse diameter — it is the standard sonographic measurement for estimating fetal head size and confirming engagement.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The subparietal supraparietal diameter (9 cm) is the engagement diameter in:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Vertex presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Face presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Asynclitism</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Brow presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The subparietal supraparietal diameter is the engagement diameter in asynclitism, where the head is tilted laterally in the pelvis.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s10 -->
+  <details class="study-section"><summary>Student activity · Assessment · References</summary><section id="s10">
+    <h2>10 · Student activity · Assessment · References</h2>
+
+    <h3>Student activity (skill lab)</h3>
+    <div class="card">
+      <p>Each student is requested to go to skill lab to <strong>check and evaluate by himself (herself) the various components and diameters of fetal skull</strong>.</p>
+    </div>
+
+    <h3>Questions (self-assessment)</h3>
+    <div class="note">
+      <strong>Online quiz (Google Form):</strong> <a href="https://forms.gle/fvNnbzfYgKicAcZSA" target="_blank" rel="noopener">https://forms.gle/fvNnbzfYgKicAcZSA</a>
+    </div>
+
+    <h3>References &amp; visual sources</h3>
+    <ul class="ref-list">
+      <li>All 2 images in this chapter are <strong>source visuals</strong> extracted from the provided <em>Book Obstetrics 2025-2026</em> PDF, Chapter 21 — <em>Fetal Skull</em>. They are reused here for educational purposes from the provided material.</li>
+      <li>Image attribution:
+        <ul>
+          <li>Figure 1 (img-000): Lateral view of the fetal skull — bones, sutures, fontanelles, vertex, inion — provided material.</li>
+          <li>Figure 2 (img-001): Superior view of the <em>"Normal Skull of the Newborn"</em> — provided material.</li>
+        </ul>
+      </li>
+      <li><strong>No external images</strong> were used in this chapter. All visuals are sourced from the provided <em>Book Obstetrics 2025-2026</em> PDF.</li>
+      <li>Self-assessment questions: Google Form — <a href="https://forms.gle/fvNnbzfYgKicAcZSA" target="_blank" rel="noopener">https://forms.gle/fvNnbzfYgKicAcZSA</a></li>
+    </ul>
+  </section></details>
+
+  <footer>
+    Topic 21 — Fetal Skull · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 21 · Source-only visuals (2/2) · 0 external visuals
+  </footer>
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

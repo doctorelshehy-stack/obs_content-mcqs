@@ -1,0 +1,151 @@
+{
+  "1-diagnosis-of-early-pregnancy-1st-trimester": [
+    {
+      "q": "Which of the following is a symptom of early pregnancy (1st trimester)?",
+      "options": [
+        "Quickening",
+        "Secondary amenorrhea",
+        "Lightening",
+        "Shelfing"
+      ],
+      "correct": 1,
+      "explain": "Secondary amenorrhea is a key symptom of early pregnancy. Quickening and lightening occur in later trimesters."
+    },
+    {
+      "q": "Nausea and vomiting in pregnancy typically appear at ___ and disappear at ___.",
+      "options": [
+        "4 weeks, 8 weeks",
+        "6 weeks, 12 weeks",
+        "8 weeks, 16 weeks",
+        "10 weeks, 20 weeks"
+      ],
+      "correct": 1,
+      "explain": "Nausea and vomiting usually appear at 6 weeks and disappear at 12 weeks of pregnancy."
+    },
+    {
+      "q": "Hegar's sign refers to:",
+      "options": [
+        "Bluish discoloration of the vagina",
+        "Softening of the lower uterine segment",
+        "Painless uterine contractions",
+        "Palpation of fetal parts"
+      ],
+      "correct": 1,
+      "explain": "Hegar's sign is the softening of the lower uterine segment detected by bimanual examination, based on the difference in consistency between the cervix and body of the uterus."
+    },
+    {
+      "q": "Serum hCG becomes positive:",
+      "options": [
+        "At the time of implantation",
+        "One week before the missed period",
+        "One week after the missed period",
+        "At 12 weeks of gestation"
+      ],
+      "correct": 1,
+      "explain": "Serum hCG is sensitive at 25 IU/mL and becomes positive one week before the missed period."
+    },
+    {
+      "q": "Cardiac activity is detectable on ultrasound at:",
+      "options": [
+        "4 weeks",
+        "5 weeks",
+        "6 weeks",
+        "10 weeks"
+      ],
+      "correct": 2,
+      "explain": "Cardiac activity is detectable at 6 weeks. The gestational ring appears at 4 weeks, sac at 5 weeks, and FHS at 10 weeks."
+    },
+    {
+      "q": "The gestational sac is first visible on ultrasound at:",
+      "options": [
+        "4 weeks",
+        "5 weeks",
+        "6 weeks",
+        "10 weeks"
+      ],
+      "correct": 1,
+      "explain": "The gestational ring appears at 4 weeks, and the gestational sac becomes visible at 5 weeks."
+    }
+  ],
+  "2-diagnosis-of-2nd-trimester-12-28-weeks": [
+    {
+      "q": "Quickening in a primigravida is first felt at:",
+      "options": [
+        "14\u201316 weeks",
+        "16\u201318 weeks",
+        "18\u201320 weeks",
+        "20\u201322 weeks"
+      ],
+      "correct": 2,
+      "explain": "Quickening is first perception of fetal movement. In primigravida: 18\u201320 weeks. In multigravida: 16\u201318 weeks."
+    },
+    {
+      "q": "External ballottement becomes positive after:",
+      "options": [
+        "16 weeks",
+        "18 weeks",
+        "20 weeks",
+        "24 weeks"
+      ],
+      "correct": 2,
+      "explain": "External ballottement is positive after 20 weeks. Internal ballottement becomes positive after 16 weeks."
+    },
+    {
+      "q": "Uterine souffl\u00e9 is synchronous with:",
+      "options": [
+        "Fetal heart sounds",
+        "Maternal pulse",
+        "Umbilical blood flow",
+        "Uterine contractions"
+      ],
+      "correct": 1,
+      "explain": "Uterine souffl\u00e9 is a soft blowing murmur due to blood flow in uterine arteries, synchronous with the maternal pulse."
+    },
+    {
+      "q": "Which of the following is a sure sign of pregnancy?",
+      "options": [
+        "Positive pregnancy test",
+        "Hegar's sign",
+        "Amenorrhea",
+        "Auscultation of FHS"
+      ],
+      "correct": 3,
+      "explain": "Sure signs include: palpation of fetal parts/movement, auscultation of FHS and umbilical souffl\u00e9, and ultrasound visualization."
+    },
+    {
+      "q": "Umbilical souffl\u00e9 is synchronous with:",
+      "options": [
+        "Maternal pulse",
+        "Fetal heart sounds (FHS)",
+        "Maternal respiration",
+        "Uterine contractions"
+      ],
+      "correct": 1,
+      "explain": "Umbilical souffl\u00e9 is synchronous with FHS (blood flow in umbilical vessels), while uterine souffl\u00e9 is synchronous with maternal pulse."
+    }
+  ],
+  "3-diagnosis-of-3rd-trimester-28-40-weeks": [
+    {
+      "q": "Symptoms of the 3rd trimester include all EXCEPT:",
+      "options": [
+        "Increased frequency of micturition due to engagement",
+        "Lightening",
+        "Morning sickness",
+        "Shelfing"
+      ],
+      "correct": 2,
+      "explain": "Morning sickness typically disappears by 12 weeks. Third trimester symptoms are similar to 2nd trimester plus engagement, lightening, and shelfing."
+    },
+    {
+      "q": "All of the following are sure signs of pregnancy EXCEPT:",
+      "options": [
+        "Palpation of fetal parts",
+        "Positive pregnancy test",
+        "Auscultation of FHS",
+        "Ultrasound detection of fetal parts"
+      ],
+      "correct": 1,
+      "explain": "Positive pregnancy test is a probable sign, not a sure sign. Sure signs require direct evidence of the fetus."
+    }
+  ]
+}

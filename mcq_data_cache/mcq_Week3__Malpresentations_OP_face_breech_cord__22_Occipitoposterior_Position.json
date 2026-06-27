@@ -1,0 +1,458 @@
+{
+  "s2": [
+    {
+      "q": "What is the most common fetal malposition?",
+      "options": [
+        "Face presentation",
+        "Brow presentation",
+        "Occipitoposterior position",
+        "Breech presentation"
+      ],
+      "correct": 2,
+      "explain": "Occipitoposterior (OP) position is the most common fetal malposition. It is a vertex presentation in which the fetal back is directed posteriorly."
+    },
+    {
+      "q": "In occipitoposterior position, the fetal back is directed:",
+      "options": [
+        "Anteriorly",
+        "Posteriorly",
+        "Laterally",
+        "Superiorly"
+      ],
+      "correct": 1,
+      "explain": "In OP position, the fetal back is directed posteriorly (baby's back toward the mother's back), also called 'sunny-side up'."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is a fetal cause of occipitoposterior position?",
+      "options": [
+        "Android pelvis",
+        "Pendulous abdomen",
+        "Prematurity",
+        "Placenta previa"
+      ],
+      "correct": 2,
+      "explain": "Prematurity is a fetal cause of OP position. Android pelvis, pendulous abdomen, and placenta previa are maternal causes."
+    },
+    {
+      "q": "Which pelvic shapes predispose to occipitoposterior position?",
+      "options": [
+        "Gynecoid and platypelloid",
+        "Android and anthropoid",
+        "Android and gynecoid",
+        "Anthropoid and platypelloid"
+      ],
+      "correct": 1,
+      "explain": "Android and anthropoid pelvis shapes predispose to OP position due to their narrowed anterior pelvic architecture."
+    },
+    {
+      "q": "Which of the following is a known risk factor?",
+      "options": [
+        "Maternal age above 35",
+        "Multiparity",
+        "Previous similar history",
+        "All of the above may contribute depending on the condition"
+      ],
+      "correct": 3,
+      "explain": "Multiple risk factors often contribute to obstetric conditions."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The etiology of this condition involves:",
+      "options": [
+        "Genetic factors alone",
+        "Environmental factors alone",
+        "A complex interplay of genetic, environmental, and multifactorial elements",
+        "Iatrogenic causes only"
+      ],
+      "correct": 2,
+      "explain": "Most obstetric conditions have multifactorial etiology."
+    }
+  ],
+  "s4": [
+    {
+      "q": "In Right Occipitoposterior (ROP) position, the occiput is placed over the:",
+      "options": [
+        "Left sacroiliac joint",
+        "Right sacroiliac joint",
+        "Sacrum",
+        "Symphysis pubis"
+      ],
+      "correct": 1,
+      "explain": "In Right O.P., the occiput is placed over the right sacroiliac joint. ROP is more common than left OP."
+    },
+    {
+      "q": "Which of the following is NOT one of the four named positions of OP?",
+      "options": [
+        "Left O.P.",
+        "Right O.P.",
+        "Direct O.P.",
+        "Oblique O.P."
+      ],
+      "correct": 3,
+      "explain": "The four named positions are: Left O.P., Right O.P., Direct O.P., and Occipito transverse. Oblique O.P. is not a named position."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s5": [
+    {
+      "q": "What is the incidence of OP position at the onset of labor?",
+      "options": [
+        "About 5%",
+        "About 10%",
+        "About 15%",
+        "About 20%"
+      ],
+      "correct": 1,
+      "explain": "At the onset of labor, the incidence of OP position is about 10%."
+    },
+    {
+      "q": "Right OP is more common than left OP due to:",
+      "options": [
+        "Sinistrorotation of the uterus",
+        "Dextrorotation of the uterus and presence of sigmoid colon on the left",
+        "Asymmetry of the pelvic inlet",
+        "Fetal cardiac position"
+      ],
+      "correct": 1,
+      "explain": "Right OP is more common due to dextrorotation (rightward rotation) of the uterus and the presence of the sigmoid colon on the left side, which deflects the fetal occiput to the right."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Classification is based on:",
+      "options": [
+        "Anatomical location",
+        "Severity of symptoms",
+        "Both anatomical and clinical criteria",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Most classifications combine anatomical and clinical parameters."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "On abdominal examination of a patient with OP position, the abdomen typically appears:",
+      "options": [
+        "Distended above the umbilicus",
+        "Flat below the level of the umbilicus",
+        "Globular and tense",
+        "Irregular contour"
+      ],
+      "correct": 1,
+      "explain": "In OP position, the abdomen appears flat below the level of the umbilicus on inspection because the fetal back is posterior."
+    },
+    {
+      "q": "Where are fetal heart sounds best heard in OP position?",
+      "options": [
+        "In the midline",
+        "Near the flanks",
+        "Above the umbilicus",
+        "Deep in the suprapubic region"
+      ],
+      "correct": 1,
+      "explain": "In OP position, FHS are heard near the flanks (the fetal back is posterior and away from the maternal abdominal wall)."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "Which clinical finding is most suggestive of this diagnosis?",
+      "options": [
+        "Pain and bleeding",
+        "Asymptomatic presentation",
+        "Abnormal laboratory values",
+        "Varies by condition — specific findings guide diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation differs by condition and guides diagnostic testing."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s7": [
+    {
+      "q": "What is the most common outcome of the mechanism of labor in OP position?",
+      "options": [
+        "Persistent OP (3%)",
+        "Deep transverse arrest (1%)",
+        "Long anterior rotation (90%)",
+        "Direct OP face-to-pubis (6%)"
+      ],
+      "correct": 2,
+      "explain": "Long anterior rotation (90%) is the most common outcome. The head rotates 3/8 of a circle (135°) anteriorly to become direct occipito-anterior."
+    },
+    {
+      "q": "Which mechanism of labor in OP position leads to obstructed labor when no rotation occurs?",
+      "options": [
+        "Long anterior rotation",
+        "Direct OP face-to-pubis",
+        "Persistent OP",
+        "Deep transverse arrest"
+      ],
+      "correct": 2,
+      "explain": "Persistent OP (3%) occurs when no rotation occurs, leading to obstructed labor. Deep transverse arrest (1%) also leads to obstructed labor."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s8": [
+    {
+      "q": "During the first stage of labor in OP position, which of the following is recommended?",
+      "options": [
+        "Frequent P.V. examinations",
+        "Avoid uterine inertia",
+        "Rupture membranes early",
+        "Apply vacuum extraction"
+      ],
+      "correct": 1,
+      "explain": "Recommendations during first stage include: avoid unnecessary P.V. examinations, avoid uterine inertia, evacuate the bladder and rectum, avoid PROM, and maintain close maternal and fetal observation."
+    },
+    {
+      "q": "In direct occipitoposterior position delivering face-to-pubis, what is recommended to avoid perineal laceration?",
+      "options": [
+        "Vacuum extraction",
+        "Forceps rotation",
+        "Episiotomy",
+        "Fundal pressure"
+      ],
+      "correct": 2,
+      "explain": "Episiotomy is done in direct OP to avoid perineal laceration when the head delivers face-to-pubis, as the wider occipito-frontal diameter stretches the perineum."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s9": [
+    {
+      "q": "Which of the following is a maternal complication of OP position?",
+      "options": [
+        "Fetal hypoxia",
+        "Skull fracture",
+        "Rupture uterus",
+        "Cord around the neck"
+      ],
+      "correct": 2,
+      "explain": "Maternal complications of OP position include: early PROM, cord prolapse, prolonged labor, obstructed labor, vaginal tears, cervical tears, and rupture uterus."
+    },
+    {
+      "q": "A fetal skull fracture in OP position can occur due to impingement of which fetal bone against the ischial spine?",
+      "options": [
+        "Occipital bone",
+        "Right parietal bone",
+        "Left parietal bone",
+        "Frontal bone"
+      ],
+      "correct": 2,
+      "explain": "In OP position, the fetal left parietal bone can be pressed against the maternal ischial spine during descent, leading to iatrogenic neonatal skull fracture."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    },
+    {
+      "q": "A potential maternal complication includes:",
+      "options": [
+        "Hemorrhage",
+        "Infection",
+        "Thromboembolism",
+        "All of the above are possible"
+      ],
+      "correct": 3,
+      "explain": "Obstetric conditions can lead to hemorrhage, infection, thromboembolism, and other complications."
+    }
+  ]
+}

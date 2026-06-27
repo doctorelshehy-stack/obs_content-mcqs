@@ -1,0 +1,453 @@
+{
+  "1-genital-changes": [
+    {
+      "q": "The non-pregnant uterus weighs approximately:",
+      "options": [
+        "25 g",
+        "50 g",
+        "100 g",
+        "200 g"
+      ],
+      "correct": 1,
+      "explain": "The non-pregnant uterus weighs 50 g and increases to 1000 g at term."
+    },
+    {
+      "q": "The uterine volume at term is approximately:",
+      "options": [
+        "1000 mL",
+        "3000 mL",
+        "5000 mL",
+        "7000 mL"
+      ],
+      "correct": 2,
+      "explain": "Uterine volume increases from 10 mL (non-pregnant) to 5000 mL at term."
+    },
+    {
+      "q": "Myometrial hypertrophy is primarily due to:",
+      "options": [
+        "Progesterone effect",
+        "Estrogenic effect",
+        "hCG stimulation",
+        "Mechanical stretching"
+      ],
+      "correct": 1,
+      "explain": "Hypertrophy of the myometrium is an estrogenic effect, while hyperplasia is a progesterone effect."
+    },
+    {
+      "q": "The lower uterine segment starts to form at:",
+      "options": [
+        "6 weeks",
+        "12 weeks",
+        "20 weeks",
+        "28 weeks"
+      ],
+      "correct": 1,
+      "explain": "The lower uterine segment (from isthmus + lower 1/2 inch of uterine body) starts forming at 12 weeks and reaches 10 cm at full term."
+    },
+    {
+      "q": "Braxton Hicks contractions are:",
+      "options": [
+        "Painful contractions indicating true labor",
+        "Painless contractions that may cause discomfort late in pregnancy",
+        "Contractions that only occur in multiple pregnancies",
+        "Pathological contractions indicating placental abruption"
+      ],
+      "correct": 1,
+      "explain": "Braxton Hicks are irregular, painless contractions that cause discomfort late in pregnancy and may account for false labor pains."
+    },
+    {
+      "q": "Uterine blood flow at term reaches approximately:",
+      "options": [
+        "200 mL/min",
+        "500 mL/min",
+        "800 mL/min",
+        "1000 mL/min"
+      ],
+      "correct": 1,
+      "explain": "Uterine artery lumen is doubled and blood flow increases to about 500 mL/min at term."
+    }
+  ],
+  "2-hematological-changes": [
+    {
+      "q": "Blood volume increases during pregnancy by approximately:",
+      "options": [
+        "10\u201320%",
+        "30\u201340%",
+        "50\u201360%",
+        "70\u201380%"
+      ],
+      "correct": 1,
+      "explain": "Blood volume increases gradually by 30\u201340% above non-pregnant level, reaching maximum at 32 weeks."
+    },
+    {
+      "q": "Physiological anemia of pregnancy results from:",
+      "options": [
+        "Decreased red cell production",
+        "Plasma volume increase exceeding red cell mass increase",
+        "Increased destruction of RBCs",
+        "Iron deficiency"
+      ],
+      "correct": 1,
+      "explain": "Plasma volume increases by 45%, while red cell mass increases by only 30%, causing hemodilution (physiological anemia)."
+    },
+    {
+      "q": "WBC count during pregnancy can reach up to:",
+      "options": [
+        "7,000/mm\u00b3",
+        "10,500/mm\u00b3",
+        "16,000/mm\u00b3 during labor",
+        "25,000/mm\u00b3"
+      ],
+      "correct": 2,
+      "explain": "WBCs increase from 7,000/mm\u00b3 to 10,500/mm\u00b3 in pregnancy, and up to 16,000/mm\u00b3 during labor."
+    },
+    {
+      "q": "Which clotting factor is tripled during pregnancy?",
+      "options": [
+        "Fibrinogen",
+        "Factor VII",
+        "Factor VIII",
+        "Factor X"
+      ],
+      "correct": 2,
+      "explain": "Factor VIII is tripled. Fibrinogen is nearly doubled, and Factors VII and X are doubled."
+    },
+    {
+      "q": "Pregnancy is considered a hypercoagulable state due to all EXCEPT:",
+      "options": [
+        "Increased fibrinogen",
+        "Decreased fibrinolytic activity",
+        "Increased Factor VIII",
+        "Increased fibrinolytic activity"
+      ],
+      "correct": 3,
+      "explain": "Pregnancy is hypercoagulable due to increased clotting factors AND decreased fibrinolytic activity, which together increase VTE risk."
+    }
+  ],
+  "3-cardiovascular-system": [
+    {
+      "q": "Cardiac output reaches its maximum increase of 40% above non-pregnant level at:",
+      "options": [
+        "12 weeks",
+        "20 weeks",
+        "28 weeks",
+        "36 weeks"
+      ],
+      "correct": 1,
+      "explain": "Cardiac output increases to reach its maximum of 40% above non-pregnant level at 20 weeks, then remains constant till term."
+    },
+    {
+      "q": "Cardiac output at term is approximately:",
+      "options": [
+        "4.5 L/min",
+        "5.5 L/min",
+        "6.5 L/min",
+        "7.5 L/min"
+      ],
+      "correct": 2,
+      "explain": "Cardiac output at term is approximately 6.5 L/min, due to increased stroke volume and heart rate."
+    },
+    {
+      "q": "Despite increased cardiac output, blood pressure decreases in pregnancy due to:",
+      "options": [
+        "Decreased heart rate",
+        "Decreased peripheral resistance from vasodilation",
+        "Decreased blood volume",
+        "Increased fibrinogen"
+      ],
+      "correct": 1,
+      "explain": "Peripheral resistance is decreased due to peripheral vasodilation caused by increased progesterone, leading to lower BP despite increased COP."
+    },
+    {
+      "q": "During which stage of labor does cardiac output increase the most?",
+      "options": [
+        "First stage",
+        "Second stage",
+        "Third stage",
+        "Immediately postpartum"
+      ],
+      "correct": 1,
+      "explain": "COP increases more during the second stage of labor due to uterine contractions and bearing-down efforts."
+    }
+  ],
+  "4-respiratory-system": [
+    {
+      "q": "Tidal volume increases during pregnancy by approximately:",
+      "options": [
+        "20%",
+        "40%",
+        "60%",
+        "80%"
+      ],
+      "correct": 1,
+      "explain": "Tidal volume increases by about 40% throughout pregnancy."
+    },
+    {
+      "q": "Hyperventilation in pregnancy is primarily due to:",
+      "options": [
+        "Increased oxygen demand",
+        "Increased sensitivity of respiratory center to progesterone",
+        "Mechanical compression by the uterus",
+        "Decreased carbon dioxide production"
+      ],
+      "correct": 1,
+      "explain": "Hyperventilation results from increased tidal volume due to increased sensitivity of the respiratory center to excess progesterone."
+    },
+    {
+      "q": "The diaphragm is displaced upward by the enlarged uterus by approximately:",
+      "options": [
+        "2 cm",
+        "4 cm",
+        "6 cm",
+        "8 cm"
+      ],
+      "correct": 1,
+      "explain": "The enlarged uterus displaces the diaphragm up to 4 cm, reducing diaphragmatic mobility."
+    }
+  ],
+  "5-urinary-system": [
+    {
+      "q": "Renal blood flow and GFR increase during pregnancy by approximately:",
+      "options": [
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "correct": 1,
+      "explain": "Renal blood flow and GFR increase by 50%, leading to decreased creatinine and urea."
+    },
+    {
+      "q": "Renal glucosuria in pregnancy results from:",
+      "options": [
+        "Increased blood glucose levels",
+        "Reduced renal glucose threshold",
+        "Decreased GFR",
+        "Increased ADH secretion"
+      ],
+      "correct": 1,
+      "explain": "Increased excretion of glucose due to reduced renal glucose threshold leads to renal glucosuria."
+    },
+    {
+      "q": "Ureteric dilatation during pregnancy is more pronounced on the right side due to:",
+      "options": [
+        "Right ovarian vein compression",
+        "Dextrorotation of the uterus",
+        "Right ureter being shorter",
+        "Increased right renal blood flow"
+      ],
+      "correct": 1,
+      "explain": "The right ureter is more dilated due to dextrorotation of the uterus pressing against the pelvic brim."
+    }
+  ],
+  "6-gastrointestinal-tract": [
+    {
+      "q": "Nausea and vomiting of pregnancy (emesis gravidarum) typically:",
+      "options": [
+        "Starts at 2 weeks, improves by 8 weeks",
+        "Starts between 4\u20136 weeks, improves by about 12 weeks",
+        "Starts at 8 weeks, continues until delivery",
+        "Starts at 12 weeks, improves by 20 weeks"
+      ],
+      "correct": 1,
+      "explain": "Nausea (morning sickness) starts between 4th and 6th weeks and improves by about the 12th week."
+    },
+    {
+      "q": "Heartburn in pregnancy is primarily caused by:",
+      "options": [
+        "Increased gastric acid production",
+        "Relaxing effect of progesterone on the esophageal sphincter",
+        "Increased intra-abdominal pressure only",
+        "Delayed gastric emptying only"
+      ],
+      "correct": 1,
+      "explain": "Heartburn is due to reflux of acidic gastric contents caused by the relaxing effect of progesterone on the esophageal sphincter."
+    },
+    {
+      "q": "Which GI change during pregnancy is NOT primarily caused by progesterone-induced smooth muscle relaxation?",
+      "options": [
+        "Constipation",
+        "Heartburn",
+        "Piles",
+        "Gingivitis"
+      ],
+      "correct": 3,
+      "explain": "Gingivitis is due to increased vascularity and hypertrophy of interdental papillae, not smooth muscle relaxation. Heartburn, constipation, piles, and ureteric dilatation are all progesterone-driven."
+    },
+    {
+      "q": "The appendix during pregnancy is displaced:",
+      "options": [
+        "Downward and medially",
+        "Upward and laterally",
+        "Posteriorly",
+        "No change in position"
+      ],
+      "correct": 1,
+      "explain": "The appendix is displaced upward and laterally by the enlarging uterus."
+    }
+  ],
+  "7-metabolic-changes": [
+    {
+      "q": "Total weight gain during pregnancy is approximately:",
+      "options": [
+        "5\u20137 kg",
+        "10\u201312 kg",
+        "15\u201318 kg",
+        "20\u201325 kg"
+      ],
+      "correct": 1,
+      "explain": "Weight gain in pregnancy is increased by approximately 10\u201312 kg."
+    },
+    {
+      "q": "Pregnancy is considered diabetogenic due to:",
+      "options": [
+        "Decreased insulin production",
+        "Pregnancy hormones causing insulin resistance",
+        "Increased glucose excretion",
+        "Decreased carbohydrate absorption"
+      ],
+      "correct": 1,
+      "explain": "Pregnancy hormones create an anti-insulin effect, making pregnancy diabetogenic with mild fasting hypoglycemia and postprandial hyperglycemia."
+    },
+    {
+      "q": "Water and sodium retention in pregnancy is due to:",
+      "options": [
+        "Decreased aldosterone",
+        "Increased aldosterone",
+        "Increased ADH",
+        "Decreased GFR"
+      ],
+      "correct": 1,
+      "explain": "There is a tendency to water and sodium retention due to increased aldosterone."
+    }
+  ],
+  "8-musculoskeletal-changes": [
+    {
+      "q": "Musculoskeletal changes in pregnancy include all EXCEPT:",
+      "options": [
+        "Progressive softening of pelvic joints",
+        "Progressive lordosis",
+        "Foot flattening",
+        "Increased bone density"
+      ],
+      "correct": 3,
+      "explain": "Changes include progressive softening of pelvic joints, progressive lordosis, and foot flattening, not increased bone density."
+    }
+  ],
+  "9-endocrine-changes": [
+    {
+      "q": "Which anterior pituitary cells increase during pregnancy?",
+      "options": [
+        "ACTH-secreting cells",
+        "Prolactin-secreting cells",
+        "GH-secreting cells",
+        "TSH-secreting cells"
+      ],
+      "correct": 1,
+      "explain": "The anterior pituitary shows hypertrophy with an increased number of prolactin-secreting cells."
+    },
+    {
+      "q": "Thyroid function in pregnancy shows all EXCEPT:",
+      "options": [
+        "Increased TBG",
+        "Increased total T3 and T4",
+        "Increased TSH",
+        "Increased BMR"
+      ],
+      "correct": 2,
+      "explain": "Pregnancy shows increased TBG, total T3/T4, and BMR, but TSH is decreased (not increased)."
+    },
+    {
+      "q": "The parathyroid gland hypertrophies in pregnancy due to:",
+      "options": [
+        "Increased estrogen",
+        "Increased demand for calcium",
+        "Increased prolactin",
+        "Increased TSH"
+      ],
+      "correct": 1,
+      "explain": "Parathyroid hypertrophy occurs with increased demand for calcium during pregnancy."
+    }
+  ],
+  "10-skin-changes": [
+    {
+      "q": "Palmar erythema during pregnancy is due to:",
+      "options": [
+        "Increased progesterone",
+        "Increased estrogen",
+        "Increased cortisol",
+        "Mechanical stretching"
+      ],
+      "correct": 1,
+      "explain": "Palmar erythema is due to increased estrogen."
+    },
+    {
+      "q": "Linea nigra is:",
+      "options": [
+        "Pigmentation on the face",
+        "Pigmentation in the midline below the umbilicus",
+        "Pigmentation on the breasts",
+        "Reddish streaks on the abdomen"
+      ],
+      "correct": 1,
+      "explain": "Linea nigra is pigmentation in the midline below the umbilicus."
+    },
+    {
+      "q": "Chloasma gravidarum is:",
+      "options": [
+        "Palmar redness",
+        "Facial pigmentation",
+        "Abdominal striae",
+        "Nipple darkening"
+      ],
+      "correct": 1,
+      "explain": "Chloasma gravidarum is pigmentation on the face during pregnancy."
+    }
+  ],
+  "11-breast-changes": [
+    {
+      "q": "Montgomery tubercles appear during which month of pregnancy?",
+      "options": [
+        "First month",
+        "Second month",
+        "Third month",
+        "Fifth month"
+      ],
+      "correct": 1,
+      "explain": "Montgomery tubercles (hypertrophy of the orifices of lacteal ducts) appear during the second month alongside increased pigmentation of the nipple and primary areola."
+    },
+    {
+      "q": "Colostrum secretion begins at:",
+      "options": [
+        "First month",
+        "Second month",
+        "Third month",
+        "Fifth month"
+      ],
+      "correct": 2,
+      "explain": "Colostrum secretion begins during the third month of pregnancy."
+    },
+    {
+      "q": "The secondary areola appears at:",
+      "options": [
+        "Second month",
+        "Third month",
+        "Fifth month",
+        "Seventh month"
+      ],
+      "correct": 2,
+      "explain": "The secondary areola (pigmented area around the primary areola) appears during the fifth month."
+    },
+    {
+      "q": "Symptoms of tingling to frank pain in the breasts (mastodynia) occur in which month?",
+      "options": [
+        "First month",
+        "Second month",
+        "Third month",
+        "Fifth month"
+      ],
+      "correct": 0,
+      "explain": "Mastodynia, along with increased size and vascularity, occurs in the first month of pregnancy."
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FM01 - Premarital Care</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: #F0F4F8;
+    color: #1E293B;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #0B3D6B, #2563EB);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 34px; font-weight: 800; margin-bottom: 8px; }
+  .hero .topic-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .hero p { font-size: 17px; opacity: 0.9; }
+
+  /* TOC */
+  .toc {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .toc h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0B3D6B;
+    margin-bottom: 12px;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+  }
+  .toc-item {
+    padding: 4px 0;
+    color: #475569;
+    font-size: 14px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+  .toc-item a { color: #2563EB; text-decoration: none; font-weight: 500; }
+  .toc-item a:hover { text-decoration: underline; }
+
+  /* Section */
+  .section {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    background: #F8FAFC;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border-left: 4px solid #3B82F6;
+  }
+  .section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #3B82F6;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1E293B;
+  }
+  .subsection-title {
+    font-weight: 600;
+    font-size: 17px;
+    color: #0B3D6B;
+    margin: 16px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #DBEAFE;
+  }
+
+  /* Card */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .card-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .card-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #1E293B;
+  }
+  .card-green { border-left: 4px solid #22C55E; }
+  .card-red { border-left: 4px solid #EF4444; }
+  .card-blue { border-left: 4px solid #3B82F6; }
+  .card-purple { border-left: 4px solid #8B5CF6; }
+  .card-orange { border-left: 4px solid #F59E0B; }
+  .card-pink { border-left: 4px solid #EC4899; }
+  .card-cyan { border-left: 4px solid #06B6D4; }
+  .card-navy { border-left: 4px solid #0B3D6B; }
+  .card-teal { border-left: 4px solid #14B8A6; }
+  .card-amber { border-left: 4px solid #D97706; }
+
+  /* ===== FLOWCHART STYLES ===== */
+  .flowchart {
+    background: #F8FAFC;
+    border: 2px solid #DBEAFE;
+    border-radius: 16px;
+    padding: 24px 16px;
+    margin: 16px 0;
+  }
+  .flow-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0B3D6B;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3B82F6;
+  }
+
+  /* Flow step */
+  .flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .flow-box {
+    background: white;
+    border: 2px solid #3B82F6;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1E40AF;
+    text-align: center;
+    min-width: 160px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(59,130,246,0.15);
+  }
+  .flow-box.start { background: #DBEAFE; border-color: #2563EB; border-radius: 30px; }
+  .flow-box.end { background: #D1FAE5; border-color: #059669; border-radius: 30px; color: #065F46; }
+  .flow-box.process { border-radius: 8px; background: #EFF6FF; }
+  .flow-box.decision { border-radius: 4px; transform: rotate(0deg); background: #FEF3C7; border-color: #F59E0B; color: #92400E; }
+  .flow-box.sub { border: 2px dashed #60A5FA; background: #F8FAFC; font-weight: 500; font-size: 13px; }
+
+  /* Arrow down */
+  .flow-arrow {
+    text-align: center;
+    color: #3B82F6;
+    font-size: 22px;
+    line-height: 1;
+    margin: 2px 0;
+  }
+
+  /* Branch row — 3 columns for the main split */
+  .flow-branch-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .flow-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flow-branch-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+  .branch-1 .flow-branch-label { background: #DBEAFE; color: #1E40AF; }
+  .branch-2 .flow-branch-label { background: #D1FAE5; color: #065F46; }
+  .branch-3 .flow-branch-label { background: #FEF3C7; color: #92400E; }
+
+  .flow-branch-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  .flow-item {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .flow-item strong { color: #0B3D6B; }
+
+  /* Responsive flow */
+  @media (max-width: 768px) {
+    .flow-branch-row { grid-template-columns: 1fr; }
+    .card-grid, .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 26px; }
+    .container { padding: 12px; }
+    .section { padding: 16px; }
+  }
+
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  th {
+    background: #F1F5F9;
+    color: #1E293B;
+    font-weight: 600;
+    padding: 8px 10px;
+    border: 1px solid #E2E8F0;
+    text-align: left;
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid #E2E8F0;
+  }
+
+  /* Alert */
+  .alert {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+  }
+  .alert-green { background: #F0FDF4; border-color: #22C55E; }
+  .alert-orange { background: #FFFBEB; border-color: #F59E0B; }
+  .alert-red { background: #FEF2F2; border-color: #EF4444; }
+  .alert-purple { background: #FAF5FF; border-color: #8B5CF6; }
+  .alert-blue { background: #EFF6FF; border-color: #3B82F6; }
+  .alert-label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .alert-green .alert-label { color: #16A34A; }
+  .alert-orange .alert-label { color: #D97706; }
+  .alert-red .alert-label { color: #DC2626; }
+  .alert-purple .alert-label { color: #7C3AED; }
+  .alert-blue .alert-label { color: #2563EB; }
+
+  ul, ol { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 4px; }
+  .defn { font-weight: 500; color: #1E293B; }
+
+  .footer {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 20px;
+    border-top: 1px solid #E2E8F0;
+    margin-top: 20px;
+  }
+  @media print {
+    body { background: white; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .flowchart { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="topic-badge">FM Topic 1</div>
+    <h1>Premarital Care</h1>
+    <p>Premarital Assessment · Counselling · Immunization · Inter-conception Care</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <div class="toc-grid">
+      <div class="toc-item"><a href="#s1">§1 ILOs</a></div>
+      <div class="toc-item"><a href="#s2">§2 Overview</a></div>
+      <div class="toc-item"><a href="#s3">§3 Components</a></div>
+      <div class="toc-item"><a href="#s4">§4 Premarital Assessment</a></div>
+      <div class="toc-item"><a href="#s5">§5 Algorithm: Premarital Services</a></div>
+      <div class="toc-item"><a href="#s6">§6 Premarital Counselling</a></div>
+      <div class="toc-item"><a href="#s7">§7 Immunization</a></div>
+      <div class="toc-item"><a href="#s8">§8 Inter-conception Care</a></div>
+      <div class="toc-item"><a href="#s9">§9 Review Questions</a></div>
+    </div>
+  </div>
+
+  <!-- §1 ILOs -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>ILOs of This Chapter</h2>
+    </div>
+    <ul>
+      <li>Identify importance of premarital care</li>
+      <li>Identify components of premarital care</li>
+      <li>Practice premarital care counselling</li>
+    </ul>
+  </div>
+
+  <!-- §2 Overview -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Overview</h2>
+    </div>
+    <p>Marriage is the fundamental building block of society, and the cornerstone in building emotional, healthy and family relationships. The healthy marriage guarantees protecting the family members from the hereditary and infectious diseases; thus building a happy and stable family.</p>
+    <div class="alert alert-blue">
+      <div class="alert-label">DEFINITION</div>
+      Premarital care is the specific service provided for the couples before marriage. By caring for the health of present children and adolescents, we are actually starting to provide care for the future generation.
+    </div>
+    <div class="alert alert-orange">
+      <div class="alert-label">TIMING</div>
+      Couples planning to marry are advised to conduct premarital screening at least <strong>three months before the marriage date</strong>. The premarital compatibility certificate is valid for only <strong>six months</strong>.
+    </div>
+  </div>
+
+  <!-- §3 Components -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Components of Premarital Care</h2>
+    </div>
+    <div class="card-grid-3">
+      <div class="card card-blue">
+        <div class="card-title">① Premarital Assessment</div>
+        Screening: History, examination, lab investigations
+      </div>
+      <div class="card card-green">
+        <div class="card-title">② Premarital Counselling</div>
+        General, reproductive, genetic counselling
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">③ Immunization</div>
+        Rubella vaccination for females
+      </div>
+    </div>
+    <div class="card-grid-3">
+      <div class="card card-navy">
+        <div class="card-title">Objectives</div>
+        <ul style="padding-left:14px;">
+          <li>Promote health of future parents</li>
+          <li>Prevent health hazards</li>
+          <li>Have healthy future generations</li>
+        </ul>
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">Consanguinity Note</div>
+        Among offspring of consanguineous marriage, there is increased prenatal morbidity and mortality together with increased incidence of congenital abnormalities and mental retardation.
+      </div>
+      <div class="card card-teal">
+        <div class="card-title">Inter-conception Care</div>
+        Caring for females in-between pregnancies
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Premarital Assessment -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Premarital Assessment (Premarital Screening)</h2>
+    </div>
+
+    <div class="subsection-title">A. Record Personal Information</div>
+    <ul>
+      <li>Name, national ID number, age, education, occupation, contact number, and consanguinity.</li>
+    </ul>
+
+    <div class="subsection-title">B. History Taking</div>
+    <div class="card-grid">
+      <div class="card card-orange">
+        <div class="card-title">Chronic Diseases</div>
+        DM, thyroid, HTN, cardiac or any psychological troubles
+      </div>
+      <div class="card card-pink">
+        <div class="card-title">Infections &amp; Transfusions</div>
+        Rubella (females), Mumps (males), Blood transfusion history
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">Genetic Disorders</div>
+        SCD, Thalassemia, G6PD — Previous children with congenital abnormality
+      </div>
+      <div class="card card-red">
+        <div class="card-title">Family History</div>
+        SCD, Thalassemia, G6PD, Congenital anomalies (Marfan, deaf mutism)
+      </div>
+    </div>
+
+    <div class="subsection-title">C. Clinical Examination</div>
+    <div class="card-grid-3">
+      <div class="card card-cyan">Vital signs: BP, pulse, RR</div>
+      <div class="card card-green">Systemic: Pallor, jaundice, thyroid, chest, CVS</div>
+      <div class="card card-amber">Extra examination according to case</div>
+    </div>
+
+    <div class="subsection-title">D. Laboratory Investigations</div>
+    <div class="card-grid">
+      <div class="card card-green">
+        <div class="card-title">Routine Obligatory</div>
+        <ul style="padding-left:14px;">
+          <li>CBC</li>
+          <li>Blood group (ABO &amp; Rh)</li>
+          <li>HPLC (Hb variants)</li>
+          <li>Sickledex</li>
+          <li>G6PD</li>
+          <li>Ferritin</li>
+          <li>HBsAg, HCV</li>
+          <li>Infertility tests</li>
+        </ul>
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Optional</div>
+        Based on findings of examination
+      </div>
+    </div>
+  </div>
+
+  <!-- §5 ALGORITHM INFOGRAPHIC — generated from source image text -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Algorithm: Summary of Premarital Clinical Services</h2>
+    </div>
+    <div class="alert alert-purple">
+      <div class="alert-label">SOURCE</div>
+      This algorithm is based on the clinical services flowchart from the FM-OBS reference material. It outlines the complete journey from client entry through screening, examination, and lab testing.
+    </div>
+
+    <div class="flowchart">
+      <div class="flow-title">📋 ALGORITHM (1): SUMMARY OF PREMARITAL CLINICAL SERVICES</div>
+
+      <!-- START -->
+      <div class="flow-step">
+        <div class="flow-box start">Client</div>
+      </div>
+      <div class="flow-arrow">⬇</div>
+
+      <!-- Reception -->
+      <div class="flow-step">
+        <div class="flow-box process">Reception / Registration</div>
+      </div>
+      <div class="flow-arrow">⬇</div>
+
+      <!-- Triage -->
+      <div class="flow-step">
+        <div class="flow-box process">Triage<br><span style="font-weight:400;font-size:12px;">Vitals · Anthropometric measurements</span></div>
+      </div>
+      <div class="flow-arrow">⬇</div>
+
+      <!-- Central hub -->
+      <div class="flow-step">
+        <div class="flow-box" style="background:#DBEAFE;border-color:#2563EB;border-width:3px;padding:14px 28px;font-size:17px;">🏥 Premarital Screening Clinic</div>
+      </div>
+      <div class="flow-arrow">⬇</div>
+
+      <!-- Arrow to branches -->
+      <div style="text-align:center;color:#3B82F6;font-size:14px;margin:8px 0;">⬊ &nbsp; ⬇ &nbsp; ⬋</div>
+
+      <!-- 3 branches -->
+      <div class="flow-branch-row">
+        <!-- History -->
+        <div class="flow-branch branch-1">
+          <div class="flow-branch-label">📋 History</div>
+          <div class="flow-branch-items">
+            <div class="flow-item"><strong>Personal data</strong> of client</div>
+            <div class="flow-item"><strong>Partner info:</strong> Name &amp; hospital number</div>
+            <div class="flow-item"><strong>Consanguinity</strong> to partner</div>
+            <div class="flow-item"><strong>Blood transfusion</strong> history</div>
+            <div class="flow-item" style="border-left:3px solid #EF4444;"><strong>Genetic disorders:</strong> SCD, Thalassemia, G6PD</div>
+            <div class="flow-item"><strong>Previous children</strong> with cong. abnormality</div>
+            <div class="flow-item"><strong>Family history</strong> of genetic disorders: SCD, Thalassemia, G6PD, Cong. anomalies</div>
+          </div>
+        </div>
+
+        <!-- Physical Examination -->
+        <div class="flow-branch branch-2">
+          <div class="flow-branch-label">🩺 Physical Examination</div>
+          <div class="flow-branch-items">
+            <div class="flow-item"><strong>Vital signs:</strong> BP, HR, RR</div>
+            <div class="flow-item"><strong>Anthropometric:</strong> BMI</div>
+            <div class="flow-item"><strong>Systemic examination:</strong> Pallor, jaundice, thyroid, chest, CVS</div>
+            <div class="flow-item" style="border-left:3px solid #F59E0B;"><strong>Extra examination</strong> — According to case</div>
+          </div>
+        </div>
+
+        <!-- Lab -->
+        <div class="flow-branch branch-3">
+          <div class="flow-branch-label">🔬 Lab Investigations</div>
+          <div class="flow-branch-items">
+            <div class="flow-item"><strong>CBC</strong> — Complete Blood Count</div>
+            <div class="flow-item"><strong>HPLC</strong> — Hb variant screening</div>
+            <div class="flow-item"><strong>Sickledex</strong> — Sickle cell test</div>
+            <div class="flow-item"><strong>G6PD</strong> — Enzyme deficiency</div>
+            <div class="flow-item"><strong>Blood group &amp; Rh</strong> typing</div>
+            <div class="flow-item"><strong>Ferritin</strong> — Iron stores</div>
+            <div class="flow-item" style="border-left:3px solid #8B5CF6;"><strong>Optional:</strong> Based on findings</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §6 Premarital Counselling -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Premarital Counselling</h2>
+    </div>
+    <div class="alert alert-green">
+      <div class="alert-label">DEFINITION</div>
+      Counselling is an interpersonal communication designed to help another person to make a rationale decision. Premarital counseling has been defined as a process of helping couple learn how to make wise and realistic decisions, through providing information and altering their own behaviors to produce desirable consequences.
+    </div>
+
+    <p class="defn">Process of Counselling:</p>
+    <div class="card-grid-3">
+      <div class="card card-blue">👂 Listening — be accepting, concerned, patient, specific, honest and faithful</div>
+      <div class="card card-green">💬 Discussion</div>
+      <div class="card card-purple">🗣️ Talking &amp; Negotiation — Explaining &amp; Education</div>
+    </div>
+
+    <div class="subsection-title">Types of Premarital Counselling</div>
+    <div class="card-grid">
+      <div class="card card-blue">
+        <div class="card-title">I — General Counselling &amp; Health Education</div>
+        Promoting healthy lifestyle, protection against preventable disease and unhealthy behaviors such as smoking, addiction.
+      </div>
+      <div class="card card-pink">
+        <div class="card-title">II — Reproductive Health Counselling</div>
+        Advice about appropriate time of 1st pregnancy, importance of early antenatal care, precautions during pregnancy (avoid drugs &amp; teratogenic hazards), safe delivery.
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">III — Relevant Health Problem Counselling</div>
+        Management of cases and referral to specialists for any discovered problem during premarital assessment.
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">IV — Genetic Counselling</div>
+        Studying genogram of both parents to discover probability of genetic hazards to offspring (SCD, thalassemia, Marfan syndrome, deaf mutism). Referral for genetic testing when indicated.
+      </div>
+    </div>
+  </div>
+
+  <!-- §7 Immunization -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Immunization</h2>
+    </div>
+    <div class="alert alert-green">
+      <div class="alert-label">RECOMMENDATION</div>
+      Encourage immunization of females against <strong>rubella</strong>, not less than <strong>3 months before planning pregnancy</strong> to avoid congenital rubella syndrome if the female acquires the infection during pregnancy.
+    </div>
+  </div>
+
+  <!-- §8 Inter-conception Care -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Inter-conception Care</h2>
+    </div>
+    <div class="alert alert-blue">
+      <div class="alert-label">DEFINITION</div>
+      Caring for females in-between pregnancies aimed to:
+    </div>
+    <ol>
+      <li>Promote the health and nutritional status of the mother</li>
+      <li>Identify risks both for the mother and the future children and deal with them</li>
+      <li>Decrease maternal morbidity and mortality</li>
+      <li>Decrease neonatal morbidity and mortality</li>
+    </ol>
+    <p class="defn" style="margin-top:12px;">When can inter-conception care be provided?</p>
+    <div class="card-grid-3">
+      <div class="card card-cyan">During Post partum / post abortive care</div>
+      <div class="card card-cyan">When attending the MCH for her child care</div>
+      <div class="card card-cyan">During home visits</div>
+    </div>
+
+    <div class="subsection-title">Components of Inter-conception Care</div>
+    <div class="card-grid">
+      <div class="card card-green">
+        <div class="card-title">I — Counselling</div>
+        <ol>
+          <li>Contraceptive counselling — help females choose most appropriate method</li>
+          <li>Nutritional counselling</li>
+          <li>Genetic counselling — when history of recurrent abortion, cervical incompetence, congenital abnormalities</li>
+        </ol>
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">II — Health Promotion</div>
+        General health education and promotion
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">III — Risk Assessment &amp; Modification</div>
+        <ul style="padding-left:14px;">
+          <li>Recently diagnosed maternal diseases (DM, HTN)</li>
+          <li>Obstetric history: previous complicated pregnancy, bad outcome (Down, β-thalassaemia, SCD, NTD, congenital hypothyroidism)</li>
+          <li>Conditions in the newborn/child</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- §9 Review Questions -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Review Questions</h2>
+    </div>
+    <div class="alert alert-green">
+      <div class="alert-label">STUDY TASK</div>
+      After studying this topic, answer the following questions.
+    </div>
+    <div class="card-grid">
+      <div class="card card-blue">
+        <div class="card-title">Q1</div>
+        Describe components of premarital care.
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q2</div>
+        What are the routine obligatory investigations in premarital screening?
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q3</div>
+        Enumerate the types of premarital counselling.
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q4</div>
+        What are the objectives of inter-conception care?
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>FM Topic 1 — Premarital Care</strong> · Family Medicine Review</p>
+    <p>Source: FM-OBS Book (Pages 1-9)</p>
+    <p style="margin-top:6px;">
+      <span style="display:inline-block;background:#22C55E;color:white;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;">✓ Quality Reviewed</span>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

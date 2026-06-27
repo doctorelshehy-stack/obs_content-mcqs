@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FM04 - Postpartum Care</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: #F0F4F8;
+    color: #1E293B;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 20px; }
+  .hero {
+    background: linear-gradient(135deg, #0B3D6B, #2563EB);
+    color: white; padding: 40px 30px; border-radius: 16px;
+    margin-bottom: 24px; text-align: center;
+  }
+  .hero h1 { font-size: 34px; font-weight: 800; margin-bottom: 8px; }
+  .hero .topic-badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; margin-bottom: 8px;
+  }
+  .hero p { font-size: 17px; opacity: 0.9; }
+  .toc {
+    background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .toc h2 { font-size: 18px; font-weight: 700; color: #0B3D6B; margin-bottom: 12px; }
+  .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+  .toc-item { padding: 4px 0; color: #475569; font-size: 14px; border-bottom: 1px solid #F1F5F9; }
+  .toc-item a { color: #2563EB; text-decoration: none; font-weight: 500; }
+  .toc-item a:hover { text-decoration: underline; }
+  .section {
+    background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+    padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    background: #F8FAFC; padding: 10px 16px; border-radius: 10px; border-left: 4px solid #3B82F6;
+  }
+  .section-number {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%; background: #3B82F6;
+    color: white; font-weight: 700; font-size: 15px; flex-shrink: 0;
+  }
+  .section-header h2 { font-size: 20px; font-weight: 700; color: #1E293B; }
+  .subsection-title {
+    font-weight: 600; font-size: 17px; color: #0B3D6B;
+    margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #DBEAFE;
+  }
+  .subsub { font-weight: 600; font-size: 15px; color: #334155; margin: 12px 0 6px; }
+
+  /* ── Cards ── */
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card {
+    background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+    padding: 14px 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .card-title { font-weight: 600; font-size: 14px; margin-bottom: 6px; color: #1E293B; }
+  .card-green { border-left: 4px solid #22C55E; }
+  .card-red { border-left: 4px solid #EF4444; }
+  .card-blue { border-left: 4px solid #3B82F6; }
+  .card-purple { border-left: 4px solid #8B5CF6; }
+  .card-orange { border-left: 4px solid #F59E0B; }
+  .card-pink { border-left: 4px solid #EC4899; }
+  .card-cyan { border-left: 4px solid #06B6D4; }
+  .card-navy { border-left: 4px solid #0B3D6B; }
+  .card-amber { border-left: 4px solid #D97706; }
+
+  .alert {
+    padding: 12px 16px; border-radius: 10px; margin: 10px 0;
+    border-left: 4px solid; font-size: 14px;
+  }
+  .alert-green { background: #F0FDF4; border-color: #22C55E; }
+  .alert-orange { background: #FFFBEB; border-color: #F59E0B; }
+  .alert-red { background: #FEF2F2; border-color: #EF4444; }
+  .alert-purple { background: #FAF5FF; border-color: #8B5CF6; }
+  .alert-blue { background: #EFF6FF; border-color: #3B82F6; }
+  .alert-yellow { background: #FFFBEB; border-color: #D97706; }
+  .alert-label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .alert-green .alert-label { color: #16A34A; }
+  .alert-orange .alert-label { color: #D97706; }
+  .alert-red .alert-label { color: #DC2626; }
+  .alert-purple .alert-label { color: #7C3AED; }
+  .alert-blue .alert-label { color: #2563EB; }
+
+  /* ── Tables ── */
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+  th { background: #F1F5F9; color: #1E293B; font-weight: 600; padding: 8px 10px; border: 1px solid #E2E8F0; text-align: left; }
+  td { padding: 7px 10px; border: 1px solid #E2E8F0; }
+
+  .img-frame { margin: 14px 0; text-align: center; }
+  .img-frame img { max-width: 85%; max-height: 60vh; border: 1px solid #D1D5DB; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .img-frame .caption { font-size: 13px; color: #64748B; margin-top: 6px; font-style: italic; }
+
+  ul, ol { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 4px; }
+
+  /* ── Visit Schedule Table ── */
+  .visit-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .visit-table th { padding: 10px 14px; text-align: left; font-weight: 600; color: white; }
+  .visit-table td { padding: 8px 14px; border: 1px solid #E2E8F0; }
+  .visit-header { background: #0B3D6B; }
+  .visit-row-1 td { background: #EFF6FF; }
+  .visit-row-2 td { background: #F0FDF4; }
+  .visit-row-3 td { background: #FFFBEB; }
+  .visit-row-4 td { background: #FAF5FF; }
+
+  /* ── RED FLAGS ── */
+  .danger-split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+  .danger-box { border-radius: 12px; overflow: hidden; border: 2px solid; }
+  .danger-box h4 { padding: 10px 14px; font-size: 14px; }
+  .danger-box ul { padding: 10px 14px 14px 30px; margin: 0; }
+  .danger-mother { border-color: #EF4444; }
+  .danger-mother h4 { background: #FEF2F2; color: #991B1B; }
+  .danger-mother li::marker { color: #EF4444; }
+  .danger-infant { border-color: #F59E0B; }
+  .danger-infant h4 { background: #FFFBEB; color: #92400E; }
+  .danger-infant li::marker { color: #F59E0B; }
+
+  .redflag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0; }
+  .redflag-card {
+    padding: 12px 14px; border-radius: 10px; border: 2px solid #EF4444;
+    background: #FEF2F2; font-size: 13px; font-weight: 500;
+  }
+  .redflag-card strong { color: #991B1B; display: block; margin-bottom: 4px; font-size: 14px; }
+  .redflag-infant {
+    border-color: #F59E0B; background: #FFFBEB;
+  }
+  .redflag-infant strong { color: #92400E; }
+
+  .footer { text-align: center; color: #94A3B8; font-size: 13px; padding: 20px; border-top: 1px solid #E2E8F0; margin-top: 20px; }
+
+  /* ── Flowchart Infographic ── */
+  .flowchart-container {
+    background: #F8FAFC; border: 2px solid #CBD5E1; border-radius: 16px;
+    padding: 24px; margin: 14px 0; text-align: center;
+  }
+  .fc-title { font-size: 18px; font-weight: 700; color: #0B3D6B; margin-bottom: 16px; }
+  .fc-step {
+    display: inline-flex; align-items: flex-start; gap: 10px;
+    background: #fff; border: 2px solid #3B82F6; border-radius: 12px;
+    padding: 12px 18px; text-align: left; max-width: 360px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  }
+  .fc-num {
+    display: flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%; background: #3B82F6;
+    color: #fff; font-weight: 700; font-size: 14px; flex-shrink: 0; margin-top: 2px;
+  }
+  .fc-body { font-size: 14px; }
+  .fc-body ul { padding-left: 16px; margin: 4px 0 0; font-size: 13px; }
+  .fc-arrow { font-size: 28px; color: #3B82F6; line-height: 1; margin: 6px 0; }
+  .fc-diamond { display: flex; justify-content: center; margin: 8px 0; }
+  .fc-diamond-inner {
+    display: flex; align-items: center; justify-content: center;
+    width: 200px; height: 200px;
+    background: #FFFBEB; border: 3px solid #F59E0B;
+    transform: rotate(45deg); border-radius: 12px;
+  }
+  .fc-diamond-inner div {
+    transform: rotate(-45deg);
+    font-weight: 600; font-size: 14px; text-align: center; color: #92400E;
+  }
+  .fc-branches {
+    display: flex; justify-content: center; gap: 30px; margin-top: 10px;
+  }
+  .fc-branch { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .fc-branch-arrow { font-weight: 700; font-size: 15px; }
+  .fc-branch-no .fc-branch-arrow { color: #16A34A; }
+  .fc-branch-yes .fc-branch-arrow { color: #DC2626; }
+  .fc-step-green { border-color: #22C55E; background: #F0FDF4; }
+  .fc-step-red { border-color: #EF4444; background: #FEF2F2; }
+  .fc-step-green .fc-body { color: #166534; }
+  .fc-step-red .fc-body { color: #991B1B; }
+
+  /* ── Postpartum Care Table Infographic ── */
+  .postpartum-table-container {
+    background: #fff; border: 2px solid #CBD5E1; border-radius: 16px;
+    padding: 20px; margin: 14px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    overflow-x: auto;
+  }
+  .pt-title { font-size: 17px; font-weight: 700; color: #0B3D6B; margin-bottom: 12px; }
+  .pt-table { width: 100%; border-collapse: collapse; font-size: 13px; border-radius: 10px; overflow: hidden; }
+  .pt-table th {
+    padding: 10px 12px; text-align: center; font-weight: 700; font-size: 14px;
+    border: 1px solid #CBD5E1; background: #0B3D6B; color: #fff;
+  }
+  .pt-table td { padding: 10px 12px; border: 1px solid #E2E8F0; vertical-align: top; }
+  .pt-label {
+    background: #F1F5F9; font-weight: 600; color: #1E293B;
+    vertical-align: middle !important; font-size: 13px;
+  }
+  .pt-sub { font-size: 11px; font-weight: 400; color: #64748B; }
+  .pt-bold { font-weight: 700; font-size: 15px; text-align: center; vertical-align: middle !important; }
+  .pt-bullet { color: #3B82F6; margin-right: 3px; }
+  .pt-d1 { background: #EFF6FF; }
+  .pt-d4 { background: #F0FDF4; }
+  .pt-d7 { background: #FFFBEB; }
+  .pt-d40 { background: #FAF5FF; }
+  .pt-cell-venue { text-align: center; font-weight: 500; vertical-align: middle !important; }
+
+  @media (max-width: 768px) {
+    .card-grid, .card-grid-3, .card-grid-4, .danger-split, .redflag-grid { grid-template-columns: 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 26px; }
+    .container { padding: 12px; }
+    .section { padding: 16px; }
+    .img-frame img { max-width: 100%; max-height: none; }
+    .fc-branches { flex-direction: column; align-items: center; gap: 12px; }
+    .fc-diamond-inner { width: 160px; height: 160px; }
+    .pt-table { font-size: 12px; }
+    .pt-table th, .pt-table td { padding: 6px 8px; }
+  }
+  @media print { body { background: white; } .hero, .redflag-card, .danger-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="topic-badge">FM Topic 4</div>
+    <h1>Postpartum Care</h1>
+    <p>Puerperium · Postnatal Visits · Danger Symptoms · Health Education</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <div class="toc-grid">
+      <div class="toc-item"><a href="#s1">§1 ILOs</a></div>
+      <div class="toc-item"><a href="#s2">§2 Definition</a></div>
+      <div class="toc-item"><a href="#s3">§3 Clinical Picture</a></div>
+      <div class="toc-item"><a href="#s4">§4 Mother Exam Details</a></div>
+      <div class="toc-item"><a href="#s5">§5 Infant Assessment</a></div>
+      <div class="toc-item"><a href="#s6">§6 Danger Symptoms &amp; Red Flags</a></div>
+      <div class="toc-item"><a href="#s7">§7 Health Education</a></div>
+      <div class="toc-item"><a href="#s8">§8 Timing of Care</a></div>
+      <div class="toc-item"><a href="#s9">§9 Flowchart &amp; Care Table</a></div>
+      <div class="toc-item"><a href="#s10">§10 Review Question</a></div>
+    </div>
+  </div>
+
+  <!-- §1 ILOs -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>ILOs</h2>
+    </div>
+    <ul>
+      <li>Identify objectives of postpartum care</li>
+      <li>Define postpartum care</li>
+      <li>Identify the red flags of postpartum period</li>
+      <li>Recognize proper timing for postpartum care visits</li>
+    </ul>
+  </div>
+
+  <!-- §2 Definition & Objectives -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Definition &amp; Objectives</h2>
+    </div>
+    <div class="alert alert-blue">
+      <div class="alert-label">DEFINITION</div>
+      The <strong>postpartum period</strong> (puerperium) starts about <strong>two hours</strong> after the delivery of the placenta and continues for <strong>six weeks</strong>. It is the period when anatomic and physiologic changes of pregnancy are reversed, and the body returns to the normal non-pregnant state.
+    </div>
+
+    <div class="subsection-title">Objectives of Postnatal Care</div>
+    <div class="card-grid">
+      <div class="card card-cyan">
+        <div class="card-title">👶 For the Newborn</div>
+        <ol>
+          <li>Early detection of any health problems</li>
+          <li>Establishment and promotion of successful breast feeding</li>
+          <li>Counseling and initiation of proper infant care by the mother and family</li>
+        </ol>
+      </div>
+      <div class="card card-green">
+        <div class="card-title">👩 For the Mother</div>
+        <ol>
+          <li>Reproductive health promotion (physical, psychological, social)</li>
+          <li>Prevention of postpartum complications</li>
+          <li>Early detection of complications and referral</li>
+          <li>Psychological support by health care providers</li>
+          <li>Counseling for support by husband and family</li>
+          <li>Social adjustment and re-integration in family and society</li>
+          <li>Counseling for contraception for spacing</li>
+          <li>Providing appropriate health education messages</li>
+        </ol>
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following best defines this condition?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A pathological deviation from normal anatomy or function</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">A condition requiring surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">An incidental finding with no clinical significance</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">A self-limiting disorder of pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">A definition describes the essential nature of a condition as a deviation from normal.</div>
+        </div>
+</div>
+
+  <!-- §3 Clinical Picture -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Clinical Picture — History Taking</h2>
+    </div>
+    <div class="card-grid-4">
+      <div class="card card-red">
+        <div class="card-title">Day 1 (Home)</div>
+        <ul style="font-size:13px;padding-left:14px;">
+          <li>Abnormal bleeding, # pads/day</li>
+          <li>Severe headache, visual disturbances</li>
+          <li>Epigastric pain</li>
+          <li>Urination</li>
+          <li>✅ Vitamin A capsule (200,000 IU) given</li>
+        </ul>
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">Day 4 (Home)</div>
+        <ul style="font-size:13px;padding-left:14px;">
+          <li>Calf pain (thrombotic)</li>
+          <li>Chest pain (thrombotic)</li>
+          <li>Foul smelling discharge</li>
+          <li>Fever or chills (sepsis)</li>
+        </ul>
+      </div>
+      <div class="card card-amber">
+        <div class="card-title">Day 7 (Home)</div>
+        <ul style="font-size:13px;padding-left:14px;">
+          <li>Calf / chest pain</li>
+          <li>Foul smelling discharge</li>
+          <li>Fever or chills</li>
+          <li>✅ Check umbilical stump fallen off</li>
+        </ul>
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">Day 40 (Clinic)</div>
+        <ul style="font-size:13px;padding-left:14px;">
+          <li>Complete assessment</li>
+          <li>Initiation of contraception</li>
+          <li>Hb + urine analysis</li>
+        </ul>
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following best defines this condition?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A pathological deviation from normal anatomy or function</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">A condition requiring surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">An incidental finding with no clinical significance</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">A self-limiting disorder of pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">A definition describes the essential nature of a condition as a deviation from normal.</div>
+        </div>
+</div>
+
+  <!-- §4 Mother Exam -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Physical Examination — Mother</h2>
+    </div>
+
+    <div class="card-grid-3">
+      <div class="card card-navy">
+        <div class="card-title">🩺 General</div>
+        <ul style="padding-left:14px;">
+          <li>Vital signs: BP, pulse, temperature</li>
+          <li>Breasts: retracted nipples</li>
+          <li>Lower limbs: edema, tender calf muscles</li>
+        </ul>
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">Abdominal</div>
+        <ul style="padding-left:14px;">
+          <li><strong>Day 1:</strong> Fundal height &amp; firmness by palpation, abdominal tenderness, check uterine involution</li>
+          <li><strong>Day 40:</strong> Abdominal musculature tone &amp; condition; C-section incision inspection</li>
+        </ul>
+      </div>
+      <div class="card card-pink">
+        <div class="card-title">Local (Perineal)</div>
+        <ul style="padding-left:14px;">
+          <li>Amount of vaginal bleeding</li>
+          <li>Perineum: infections, lacerations, hematomas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subsub">Laboratory Investigation (Day 40)</div>
+    <div class="card-grid">
+      <div class="card card-blue">Hemoglobin level</div>
+      <div class="card card-cyan">Complete urine analysis</div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which sign on examination is characteristic?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Abnormal vital signs</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Palpable abdominal mass</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Specific findings vary by condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">None of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Examination findings depend heavily on the specific obstetric condition.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The most common presenting symptom is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Pain</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Abnormal bleeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both pain and abnormal bleeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Clinical presentation varies — pain and bleeding are common but not universal symptoms.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">On Day 1 postpartum, which item should be checked as given?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Iron supplementation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Vitamin A capsule (200,000 IU)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Folic acid</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Calcium supplement</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">On Day 1, the nurse should check that Vitamin A capsule (200,000 IU) has been given to the mother.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">On Day 4 postpartum, which symptom should be specifically asked about?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Breast engorgement</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Calf pain (suggesting thrombosis)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Umbilical stump condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Infant jaundice</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">On Day 4, the nurse asks about calf pain (thrombotic), chest pain, foul-smelling discharge, and fever/chills.</div>
+        </div>
+</div>
+
+  <!-- §5 Infant -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Infant Assessment</h2>
+    </div>
+    <div class="alert alert-green">
+      <div class="alert-label">ORDER</div>
+      After examining the mother, the health care provider's attention should be focused on the infant.
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-cyan">
+        <div class="card-title">📋 History Taking</div>
+        <ul style="padding-left:14px;">
+          <li>Ask about danger symptoms</li>
+          <li>Any concerns the mother has</li>
+        </ul>
+      </div>
+      <div class="card card-navy">
+        <div class="card-title">🩺 Physical Examination</div>
+        <ul style="padding-left:14px;">
+          <li><strong>General:</strong> Tone, color, weight, temperature, respiratory rate</li>
+          <li><strong>Chest:</strong> Retracted chest wall during respiration</li>
+          <li><strong>Abdominal:</strong> Umbilical stump — signs of infection/bleeding; Day 7: should have fallen off or totally dried</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card card-orange">
+        <div class="card-title">🧪 Lab — Day 1</div>
+        Counsel mother to have infant screened for congenital hypothyroidism within the first week.
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">🧪 Lab — Day 7</div>
+        Check that infant was screened; if not, perform the screening (blood sample from heel for hypothyroidism).
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">What laboratory investigations are performed on Day 40 postpartum?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Complete blood count and liver function tests</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Hemoglobin level and complete urine analysis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Blood glucose and lipid profile</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Thyroid function tests and vitamin D level</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">On Day 40, hemoglobin level and complete urine analysis are the recommended lab investigations.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">On Day 1 postpartum, what abdominal finding should be assessed?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Abdominal musculature tone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Fundal height and firmness by palpation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">C-section incision inspection</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Liver span</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">On Day 1, fundal height and firmness by palpation and abdominal tenderness should be assessed to check uterine involution.</div>
+        </div>
+</div>
+
+  <!-- §6 Danger Symptoms & Red Flags -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Danger Symptoms &amp; Red Flags</h2>
+    </div>
+
+    <div class="subsection-title">⚠️ Danger Symptoms — When to Seek Medical Care</div>
+    <div class="danger-split">
+      <div class="danger-box danger-mother">
+        <h4>👩 Mother</h4>
+        <ul>
+          <li>Vaginal bleeding</li>
+          <li>Severe headache, blurring of vision, severe epigastric pain, or convulsions</li>
+          <li>Fever or malodorous vaginal discharge</li>
+          <li>Painful calf muscle</li>
+          <li>Abdomen very tender when pressed</li>
+          <li>Chest pain or dyspnea</li>
+          <li>Fainting</li>
+        </ul>
+      </div>
+      <div class="danger-box danger-infant">
+        <h4>👶 Infant</h4>
+        <ul>
+          <li>Convulsions or continuous sleep</li>
+          <li>Refusal of feeding for two successive times</li>
+          <li>Delayed passage of stool or urine &gt; 24 hours</li>
+          <li>Diarrhea or excessive vomiting</li>
+          <li>Fever or cold skin</li>
+          <li>Abnormal color — pale, dusky, yellow, blue, or mottling</li>
+          <li>Umbilical stump red, oozing, draining pus</li>
+          <li>Rapid respirations (panting)</li>
+          <li>Poor/weak sucking (inability to latch)</li>
+          <li>Lethargy (does not grasp finger, floppy)</li>
+          <li>Weak and/or constant painful cry</li>
+          <li>Swollen, sticky eyes draining pus</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subsection-title">🚩 RED FLAGS — Referral Criteria</div>
+    <p style="font-size:14px;color:#64748B;margin-bottom:8px;">Detected during home visits — refer to health care facility immediately.</p>
+    <div class="redflag-grid">
+        <div class="redflag-card">
+          <strong>👩 Mother Red Flags</strong>
+          <ul style="padding-left:14px;margin:4px 0 0;">
+            <li>Pulse &gt; 100 bpm</li>
+            <li>BP &gt; 140/90 mmHg</li>
+            <li>Temperature &gt; 38 °C</li>
+            <li>Tender or hard breast</li>
+            <li>Tender calf muscles</li>
+            <li>Lower abdominal tenderness</li>
+            <li>Malodorous vaginal discharge or infected perineal wound (episiotomy/tear)</li>
+          </ul>
+        </div>
+        <div class="redflag-card redflag-infant">
+          <strong>👶 Infant Red Flags</strong>
+          <ul style="padding-left:14px;margin:4px 0 0;">
+            <li>Temperature &lt; 36 °C or &gt; 38 °C</li>
+            <li>Respiratory rate &gt; 60/min</li>
+            <li>Flaccid, non-reactive infant</li>
+            <li>Jaundice, cyanosis, or pallor</li>
+            <li>Nasal flaring + chest retraction (difficulty breathing)</li>
+            <li>Bloody or purulent discharge from umbilical stump</li>
+            <li>Severe abdominal distention</li>
+            <li>Ambiguous genitalia</li>
+          </ul>
+        </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">What newborn screening should be performed within the first week of life?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Hearing screening</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Congenital hypothyroidism screening</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Critical congenital heart disease screening</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Bilirubin level</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The mother should be counseled to have the infant screened for congenital hypothyroidism within the first week.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">By Day 7, what should have happened to the umbilical stump?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It should be completely healed</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It should have fallen off or totally dried</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It should be covered with antibiotic ointment</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It needs surgical removal</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">By Day 7, the umbilical stump should have fallen off or be totally dried.</div>
+        </div>
+</div>
+
+  <!-- §7 Health Education -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Health Education &amp; Counseling</h2>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-green">
+        <div class="card-title">👩 Mother</div>
+        <ol style="padding-left:16px;">
+          <li>Encourage early ambulation</li>
+          <li>Explain benefits, initiation and establishment of successful breastfeeding — periodic suckling and complete emptying of breasts</li>
+          <li>Stress importance of seeking medical aid if danger symptoms/signs appear</li>
+          <li>Explain importance of good nutrition</li>
+          <li>Explain abdominal muscle tone and exercises</li>
+          <li>Counsel at day 7 about contraception</li>
+          <li>Encourage day 40 visit — explain its importance</li>
+        </ol>
+      </div>
+      <div class="card card-cyan">
+        <div class="card-title">👶 Infant</div>
+        <ol style="padding-left:16px;">
+          <li>Proper temperature regulation</li>
+          <li>Care of the umbilical cord</li>
+          <li>Care of the eyes</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="subsub">Additional Health Education Messages</div>
+    <div class="card-grid-3">
+      <div class="card card-blue">Signs of postnatal complications — seek early care</div>
+      <div class="card card-purple">Lactating mother: nutrition requirements &amp; lifestyle</div>
+      <div class="card card-pink">Initiation &amp; technique of breastfeeding</div>
+      <div class="card card-amber">Breast &amp; nipple care</div>
+      <div class="card card-orange">Baby care: bathing, skin, eyes, nose, ears, umbilical stump</div>
+      <div class="card card-navy">Stimulating activities for baby development</div>
+      <div class="card card-green">Well-baby care: first visit schedule, vaccination schedule, MCH visits</div>
+      <div class="card card-cyan">Birth spacing</div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a danger symptom in the mother requiring immediate medical care?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Mild fatigue</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Painful calf muscle</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Slight breast tenderness</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Occasional headache</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Danger symptoms for the mother include: vaginal bleeding, severe headache, blurring of vision, convulsions, fever, foul discharge, painful calf muscle, chest pain, dyspnea, and fainting.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a red flag in an infant requiring referral?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Frequent breastfeeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Respiratory rate >60/min</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Mild jaundice resolving by Day 7</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Sleeping 16-18 hours per day</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Infant red flags include: temperature 38°C, RR >60/min, flaccid/non-reactive, jaundice/cyanosis/pallor, nasal flaring, chest retraction, purulent umbilical discharge.</div>
+        </div>
+</div>
+
+  <!-- §8 Timing of Care -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Timing of Postpartum Care</h2>
+    </div>
+
+    <div class="alert alert-blue">
+      <div class="alert-label">HOME DELIVERIES</div>
+      Nurse visits on <strong>Day 1</strong> (within 24 hours), <strong>Day 4</strong>, and <strong>Day 7</strong>. Then mother visits the center on <strong>Day 40</strong> for complete assessment and initiation of contraception.
+    </div>
+    <div class="alert alert-orange">
+      <div class="alert-label">HOSPITAL DELIVERIES</div>
+      Care in hospital until discharge; then same schedule as home deliveries.
+    </div>
+
+    <div class="subsection-title">What Each Visit Covers</div>
+    <div class="card-grid">
+      <div class="card card-navy">
+        <div class="card-title">👩 Mother Assessment</div>
+        <ul style="padding-left:14px;">
+          <li>Temperature</li>
+          <li>Blood pressure</li>
+          <li>Involution of uterus</li>
+          <li>Discharges</li>
+        </ul>
+      </div>
+      <div class="card card-cyan">
+        <div class="card-title">👶 Infant Assessment</div>
+        <ul style="padding-left:14px;">
+          <li>General condition, color, vitality</li>
+          <li>Feeding</li>
+          <li>Umbilical stump</li>
+          <li>Passing urine and stools</li>
+          <li>Congenital abnormalities</li>
+        </ul>
+      </div>
+    </div>
+    <div class="alert alert-green">
+      <div class="alert-label">DAY 3–7</div>
+      Blood sample from heel for congenital hypothyroidism screening (per protocol).
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When should contraception counseling be provided to postpartum mothers?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Day 1 postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Day 7 postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Only on Day 40</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">After 6 months</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Counseling about contraception should be done at Day 7 visit.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a health education message for the mother?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Avoid breastfeeding for the first week</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Encourage early ambulation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Remain in bed for 40 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Restrict fluid intake</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Health education includes: encourage early ambulation, successful breastfeeding, good nutrition, abdominal exercises, contraception counseling, and day 40 visit.</div>
+        </div>
+</div>
+
+  <!-- §9 Flowchart & Care Table -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Postpartum Care Flowchart &amp; Table</h2>
+    </div>
+
+    <div class="flowchart-container">
+      <div class="fc-title">Postpartum Care Protocol</div>
+      <div class="fc-step fc-step-1">
+        <span class="fc-num">1</span>
+        <div class="fc-body">
+          <strong>Postpartum care visits</strong><br>
+          Home: <strong>Days 1, 4, 7</strong><br>
+          Clinic: <strong>Day 40</strong>
+        </div>
+      </div>
+      <div class="fc-arrow">↓</div>
+      <div class="fc-step fc-step-2">
+        <span class="fc-num">2</span>
+        <div class="fc-body">
+          <strong>For both mother &amp; newborn infant:</strong>
+          <ul>
+            <li>Take medical history</li>
+            <li>Perform physical examinations</li>
+            <li>Order investigations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fc-arrow">↓</div>
+      <div class="fc-diamond">
+        <div class="fc-diamond-inner">
+          <div>Is there any risk factor,<br>maternal or neonatal?</div>
+        </div>
+      </div>
+      <div class="fc-branches">
+        <div class="fc-branch fc-branch-no">
+          <div class="fc-branch-arrow">No →</div>
+          <div class="fc-step fc-step-green">
+            <div class="fc-body">
+              <strong>✅ Provide health education<br>and counseling</strong>
+            </div>
+          </div>
+        </div>
+        <div class="fc-branch fc-branch-yes">
+          <div class="fc-branch-arrow">Yes →</div>
+          <div class="fc-step fc-step-red">
+            <div class="fc-body">
+              <strong>🚑 Refer to a higher level<br>of health care facility</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="postpartum-table-container">
+      <div class="pt-title">Postpartum Care Table — Visit Schedule</div>
+      <table class="pt-table">
+        <thead>
+          <tr>
+            <th style="width:18%;"></th>
+            <th style="width:20.5%;">First Visit</th>
+            <th style="width:20.5%;">Second Visit</th>
+            <th style="width:20.5%;">Third Visit</th>
+            <th style="width:20.5%;">Fourth Visit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pt-label">Venue</td>
+            <td class="pt-cell-venue pt-d1">🏠 At Home</td>
+            <td class="pt-cell-venue pt-d4">🏠 At Home</td>
+            <td class="pt-cell-venue pt-d7">🏠 At Home</td>
+            <td class="pt-cell-venue pt-d40">🏥 At the Health Facility</td>
+          </tr>
+          <tr>
+            <td class="pt-label">Timing</td>
+            <td class="pt-bold pt-d1">Day 1</td>
+            <td class="pt-bold pt-d4">Day 4</td>
+            <td class="pt-bold pt-d7">Day 7</td>
+            <td class="pt-bold pt-d40">Day 40</td>
+          </tr>
+          <tr>
+            <td class="pt-label" rowspan="2">History Taking<br><span class="pt-sub">(Mother)</span></td>
+            <td class="pt-d1">
+              <span class="pt-bullet">•</span> Amount of vaginal bleeding<br>
+              <span class="pt-bullet">•</span> Severe headache or blurring of vision<br>
+              <span class="pt-bullet">•</span> Urination<br>
+              <span class="pt-bullet">•</span> ✅ Vitamin A capsule (200,000 IU)
+            </td>
+            <td class="pt-d4">
+              <span class="pt-bullet">•</span> Calf or chest pain<br>
+              <span class="pt-bullet">•</span> Fever or chills<br>
+              <span class="pt-bullet">•</span> Foul smelling vaginal discharge
+            </td>
+            <td class="pt-d7">
+              <span class="pt-bullet">•</span> Inquire how breast feeding is proceeding<br>
+              <span class="pt-bullet">•</span> ✅ Umbilical stump check
+            </td>
+            <td class="pt-d40">
+              <span class="pt-bullet">•</span> Ask about stress incontinence<br>
+              <span class="pt-bullet">•</span> Inquire how breast feeding is proceeding<br>
+              <span class="pt-bullet">•</span> 🧪 Hb level + urine analysis
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">For home deliveries, on which days does the nurse visit?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Days 1, 3, and 7</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Days 1, 4, and 7</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Days 2, 5, and 10</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Days 1, 7, and 14</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">For home deliveries, nurse visits on Day 1 (within 24 hours), Day 4, and Day 7. Then mother visits center on Day 40.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">What is the purpose of the Day 40 visit?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Routine weight check only</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Complete assessment and initiation of contraception</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Only infant vaccination</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Removal of sutures</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">On Day 40, the mother visits the health facility for complete assessment and initiation of contraception.</div>
+        </div>
+</div>
+
+  <!-- §10 Review Question -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>Review Question</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card card-blue"><strong>Q1:</strong> Enumerate danger symptoms and signs during the postpartum period (mother + infant).</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>FM Topic 4 — Postpartum Care</strong> · Family Medicine Review</p>
+    <p>Source: FM-OBS Book (Pages 29–34)</p>
+    <p style="margin-top:6px;">
+      <span style="display:inline-block;background:#22C55E;color:white;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;">✓ Quality Reviewed</span>
+    </p>
+  </div>
+
+
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">According to the postpartum care flowchart, what happens if a risk factor is detected?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Continue routine care</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Refer to a higher level of health care facility</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Start iron supplementation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Schedule a follow-up in 2 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">If any risk factor (maternal or neonatal) is detected, the patient should be referred to a higher level of health care facility.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">What is the first step in the postpartum care protocol flowchart?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Physical examination</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Postpartum care visits (home: Days 1, 4, 7; clinic: Day 40)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Laboratory investigations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Health education</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The first step is scheduling and conducting postpartum care visits: home visits on Days 1, 4, 7 and clinic visit on Day 40.</div>
+        </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

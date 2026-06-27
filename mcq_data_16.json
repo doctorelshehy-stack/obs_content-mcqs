@@ -1,0 +1,80 @@
+{
+  "s2": [
+    {
+      "q": "Superficial thrombophlebitis is characterized by:",
+      "options": [
+        "Deep vein inflammation with high PE risk",
+        "Inflammation of a superficial vein, often with palpable cord and localized tenderness",
+        "Arterial thrombosis",
+        "Pulmonary embolism"
+      ],
+      "correct": 1,
+      "explain": "Superficial thrombophlebitis presents with localized pain, tenderness, erythema, and a palpable cord along a superficial vein."
+    }
+  ],
+  "s3": [
+    {
+      "q": "The classic presentation of DVT includes all EXCEPT:",
+      "options": [
+        "Unilateral leg swelling",
+        "Calf tenderness",
+        "Warmth and erythema",
+        "Bilateral leg swelling with pitting edema"
+      ],
+      "correct": 3,
+      "explain": "DVT is typically unilateral with swelling, pain, warmth, and Homan's sign. Bilateral swelling is less common."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which is a major risk factor for DVT in pregnancy?",
+      "options": [
+        "Hyperemesis",
+        "Previous DVT/thrombophilia",
+        "Young maternal age",
+        "Multiparity"
+      ],
+      "correct": 1,
+      "explain": "Major risk factors include previous DVT/PE, thrombophilia, obesity, operative delivery, and immobilization."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The diagnostic imaging of choice for suspected DVT in pregnancy is:",
+      "options": [
+        "Venography",
+        "Compression ultrasound with Doppler",
+        "CT venography",
+        "MRI"
+      ],
+      "correct": 1,
+      "explain": "Compression ultrasound with Doppler is the first-line diagnostic test for DVT in pregnancy, avoiding radiation."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The anticoagulant of choice for DVT during pregnancy is:",
+      "options": [
+        "Warfarin",
+        "Unfractionated heparin or LMWH",
+        "Direct oral anticoagulants (DOACs)",
+        "Aspirin"
+      ],
+      "correct": 1,
+      "explain": "LMWH (e.g., enoxaparin) or UFH is preferred as they do not cross the placenta. Warfarin and DOACs are teratogenic/contraindicated."
+    }
+  ],
+  "s10": [
+    {
+      "q": "Pulmonary embolism in pregnancy presents with all EXCEPT:",
+      "options": [
+        "Sudden onset dyspnea",
+        "Pleuritic chest pain",
+        "Hemoptysis",
+        "Gradual onset bilateral leg edema"
+      ],
+      "correct": 3,
+      "explain": "PE presents with sudden dyspnea, pleuritic chest pain, hemoptysis, and syncope. It is a leading cause of maternal death."
+    }
+  ]
+}

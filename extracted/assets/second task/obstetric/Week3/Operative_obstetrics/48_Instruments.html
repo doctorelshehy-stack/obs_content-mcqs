@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>48 - Instruments</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: #F8FAFC;
+    color: #334155;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #0F4C81, #3B82F6);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 34px; font-weight: 800; margin-bottom: 8px; }
+  .hero .topic-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .hero p { font-size: 18px; opacity: 0.9; }
+
+  /* TOC */
+  .toc {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .toc h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F4C81;
+    margin-bottom: 12px;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+  }
+  .toc-item {
+    padding: 4px 0;
+    color: #475569;
+    font-size: 14px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+  .toc-item a { color: #3B82F6; text-decoration: none; }
+  .toc-item a:hover { text-decoration: underline; }
+
+  /* Section */
+  .section {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    background: #F8FAFC;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border-left: 4px solid #60A5FA;
+  }
+  .section-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #60A5FA;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #334155;
+  }
+
+  /* Card */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .card-green { border-left: 4px solid #22C55E; }
+  .card-red { border-left: 4px solid #EF4444; }
+  .card-blue { border-left: 4px solid #60A5FA; }
+  .card-purple { border-left: 4px solid #8B5CF6; }
+  .card-orange { border-left: 4px solid #F59E0B; }
+  .card-pink { border-left: 4px solid #EC4899; }
+  .card-cyan { border-left: 4px solid #06B6D4; }
+  .card-navy { border-left: 4px solid #0F4C81; }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #1E293B;
+  }
+
+  /* Instrument card — two-column layout for images + text */
+  .instrument-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 12px 0;
+  }
+  .instrument-text { padding: 4px 0; }
+
+  /* Source image card */
+  .src-viz {
+    border: 2px solid #22C55E;
+    border-radius: 12px;
+    background: #F0FDF4;
+    padding: 12px;
+    margin: 8px 0;
+  }
+  .src-viz .badge {
+    display: inline-block;
+    background: #22C55E;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .img-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+  }
+  .img-frame img {
+    max-width: 100%;
+    max-height: 40vh;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+  }
+  .img-caption {
+    font-size: 13px;
+    color: #475569;
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .img-source {
+    font-size: 12px;
+    color: #22C55E;
+    font-weight: 500;
+  }
+
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  th {
+    background: #F1F5F9;
+    color: #334155;
+    font-weight: 600;
+    padding: 8px 10px;
+    border: 1px solid #E2E8F0;
+    text-align: left;
+  }
+  td {
+    padding: 7px 10px;
+    border: 1px solid #E2E8F0;
+  }
+  table.prop-table { width: auto; min-width: 300px; }
+  table.prop-table th:first-child { background: #0F4C81; color: white; }
+
+  /* Alert */
+  .alert {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+  }
+  .alert-green { background: #F0FDF4; border-color: #22C55E; }
+  .alert-orange { background: #FFFBEB; border-color: #F59E0B; }
+  .alert-red { background: #FEF2F2; border-color: #EF4444; }
+  .alert-purple { background: #FAF5FF; border-color: #8B5CF6; }
+  .alert-blue { background: #EFF6FF; border-color: #60A5FA; }
+  .alert-label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .alert-green .alert-label { color: #16A34A; }
+  .alert-orange .alert-label { color: #D97706; }
+  .alert-red .alert-label { color: #DC2626; }
+  .alert-purple .alert-label { color: #7C3AED; }
+  .alert-blue .alert-label { color: #2563EB; }
+
+  /* Lists */
+  ul, ol { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 4px; }
+
+  /* Definition */
+  .defn { font-weight: 500; color: #1E293B; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 13px;
+    padding: 20px;
+    border-top: 1px solid #E2E8F0;
+    margin-top: 20px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card-grid, .card-grid-3, .instrument-row { grid-template-columns: 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 26px; }
+    .container { padding: 12px; }
+    .section { padding: 16px; }
+  }
+  @media print {
+    body { background: white; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .src-viz { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="topic-badge">Topic 48</div>
+    <h1>Instruments</h1>
+    <p>Uterine Sound · Catheter · Dilators · Curette · Forceps · Specula · Clamps</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <div class="toc-grid">
+      <div class="toc-item"><a href="#s1">§1 Uterine Sound</a></div>
+      <div class="toc-item"><a href="#s2">§2 Female Uterine Catheter</a></div>
+      <div class="toc-item"><a href="#s3">§3 Cervical Dilators</a></div>
+      <div class="toc-item"><a href="#s4">§4 Uterine Curette</a></div>
+      <div class="toc-item"><a href="#s5">§5 Special Forceps</a></div>
+      <div class="toc-item"><a href="#s6">§6 Vaginal Specula</a></div>
+      <div class="toc-item"><a href="#s7">§7 Uterine Holding Clamp</a></div>
+      <div class="toc-item"><a href="#s8">§8 Quick Reference</a></div>
+    </div>
+  </div>
+
+  <!-- §1 Uterine Sound -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Uterine Sound</h2>
+    </div>
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <table class="prop-table">
+          <tr><th>Property</th><th>Detail</th></tr>
+          <tr><td>Material/design</td><td>Malleable</td></tr>
+          <tr><td>Tip diameter</td><td>3 to 4 mm</td></tr>
+          <tr><td>Tip shape</td><td>Blunt</td></tr>
+          <tr><td>Scale</td><td>Graduated</td></tr>
+          <tr><td>Shape</td><td>Curved</td></tr>
+        </table>
+        <p class="defn" style="margin-top:12px;">Indications:</p>
+        <ul>
+          <li>Measuring cervical and uterine length</li>
+          <li>Diagnosis of cervical stenosis</li>
+          <li>Determining direction and position of uterus</li>
+        </ul>
+        <div class="alert alert-red">
+          <div class="alert-label">COMPLICATIONS</div>
+          Shock · Perforation
+        </div>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-01</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p1_1.jpeg" alt="Uterine Sound">
+        </div>
+        <div class="img-caption">Uterine sound — malleable, blunt-tipped, graduated and curved (top). Detail view (bottom).</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 259</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §2 Female Uterine Catheter -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Female Uterine Catheter</h2>
+    </div>
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <p class="defn">Types:</p>
+        <ol>
+          <li>Rubber</li>
+          <li>Metal</li>
+          <li>Plastic</li>
+        </ol>
+        <p class="defn" style="margin-top:8px;">Indications:</p>
+        <ul>
+          <li>Emptying the bladder during gynecologic operations</li>
+        </ul>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-02</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p1_2.jpeg" alt="Female Uterine Catheter">
+        </div>
+        <div class="img-caption">Female uterine catheter — rubber, metal, and plastic variants.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 260</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Cervical Dilators -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Cervical Dilators</h2>
+    </div>
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <p class="defn">Types:</p>
+        <ol>
+          <li><strong>Hegar</strong> — Graduated dilators</li>
+          <li><strong>Fenton</strong> — Alternative design</li>
+        </ol>
+        <p class="defn" style="margin-top:8px;">Indications:</p>
+        <ul>
+          <li>Dilatation of the cervix to facilitate intrauterine surgery</li>
+        </ul>
+        <div class="alert alert-red">
+          <div class="alert-label">COMPLICATIONS</div>
+          Neurogenic shock · Infection · Perforation · Cervical lacerations
+        </div>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-03</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p2_1.jpeg" alt="Cervical Dilators">
+        </div>
+        <div class="img-caption">Cervical dilators — Hegar and Fenton types.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 260</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §4 Uterine Curette -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Uterine Curette</h2>
+    </div>
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <p><span class="defn">Types:</span> Blunt and sharp.</p>
+        <p class="defn" style="margin-top:8px;">Indications:</p>
+        <ul>
+          <li>Evacuation of the uterus in cases of incomplete or missed abortion</li>
+          <li>Abnormal uterine bleeding</li>
+        </ul>
+        <div class="alert alert-red">
+          <div class="alert-label">COMPLICATIONS</div>
+          As uterine sound plus intestinal injury
+        </div>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-04</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p3_1.jpeg" alt="Uterine Curette">
+        </div>
+        <div class="img-caption">Uterine curette — blunt and sharp types for evacuation of the uterus.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 261</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §5 Special Forceps -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Special Forceps</h2>
+    </div>
+
+    <!-- Green Armytage Forceps -->
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <p class="defn">Green Armytage Forceps</p>
+        <ul>
+          <li>Hold the edges of uterine incision in cesarean section</li>
+        </ul>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-05</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p3_2.jpeg" alt="Green Armytage Forceps">
+        </div>
+        <div class="img-caption">Green Armytage forceps — holds edges of uterine incision in CS.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 261</div>
+      </div>
+    </div>
+
+    <!-- Ring Forceps -->
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <p class="defn">Ring Forceps</p>
+        <ul>
+          <li>Has lock</li>
+          <li>Used to grasp cervix in pregnant uterus during cerclage and curettage</li>
+          <li>Remove products of conception</li>
+          <li>Remove polyps</li>
+        </ul>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-06a</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p4_1.jpeg" alt="Ring Forceps">
+        </div>
+        <div class="img-caption">Ring forceps — has lock, used to grasp cervix in pregnant uterus during cerclage and curettage.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 262</div>
+      </div>
+    </div>
+
+    <!-- Ovum Forceps -->
+    <div class="instrument-row" style="margin-top:16px;">
+      <div class="instrument-text">
+        <p class="defn">Ovum Forceps</p>
+        <ul>
+          <li>Like ring forceps but has no lock</li>
+          <li>Remove products of conception</li>
+        </ul>
+      </div>
+      <div class="card-grid" style="margin:0;">
+        <div class="src-viz" style="margin:0;">
+          <div class="badge">INSTRUMENT · img-06a</div>
+          <div class="img-frame">
+            <img src="../extracted_images/48_Instruments/t48_p4_2.jpeg" alt="Ovum Forceps">
+          </div>
+          <div class="img-caption">Ovum forceps — used to remove products of conception (like ring forceps but no lock).</div>
+          <div class="img-source">Source: Book Obstetrics 2025-2026, p. 262</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vulsellum -->
+    <div class="instrument-row" style="margin-top:16px;">
+      <div class="instrument-text">
+        <p class="defn">Vulsellum</p>
+        <ul>
+          <li>Types: Single toothed, Multiple toothed</li>
+          <li>Used in holding the cervix in different operations</li>
+        </ul>
+      </div>
+      <div class="card-grid" style="margin:0;">
+        <div class="src-viz" style="margin:0;">
+          <div class="badge">INSTRUMENT · img-06b</div>
+          <div class="img-frame">
+            <img src="../extracted_images/48_Instruments/t48_p4_3.png" alt="Vulsellum — single-toothed detail">
+          </div>
+          <div class="img-caption">Vulsellum — single-toothed type for grasping cervix.</div>
+          <div class="img-source">Source: Book Obstetrics 2025-2026, p. 262</div>
+        </div>
+        <div class="src-viz" style="margin:0;">
+          <div class="badge">INSTRUMENT · img-06c</div>
+          <div class="img-frame">
+            <img src="../extracted_images/48_Instruments/t48_p4_4.jpeg" alt="Vulsellum — toothed tip detail">
+          </div>
+          <div class="img-caption">Vulsellum — close-up view of toothed grasping tip (multi-toothed variety).</div>
+          <div class="img-source">Source: Book Obstetrics 2025-2026, p. 262</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §6 Vaginal Specula -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Vaginal Specula</h2>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-cyan">
+        <div class="card-title">Sims Vaginal Speculum</div>
+        <ul style="padding-left:14px;">
+          <li>Vaginal operations</li>
+          <li>Diagnosis of vesicovaginal fistula</li>
+        </ul>
+      </div>
+      <div class="card card-green">
+        <div class="card-title">Cusco Speculum (Bivalve)</div>
+        <ul style="padding-left:14px;">
+          <li>Used for cervical visualization in many vaginal procedures</li>
+          <li>IUD removal</li>
+          <li>Pap smear and cervical punch biopsy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:8px;">
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-06</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p5_1.jpeg" alt="Sims Vaginal Speculum">
+        </div>
+        <div class="img-caption">Sims vaginal speculum — for vaginal operations and VVF diagnosis.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 263</div>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-07</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p5_2.jpeg" alt="Cusco Speculum">
+        </div>
+        <div class="img-caption">Cusco speculum (bivalve) — cervical visualization, IUD, pap smear.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 264</div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- §7 Uterine Holding Clamp -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Uterine Holding Clamp</h2>
+    </div>
+    <div class="instrument-row">
+      <div class="instrument-text">
+        <p><span class="defn">Use:</span> Holding the uterus in cases of hysterectomy or myomectomy.</p>
+      </div>
+      <div class="src-viz" style="margin:0;">
+        <div class="badge">INSTRUMENT · img-08</div>
+        <div class="img-frame">
+          <img src="../extracted_images/48_Instruments/t48_p6_1.jpeg" alt="Uterine Holding Clamp">
+        </div>
+        <div class="img-caption">Uterine holding clamp — grasping uterus during hysterectomy/myomectomy.</div>
+        <div class="img-source">Source: Book Obstetrics 2025-2026, p. 265</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- §8 Quick Reference -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Quick Reference Summary</h2>
+    </div>
+
+    <table>
+      <tr>
+        <th>Instrument</th>
+        <th>Key Use</th>
+        <th>Key Feature</th>
+      </tr>
+      <tr>
+        <td>Uterine Sound</td>
+        <td>Measure cervical/uterine length</td>
+        <td>Malleable, blunt tip, graduated</td>
+      </tr>
+      <tr>
+        <td>Female Uterine Catheter</td>
+        <td>Empty bladder in gynecologic surgery</td>
+        <td>Rubber / Metal / Plastic</td>
+      </tr>
+      <tr>
+        <td>Cervical Dilators</td>
+        <td>Dilate cervix for intrauterine surgery</td>
+        <td>Hegar &amp; Fenton types</td>
+      </tr>
+      <tr>
+        <td>Uterine Curette</td>
+        <td>Evacuate uterus (abortion, AUB)</td>
+        <td>Blunt &amp; Sharp types</td>
+      </tr>
+      <tr>
+        <td>Green Armytage</td>
+        <td>Hold uterine incision edges in CS</td>
+        <td>Locking forceps</td>
+      </tr>
+      <tr>
+        <td>Ring Forceps</td>
+        <td>Grasp cervix / remove POCs</td>
+        <td>Has lock</td>
+      </tr>
+      <tr>
+        <td>Ovum Forceps</td>
+        <td>Remove products of conception</td>
+        <td>No lock (like ring)</td>
+      </tr>
+      <tr>
+        <td>Vulsellum</td>
+        <td>Hold cervix in operations</td>
+        <td>Single / multiple toothed</td>
+      </tr>
+      <tr>
+        <td>Sims Speculum</td>
+        <td>Vaginal operations / VVF diagnosis</td>
+        <td>Single blade</td>
+      </tr>
+      <tr>
+        <td>Cusco Speculum</td>
+        <td>Cervical visualization / Pap smear</td>
+        <td>Bivalve</td>
+      </tr>
+      <tr>
+        <td>Uterine Holding Clamp</td>
+        <td>Grasp uterus in hysterectomy</td>
+        <td>Clamp design</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>Topic 48 — Instruments</strong> · Obstetrics and Gynecology Review</p>
+    <p>Source: Book Obstetrics 2025-2026, Pages 259-265</p>
+    <p style="margin-top:6px;">
+      <span style="display:inline-block; background:#22C55E; color:white; padding:2px 10px; border-radius:12px; font-size:11px; font-weight:600;">✓ Quality Reviewed</span>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

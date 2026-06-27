@@ -1,0 +1,458 @@
+{
+  "s2": [
+    {
+      "q": "Which part of the fetal skull is compressible during labour, allowing moulding?",
+      "options": [
+        "Base",
+        "Face",
+        "Vault",
+        "Foramen magnum"
+      ],
+      "correct": 2,
+      "explain": "The vault is compressible during labour — its five flat bones are joined by fibrous sutures that allow sliding. The base is rigid and non-compressible because bones are fused."
+    },
+    {
+      "q": "The base of the fetal skull extends from:",
+      "options": [
+        "Chin to foramen magnum",
+        "Chin to root of nose",
+        "Root of nose to occiput",
+        "Foramen magnum to vertex"
+      ],
+      "correct": 0,
+      "explain": "The base extends from the chin to the foramen magnum and is a rigid, non-compressible ring."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "How many bones form the vault of the fetal skull?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 2,
+      "explain": "The vault is built from 5 flat bones: 2 frontal bones, 2 parietal bones, and 1 occipital bone."
+    },
+    {
+      "q": "Which suture separates the two frontal bones?",
+      "options": [
+        "Sagittal suture",
+        "Coronal suture",
+        "Frontal suture",
+        "Lambdoid suture"
+      ],
+      "correct": 2,
+      "explain": "The frontal suture separates the two frontal bones. The sagittal suture separates the two parietal bones."
+    },
+    {
+      "q": "The lambdoid suture separates:",
+      "options": [
+        "Frontal from parietal bones",
+        "The two parietal bones",
+        "Parietal from temporal bones",
+        "Occipital from parietal bones"
+      ],
+      "correct": 3,
+      "explain": "The lambdoid suture separates the occipital bone from the parietal bones."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The vertex of the fetal skull is bounded anteriorly by:",
+      "options": [
+        "Posterior fontanelle and lambdoid suture",
+        "Anterior fontanelle and coronal suture",
+        "Nose and supra-orbital ridges",
+        "Parietal eminences"
+      ],
+      "correct": 1,
+      "explain": "The vertex is bounded anteriorly by the anterior fontanelle and coronal suture, posteriorly by the posterior fontanelle and lambdoid suture, and laterally by lines through the parietal eminences."
+    },
+    {
+      "q": "The brow presentation has which engagement diameter?",
+      "options": [
+        "Suboccipito-bregmatic (9.5 cm)",
+        "Submento-bregmatic (9.5 cm)",
+        "Mento-vertical (13.5 cm)",
+        "Occipito-frontal (11.5 cm)"
+      ],
+      "correct": 2,
+      "explain": "In brow presentation, the presenting diameter is the mento-vertical (13.5 cm), which exceeds the largest pelvic inlet diameter, so the head cannot enter the pelvis."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "How many fontanelles are there in the fetal skull, and how many are obstetrically important?",
+      "options": [
+        "4 fontanelles, 2 important",
+        "6 fontanelles, 2 important",
+        "6 fontanelles, 4 important",
+        "4 fontanelles, 4 important"
+      ],
+      "correct": 1,
+      "explain": "There are 6 fontanelles in the fetal skull. Only 2 are obstetrically important: the anterior and posterior fontanelles. The other 4 lie at the ends of the temporal sutures."
+    },
+    {
+      "q": "The anterior and posterior fontanelles help diagnose all EXCEPT:",
+      "options": [
+        "Vertex presentation",
+        "Position of the occiput",
+        "Sex of the fetus",
+        "Degree of flexion of the head"
+      ],
+      "correct": 2,
+      "explain": "The fontanelles help diagnose vertex presentation, the position of the occiput (by distinguishing diamond vs triangular shape), and the degree of flexion. They do not determine fetal sex."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The anterior fontanelle (bregma) is surrounded by how many bones?",
+      "options": [
+        "2 bones",
+        "3 bones",
+        "4 bones",
+        "5 bones"
+      ],
+      "correct": 2,
+      "explain": "The anterior fontanelle is surrounded by 4 bones: 2 frontal and 2 parietal. It is large, lozenge-shaped, and closes about 1.5 years after birth."
+    },
+    {
+      "q": "Which fontanelle has a bony floor at term?",
+      "options": [
+        "Anterior fontanelle",
+        "Posterior fontanelle",
+        "Both are membranous",
+        "Neither — both are bony"
+      ],
+      "correct": 1,
+      "explain": "The posterior fontanelle has a bony floor and its surrounding bones overlap during moulding. The anterior fontanelle has a membranous floor."
+    },
+    {
+      "q": "The posterior fontanelle closes:",
+      "options": [
+        "1.5 years after birth",
+        "At full term",
+        "6 months after birth",
+        "At 2 years of age"
+      ],
+      "correct": 1,
+      "explain": "The posterior fontanelle closes (is completely ossified) at full term. Memory aid: Posterior = Pre-birth/at term."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Which diameter is the engagement diameter in occipito-anterior position with complete flexion?",
+      "options": [
+        "Suboccipito-frontal (10 cm)",
+        "Suboccipito-bregmatic (9.5 cm)",
+        "Occipito-frontal (11.5 cm)",
+        "Mento-vertical (13.5 cm)"
+      ],
+      "correct": 1,
+      "explain": "The suboccipito-bregmatic diameter (9.5 cm) is the engagement diameter in occipito-anterior position with complete flexion — it is the smallest diameter presenting."
+    },
+    {
+      "q": "The occipito-frontal diameter (11.5 cm) is the engagement diameter in:",
+      "options": [
+        "OA with complete flexion",
+        "OA with incomplete flexion",
+        "Occipito-posterior position",
+        "Face presentation"
+      ],
+      "correct": 2,
+      "explain": "The occipito-frontal diameter (11.5 cm) is the engagement diameter in occipito-posterior position and also distends the vulva in face-to-pubis delivery."
+    },
+    {
+      "q": "Why is brow presentation dangerous?",
+      "options": [
+        "The mento-vertical diameter (13.5 cm) exceeds the pelvic inlet diameters",
+        "The head cannot flex",
+        "The face presents first",
+        "It causes cord prolapse"
+      ],
+      "correct": 0,
+      "explain": "The mento-vertical diameter (13.5 cm) is longer than the largest pelvic inlet diameter (anatomical transverse = 13 cm), so the head cannot enter the pelvis in brow presentation."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s9": [
+    {
+      "q": "Which is the most important transverse diameter of the fetal skull?",
+      "options": [
+        "Bitemporal (8 cm)",
+        "Biparietal (9.5 cm)",
+        "Bimastoid (7.5 cm)",
+        "Subparietal supraparietal (9 cm)"
+      ],
+      "correct": 1,
+      "explain": "The biparietal diameter (9.5 cm) is the most important transverse diameter — it is the standard sonographic measurement for estimating fetal head size and confirming engagement."
+    },
+    {
+      "q": "The subparietal supraparietal diameter (9 cm) is the engagement diameter in:",
+      "options": [
+        "Vertex presentation",
+        "Face presentation",
+        "Asynclitism",
+        "Brow presentation"
+      ],
+      "correct": 2,
+      "explain": "The subparietal supraparietal diameter is the engagement diameter in asynclitism, where the head is tilted laterally in the pelvis."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

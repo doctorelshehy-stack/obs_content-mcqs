@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ObsTaric — Obstetrics Study Dashboard</title>
+<style>
+  /* ===== RESET ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ===== CSS VARIABLES — Light (default) ===== */
+  :root {
+    --sidebar-w: 320px;
+    --sidebar-collapsed: 0px;
+    --bg-body: #f0f2f5;
+    --bg-sidebar: #ffffff;
+    --bg-sidebar-hover: #f0f4f8;
+    --bg-sidebar-active: #e6f0fa;
+    --bg-card: #ffffff;
+    --bg-toggle: #e2e8f0;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #a0aec0;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --accent-dark: #1d4ed8;
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --radius: 10px;
+    --radius-sm: 6px;
+    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --week-indicator: #2563eb;
+    --topic-dot: #93c5fd;
+    --scrollbar-bg: #f1f1f1;
+    --scrollbar-thumb: #c4cbd6;
+  }
+
+  /* ===== DARK MODE ===== */
+  body.dark {
+    --bg-body: #0f1117;
+    --bg-sidebar: #1a1b26;
+    --bg-sidebar-hover: #24253a;
+    --bg-sidebar-active: #1e2040;
+    --bg-card: #1e1e2e;
+    --bg-toggle: #2d3748;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #60a5fa;
+    --accent-light: #1e293b;
+    --accent-dark: #3b82f6;
+    --border: #2d3748;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+    --week-indicator: #60a5fa;
+    --topic-dot: #475569;
+    --scrollbar-bg: #1a1b26;
+    --scrollbar-thumb: #334155;
+  }
+
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: var(--font);
+    background: var(--bg-body);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    transition: background var(--transition), color var(--transition);
+  }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+
+  /* ===== LAYOUT ===== */
+  .app-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    width: var(--sidebar-w);
+    min-width: var(--sidebar-w);
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: all var(--transition);
+    position: relative;
+    z-index: 10;
+  }
+  .sidebar.closed {
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    border-right: none;
+  }
+
+  .sidebar-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .sidebar-header h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sidebar-header h1 .logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .sidebar-header .subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    margin-left: 38px;
+    font-weight: 500;
+  }
+
+  /* ===== TOPIC LIST ===== */
+  .topic-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 12px 20px;
+  }
+
+  /* Week group */
+  .week-group { margin-bottom: 4px; }
+  .week-group:last-child { margin-bottom: 0; }
+
+  .week-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    user-select: none;
+    transition: background var(--transition);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .week-header:hover { background: var(--bg-sidebar-hover); }
+  .week-header .week-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .week-header .week-label { flex: 1; }
+  .week-header .week-count {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    background: var(--bg-toggle);
+    padding: 1px 8px;
+    border-radius: 10px;
+  }
+  .week-header .chevron {
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: transform var(--transition);
+  }
+  .week-header .chevron.open { transform: rotate(90deg); }
+
+  .week-topics {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+  }
+  .week-topics.open { max-height: 2000px; }
+
+  .topic-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px 7px 48px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    position: relative;
+  }
+  .topic-item:hover {
+    background: var(--bg-sidebar-hover);
+    color: var(--text-primary);
+  }
+  .topic-item.active {
+    background: var(--bg-sidebar-active);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .topic-item .topic-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--topic-dot);
+    flex-shrink: 0;
+  }
+  .topic-item.active .topic-dot { background: var(--accent); }
+
+  .topic-item .topic-name { flex: 1; line-height: 1.3; }
+  .topic-item .topic-file {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+    opacity: 0.6;
+  }
+
+  /* Nested lesson items */
+  .lesson-item {
+    padding: 5px 12px 5px 62px;
+    font-size: 12px;
+    cursor: pointer;
+    color: var(--text-muted);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lesson-item:hover {
+    background: var(--bg-sidebar-hover);
+    color: var(--text-secondary);
+  }
+  .lesson-item.active {
+    color: var(--accent);
+    font-weight: 600;
+    background: var(--bg-sidebar-active);
+  }
+  .lesson-item::before {
+    content: '📄 ';
+    font-size: 11px;
+    margin-right: 4px;
+  }
+
+  /* ===== TOGGLE BUTTONS at bottom of sidebar ===== */
+  .sidebar-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-toggle);
+    border-radius: 20px;
+    padding: 3px;
+    cursor: pointer;
+    transition: background var(--transition);
+    flex-shrink: 0;
+    border: none;
+    outline: none;
+    position: relative;
+  }
+  .theme-toggle .toggle-track {
+    display: flex;
+    gap: 2px;
+  }
+  .theme-toggle .toggle-btn {
+    width: 30px;
+    height: 28px;
+    border-radius: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    color: var(--text-muted);
+  }
+  .theme-toggle .toggle-btn.active {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+
+  .sidebar-toggle-btn {
+    background: var(--bg-toggle);
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    flex-shrink: 0;
+  }
+  .sidebar-toggle-btn:hover {
+    background: var(--border);
+    color: var(--text-primary);
+  }
+
+  /* ===== MAIN CONTENT ===== */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg-body);
+    transition: background var(--transition);
+  }
+
+  /* Top bar */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+    transition: background var(--transition), border-color var(--transition);
+  }
+  .top-bar .toggle-sidebar-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    flex-shrink: 0;
+  }
+  .top-bar .toggle-sidebar-btn:hover {
+    background: var(--bg-sidebar-hover);
+    color: var(--text-primary);
+  }
+  .top-bar .breadcrumb {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .top-bar .breadcrumb span { color: var(--text-muted); }
+  .top-bar .breadcrumb strong { color: var(--accent); }
+
+  /* Iframe container */
+  .iframe-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--bg-body);
+    transition: background var(--transition);
+  }
+
+  /* Welcome fallback */
+  .welcome-screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-body);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 40px;
+    transition: background var(--transition), color var(--transition);
+    z-index: 1;
+  }
+  .welcome-screen .welcome-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+  }
+  .welcome-screen h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .welcome-screen p {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+  .welcome-screen .quick-links {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .welcome-screen .quick-link {
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all var(--transition);
+  }
+  .welcome-screen .quick-link:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .sidebar { position: fixed; left: 0; top: 0; box-shadow: var(--shadow-md); }
+    .sidebar.closed { left: calc(-1 * var(--sidebar-w)); }
+  }
+
+  /* Loading spinner */
+  .spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    z-index: 2;
+  }
+  .spinner.show { display: block; }
+  @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="app-layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h1>
+        <span class="logo-icon">O</span>
+        ObsTaric
+      </h1>
+      <div class="subtitle">Obstetrics Study Dashboard</div>
+    </div>
+
+    <nav class="topic-list" id="topicList" role="navigation" aria-label="Topic navigation">
+      <!-- Populated by JS -->
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="theme-toggle" id="themeToggle" role="radiogroup" aria-label="Color theme">
+        <div class="toggle-track">
+          <button class="toggle-btn active" data-theme="light" title="Light mode" role="radio" aria-checked="true">☀️</button>
+          <button class="toggle-btn" data-theme="dark" title="Dark mode" role="radio" aria-checked="false">🌙</button>
+        </div>
+      </div>
+      <button class="sidebar-toggle-btn" id="sidebarCollapseBtn" title="Toggle sidebar" aria-label="Toggle sidebar">◀</button>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content">
+    <div class="top-bar">
+      <button class="toggle-sidebar-btn" id="sidebarToggleBtn" title="Open sidebar" aria-label="Open sidebar">☰</button>
+      <div class="breadcrumb" id="breadcrumb">Select a topic from the sidebar</div>
+    </div>
+
+    <div class="iframe-container" id="iframeContainer">
+      <div class="spinner" id="spinner"></div>
+
+      <!-- Welcome screen -->
+      <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-icon">📚</div>
+        <h2>Welcome to ObsTaric</h2>
+        <p>Your comprehensive obstetrics study companion. Select a week and topic from the sidebar to begin reviewing.</p>
+        <div class="quick-links" id="quickLinks">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <iframe id="contentFrame" title="Content viewer" sandbox="allow-scripts allow-same-origin allow-forms" loading="lazy"></iframe>
+    </div>
+  </main>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== CONTENT MAP =====
+  const ASSETS_BASE = 'extracted/assets/second task/obstetric';
+
+  const CONTENT = [
+    {
+      week: 1,
+      label: 'Week 1 — Normal Pregnancy & Early High-Risk',
+      topics: [
+        {
+          name: 'Fertilization, Placenta & Membranes',
+          dir: 'Fertilization_placenta_membranes',
+          files: [
+            { label: '01 — Physiology of Reproduction', file: '01_Physiology_of_Reproduction.html' }
+          ]
+        },
+        {
+          name: 'Maternal Adaptation & Diagnosis',
+          dir: 'Maternal_adaptation_diagnosis_of_pregnancy',
+          files: [
+            { label: '02 — Maternal Adaptation to Pregnancy', file: '02_Maternal_Adaptation_to_Pregnancy.html' },
+            { label: '03 — Diagnosis of Pregnancy', file: '03_Diagnosis_of_Pregnancy.html' },
+            { label: '04 — Antenatal Care', file: '04_Antenatal_Care.html' }
+          ]
+        },
+        {
+          name: 'Bleeding in Early Pregnancy',
+          dir: 'Bleeding_in_early_pregnancy',
+          files: [
+            { label: '05 — Abortion', file: '05_Abortion.html' },
+            { label: '06 — Ectopic Pregnancy', file: '06_Ectopic_Pregnancy.html' },
+            { label: '07 — Gestational Trophoblastic Disease', file: '07_Gestational_Trophoblastic_Disease.html' },
+            { label: '16 — Thromboembolism in Pregnancy', file: '16_Thromboembolism_during_Pregnancy.html' }
+          ]
+        },
+        {
+          name: 'Hypertensive Disorders & DIC',
+          dir: 'Hypertensive_disorders_DIC',
+          files: [
+            { label: '12 — Hypertension with Pregnancy', file: '12_Hypertension_with_Pregnancy.html' }
+          ]
+        },
+        {
+          name: 'Diabetes & UTI in Pregnancy',
+          dir: 'Diabetes_with_pregnancy_UTI',
+          files: [
+            { label: '14 — Diabetes Mellitus with Pregnancy', file: '14_Diabetes_Mellitus_with_Pregnancy.html' },
+            { label: '15 — UTI in Pregnancy', file: '15_UTI_in_Pregnancy.html' }
+          ]
+        },
+        {
+          name: 'Thromboembolism & RH Isoimmunization',
+          dir: 'Thromboembolism_RH_isoimmunization',
+          files: [
+            { label: '13 — DIC', file: '13_Disseminated_Intravascular_Coagulopathy_DIC.html' },
+            { label: '45 — RH Incompatibility', file: '45_RH_Incompatibility.html' }
+          ]
+        }
+      ]
+    },
+    {
+      week: 2,
+      label: 'Week 2 — High-Risk Pregnancy & Complications',
+      topics: [
+        {
+          name: 'Vomiting, Anemia & Cardiac Disease',
+          dir: 'Vomiting_anemia_heart_disease',
+          files: [
+            { label: '09 — Vomiting with Pregnancy', file: '09_Vomiting_with_Pregnancy.html' },
+            { label: '10 — Anemia with Pregnancy', file: '10_Anemia_with_Pregnancy.html' },
+            { label: '11 — Cardiac Diseases with Pregnancy', file: '11_Cardiac_Diseases_with_Pregnancy.html' }
+          ]
+        },
+        {
+          name: 'Antepartum Hemorrhage',
+          dir: 'Antepartum_hemorrhage',
+          files: [
+            { label: '08 — Antepartum Hemorrhage', file: '08_Antepartum_Hemorrhage.html' }
+          ]
+        },
+        {
+          name: 'Assessment of Fetal Wellbeing',
+          dir: 'Assessment_of_fetal_wellbeing',
+          files: [
+            { label: '43 — Intrauterine Fetal Death', file: '43_Intrauterine_Fetal_Death.html' },
+            { label: '46 — Assessment of Fetal Well-being', file: '46_Assessment_of_Fetal_Well-being.html' }
+          ]
+        },
+        {
+          name: 'High-Risk Pregnancy Identification',
+          dir: 'High_risk_pregnancy_identification',
+          files: [
+            { label: '17 — Infectious Diseases with Pregnancy', file: '17_Infectious_Diseases_with_Pregnancy.html' },
+            { label: '30 — Multiple Pregnancy', file: '30_Multiple_Pregnancy.html' }
+          ]
+        },
+        {
+          name: 'Polyhydramnios, IUGR & Shoulder Dystocia',
+          dir: 'Polyhydramnios_IUGR_shoulder_dystocia',
+          files: [
+            { label: '18 — Amniotic Fluid Abnormalities', file: '18_Amniotic_Fluid_Abnormalities.html' },
+            { label: '29 — Shoulder Dystocia', file: '29_Shoulder_Dystocia.html' },
+            { label: '40 — Intrauterine Growth Restriction', file: '40_Intrauterine_Growth_Restriction.html' },
+            { label: '42 — Macrosomia', file: '42_Macrosomia.html' }
+          ]
+        },
+        {
+          name: 'PROM, Preterm & Post-term Pregnancy',
+          dir: 'PROM_preterm_post_term_pregnancy',
+          files: [
+            { label: '31 — Preterm Labor', file: '31_Preterm_Labor.html' },
+            { label: '32 — PROM', file: '32_Premature_Rupture_of_Membranes_PROM.html' },
+            { label: '41 — Postterm Pregnancy', file: '41_Postterm_Pregnancy.html' }
+          ]
+        }
+      ]
+    },
+    {
+      week: 3,
+      label: 'Week 3 — Labor, Delivery & Family Medicine',
+      topics: [
+        {
+          name: 'Physiology & Management of Normal Labour',
+          dir: 'Physiology_and_management_of_normal_labour',
+          files: [
+            { label: '19 — Normal Labor', file: '19_Normal_Labor.html' }
+          ]
+        },
+        {
+          name: 'Female Pelvis, Fetus & Fetal Skull',
+          dir: 'Female_pelvis_fetus_fetal_skull',
+          files: [
+            { label: '20 — Female Pelvis', file: '20_Female_Pelvis.html' },
+            { label: '21 — Fetal Skull', file: '21_Fetal_Skull.html' }
+          ]
+        },
+        {
+          name: 'Malpresentations (OP, Face, Breech, Cord)',
+          dir: 'Malpresentations_OP_face_breech_cord',
+          files: [
+            { label: '22 — Occipitoposterior Position', file: '22_Occipitoposterior_Position.html' },
+            { label: '23 — Face Presentation', file: '23_Face_Presentation.html' },
+            { label: '24 — Brow Presentation', file: '24_Brow_Presentation.html' },
+            { label: '25 — Compound Presentation', file: '25_Compound_Presentation.html' },
+            { label: '26 — Breech Presentation', file: '26_Breech_Presentation.html' },
+            { label: '27 — Shoulder Presentation', file: '27_Shoulder_Presentation.html' },
+            { label: '28 — Cord Presentation & Prolapse', file: '28_Cord_Presentation_and_Prolapse.html' }
+          ]
+        },
+        {
+          name: 'Stages of Labour, Partogram & FHR',
+          dir: 'Stages_of_labour_partogram_FHR',
+          files: [
+            { label: '33 — Abnormal Uterine Action', file: '33_Abnormal_Uterine_Action.html' }
+          ]
+        },
+        {
+          name: 'Operative Obstetrics',
+          dir: 'Operative_obstetrics',
+          files: [
+            { label: '47 — Operative Obstetrics', file: '47_Operative_Obstetrics.html' },
+            { label: '48 — Instruments', file: '48_Instruments.html' }
+          ]
+        },
+        {
+          name: 'Family Medicine',
+          dir: 'Family_medicine',
+          files: [
+            { label: 'FM01 — Premarital Care', file: 'FM01_Premarital_Care.html' },
+            { label: 'FM02 — Antenatal Care', file: 'FM02_Antenatal_Care.html' },
+            { label: 'FM03 — Nutritional Care', file: 'FM03_Nutritional_Care.html' },
+            { label: 'FM04 — Postpartum Care', file: 'FM04_Postpartum_Care.html' },
+            { label: 'FM05 — Postpartum Problems', file: 'FM05_Postpartum_Problems.html' },
+            { label: 'FM06 — Contraceptive Methods', file: 'FM06_Contraceptive_Methods.html' }
+          ]
+        }
+      ]
+    },
+    {
+      week: 5,
+      label: 'Week 5 — Advanced Complications & Review',
+      topics: [
+        {
+          name: 'Complications of 3rd Stage of Labour',
+          dir: 'Complications_of_3rd_stage_of_labour',
+          files: [
+            { label: '36 — Third Stage Complications', file: '36_Third_Stage_Complications.html' },
+            { label: '37 — Amniotic Fluid Embolism', file: '37_Amniotic_Fluid_Embolism.html' },
+            { label: '38 — Normal & Abnormal Puerperium', file: '38_Normal_and_Abnormal_Puerperium.html' },
+            { label: '39 — Puerperal Sepsis', file: '39_Puerperal_Sepsis.html' }
+          ]
+        },
+        {
+          name: 'Contracted Pelvis & Obstructed Labour',
+          dir: 'Contracted_pelvis_and_obstructed_labour',
+          files: [
+            { label: '34 — Obstructed Labor', file: '34_Obstructed_Labor.html' },
+            { label: '35 — Contracted Pelvis', file: '35_Contracted_Pelvis.html' }
+          ]
+        },
+        {
+          name: 'Revision & Common Complaints',
+          dir: 'Revision_and_common_obstetric_complaints',
+          files: [
+            { label: '44 — Fetal Birth Injuries', file: '44_Fetal_Birth_Injuries.html' }
+          ]
+        }
+      ]
+    }
+  ];
+
+  // ===== DOM REFS =====
+  const sidebar = document.getElementById('sidebar');
+  const topicList = document.getElementById('topicList');
+  const contentFrame = document.getElementById('contentFrame');
+  const welcomeScreen = document.getElementById('welcomeScreen');
+  const spinner = document.getElementById('spinner');
+  const breadcrumb = document.getElementById('breadcrumb');
+  const quickLinks = document.getElementById('quickLinks');
+  const themeToggle = document.getElementById('themeToggle');
+  const sidebarCollapseBtn = document.getElementById('sidebarCollapseBtn');
+  const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+
+  let sidebarOpen = true;
+  let currentTheme = localStorage.getItem('obstoric-theme') || 'light';
+
+  // ===== BUILD SIDEBAR =====
+  function buildSidebar() {
+    let html = '';
+    CONTENT.forEach((week, wi) => {
+      let topicCount = 0;
+      week.topics.forEach(t => { topicCount += t.files.length; });
+
+      html += `<div class="week-group" data-week="${week.week}">
+        <div class="week-header" data-week-index="${wi}">
+          <span class="week-num">W${week.week}</span>
+          <span class="week-label">${week.label}</span>
+          <span class="week-count">${topicCount}</span>
+          <span class="chevron open">▶</span>
+        </div>
+        <div class="week-topics open">`;
+
+      week.topics.forEach((topic, ti) => {
+        if (topic.files.length === 1) {
+          // Single file — link directly on the topic
+          const path = `${ASSETS_BASE}/Week${week.week}/${topic.dir}/${topic.files[0].file}`;
+          html += `<div class="topic-item" data-path="${path}" data-label="${topic.files[0].label}">
+            <span class="topic-dot"></span>
+            <span class="topic-name">${topic.name}</span>
+          </div>`;
+        } else {
+          // Multiple files — show topic header + lessons
+          html += `<div class="topic-item" data-has-lessons="true">
+            <span class="topic-dot"></span>
+            <span class="topic-name">${topic.name}</span>
+          </div>`;
+          topic.files.forEach((file, fi) => {
+            const path = `${ASSETS_BASE}/Week${week.week}/${topic.dir}/${file.file}`;
+            html += `<div class="lesson-item" data-path="${path}" data-label="${file.label}">${file.label}</div>`;
+          });
+        }
+      });
+
+      html += `</div></div>`;
+    });
+    topicList.innerHTML = html;
+
+    // Attach events
+    // Week headers — toggle collapse
+    document.querySelectorAll('.week-header').forEach(h => {
+      h.addEventListener('click', function(e) {
+        const group = this.closest('.week-group');
+        const topics = group.querySelector('.week-topics');
+        const chevron = this.querySelector('.chevron');
+        const isOpen = topics.classList.contains('open');
+        topics.classList.toggle('open');
+        chevron.classList.toggle('open', !isOpen);
+      });
+    });
+
+    // Topic items (single-file)
+    document.querySelectorAll('.topic-item[data-path]').forEach(item => {
+      item.addEventListener('click', function() {
+        loadContent(this.dataset.path, this.dataset.label);
+        document.querySelectorAll('.topic-item.active, .lesson-item.active').forEach(el => el.classList.remove('active'));
+        this.classList.add('active');
+        // Close sidebar on mobile
+        if (window.innerWidth <= 768) closeSidebar();
+      });
+    });
+
+    // Lesson items (multi-file)
+    document.querySelectorAll('.lesson-item').forEach(item => {
+      item.addEventListener('click', function() {
+        loadContent(this.dataset.path, this.dataset.label);
+        document.querySelectorAll('.topic-item.active, .lesson-item.active').forEach(el => el.classList.remove('active'));
+        this.classList.add('active');
+        // Also highlight parent topic
+        const parentTopic = this.closest('.week-group').querySelector('.topic-item');
+        if (parentTopic) parentTopic.classList.add('active');
+        if (window.innerWidth <= 768) closeSidebar();
+      });
+    });
+  }
+
+  // ===== LOAD CONTENT =====
+  function loadContent(path, label) {
+    if (!path) return;
+    welcomeScreen.style.display = 'none';
+    spinner.classList.add('show');
+    contentFrame.style.display = 'block';
+
+    // Update breadcrumb
+    breadcrumb.textContent = label || 'Loading...';
+
+    // Load in iframe
+    contentFrame.src = path;
+
+    // Hide spinner when iframe loads
+    contentFrame.onload = function() {
+      spinner.classList.remove('show');
+    };
+    // Timeout fallback
+    setTimeout(() => spinner.classList.remove('show'), 8000);
+  }
+
+  // ===== QUICK LINKS =====
+  function buildQuickLinks() {
+    // Add first lesson of each week as a quick link
+    let html = '';
+    CONTENT.forEach(week => {
+      const firstTopic = week.topics[0];
+      if (firstTopic && firstTopic.files[0]) {
+        const path = `${ASSETS_BASE}/Week${week.week}/${firstTopic.dir}/${firstTopic.files[0].file}`;
+        html += `<button class="quick-link" data-path="${path}" data-label="${firstTopic.files[0].label}">
+          Week ${week.week}: ${firstTopic.name}
+        </button>`;
+      }
+    });
+    quickLinks.innerHTML = html;
+
+    quickLinks.querySelectorAll('.quick-link').forEach(btn => {
+      btn.addEventListener('click', function() {
+        loadContent(this.dataset.path, this.dataset.label);
+        // Highlight in sidebar
+        document.querySelectorAll('.topic-item.active, .lesson-item.active').forEach(el => el.classList.remove('active'));
+        const items = document.querySelectorAll('.topic-item[data-path], .lesson-item');
+        items.forEach(item => {
+          if (item.dataset.path === this.dataset.path) {
+            item.classList.add('active');
+          }
+        });
+      });
+    });
+  }
+
+  // ===== SIDEBAR TOGGLE =====
+  function openSidebar() {
+    sidebar.classList.remove('closed');
+    sidebarOpen = true;
+    sidebarCollapseBtn.innerHTML = '◀';
+  }
+  function closeSidebar() {
+    sidebar.classList.add('closed');
+    sidebarOpen = false;
+    sidebarCollapseBtn.innerHTML = '▶';
+  }
+
+  sidebarCollapseBtn.addEventListener('click', () => {
+    sidebarOpen ? closeSidebar() : openSidebar();
+  });
+  sidebarToggleBtn.addEventListener('click', () => {
+    sidebarOpen ? closeSidebar() : openSidebar();
+  });
+
+  // ===== THEME TOGGLE =====
+  function applyTheme(theme) {
+    currentTheme = theme;
+    document.body.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('obstoric-theme', theme);
+
+    const btns = themeToggle.querySelectorAll('.toggle-btn');
+    btns.forEach(btn => {
+      const isActive = btn.dataset.theme === theme;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-checked', isActive);
+    });
+  }
+
+  themeToggle.addEventListener('click', (e) => {
+    const btn = e.target.closest('.toggle-btn');
+    if (!btn) return;
+    const theme = btn.dataset.theme;
+    if (theme !== currentTheme) applyTheme(theme);
+  });
+
+  // Apply saved theme
+  applyTheme(currentTheme);
+
+  // ===== KEYBOARD SHORTCUT =====
+  document.addEventListener('keydown', (e) => {
+    // Toggle sidebar with Ctrl+B
+    if (e.ctrlKey && e.key === 'b') {
+      e.preventDefault();
+      sidebarOpen ? closeSidebar() : openSidebar();
+    }
+    // Toggle theme with Ctrl+T
+    if (e.ctrlKey && e.key === 't') {
+      e.preventDefault();
+      applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+    }
+  });
+
+  // ===== INIT =====
+  buildSidebar();
+  buildQuickLinks();
+  // Default: open Week 1
+  const firstWeek = document.querySelector('.week-group');
+  if (firstWeek) {
+    const firstItem = firstWeek.querySelector('.topic-item[data-path], .lesson-item');
+    if (firstItem) {
+      // Don't auto-load, but expand week 1
+      const header = firstWeek.querySelector('.week-header');
+      if (header) {
+        const topics = firstWeek.querySelector('.week-topics');
+        const chevron = header.querySelector('.chevron');
+        topics.classList.add('open');
+        if (chevron) chevron.classList.add('open');
+      }
+    }
+  }
+
+  console.log('ObsTaric Dashboard loaded. Ctrl+B to toggle sidebar, Ctrl+T to toggle theme.');
+})();
+</script>
+
+</body>
+</html>

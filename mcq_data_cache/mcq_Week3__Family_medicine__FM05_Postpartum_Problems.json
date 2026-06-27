@@ -1,0 +1,570 @@
+{
+  "s2": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a common postpartum physical problem?",
+      "options": [
+        "Hyperthyroidism",
+        "Postpartum hemorrhage",
+        "Polycystic ovary syndrome",
+        "Gestational diabetes persistence"
+      ],
+      "correct": 1,
+      "explain": "Common postpartum physical problems include: postpartum hemorrhage, infections, breastfeeding issues, perineal pain, pelvic pain, urinary/bowel problems, fatigue and anemia, thyroid disorders, and contraception needs."
+    },
+    {
+      "q": "Postpartum thyroiditis can lead to which condition?",
+      "options": [
+        "Permanent hypothyroidism requiring lifelong treatment",
+        "Hyper- or hypothyroidism",
+        "Only hyperthyroidism",
+        "Only euthyroid state"
+      ],
+      "correct": 1,
+      "explain": "Postpartum thyroiditis can lead to hyper- or hypothyroidism."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which postpartum emotional condition requires urgent psychiatric care?",
+      "options": [
+        "Baby blues",
+        "Postpartum depression",
+        "Postpartum anxiety",
+        "Postpartum psychosis"
+      ],
+      "correct": 3,
+      "explain": "Postpartum psychosis is rare but severe, presenting with hallucinations, delusions, and disorganized behavior — it requires urgent psychiatric care."
+    },
+    {
+      "q": "What distinguishes postpartum depression (PPD) from baby blues?",
+      "options": [
+        "PPD occurs only in first-time mothers",
+        "PPD is more severe and prolonged, affecting ability to care for self or baby",
+        "Baby blues last longer than PPD",
+        "PPD requires no treatment"
+      ],
+      "correct": 1,
+      "explain": "PPD is more severe and prolonged depressive symptoms affecting the mother's ability to care for herself or her baby, while baby blues are mild and transient."
+    }
+  ],
+  "s4": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a psychosocial concern during the postpartum period?",
+      "options": [
+        "Increased bone density",
+        "Social isolation especially if support systems are limited",
+        "Improved sleep patterns",
+        "Enhanced immune function"
+      ],
+      "correct": 1,
+      "explain": "Psychosocial concerns include: adjustment to motherhood, relationship strain, social isolation, and work/financial stress."
+    }
+  ],
+  "s5": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "How many main postpartum breast problems are covered in the chapter?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "correct": 1,
+      "explain": "Three main postpartum breast problems are covered: breast engorgement, nipple fissure (cracked nipples), and insufficient milk supply."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Breast engorgement typically occurs when?",
+      "options": [
+        "Immediately after delivery",
+        "3-5 days postpartum when milk 'comes in'",
+        "2 weeks postpartum",
+        "At 6 weeks postpartum"
+      ],
+      "correct": 1,
+      "explain": "Breast engorgement occurs when breasts become overly full, hard, and painful, usually 3-5 days postpartum when milk 'comes in'."
+    },
+    {
+      "q": "Which of the following is a management strategy for breast engorgement?",
+      "options": [
+        "Decrease breastfeeding frequency",
+        "Warm compresses before feeding, cold after",
+        "Tight underwire bra for support",
+        "Apply ice directly to nipples"
+      ],
+      "correct": 1,
+      "explain": "Management includes: frequent breastfeeding/pumping, hand expression to soften areola, warm compresses before feeding and cold after, supportive bra without underwire, and pain relief."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "What is the most common cause of nipple fissure (cracked nipples)?",
+      "options": [
+        "Excessive milk production",
+        "Improper latching and positioning",
+        "Allergic reaction to breast milk",
+        "Infant teeth eruption"
+      ],
+      "correct": 1,
+      "explain": "Nipple fissure is often due to improper latching, positioning, or excessive moisture."
+    },
+    {
+      "q": "Which of the following is recommended for managing cracked nipples?",
+      "options": [
+        "Stop breastfeeding on the affected side",
+        "Lanolin cream or breast milk on nipples",
+        "Apply alcohol to dry the area",
+        "Use tight bandages"
+      ],
+      "correct": 1,
+      "explain": "Management includes: correcting latch/positioning, lanolin cream or breast milk on nipples, air drying after feeds, and nipple shields in severe cases."
+    }
+  ],
+  "s8": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a cause of insufficient milk supply?",
+      "options": [
+        "Excessive breastfeeding",
+        "Poor latch and infrequent feeds",
+        "High maternal fluid intake",
+        "Maternal obesity"
+      ],
+      "correct": 1,
+      "explain": "Causes include: poor latch, infrequent feeds, maternal stress, and dehydration."
+    },
+    {
+      "q": "Which intervention helps stimulate milk production in cases of insufficient supply?",
+      "options": [
+        "Supplementing with formula",
+        "Skin-to-skin contact",
+        "Reducing fluid intake",
+        "Pumping only once daily"
+      ],
+      "correct": 1,
+      "explain": "Management includes: frequent and effective breastfeeding, skin-to-skin contact to stimulate milk production, balanced diet, good hydration, and use of galactagogues."
+    }
+  ],
+  "s9": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a preventive measure for postpartum breast problems?",
+      "options": [
+        "Use of underwired bras for support",
+        "Correct latching technique",
+        "Limit breastfeeding to 5 minutes per session",
+        "Apply baby powder to nipples"
+      ],
+      "correct": 1,
+      "explain": "Prevention includes: correct latching, frequent feeding, keeping nipples clean and dry, supportive bra without underwire, and balanced diet with hydration."
+    }
+  ],
+  "s10": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When do baby blues typically begin and how long can they last?",
+      "options": [
+        "Begin immediately after delivery, last up to 1 week",
+        "Begin 2-3 days postpartum, last up to 2 weeks",
+        "Begin 1 week postpartum, last up to 1 month",
+        "Begin 2 weeks postpartum, last up to 6 weeks"
+      ],
+      "correct": 1,
+      "explain": "Baby blues typically begin 2-3 days postpartum and can last up to 2 weeks. They are mild and resolve on their own."
+    },
+    {
+      "q": "What distinguishes baby blues from postpartum depression?",
+      "options": [
+        "Baby blues are more severe",
+        "Baby blues require medication",
+        "Baby blues are less severe and resolve on their own",
+        "Baby blues only affect first-time mothers"
+      ],
+      "correct": 2,
+      "explain": "Baby blues are less severe than postpartum depression and resolve on their own. If symptoms last longer than 2 weeks or become more intense, it may indicate PPD."
+    },
+    {
+      "q": "Which of the following is the primary cause of baby blues?",
+      "options": [
+        "Inadequate social support",
+        "Hormonal changes (sudden drop in estrogen and progesterone after delivery)",
+        "Lack of breastfeeding success",
+        "Financial stress"
+      ],
+      "correct": 1,
+      "explain": "Causes of baby blues include: hormonal changes (sudden drop in estrogen & progesterone after delivery), physical stress of childbirth, emotional factors, and lack of sleep."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

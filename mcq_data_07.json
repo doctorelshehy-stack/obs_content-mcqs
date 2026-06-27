@@ -1,0 +1,206 @@
+{
+  "s2": [
+    {
+      "q": "Gestational trophoblastic disease (GTD) originates from:",
+      "options": [
+        "Uterine epithelium",
+        "Trophoblastic tissue of the placenta",
+        "Ovarian tissue",
+        "Endometrial stroma"
+      ],
+      "correct": 1,
+      "explain": "GTD originates from trophoblastic tissue of the placenta."
+    }
+  ],
+  "s3": [
+    {
+      "q": "GTD is classified into all EXCEPT:",
+      "options": [
+        "Hydatidiform mole (complete and partial)",
+        "Invasive mole",
+        "Choriocarcinoma",
+        "Teratoma"
+      ],
+      "correct": 3,
+      "explain": "GTD includes hydatidiform mole (complete & partial), invasive mole, choriocarcinoma, and placental site trophoblastic tumor."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Hydatidiform mole is characterized by:",
+      "options": [
+        "Normal placenta with single fetus",
+        "Vesicular swelling of chorionic villi",
+        "Invasive trophoblast into myometrium",
+        "Empty uterus"
+      ],
+      "correct": 1,
+      "explain": "Hydatidiform mole is characterized by vesicular swelling of the chorionic villi resembling grapes."
+    }
+  ],
+  "s5": [
+    {
+      "q": "The incidence of hydatidiform mole is highest in:",
+      "options": [
+        "Europe",
+        "North America",
+        "Asia (especially Southeast Asia)",
+        "Australia"
+      ],
+      "correct": 2,
+      "explain": "Highest incidence is in Southeast Asia (1:200-400 pregnancies) vs 1:1000-2000 in North America/Europe."
+    }
+  ],
+  "s6": [
+    {
+      "q": "A complete mole has a karyotype of:",
+      "options": [
+        "46,XX (all paternal)",
+        "46,XX (all maternal)",
+        "69,XXY (triploid)",
+        "46,XY (normal)"
+      ],
+      "correct": 0,
+      "explain": "Complete mole is usually 46,XX (all paternal chromosomes, empty egg fertilized by haploid sperm that duplicates). Partial mole is triploid (69,XXY) - two paternal + one maternal."
+    },
+    {
+      "q": "Which type of hydatidiform mole may have fetal tissue present?",
+      "options": [
+        "Complete mole",
+        "Partial mole",
+        "Invasive mole",
+        "Choriocarcinoma"
+      ],
+      "correct": 1,
+      "explain": "Partial mole may have fetal tissue present (though usually non-viable). Complete mole has no fetal tissue."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Risk factors for hydatidiform mole include all EXCEPT:",
+      "options": [
+        "Maternal age >40",
+        "Previous molar pregnancy",
+        "Low socioeconomic status",
+        "Multiparity"
+      ],
+      "correct": 3,
+      "explain": "Risk factors: maternal age >40, previous mole, low socioeconomic status, and vitamin A deficiency."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The classic gross pathology description of hydatidiform mole is:",
+      "options": [
+        "Solid tumor mass",
+        "Grape-like clusters of vesicles",
+        "Fibrotic nodules",
+        "Calcified deposits"
+      ],
+      "correct": 1,
+      "explain": "Grossly, the mole appears as grape-like clusters of vesicles due to dilated chorionic villi."
+    }
+  ],
+  "s10": [
+    {
+      "q": "A classic clinical feature of hydatidiform mole is:",
+      "options": [
+        "Uterus small for dates",
+        "Uterus larger than expected for dates",
+        "Severe abdominal pain",
+        "Fever and chills"
+      ],
+      "correct": 1,
+      "explain": "The uterus is larger than expected for dates (50% of cases) along with vaginal bleeding, hyperemesis, and absent FHS."
+    },
+    {
+      "q": "Theca lutein cysts may be associated with:",
+      "options": [
+        "Choriocarcinoma",
+        "Complete hydatidiform mole",
+        "Invasive mole",
+        "Partial mole"
+      ],
+      "correct": 1,
+      "explain": "Bilateral theca lutein ovarian cysts may occur due to high hCG levels, seen more with complete mole."
+    }
+  ],
+  "s12": [
+    {
+      "q": "On ultrasound, a hydatidiform mole classically appears as:",
+      "options": [
+        "Single gestational sac",
+        "Snowstorm or honeycomb pattern",
+        "Empty uterine cavity",
+        "Thickened endometrium"
+      ],
+      "correct": 1,
+      "explain": "Ultrasound shows a snowstorm or honeycomb pattern with no fetal parts or fetal heart activity."
+    }
+  ],
+  "s13": [
+    {
+      "q": "In hydatidiform mole, hCG levels are:",
+      "options": [
+        "Normal",
+        "Low",
+        "Markedly elevated",
+        "Undetectable"
+      ],
+      "correct": 2,
+      "explain": "hCG levels are markedly elevated above normal pregnancy levels due to excessive trophoblastic proliferation."
+    }
+  ],
+  "s14": [
+    {
+      "q": "The primary treatment for hydatidiform mole is:",
+      "options": [
+        "Chemotherapy",
+        "Suction evacuation and curettage",
+        "Hysterectomy",
+        "Radiotherapy"
+      ],
+      "correct": 1,
+      "explain": "Suction evacuation and curettage (S&E) is the primary treatment. Hysterectomy may be considered if no future fertility desired."
+    }
+  ],
+  "s15": [
+    {
+      "q": "Postmolar follow-up is essential primarily to detect:",
+      "options": [
+        "Recurrence of mole",
+        "Development of persistent trophoblastic disease or choriocarcinoma",
+        "Infertility",
+        "Secondary amenorrhea"
+      ],
+      "correct": 1,
+      "explain": "Follow-up with weekly hCG until negative for 3 consecutive weeks, then monthly for 6 months to detect persistent disease/choriocarcinoma."
+    }
+  ],
+  "s16": [
+    {
+      "q": "Contraception after molar pregnancy should be maintained for:",
+      "options": [
+        "1 month",
+        "3 months",
+        "6-12 months",
+        "2 years"
+      ],
+      "correct": 2,
+      "explain": "Contraception for 6-12 months is recommended to avoid confusion between new pregnancy and rising hCG from persistent disease."
+    }
+  ],
+  "s17": [
+    {
+      "q": "Chemotherapy for GTD is indicated in all EXCEPT:",
+      "options": [
+        "Rising or plateauing hCG after evacuation",
+        "Metastatic disease",
+        "Complete mole with falling hCG",
+        "Histological diagnosis of choriocarcinoma"
+      ],
+      "correct": 2,
+      "explain": "Chemotherapy is indicated for persistent/rising hCG, metastatic disease, choriocarcinoma, and invasive mole."
+    }
+  ]
+}

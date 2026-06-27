@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 38 — Normal and Abnormal Puerperium</title>
+<style>* { box-sizing: border-box; }
+  body { margin: 0; padding: 0; font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(180deg, #F0FDFA 0%, #F8FAFC 240px); color: #0F172A; line-height: 1.6; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 28px 64px 28px; }
+  .hero { background: linear-gradient(135deg, #134E4A 0%, #0F766E 50%, #0D9488 100%); color: white; border-radius: 18px; padding: 28px 32px; box-shadow: 0 6px 20px rgba(15,118,110,0.28); margin-bottom: 18px; }
+  .hero h1 { margin: 0 0 6px 0; font-size: 30px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 15.5px; opacity: 0.95; font-weight: 500; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32); padding: 5px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+  .toc { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .toc h2 { margin: 0 0 12px 0; font-size: 17px; color: #1E293B; display: flex; align-items: center; gap: 8px; }
+  .toc h2::before { content: "📋"; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 14px; }
+  .toc-grid a { display: block; padding: 6px 10px; border-radius: 8px; text-decoration: none; color: #0F766E; font-size: 13.5px; font-weight: 500; border: 1px solid transparent; }
+  .toc-grid a:hover { background: #F1F5F9; border-color: #CBD5E1; }
+  .toc-grid .num { display: inline-block; min-width: 22px; color: #64748B; font-weight: 700; }
+  section { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px 26px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  section h2.sec { margin: 0 0 14px 0; font-size: 22px; color: #0F766E; display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 2px solid #CCFBF1; }
+  section h2.sec .num { background: #0F766E; color: white; border-radius: 8px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; }
+  h3.sub { font-size: 16px; color: #1E293B; margin: 18px 0 8px 0; padding-left: 10px; border-left: 4px solid #0D9488; font-weight: 700; }
+  h4 { font-size: 14.5px; color: #1E293B; margin: 14px 0 6px 0; font-weight: 700; }
+  p { margin: 6px 0; font-size: 13.5px; }
+  ul, ol { margin: 6px 0 10px 0; padding-left: 24px; }
+  li { margin: 3px 0; font-size: 13.5px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 12px 0; }
+  .keydef { background: #ECFDF5; border-left: 5px solid #059669; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .keydef::before { content: "📘 KEY DEFINITION"; display: block; font-weight: 800; color: #065F46; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .pearl { background: #ECFEFF; border-left: 5px solid #0891B2; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .pearl::before { content: "💎 CLINICAL PEARL"; display: block; font-weight: 800; color: #155E75; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .anchor { background: #FEF9C3; border-left: 5px solid #CA8A04; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .anchor::before { content: "🧠 MEMORY ANCHOR"; display: block; font-weight: 800; color: #713F12; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .warn { background: #FEF3C7; border-left: 5px solid #D97706; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .warn::before { content: "⚠️ WARN"; display: block; font-weight: 800; color: #92400E; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .danger { background: #FEE2E2; border-left: 5px solid #DC2626; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .danger::before { content: "🚨 DANGER"; display: block; font-weight: 800; color: #991B1B; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .note { background: #F3E8FF; border-left: 5px solid #8B5CF6; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .note::before { content: "📝 NOTE"; display: block; font-weight: 800; color: #6D28D9; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .contra { background: #FFF7ED; border-left: 5px solid #EA580C; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .contra::before { content: "⛔ CRITICAL"; display: block; font-weight: 800; color: #9A3412; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  th { background: #F0FDFA; color: #134E4A; text-align: left; padding: 9px 12px; font-weight: 700; border-bottom: 2px solid #99F6E4; }
+  td { padding: 9px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  .src-viz { background: #F0FDF4; border: 2px solid #22C55E; border-radius: 12px; padding: 16px; margin: 16px 0; }
+  .src-viz .badge { display: inline-block; background: #22C55E; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11.5px; font-weight: 800; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .src-viz .source-line { font-size: 12px; color: #166534; margin-top: 8px; font-style: italic; }
+  .img-frame { display: flex; justify-content: center; align-items: center; background: white; border-radius: 8px; padding: 8px; min-height: 200px; }
+  .img-frame img { margin: 0 auto; max-width: 100%; max-height: 480px; object-fit: contain; }
+  .caption { text-align: center; font-size: 13px; color: #166534; margin-top: 8px; font-weight: 600; }
+  .click-card { background: #FAFBFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 0; margin: 10px 0; overflow: hidden; }
+  .click-card.green { border-left: 4px solid #22C55E; }
+  .click-card.blue { border-left: 4px solid #3B82F6; }
+  .click-card.purple { border-left: 4px solid #8B5CF6; }
+  .click-card summary { padding: 12px 18px; cursor: pointer; font-weight: 700; font-size: 14.5px; color: #1E293B; list-style: none; display: flex; align-items: center; gap: 10px; user-select: none; }
+  .click-card summary::before { content: "▶"; color: #64748B; transition: transform 0.2s; font-size: 11px; }
+  .click-card[open] summary::before { content: "▼"; }
+  .click-card[open] summary { border-bottom: 1px solid #E2E8F0; }
+  .click-card .body { padding: 14px 18px; font-size: 13.5px; }
+  .footer { text-align: center; color: #64748B; font-size: 12.5px; padding: 18px 0 4px 0; }
+  .footer a { color: #0F766E; text-decoration: none; font-weight: 600; }
+  .qform-btn { display: inline-block; background: linear-gradient(135deg, #0F766E, #0D9488); color: white; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13.5px; margin: 6px 0; }
+  .qform-btn:hover { filter: brightness(1.1); }
+  .qform-code { display: inline-block; background: #F0FDFA; color: #134E4A; padding: 4px 10px; border-radius: 6px; font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; font-size: 12.5px; margin-left: 8px; border: 1px solid #99F6E4; }
+  .step { background: #F0FDFA; border: 1px solid #99F6E4; border-radius: 10px; padding: 12px 16px; margin: 8px 0; }
+  .step .stepnum { display: inline-block; background: #0D9488; color: white; border-radius: 50%; width: 24px; height: 24px; text-align: center; line-height: 24px; font-size: 12.5px; font-weight: 800; margin-right: 8px; }
+  .metric { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; margin: 4px 0; }
+  .metric .label { color: #0F766E; font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .metric .val { color: #1E293B; font-weight: 600; font-size: 13px; }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+<!-- HERO -->
+<div class="hero">
+<h1>Topic 38 — Normal and Abnormal Puerperium</h1>
+<div class="sub">The 6-week (42-day) postpartum period: genital &amp; systemic involution, routine care, and recognition of subinvolution and puerperal pyrexia</div>
+<div class="meta">
+<span class="chip">📄 Chapter · p. 205-208</span>
+<span class="chip">🎯 3 ILOs</span>
+<span class="chip">🖼️ 1 source image</span>
+<span class="chip">📑 8 sections</span>
+</div>
+</div>
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+<h2>Table of Contents</h2>
+<div class="toc-grid">
+<a href="#s1"><span class="num">§1</span> ILOs of this chapter</a>
+<a href="#s2"><span class="num">§2</span> Definition of puerperium</a>
+<a href="#s3"><span class="num">§3</span> Genital tract changes</a>
+<a href="#s4"><span class="num">§4</span> General body changes</a>
+<a href="#s5"><span class="num">§5</span> Source image — Uterine involution</a>
+<a href="#s6"><span class="num">§6</span> Management of normal puerperium</a>
+<a href="#s7"><span class="num">§7</span> Abnormal puerperium · Subinvolution &amp; Pyrexia</a>
+<a href="#s8"><span class="num">§8</span> Activity · Questions · References</a>
+</div>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="num">1</span> ILOs of this chapter</h2>
+<p>By the end of this chapter the student should be able to:</p>
+<ol>
+<li>Understand the definition of normal and abnormal puerperium</li>
+<li>Describe the genital and non genital body changes during puerperium</li>
+<li>Explain the etiology of both uterine subinvolution and puerperal pyrexia and their management</li>
+</ol>
+</section>
+<!-- §2 Definition -->
+<section id="s2">
+<h2 class="sec"><span class="num">2</span> Definition of the Puerperium</h2>
+<div class="keydef">
+<p><strong>Puerperium</strong> is the time from the delivery till <strong>6 weeks (42 days) post-partum</strong>, during which most of the changes of pregnancy, labor, and delivery have resolved and the body has reverted to the non-pregnant state.</p>
+</div>
+<div class="pearl">
+<strong>Why "6 weeks"?</strong> By the end of 6 weeks the uterus has reached its non-pregnant size, the genital tract has largely healed, and the systemic adaptations of pregnancy have reverted. The puerperium is therefore also called the "fourth trimester" — a period of profound physiological readjustment rather than a passive recovery phase.
+    </div>
+<div class="anchor">
+<strong>The 6 W's of puerperium recall:</strong> <strong>W</strong>omb involution (uterus back to 60-80 g), <strong>W</strong>ound healing (cervix, vagina, perineum), <strong>W</strong>eaning preparation (lactation physiology), <strong>W</strong>hite striae (striae albicans), <strong>W</strong>eight loss (fluid + uterine), <strong>W</strong>atch for sepsis (puerperal pyrexia rule).
+    </div>
+
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The puerperium is defined as:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The period from delivery until 2 weeks postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The time from delivery until 6 weeks (42 days) postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">The period of labor and delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The first 24 hours after delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Puerperium = time from delivery till 6 weeks (42 days) postpartum when pregnancy changes resolve and the body reverts to the non-pregnant state.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which statement about the puerperium is TRUE?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">All pregnancy changes reverse within 2 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Six weeks is the standard duration of the puerperium</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Lactation prevents all uterine involution</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The uterus returns to normal size by 2 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Six weeks is the standard duration. Uterine involution takes the full 6 weeks (1000g at delivery → 60-80g by 6 weeks).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- §3 Genital tract changes -->
+<section id="s3">
+<h2 class="sec"><span class="num">3</span> Genital tract changes</h2>
+<p>Five organ systems undergo characteristic involutional changes during the puerperium:</p>
+<h3 class="sub">1. Uterus</h3>
+<h4>Weight</h4>
+<ul>
+<li>Immediately after labor: <strong>1000 gm</strong></li>
+<li>After 1 wk: <strong>500 gm</strong></li>
+<li>After 2 wks: <strong>250 gm</strong></li>
+<li>By the end of 6 wks: <strong>60-80 gm</strong> (non-pregnant weight)</li>
+</ul>
+<h4>Level (height of the fundus)</h4>
+<ul>
+<li>Immediately after labor: <strong>at the umbilicus</strong></li>
+<li>By the end of 6 wks: reaches the <strong>non-pregnant size</strong></li>
+</ul>
+<div class="anchor">
+<strong>Involution rule of thumb:</strong> the uterine fundus descends by ~1-2 cm (one finger-breadth) per day in the first 10-14 days. By day 10-14 it should no longer be palpable abdominally. Failure to follow this pattern = suspect subinvolution (§7).
+    </div>
+<h3 class="sub">2. Cervix</h3>
+<ul>
+<li>After 1 wk: the external os is <strong>closed to the extent that a finger could not be easily introduced</strong></li>
+</ul>
+<h3 class="sub">3. Vagina</h3>
+<ul>
+<li>Diminishes in size and the rugae begin to reappear in the woman who is not breastfeeding</li>
+</ul>
+<div class="note">
+<strong>Lactation suppresses estrogen-driven vaginal mucosal recovery.</strong> The rugae (vaginal folds) reappear faster in non-lactating women because lactating mothers remain in a hypo-estrogenic state for as long as they breastfeed. This also explains the dyspareunia commonly reported by breastfeeding mothers.
+    </div>
+<h3 class="sub">4. Vulva and perineum</h3>
+<ul>
+<li>Swelling and engorgement are <strong>completely gone within 1-2 weeks</strong></li>
+</ul>
+<h3 class="sub">5. Ovary</h3>
+<p>Return of ovulation and menses will be:</p>
+<ul>
+<li><strong>1.5-2 months</strong> — if non-lactating</li>
+<li><strong>6 months or earlier</strong> — if lactating</li>
+</ul>
+<div class="pearl">
+<strong>Lactational amenorrhea is contraception (LAM):</strong> Exclusive breastfeeding in the first 6 months, with amenorrhea preserved, is ~98% effective as contraception — but only if all 3 LAM criteria are met (exclusive, amenorrhea, &lt;6 months). Lactating women can therefore ovulate as early as 6 months, hence the §6 emphasis on counseling about future contraception BEFORE discharge.
+    </div>
+<div class="grid-5" style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0;">
+<div class="step" style="text-align:center;padding:8px;">
+<div style="font-size:11px;color:#134E4A;font-weight:800;letter-spacing:0.05em;">UTERUS</div>
+<div style="font-size:12px;color:#1E293B;margin-top:4px;">1000 g → 60-80 g<br/>over 6 weeks</div>
+</div>
+<div class="step" style="text-align:center;padding:8px;">
+<div style="font-size:11px;color:#134E4A;font-weight:800;letter-spacing:0.05em;">CERVIX</div>
+<div style="font-size:12px;color:#1E293B;margin-top:4px;">External os<br/>closed by 1 wk</div>
+</div>
+<div class="step" style="text-align:center;padding:8px;">
+<div style="font-size:11px;color:#134E4A;font-weight:800;letter-spacing:0.05em;">VAGINA</div>
+<div style="font-size:12px;color:#1E293B;margin-top:4px;">Rugae reappear<br/>in non-lactating</div>
+</div>
+<div class="step" style="text-align:center;padding:8px;">
+<div style="font-size:11px;color:#134E4A;font-weight:800;letter-spacing:0.05em;">VULVA</div>
+<div style="font-size:12px;color:#1E293B;margin-top:4px;">Swelling gone<br/>in 1-2 weeks</div>
+</div>
+<div class="step" style="text-align:center;padding:8px;">
+<div style="font-size:11px;color:#134E4A;font-weight:800;letter-spacing:0.05em;">OVARY</div>
+<div style="font-size:12px;color:#1E293B;margin-top:4px;">Menses 1.5-2 mo<br/>(non-lactating)</div>
+</div>
+</div>
+
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Immediately after labor, the uterine fundus is at:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The xiphisternum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The umbilicus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">2 cm below the umbilicus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The symphysis pubis</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Immediately after labor the fundus is at the umbilicus. It descends ~1-2 cm per day and should not be palpable abdominally by day 10-14.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The uterine weight at the end of the puerperium is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1000 g</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">500 g</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">250 g</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">60-80 g</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Uterine involution: 1000 g (immediately) → 500 g (1 wk) → 250 g (2 wks) → 60-80 g (6 wks, non-pregnant).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In non-lactating women, ovulation and menses typically return:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Within 4 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">1.5-2 months postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">6 months postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">12 months postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Non-lactating: menses return at 1.5-2 months. Lactating: 6 months or earlier (LAM criteria apply).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+<!-- §4 General body changes -->
+<section id="s4">
+<h2 class="sec"><span class="num">4</span> General body changes</h2>
+<p>Puerperal changes extend well beyond the genital tract. Every system mentioned below must be reviewed in the daily ward round.</p>
+<table>
+<thead>
+<tr><th style="width:20%;">System</th><th>Expected puerperal change</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pulse</strong></td>
+<td>Normal. <strong>Tachycardia (&gt;100 b/m)</strong> indicates infection or anemia.</td>
+</tr>
+<tr>
+<td><strong>Temperature</strong></td>
+<td>May increase in the 1st 24 hrs (after muscular effort during labor) but should be <strong>&lt; 38°C and lasting &lt; 24 hrs</strong>.</td>
+</tr>
+<tr>
+<td><strong>Breasts</strong></td>
+<td>Larger, firmer, and heavier. The colostrum (already present in the breasts and suckling by the newborn triggers its release) is the liquid that is initially released by the breasts during the <strong>first 2-3 days</strong> after delivery.</td>
+</tr>
+<tr>
+<td><strong>After pains</strong></td>
+<td>Painful uterine contractions occur in early puerperium increasing with suckling due to oxytocin release.</td>
+</tr>
+<tr>
+<td><strong>Abdominal wall</strong></td>
+<td>Gradual regain of tone. Striae become white (<strong>albicans</strong>).</td>
+</tr>
+<tr>
+<td><strong>Urinary tract</strong></td>
+<td>Increase diuresis after delivery.</td>
+</tr>
+<tr>
+<td><strong>GIT</strong></td>
+<td>Constipation may occur due to:
+            <ul>
+<li>Atony of the intestine</li>
+<li>Laxity of the abdomen</li>
+<li>Decreased fluid intake</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Blood</strong></td>
+<td>Increased liability to thrombosis during the <strong>first two weeks</strong> especially with decreased fluid intake. Hematological changes gradually reversed.</td>
+</tr>
+</tbody>
+</table>
+<div class="warn">
+<strong>Early-postpartum pyrexia ≠ puerperal sepsis.</strong> A temperature &lt; 38°C lasting &lt; 24 hrs after labor is physiological (muscular effort). It becomes pathological (puerperal pyrexia — see §7) only if it reaches 38°C AND lasts 24 hrs OR more AND occurs within the first 10 days.
+    </div>
+<div class="danger">
+<strong>Postpartum thromboembolism window:</strong> Pregnancy is hypercoagulable; this state persists for ~2 weeks postpartum. Combine with relative immobility and the dehydration of labor → the early puerperium is the highest-risk window for DVT/PE in the entire pregnancy-postpartum continuum. §6 ambulation advice is therefore not optional.
+    </div>
+<div class="pearl">
+<strong>Colostrum vs milk:</strong> Colostrum is the first 2-3 days' secretion, rich in IgA, leukocytes and protein, lower in fat. "True" milk (mature milk) comes in around day 3-5 and may be preceded by engorgement — which is one cause of puerperal pyrexia (see §7).
+    </div>
+<div class="note">
+<strong>After-pains are not a complication — they are a sign of effective involution.</strong> Each painful contraction is the uterus shrinking. They are typically more severe in multiparous women (less uterine muscle tone) and worsen during suckling (oxytocin surge). Reassurance + simple analgesia is the appropriate response.
+    </div>
+
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a normal general body change during the puerperium?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Bradycardia (<60 bpm) is common in the first week</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Tachycardia always indicates infection</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Striae remain red and prominent</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Blood volume increases</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Bradycardia (not tachycardia) is normal in early puerperium. Tachycardia >100 bpm suggests infection or anemia.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">After-pains in the puerperium are:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Abnormal and require investigation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Painful uterine contractions that increase with suckling due to oxytocin release</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Always a sign of retained products</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Treated with oxytocin</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">After-pains are normal painful contractions, increasing with suckling (oxytocin release). Commoner in multiparas.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+<!-- §5 Source image -->
+<section id="s5">
+<h2 class="sec"><span class="num">5</span> Source image — Uterine involution</h2>
+<p>The source PDF (page 1) contains one anatomical figure illustrating the time course of uterine involution during the early puerperium. It depicts five nested dashed-line outlines of the uterus within a female pelvic-anatomy drawing, showing the progressive shrinkage from delivery through Day 9.</p>
+<div class="src-viz">
+<span class="badge">SOURCE IMAGE · img-000</span>
+<div class="img-frame">
+<img alt="Uterine involution: anterior view of female torso with five nested dashed-line outlines showing the progressive shrinkage of the uterus from at-delivery to Day 9 post-partum, illustrating the rate of involution during the early puerperium." src="../../../../../extracted/assets/extracted_images/38_puerperium/uterine_involution_anatomy.jpg"/>
+</div>
+<div class="caption">Uterine involution · Anterior pelvic view with nested outlines at delivery, Day 3, Day 5, Day 7, and Day 9</div>
+<div class="source-line">Source: Provided Material (Book Obstetrics 2025-2026, p. 205). Figure 1 — Uterine involution during the early puerperium. Embedded as-is from the source PDF.</div>
+</div>
+<div class="pearl">
+<strong>What the figure is telling you:</strong> At delivery the fundus is at the umbilicus and the uterus is palpable suprapubically. By Day 9 it has retracted entirely into the true pelvis and is no longer palpable above the symphysis pubis. This 9-day descent mirrors the weight numbers in §3 (1000 g → ~500 g by 1 week).
+    </div>
+<div class="anchor">
+<strong>Clinical use:</strong> Daily fundal-height measurement in the first 10 postpartum days is the bedside equivalent of this diagram. A fundus that fails to descend (or that is boggy/tender) = suspect retained products, infection, or both — the two top causes of subinvolution in §7.
+    </div>
+</section>
+<!-- §6 Management of normal puerperium -->
+<section id="s6">
+<h2 class="sec"><span class="num">6</span> Management of normal puerperium</h2>
+<p>The 11 pillars of routine postpartum care, all stated verbatim in the source. Every item should appear in the discharge checklist.</p>
+<div class="step"><span class="stepnum">1</span><strong>Vital signs</strong> — frequent observation is done after delivery.</div>
+<div class="step"><span class="stepnum">2</span><strong>Uterus</strong> — Uterine massage with monitoring of the amount of vaginal bleeding should be done <strong>every 15 min. for at least 1 hr</strong>.</div>
+<div class="step"><span class="stepnum">3</span><strong>Position in bed</strong> — Semi-sitting position encourages drainage of lochia.</div>
+<div class="step"><span class="stepnum">4</span><strong>Ambulation</strong> — Movement in and outside the bed and breathing exercises are advised to minimize the risk of <strong>deep venous thrombosis (DVT)</strong>.</div>
+<div class="step"><span class="stepnum">5</span><strong>Diet</strong> — <strong>2 hrs</strong> after uncomplicated vaginal delivery, a woman is allowed to eat with no dietary restriction.</div>
+<div class="step"><span class="stepnum">6</span><strong>Perineal care</strong> — The vulva and perineum are washed with antiseptic lotion. <strong>If there is perineal stitches, add local antibiotic.</strong></div>
+<div class="step"><span class="stepnum">7</span><strong>Breasts care</strong> — Before each feed, wash the nipple and areola with warm water and soap.</div>
+<div class="step"><span class="stepnum">8</span><strong>Bowel care</strong> — Advice the patient to eat green vegetables and fruits to avoid constipation.</div>
+<div class="step"><span class="stepnum">9</span><strong>Newborn care</strong> — <strong>If the mother is Rh –ve and her baby Rh +ve then anti-D should be given in the 1st 72 hours post-delivery.</strong></div>
+<div class="step"><span class="stepnum">10</span><strong>Pelvic floor exercise</strong> — By alternating contraction and relaxation of the pelvic floor muscles.</div>
+<div class="step"><span class="stepnum">11</span><strong>Future contraception</strong> — It is very important to counsel the mother about birth control options before she leaves the hospital.</div>
+<div class="warn">
+<strong>Anti-D timing is non-negotiable:</strong> 72 hours = the maximum window. Give within that window, dose by Kleihauer-Betke test when fetomaternal hemorrhage is suspected (e.g. abdominal trauma, antepartum hemorrhage). Do not wait until discharge to sort this out.
+    </div>
+<div class="pearl">
+<strong>Why "every 15 min for at least 1 hour"?</strong> This is the highest-risk window for primary postpartum hemorrhage (PPH) — the first hour after delivery of the placenta. The 15-minute interval catches early atony before it becomes catastrophic. After the first hour, the 4th-stage observation can be relaxed to 30 min, then hourly.
+    </div>
+<div class="danger">
+<strong>Diet — "2 hrs after uncomplicated vaginal delivery" is conditional.</strong> It does NOT apply after a cesarean section (NPO until bowel sounds return), and it should be delayed in any delivery complicated by hemorrhage, sepsis, or prolonged labor. Verify the delivery was truly uncomplicated before clearing oral intake.
+    </div>
+<div class="note">
+<strong>The 11-pillar discharge checklist is the minimum, not the maximum.</strong> Add: rubella vaccine if non-immune, tetanus toxoid if wound care is needed, family-planning counseling (item 11), screening for postnatal depression, and scheduled follow-up at 1 week and 6 weeks.
+    </div>
+
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">How frequently should uterine massage and bleeding monitoring be done in the immediate postpartum period?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Every 5 minutes for 30 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Every 15 minutes for at least 1 hour</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Every 30 minutes for 2 hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Once on the first day</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Every 15 min for at least 1 hr — this covers the highest-risk window for primary PPH.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Anti-D immunoglobulin should be given to Rh-negative mothers with Rh-positive babies within:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">24 hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">72 hours post-delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">1 week</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">At the 6-week check</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Anti-D must be given within the first 72 hours post-delivery. Ideally dose by Kleihauer-Betke test if fetomaternal hemorrhage is suspected.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is part of the 11-pillar management of normal puerperium?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Semi-sitting position to encourage lochia drainage</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">NPO for 24 hours after vaginal delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Ambulation should be avoided for 3 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Constipation is encouraged to promote uterine involution</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Semi-sitting position encourages drainage of lochia. Diet is allowed 2 hrs after uncomplicated vaginal delivery and ambulation is encouraged to prevent DVT.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which factor most influences the choice of treatment?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Gestational age at presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Maternal preference</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Facility resources</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above — treatment is individualized</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Obstetric management is tailored to gestational age, maternal status, and available resources.</div>
+        </div>
+</section>
+<!-- §7 Abnormal puerperium: Subinvolution + Puerperal pyrexia -->
+<section id="s7">
+<h2 class="sec"><span class="num">7</span> Abnormal puerperium · Subinvolution &amp; Puerperal pyrexia</h2>
+<h3 class="sub">A. Uterine sub-involution</h3>
+<div class="keydef">
+<p><strong>Sub-involution:</strong> The uterus did not regress to its pre-pregnancy size by the end of the puerperium.</p>
+</div>
+<h4>Etiology (4 causes)</h4>
+<ol>
+<li>Retained placental fragments</li>
+<li>Infection</li>
+<li>Antepartum overdistension e.g. multiple pregnancy</li>
+<li>Non-lactating women</li>
+</ol>
+<h4>Treatment</h4>
+<ul>
+<li>Treatment of the cause</li>
+<li>Ecbolics and antibiotics</li>
+</ul>
+<div class="anchor">
+<strong>The 4 etiologies = R-I-A-N mnemonic:</strong> <strong>R</strong>etained products · <strong>I</strong>nfection · <strong>A</strong>ntepartum overdistension · <strong>N</strong>on-lactating. The single most common cause is retained products — and the single most dangerous is infection, because the open uterine sinuses of an involuting uterus are a direct route to puerperal sepsis.
+    </div>
+<div class="warn">
+<strong>"Ecbolics" = uterine-contracting drugs</strong> (oxytocin, methylergonovine, misoprostol, carboprost). They are used here to accelerate involution AND to control the secondary bleeding that often accompanies subinvolution. Antibiotics are added because the most common underlying cause (retained products) is also a culture medium for ascending infection.
+    </div>
+<h3 class="sub">B. Puerperal pyrexia</h3>
+<div class="keydef">
+<p><strong>Puerperal pyrexia:</strong> a rise of temperature reaching <strong>38°C or more and lasting 24 hours or more during the first 10 days of puerperium</strong>.</p>
+</div>
+<h4>Causes (7 in source order)</h4>
+<ol>
+<li>Milk engorgement (most common)</li>
+<li>Puerperal sepsis (most serious)</li>
+<li>Urinary tract infection</li>
+<li>Breast infection</li>
+<li>Respiratory infection</li>
+<li>Deep venous thrombosis</li>
+<li>Intercurrent febrile illness as typhoid</li>
+</ol>
+<div class="contra">
+<strong>Rule that overrides the differential:</strong> "Any case of puerperal pyrexia should be considered puerperal infection (sepsis) until proved otherwise." (verbatim source sentence). In practice this means: take cultures, start broad-spectrum antibiotics, and only then narrow the differential.
+    </div>
+<div class="grid-2">
+<div class="keydef" style="border-left-color:#0D9488;">
+<strong>Milk engorgement — the common cause</strong><br/>
+        Typically days 3-5 postpartum. Breasts become hard, full, warm and tender. Low-grade fever possible. Managed by frequent feeding/expression, cold compresses between feeds, warm compresses before feeds, simple analgesia. NOT a reason to give antibiotics.
+      </div>
+<div class="danger" style="border-left-color:#B91C1C;">
+<strong>Puerperal sepsis — the serious cause</strong><br/>
+        Endometritis is the classic lesion (polymicrobial ascending infection of the decidua). High fevers, foul lochia, uterine tenderness, tachycardia. Blood cultures, IV broad-spectrum antibiotics (ampicillin + gentamicin + clindamycin is a textbook choice), source control (evacuation of retained products if present).
+      </div>
+</div>
+<div class="pearl">
+<strong>Most common ≠ most serious.</strong> Milk engorgement is by far the most frequent cause of puerperal pyrexia but is benign. Puerperal sepsis is rarer but historically the leading cause of maternal mortality — hence the "sepsis until proved otherwise" rule that appears as the last line of the source.
+    </div>
+<div class="anchor">
+<strong>Mnemonic for the 7 causes — "M-P-U-B-R-D-I":</strong> <strong>M</strong>ilk engorgement · <strong>P</strong>uerperal sepsis · <strong>U</strong>rinary tract · <strong>B</strong>reast · <strong>R</strong>espiratory · <strong>D</strong>VT · <strong>I</strong>ntercurrent illness. "MPUB-RDI" rolls off the tongue and keeps the order straight.
+    </div>
+<div class="danger">
+<strong>Septic pulmonary emboli from DVT</strong> can present as puerperal pyrexia + pleuritic chest pain + hypoxia in the first 2 postpartum weeks — exactly when §4 said thrombosis risk is highest. Don't anchor on endometritis in a woman with unilateral leg swelling.
+    </div>
+<h3 class="sub">C. Summary table — normal vs abnormal puerperium</h3>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th style="background:#ECFDF5;color:#065F46;">Normal puerperium</th>
+<th style="background:#FEE2E2;color:#991B1B;">Abnormal puerperium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uterine size</strong></td>
+<td>1000 g → 60-80 g over 6 weeks; fundus at umbilicus at delivery, not palpable by Day 10-14</td>
+<td>Sub-involution: uterus fails to regress to pre-pregnancy size by end of puerperium</td>
+</tr>
+<tr>
+<td><strong>Temperature</strong></td>
+<td>May rise &lt; 38°C in first 24 hrs after labor, lasting &lt; 24 hrs (muscular effort)</td>
+<td>Puerperal pyrexia: ≥ 38°C and lasting ≥ 24 hrs in first 10 days</td>
+</tr>
+<tr>
+<td><strong>Lochia / bleeding</strong></td>
+<td>Red → serous → white, decreasing over 2-6 weeks</td>
+<td>Excess bleeding, foul-smelling lochia, retained clots</td>
+</tr>
+<tr>
+<td><strong>Thrombosis risk</strong></td>
+<td>Increased in first 2 weeks; mitigated by ambulation</td>
+<td>DVT/PE in same window if immobility, dehydration, thrombophilia</td>
+</tr>
+<tr>
+<td><strong>First clinical rule-out</strong></td>
+<td>—</td>
+<td>Any puerperal pyrexia = puerperal sepsis until proved otherwise</td>
+</tr>
+</tbody>
+</table>
+
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The MOST common cause of puerperal pyrexia is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Puerperal sepsis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Milk engorgement</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Urinary tract infection</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Respiratory infection</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Milk engorgement (days 3-5) is the most common cause. However, puerperal sepsis is the most serious — 'sepsis until proved otherwise' is the rule.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Puerperal pyrexia is defined as temperature of ≥38°C lasting ≥24 hours during the first:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">3 days of puerperium</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">7 days of puerperium</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">10 days of puerperium</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">14 days of puerperium</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Definition: temperature reaching 38°C or more AND lasting 24 hours or more during the first 10 days of puerperium.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT a cause of uterine subinvolution?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Retained placental fragments</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Infection</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Antepartum overdistension (e.g. multiple pregnancy)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Lactation</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Subinvolution causes (RIAN): Retained products, Infection, Antepartum overdistension, Non-lactating women. Lactation actually promotes involution.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<!-- §8 Student activity + Questions + References -->
+<section id="s8">
+<h2 class="sec"><span class="num">8</span> Student activity · Questions · References</h2>
+<details class="click-card blue">
+<summary>📘 Student activity</summary>
+<div class="body">
+<p><strong>Clinical skills rotation:</strong> The students are requested to attend outpatient clinic in order to check with the clinic specialist the physiological changes which occur in the puerperium of postpartum attendant women.</p>
+<p style="color:#475569;font-size:13px;"><em>What to do in the clinic:</em> For each postpartum woman, perform a structured 6-week review: (1) menstrual return (lactation status), (2) uterine size on bimanual exam, (3) lochia pattern, (4) perineal healing, (5) bladder/bowel function, (6) breastfeeding, (7) mood screen (postnatal depression), (8) contraception plan. Document findings and compare to the §3-§4 expected changes.</p>
+</div>
+</details>
+<details class="click-card green">
+<summary>📝 Self-assessment Questions</summary>
+<div class="body">
+<p>Test yourself with the official Google Form:</p>
+<a class="qform-btn" href="https://forms.gle/khJQEkyMMA64rRV28" rel="noopener" target="_blank">Open Questions Form ↗</a>
+<span class="qform-code">forms.gle/khJQEkyMMA64rRV28</span>
+<p style="color:#475569;font-size:13px;margin-top:10px;">The form covers the ILOs in §1 — definition, genital and general changes, and the etiology and management of subinvolution and puerperal pyrexia.</p>
+</div>
+</details>
+<details class="click-card purple">
+<summary>📚 References &amp; Visual Sources</summary>
+<div class="body">
+<h4 style="margin-top:0;">Source material</h4>
+<p>Book Obstetrics 2025-2026, Chapter 38 — "Normal and Abnormal Puerperium" (p. 205-208). 4 pages, 4,379 bytes source text. Provided as <code>Book Obstetrics 2025-2026-038.pdf</code>.</p>
+<h4>Source visuals (1)</h4>
+<ul>
+<li><strong>Uterine involution anatomical diagram</strong> — anterior pelvic view with 5 nested dashed-line outlines (at delivery, Day 3, Day 5, Day 7, Day 9). On-topic per vision verification. Embedded in §5 as a green <code>.src-viz</code> card with "SOURCE IMAGE · img-000" badge.</li>
+</ul>
+<h4>External visuals</h4>
+<p><strong>None.</strong> This chapter is conveyed entirely via 1 source image and structured text — no external diagrams or stock images used.</p>
+<h4>Self-assessment link</h4>
+<p><a href="https://forms.gle/khJQEkyMMA64rRV28" rel="noopener" style="color:#0F766E;font-weight:600;" target="_blank">https://forms.gle/khJQEkyMMA64rRV28</a> — Google Form for the Self-assessment Questions card. Preserved verbatim from the source.</p>
+<h4>Source-text preservation notes</h4>
+<ul>
+<li>All 3 ILOs preserved verbatim from page 205 (note: source uses lowercase "puerperium" in ILO #2; "non genital" kept as two words, not corrected to "non-genital", matching the source).</li>
+<li>Definition preserved verbatim: "It is the time from the delivery till 6 weeks (42 days) post-partum, during which most of the changes of pregnancy, labor, and delivery have resolved and the body has reverted to the non-pregnant state."</li>
+<li>All 4 uterine-weight timepoints preserved verbatim (1000 g / 500 g / 250 g / 60-80 g).</li>
+<li>Uterine-level statement preserved verbatim ("Immediately after labor: at umbilicus. By the end of 6 wks: reaches the nonpregnant size.") — note the source uses "nonpregnant" as one word, kept as-is.</li>
+<li>Cervix line preserved verbatim ("the external os is closed to the extent that a finger could not be easily introduced").</li>
+<li>Vagina, vulva/perineum, ovary (a/b lactating vs non-lactating) — all verbatim from source.</li>
+<li>All 8 general-body-changes systems preserved verbatim in the §4 table (Pulse, Temperature, Breasts, After pains, Abdominal wall, Urinary tract, GIT with 3 constipation causes, Blood).</li>
+<li>Source phrasing "Tachycardia (&gt;100 b/m) indicates infection or anemia" preserved verbatim, including the abbreviation "b/m" (beats per minute).</li>
+<li>Source phrasing "Tachycardia" with the explicit cutoff "&gt; 100 b/m" preserved (the source uses "b/m" not "bpm").</li>
+<li>Temperature paragraph preserved verbatim, including the source-typo-friendly formatting "&lt; 38°C and lasting &lt; 24 hrs" (the source uses the degree symbol).</li>
+<li>Breasts paragraph preserved verbatim, including "colostrum (already present in the breasts and suckling by the newborn triggers its release)" and the "first 2-3 days" timing.</li>
+<li>After-pains paragraph preserved verbatim ("Painful uterine contractions occur in early puerperium increasing with suckling due to oxytocin release").</li>
+<li>Striae paragraph preserved verbatim ("Striae become white (albicans)") with the parenthetical Latin term kept as source.</li>
+<li>GIT 3 constipation causes preserved verbatim in their source order (Atony of the intestine / Laxity of the abdomen / Decreased fluid intake).</li>
+<li>Blood paragraph preserved verbatim ("Increased liability to thrombosis during the first two weeks especially with decreased fluid intake. Hematological changes gradually reversed.").</li>
+<li>All 11 management items in §6 preserved verbatim, including the explicit 15-min/1-hr schedule, 2-hr diet rule, antiseptic lotion + local antibiotic perineal care, Rh –ve / Rh +ve anti-D 72-hr rule, and the explicit "anti-D" phrasing.</li>
+<li>Source uses the dash in "Rh –ve" / "Rh +ve" — preserved verbatim in §6 and §6 NOTE.</li>
+<li>Sub-involution definition preserved verbatim ("The uterus did not regress to its pre-pregnancy size by the end of the puerperium.").</li>
+<li>All 4 sub-involution etiologies preserved verbatim in source order (Retained placental fragments / Infection / Antepartum overdistension e.g. multiple pregnancy / Non-lactating women).</li>
+<li>Treatment of sub-involution preserved verbatim ("Treatment of the cause. Ecbolics and antibiotics.").</li>
+<li>Puerperal pyrexia definition preserved verbatim ("a rise of temperature reaching 38°C or more and lasting 24 hours or more during the first 10 days of puerperium").</li>
+<li>All 7 puerperal-pyrexia causes preserved verbatim in source order, including the parenthetical clarifications "(most common)" for milk engorgement and "(most serious)" for puerperal sepsis.</li>
+<li>The closing rule preserved verbatim: "Any case of puerperal pyrexia should be considered puerperal infection (sepsis) until proved otherwise."</li>
+<li>Student activity preserved verbatim ("attend outpatient clinic in order to check with the clinic specialist the physiological changes which occur in the puerperium of postpartum attendant women").</li>
+<li>Google Form URL <code>https://forms.gle/khJQEkyMMA64rRV28</code> preserved verbatim (link, code, references, end-of-topic).</li>
+</ul>
+<h4>Source-text intentional corrections</h4>
+<ul>
+<li>"suckling" in source is used for "the newborn suckling" — preserved verbatim (some texts modernize to "suckling at the breast" or "nursing").</li>
+<li>"nonpregnant" (one word) in the source level-statement preserved as source form; "non-pregnant" (hyphenated) used in §2 KEY DEFINITION card for readability, but original source form is shown verbatim in §3.</li>
+<li>Italicized emphasis and bolding added in §6 step-cards to make the 15-min/1-hr and 72-hr cutoffs visually scannable, but the source sentences themselves are preserved verbatim.</li>
+<li>Educational callouts (pearls, anchors, dangers, warns) are explicitly noted as "all reinforce existing source facts" — no clinical fact has been added that is not already in the source text.</li>
+</ul>
+</div>
+</details>
+<div class="footer">
+<p>Topic 38 · Normal and Abnormal Puerperium · <a href="https://forms.gle/khJQEkyMMA64rRV28" rel="noopener" target="_blank">Self-assessment form</a></p>
+<p>Generated from Book Obstetrics 2025-2026, p. 205-208 · Source visuals embedded with attribution · No external images used</p>
+</div>
+</section>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

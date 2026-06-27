@@ -1,0 +1,629 @@
+{
+  "s2": [
+    {
+      "q": "Which of the following is a cause of onset of normal labor?",
+      "options": [
+        "Decreased estrogen, increased progesterone",
+        "Increased estrogen, decreased progesterone",
+        "Decreased prostaglandin F2α",
+        "Decreased oxytocin"
+      ],
+      "correct": 1,
+      "explain": "Onset of labor is associated with ↑ Estrogen, ↓ Progesterone, ↑ Prostaglandin F2α and ↑ Oxytocin, leading to uterine contractions. Mechanical factors (uterine distension) also contribute."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Prelabor (premonitory stage) begins how long before true labor in primigravida?",
+      "options": [
+        "A few days",
+        "1 week",
+        "2-3 weeks",
+        "4-5 weeks"
+      ],
+      "correct": 2,
+      "explain": "Prelabor begins 2-3 weeks before true labor in primigravida and a few days before in multipara. It is associated with increased oxytocin receptors."
+    },
+    {
+      "q": "Which of the following is NOT a change seen during prelabor?",
+      "options": [
+        "Lightening",
+        "Cervical ripening",
+        "Formation of bag of water",
+        "False labor pains"
+      ],
+      "correct": 2,
+      "explain": "Changes during prelabor include lightening, cervical ripening, and false labor pains. The bag of water forms during true labor, not prelabor."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which feature distinguishes true labor pains from false labor pains?",
+      "options": [
+        "Pain location is only lower abdomen",
+        "Relief with enema/sedation",
+        "Progressive cervical dilatation and effacement",
+        "Irregular contractions"
+      ],
+      "correct": 2,
+      "explain": "True labor pains produce cervical changes (dilatation and effacement), while false labor pains do not. True contractions are regular and progressive, and show (blood-stained mucus) is present."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s5": [
+    {
+      "q": "The first stage of labor ends with:",
+      "options": [
+        "Expulsion of the fetus",
+        "Full dilatation of cervix (10 cm)",
+        "Expulsion of placenta",
+        "First hour after delivery"
+      ],
+      "correct": 1,
+      "explain": "The first stage starts with onset of true labor pain and ends with full dilatation of cervix (10 cm). Duration is 12 hours in primi and 6 hours in multipara."
+    },
+    {
+      "q": "The third stage of labor normally lasts about:",
+      "options": [
+        "5 minutes",
+        "15 minutes",
+        "30 minutes",
+        "1 hour"
+      ],
+      "correct": 1,
+      "explain": "The third stage (from fetal expulsion to placental expulsion) lasts about 15 minutes in both primi and multipara with expectant management, reduced to 5 minutes with active management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The pacemaker of uterine contractions is situated at:",
+      "options": [
+        "The cervix",
+        "The lower uterine segment",
+        "The cornu (right predominates over left)",
+        "The fundus only"
+      ],
+      "correct": 2,
+      "explain": "The pacemaker of uterine contractions is at the cornu, with the right pacemaker predominating over the left. Contractions spread at 2 cm/sec, depolarizing the whole organ within 15 seconds."
+    },
+    {
+      "q": "A Montevideo unit measures uterine contractions as:",
+      "options": [
+        "Duration × frequency",
+        "Intensity × number of contractions in 3 minutes",
+        "Amplitude × duration",
+        "Basal tone × frequency"
+      ],
+      "correct": 1,
+      "explain": "Montevideo unit (MV unit) = Intensity of uterine contraction × number of contractions in 3 minutes. It quantifies uterine activity."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "In a normal labor, cephalic presentation occurs in what percentage of cases?",
+      "options": [
+        "99%",
+        "95%",
+        "90%",
+        "85%"
+      ],
+      "correct": 1,
+      "explain": "Cephalic presentation occurs in 95% of labors, breech in 3.5%, and shoulder in 0.5%."
+    },
+    {
+      "q": "The normal cervical dilatation rate in active phase for nulliparous women is:",
+      "options": [
+        "0.5 cm/hr",
+        "1.2 cm/hr",
+        "1.5 cm/hr",
+        "2.0 cm/hr"
+      ],
+      "correct": 1,
+      "explain": "In the active phase, normal cervical dilatation rate is 1.2 cm/hr for primigravida and 1.5 cm/hr for multiparous women."
+    },
+    {
+      "q": "The latent stage of first stage is mainly concerned with:",
+      "options": [
+        "Cervical dilatation",
+        "Cervical effacement",
+        "Descent of head",
+        "Expulsion of fetus"
+      ],
+      "correct": 1,
+      "explain": "The latent stage is mainly concerned with cervical effacement, while the active stage is mainly concerned with cervical dilatation."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s8": [
+    {
+      "q": "A prolonged latent phase is defined as greater than how many hours in nulliparous women?",
+      "options": [
+        "12 hours",
+        "14 hours",
+        "20 hours",
+        "24 hours"
+      ],
+      "correct": 2,
+      "explain": "Prolonged latent phase is >20 hours in primigravida and >14 hours in multipara. Management includes a therapeutic test with morphine or oxytocin stimulation."
+    },
+    {
+      "q": "Arrest of dilatation is defined as cessation of dilatation for:",
+      "options": [
+        "1 or more hours",
+        "2 or more hours",
+        "3 or more hours",
+        "4 or more hours"
+      ],
+      "correct": 1,
+      "explain": "Arrest of dilatation is cessation of dilatation for 2 or more hours. Arrest of descent is cessation of descent for 1 or more hours."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s9": [
+    {
+      "q": "Which of the following is NOT one of the cardinal movements of the mechanism of labor?",
+      "options": [
+        "Engagement",
+        "Internal rotation",
+        "External rotation",
+        "Cervical dilatation"
+      ],
+      "correct": 3,
+      "explain": "The cardinal movements are: descent, engagement, increased flexion, internal rotation, extension, restitution, and external rotation. Cervical dilatation is not a fetal movement — it occurs due to uterine contractions."
+    },
+    {
+      "q": "Engagement of the vertex is diagnosed vaginally when:",
+      "options": [
+        "The head is at +1 station",
+        "The vertex is felt at or below the ischial spine (zero station)",
+        "The cervix is fully dilated",
+        "The membranes are ruptured"
+      ],
+      "correct": 1,
+      "explain": "Engagement is diagnosed vaginally when the vertex is at or below the ischial spine (zero station). Abdominally, 2/5 or less of the head is felt above the symphysis pubis."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s10": [
+    {
+      "q": "The active management of the third stage reduces its duration to:",
+      "options": [
+        "15 minutes",
+        "10 minutes",
+        "5 minutes",
+        "2 minutes"
+      ],
+      "correct": 2,
+      "explain": "Active management reduces the third stage duration from 15 minutes (expectant) to 5 minutes, lowering the risk of PPH and maternal mortality."
+    },
+    {
+      "q": "Which of the following is a sign of placental separation?",
+      "options": [
+        "Fundus becomes low and soft",
+        "Umbilical cord shortens",
+        "Uterus becomes globular, hard, and mobile with a sudden gush of blood",
+        "Cervix closes completely"
+      ],
+      "correct": 2,
+      "explain": "Signs include: uterus becomes globular/hard/mobile, sudden gush of blood, suprapubic bulge, rise of fundal level, lengthening of cord, and absence of cord pulsation."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s11": [
+    {
+      "q": "Which of the following is NOT part of the active management of the first stage?",
+      "options": [
+        "Partogram recording",
+        "Amniotomy",
+        "Oxytocin augmentation",
+        "Fundal pressure during contractions"
+      ],
+      "correct": 3,
+      "explain": "Active first-stage procedures include evacuation of rectum/bladder, analgesia, partogram, amniotomy, oxytocin augmentation, and fetal monitoring. Fundal pressure is not recommended."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    },
+    {
+      "q": "The first-line investigation is:",
+      "options": [
+        "Ultrasound",
+        "Complete blood count",
+        "Urine analysis",
+        "Depends on the clinical suspicion"
+      ],
+      "correct": 3,
+      "explain": "Choice of investigation depends on the suspected condition."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s12": [
+    {
+      "q": "Cord clamping is contraindicated in which of the following?",
+      "options": [
+        "Term baby",
+        "Preterm baby and Rh-negative mothers",
+        "Vertex presentation",
+        "Multiparous women"
+      ],
+      "correct": 1,
+      "explain": "Cord clamping is contraindicated in preterm babies and Rh-negative mothers. The newborn care also includes airway clearance, APGAR scoring, examination, and eye care with antibiotics."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ]
+}

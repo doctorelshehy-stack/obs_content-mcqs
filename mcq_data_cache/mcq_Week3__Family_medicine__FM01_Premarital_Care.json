@@ -1,0 +1,401 @@
+{
+  "s3": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "What is the recommended minimum time before marriage to conduct premarital screening?",
+      "options": [
+        "One month",
+        "Three months",
+        "Six months",
+        "One year"
+      ],
+      "correct": 1,
+      "explain": "Couples planning to marry are advised to conduct premarital screening at least three months before the marriage date."
+    },
+    {
+      "q": "How long is the premarital compatibility certificate valid?",
+      "options": [
+        "Three months",
+        "Four months",
+        "Six months",
+        "One year"
+      ],
+      "correct": 2,
+      "explain": "The premarital compatibility certificate is valid for only six months."
+    },
+    {
+      "q": "Which of the following best defines premarital care?",
+      "options": [
+        "Care provided during marriage to treat hereditary diseases",
+        "Specific service provided for couples before marriage to promote health of future parents and prevent health hazards",
+        "Post-marital counselling for family planning",
+        "A legal requirement only for consanguineous marriages"
+      ],
+      "correct": 1,
+      "explain": "Premarital care is the specific service provided for the couples before marriage, aiming to promote health of future parents, prevent health hazards, and have healthy future generations."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is NOT a component of premarital care?",
+      "options": [
+        "Premarital assessment and screening",
+        "Premarital counselling",
+        "Immunization (Rubella vaccination for females)",
+        "Postpartum care planning"
+      ],
+      "correct": 3,
+      "explain": "The three main components of premarital care are: (1) Premarital Assessment, (2) Premarital Counselling, and (3) Immunization (Rubella vaccination for females)."
+    },
+    {
+      "q": "Among offspring of consanguineous marriage, there is increased risk of all EXCEPT:",
+      "options": [
+        "Prenatal morbidity and mortality",
+        "Congenital abnormalities",
+        "Mental retardation",
+        "Improved immune function"
+      ],
+      "correct": 3,
+      "explain": "Among offspring of consanguineous marriage, there is increased prenatal morbidity and mortality together with increased incidence of congenital abnormalities and mental retardation."
+    }
+  ],
+  "s5": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a routine obligatory investigation in premarital screening?",
+      "options": [
+        "Thyroid function tests",
+        "HPLC (Hb variants)",
+        "Mammography",
+        "Random blood glucose"
+      ],
+      "correct": 1,
+      "explain": "Routine obligatory investigations include CBC, Blood group (ABO & Rh), HPLC (Hb variants), Sickledex, G6PD, Ferritin, HBsAg, and HCV."
+    },
+    {
+      "q": "A 25-year-old man is undergoing premarital screening. Which genetic disorders should be specifically asked about in his family history?",
+      "options": [
+        "Cystic fibrosis, Huntington disease, Marfan syndrome",
+        "SCD, Thalassemia, G6PD",
+        "Hemophilia A and B",
+        "Tay-Sachs disease and Niemann-Pick disease"
+      ],
+      "correct": 1,
+      "explain": "Family history should specifically ask about SCD, Thalassemia, G6PD, and congenital anomalies such as Marfan syndrome and deaf mutism."
+    }
+  ],
+  "s6": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "According to the premarital care algorithm, after reception and triage, what is the next step?",
+      "options": [
+        "Laboratory investigations",
+        "Premarital Screening Clinic",
+        "Immunization",
+        "Referral to specialist"
+      ],
+      "correct": 1,
+      "explain": "After reception/registration and triage (vitals, anthropometric measurements), the client proceeds to the Premarital Screening Clinic."
+    },
+    {
+      "q": "In the premarital care algorithm, what are the three main branches evaluated at the screening clinic?",
+      "options": [
+        "Counselling, immunization, and follow-up",
+        "History, physical examination, and laboratory investigations",
+        "Genetic testing, ultrasound, and blood work",
+        "Social assessment, nutritional counselling, and exercise plan"
+      ],
+      "correct": 1,
+      "explain": "The premarital screening clinic evaluates three branches: History taking (personal data, consanguinity, genetic disorders), Physical examination (vitals, BMI, systemic exam), and Laboratory investigations (CBC, HPLC, Sickledex, etc.)."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which type of premarital counselling involves studying the genogram of both parents to discover probability of genetic hazards?",
+      "options": [
+        "General counselling & health education",
+        "Reproductive health counselling",
+        "Relevant health problem counselling",
+        "Genetic counselling"
+      ],
+      "correct": 3,
+      "explain": "Genetic counselling involves studying the genogram of both parents to discover probability of genetic hazards to offspring such as SCD, thalassemia, Marfan syndrome, and deaf mutism."
+    },
+    {
+      "q": "Reproductive health counselling in premarital care includes advice about all EXCEPT:",
+      "options": [
+        "Appropriate time of first pregnancy",
+        "Importance of early antenatal care",
+        "Precautions during pregnancy to avoid teratogenic hazards",
+        "Management of chronic diseases like diabetes"
+      ],
+      "correct": 3,
+      "explain": "Reproductive health counselling covers advice about appropriate time of first pregnancy, importance of early antenatal care, precautions during pregnancy (avoid drugs & teratogenic hazards), and safe delivery. Management of chronic diseases falls under relevant health problem counselling."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which immunization is specifically recommended for females during premarital care?",
+      "options": [
+        "Hepatitis B vaccine",
+        "Rubella vaccine",
+        "Tetanus toxoid",
+        "HPV vaccine"
+      ],
+      "correct": 1,
+      "explain": "Immunization of females against rubella is recommended, not less than 3 months before planning pregnancy to avoid congenital rubella syndrome."
+    },
+    {
+      "q": "Why is rubella immunization recommended before pregnancy?",
+      "options": [
+        "To prevent neural tube defects",
+        "To avoid congenital rubella syndrome if the female acquires infection during pregnancy",
+        "To reduce the risk of miscarriage in the first trimester",
+        "To prevent postpartum hemorrhage"
+      ],
+      "correct": 1,
+      "explain": "Rubella immunization is recommended to avoid congenital rubella syndrome if the female acquires the infection during pregnancy."
+    }
+  ],
+  "s9": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ]
+}

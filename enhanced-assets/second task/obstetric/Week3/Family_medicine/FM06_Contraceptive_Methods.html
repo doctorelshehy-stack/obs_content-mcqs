@@ -1,0 +1,3129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>FM06 — Contraceptive Methods in Family Practice</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f4f7fc;color:#1a2332;line-height:1.6}
+/* Hero */
+.hero{background:linear-gradient(135deg,#1e3a5f 0%,#2d5a87 50%,#3a7ca5 100%);color:#fff;padding:40px 20px;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:6px;letter-spacing:-0.5px}
+.hero .sub{font-size:1.1rem;opacity:.85;font-weight:500}
+.hero .badge{display:inline-block;background:rgba(255,255,255,.15);padding:4px 16px;border-radius:20px;font-size:.85rem;margin-top:10px}
+/* Container */
+.container{max-width:1000px;margin:0 auto;padding:16px}
+/* TOC */
+.toc{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:24px;overflow:hidden}
+.toc-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;cursor:pointer;background:#e8f0fe;font-weight:700;font-size:1.05rem;color:#1e3a5f;user-select:none}
+.toc-header .arrow{transition:transform .3s;font-size:.85rem}
+.toc.collapsed .toc-body{display:none}
+.toc.collapsed .arrow{transform:rotate(-90deg)}
+.toc-body{padding:12px 20px 16px}
+.toc-body a{display:block;padding:5px 0;color:#2d5a87;text-decoration:none;font-size:.92rem;border-bottom:1px solid #f0f3f8}
+.toc-body a:last-child{border-bottom:none}
+.toc-body a:hover{color:#1e3a5f;font-weight:600}
+/* Section */
+.section{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:20px;padding:24px 28px}
+.section h2{font-size:1.5rem;font-weight:700;color:#1e3a5f;margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid #3a7ca5;display:flex;align-items:center;gap:10px}
+.section h2 .num{background:#1e3a5f;color:#fff;font-size:.85rem;padding:2px 10px;border-radius:20px}
+.section h3{font-size:1.15rem;font-weight:700;color:#2d5a87;margin:18px 0 8px}
+.section h4{font-size:1rem;font-weight:700;color:#3a7ca5;margin:14px 0 6px}
+.section p{margin:6px 0;color:#2c3e50}
+.section ul{padding-left:22px;margin:4px 0 10px}
+.section li{margin:4px 0;color:#2c3e50}
+/* Card grid */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.card{background:#f8fafc;border-radius:10px;padding:16px;border-left:4px solid #3a7ca5}
+.card.blue{border-left-color:#3a7ca5;background:#f0f7ff}
+.card.green{border-left-color:#27ae60;background:#f0faf4}
+.card.amber{border-left-color:#f39c12;background:#fffbf0}
+.card.red{border-left-color:#e74c3c;background:#fff5f5}
+.card.purple{border-left-color:#8e44ad;background:#f8f0ff}
+.card h4{margin:0 0 6px;font-size:.98rem}
+.card p,.card li{font-size:.88rem}
+/* Info box */
+.info-box{background:#e8f4fd;border-left:4px solid #3a7ca5;padding:14px 18px;margin:12px 0;border-radius:0 8px 8px 0}
+.info-box.warning{background:#fff8e1;border-left-color:#f39c12}
+.info-box.danger{background:#fdecea;border-left-color:#e74c3c}
+.info-box.success{background:#e8f8e8;border-left-color:#27ae60}
+.info-box h4{font-size:.95rem;margin-bottom:4px}
+.info-box p,.info-box li{font-size:.88rem}
+/* 4 TOO */
+.too-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}
+.too-item{text-align:center;padding:14px 8px;border-radius:10px;font-weight:700;font-size:.95rem;color:#fff}
+.too-item.t1{background:#e74c3c}
+.too-item.t2{background:#e67e22}
+.too-item.t3{background:#f39c12}
+.too-item.t4{background:#8e44ad}
+.too-item .lbl{display:block;font-size:.75rem;font-weight:400;opacity:.9;margin-top:4px}
+/* Method classification */
+.method-tree{padding:0;margin:12px 0;list-style:none}
+.method-tree>li{background:#f8fafc;border-radius:8px;margin-bottom:8px;padding:12px 16px;border-left:4px solid #3a7ca5;font-weight:600;color:#1e3a5f}
+.method-tree ul{margin:6px 0 2px 20px;list-style:disc}
+.method-tree ul li{font-weight:400;color:#2c3e50;padding:2px 0;border-left:none;margin:0}
+/* WHO MEC categories */
+.mec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}
+.mec-item{padding:14px;border-radius:10px;text-align:center}
+.mec-item.c1{background:#e8f8e8;border:2px solid #27ae60}
+.mec-item.c2{background:#fffbf0;border:2px solid #f39c12}
+.mec-item.c3{background:#fff0e0;border:2px solid #e67e22}
+.mec-item.c4{background:#fdecea;border:2px solid #e74c3c}
+.mec-num{font-size:1.5rem;font-weight:800;display:block}
+.mec-item.c1 .mec-num{color:#27ae60}
+.mec-item.c2 .mec-num{color:#f39c12}
+.mec-item.c3 .mec-num{color:#e67e22}
+.mec-item.c4 .mec-num{color:#e74c3c}
+.mec-desc{font-size:.82rem;margin-top:4px;color:#555}
+/* Table styling */
+.data-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.88rem}
+.data-table th{background:#1e3a5f;color:#fff;padding:10px 12px;text-align:left;font-weight:600}
+.data-table td{padding:8px 12px;border-bottom:1px solid #e0e7ef}
+.data-table tr:nth-child(even){background:#f8fafc}
+.data-table tr:hover{background:#e8f0fe}
+/* Side effects badges */
+.se-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.se-tag{display:inline-block;background:#f0f3f8;padding:4px 12px;border-radius:16px;font-size:.82rem;color:#555;margin:2px}
+.se-tag.common{background:#fdecea;color:#c0392b}
+.se-tag.rare{background:#fef9e7;color:#7d6608}
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{font-size:1.5rem}
+  .card-grid{grid-template-columns:1fr}
+  .too-grid{grid-template-columns:repeat(2,1fr)}
+  .mec-grid{grid-template-columns:repeat(2,1fr)}
+  .se-grid{grid-template-columns:1fr}
+  .section{padding:16px}
+}
+@media(max-width:480px){
+  .too-grid{grid-template-columns:1fr 1fr}
+}
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>Contraceptive Methods in Family Practice</h1>
+  <div class="sub">Family Planning &amp; Birth Control</div>
+  <div class="badge">FM-OBS Topic 6</div>
+</header>
+
+<div class="container">
+
+<!-- TOC -->
+<div class="toc" id="toc">
+  <div class="toc-header" onclick="toggleTOC()">
+    <span>Table of Contents</span>
+    <span class="arrow">▼</span>
+  </div>
+  <div class="toc-body">
+    <a href="#s1">1. Family Planning Overview</a>
+    <a href="#s2">2. Classification of Methods</a>
+    <a href="#s3">3. Physiological Methods</a>
+    <a href="#s4">4. Barrier Methods</a>
+    <a href="#s5">5. Hormonal Methods — Mechanisms of Action</a>
+    <a href="#s6">6. Combined Estrogen &amp; Progesterone</a>
+    <a href="#s7">7. Combined Oral Contraceptives (COCs)</a>
+    <a href="#s8">8. Progestin-Only Methods</a>
+    <a href="#s9">9. Intrauterine Devices (IUDs)</a>
+    <a href="#s10">10. Emergency Contraception</a>
+    <a href="#s11">11. Permanent Methods</a>
+    <a href="#s12">12. WHO Medical Eligibility Criteria</a>
+    <a href="#s13">13. Review Question</a>
+  </div>
+</div>
+
+<!-- S1: FP Overview -->
+<div class="section" id="s1">
+  <h2><span class="num">1</span> Family Planning Overview</h2>
+  <p><strong>WHO Definition:</strong> Family planning is the ability of individuals and couples to anticipate and attain their desired number of children and the spacing and timing of their births.</p>
+
+  <h3>Importance of Family Planning</h3>
+  <p>High fertility can affect the health of mothers, present child, and coming child:</p>
+  <ul>
+    <li><strong>Mother:</strong> Malnutrition (IDA, osteomalacia), post-partum depression</li>
+    <li><strong>Present child:</strong> Deprived of proper breastfeeding period and care — prone to malnutrition</li>
+    <li><strong>Coming child:</strong> Mother lacks time to restore Iron and Calcium stores</li>
+  </ul>
+
+  <h3>The Four "TOO" — Target Groups for Contraception</h3>
+  <p>Maternal and child mortality are increased by:</p>
+  <div class="too-grid">
+    <div class="too-item t1">TOO Young<span class="lbl">&lt; 20 years</span></div>
+    <div class="too-item t2">TOO Soon<span class="lbl">Inter-pregnancy spacing &lt; 2 years</span></div>
+    <div class="too-item t3">TOO Many<span class="lbl">5th pregnancy or more</span></div>
+    <div class="too-item t4">TOO Old<span class="lbl">&gt; 35 years</span></div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="s1">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">According to the WHO definition, family planning is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The use of contraceptive methods to prevent all pregnancies</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s1-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The ability of individuals and couples to anticipate and attain their desired number of children and the spacing and timing of their births</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">A government program to limit population growth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Medical termination of unwanted pregnancies</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">WHO defines family planning as the ability of individuals and couples to anticipate and attain their desired number of children and the spacing and timing of their births.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s1">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which group represents the 'TOO Young' target for contraception?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Under 16 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s1-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Under 20 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Under 18 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Under 25 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The Four 'TOO' are: TOO Young (35 years).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s1">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s1-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s1">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s1-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s1">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s1-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s1-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</div>
+
+<!-- S2: Classification -->
+<div class="section" id="s2">
+  <h2><span class="num">2</span> Classification of Methods</h2>
+
+  <h3>Reversible Methods</h3>
+  <ul class="method-tree">
+    <li>1. Physiological Methods
+      <ul>
+        <li>Periodic Abstinence (Fertility Awareness)</li>
+        <li>Withdrawal (Coitus Interruptus)</li>
+        <li>Lactational Amenorrhea (LAM)</li>
+      </ul>
+    </li>
+    <li>2. Barrier Methods
+      <ul>
+        <li>Male Condoms</li>
+        <li>Vaginal Diaphragm &amp; Cervical Cap</li>
+        <li>Female Condom</li>
+        <li>Spermicides</li>
+      </ul>
+    </li>
+    <li>3. Hormonal Methods
+      <ul>
+        <li>Combined Estrogen &amp; Progesterone (COCs, Injectable, Patch, Vaginal Ring)</li>
+        <li>Progestin-Only (Injectable, Implants, Pills, Vaginal Ring)</li>
+      </ul>
+    </li>
+    <li>4. Intrauterine Devices
+      <ul>
+        <li>Copper-Bearing IUD (Cu-IUD)</li>
+        <li>Levonorgestrel IUD (LNG-IUD)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Emergency Contraception</h3>
+  <ul>
+    <li>Progestin-Only Pills (preferred)</li>
+    <li>Combined Oral Pills</li>
+    <li>Copper IUD</li>
+  </ul>
+
+  <h3>Permanent Methods</h3>
+  <ul>
+    <li>Female Sterilization (Tubal Ligation)</li>
+    <li>Male Sterilization (Vasectomy)</li>
+  </ul>
+
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+
+<!-- S3: Physiological Methods -->
+<div class="section" id="s3">
+  <h2><span class="num">3</span> Physiological Methods</h2>
+  <div class="info-box warning">
+    <p><strong>Note:</strong> These methods have a high failure rate and are best used with backup methods.</p>
+  </div>
+
+  <h3>1. Periodic Abstinence (Fertility Awareness)</h3>
+  <p>The female identifies the fertile time of her menstrual cycle and avoids unprotected intercourse during that period.</p>
+  <div class="card-grid">
+    <div class="card blue">
+      <h4>Calendar-Based Methods</h4>
+      <p><strong>Standard Days Method:</strong> Avoid unprotected intercourse on days 8 through 19 of regular menstrual cycles.</p>
+    </div>
+    <div class="card blue">
+      <h4>Symptoms-Based Methods</h4>
+      <p>Observing signs of ovulation:</p>
+      <ul>
+        <li><strong>Cervical secretions:</strong> Increase and become thin</li>
+        <li><strong>Basal Body Temperature (BBT):</strong> Rises by 0.5°C after ovulation</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>2. Withdrawal (Coitus Interruptus)</h3>
+  <p>The penis is withdrawn before ejaculation ("pulling out"). High failure rate due to pre-ejaculate fluid.</p>
+
+  <h3>3. Lactational Amenorrhea (LAM)</h3>
+  <p>A temporary method based on the natural effect of breastfeeding on fertility. <strong>All 3 conditions must be met:</strong></p>
+  <ul>
+    <li>Mother's monthly bleeding has not returned</li>
+    <li>Baby is fully or nearly fully breastfed, fed often day and night</li>
+    <li>Baby is less than 6 months old</li>
+  </ul>
+
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a reversible contraceptive method?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Tubal ligation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Vasectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Physiological methods (periodic abstinence, withdrawal, LAM)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">None of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Reversible methods include: physiological, barrier, hormonal, and IUDs. Permanent methods (tubal ligation, vasectomy) are not reversible.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which contraceptive method provides STI protection?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Combined oral contraceptives</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Male condoms</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">IUD</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Progestin-only injectable</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Male condoms provide STI protection in addition to pregnancy prevention.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</div>
+
+<!-- S4: Barrier Methods -->
+<div class="section" id="s4">
+  <h2><span class="num">4</span> Barrier Methods</h2>
+
+  <div class="card-grid">
+    <div class="card blue"><h4>Male Condoms</h4><p>Thin sheath worn on the penis. Provides STI protection. Non-prescription, low cost.</p></div>
+    <div class="card blue"><h4>Vaginal Diaphragm &amp; Cervical Cap</h4><p>Shallow cup placed in vagina before intercourse. Use with spermicides for increased efficacy.</p></div>
+    <div class="card blue"><h4>Female Condom</h4><p>Pouch inserted into the vagina. Provides dual protection.</p></div>
+    <div class="card blue"><h4>Spermicides</h4><p>Foam, gel, cream, film, suppository, or tablet. Placed in vagina ≤1 hr before intercourse, left in place ≥6-8 hrs after.</p></div>
+  </div>
+
+  <h3>Non-Contraceptive Advantages</h3>
+  <ul>
+    <li>Ease of use, non-prescription, low cost</li>
+    <li>Lubrication</li>
+    <li>Possible protection against some STIs (GC, Chlamydia, Trichomonas)</li>
+    <li>Reduced cervical cancer risk</li>
+    <li>Reversible and inexpensive</li>
+  </ul>
+
+  <h3>Side Effects</h3>
+  <ul>
+    <li>Regular use with spermicide may cause skin irritation or tiny abrasions (increases STI risk)</li>
+    <li>Latex allergy or contact dermatitis</li>
+    <li>Increased vaginal infection and UTI</li>
+  </ul>
+
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What are the three conditions that must ALL be met for Lactational Amenorrhea (LAM) to be effective?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Baby is <6 months, mother exclusively pumps milk, mother uses backup contraception</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Mother's monthly bleeding has not returned, baby is fully/nearly fully breastfed often day and night, baby is <6 months old</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Baby is <3 months, mother has regular cycles, baby is formula-fed at night</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Mother has irregular periods, baby is <1 year, breastfeeding is supplemented with solids</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">All 3 conditions for LAM: (1) Mother's monthly bleeding has not returned, (2) Baby is fully or nearly fully breastfed, fed often day and night, (3) Baby is less than 6 months old.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The Standard Days Method of periodic abstinence involves avoiding unprotected intercourse on which days?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Days 1-7 of the menstrual cycle</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Days 8 through 19 of regular menstrual cycles</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Days 20-28 of the cycle</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Days 14-28 of the cycle</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The Standard Days Method: avoid unprotected intercourse on days 8 through 19 of regular menstrual cycles.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which barrier method is placed in the vagina before intercourse and used with spermicides?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Male condom</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Vaginal diaphragm and cervical cap</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Female condom</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Spermicide alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The vaginal diaphragm and cervical cap are shallow cups placed in vagina before intercourse, used with spermicides for increased efficacy.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a non-contraceptive advantage of barrier methods?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Regulates menstrual cycles</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Reduces risk of ovarian cancer</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Possible protection against some STIs and reduced cervical cancer risk</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Improves bone density</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Non-contraceptive advantages include: ease of use, non-prescription, low cost, possible STI protection (GC, Chlamydia, Trichomonas), and reduced cervical cancer risk.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</div>
+
+<!-- S5: Hormonal MOA -->
+<div class="section" id="s5">
+  <h2><span class="num">5</span> Hormonal Methods — Mechanism of Action</h2>
+  <div class="info-box">
+    <h4>Triple Mechanism</h4>
+    <ol>
+      <li><strong>Suppression of ovulation</strong> (primary mechanism for combined methods)</li>
+      <li><strong>Thickened cervical mucus</strong> — interferes with sperm movement to uterus</li>
+      <li><strong>Endometrial changes</strong> — interfere with implantation</li>
+    </ol>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What is the primary mechanism of action of combined hormonal contraceptives?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Thickening cervical mucus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Suppression of ovulation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Endometrial changes preventing implantation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Sperm immobilization</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The triple mechanism of hormonal methods: (1) Suppression of ovulation (primary for combined), (2) Thickened cervical mucus, (3) Endometrial changes.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT a mechanism of action of hormonal contraceptives?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Suppression of ovulation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Thickened cervical mucus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Endometrial changes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Direct killing of sperm</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The three mechanisms are: ovulation suppression, thickened cervical mucus, and endometrial changes. Direct killing of sperm is not a mechanism.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</div>
+
+<!-- S6: Combined -->
+<div class="section" id="s6">
+  <h2><span class="num">6</span> Combined Estrogen &amp; Progesterone</h2>
+
+  <div class="card-grid">
+    <div class="card green"><h4>Combined Oral Contraceptives (COCs)</h4><p>Low-dose estrogen + progestin pills. Taken daily. &lt;1 pregnancy/100 women/year with perfect use.</p></div>
+    <div class="card green"><h4>Combined Monthly Injectable</h4><p>Similar to COCs. Given every 4 weeks (±7 days). Does not require daily administration.</p></div>
+    <div class="card green"><h4>Combined Patch</h4><p>Small adhesive patch worn on the body. New patch weekly × 3 weeks, then patch-free week. Side effect: skin irritation.</p></div>
+    <div class="card green"><h4>Combined Vaginal Ring</h4><p>Flexible ring placed in vagina. Releases 2 hormones absorbed through vaginal wall. 3 weeks in, 1 week off.</p></div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which combined hormonal method is administered every 4 weeks?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Combined oral contraceptives</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Combined monthly injectable</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Combined patch</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Combined vaginal ring</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The combined monthly injectable is given every 4 weeks (±7 days) and does not require daily administration.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">What is the typical regimen for the combined vaginal ring?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">3 weeks in, 1 week off</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Inserted daily</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Changed monthly</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">24 weeks continuous use</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The combined vaginal ring is used for 3 weeks in, 1 week off.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+
+<!-- S7: COCs -->
+<div class="section" id="s7">
+  <h2><span class="num">7</span> Combined Oral Contraceptives (COCs)</h2>
+
+  <h3>When to Start</h3>
+  <div class="card-grid">
+    <div class="card blue"><h4>First Time / Switching from Non-Hormonal</h4>
+      <p><strong>Within 5 days of menses:</strong> No backup needed.</p>
+      <p><strong>&gt;5 days:</strong> Start any time if pregnancy is reasonably excluded. Use backup method for first 7 days.</p>
+    </div>
+    <div class="card blue"><h4>Switching from Hormonal Method</h4>
+      <p>Begin at the repeat time if used consistently and correctly, or if pregnancy is excluded.</p>
+    </div>
+    <div class="card blue"><h4>Fully Breastfeeding</h4>
+      <p>Start 6 months after giving birth.</p>
+    </div>
+    <div class="card blue"><h4>Not Breastfeeding</h4>
+      <p>Start 4 weeks after giving birth.</p>
+    </div>
+    <div class="card blue"><h4>After Miscarriage or Abortion</h4>
+      <p>Start within 7 days. If &gt;7 days, use backup for first 7 days.</p>
+    </div>
+  </div>
+
+  <h3>Side Effects</h3>
+  <div class="se-grid">
+    <div class="se-tag common">Lighter bleeding</div>
+    <div class="se-tag common">Irregular bleeding</div>
+    <div class="se-tag common">Headaches</div>
+    <div class="se-tag common">Dizziness</div>
+    <div class="se-tag common">Nausea</div>
+    <div class="se-tag common">Breast tenderness</div>
+    <div class="se-tag common">Weight change</div>
+    <div class="se-tag common">Mood changes</div>
+    <div class="se-tag common">BP increase (few mmHg)</div>
+    <div class="se-tag rare">DVT (very rare)</div>
+    <div class="se-tag rare">Stroke (very rare)</div>
+    <div class="se-tag rare">MI (very rare)</div>
+  </div>
+
+  <h3>Managing Side Effects</h3>
+  <ul>
+    <li>Keep taking COCs</li>
+    <li>Take at same time daily to reduce irregular bleeding</li>
+    <li>Take with food or at bedtime to avoid nausea</li>
+  </ul>
+
+  <h3>Non-Contraceptive Advantages</h3>
+  <div class="info-box success">
+    <h4>Protects Against:</h4>
+    <ul>
+      <li>Endometrial cancer</li>
+      <li>Ovarian cancer</li>
+      <li>Ovarian cysts</li>
+      <li>Iron-deficiency anemia</li>
+    </ul>
+    <h4>Reduces:</h4>
+    <ul>
+      <li>Menstrual cramps</li>
+      <li>Menstrual bleeding problems</li>
+      <li>Hirsutism</li>
+      <li>PCOS symptoms (irregular bleeding, acne, excess hair)</li>
+      <li>Endometriosis symptoms (pelvic pain, irregular bleeding)</li>
+    </ul>
+  </div>
+
+  <h3>Contraindications (11 Points)</h3>
+  <ol>
+    <li>Breastfeeding a baby &lt;6 months old</li>
+    <li>Age ≥35 years and smokes cigarettes</li>
+    <li>Liver cirrhosis, hepatitis, liver tumor, or history of jaundice with COCs</li>
+    <li>Hypertension</li>
+    <li>Diabetes &gt;20 years or with micro/macro vascular complications</li>
+    <li>Gallbladder disease (current or medically treated)</li>
+    <li>History of stroke, DVT, PE, MI, or other serious heart problems</li>
+    <li>Personal history of breast cancer</li>
+    <li>Migraine headache</li>
+    <li>Taking seizure medications (barbiturates, carbamazepine, lamotrigine, phenytoin) or rifampicin/rifabutin</li>
+    <li>Planning major surgery with ≥1 week immobility — start COCs 2 weeks after mobile again</li>
+  </ol>
+
+  <h3>Special Situations</h3>
+
+  <h4>Managing Missed Pills</h4>
+  <div class="info-box">
+    <p><strong>Key message:</strong> Take a missed pill ASAP. Keep taking one pill daily — 2 pills can be taken the same day.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card green"><h4>Missed 1–2 Pills</h4><p>Take the most recent pill ASAP, continue the rest as usual.</p></div>
+    <div class="card amber"><h4>Missed ≥3 Pills (Weeks 1–2)</h4><p>Take most recent pill ASAP. Use backup method for next 7 days.</p></div>
+    <div class="card red"><h4>Missed ≥3 Pills (Week 3)</h4><p>Take most recent pill ASAP. Finish all pills. Start new pack <em>immediately</em> without 7-day break. Use backup for 7 days.</p></div>
+  </div>
+
+  <h4>Irregular Bleeding</h4>
+  <ul>
+    <li>Reassure: common in first few months, not harmful, usually resolves</li>
+    <li>Other causes: missed pills, inconsistent timing, vomiting/diarrhea, anticonvulsants/rifampicin</li>
+    <li><strong>Management:</strong> Take pill at same time daily; proper missed-pill correction; ibuprofen 800 mg TID × 5 days when bleeding starts</li>
+    <li>If persists &gt; few months and NSAIDs fail → consider different COC formulation</li>
+  </ul>
+
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+
+<!-- S8: Progestin-Only -->
+<div class="section" id="s8">
+  <h2><span class="num">8</span> Progestin-Only Methods</h2>
+
+  <h3>1. Progestin-Only Injectable (DMPA / NET-EN)</h3>
+  <div class="card-grid">
+    <div class="card blue"><h4>DMPA</h4><p>Given every 3 months (±2 weeks)</p></div>
+    <div class="card blue"><h4>NET-EN</h4><p>Given every 2 months (±2 weeks)</p></div>
+  </div>
+  <ul>
+    <li>Contains only progesterone — can be used throughout breastfeeding</li>
+    <li>Primary mechanism: prevents ovulation</li>
+    <li>Effectiveness: &lt;1 pregnancy/100 women/year with on-time injections</li>
+  </ul>
+
+  <h4>Side Effects (DMPA)</h4>
+  <div class="card-grid">
+    <div class="card amber"><h4>First 3 Months</h4>
+      <ul>
+        <li>Irregular bleeding</li>
+        <li>Prolonged bleeding</li>
+      </ul>
+    </div>
+    <div class="card amber"><h4>At One Year</h4>
+      <ul>
+        <li>No monthly bleeding</li>
+        <li>Infrequent/irregular bleeding</li>
+      </ul>
+    </div>
+  </div>
+  <ul>
+    <li>Other: Weight gain, headaches, dizziness, abdominal bloating, mood changes, reduced libido</li>
+    <li>Return of fertility is often delayed (several months longer on average)</li>
+    <li>Loss of bone density (possible)</li>
+  </ul>
+
+  <h4>Non-Contraceptive Advantages</h4>
+  <ul>
+    <li>Protects against: Endometrial cancer, uterine fibroids, symptomatic PID, iron-deficiency anemia</li>
+    <li>Reduces: Endometriosis symptoms</li>
+  </ul>
+
+  <h4>Contraindications</h4>
+  <p>As COCs, but with these specifics:</p>
+  <ul>
+    <li>Hypertension: If controlled → can use; if uncontrolled → should not use</li>
+    <li>Unexplained vaginal bleeding suggesting pregnancy or underlying condition</li>
+  </ul>
+
+  <h4>When to Start</h4>
+  <div class="card-grid">
+    <div class="card green"><h4>Non-Hormonal → Switching</h4><p>≤7 days of menses: no backup. &gt;7 days: pregnancy excluded, backup 7 days.</p></div>
+    <div class="card green"><h4>Hormonal → Switching</h4><p>Immediately if used consistently. No backup needed.</p></div>
+    <div class="card green"><h4>Fully Breastfeeding</h4><p>Start at 6 weeks postpartum.</p></div>
+    <div class="card green"><h4>Not Breastfeeding</h4><p>Start at 4 weeks postpartum.</p></div>
+    <div class="card green"><h4>After Miscarriage/Abortion</h4><p>Within 7 days.</p></div>
+  </div>
+
+  <h4>Special Situation — No Monthly Bleeding</h4>
+  <div class="info-box success">
+    <p>Reassure: Most women stop having monthly bleeding over time. This is not harmful (similar to pregnancy). She is not infertile. Blood is not building up inside. If bothers her → consider switching to monthly injectable.</p>
+  </div>
+
+  <h3>2. Implants</h3>
+  <ul>
+    <li>Small plastic rods placed in subcutaneous space of upper arm</li>
+    <li>Provide long-term protection for 3–5 years (depends on type)</li>
+    <li>Immediately reversible upon removal</li>
+    <li>Mechanism: Prevents ovulation + thickens cervical mucus</li>
+    <li>Effectiveness: Far less than 1 pregnancy/100 women/year</li>
+  </ul>
+
+  <h4>Side Effects</h4>
+  <ul>
+    <li>Similar to progestin-only injectable, but:</li>
+    <li><strong>No effect on bone density</strong></li>
+    <li><strong>No delay</strong> in regaining fertility after removal</li>
+    <li>More changes in bleeding patterns</li>
+    <li>Infection at insertion site</li>
+    <li>Difficult removal (rare if properly inserted by skilled provider)</li>
+  </ul>
+
+  <h3>3. Progestin-Only Pills (Minipills)</h3>
+  <ul>
+    <li>Very low dose progestin</li>
+    <li><strong>Primary mechanism:</strong> Thickening cervical mucus</li>
+    <li><strong>Secondary:</strong> Prevents ovulation in ~50% of women</li>
+  </ul>
+
+  <h4>Effectiveness</h4>
+  <div class="card-grid">
+    <div class="card green"><h4>Breastfeeding Women</h4><p>~1 pregnancy/100 women/year</p></div>
+    <div class="card amber"><h4>Non-Breastfeeding Women</h4><p>~7 pregnancies/100 women/year</p></div>
+  </div>
+
+  <h4>Side Effects</h4>
+  <ul>
+    <li>Changes in bleeding patterns (frequent, irregular, infrequent, prolonged, or absent)</li>
+    <li>Headaches, dizziness, mood changes, breast tenderness, abdominal pain, nausea</li>
+  </ul>
+
+  <h4>Contraindications</h4>
+  <ul>
+    <li>Liver cirrhosis or tumor</li>
+    <li>History of stroke, DVT, PE, MI</li>
+    <li>Personal history of breast cancer</li>
+    <li>Taking seizure medications or TB medications</li>
+  </ul>
+
+  <h4>When to Start (Fully Breastfeeding, &lt;6 months)</h4>
+  <div class="card-grid">
+    <div class="card green"><h4>No Monthly Bleeding</h4><p>Start any time between birth and 6 months (better at 6 weeks). No backup needed.</p></div>
+    <div class="card amber"><h4>Monthly Bleeding Returned</h4><p>≤5 days of menses → no backup. &gt;5 days → backup for first 2 days of pills.</p></div>
+  </div>
+
+  <p><strong>Critical:</strong> Take at same time daily! Being &gt;3 hours late reduces effectiveness.</p>
+
+  <h4>Missed Pills</h4>
+  <ul>
+    <li>If ≥3 hours late or missed completely: take missed pill ASAP</li>
+    <li>Breastfeeding with regular menses: backup method for 2 days</li>
+    <li>Non-breastfeeding: take missed pill ASAP + backup for 2 days</li>
+  </ul>
+
+  <h3>4. Progesterone-Releasing Vaginal Ring</h3>
+  <ul>
+    <li>Suitable for postpartum women who are actively breastfeeding (≥4 times/day)</li>
+    <li>Flexible ring inserted in vagina, left in place for 90 days</li>
+    <li>Up to 4 rings can be used consecutively (~1 year postpartum)</li>
+    <li>Start new ring immediately after removing previous one</li>
+  </ul>
+
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When should a fully breastfeeding woman start COCs?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Immediately after delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">4 weeks after giving birth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">6 months after giving birth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">At weaning</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">For fully breastfeeding women, COCs should be started 6 months after giving birth.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a contraindication to COCs?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Age under 30</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">History of migraine with aura or any migraine</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">History of DVT, stroke, MI, or serious heart problems</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Nulliparity</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Contraindications include: breastfeeding baby 20 years, history of DVT/stroke/MI, breast cancer, migraine, liver disease, etc.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">What should a woman do if she misses 3 or more pills in week 3 of her COC pack?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Take the missed pill and continue as usual</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Stop the pack and take a 7-day break</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Take the most recent pill, finish the pack, start new pack immediately without 7-day break, use backup for 7 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Take two pills daily for the rest of the pack</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">If ≥3 pills missed in Week 3: take most recent pill ASAP, finish all pills, start new pack immediately without 7-day break, use backup for 7 days.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">How often is DMPA progestin-only injectable given?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Monthly</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Every 2 months (±2 weeks)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Every 3 months (±2 weeks)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Every 6 months</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">DMPA is given every 3 months (±2 weeks). NET-EN is given every 2 months (±2 weeks).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">What is the primary mechanism of action of progestin-only pills (minipills)?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Suppression of ovulation in 100% of women</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Thickening cervical mucus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Inducing endometrial atrophy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Blocking sperm production</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The primary mechanism of minipills is thickening cervical mucus. Secondary: prevents ovulation in ~50% of women.</div>
+        </div>
+</div>
+
+<!-- S9: IUD -->
+<div class="section" id="s9">
+  <h2><span class="num">9</span> Intrauterine Devices (IUDs)</h2>
+
+  <h3>1. Copper-Bearing IUD (Cu-IUD)</h3>
+  <p>T-shaped device wrapped with copper wire. Works by inducing inflammatory reaction in endometrium, hostile to sperm motility — prevents fertilization and implantation.</p>
+
+  <table class="data-table">
+    <tr><th>Parameter</th><th>Details</th></tr>
+    <tr><td>Effectiveness</td><td>&lt;1 pregnancy/100 women/year over first year; ~2/100 over 10 years</td></tr>
+    <tr><td>Duration</td><td>TCu-380A effective for 10 years</td></tr>
+    <tr><td>Return of fertility</td><td>No delay after removal</td></tr>
+    <tr><td>Side Effects</td><td>Menorrhagia, irregular bleeding (first 3–6 months), dysmenorrhea</td></tr>
+  </table>
+
+  <h4>Complications</h4>
+  <ul>
+    <li>Menorrhagia may contribute to anemia if iron stores are low</li>
+    <li>Infections: PID, tubo-ovarian abscesses</li>
+    <li><strong>Rare:</strong> Perforation (usually heals without treatment)</li>
+    <li><strong>Rare:</strong> Miscarriage/preterm birth/infection if pregnancy occurs with IUD in place</li>
+    <li>Difficult removal</li>
+    <li>Unrecognized expulsion → unintended pregnancy</li>
+  </ul>
+
+  <h4>Contraindications</h4>
+  <ul>
+    <li>Between 48 hours and 4 weeks postpartum</li>
+    <li>Puerperal sepsis or septic abortion (re-evaluate after treatment)</li>
+    <li>Unexplained vaginal bleeding suggesting pregnancy or underlying condition</li>
+    <li>Current cervical, endometrial, or ovarian cancer</li>
+    <li>High risk for STIs (unless gonorrhea/chlamydia ruled out)</li>
+    <li>History of ectopic pregnancy (not advisable — if IUD fails, 6–8% of pregnancies are ectopic)</li>
+  </ul>
+
+  <h4>Special Situations</h4>
+  <div class="card-grid">
+    <div class="card amber"><h4>Heavy / Prolonged Bleeding</h4>
+      <p>Reassure: common, usually resolves after first few months.</p>
+      <p><strong>Management (try one at a time):</strong></p>
+      <ul>
+        <li>Tranexamic acid 1500 mg TID × 3 days, then 1000 mg daily × 2 days</li>
+        <li>NSAIDs (ibuprofen 400 mg or indomethacin 25 mg) BID × 5 days — <strong>avoid aspirin</strong></li>
+        <li>Iron supplements + iron-rich foods</li>
+        <li>If persists → consider removal</li>
+      </ul>
+    </div>
+    <div class="card amber"><h4>Cramping Pain</h4>
+      <p>Expected first 1–2 days after insertion. Also common in first 3–6 months during menstruation. Decreases over time.</p>
+      <p>Ibuprofen 200–400 mg or paracetamol 325–1000 mg.</p>
+      <p>If severe cramping beyond 2 days → evaluate for partial expulsion or perforation.</p>
+    </div>
+    <div class="card amber"><h4>Missing Strings</h4>
+      <p>Ask: Saw IUD come out? Last menstruation? Pregnancy symptoms? Backup method used?</p>
+      <p>Check cervical canal with forceps (~50% found here). If not found → refer for ultrasound (or X-ray if pregnancy excluded).</p>
+    </div>
+  </div>
+
+  <h3>2. Levonorgestrel IUD (LNG-IUD / Hormonal IUD)</h3>
+  <p>T-shaped plastic device that steadily releases levonorgestrel. Works by preventing fertilization — profound change in cervical mucin making it impenetrable by sperm. Local effect on endometrium diminishes menstrual bleeding.</p>
+
+  <table class="data-table">
+    <tr><th>Parameter</th><th>Details</th></tr>
+    <tr><td>Effectiveness</td><td>&lt;1 pregnancy/100 women/year</td></tr>
+    <tr><td>Duration</td><td>Mirena &amp; Kyleena — up to 5 years</td></tr>
+    <tr><td>Return of fertility</td><td>No delay after removal</td></tr>
+  </table>
+
+  <h4>Non-Contraceptive Advantages</h4>
+  <ul>
+    <li>Helps protect against: Iron-deficiency anemia</li>
+    <li>May help protect against: Endometrial cancer, cervical cancer</li>
+    <li>Reduces: Dysmenorrhea, heavy menstrual bleeding, endometriosis symptoms</li>
+  </ul>
+
+  <h4>Side Effects</h4>
+  <ul>
+    <li>Bleeding pattern changes (lighter, fewer days, infrequent, irregular, or absent; prolonged — least common)</li>
+    <li>Acne, headaches, breast tenderness, nausea, weight gain, dizziness, mood changes</li>
+  </ul>
+
+  <h4>Contraindications</h4>
+  <ul>
+    <li>Between 48 hours and 4 weeks since giving birth</li>
+    <li>History of DVT or pulmonary embolism</li>
+    <li>History of breast cancer</li>
+    <li>Liver cirrhosis or tumor</li>
+    <li>Current ovarian or endometrial cancer</li>
+    <li>High risk for STIs at insertion</li>
+  </ul>
+
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">How long is the TCu-380A copper IUD effective?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">5 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">10 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">15 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Lifelong</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The TCu-380A copper IUD is effective for 10 years.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which IUD type provides non-contraceptive advantages including reduction of heavy menstrual bleeding and dysmenorrhea?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Copper IUD (Cu-IUD)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Levonorgestrel IUD (LNG-IUD)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both equally</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Neither</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The LNG-IUD reduces dysmenorrhea, heavy menstrual bleeding, and endometriosis symptoms. The Cu-IUD may cause menorrhagia.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When is the postpartum period during which IUD insertion is contraindicated?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">First 48 hours postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Between 48 hours and 4 weeks postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">From 4-6 weeks postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">From 6-8 weeks postpartum</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">IUD insertion is contraindicated between 48 hours and 4 weeks postpartum.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+
+<!-- S10: Emergency Contraception -->
+<div class="section" id="s10">
+  <h2><span class="num">10</span> Emergency Contraception</h2>
+  <p>Methods used to prevent pregnancy <em>after</em> unprotected sex. Do not disrupt an existing pregnancy. The sooner taken, the better.</p>
+
+  <table class="data-table">
+    <tr><th>Method</th><th>Window</th><th>Dosing</th></tr>
+    <tr><td><strong>Progestin-Only Pills</strong> (preferred)</td><td>Up to 3 days (72 hrs)</td><td>Levonorgestrel 30 µg → 25 tab, repeat after 12 hrs<br>Levonorgestrel 750 µg (Postinor) → 1 tab, repeat after 12 hrs</td></tr>
+    <tr><td><strong>Combined Oral Pills</strong></td><td>Up to 5 days (120 hrs)</td><td>4 tabs, repeat after 12 hrs</td></tr>
+    <tr><td><strong>Copper IUD</strong></td><td>Up to 5 days (120 hrs)</td><td>Inserted by provider</td></tr>
+  </table>
+
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Up to how many days after unprotected intercourse can emergency contraception be used?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">24 hours for all methods</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Progestin-only pills up to 3 days (72 hrs); Combined pills and Cu-IUD up to 5 days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Up to 7 days for all methods</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Up to 14 days for Cu-IUD</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Progestin-only pills: up to 3 days (72 hrs). Combined oral pills and Copper IUD: up to 5 days (120 hrs).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which emergency contraception method has the longest window and is most effective?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Progestin-only pills</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Combined oral pills</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Copper IUD</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All have the same window</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The Copper IUD can be inserted up to 5 days (120 hrs) after unprotected sex and is the most effective emergency contraception.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</div>
+
+<!-- S11: Permanent -->
+<div class="section" id="s11">
+  <h2><span class="num">11</span> Permanent Methods</h2>
+  <p>Intended to provide lifelong, permanent, and very effective protection against pregnancy. Reversal is usually not possible.</p>
+
+  <div class="card-grid">
+    <div class="card blue"><h4>Female Sterilization</h4><p>Tubal ligation — the fallopian tubes are tied, blocked, or cut to prevent eggs from reaching the uterus.</p></div>
+    <div class="card blue"><h4>Male Sterilization</h4><p>Vasectomy — the vas deferens is cut or blocked to prevent sperm from entering the semen.</p></div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What is the male sterilization procedure?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Orchidectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Vasectomy — the vas deferens is cut or blocked</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Circumcision</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Prostatectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Vasectomy is the cutting or blocking of the vas deferens to prevent sperm from entering the semen.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which statement about permanent contraceptive methods is TRUE?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">They are easily reversible</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Reversal is usually not possible</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">They provide protection for 10 years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">They also protect against STIs</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Permanent methods are intended to provide lifelong, permanent protection. Reversal is usually not possible.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+
+<!-- S12: WHO MEC -->
+<div class="section" id="s12">
+  <h2><span class="num">12</span> WHO Medical Eligibility Criteria (MEC)</h2>
+  <p>WHO categories for initiating or continuing contraceptive use:</p>
+
+  <div class="mec-grid">
+    <div class="mec-item c1">
+      <span class="mec-num">1</span>
+      <span class="mec-desc">No restrictions for use</span>
+    </div>
+    <div class="mec-item c2">
+      <span class="mec-num">2</span>
+      <span class="mec-desc">Generally use; some follow-up may be needed</span>
+    </div>
+    <div class="mec-item c3">
+      <span class="mec-num">3</span>
+      <span class="mec-desc">Usually not recommended; requires clinical judgment &amp; access to services</span>
+    </div>
+    <div class="mec-item c4">
+      <span class="mec-num">4</span>
+      <span class="mec-desc">Method should not be used</span>
+    </div>
+  </div>
+
+  <p style="margin-top:12px;">The WHO Quick Reference Chart provides detailed condition-by-condition recommendations for initiating or continuing COCs, DMPA, implants, and Cu-IUD across a wide range of medical conditions (hypertension, DVT, diabetes, liver disease, HIV, STIs, etc.).</p>
+
+  <div class="info-box">
+    <p><strong>Important:</strong> A woman may fall into different categories depending on whether she is <strong>initiating</strong> or <strong>continuing</strong> a method. Each condition is assessed individually against the chosen method.</p>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+
+<!-- S13: Review -->
+<div class="section" id="s13">
+  <h2><span class="num">13</span> Review Question</h2>
+  <div class="info-box warning">
+    <p><strong>Question:</strong> Describe different types of contraceptive methods.</p>
+  </div>
+  <p>Key areas to cover: physiological (periodic abstinence, withdrawal, LAM) → barrier (condoms, diaphragm, spermicide) → hormonal (combined pills/injectable/patch/ring, progestin-only injectable/implants/pills/ring) → IUDs (copper, LNG) → emergency contraception (POPs, COCs, IUD) → permanent (tubal ligation, vasectomy). For each method, know: mechanism, effectiveness, side effects, advantages, contraindications, and special situations.</p>
+</div>
+
+
+
+        <div class="mcq-block" data-subtopic="s13">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What does WHO MEC Category 2 indicate?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">No restrictions for use</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s13-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Generally use; some follow-up may be needed</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Usually not recommended; requires clinical judgment</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Method should not be used</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">WHO MEC categories: 1 = No restrictions, 2 = Generally use (some follow-up), 3 = Usually not recommended (clinical judgment needed), 4 = Should not be used.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s13">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">What does WHO MEC Category 4 indicate?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">No restrictions for use</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Generally use; some follow-up may be needed</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Usually not recommended; requires clinical judgment</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s13-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Method should not be used</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Category 4 means the method should not be used due to unacceptable health risk.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s13">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s13-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s13">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s13-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s13">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s13-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s13-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</div><!-- /container -->
+
+<script>
+function toggleTOC(){document.getElementById('toc').classList.toggle('collapsed')}
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

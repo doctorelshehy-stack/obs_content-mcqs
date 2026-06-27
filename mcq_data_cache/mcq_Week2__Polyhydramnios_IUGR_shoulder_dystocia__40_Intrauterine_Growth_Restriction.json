@@ -1,0 +1,627 @@
+{
+  "s2": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "IUGR is defined as fetal AC or EFW less than which centile for gestational age?",
+      "options": [
+        "5th centile",
+        "10th centile",
+        "15th centile",
+        "3rd centile"
+      ],
+      "correct": 1,
+      "explain": "IUGR is defined as fetal abdominal circumference or estimated fetal weight less than the 10th centile for gestational age."
+    },
+    {
+      "q": "IUGR fetuses have what increase in perinatal morbidity and mortality?",
+      "options": [
+        "2- to 6-fold",
+        "1.5- to 3-fold",
+        "5- to 10-fold",
+        "10- to 15-fold"
+      ],
+      "correct": 0,
+      "explain": "Fetuses with IUGR have a 2- to 6-fold increase in perinatal morbidity and mortality."
+    },
+    {
+      "q": "What distinguishes IUGR from constitutionally small SGA?",
+      "options": [
+        "IUGR implies pathological growth with abnormal Doppler findings",
+        "IUGR only affects head circumference",
+        "SGA always has abnormal Doppler studies",
+        "The terms are interchangeable"
+      ],
+      "correct": 0,
+      "explain": "A constitutionally small fetus has normal growth velocity and Doppler studies; IUGR implies pathological restriction with abnormal Doppler findings."
+    }
+  ],
+  "s4": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Asymmetric IUGR is caused by which type of factors?",
+      "options": [
+        "Intrinsic factors like genetic abnormalities",
+        "Extrinsic factors like placental insufficiency",
+        "Maternal infections",
+        "Fetal aneuploidy"
+      ],
+      "correct": 1,
+      "explain": "Asymmetric IUGR is caused by extrinsic factors such as placental insufficiency. Oxygen is shunted to vital organs (brain-sparing)."
+    },
+    {
+      "q": "Which IUGR type shows 'brain-sparing' with a high HC-to-AC ratio?",
+      "options": [
+        "Symmetric IUGR",
+        "Asymmetric IUGR",
+        "Both equally",
+        "Neither"
+      ],
+      "correct": 1,
+      "explain": "Asymmetric IUGR shows brain-sparing — preferential shunting to brain and heart produces a high head-to-abdomen ratio."
+    },
+    {
+      "q": "Symmetric IUGR typically affects the fetus:",
+      "options": [
+        "Later in gestation",
+        "Early in gestation",
+        "Only in the third trimester",
+        "After 36 weeks"
+      ],
+      "correct": 1,
+      "explain": "Symmetric IUGR affects the fetus early in gestation; asymmetric IUGR tends to affect the fetus later."
+    },
+    {
+      "q": "Which is a cause of symmetric IUGR?",
+      "options": [
+        "Placental insufficiency",
+        "Genetic abnormalities or intrauterine infections",
+        "Maternal diabetes",
+        "Multiple gestation"
+      ],
+      "correct": 1,
+      "explain": "Symmetric IUGR is caused by intrinsic factors like genetic abnormalities and intrauterine infections (TORCH)."
+    }
+  ],
+  "s5": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which maternal medical condition is associated with IUGR?",
+      "options": [
+        "Gestational diabetes",
+        "Chronic hypertension",
+        "Mild iron deficiency",
+        "Hypothyroidism"
+      ],
+      "correct": 1,
+      "explain": "Maternal conditions include pre-existing DM, chronic/GH hypertension, pre-eclampsia, SLE, APS, sickle cell disease, and severe anemia."
+    },
+    {
+      "q": "Which teratogenic drug is associated with IUGR?",
+      "options": [
+        "Penicillin",
+        "Acetaminophen",
+        "ACE-inhibitors",
+        "Omeprazole"
+      ],
+      "correct": 2,
+      "explain": "ACE-inhibitors, warfarin, carbamazepine, phenytoin, cyclophosphamide, and valproic acid are associated with IUGR."
+    },
+    {
+      "q": "Which substance use is NOT listed as an IUGR maternal risk factor?",
+      "options": [
+        "Tobacco",
+        "Alcohol",
+        "Cocaine",
+        "Caffeine"
+      ],
+      "correct": 3,
+      "explain": "Tobacco, alcohol, cocaine, and narcotics are listed. Caffeine is not mentioned as an IUGR risk factor."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which is a placental risk factor for IUGR?",
+      "options": [
+        "Maternal diabetes",
+        "Placental insufficiency",
+        "Toxoplasmosis",
+        "Fetal aneuploidy"
+      ],
+      "correct": 1,
+      "explain": "Placental risk factors include placental insufficiency, placenta previa, placental abruption, and multiple gestation."
+    },
+    {
+      "q": "TORCH infections are a major cause of which type of IUGR?",
+      "options": [
+        "Asymmetric IUGR",
+        "Symmetric IUGR",
+        "Both equally",
+        "Neither"
+      ],
+      "correct": 1,
+      "explain": "TORCH infections (Toxoplasmosis, Other, Rubella, CMV, Herpes) are a major fetal cause of symmetric IUGR."
+    },
+    {
+      "q": "Which is a fetal risk factor for IUGR?",
+      "options": [
+        "Placenta previa",
+        "Maternal obesity",
+        "Cyanotic congenital heart disease",
+        "Multiple gestation"
+      ],
+      "correct": 2,
+      "explain": "Fetal risk factors include congenital infections (TORCH), genetic abnormalities (aneuploidy), and congenital anomalies like cyanotic CHD."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "What is the classic clinical sign of IUGR on abdominal examination?",
+      "options": [
+        "Fundal height > expected",
+        "SFH at least 3 cm less than gestational age in weeks",
+        "Polyhydramnios",
+        "Increased fetal movements"
+      ],
+      "correct": 1,
+      "explain": "SFH lag of >= 3 cm below gestational age in weeks is the classic clinical sign of IUGR."
+    },
+    {
+      "q": "Reduced fetal movements in a small-for-dates fetus should raise suspicion of:",
+      "options": [
+        "Normal variation",
+        "IUGR with fetal compromise",
+        "Multiple pregnancy",
+        "Polyhydramnios"
+      ],
+      "correct": 1,
+      "explain": "Reduced or absent fetal movements in a small-for-dates fetus is an obstetric emergency suggesting IUGR with fetal compromise."
+    },
+    {
+      "q": "What is the limitation of SFH measurement for IUGR diagnosis?",
+      "options": [
+        "It is too expensive",
+        "Poor sensitivity; serial US is more reliable",
+        "Can only be done after 36 weeks",
+        "Requires fasting"
+      ],
+      "correct": 1,
+      "explain": "SFH has poor sensitivity; serial ultrasound measurements are more reliable for diagnosing IUGR."
+    }
+  ],
+  "s9": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which is NOT part of the IUGR assessment triad?",
+      "options": [
+        "Umbilical artery Doppler",
+        "Amniotic fluid volume",
+        "Amniocentesis",
+        "Biophysical profile"
+      ],
+      "correct": 2,
+      "explain": "IUGR triad: U-A-B (Umbilical Doppler, Amniotic fluid/oligohydramnios, BPP <= 4 = deliver)."
+    },
+    {
+      "q": "A BPP score of what value indicates need for delivery in IUGR?",
+      "options": [
+        "<= 2",
+        "<= 4",
+        "<= 6",
+        "<= 8"
+      ],
+      "correct": 1,
+      "explain": "A BPP score of <= 4 indicates the need for delivery in IUGR."
+    },
+    {
+      "q": "Which Doppler finding is characteristic of IUGR?",
+      "options": [
+        "Increased diastolic flow",
+        "Reduced or reversed diastolic flow in umbilical artery",
+        "Normal flow velocity",
+        "Increased peak systolic velocity"
+      ],
+      "correct": 1,
+      "explain": "Umbilical artery Doppler in IUGR shows reduced or reversed diastolic flow."
+    }
+  ],
+  "s10": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "According to the Barker hypothesis, IUGR programs for which adult diseases?",
+      "options": [
+        "Alzheimer's and dementia",
+        "Diabetes, obesity, CAD, and hypertension",
+        "Asthma and COPD",
+        "Osteoporosis and arthritis"
+      ],
+      "correct": 1,
+      "explain": "The Barker/thrifty phenotype hypothesis: fetal undernutrition leads to permanent metabolic adaptations increasing adult chronic disease risk."
+    },
+    {
+      "q": "Which is a perinatal complication of IUGR?",
+      "options": [
+        "Macrosomia",
+        "Polyhydramnios",
+        "Necrotising enterocolitis",
+        "Post-term delivery"
+      ],
+      "correct": 2,
+      "explain": "NEC is a perinatal IUGR complication along with preterm labor, stillbirth, perinatal asphyxia, cognitive delay, and neurological disabilities."
+    },
+    {
+      "q": "All are IUGR complications EXCEPT:",
+      "options": [
+        "Stillbirth",
+        "Preterm labor",
+        "Fetal macrosomia",
+        "Perinatal asphyxia"
+      ],
+      "correct": 2,
+      "explain": "Macrosomia (large fetus) is opposite to IUGR. IUGR complications include preterm labor, stillbirth, asphyxia, and NEC."
+    }
+  ],
+  "s11": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "What is the recommended mode of delivery for IUGR?",
+      "options": [
+        "Vaginal with oxytocin",
+        "Cesarean section",
+        "Vacuum-assisted",
+        "Forceps delivery"
+      ],
+      "correct": 1,
+      "explain": "CS is the rule — the IUGR fetus does not tolerate the reduced oxygen supply and birth trauma of vaginal delivery."
+    },
+    {
+      "q": "Which is part of antenatal IUGR management?",
+      "options": [
+        "Immediate delivery",
+        "CS",
+        "Monitoring of fetal wellbeing",
+        "Postnatal dysmaturity care"
+      ],
+      "correct": 2,
+      "explain": "Antenatal management includes treating the cause, no smoking, monitoring fetal wellbeing, and good diet."
+    },
+    {
+      "q": "Postnatal IUGR management focuses on problems of:",
+      "options": [
+        "Macrosomia",
+        "Dysmaturity",
+        "Post-term complications",
+        "Gestational diabetes"
+      ],
+      "correct": 1,
+      "explain": "Postnatal management focuses on dysmaturity: hypoglycemia, hypothermia, polycythemia, feeding difficulties, and neurodevelopmental follow-up."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

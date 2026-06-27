@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>05 — Abortion | Obstetrics Reference</title>
+<style>
+/* ============================================================
+   05_Abortion — Premium Medical-Reference Redesign
+   Inspired by Amboss, Osmosis, Notion, UpToDate
+   All content preserved verbatim; visual presentation only
+   ============================================================ */
+
+:root{
+  /* Surface palette */
+  --bg:           #F7F9FC;   /* page background — soft, very light */
+  --surface:      #FFFFFF;   /* card surface */
+  --surface-alt:  #F8FAFC;   /* header / soft panels */
+  --surface-2:    #F1F5F9;   /* subtle nested panels */
+
+  /* Ink palette */
+  --ink:          #0F172A;   /* primary text */
+  --ink-soft:     #334155;   /* body text */
+  --ink-mute:     #64748B;   /* metadata / captions */
+  --ink-faint:    #94A3B8;   /* very subtle */
+
+  /* Rules & dividers */
+  --rule:         #E5E7EB;   /* hairline borders */
+  --rule-strong:  #CBD5E1;   /* stronger borders (table heads) */
+
+  /* Brand accent */
+  --accent:       #60A5FA;   /* left-border accent on section headers */
+  --accent-deep:  #3B82F6;   /* deeper accent for numbers / icons */
+  --accent-soft:  #EFF6FF;   /* icon-badge background */
+
+  /* Semantic callouts (kept from previous design) */
+  --pearl:        #0D9488;
+  --pearl-soft:   #ECFEFF;
+  --pearl-border: #99F6E4;
+
+  --note:         #7C3AED;
+  --note-soft:    #F5F3FF;
+  --note-border:  #DDD6FE;
+
+  --warn:         #B45309;
+  --warn-soft:    #FFFBEB;
+  --warn-border:  #FDE68A;
+
+  --danger:       #B91C1C;
+  --danger-soft:  #FEF2F2;
+  --danger-border:#FECACA;
+
+  /* Image system (preserved) */
+  --src-green:        #16A34A;
+  --src-green-soft:   #F0FDF4;
+  --src-green-border: #BBF7D0;
+  --src-red:          #DC2626;
+  --src-red-soft:     #FEF2F2;
+  --src-red-border:   #FECACA;
+
+  /* Soft shadows */
+  --shadow-xs:  0 1px 2px rgba(15,23,42,.04);
+  --shadow-sm:  0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.04);
+  --shadow-md:  0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.04);
+
+  --radius-sm:  8px;
+  --radius:     12px;
+  --radius-lg:  16px;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink-soft);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+              "Helvetica Neue",Arial,sans-serif;
+  font-size:15.5px;line-height:1.65;letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;}
+
+a{color:var(--accent-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Layout */
+.page{max-width:1240px;margin:0 auto;padding:40px 32px 96px}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  background:linear-gradient(135deg,#FFFFFF 0%,#F8FAFC 100%);
+  border:1px solid var(--rule);
+  border-radius:var(--radius-lg);
+  padding:40px 44px;
+  margin-bottom:32px;
+  box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:linear-gradient(180deg,#60A5FA 0%,#3B82F6 100%);
+}
+.hero .crumb{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-mute);font-weight:600;margin-bottom:14px;
+}
+.hero .crumb .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero h1{
+  font-size:44px;font-weight:800;color:var(--ink);
+  margin:0 0 10px;letter-spacing:-.025em;line-height:1.1;
+}
+.hero .lede{
+  font-size:17px;color:var(--ink-soft);font-weight:400;
+  max-width:820px;line-height:1.6;margin:0;
+}
+.hero .meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;
+}
+.hero .chip{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:999px;
+  padding:7px 14px;
+  font-size:13px;color:var(--ink-soft);font-weight:500;
+  text-decoration:none !important;
+  transition:all .15s ease;
+}
+.hero .chip:hover{border-color:var(--accent);color:var(--accent-deep);box-shadow:var(--shadow-xs)}
+.hero .chip.ico{font-size:14px}
+
+/* ============================================================
+   TABLE OF CONTENTS
+   ============================================================ */
+.toc{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:22px 28px 24px;
+  margin-bottom:28px;
+  box-shadow:var(--shadow-xs);
+}
+.toc-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  padding-bottom:14px;border-bottom:1px solid var(--rule);
+}
+.toc-head .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent-deep);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.toc-head h2{margin:0;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.005em}
+.toc-head .count{margin-left:auto;font-size:12.5px;color:var(--ink-mute);font-weight:500}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  columns:2;column-gap:36px;
+  font-size:14px;
+}
+.toc-list li{margin:6px 0;break-inside:avoid}
+.toc-list a{
+  display:flex;align-items:center;gap:10px;
+  color:var(--ink-soft);text-decoration:none;
+  padding:5px 0;border-bottom:1px dashed transparent;
+  transition:color .15s ease, border-color .15s ease;
+}
+.toc-list a:hover{color:var(--accent-deep);border-bottom-color:var(--accent)}
+.toc-list .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:6px;
+  background:var(--surface-2);color:var(--ink-mute);
+  font-size:11.5px;font-weight:700;flex-shrink:0;
+}
+
+/* ============================================================
+   SECTION CARD
+   ============================================================ */
+section{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:28px 32px 30px;
+  margin-bottom:22px;
+  box-shadow:var(--shadow-xs);
+  scroll-margin-top:20px;
+}
+section.refs{
+  background:var(--surface-alt);
+  border-style:solid;
+}
+
+/* SECTION HEADER — premium soft header w/ left blue accent */
+.sh{
+  display:flex;align-items:center;gap:14px;
+  background:var(--surface-alt);
+  border:1px solid var(--rule);
+  border-left:4px solid var(--accent);
+  border-radius:10px;
+  padding:14px 18px;
+  margin:0 0 22px;
+}
+.sh .badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:34px;height:34px;padding:0 10px;
+  border-radius:8px;
+  background:#FFFFFF;
+  border:1px solid var(--rule);
+  color:var(--accent-deep);
+  font-size:13.5px;font-weight:700;letter-spacing:.02em;
+  flex-shrink:0;
+  box-shadow:var(--shadow-xs);
+}
+.sh .ttl{
+  font-size:19px;font-weight:700;
+  color:#334155;             /* dark slate, per spec */
+  letter-spacing:-.012em;
+  line-height:1.25;
+  margin:0;
+}
+.sh .sub{
+  display:block;
+  font-size:13px;font-weight:500;
+  color:var(--ink-mute);
+  margin-top:2px;letter-spacing:0;
+  line-height:1.4;
+}
+
+/* H3 inside cards */
+section h3, .h3{
+  font-size:16px;font-weight:700;color:var(--ink);
+  margin:22px 0 10px;display:flex;align-items:center;gap:8px;
+  letter-spacing:-.005em;
+}
+section h3::before, .h3::before{
+  content:"";display:inline-block;width:3px;height:16px;
+  background:var(--accent);border-radius:2px;flex-shrink:0;
+}
+/* H4 */
+section h4, .h4{
+  font-size:12.5px;font-weight:700;color:var(--ink-mute);
+  margin:14px 0 6px;text-transform:uppercase;letter-spacing:.08em;
+}
+
+/* Paragraphs & lists */
+p{margin:8px 0;color:var(--ink-soft)}
+ul,ol{margin:6px 0 14px;padding-left:22px;color:var(--ink-soft)}
+ul li,ol li{margin:4px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--ink-mute);font-weight:600}
+
+.lede{font-size:16.5px;color:var(--ink);font-weight:500}
+
+/* Inline emphasis */
+strong,b{color:var(--ink);font-weight:700}
+em{color:var(--ink);font-style:italic}
+code{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:13px;background:var(--surface-2);padding:1px 6px;border-radius:4px;
+  color:var(--ink-soft)}
+
+/* ============================================================
+   DEFINITION BOX — soft, premium
+   ============================================================ */
+.defbox{
+  background:linear-gradient(135deg,#F0F7FF 0%,#F8FAFC 100%);
+  border:1px solid #DBEAFE;
+  border-left:4px solid var(--accent);
+  border-radius:10px;
+  padding:16px 20px;
+  margin:14px 0;
+}
+.defbox .lbl{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;letter-spacing:.16em;
+  color:var(--accent-deep);text-transform:uppercase;margin-bottom:6px;
+}
+.defbox .lbl::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+}
+.defbox .body{font-size:15.5px;color:var(--ink);font-weight:500;line-height:1.6}
+.defbox .incidence{font-size:14px;color:var(--ink-soft);margin-top:6px;font-weight:400}
+
+/* ============================================================
+   CALLOUTS — premium soft alerts
+   ============================================================ */
+.callout{
+  border-radius:10px;
+  padding:14px 18px;
+  margin:14px 0;
+  border:1px solid;
+  display:flex;gap:12px;align-items:flex-start;
+  background:#FFFFFF;
+}
+.callout .ico{
+  width:28px;height:28px;border-radius:8px;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0;line-height:1;
+}
+.callout .body{flex:1;font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+.callout .body b,.callout .body strong{color:var(--ink);font-weight:700}
+
+.callout.pearl{background:var(--pearl-soft);border-color:var(--pearl-border)}
+.callout.pearl .ico{background:rgba(13,148,136,.12);color:var(--pearl)}
+.callout.pearl .body b{color:var(--pearl)}
+
+.callout.note{background:var(--note-soft);border-color:var(--note-border)}
+.callout.note .ico{background:rgba(124,58,237,.12);color:var(--note)}
+.callout.note .body b{color:var(--note)}
+
+.callout.warn{background:var(--warn-soft);border-color:var(--warn-border)}
+.callout.warn .ico{background:rgba(180,83,9,.14);color:var(--warn)}
+.callout.warn .body b{color:var(--warn)}
+
+.callout.danger{background:var(--danger-soft);border-color:var(--danger-border)}
+.callout.danger .ico{background:rgba(185,28,28,.12);color:var(--danger)}
+.callout.danger .body b{color:var(--danger)}
+
+/* ============================================================
+   GRID UTILITIES
+   ============================================================ */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:14px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+
+.mini-card{
+  background:#FAFBFC;border:1px solid var(--rule);border-radius:10px;
+  padding:13px 15px;
+}
+.mini-card .lbl{
+  font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-mute);font-weight:700;margin-bottom:4px;
+}
+.mini-card .val{font-size:14.5px;color:var(--ink);font-weight:600;line-height:1.4}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  margin:14px 0;font-size:14px;
+  background:#FFFFFF;border:1px solid var(--rule);border-radius:10px;
+  overflow:hidden;
+}
+table th,table td{
+  padding:11px 14px;text-align:left;
+  border-bottom:1px solid var(--rule);vertical-align:top;
+}
+table th{
+  background:#F8FAFC;color:var(--ink);
+  font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+}
+table td{color:var(--ink-soft);font-size:14px}
+table tr:last-child td{border-bottom:none}
+table tr:nth-child(even) td{background:#FBFCFD}
+
+/* Comparison table (compact) */
+.compare-table th{background:#EFF6FF;color:#1E40AF}
+.compare-table .check{color:#16A34A;font-weight:700}
+.compare-table .xmark{color:#DC2626;font-weight:700}
+.compare-table .circle{color:#D97706;font-weight:700}
+
+/* ============================================================
+   BULLET GRID — two-column bullet list
+   ============================================================ */
+.bullet-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:8px 28px;margin:10px 0 14px;padding:0;list-style:none;
+}
+.bullet-grid li{
+  position:relative;padding-left:22px;
+  color:var(--ink-soft);font-size:14.5px;line-height:1.55;
+}
+.bullet-grid li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+}
+
+/* ============================================================
+   COMPARISON ROW — two side-by-side panels
+   ============================================================ */
+.comparison-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;
+}
+.comparison-row .col{
+  background:#FAFBFC;border:1px solid var(--rule);border-radius:10px;
+  padding:14px 16px;
+}
+.comparison-row .col .head{
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-deep);margin-bottom:8px;padding-bottom:6px;
+  border-bottom:1px solid var(--rule);
+}
+.comparison-row .col p{margin:6px 0 0;font-size:14px}
+
+/* ============================================================
+   IMAGE CARDS — Source / External
+   ============================================================ */
+.image-card{
+  border-radius:12px;overflow:hidden;margin:16px 0;
+  border:1px solid var(--rule);box-shadow:var(--shadow-xs);
+}
+.image-card.source{background:var(--src-green-soft);border-color:var(--src-green-border)}
+.image-card.external{background:var(--src-red-soft);border-color:var(--src-red-border)}
+.image-card .header{
+  padding:10px 18px;font-weight:700;font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.image-card.source .header{background:var(--src-green);color:#FFFFFF}
+.image-card.external .header{background:var(--src-red);color:#FFFFFF}
+.image-card .pic{
+  display:flex;justify-content:center;align-items:center;
+  background:#FFFFFF;padding:18px;
+}
+.image-card .pic img{max-width:100%;max-height:480px;object-fit:contain;display:block;border-radius:6px}
+.image-card .caption{
+  padding:12px 18px;font-size:14px;color:var(--ink);font-weight:600;
+  border-top:1px solid rgba(0,0,0,.06);background:rgba(255,255,255,.7);
+}
+.image-card .source-line{padding:8px 18px 14px;font-size:12.5px;color:var(--ink-mute);font-style:italic}
+
+/* ============================================================
+   REFERENCES
+   ============================================================ */
+.references{
+  background:var(--surface-alt);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:24px 28px;
+  margin-top:24px;
+  box-shadow:var(--shadow-xs);
+}
+.references h2{
+  font-size:17px;font-weight:700;margin:0 0 14px;color:var(--ink);
+  display:flex;align-items:center;gap:10px;
+}
+.references h2 .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent-deep);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.references ol{padding-left:22px;margin:0}
+.references li{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin:8px 0}
+.references a{color:var(--accent-deep);border-bottom:1px dotted var(--accent)}
+.references a:hover{border-bottom-style:solid;text-decoration:none}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{
+  margin-top:32px;padding:20px;text-align:center;
+  color:var(--ink-mute);font-size:12.5px;
+  border-top:1px solid var(--rule);
+}
+footer code{background:transparent;color:var(--ink-mute);padding:0}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:900px){
+  .grid-2,.grid-3,.grid-4,.bullet-grid,.comparison-row{grid-template-columns:1fr}
+  .toc-list{columns:1}
+  .hero h1{font-size:30px}
+  .hero{padding:24px 22px}
+  .page{padding:20px 14px 60px}
+  section{padding:20px 18px}
+  .sh{flex-wrap:wrap}
+  table{font-size:13px}
+}
+
+@media print{
+  body{background:#fff}
+  .page{padding:0 4px}
+  section,.toc,.references{break-inside:avoid;box-shadow:none}
+}
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="crumb"><span class="dot"></span>Obstetrics Reference · Topic 05</div>
+  <h1>Abortion</h1>
+  <p class="lede">A complete visual study guide on the definition, etiology, clinical types, diagnosis, and management of spontaneous, septic, therapeutic, criminal, and recurrent (habitual) abortion.</p>
+  <div class="meta">
+    <a class="chip" href="#"><span class="ico">📄</span>Source: <em>Book Obstetrics 2025-2026-005.pdf</em></a>
+    <a class="chip" href="https://youtu.be/YntEqJ-WD3o?si=lqHTjWJvwjFlwGoOb" target="_blank" rel="noopener"><span class="ico">🎥</span>Watch Lecture on YouTube</a>
+    <a class="chip" href="https://forms.gle/sn9d7eqytqp5qbsK8" target="_blank" rel="noopener"><span class="ico">📝</span>Self-test Quiz</a>
+  </div>
+</header>
+
+<!-- ===================== TABLE OF CONTENTS ===================== -->
+<nav class="toc">
+  <div class="toc-head">
+    <span class="ico">🗂</span>
+    <h2>Table of Contents</h2>
+    <span class="count">17 sections</span>
+  </div>
+  <ol class="toc-list">
+    <li><a href="#ilos"><span class="n">1</span>Intended Learning Outcomes (ILOs)</a></li>
+    <li><a href="#definition"><span class="n">2</span>Definition &amp; Etiology</a></li>
+    <li><a href="#threatened"><span class="n">3</span>Threatened Abortion</a></li>
+    <li><a href="#inevitable"><span class="n">4</span>Inevitable Abortion</a></li>
+    <li><a href="#complete"><span class="n">5</span>Complete Abortion</a></li>
+    <li><a href="#incomplete"><span class="n">6</span>Incomplete Abortion</a></li>
+    <li><a href="#cervical"><span class="n">7</span>Cervical Abortion</a></li>
+    <li><a href="#missed"><span class="n">8</span>Missed Abortion</a></li>
+    <li><a href="#visual"><span class="n">9</span>Visual Comparison (4 Types)</a></li>
+    <li><a href="#septic"><span class="n">10</span>Septic Abortion</a></li>
+    <li><a href="#other"><span class="n">11</span>Other Types of Abortion</a></li>
+    <li><a href="#recurrent"><span class="n">12</span>Recurrent (Habitual) Abortion</a></li>
+    <li><a href="#comparison"><span class="n">13</span>Quick-Reference Comparison Table</a></li>
+    <li><a href="#management"><span class="n">14</span>Management at a Glance</a></li>
+    <li><a href="#activity"><span class="n">15</span>Student Activity</a></li>
+    <li><a href="#questions"><span class="n">16</span>Questions</a></li>
+    <li><a href="#references"><span class="n">17</span>References &amp; Visual Sources</a></li>
+  </ol>
+</nav>
+
+<!-- ===================== ILOs ===================== -->
+<section id="ilos">
+  <div class="sh">
+    <span class="badge">01</span>
+    <div>
+      <h2 class="ttl">Intended Learning Outcomes (ILOs)</h2>
+      <span class="sub">What you should be able to do after studying this chapter</span>
+    </div>
+  </div>
+  <ul class="bullet-grid">
+    <li>To be able to differentiate different types of abortion</li>
+    <li>To be able to describe the clinical management of variable types of abortion</li>
+    <li>To be able to explain the etiology, investigations and management of recurrent abortion</li>
+  </ul>
+</section>
+
+<!-- ===================== DEFINITION & ETIOLOGY ===================== -->
+<section id="definition">
+  <div class="sh">
+    <span class="badge">02</span>
+    <div>
+      <h2 class="ttl">Definition &amp; Etiology</h2>
+      <span class="sub">Foundational concepts and the underlying causes of pregnancy loss before viability</span>
+    </div>
+  </div>
+
+  <div class="defbox">
+    <div class="lbl">Definition</div>
+    <div class="body">Termination of pregnancy before viability of the fetus, i.e. before 20 weeks.</div>
+    <div class="incidence"><strong>Incidence:</strong> Varies between 12–25%.</div>
+  </div>
+
+  <h3>Etiology</h3>
+  <p>The following are established causes of spontaneous abortion:</p>
+  <ul class="bullet-grid">
+    <li><strong>Chromosomal abnormalities</strong> — 50% of early abortions.</li>
+    <li><strong>Maternal infections</strong> — Acute fever.</li>
+    <li><strong>Trauma</strong> — External or during operations.</li>
+    <li><strong>Immunological causes</strong> — Systemic lupus erythematosus and antiphospholipid antibodies.</li>
+    <li><strong>Uterine defects</strong> — Septum, Asherman's syndrome.</li>
+    <li><strong>Idiopathic</strong> — No identifiable cause.</li>
+    <li><strong>Endocrine</strong> — Progesterone deficiency, hypothyroidism.</li>
+    <li><strong>Drugs and environmental causes.</strong></li>
+    <li><strong>Maternal anoxia and malnutrition.</strong></li>
+  </ul>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> Chromosomal abnormalities account for <b>~50% of early abortions</b>, making them the single most important etiology. Recurrent genetic testing of abortus tissue is therefore a key investigation in habitual abortion.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THREATENED ===================== -->
+<section id="threatened">
+  <div class="sh">
+    <span class="badge">03</span>
+    <div>
+      <h2 class="ttl">Threatened Abortion</h2>
+      <span class="sub">The earliest, most benign form — pregnancy is still viable and may continue</span>
+    </div>
+  </div>
+
+  <h3>Clinical Picture</h3>
+  <ul class="bullet-grid">
+    <li>Symptoms and signs of pregnancy coincide with its duration.</li>
+    <li>Vaginal bleeding: <b>slight or mild, bright red in colour</b>.</li>
+    <li>Pain: <b>absent or slight</b>.</li>
+    <li>Cervix: <b>closed</b>.</li>
+    <li>U/S: <b>living fetus</b>.</li>
+  </ul>
+
+  <h3>Management</h3>
+  <ul>
+    <li>Bed rest and avoid strenuous activity and sexual intercourse.</li>
+    <li>Progesterone.</li>
+    <li>Follow up.</li>
+  </ul>
+
+  <div class="callout note">
+    <div class="ico">📝</div>
+    <div class="body">
+      <b>Note:</b> The defining feature of threatened abortion is a <b>closed cervix with a living fetus on ultrasound</b>. The pregnancy is still viable and may continue normally.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INEVITABLE ===================== -->
+<section id="inevitable">
+  <div class="sh">
+    <span class="badge">04</span>
+    <div>
+      <h2 class="ttl">Inevitable Abortion</h2>
+      <span class="sub">Vaginal bleeding becomes heavy and the cervix dilates — the pregnancy cannot be saved</span>
+    </div>
+  </div>
+
+  <h3>Clinical Picture</h3>
+  <ul class="bullet-grid">
+    <li>Symptoms and signs of pregnancy.</li>
+    <li><b>Heavy vaginal bleeding with clots.</b></li>
+    <li>Suprapubic colic referred to the back.</li>
+    <li><b>Dilated cervix.</b></li>
+  </ul>
+
+  <h3>Management</h3>
+  <ul>
+    <li><strong>Medical:</strong> Oxytocin drip, prostaglandins.</li>
+    <li><strong>Surgical:</strong> Evacuation.</li>
+    <li>Blood transfusion if needed.</li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> The <b>combination of heavy bleeding + dilated cervix + colicky suprapubic pain referred to the back</b> indicates the abortion is now inevitable and active management is required to prevent further blood loss.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPLETE ===================== -->
+<section id="complete">
+  <div class="sh">
+    <span class="badge">05</span>
+    <div>
+      <h2 class="ttl">Complete Abortion</h2>
+      <span class="sub">All products of conception have been expelled and the uterus is empty</span>
+    </div>
+  </div>
+
+  <h3>Definition</h3>
+  <p>All products of conception have been expelled from the uterus.</p>
+
+  <h3>Clinical Picture</h3>
+  <ul class="bullet-grid">
+    <li>Bleeding: <b>mild and decreases</b>.</li>
+    <li>Cessation of pain.</li>
+    <li>Closed cervix.</li>
+    <li>Uterus: <b>slightly larger than normal</b>.</li>
+    <li>Ultrasound: shows <b>empty cavity</b>.</li>
+  </ul>
+
+  <h3>Management</h3>
+  <p>Ecbolics and antibiotics and no evacuation.</p>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> Unlike incomplete abortion, complete abortion requires <b>no evacuation</b> — only ecbolics (uterotonic agents) and antibiotics. Ultrasound confirmation of an empty cavity is the key diagnostic step.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INCOMPLETE ===================== -->
+<section id="incomplete">
+  <div class="sh">
+    <span class="badge">06</span>
+    <div>
+      <h2 class="ttl">Incomplete Abortion</h2>
+      <span class="sub">Part of the products of conception are retained, requiring evacuation</span>
+    </div>
+  </div>
+
+  <h3>Definition</h3>
+  <p>Retention of a part of the products of conception inside the uterus.</p>
+
+  <h3>Clinical Picture</h3>
+  <ul class="bullet-grid">
+    <li>Passage of a part of the conception products.</li>
+    <li>Bleeding is <b>continuous</b>.</li>
+    <li><b>Opened cervix.</b></li>
+    <li>Uterus: <b>less than period of amenorrhea</b>.</li>
+    <li>Ultrasonography: shows the retained contents.</li>
+  </ul>
+
+  <h3>Management</h3>
+  <p>Evacuation (medical or surgical).</p>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> The uterus is <b>smaller than the period of amenorrhea would suggest</b> because some products have already been passed. Continuous bleeding through an opened cervix mandates evacuation to prevent haemorrhage and sepsis.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERVICAL ===================== -->
+<section id="cervical">
+  <div class="sh">
+    <span class="badge">07</span>
+    <div>
+      <h2 class="ttl">Cervical Abortion</h2>
+      <span class="sub">The products of conception are separated from the uterus but trapped in the cervical canal</span>
+    </div>
+  </div>
+
+  <h3>Definition</h3>
+  <p>The products of conception is separated from the uterus but retained inside the cervical canal.</p>
+
+  <h3>Clinical Picture</h3>
+  <ul>
+    <li>Bleeding with <b>severe lower abdominal pain referred to the back</b>.</li>
+    <li>On examination, the products of conception are felt through the dilated cervix.</li>
+  </ul>
+
+  <h3>Management</h3>
+  <p>Cervical dilatation and evacuation of cervical contents followed by curettage.</p>
+
+  <div class="callout note">
+    <div class="ico">📝</div>
+    <div class="body">
+      <b>Note:</b> Cervical abortion is a clinical situation where the products of conception have separated from the uterine wall but become <b>impacted in the cervical canal</b>. Manual removal via cervical dilatation is required.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MISSED ===================== -->
+<section id="missed">
+  <div class="sh">
+    <span class="badge">08</span>
+    <div>
+      <h2 class="ttl">Missed Abortion</h2>
+      <span class="sub">The fetus has died in utero but is retained — symptoms of pregnancy regress</span>
+    </div>
+  </div>
+
+  <h3>Definition</h3>
+  <p>Retention of dead products of conception.</p>
+
+  <h3>Symptoms</h3>
+  <ul class="bullet-grid">
+    <li>Regression of pregnancy symptoms as nausea, vomiting and breast symptoms.</li>
+    <li>The abdomen does not increase.</li>
+    <li>The fetal movements are not felt.</li>
+    <li>A dark brown vaginal discharge may occur (<b>prune juice discharge</b>).</li>
+  </ul>
+
+  <h3>Signs</h3>
+  <ul class="bullet-grid">
+    <li>The uterus <b>fails to grow and becomes firmer</b>.</li>
+    <li>The cervix is <b>closed</b>.</li>
+    <li><b>Absent fetal heart sounds.</b></li>
+  </ul>
+
+  <h3>Investigations</h3>
+  <ul>
+    <li>Pregnancy test becomes <b>negative within two weeks</b> from the ovum death.</li>
+    <li>Ultrasound shows a <b>collapsed gestational sac, absent fetal heart pulsations or fetal movement</b>.</li>
+  </ul>
+
+  <h3>Treatment</h3>
+  <p>Evacuation.</p>
+  <ul>
+    <li><strong>&lt;12 weeks:</strong> Surgical evacuation is done.</li>
+    <li><strong>&gt;12 weeks:</strong> Medical evacuation (e.g. by Prostaglandins or Oxytocin).</li>
+  </ul>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> The <b>prune juice discharge</b> is a classic clinical sign of missed abortion — old, dark-brown altered blood from a long-retained dead pregnancy. The uterus <b>shrinks and firms up</b> rather than growing.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISUAL COMPARISON ===================== -->
+<section id="visual">
+  <div class="sh">
+    <span class="badge">09</span>
+    <div>
+      <h2 class="ttl">Visual Comparison: Four Classical Types of Spontaneous Abortion</h2>
+      <span class="sub">Side-by-side comparison of the most clinically important types</span>
+    </div>
+  </div>
+
+  <div class="image-card source">
+    <div class="header">🟢 SOURCE IMAGE</div>
+    <div class="pic">
+      <img src="../../../../extracted_images/05_abortion/types_of_abortion_diagram.jpg"
+           alt="Four side-by-side cross-sectional illustrations showing Threatened, Inevitable, Incomplete, and Missed Abortion in sagittal view of the female uterus."
+           loading="lazy">
+    </div>
+    <div class="caption">Threatened, Inevitable, Incomplete, and Missed Abortion — comparative cross-sectional uterine illustrations</div>
+    <div class="source-line">Source: <strong>Provided Material</strong> — Book Obstetrics 2025-2026-005.pdf (page 21–23 region, Figure: Types of Abortion).</div>
+  </div>
+
+  <p>The diagram above contrasts the four classical types of spontaneous abortion. Note how the cervical status (open vs. closed), the position of the products of conception, and the presence of bleeding differ between them.</p>
+</section>
+
+<!-- ===================== SEPTIC ===================== -->
+<section id="septic">
+  <div class="sh">
+    <span class="badge">10</span>
+    <div>
+      <h2 class="ttl">Septic Abortion</h2>
+      <span class="sub">Any type of abortion complicated by infection — a potentially life-threatening emergency</span>
+    </div>
+  </div>
+
+  <h3>Definition</h3>
+  <p>It is any type of abortion complicated by infection.</p>
+
+  <h3>Microbiology</h3>
+  <p>The most causative organisms are:</p>
+  <ul class="bullet-grid">
+    <li><strong>E. coli</strong></li>
+    <li><strong>Bacteroids</strong></li>
+    <li><strong>Anaerobic streptococci</strong></li>
+    <li><strong>Clostridia</strong></li>
+    <li><strong>Streptococci</strong></li>
+    <li><strong>Staphylococci</strong></li>
+  </ul>
+
+  <h3>Clinical Picture</h3>
+
+  <h4>General Examination</h4>
+  <ul class="bullet-grid">
+    <li>Pyrexia, rigors and tachycardia.</li>
+    <li>Malaise, sweating, headache, and joint pain.</li>
+    <li>Jaundice.</li>
+  </ul>
+
+  <h4>Abdominal Examination</h4>
+  <ul class="bullet-grid">
+    <li>Tenderness, rigidity and distension.</li>
+  </ul>
+
+  <h4>Local Examination</h4>
+  <ul class="bullet-grid">
+    <li>Offensive vaginal discharge.</li>
+    <li>Tender uterus.</li>
+  </ul>
+
+  <h3>Treatment</h3>
+  <ul class="bullet-grid">
+    <li><strong>Resuscitation</strong></li>
+    <li>Prompt administration of <strong>intravenous broad-spectrum antibiotics</strong> followed by uterine evacuation.</li>
+    <li>Rest in <strong>semi-sitting position</strong>.</li>
+    <li>Observation for vital signs.</li>
+    <li><strong>Oxytocin infusion:</strong> to control bleeding and enhances expulsion.</li>
+    <li>Evacuation of the uterus after commencing IV therapy.</li>
+    <li><strong>Hysterectomy may be the last choice to safe life.</strong></li>
+  </ul>
+
+  <div class="callout danger">
+    <div class="ico">🆘</div>
+    <div class="body">
+      <b>Danger — Emergency:</b> Septic abortion is a <b>life-threatening</b> condition. Resuscitation must begin immediately, broad-spectrum IV antibiotics must be started <b>before</b> any evacuation, and hysterectomy may be required as a <b>last resort to save the patient's life</b>.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OTHER TYPES ===================== -->
+<section id="other">
+  <div class="sh">
+    <span class="badge">11</span>
+    <div>
+      <h2 class="ttl">Other Types of Abortion</h2>
+      <span class="sub">Induced abortions distinguished by their indication and legal status</span>
+    </div>
+  </div>
+
+  <div class="comparison-row">
+    <div class="col">
+      <div class="head">Therapeutic Abortion</div>
+      <p>Abortion induced for a medical indication.</p>
+    </div>
+    <div class="col">
+      <div class="head">Criminal Abortion</div>
+      <p>Illegal abortion induced for a non-medical indication.</p>
+    </div>
+  </div>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> <b>Criminal abortion</b> is illegal and is a major risk factor for <b>septic abortion</b> because it is typically performed in non-sterile conditions. A septic abortion workup should always consider this possibility.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RECURRENT ===================== -->
+<section id="recurrent">
+  <div class="sh">
+    <span class="badge">12</span>
+    <div>
+      <h2 class="ttl">Recurrent (Habitual) Abortion</h2>
+      <span class="sub">Three or more consecutive spontaneous abortions — requires structured workup</span>
+    </div>
+  </div>
+
+  <h3>Definition</h3>
+  <p>Three (two by some authors) or more consecutive spontaneous abortions.</p>
+
+  <h3>Causes</h3>
+  <p>(Persistent causes of abortion)</p>
+  <ul class="bullet-grid">
+    <li><strong>Genetic factors:</strong> Paternal chromosomal rearrangements, embryonic chromosomal abnormalities.</li>
+    <li><strong>Anatomical factors:</strong> Septate uterus / cervical incompetence.</li>
+    <li><strong>Antiphospholipid syndrome.</strong></li>
+    <li><strong>Endocrinological abnormalities:</strong> DM, thyroid abnormalities.</li>
+    <li><strong>Thrombophilias.</strong></li>
+    <li><strong>Infective agents:</strong> STORCH.</li>
+  </ul>
+
+  <h3>Investigations</h3>
+  <ol>
+    <li><strong>Laboratory:</strong>
+      <ul>
+        <li><strong>Urine analysis:</strong> for pus cell (UTI), proteins (nephritis) &amp; glucose (DM).</li>
+        <li><strong>Blood:</strong> serum creatinine, antiphospholipid antibodies and coagulation profile.</li>
+      </ul>
+    </li>
+    <li><strong>U/S:</strong> To exclude submucous fibroid, incompetent cervix.</li>
+    <li><strong>HSG (Hysterosalpingography):</strong> To exclude submucous fibroid, incompetent cervix, intrauterine adhesions.</li>
+    <li><strong>Hysteroscopy:</strong> To exclude submucous fibroid, intrauterine adhesions, congenital anomalies of uterine cavity.</li>
+    <li><strong>Genetic study:</strong> of the abortus to exclude chromosomal aberrations.</li>
+  </ol>
+
+  <h3>Treatment</h3>
+
+  <h4>a- Before Pregnancy: Treat Detectable Causes</h4>
+  <ul>
+    <li>Hysteroscopic resection of uterine septum or submucous fibroid.</li>
+    <li>Treatment of luteal phase defect.</li>
+    <li>Strict control of DM.</li>
+  </ul>
+
+  <h4>b- During Pregnancy</h4>
+  <ul>
+    <li><strong>Rest:</strong> Physical, mental (sedation) and sexual abstinence.</li>
+    <li><strong>Diet:</strong> Good balanced diet.</li>
+    <li><strong>Natural progesterone:</strong> if proved progesterone deficiency.</li>
+    <li><strong>Others:</strong> Strict DM control, cerclage for incompetent cervix, heparin for the antiphospholipid syndrome.</li>
+  </ul>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl — STORCH Mnemonic:</b> The classic congenital-infective causes of recurrent pregnancy loss are remembered as <b>S</b>yphilis · <b>T</b>oxoplasmosis · <b>O</b>ther (varicella, parvovirus B19) · <b>R</b>ubella · <b>C</b>ytomegalovirus · <b>H</b>erpes / <b>H</b>IV. Always screen for these in recurrent abortion workup.
+    </div>
+  </div>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl — Cerclage for Cervical Incompetence:</b> <b>McDonald cerclage</b> (a purse-string suture around the cervix) placed at 12–14 weeks is the standard surgical treatment for cervical incompetence in subsequent pregnancies.
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARISON TABLE ===================== -->
+<section id="comparison">
+  <div class="sh">
+    <span class="badge">13</span>
+    <div>
+      <h2 class="ttl">Quick-Reference Comparison Table</h2>
+      <span class="sub">All spontaneous abortion types side-by-side</span>
+    </div>
+  </div>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Bleeding</th>
+        <th>Pain</th>
+        <th>Cervix</th>
+        <th>Products of Conception</th>
+        <th>Uterus Size</th>
+        <th>U/S Finding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Threatened</b></td>
+        <td>Slight, bright red</td>
+        <td>Absent or slight</td>
+        <td>Closed</td>
+        <td>Retained, viable</td>
+        <td>Appropriate for dates</td>
+        <td>Living fetus</td>
+      </tr>
+      <tr>
+        <td><b>Inevitable</b></td>
+        <td>Heavy with clots</td>
+        <td>Suprapubic colic → back</td>
+        <td>Dilated</td>
+        <td>Not yet expelled</td>
+        <td>Appropriate for dates</td>
+        <td>Fetus may be present</td>
+      </tr>
+      <tr>
+        <td><b>Complete</b></td>
+        <td>Mild, decreasing</td>
+        <td>Cessation of pain</td>
+        <td>Closed</td>
+        <td>All expelled</td>
+        <td>Slightly larger than normal</td>
+        <td>Empty cavity</td>
+      </tr>
+      <tr>
+        <td><b>Incomplete</b></td>
+        <td>Continuous</td>
+        <td>Present</td>
+        <td>Opened</td>
+        <td>Part retained</td>
+        <td>Less than amenorrhea</td>
+        <td>Retained contents</td>
+      </tr>
+      <tr>
+        <td><b>Cervical</b></td>
+        <td>Present</td>
+        <td>Severe, lower abdomen → back</td>
+        <td>Dilated, products felt</td>
+        <td>Retained in cervical canal</td>
+        <td>—</td>
+        <td>Products in canal</td>
+      </tr>
+      <tr>
+        <td><b>Missed</b></td>
+        <td>Dark brown (prune juice) discharge</td>
+        <td>None</td>
+        <td>Closed</td>
+        <td>Dead, retained</td>
+        <td>Fails to grow, firmer</td>
+        <td>Collapsed sac, no FHS</td>
+      </tr>
+      <tr>
+        <td><b>Septic</b></td>
+        <td>Offensive discharge</td>
+        <td>Tenderness, rigidity</td>
+        <td>Variable</td>
+        <td>Variable</td>
+        <td>Tender</td>
+        <td>Variable</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== MANAGEMENT ALGORITHM TABLE ===================== -->
+<section id="management">
+  <div class="sh">
+    <span class="badge">14</span>
+    <div>
+      <h2 class="ttl">Management at a Glance</h2>
+      <span class="sub">Concise summary of how each type is managed</span>
+    </div>
+  </div>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>First-Line Management</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><b>Threatened</b></td><td>Bed rest + avoid strenuous activity and sexual intercourse; progesterone; follow up.</td></tr>
+      <tr><td><b>Inevitable</b></td><td>Medical (oxytocin drip, prostaglandins) or surgical evacuation; blood transfusion if needed.</td></tr>
+      <tr><td><b>Complete</b></td><td>Ecbolics + antibiotics; <b>no evacuation</b>.</td></tr>
+      <tr><td><b>Incomplete</b></td><td>Evacuation (medical or surgical).</td></tr>
+      <tr><td><b>Cervical</b></td><td>Cervical dilatation + evacuation of cervical contents followed by curettage.</td></tr>
+      <tr><td><b>Missed (&lt;12 wk)</b></td><td>Surgical evacuation.</td></tr>
+      <tr><td><b>Missed (&gt;12 wk)</b></td><td>Medical evacuation (e.g. by Prostaglandins or Oxytocin).</td></tr>
+      <tr><td><b>Septic</b></td><td>Resuscitation → IV broad-spectrum antibiotics → evacuation; semi-sitting position; oxytocin infusion; hysterectomy as last resort to save life.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===================== STUDENT ACTIVITY ===================== -->
+<details class="study-section"><summary>Student Activity</summary><section id="activity">
+  <div class="sh">
+    <span class="badge">15</span>
+    <div>
+      <h2 class="ttl">Student Activity</h2>
+      <span class="sub">Bedside teaching — clinical case discussion</span>
+    </div>
+  </div>
+  <p>Each student is requested to diagnose the type of abortion and its management by prepared histories of first trimester abortion by the tutor guide during bedside teaching part of the clinical round.</p>
+
+  <div class="callout note">
+    <div class="ico">📝</div>
+    <div class="body">
+      <b>Note:</b> This activity is <b>bedside teaching</b> — bring the Quick-Reference Comparison Table (Section 13) with you to the clinical round. Use the prepared histories to walk through: <b>type of abortion → key clinical features → appropriate management</b>.
+    </div>
+  </div>
+</section></details>
+
+<!-- ===================== QUESTIONS ===================== -->
+<details class="study-section"><summary>Questions</summary><section id="questions">
+  <div class="sh">
+    <span class="badge">16</span>
+    <div>
+      <h2 class="ttl">Questions</h2>
+      <span class="sub">Self-test your knowledge of this chapter</span>
+    </div>
+  </div>
+  <p>Test yourself on the chapter content using the tutor's question bank:</p>
+  <p style="margin-top:14px">
+    <a href="https://forms.gle/sn9d7eqytqp5qbsK8" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-deep);color:#fff;padding:11px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;letter-spacing:.005em;box-shadow:var(--shadow-sm)">
+      <span>📝</span> Open the Google Forms Quiz →
+    </a>
+  </p>
+</section></details>
+
+<!-- ===================== REFERENCES ===================== -->
+<details class="study-section"><summary>References & Visual Sources</summary><section id="references" class="references">
+  <h2><span class="ico">📚</span>References &amp; Visual Sources</h2>
+  <ol>
+    <li><strong>Source PDF:</strong> <em>Book Obstetrics 2025-2026-005.pdf</em> — Chapter: Abortion. Pages 21–26. Provided course material.</li>
+    <li><strong>Source Image (retained):</strong> "Threatened, Inevitable, Incomplete, and Missed Abortion — comparative cross-sectional uterine illustrations." Extracted from the source PDF via <code>pdfimages -j</code> → <code>img-000.jpg</code>. Renamed to <code>extracted_images/05_abortion/types_of_abortion_diagram.jpg</code>. No watermark, on-topic, used as a SOURCE IMAGE (green-bordered card).</li>
+    <li><strong>Source Video (referenced by URL inside the source PDF, not embedded):</strong> YouTube lecture on Abortion — <a href="https://youtu.be/YntEqJ-WD3o?si=lqHTjWJvwjFlwGoOb" target="_blank" rel="noopener">https://youtu.be/YntEqJ-WD3o?si=lqHTjWJvwjFlwGoOb</a></li>
+    <li><strong>Source Self-Assessment (referenced by URL inside the source PDF, not embedded):</strong> Google Forms quiz — <a href="https://forms.gle/sn9d7eqytqp5qbsK8" target="_blank" rel="noopener">https://forms.gle/sn9d7eqytqp5qbsK8</a></li>
+    <li><strong>No external images were used</strong> in this infographic. All visuals originate from the provided material.</li>
+  </ol>
+</section></details>
+
+<footer>
+  Generated as part of the Sequential Infographic Generation System (Topic 05: Abortion) — Premium Reference Redesign.<br>
+  Source: <em>Book Obstetrics 2025-2026-005.pdf</em> · Outputs: <code>html/05_Abortion.html</code> · <code>images/05_Abortion.png</code> · <code>quality_reports/05_Abortion_quality_report.md</code>
+</footer>
+
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

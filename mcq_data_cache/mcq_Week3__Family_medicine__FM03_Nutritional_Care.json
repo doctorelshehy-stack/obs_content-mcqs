@@ -1,0 +1,515 @@
+{
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Maternal underweight before pregnancy (BMI <19.8 kg/m²) increases the risk of:",
+      "options": [
+        "Macrosomia",
+        "Low infant birth weight",
+        "Post-term delivery",
+        "Gestational diabetes"
+      ],
+      "correct": 1,
+      "explain": "Maternal underweight before pregnancy and low pregnancy weight gain increase risk of low infant birth weight."
+    },
+    {
+      "q": "Which of the following is a pre-pregnancy preparation recommendation?",
+      "options": [
+        "Start iron supplementation immediately",
+        "Achieve and maintain healthy body weight",
+        "Schedule weekly prenatal visits",
+        "Take high-dose vitamin A"
+      ],
+      "correct": 1,
+      "explain": "Pre-pregnancy preparation includes: achieving/maintaining healthy weight, balanced diet, physical activity, regular medical care, and managing chronic conditions."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is NOT a component of nutritional care during pregnancy?",
+      "options": [
+        "Nutritional assessment",
+        "Nutrition education",
+        "Exercise prescription",
+        "Correction of deficiencies (anemia, folate deficiency)"
+      ],
+      "correct": 2,
+      "explain": "The four components are: (1) Nutritional Assessment, (2) Nutrition Education, (3) Nutrition Supplementation (iron, folate, calcium), (4) Correction of Deficiencies."
+    },
+    {
+      "q": "Which supplementation is included as part of routine nutritional care during pregnancy?",
+      "options": [
+        "Vitamin D",
+        "Iron, folate, calcium",
+        "Vitamin C",
+        "Magnesium"
+      ],
+      "correct": 1,
+      "explain": "Nutrition supplementation includes iron, folate, and calcium as key components."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "What method is used for dietary history assessment in pregnancy?",
+      "options": [
+        "Food frequency questionnaire",
+        "24-hour recall method",
+        "3-day food diary",
+        "Direct observation"
+      ],
+      "correct": 1,
+      "explain": "The 24-hour recall method is used for semi-quantitative/qualitative analysis to identify expected major deficiencies."
+    },
+    {
+      "q": "According to Egyptian guidelines, anemia in pregnancy is defined as hemoglobin less than:",
+      "options": [
+        "12 g/dL",
+        "11 g/dL",
+        "10 g/dL",
+        "9 g/dL"
+      ],
+      "correct": 1,
+      "explain": "By Egyptian guidelines, anemia in pregnancy is defined as Hb <11 g/dL in the first trimester."
+    },
+    {
+      "q": "When should Vitamin D levels be measured in pregnancy?",
+      "options": [
+        "Routinely in all pregnant women",
+        "Only in women with obesity, minimal sun exposure, malabsorption, or dark skin",
+        "Only in the third trimester",
+        "Routinely at every prenatal visit"
+      ],
+      "correct": 1,
+      "explain": "Routine broad-based screening for vitamin D is not necessary. Measure in: obesity, minimal sun exposure, malabsorption (celiac, IBD), vegan diet, dark skin."
+    }
+  ],
+  "s6": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "For a normal weight woman (BMI 18.5-24.9), what is the mean recommended rate of gestational weight gain per week?",
+      "options": [
+        "0.51 kg/wk",
+        "0.42 kg/wk",
+        "0.28 kg/wk",
+        "0.22 kg/wk"
+      ],
+      "correct": 1,
+      "explain": "The mean rate for normal weight women (BMI 18.5-24.9) is 0.42 kg/week."
+    },
+    {
+      "q": "Moderate anemia in pregnancy is defined as hemoglobin between:",
+      "options": [
+        "10-10.9 g/dL",
+        "7-9.9 g/dL",
+        "<7 g/dL",
+        "11-12 g/dL"
+      ],
+      "correct": 1,
+      "explain": "Moderate anemia: Hb 7-9.9 g/dL. Mild: 10-10.9 g/dL. Severe: <7 g/dL."
+    }
+  ],
+  "s7": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key component of healthy eating during pregnancy?",
+      "options": [
+        "Unlimited caffeine intake",
+        "Limit added sugars, saturated fat, and sodium",
+        "High-dose vitamin A supplementation",
+        "Complete avoidance of all fats"
+      ],
+      "correct": 1,
+      "explain": "Key components include limiting added sugars, saturated fat, and sodium, appropriate supplementation, appropriate weight gain, avoiding alcohol, limiting caffeine to <200-300 mg/day, and safe food handling."
+    },
+    {
+      "q": "What is the recommended caffeine limit during pregnancy?",
+      "options": [
+        "<100 mg/day",
+        "<200-300 mg/day",
+        "<400-500 mg/day",
+        "Complete avoidance"
+      ],
+      "correct": 1,
+      "explain": "Caffeine should be limited to <200-300 mg/day during pregnancy."
+    }
+  ],
+  "s8": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "How many servings of vegetables per day are recommended in the Food Guide Pyramid during pregnancy?",
+      "options": [
+        "1-2 servings",
+        "3-5 servings",
+        "5-7 servings",
+        "7-9 servings"
+      ],
+      "correct": 1,
+      "explain": "The Food Guide Pyramid recommends 3-5 servings of vegetables and 3-4 servings of fruit per day."
+    },
+    {
+      "q": "How many servings per day from the milk group are recommended during pregnancy?",
+      "options": [
+        "2 servings",
+        "3 servings",
+        "4 servings",
+        "5 servings"
+      ],
+      "correct": 2,
+      "explain": "The milk group (milk, yogurt, cheese) recommends 4 servings per day during pregnancy."
+    }
+  ],
+  "s9": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "What is the routine iron supplementation recommendation for pregnant women after 3 months?",
+      "options": [
+        "110 mg ferrous fumarate once daily",
+        "220 mg ferrous fumarate/sulphate + folic acid once daily",
+        "330 mg ferrous sulphate three times daily",
+        "100 mg elemental iron weekly"
+      ],
+      "correct": 1,
+      "explain": "All pregnant mothers (after 3 months) should receive 220 mg ferrous fumarate/sulphate + folic acid once daily."
+    },
+    {
+      "q": "What is the folic acid dose for women at high risk of NTD (previous NTD or NTD in either parent)?",
+      "options": [
+        "0.4 mg once daily",
+        "2 mg once daily",
+        "4 mg once daily prior to conception through first 12 weeks",
+        "400 mg once daily"
+      ],
+      "correct": 2,
+      "explain": "High-risk women (previous NTD) should receive 4 mg folic acid once daily from at least 1 month prior to conception through first 12 weeks."
+    },
+    {
+      "q": "Why should vitamin A supplementation be avoided during pregnancy?",
+      "options": [
+        "It causes maternal hypertension",
+        "It may be teratogenic in doses above 700 micrograms",
+        "It interferes with iron absorption",
+        "It increases the risk of gestational diabetes"
+      ],
+      "correct": 1,
+      "explain": "Vitamin A intake above 700 micrograms might be teratogenic and should be avoided during pregnancy."
+    }
+  ],
+  "s10": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "What is the curative dose of ferrous fumarate for iron deficiency anemia in pregnancy?",
+      "options": [
+        "100 mg once daily",
+        "200 mg 3 times daily",
+        "300 mg once daily",
+        "400 mg weekly"
+      ],
+      "correct": 1,
+      "explain": "Curative management of iron deficiency anemia: ferrous fumarate or sulphate 200 mg 3 times daily."
+    },
+    {
+      "q": "Which of the following is an indication for IV iron administration in pregnancy?",
+      "options": [
+        "First trimester routine supplementation",
+        "Hb above 11 g/dL",
+        "Severe or symptomatic anemia, especially later in pregnancy",
+        "Mild anemia discovered at booking"
+      ],
+      "correct": 2,
+      "explain": "IV iron is indicated: beyond 1st trimester and cannot tolerate oral iron, severe/symptomatic anemia (especially later in pregnancy), oral iron ineffective."
+    },
+    {
+      "q": "Within what time frame should Hb increase by ≥1 g/dL after starting iron therapy?",
+      "options": [
+        "3-5 days",
+        "2-3 weeks",
+        "4-6 weeks",
+        "8-10 weeks"
+      ],
+      "correct": 1,
+      "explain": "Hb should increase by ≥1 g/dL within 2-3 weeks of starting iron therapy."
+    }
+  ],
+  "s11": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

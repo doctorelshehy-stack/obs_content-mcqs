@@ -1,0 +1,629 @@
+{
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    },
+    {
+      "q": "What is the ultimate goal of antenatal care?",
+      "options": [
+        "Ensure all pregnancies result in vaginal delivery",
+        "Reduce maternal and perinatal mortality and morbidity rates",
+        "Eliminate all pregnancy complications",
+        "Guarantee a healthy newborn in every pregnancy"
+      ],
+      "correct": 1,
+      "explain": "The ultimate goal of antenatal care is to reduce maternal and perinatal mortality and morbidity rates, prepare the woman for labor, lactation, and care of her infant, and detect and treat complicated conditions early."
+    },
+    {
+      "q": "Which of the following is NOT a way the goal of ANC is achieved?",
+      "options": [
+        "Detection and management of complications",
+        "Promotion of physical, mental, and social health of mother and baby",
+        "Development of birth preparedness and complication readiness plan",
+        "Scheduling routine cesarean delivery for all primigravida"
+      ],
+      "correct": 3,
+      "explain": "The goal of ANC is achieved through detection and management of complications, promoting health, developing birth preparedness, and preparing the mother to breastfeed successfully. Routine C-section is not a goal of ANC."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "How many main components of antenatal care are listed?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 3,
+      "explain": "The 8 components of ANC are: (1) Registration & history, (2) Periodic examination & lab, (3) High-risk pregnancy management, (4) Health education, (5) Nutritional care, (6) Emotional & social care, (7) Preventive measures (TT immunization), (8) Referral when needed."
+    },
+    {
+      "q": "Which component of antenatal care includes tetanus toxoid immunization?",
+      "options": [
+        "Nutritional care",
+        "Preventive measures",
+        "Health education",
+        "Referral when needed"
+      ],
+      "correct": 1,
+      "explain": "Preventive measures include tetanus toxoid immunization as a key component of antenatal care."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "During which gestational age should a pregnant woman visit every 2 weeks?",
+      "options": [
+        "Till 28th week",
+        "From 28th to 36th week",
+        "From 36th week till labor",
+        "First trimester only"
+      ],
+      "correct": 1,
+      "explain": "Standard visit frequency: Every 4 weeks till 28th week, every 2 weeks from 28th to 36th week, and every week from 36th week till labor."
+    },
+    {
+      "q": "According to the minimum 8-visit schedule, when should GDM screening (50g GCT) be performed?",
+      "options": [
+        "First trimester",
+        "20-26 weeks (Visit 2-3)",
+        "30-34 weeks (Visit 4-5)",
+        "36-38 weeks (Visit 6-7)"
+      ],
+      "correct": 1,
+      "explain": "GDM screening using 50g GCT is performed at 24-28 weeks, which falls in the 20-26 week visit window (Visit 2-3)."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is listed as a barrier to effective antenatal care?",
+      "options": [
+        "Excessive number of healthcare providers",
+        "Cultural norms requiring spouses' consent",
+        "Too many ANC visits recommended",
+        "Over-utilization of healthcare services"
+      ],
+      "correct": 1,
+      "explain": "Barriers include: poor access, poverty, cultural norms (women needing spouses' consent), poor quality perception, and inadequate facilities."
+    },
+    {
+      "q": "How does poor quality perception act as a barrier to ANC?",
+      "options": [
+        "It makes pregnancy more complicated",
+        "Prolonged waiting time and unprofessional conduct discourage women from seeking care",
+        "It increases the cost of services",
+        "It reduces the number of available medications"
+      ],
+      "correct": 1,
+      "explain": "Prolonged outpatient waiting time and unprofessional conduct of service providers create a perception of poor quality that discourages utilization."
+    }
+  ],
+  "s7": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "How is the Expected Date of Delivery (EDD) calculated using Naegele's rule?",
+      "options": [
+        "Add 9 months and 7 days to LMP",
+        "Subtract 3 months and add 7 days to the first day of LMP",
+        "Add 280 days to the date of conception",
+        "Subtract 1 month and add 14 days to LMP"
+      ],
+      "correct": 1,
+      "explain": "Naegele's rule: subtract 3 months, add 7 days to the first day of LMP."
+    },
+    {
+      "q": "At what gestational age can fetal heart tones be auscultated using a Doppler?",
+      "options": [
+        "6-8 weeks",
+        "10-12 weeks",
+        "16-18 weeks",
+        "20-22 weeks"
+      ],
+      "correct": 1,
+      "explain": "Fetal heart tones can be auscultated with Doppler at 10-12 weeks, and with Pinard's stethoscope after 20 weeks."
+    }
+  ],
+  "s8": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "What is the recommended total weight gain by the 20th week of pregnancy?",
+      "options": [
+        "~1.5 kg",
+        "~3.5 kg",
+        "~5 kg",
+        "~7 kg"
+      ],
+      "correct": 1,
+      "explain": "At 20th week approximately 3.5 kg is gained, then about 0.5 kg/week. Total recommended: 11-16 kg."
+    },
+    {
+      "q": "When should Leopold maneuvers to assess fetal presentation begin?",
+      "options": [
+        "20 weeks",
+        "28 weeks",
+        "32 weeks",
+        "36 weeks"
+      ],
+      "correct": 3,
+      "explain": "Leopold maneuvers for abdominal palpation to assess fetal presentation begin at 36 weeks' gestation."
+    },
+    {
+      "q": "Which screening test for trisomy and NTD is performed at 15-20 weeks?",
+      "options": [
+        "Glucose challenge test",
+        "Triple or quadruple screen",
+        "Nuchal translucency",
+        "Amniocentesis"
+      ],
+      "correct": 1,
+      "explain": "Trisomy & NTD screening at 15-20 weeks uses triple screen (HCG, unconjugated estriol, α-fetoprotein) or quadruple screen (+ inhibin-A)."
+    }
+  ],
+  "s9": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "What is the recommended total weight gain range for a pregnant woman with a healthy pre-pregnancy BMI (18.5-24.9)?",
+      "options": [
+        "7-11.5 kg",
+        "11.5-16 kg",
+        "12.5-18 kg",
+        "5-9 kg"
+      ],
+      "correct": 1,
+      "explain": "For healthy weight (BMI 18.5-24.9), the recommended total weight gain is 11.5-16 kg."
+    },
+    {
+      "q": "An obese pregnant woman (BMI ≥ 30) should gain how much weight during pregnancy?",
+      "options": [
+        "11.5-16 kg",
+        "7-11.5 kg",
+        "5-9 kg",
+        "12.5-18 kg"
+      ],
+      "correct": 2,
+      "explain": "For obese women (BMI ≥ 30), the recommended total weight gain is 5-9 kg."
+    }
+  ],
+  "s10": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a risk factor detected from history that indicates high-risk pregnancy?",
+      "options": [
+        "Gestational diabetes detected at 28 weeks",
+        "Mother's age 35 years",
+        "Mild anemia at 32 weeks",
+        "Occipitoposterior position at term"
+      ],
+      "correct": 1,
+      "explain": "Risk factors from history include: mother's age 35 years, primigravida or grand multipara, birth spacing <2 years, previous CS, chronic diseases, etc."
+    },
+    {
+      "q": "Which of the following is a risk factor detected late in pregnancy?",
+      "options": [
+        "Severe anemia",
+        "Chronic hypertension",
+        "Severe PIH",
+        "Diabetes mellitus"
+      ],
+      "correct": 2,
+      "explain": "Risk factors detected late in pregnancy include: severe PIH, antepartum hemorrhage, multiple pregnancy, IUGR, and abnormal presentation."
+    }
+  ],
+  "s11": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "How many doses of tetanus toxoid are recommended for a pregnant woman in her first pregnancy?",
+      "options": [
+        "One dose",
+        "Two doses with 4 weeks apart",
+        "Three doses",
+        "Single dose at delivery"
+      ],
+      "correct": 1,
+      "explain": "Two doses of TT with 4 weeks apart are recommended. For subsequent pregnancies, one dose is given."
+    },
+    {
+      "q": "Which vaccine is strongly recommended during pregnancy according to the content?",
+      "options": [
+        "Rubella vaccine",
+        "COVID-19 vaccines",
+        "BCG vaccine",
+        "Yellow fever vaccine"
+      ],
+      "correct": 1,
+      "explain": "COVID-19 vaccines are strongly recommended in pregnancy for best protection against known risks including ICU admission and premature birth."
+    }
+  ],
+  "s12": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "What is the best sleeping position recommended during pregnancy?",
+      "options": [
+        "Supine position",
+        "Prone position",
+        "Sims' position",
+        "Trendelenburg position"
+      ],
+      "correct": 2,
+      "explain": "The best sleeping position during pregnancy is Sims' position."
+    },
+    {
+      "q": "A pregnant woman should be advised to avoid all of the following EXCEPT:",
+      "options": [
+        "Hot baths",
+        "Tight clothes and belts",
+        "Regular walking exercise",
+        "Prolonged standing"
+      ],
+      "correct": 2,
+      "explain": "Regular moderate exercise like walking (at least 30 min) is recommended. Hot baths, tight clothes, and prolonged standing should be avoided."
+    },
+    {
+      "q": "Smoking during pregnancy increases the risk of all EXCEPT:",
+      "options": [
+        "Preterm birth",
+        "Low birth weight",
+        "Cleft lip/palate",
+        "Post-term delivery"
+      ],
+      "correct": 3,
+      "explain": "Smoking increases risk of preterm birth, LBW, cleft lip/palate, and SIDS."
+    }
+  ],
+  "s13": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

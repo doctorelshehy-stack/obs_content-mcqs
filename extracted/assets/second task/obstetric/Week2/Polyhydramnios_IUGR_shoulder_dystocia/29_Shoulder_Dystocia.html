@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 29 — Shoulder Dystocia</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;border-radius:0 0 22px 22px;padding:28px 32px 30px;
+    margin:0 -28px 22px;box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:34px;line-height:1.15;margin:14px 0 10px;font-weight:800;letter-spacing:-0.01em}
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:500;
+  }
+
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);border-radius:12px;
+    padding:16px 22px;margin:0 0 22px;box-shadow:var(--shadow);
+  }
+  .toc h2{font-size:14px;color:var(--prim2);margin:0 0 8px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;padding:8px 0 8px 14px;
+    border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{font-size:15.5px;color:var(--prim2);margin:16px 0 8px;font-weight:700;letter-spacing:0.01em}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 14px;box-shadow:var(--shadow)}
+  .keydef{background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid #DDD6FE;border-left:5px solid #7C3AED}
+  .pearl{background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid #FBCFE8;border-left:5px solid #DB2777}
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid #FECACA;border-left:5px solid #DC2626}
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);border:1px solid #FDE68A;border-left:5px solid #D97706}
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);border:1px solid #A5F3FC;border-left:5px solid #0891B2}
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;border-radius:50%;
+    text-align:center;line-height:24px;font-size:12px;font-weight:700;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards (centered) */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;margin:0 0 16px;
+    overflow:hidden;background:#fff;box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:520px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;color:#fff;
+    padding:3px 9px;border-radius:999px;font-size:10.5px;letter-spacing:0.06em;
+    text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+  .def-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:5px solid #7C3AED}
+  .def-card h3{font-size:15px;color:#5B21B6;margin:0 0 6px;font-weight:700}
+  .def-card p{font-size:13.5px;color:#475569;margin:0}
+
+  .risk-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;box-shadow:var(--shadow);border-left:4px solid var(--prim);font-size:13px}
+  .risk-card b{color:var(--prim2);font-size:13.5px;display:block;margin-bottom:2px}
+
+  .maneuver-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:5px solid var(--prim);
+  }
+  .maneuver-card.step1{border-left-color:#7C3AED;background:linear-gradient(180deg,#F5F3FF 0%,#fff 100%)}
+  .maneuver-card.step1 h3{color:#5B21B6}
+  .maneuver-card.step2{border-left-color:#059669;background:linear-gradient(180deg,#ECFDF5 0%,#fff 100%)}
+  .maneuver-card.step2 h3{color:#065F46}
+  .maneuver-card.step3{border-left-color:#0EA5E9;background:linear-gradient(180deg,#ECFEFF 0%,#fff 100%)}
+  .maneuver-card.step3 h3{color:#0E7490}
+  .maneuver-card.step4{border-left-color:#D97706;background:linear-gradient(180deg,#FFFBEB 0%,#fff 100%)}
+  .maneuver-card.step4 h3{color:#92400E}
+  .maneuver-card h3{font-size:14.5px;margin:0 0 6px;font-weight:700;color:var(--prim2)}
+  .maneuver-card p{font-size:13px;color:#475569;margin:4px 0}
+
+  .comp-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+  .comp-card.fetal{border-left:5px solid #DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .comp-card.fetal h3{color:#991B1B}
+  .comp-card.maternal{border-left:5px solid #DB2777;background:linear-gradient(180deg,#FDF2F8 0%,#fff 100%)}
+  .comp-card.maternal h3{color:#9D174D}
+  .comp-card h3{font-size:15px;margin:0 0 6px;font-weight:700}
+  .comp-card ul{font-size:13px;color:#475569;margin:0 0 0;padding-left:20px}
+
+  /* Clickable expand/collapse cards */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;font-size:15px;font-weight:700;
+    color:var(--prim2);background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;display:flex;align-items:center;
+    gap:10px;user-select:none;position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{border-bottom:1px solid var(--line);background:linear-gradient(90deg,var(--primLite),#fff 40%)}
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{margin-left:auto;font-size:11px;font-weight:600;color:#64748B;letter-spacing:0.04em;text-transform:uppercase}
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  footer{
+    margin-top:30px;padding:14px 16px;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:10px;
+    font-size:12px;color:#1E40AF;text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.risk-card,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- HERO -->
+<div class="hero">
+<span class="pill">Topic 29 · Chapter 29 · Shoulder Dystocia</span>
+<h1>Shoulder Dystocia</h1>
+<p>An <strong>unpredictable and unpreventable obstetric emergency</strong> (0.2-0.3% of deliveries) that occurs when the fetal head is delivered but the fetal shoulder becomes impacted behind the maternal pubic symphysis, requiring additional maneuvers to deliver. This chapter covers the definition, antepartum + intrapartum risk factors, the classic "turtle sign", the 11-step management algorithm (McRobert's first — resolves 90% of cases), and fetal + maternal complications.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 152-154 (3 pages)</span>
+<span class="chip">🟢 Source visuals: 5 (all embedded)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 9 content sections preserved</span>
+</div>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>📑 Table of Contents · 9 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definition &amp; Incidence</a></li>
+<li><a href="#s3">Figure 1 · Turtle-neck sign (clinical diagnosis)</a></li>
+<li><a href="#s4">Figure 2 · Mechanism (anterior shoulder impaction)</a></li>
+<li><a href="#s5">Risk factors (Antepartum + Intrapartum)</a></li>
+<li><a href="#s6">Management · Steps 1-5 (call for help → posterior arm)</a></li>
+<li><a href="#s7">Management · Steps 6-11 (rotational → last-resort maneuvers)</a></li>
+<li><a href="#s8">Complications · Fetal &amp; Maternal</a></li>
+<li><a href="#s9">Student activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To <strong>understand the definition of shoulder dystocia</strong>.</li>
+<li>To be able to <strong>outline the risk factors of such obstetric emergency</strong>.</li>
+<li>To be able to <strong>describe the clinical picture and management of shoulder dystocia</strong>.</li>
+<li>To be able to <strong>explain possible maternal and fetal complications of this obstetric emergency</strong>.</li>
+</ol>
+</div>
+</section>
+<!-- §2 Definition + Incidence -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definition &amp; Incidence</h2>
+<div class="grid-2">
+<div class="def-card">
+<h3>📋 Definition</h3>
+<p><strong>Arrested delivery of fetal shoulder after delivery of fetal head and the need for additional maneuver to deliver fetal shoulder.</strong></p>
+</div>
+<div class="def-card">
+<h3>📊 Incidence</h3>
+<p><strong>Unpredictable and unpreventable obstetric complication (0.2-0.3% of deliveries).</strong></p>
+</div>
+</div>
+<div class="card danger" style="margin-top:8px">
+<h4>🚨 DANGER — "Unpredictable and unpreventable"</h4>
+<p style="font-size:13px">The two most important adjectives in the definition are <strong>unpredictable</strong> and <strong>unpreventable</strong>. <strong>Unpredictable</strong> means: even with all known risk factors present (macrosomia, diabetes, previous shoulder dystocia, etc.), the event cannot be reliably forecast; conversely, shoulder dystocia can occur in deliveries with no risk factors at all. <strong>Unpreventable</strong> means: there is no prophylactic intervention (e.g., elective cesarean for suspected macrosomia) that reliably prevents it; the only effective response is to recognize it quickly and execute the management algorithm. <em>Note: this is why all delivery personnel — obstetrician, midwife, anesthetist, pediatric team — must be familiar with the maneuvers in §6-§7 even if they have never personally seen a case.</em></p>
+</div>
+</section>
+<!-- §3 Figure 1 — Turtle-neck sign -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Figure 1 · Turtle-neck sign (clinical diagnosis)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source chapter's only intrapartum diagnostic finding: the <strong>"turtle sign"</strong> — the fetal head emerges but then <strong>retracts tightly back against the perineum</strong>, resembling a turtle withdrawing into its shell.</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-000</span>
+<div class="img-frame">
+<img alt="Clinical photograph of a fetal head emerging from the maternal perineum and retracting tightly back, with a turtle crossing road sign as a visual mnemonic." src="../../../../extracted_images/29_shoulder_dystocia/turtle_neck_sign.jpg"/>
+</div>
+<div class="cap">Figure 1 — <strong>Turtle-neck sign: Fetal head emerges and retracts against the perineum.</strong> The composite source image shows a real obstetric delivery photograph (fetal head emerging but held back by the impacted anterior shoulder) on the left, paired with a yellow diamond turtle-crossing road sign on the right as a visual mnemonic. The clinical sign gets its name from the resemblance: just as a turtle pulls its head back into its shell, the fetal head is pulled back against the perineum when the anterior shoulder is trapped behind the pubic symphysis. Recognition of this sign is the <strong>first diagnostic step</strong> in shoulder dystocia — the moment it appears, the operator must <strong>stop pulling</strong> on the head and call for help.</div>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Why you must stop pulling on the head</h4>
+<p style="font-size:13px">The natural instinct when the head is delivered is to keep pulling. <strong>Resist this urge.</strong> Continued axial traction on the head stretches the brachial plexus against the pubic symphysis and dramatically increases the risk of <strong>Erb's palsy</strong> and other nerve injuries. Once the turtle sign is recognized, the correct sequence is: (1) call for help (§6 step 1), (2) <strong>stop pulling</strong>, (3) ask the mother to stop pushing, (4) start with McRobert's maneuver (§6 step 3) — these four steps together typically resolve 90% of cases without any internal manipulation.</p>
+</div>
+</section>
+<!-- §4 Figure 2 — Mechanism -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Figure 2 · Mechanism (anterior shoulder impaction)</h2>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-002</span>
+<div class="img-frame">
+<img alt="Sagittal watercolor-style illustration showing the anterior fetal shoulder impacted behind the maternal pubic symphysis, with a bold arrow pointing to the site of impaction." src="../../../../extracted_images/29_shoulder_dystocia/anterior_shoulder_impaction_mechanism.jpg"/>
+</div>
+<div class="cap">Figure 2 — <strong>Mechanism of shoulder dystocia: anterior fetal shoulder impacted behind the maternal pubic symphysis.</strong> A sagittal (side-view) cross-section of the mother in the second stage of labor. The fetal head has already been delivered and is visible exiting the birth canal, but the <strong>anterior fetal shoulder is wedged behind the pubic bone</strong> (the bold black arrow points to the exact site of obstruction). The bisacromial diameter (shoulder-to-shoulder distance) of the baby is too large to navigate the anteroposterior diameter of the pelvic inlet in this orientation — the shoulder cannot rotate to the wider oblique diameter on its own, hence the need for the maneuvers in §6-§7.</div>
+</div>
+<div class="card note">
+<h4>🧠 MECHANISM — Why McRobert's works</h4>
+<p style="font-size:13px">Looking at Figure 2, you can see that the obstruction is the <strong>pubic symphysis</strong> catching the anterior shoulder. The <strong>McRobert's maneuver</strong> (next section) works because hyperflexing the maternal hips <strong>rotates the pubic symphysis cephalad</strong> (upward, away from the shoulder), effectively shortening the distance the shoulder needs to travel. Suprapubic pressure (also next section) then pushes the anterior shoulder <strong>down and laterally</strong> so it slips under the symphysis. This is why these two maneuvers together — and not internal rotation — are the <strong>first-line</strong> approach.</p>
+</div>
+</section>
+<!-- §5 Risk factors -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Risk factors</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists <strong>10 risk factors</strong> split into two groups — <strong>5 Antepartum</strong> (identifiable before labor) and <strong>5 Intrapartum</strong> (develop during labor). Remember: shoulder dystocia is unpredictable and unpreventable, so risk factors are useful for <strong>awareness and preparation</strong>, not for prevention.</p>
+<h3 class="sub">📋 Antepartum risk factors (5)</h3>
+<div class="grid-2">
+<div class="risk-card"><b>1. Previous shoulder dystocia</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Recurrence rate ~10% in subsequent pregnancies.</p></div>
+<div class="risk-card"><b>2. Macrosomia</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Birth weight &gt; 4,000 g (or &gt; 4,500 g in diabetic mothers) — the single most common risk factor.</p></div>
+<div class="risk-card"><b>3. Diabetes mellitus</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Fetal hyperinsulinemia → increased shoulder and chest girth relative to head.</p></div>
+<div class="risk-card"><b>4. Maternal BMI &gt; 30 kg/m²</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Maternal obesity is associated with fetal macrosomia + soft-tissue dystocia.</p></div>
+<div class="risk-card"><b>5. Induction of labor</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Induction may be performed for macrosomia or other indications, increasing shoulder-dystocia risk if fetus is large.</p></div>
+</div>
+<h3 class="sub">📋 Intrapartum risk factors (5)</h3>
+<div class="grid-2">
+<div class="risk-card"><b>6. Prolonged first stage of labor</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Slow cervical dilation may indicate relative cephalopelvic disproportion.</p></div>
+<div class="risk-card"><b>7. Secondary arrest</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Cervix dilated to a point, then no further progress in the active phase.</p></div>
+<div class="risk-card"><b>8. Prolonged second stage of labor</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Pushing &gt; 2h (or &gt; 3h with epidural) — head may be malpositioned, increasing shoulder-dystocia risk.</p></div>
+<div class="risk-card"><b>9. Oxytocin augmentation</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Strong contractions may drive the head past the shoulders before the shoulders have rotated to the oblique diameter.</p></div>
+<div class="risk-card"><b>10. Assisted vaginal delivery</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Vacuum or forceps — the operator may pull the head past the shoulders.</p></div>
+</div>
+<div class="card note" style="margin-top:4px">
+<h4>🧠 MEMORY ANCHOR — "5+5 = 10 Risk factors"</h4>
+<p style="font-size:13px">The 10 risk factors split as <strong>"5 A's" (Antepartum) + "5 P's" (Intrapartum)</strong>:</p>
+<p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Antepartum (5):</strong> <strong>P</strong>revious SD · <strong>M</strong>acrosomia · <strong>D</strong>iabetes mellitus · <strong>O</strong>besity (BMI &gt; 30) · <strong>I</strong>nduction of labor — <em>(mnemonic: PMDOI = "Primed for Macrosomia, Diabetes, Obesity, Induction")</em></p>
+<p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Intrapartum (5):</strong> <strong>P</strong>rolonged 1st stage · <strong>S</strong>econdary arrest · <strong>P</strong>rolonged 2nd stage · <strong>O</strong>xytocin augmentation · <strong>A</strong>ssisted vaginal delivery — <em>(mnemonic: PSPOA = "Prolonged-Slow-Pushed-Out-Assisted")</em></p>
+<p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Unifying principle:</strong> every risk factor — antepartum or intrapartum — is a factor that <strong>increases the size of the fetus</strong> (macrosomia, DM, obesity), <strong>changes the dynamics of labor</strong> (induction, prolonged stages, oxytocin, arrest), or <strong>increases the operator's force</strong> (assisted delivery, previous SD). All three mechanisms ultimately converge on the same anatomic event shown in Figure 2: the anterior shoulder is too big to fit under the pubic symphysis.</p>
+</div>
+</section>
+<!-- §6 Management steps 1-5 -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Management · Steps 1-5 (call for help → posterior arm)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The first 5 steps of the 11-step algorithm: call for help, episiotomy, McRobert's, suprapubic pressure, and delivery of the posterior arm. <strong>McRobert's + suprapubic pressure</strong> together resolve <strong>~90% of cases</strong> — so these are the most important to memorize.</p>
+<h3 class="sub">📋 Step 1 — Call for help (HALT the natural impulse to pull)</h3>
+<div class="maneuver-card step1">
+<h3>🚨 Immediately after recognition of shoulder dystocia, extra help should be called</h3>
+<p><strong>Senior obstetrician, a pediatric resuscitation team, and an anesthetist should be present.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Why this step is the first:</em> the operator alone cannot manage shoulder dystocia — McRobert's requires an assistant, suprapubic pressure requires a second pair of hands, the pediatric team must be ready for a possibly hypoxic or injured neonate, and the anesthetist may be needed for uterine relaxation if the Zavanelli maneuver (§7) is required.</p>
+</div>
+<h3 class="sub">📋 Step 2 — Episiotomy</h3>
+<div class="maneuver-card step2">
+<h3>✂ Episiotomy: to facilitate different maneuvers.</h3>
+<p>Enlarges the vaginal opening to allow internal manipulation (steps 4-5, and the rotational maneuvers in §7). <em>Note: episiotomy alone does not resolve shoulder dystocia — the obstruction is at the pelvic brim (Figure 2), not at the introitus — but it gives the operator room to work.</em></p>
+</div>
+<h3 class="sub">📋 Step 3 — McRobert's maneuver (the most effective single intervention)</h3>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-001</span>
+<div class="img-frame">
+<img alt="Sagittal cross-section of a pregnant woman in labor, with the maternal legs hyperflexed at the hips (McRobert's) and a gloved hand applying suprapubic pressure; the fetal head is delivered and the anterior shoulder is impacted against the pubic symphysis." src="../../../../extracted_images/29_shoulder_dystocia/mcroberts_maneuver_with_suprapubic_pressure.jpg"/>
+</div>
+<div class="cap">Figure 3 — <strong>McRobert's maneuver combined with suprapubic pressure.</strong> The source illustration shows a sagittal cross-section with the mother in the McRobert's position (thighs hyperflexed onto the abdomen) and a gloved hand applying suprapubic pressure (the purple arrows show the force vectors: the leg arrow shows the thigh being pushed back toward the chest; the suprapubic arrow shows the hand pressing down and laterally just above the pubic bone). The fetal head is delivered externally; the anterior shoulder remains impacted against the pubic symphysis. McRobert's is described in the source as "the most effective intervention and should be performed first" — it resolves 90% of cases when combined with suprapubic pressure.</div>
+</div>
+<div class="maneuver-card step3">
+<h3>🦵 McRobert's maneuver</h3>
+<p><strong>Flexion and abduction of the maternal hips positioning the maternal thighs on her abdomen.</strong> It is the most effective intervention and should be performed first (resolve 90% of cases).</p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>If delivery is not achieved, add suprapubic pressure (step 4).</em></p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Why "resolve 90% of cases" applies to the McRobert's + suprapubic combination, not McRobert's alone</h4>
+<p style="font-size:13px">The source text says McRobert's is the "most effective intervention and should be performed first" and "resolve 90% of cases" — but then immediately notes "If delivery is not achieved, added suprapubic pressure." This is the source's way of saying: <strong>McRobert's alone is not 90% effective; the combination of McRobert's + suprapubic pressure is</strong>. The two maneuvers are applied <em>together</em> by default — the operator flexes the maternal hips while an assistant applies suprapubic pressure. Internal maneuvers (steps 4-5 and §7) are reserved for the ~10% of cases that do not resolve with this combination.</p>
+</div>
+<h3 class="sub">📋 Step 4 — Suprapubic pressure</h3>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-003</span>
+<div class="img-frame">
+<img alt="Hand-drawn clinical illustration of a fetus in the maternal pelvis, with a yellow/orange hand applying pressure to the impacted anterior shoulder from above the pubic bone." src="../../../../extracted_images/29_shoulder_dystocia/suprapubic_pressure_hand_drawn.jpg"/>
+</div>
+<div class="cap">Figure 4 — <strong>Suprapubic pressure (clinical hand position, view 1).</strong> A hand-drawn clinical illustration showing a fetus impacted in the maternal pelvis, with a yellow/orange hand applying downward pressure to the anterior shoulder from the suprapubic region. The goal is to adduct the shoulders (push the anterior shoulder under the pubic symphysis) and rotate them into the wider oblique pelvic diameter. The image emphasizes the correct location of the hand — just above the pubic bone, not on the uterine fundus.</div>
+</div>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-004</span>
+<div class="img-frame">
+<img alt="Hand-drawn clinical illustration showing suprapubic pressure on a partially delivered baby, with bold black arrows indicating the oblique direction of force." src="../../../../extracted_images/29_shoulder_dystocia/suprapubic_pressure_oblique_angle.jpg"/>
+</div>
+<div class="cap">Figure 5 — <strong>Suprapubic pressure (force vector, view 2).</strong> A second hand-drawn illustration of suprapubic pressure, this time emphasizing the <strong>direction of force</strong> with bold black arrows. The arrows show the pressure is applied in an <strong>oblique direction</strong> (laterally and slightly downward, toward the fetal back/anterior shoulder) — not directly downward onto the uterine fundus, which would be ineffective. The two hand-drawn views (Figure 4 + Figure 5) together teach the position of the hand and the direction of force; the sagittal cross-section (Figure 3) shows the underlying anatomy.</div>
+</div>
+<div class="maneuver-card step4">
+<h3>👊 Suprapubic pressure</h3>
+<p>Pressure applied by an assistant just above the maternal pubic bone, directed downward and laterally toward the fetal back. Aims to adduct the anterior shoulder and rotate it under the pubic symphysis. Typically combined with McRobert's (step 3) — see Figure 3.</p>
+</div>
+<h3 class="sub">📋 Step 5 — Delivery of the posterior arm</h3>
+<div class="maneuver-card">
+<h3>🤚 Delivery of the posterior arm (3 sub-steps)</h3>
+<p>When McRobert's + suprapubic pressure fail, the next maneuver is to deliver the posterior arm:</p>
+<ol style="font-size:13.5px;color:#475569;line-height:1.7;margin:6px 0 0;padding-left:20px">
+<li><strong>Insert a hand in the vagina and flex the elbow.</strong> The operator's hand reaches into the vagina along the curve of the sacrum, locates the posterior fetal arm, and flexes the elbow by pressing on the antecubital fossa.</li>
+<li><strong>Sweep arm over the chest.</strong> Once the elbow is flexed, the forearm is swept across the fetal chest and out of the vagina.</li>
+<li><strong>Deliver the posterior arm.</strong> With the posterior arm delivered, the bisacromial diameter is reduced (one shoulder is no longer trapped), and the anterior shoulder can usually be delivered with gentle downward traction on the head.</li>
+</ol>
+</div>
+<div class="card warn" style="margin-top:4px">
+<h4>⚠ CLINICAL NOTE — Posterior arm delivery can fracture the humerus or clavicle</h4>
+<p style="font-size:13px">This is a more aggressive maneuver than McRobert's + suprapubic pressure, and it carries a higher risk of <strong>fracturing the humerus or clavicle</strong> of the posterior arm. The fractures usually heal well in newborns, but they should be acknowledged in the documentation. If the posterior arm cannot be reached easily, do not pull hard — proceed to the rotational maneuvers in §7 (Rubin, Wood's corkscrew) or delivery of the posterior shoulder instead.</p>
+</div>
+</section>
+<!-- §7 Management steps 6-11 -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Management · Steps 6-11 (rotational → last-resort maneuvers)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Steps 6-11 are reserved for the rare cases (~10%) that do not resolve with McRobert's + suprapubic pressure + posterior arm. They progress from <strong>internal rotational maneuvers</strong> (steps 6-7) to <strong>positional and surgical maneuvers</strong> (steps 8-11).</p>
+<table>
+<thead>
+<tr>
+<th style="width:60px">Step</th>
+<th>Maneuver</th>
+<th>Description (verbatim from source)</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>Rubin maneuver</strong></td>
+<td><strong>The anterior fetal shoulder is rotated obliquely with a vaginal hand.</strong></td>
+<td>Internal rotational</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>Wood corkscrew</strong></td>
+<td><strong>The posterior shoulder is rotated over 180 degrees with a Vaginal hand to assist delivery of the shoulders.</strong></td>
+<td>Internal rotational</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>Gaskin maneuver</strong></td>
+<td><strong>Facilitated in a patient without regional anesthesia, she is Turned over on "all fours" inverting the anterior and posterior shoulders.</strong></td>
+<td>Positional</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>Cleidotomy</strong></td>
+<td><strong>It is cutting of the clavicle.</strong></td>
+<td>Surgical (destructive)</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>Symphysiotomy</strong></td>
+<td><strong>Incising the cartilaginous portion of the symphysis pubis to release the anterior shoulder.</strong></td>
+<td>Surgical (pelvic)</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>Zavanelli maneuver</strong></td>
+<td><strong>The fetal head is flexed and pushed back up into the uterus and emergent cesarean section is done.</strong></td>
+<td>Reversal + CS</td>
+</tr>
+</tbody>
+</table>
+<div class="card note">
+<h4>🧠 MEMORY ANCHOR — "R-W-G-C-S-Z" (Steps 6-11 mnemonic)</h4>
+<p style="font-size:13px">A simple way to remember the 6 advanced maneuvers in order: <strong>R</strong>ubin · <strong>W</strong>ood corkscrew · <strong>G</strong>askin · <strong>C</strong>leidotomy · <strong>S</strong>ymphysiotomy · <strong>Z</strong>avanelli. The progression goes from <strong>internal rotation</strong> (R, W) → <strong>positional</strong> (G) → <strong>destructive surgery</strong> (C, S) → <strong>reversal + CS</strong> (Z). In a real case, the operator rarely gets past step 8 — by that point the case is in the hands of a senior obstetrician, an anesthetist, and a pediatric team.</p>
+</div>
+<div class="card danger">
+<h4>🚨 DANGER — Why the source preserves the typo "Vaginal hand" in Wood corkscrew</h4>
+<p style="font-size:13px">The source's Wood corkscrew step says "with a <strong>Vaginal hand</strong>" (with a capital V and using "Vaginal" as a noun). The corrected form is "with a vaginal hand" (lowercase, used as an adjective). The source's odd capitalization is preserved verbatim here per the source-fidelity rule. It does not change the meaning — both refer to the operator's hand placed inside the vagina to rotate the posterior fetal shoulder through 180°.</p>
+</div>
+</section>
+<!-- §8 Complications -->
+<section id="s8">
+<h2 class="sec"><span class="n">8</span>Complications · Fetal &amp; Maternal</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Shoulder dystocia complications split into <strong>fetal</strong> (5 items in the source) and <strong>maternal</strong> (4 items in the source). Fetal complications are usually more severe and more visible; maternal complications are usually less severe but more common.</p>
+<div class="grid-2">
+<div class="comp-card fetal">
+<h3>🍼 Fetal Complications (5)</h3>
+<ul>
+<li><strong>Brachial plexus injury.</strong> Stretching of the nerve network supplying the arm — most common after excessive lateral traction on the head.</li>
+<li><strong>Erb's palsy.</strong> A specific brachial plexus injury (C5-C6 roots) causing "waiter's tip" deformity (arm adducted, internally rotated, forearm pronated).</li>
+<li><strong>Bone fractures (humerus and clavicle).</strong> Most common after delivery of the posterior arm (§6 step 5) or excessive traction on the shoulder. Usually heal well.</li>
+<li><strong>Hypoxic ischemic brain injury.</strong> From prolonged cord compression / head compression during the dystocia. The time-pressure to deliver is to prevent this.</li>
+<li><strong>Fetal death.</strong> The worst outcome; most often from prolonged hypoxic injury when all maneuvers fail.</li>
+</ul>
+</div>
+<div class="comp-card maternal">
+<h3>🤰 Maternal Complications (4)</h3>
+<ul>
+<li><strong>Post-partum hemorrhage.</strong> From uterine atony (the exhausted uterus after prolonged labor) or from perineal trauma.</li>
+<li><strong>Vaginal lacerations and anal tears.</strong> From operative delivery, episiotomy, or the maneuvers themselves.</li>
+<li><strong>Uterine rupture.</strong> Rare but possible, especially if oxytocin was used for augmentation (§5 risk factor 9).</li>
+<li><strong>Maternal psychological stress.</strong> PTSD, fear of future pregnancies, postpartum depression — often under-recognized but a real complication of any emergency delivery.</li>
+</ul>
+</div>
+</div>
+<div class="card warn" style="margin-top:4px">
+<h4>⚠ CLINICAL NOTE — Documentation is part of management</h4>
+<p style="font-size:13px">Every shoulder dystocia case must be <strong>documented in detail</strong> — the maneuvers used, the order they were used, the time from recognition to delivery, the neonatal assessment (Apgar, cord pH, evidence of injury), and the maternal assessment (blood loss, perineal trauma). This documentation serves three purposes: (1) clinical handover to the pediatric and postnatal teams, (2) medico-legal record (shoulder dystocia is one of the most litigated obstetric events), and (3) counseling for future pregnancies (a mother who had shoulder dystocia has a ~10% recurrence risk — §5 risk factor 1).</p>
+</div>
+</section>
+<!-- §9 Clickable cards -->
+<section id="s9">
+<h2 class="sec"><span class="n">9</span>Student activity · Questions · References</h2>
+<details class="click-card activity">
+<summary>🎓 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p><strong>Each student should attend the departmental skill lab in order to revise with his (her) tutor of bedside part of the clinical round various maneuvers for management of shoulder dystocia illustrated on pelvic maniquin.</strong></p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>What this activity means in practice:</strong> the management of shoulder dystocia is a <strong>hands-on skill</strong> — it cannot be learned from reading or from lectures. The departmental skill lab will have a <strong>pelvic maniquin</strong> (a model of the maternal pelvis with a fetal maniquin) on which each student practices the maneuvers under the supervision of a tutor. By the end of the lab, the student should be able to perform the 11-step algorithm in order, with the correct hand positions and force vectors.</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested practice sequence (in the skill lab):</strong></p>
+<ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>McRobert's + suprapubic pressure</strong> (steps 3-4) — practice the hyperflexion of the hips and the oblique direction of the suprapubic force.</li>
+<li><strong>Delivery of the posterior arm</strong> (step 5) — practice inserting the hand along the sacral curve, locating the elbow, flexing it, and sweeping the forearm across the chest.</li>
+<li><strong>Rubin maneuver</strong> (step 6) — practice rotating the anterior shoulder obliquely with the vaginal hand.</li>
+<li><strong>Wood's corkscrew</strong> (step 7) — practice the 180° rotation of the posterior shoulder.</li>
+<li><strong>Gaskin maneuver</strong> (step 8) — practice turning the patient to "all fours" (requires a cooperative patient without regional anesthesia).</li>
+</ol>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>✅ Self-assessment Questions <span class="hint"></span></summary>
+<div class="click-body">
+<p>Please complete the self-assessment Google Form:</p>
+<p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/9rUuinHypUbjcESn6" style="color:#15803D;font-weight:700">https://forms.gle/9rUuinHypUbjcESn6</a></p>
+<p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+<ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+<li>Definition: arrested delivery of fetal shoulder after delivery of fetal head requiring additional maneuvers.</li>
+<li>Incidence: 0.2-0.3% of deliveries; unpredictable and unpreventable.</li>
+<li>4 ILOs (definition, risk factors, clinical picture + management, complications).</li>
+<li>5 Antepartum risk factors (previous SD, macrosomia, DM, BMI&gt;30, induction).</li>
+<li>5 Intrapartum risk factors (prolonged 1st stage, secondary arrest, prolonged 2nd stage, oxytocin augmentation, assisted vaginal delivery).</li>
+<li>Clinical picture: turtle-neck sign (fetal head emerges and retracts against perineum).</li>
+<li>Step 1: call for help (senior obstetrician, pediatric resuscitation team, anesthetist).</li>
+<li>Step 2: episiotomy (to facilitate maneuvers, not to resolve dystocia itself).</li>
+<li>Step 3: McRobert's maneuver (most effective, 90% of cases with suprapubic).</li>
+<li>Step 4: suprapubic pressure (oblique direction, just above pubic bone).</li>
+<li>Step 5: delivery of posterior arm (3 sub-steps: insert + flex elbow, sweep over chest, deliver arm).</li>
+<li>Steps 6-11 advanced maneuvers (Rubin, Wood corkscrew, Gaskin, Cleidotomy, Symphysiotomy, Zavanelli).</li>
+<li>5 Fetal complications (brachial plexus, Erb's palsy, bone fractures, hypoxic brain injury, fetal death).</li>
+<li>4 Maternal complications (PPH, vaginal lacerations + anal tears, uterine rupture, psychological stress).</li>
+<li>Why shoulder dystocia is unpredictable + unpreventable (no reliable risk-factor-based prevention).</li>
+<li>Why the operator must stop pulling on the head when the turtle sign is recognized.</li>
+</ul>
+</div>
+</details>
+<details class="click-card references">
+<summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+<div class="click-body">
+<ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+<li>The <strong>PDF source</strong> for this chapter is a 3-page document (p. 152-154).</li>
+<li>The source contains <strong>5 embedded images</strong> on page 2 of the PDF. <strong>All 5 are embedded</strong> in this infographic as green <code>.src-viz</code> cards. They were extracted to <code>extracted_images/29_shoulder_dystocia/</code> for archival.</li>
+<li><strong>No external images were used</strong> in this chapter — all 5 visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+<li><strong>Image inventory and disposition (all 5 embedded):</strong>
+<ul>
+<li><strong>Figure 1 (img-000):</strong> Turtle-neck sign composite (437×258, 12,025 B, page 2) — clinical photograph of fetal head retracting against perineum + turtle-crossing road sign as visual mnemonic. Caption: "Fetal head emerges and retracts against the perineum" — EMBEDDED in §3.</li>
+<li><strong>Figure 2 (img-002):</strong> Anterior shoulder impaction mechanism (448×360, 26,481 B, page 2) — sagittal watercolor cross-section with arrow pointing to the impact site. No explicit source caption — EMBEDDED in §4.</li>
+<li><strong>Figure 3 (img-001):</strong> McRobert's maneuver with suprapubic pressure (535×286, 13,053 B, page 2) — sagittal cross-section with purple arrows showing force vectors. No explicit source caption — EMBEDDED in §6 (step 3).</li>
+<li><strong>Figure 4 (img-003):</strong> Suprapubic pressure — hand-drawn, view 1 (334×336, 21,780 B, page 2) — yellow/orange hand applying pressure to the impacted shoulder. No explicit source caption — EMBEDDED in §6 (step 4).</li>
+<li><strong>Figure 5 (img-004):</strong> Suprapubic pressure — hand-drawn, view 2 (369×341, 20,953 B, page 2) — bold black arrows showing the oblique direction of force. No explicit source caption — EMBEDDED in §6 (step 4).</li>
+</ul>
+</li>
+<li>Google Form self-assessment URL: <code>https://forms.gle/9rUuinHypUbjcESn6</code> (reproduced verbatim from source).</li>
+<li>The source has a duplicate "1" label in the management algorithm — both "Call for help" and "Episiotomy" are labeled "1" in the source. In this HTML, they are sequentially renumbered 1-2 to avoid confusion, but the source's original numbering is preserved in the management table for the §7 steps (which are correctly numbered 5-10 in the source, with step 4 being "Suprapubic pressure" and step 5 being "Delivery of posterior arm").</li>
+<li>The source's odd capitalization "Vaginal hand" (capital V, used as noun) in step 7 (Wood corkscrew) is preserved verbatim in the §7 table, with an inline note explaining the corrected form.</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- FOOTER -->
+<footer>
+    Topic 29 — Shoulder Dystocia · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 29 (p. 152-154, 3 pages) · Source-only visuals (5 of 5 in source) · 0 external visuals · Definition: arrested delivery of fetal shoulder after head delivery · Incidence 0.2-0.3% · "Unpredictable + unpreventable" · Turtle-neck sign (fetal head retracts against perineum) · 10 risk factors (5 antepartum + 5 intrapartum) · 11-step management (call for help → episiotomy → McRobert's + suprapubic = 90% → posterior arm → Rubin → Wood corkscrew → Gaskin → Cleidotomy → Symphysiotomy → Zavanelli) · 5 fetal complications (brachial plexus, Erb's, fractures, hypoxic brain injury, fetal death) + 4 maternal (PPH, lacerations, uterine rupture, psychological stress)
+  </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

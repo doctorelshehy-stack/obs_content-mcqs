@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 34 — Obstructed Labor</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;border-radius:0 0 22px 22px;padding:28px 32px 30px;
+    margin:0 -28px 22px;box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:34px;line-height:1.15;margin:14px 0 10px;font-weight:800;letter-spacing:-0.01em}
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:500;
+  }
+
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);border-radius:12px;
+    padding:16px 22px;margin:0 0 22px;box-shadow:var(--shadow);
+  }
+  .toc h2{font-size:14px;color:var(--prim2);margin:0 0 8px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;padding:8px 0 8px 14px;
+    border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{font-size:15.5px;color:var(--prim2);margin:16px 0 8px;font-weight:700;letter-spacing:0.01em}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 14px;box-shadow:var(--shadow)}
+  .keydef{background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid #DDD6FE;border-left:5px solid #7C3AED}
+  .keydef h4{color:#5B21B6;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .pearl{background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid #FBCFE8;border-left:5px solid #DB2777}
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid #FECACA;border-left:5px solid #DC2626}
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);border:1px solid #FDE68A;border-left:5px solid #D97706}
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);border:1px solid #A5F3FC;border-left:5px solid #0891B2}
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;border-radius:50%;
+    text-align:center;line-height:24px;font-size:12px;font-weight:700;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards (centered) */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;margin:0 0 16px;
+    overflow:hidden;background:#fff;box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:520px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;color:#fff;
+    padding:3px 9px;border-radius:999px;font-size:10.5px;letter-spacing:0.06em;
+    text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+  .defn-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:5px solid #7C3AED;margin:0 0 12px}
+  .defn-card.cyan{border-left-color:#0891B2;background:linear-gradient(180deg,#ECFEFF 0%,#fff 100%)}
+  .defn-card.cyan h3{color:#155E75}
+  .defn-card.pink{border-left-color:#DB2777;background:linear-gradient(180deg,#FDF2F8 0%,#fff 100%)}
+  .defn-card.pink h3{color:#9D174D}
+  .defn-card.green{border-left-color:#16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  .defn-card.green h3{color:#166534}
+  .defn-card.red{border-left-color:#DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .defn-card.red h3{color:#991B1B}
+  .defn-card.orange{border-left-color:#D97706;background:linear-gradient(180deg,#FFFBEB 0%,#fff 100%)}
+  .defn-card.orange h3{color:#92400E}
+  .defn-card.purple{border-left-color:#7C3AED;background:linear-gradient(180deg,#F5F3FF 0%,#fff 100%)}
+  .defn-card.purple h3{color:#5B21B6}
+  .defn-card h3{font-size:14.5px;margin:0 0 6px;font-weight:700;color:#5B21B6}
+  .defn-card p{font-size:13px;color:#475569;margin:0}
+
+  .mono{font-family:"JetBrains Mono","Consolas","Courier New",monospace;background:#0F172A;color:#E0F2FE;padding:8px 12px;border-radius:6px;font-size:13px;line-height:1.5;margin:4px 0;display:block;white-space:pre-wrap;word-break:break-word}
+
+  .comp-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+  .comp-card.maternal{border-left:5px solid #DB2777;background:linear-gradient(180deg,#FDF2F8 0%,#fff 100%)}
+  .comp-card.maternal h3{color:#9D174D}
+  .comp-card.fetal{border-left:5px solid #DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .comp-card.fetal h3{color:#991B1B}
+  .comp-card h3{font-size:15px;margin:0 0 6px;font-weight:700}
+  .comp-card ul{font-size:13px;color:#475569;margin:0;padding-left:20px}
+
+  .class-tree{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px;box-shadow:var(--shadow);font-size:13.5px;line-height:1.6;margin:0 0 14px}
+  .class-tree ul{list-style:none;padding-left:18px;margin:4px 0}
+  .class-tree > ul{padding-left:0}
+  .class-tree li{margin:3px 0}
+  .class-tree .branch-coord{color:#1D4ED8;font-weight:700}
+  .class-tree .branch-abn{color:#DC2626;font-weight:700}
+  .class-tree .leaf{color:#334155;margin-left:6px}
+  .class-tree .leaf::before{content:"→ ";color:#94A3B8}
+
+  /* Clickable expand/collapse cards */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;font-size:15px;font-weight:700;
+    color:var(--prim2);background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;display:flex;align-items:center;
+    gap:10px;user-select:none;position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{border-bottom:1px solid var(--line);background:linear-gradient(90deg,var(--primLite),#fff 40%)}
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{margin-left:auto;font-size:11px;font-weight:600;color:#64748B;letter-spacing:0.04em;text-transform:uppercase}
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  footer{
+    margin-top:30px;padding:14px 16px;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:10px;
+    font-size:12px;color:#1E40AF;text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.risk-card,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- HERO -->
+<div class="hero">
+<span class="pill">Topic 34 · Chapter 34 · Obstructed Labor</span>
+<h1>Obstructed Labor</h1>
+<p><strong>Mechanical failure of delivery</strong> — the fetus cannot traverse the birth canal despite <strong>good (adequate) uterine contractions</strong>, because of a <strong>passage</strong> problem (maternal bony pelvis or soft tissue) or a <strong>passenger</strong> problem (fetal size, lie, presentation, position, or malformation). Obstructed labor is one of the most <strong>serious obstetric emergencies</strong>, and a leading cause of <strong>maternal and perinatal mortality</strong> in low-resource settings. The condition is almost entirely <strong>preventable</strong> through proper antenatal care, early detection of risk factors, and strict use of the <strong>partogram</strong>; once established, delivery is by <strong>cesarean section</strong> — vaginal delivery is contraindicated.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 180-182 (3 pages)</span>
+<span class="chip">🟢 Source visuals: 0 (text-only chapter)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 7 content sections preserved</span>
+</div>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>📑 Table of Contents · 7 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definition · The 3 P's revisited</a></li>
+<li><a href="#s3">Causes · Maternal (Passages) + Fetal (Passenger)</a></li>
+<li><a href="#s4">Diagnosis · General + Abdominal + Vaginal examination</a></li>
+<li><a href="#s5">Management · Prevention + General + Obstetrics</a></li>
+<li><a href="#s6">Complications · Maternal + Fetal</a></li>
+<li><a href="#s7">Student activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To <strong>understand the definition of obstructed labor</strong>.</li>
+<li>To be able to <strong>explain the etiology of obstructed labor and how to be avoided</strong>.</li>
+<li>To be able to <strong>describe the clinical picture and management of obstructed labor</strong>.</li>
+<li>To be able to <strong>outline the complications of this obstetric serious problem</strong>.</li>
+</ol>
+</div>
+</section>
+<!-- §2 Definition -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definition · The 3 P's revisited</h2>
+<div class="card keydef">
+<h4>📘 KEY DEFINITION · Obstructed Labor</h4>
+<p class="def-block" style="font-size:15.5px;margin:0"><strong>Failure of delivery of fetus in spite of good uterine contractions due to mechanical obstruction.</strong></p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL · Why "obstructed" ≠ "prolonged" labor</h4>
+<p style="font-size:13.5px;margin:0">The keyword in the definition is <strong>"in spite of good uterine contractions"</strong>. Prolonged labor may be caused by <em>inefficient</em> contractions (uterine inertia — see Chapter 33); obstructed labor is caused by a <em>mechanical block</em> despite contractions that are doing their job. The distinction matters because the management is fundamentally different: in obstructed labor, <strong>more oxytocin will not help</strong> — and may rupture the uterus. The only definitive treatment is <strong>cesarean section</strong>.</p>
+</div>
+<div class="card note">
+<h4>📝 NOTE · The 3 P's of dystocia (recall from Chapter 33)</h4>
+<p style="font-size:13.5px;margin:0">Whenever labor is not progressing, systematically evaluate the 3 P's: <strong>Power</strong> (contractions), <strong>Passages</strong> (maternal pelvis + soft tissues), and <strong>Passenger</strong> (fetus). Obstructed labor is a <em>Passages</em> and/or <em>Passenger</em> problem <em>with</em> a normal <em>Power</em> — that combination is the diagnostic signature.</p>
+</div>
+</section>
+<!-- §3 Causes -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Causes · Maternal (Passages) + Fetal (Passenger)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The obstruction is <strong>always mechanical</strong>. Causes are split into two groups — <em>passages</em> (maternal) and <em>passenger</em> (fetal) — reflecting the two halves of the fetopelvic relationship.</p>
+<div class="grid-2">
+<div class="defn-card pink">
+<h3>Maternal causes (the passages)</h3>
+<ul style="margin:0;padding-left:18px;font-size:13px">
+<li><strong>Contracted pelvis</strong></li>
+<li><strong>Abnormal pelvis:</strong> android or anthropoid</li>
+<li><strong>Pelvic tumor:</strong> fibroid, ovarian tumor</li>
+<li><strong>Tumors</strong> of the rectum, bladder or pelvic bone</li>
+<li><strong>Stenosis in cervix</strong></li>
+<li><strong>Vaginal septum</strong></li>
+<li><strong>Constricting ring in uterus</strong></li>
+</ul>
+</div>
+<div class="defn-card cyan">
+<h3>Fetal causes (the passenger)</h3>
+<ul style="margin:0;padding-left:18px;font-size:13px">
+<li><strong>Macrosomic baby</strong></li>
+<li><strong>Malpresentation</strong></li>
+<li><strong>Malposition</strong></li>
+<li><strong>Malformed fetus</strong> (hydrocephalos, conjoint twins, fetal ascitis)</li>
+<li><strong>Locked twins</strong></li>
+</ul>
+</div>
+</div>
+<div class="card warn">
+<h4>⚠️ WARN · Fetal malformation as an obstruction cause</h4>
+<p style="font-size:13.5px;margin:0">Three specific fetal malformations are singled out as causes: <strong>hydrocephalos</strong> (enlarged head cannot engage), <strong>conjoint twins</strong> (interlocking fetal parts), and <strong>fetal ascitis</strong> (distended abdomen). The source spelling <em>"hydrocephalos"</em> (Greek genitive-style) is preserved verbatim — the more familiar English form is <em>hydrocephalus</em>. All three are diagnosable on <strong>obstetric ultrasound</strong> during antenatal care, which is why early detection can prevent obstructed labor.</p>
+</div>
+<div class="card note">
+<h4>📝 MEMORY ANCHOR · Source spelling preserved</h4>
+<p style="font-size:13.5px;margin:0">The source uses <strong>"hydrocephalos"</strong>, <strong>"ascitis"</strong> (not "ascites"), and <strong>"conjoint twins"</strong> (one word, not "conjoined"). All three forms are preserved verbatim in the lists above. The terms are clinically well-understood despite the variant spellings; what matters is the underlying pathology — an enlarged or distorted fetal part that cannot pass the pelvic inlet or outlet.</p>
+</div>
+</section>
+<!-- §4 Diagnosis -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Diagnosis · General + Abdominal + Vaginal examination</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The diagnosis is a <strong>clinical diagnosis</strong> — based on a <strong>triad</strong> of examination findings: (1) prolonged labor with maternal distress on general inspection, (2) characteristic abdominal findings, and (3) characteristic vaginal findings. No single sign is diagnostic; the combination is.</p>
+<h3 class="sub">A · General examination</h3>
+<div class="card">
+<ul style="margin:0;padding-left:20px;font-size:13.5px">
+<li>The labor has been prolonged (lasting <strong>more than 12 hours</strong>).</li>
+<li>The mother appears <strong>exhausted, anxious and weak</strong>.</li>
+<li>Features of maternal distress (<strong>dehydration, exhaustion and ketoacidosis, tachypnea, scanty urine and raised temperature</strong>).</li>
+</ul>
+</div>
+<h3 class="sub">B · Abdominal examination</h3>
+<div class="defn-card red">
+<h3>Abdominal findings</h3>
+<ul style="margin:0;padding-left:18px;font-size:13px">
+<li><strong>Uterus:</strong> hard and tender.</li>
+<li><strong>Pathological retraction ring</strong> (Bandl's ring) — see Chapter 33 §10.</li>
+<li><strong>Distended bladder</strong>.</li>
+<li><strong>Fetal heart sound:</strong> fetal distress or may be absent.</li>
+</ul>
+</div>
+<h3 class="sub">C · Vaginal examination</h3>
+<div class="defn-card red">
+<h3>Vaginal findings</h3>
+<ul style="margin:0;padding-left:18px;font-size:13px">
+<li><strong>Vulva:</strong> is edematous.</li>
+<li><strong>Vagina:</strong> is dry and hot.</li>
+<li><strong>Cervix:</strong> is fully or partially dilated, edematous.</li>
+<li><strong>The membranes:</strong> are ruptured.</li>
+<li><strong>The presenting part:</strong> is high and not engaged or impacted in the pelvis. There is <strong>large caput and moulding</strong>.</li>
+<li><strong>The cause of obstruction can be detected</strong>.</li>
+</ul>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL · The 12-hour partogram rule</h4>
+<p style="font-size:13.5px;margin:0">The source's first diagnostic criterion is <strong>"labor lasting more than 12 hours"</strong>. This is a deliberate operationalization of the WHO partogram's <strong>action line</strong>: once a woman's labor curve crosses the alert line, action is expected within 4 hours (or sooner); if no progress is made and labor has gone beyond <strong>12 hours</strong> total, obstructed labor should be the working diagnosis until proven otherwise. <strong>Strict partogram use is therefore the single most effective prevention tool</strong> — and the source cites this explicitly in §5.</p>
+</div>
+<div class="card danger">
+<h4>🚨 DANGER · "Large caput and moulding" — the cardinal vaginal sign</h4>
+<p style="font-size:13.5px;margin:0">The combination of <strong>large caput succedaneum</strong> (edematous swelling of the presenting scalp from prolonged pressure against the pelvic bones) and <strong>moulding</strong> (over-riding of the fetal skull bones) is the <strong>cardinal vaginal sign of obstructed labor</strong>. It tells you two things simultaneously: (1) the head has been <em>trying</em> to descend for a long time, and (2) the pelvis is <em>too small</em> to let it through. <strong>Continuing to push in this scenario risks uterine rupture</strong> — the decision must shift to cesarean section.</p>
+</div>
+</section>
+<!-- §5 Management -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Management · Prevention + General + Obstetrics</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Management has <strong>three pillars</strong> — <em>Prevention</em> (antenatal), <em>General management</em> (stabilize the mother), and <em>Obstetric management</em> (deliver the baby). All three are required; none is optional.</p>
+<h3 class="sub">A · Prevention</h3>
+<div class="defn-card green">
+<h3>Prevention · The most effective pillar</h3>
+<ol class="step-list" style="margin:4px 0 0">
+<li><strong>Proper assessment of pregnant women with regular ANC visit</strong> — every pregnancy should be assessed antenatally for risk factors (contracted pelvis, malpresentation, macrosomia, previous obstructed labor).</li>
+<li><strong>Early detection of the maternal or fetal causes which may precipitate to obstructed labor</strong> — clinical pelvimetry, obstetric ultrasound for fetal weight/lie/presentation, and review of obstetric history all contribute.</li>
+<li><strong>Partogram should be strictly followed</strong> — the partogram is the single most effective bedside tool for early detection of prolonged labor.</li>
+</ol>
+</div>
+<h3 class="sub">B · General management</h3>
+<div class="defn-card cyan">
+<h3>General management · Stabilize the mother</h3>
+<ol class="step-list" style="margin:4px 0 0">
+<li><strong>Assessment of the general condition of the mother</strong> — vitals, level of consciousness, hydration, urine output.</li>
+<li><strong>Correction of dehydration with IV fluid</strong> — the prolonged, exhausted, ketotic mother is hypovolemic; aggressive rehydration is the first resuscitation step.</li>
+<li><strong>Broad spectrum antibiotics</strong> — the membranes are ruptured, vaginal examinations have been done, and there is real risk of sepsis / chorioamnionitis.</li>
+<li><strong>Catheterization</strong> — the bladder is often distended (visible on abdominal exam as a suprapubic bulge) and catheterization both relieves the obstruction to the presenting part and allows accurate urine-output monitoring.</li>
+<li><strong>Correction of acidosis</strong> — the combination of dehydration, ketoacidosis (from prolonged labor with inadequate intake), and lactic acidosis (from tissue hypoxia) must be corrected before surgery.</li>
+</ol>
+</div>
+<h3 class="sub">C · Obstetric management</h3>
+<div class="defn-card red">
+<h3>Obstetric management · Deliver the baby</h3>
+<ol class="step-list" style="margin:4px 0 0">
+<li><strong>Cesarean section with active management of third stage of labor for fear of postpartum hemorrhage</strong> — CS is the <strong>only</strong> acceptable mode of delivery in established obstructed labor. Vaginal delivery (instrumental or not) is <strong>contraindicated</strong> — it would risk uterine rupture and fetal trauma.</li>
+<li><strong>Exploration of the birth canal</strong> — after CS, the entire birth canal (cervix, vagina, vulva, bladder) must be carefully examined for pressure-induced injuries: <strong>cervical tears, vaginal lacerations, vesicovaginal fistula</strong>. A missed bladder injury can present days later as a fistula.</li>
+</ol>
+</div>
+<div class="card danger">
+<h4>🚨 DANGER · Active management of third stage is non-negotiable</h4>
+<p style="font-size:13.5px;margin:0">After CS for obstructed labor, the uterus is at extreme risk of <strong>atony + postpartum hemorrhage (PPH)</strong> — it has been working against a mechanical obstruction for hours, and the lower segment is thinned and bruised. <strong>Active management of the third stage of labor (AMTSL)</strong> — prophylactic uterotonic (oxytocin 10 IU IV/IM, or carboprost in atony), controlled cord traction, and uterine massage — is therefore <strong>mandatory</strong>, not optional. The source uses the phrase <em>"for fear of postpartum hemorrhage"</em> to emphasize that this is the dominant concern in the third stage.</p>
+</div>
+<div class="card warn">
+<h4>⚠️ WARN · Why instrumental delivery is contraindicated</h4>
+<p style="font-size:13.5px;margin:0">In obstructed labor, the presenting part is either <strong>high and unengaged</strong> or <strong>impacted</strong> in the pelvis — neither is a safe situation for forceps or ventouse. Attempted instrumental delivery in this setting risks: <strong>fetal intracranial hemorrhage</strong>, <strong>shoulder dystocia</strong>, <strong>maternal soft-tissue injuries</strong> (cervical, vaginal, perineal), and <strong>uterine rupture</strong> if a fetal part is forcibly pulled through. <strong>Cesarean section is the only safe route</strong>.</p>
+</div>
+</section>
+<!-- §6 Complications -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Complications · Maternal + Fetal</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Obstructed labor is a <strong>dual-injury</strong> condition: both mother and fetus are at risk. The maternal complications are dominated by hemorrhage, rupture, and infection; the fetal complications are dominated by asphyxia and trauma.</p>
+<div class="grid-2">
+<div class="comp-card maternal">
+<h3>🤰 Maternal complications</h3>
+<ul style="font-size:13.5px">
+<li><strong>Postpartum hemorrhage</strong> — atonic uterus after prolonged obstructed labor (see §5 DANGER above).</li>
+<li><strong>Rupture uterus</strong> — the thinned lower segment ruptures if obstruction is not relieved; surgical emergency with high mortality.</li>
+<li><strong>Sepsis</strong> — prolonged rupture of membranes + multiple vaginal examinations + devitalized tissue = puerperal sepsis / septic shock.</li>
+<li><strong>Fistula (vesicovaginal)</strong> — pressure necrosis of the bladder base against the fetal head → ischemic sloughing → VVF; presents days to weeks postpartum with continuous urinary leakage.</li>
+</ul>
+</div>
+<div class="comp-card fetal">
+<h3>👶 Fetal complications</h3>
+<ul style="font-size:13.5px">
+<li><strong>Neonatal sepsis</strong> — ascending infection from the birth canal after prolonged ROM.</li>
+<li><strong>Convulsions (fits)</strong> — from hypoxic-ischemic encephalopathy secondary to prolonged fetal distress.</li>
+<li><strong>Severe asphyxia</strong> — the fetal head is compressed against the bony pelvis for hours; placental perfusion is reduced; fetal pH falls.</li>
+<li><strong>Death</strong> — stillbirth or early neonatal death; obstructed labor is a leading cause of perinatal mortality in low-resource settings.</li>
+</ul>
+</div>
+</div>
+<div class="card note">
+<h4>📝 MEMORY ANCHOR · The "HARD STOP" mnemonic for maternal complications</h4>
+<p style="font-size:13.5px;margin:0">Memorize the four maternal complications in source order: <strong>P</strong>ostpartum hemorrhage → <strong>R</strong>upture uterus → <strong>S</strong>epsis → <strong>F</strong>istula (vesicovaginal). The pattern is <em>immediate</em> (PPH) → <em>acute</em> (rupture) → <em>subacute</em> (sepsis) → <em>delayed</em> (fistula) — a useful way to remember the timeline of these injuries. The fetal mnemonic in source order: <strong>N</strong>eonatal sepsis → <strong>C</strong>onvulsions → <strong>S</strong>evere asphyxia → <strong>D</strong>eath (NCSD).</p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL · Vesicovaginal fistula — the social devastation</h4>
+<p style="font-size:13.5px;margin:0">Of all four maternal complications, <strong>vesicovaginal fistula (VVF)</strong> is the one with the most lasting social impact: a young woman is left with <strong>continuous urinary incontinence</strong> for the rest of her life (unless surgically repaired). The mechanism is <strong>pressure necrosis</strong> — the fetal head compresses the bladder base against the pubic symphysis, cutting off blood supply; the ischemic tissue sloughs 5–7 days postpartum, leaving a fistula. It is almost entirely <strong>preventable</strong> by timely CS, which is the strongest argument for the prevention pillar in §5.</p>
+</div>
+</section>
+<!-- §7 Student activity + Questions + References -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Student activity · Questions · References</h2>
+<details class="click-card activity">
+<summary>📚 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p style="font-size:14px;margin:0 0 8px">The students with their tutor are requested to <strong>check the departmental emergency records in order to find admitted (referred cases of obstructed labor)</strong> then <strong>revise the picked records concerning the presentation and management of each case</strong>.</p>
+<p style="font-size:13px;color:#475569;margin:6px 0 0">This is a <em>case-based learning</em> exercise: the goal is to find real records of obstructed labor (not textbook cases) and reconstruct — from the documentation — what the presentation looked like, what was done, and what the outcome was. Focus on: <strong>(a) the clinical signs that were documented</strong> (prolonged labor, caput, moulding, maternal distress, fetal distress); <strong>(b) the management sequence</strong> (general resuscitation → cesarean section → active third stage → birth-canal exploration); and <strong>(c) the maternal + fetal complications</strong> (look for PPH, sepsis, VVF, asphyxia, neonatal death).</p>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>📝 Self-assessment Questions <span class="hint"></span></summary>
+<div class="click-body">
+<p style="font-size:14px;margin:0 0 8px">Complete the self-assessment questionnaire for this chapter at the Google Form below:</p>
+<p style="margin:8px 0 0"><a href="https://forms.gle/iKh9gfcPh7pLBNKW6" rel="noopener" style="display:inline-block;background:#16A34A;color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13.5px" target="_blank">📝 Open Google Form · Obstructed Labor self-assessment</a></p>
+<p style="font-size:12px;color:#475569;margin:8px 0 0">Link: <code style="background:#F1F5F9;padding:2px 6px;border-radius:4px">https://forms.gle/iKh9gfcPh7pLBNKW6</code></p>
+</div>
+</details>
+<details class="click-card references">
+<summary>📖 References &amp; Visual Sources <span class="hint"></span></summary>
+<div class="click-body">
+<h3 class="sub" style="margin-top:0">Source material</h3>
+<ul style="font-size:13px;margin:0 0 12px">
+<li>Book Obstetrics 2025-2026, Chapter 34, <strong>"Obstructed Labor"</strong>, pages 180-182 (3 pages).</li>
+</ul>
+<h3 class="sub">Source visuals</h3>
+<p style="font-size:13px;margin:0 0 8px"><strong>0 source medical images embedded</strong> (this is a text-only chapter).</p>
+<p style="font-size:13px;color:#475569;margin:0 0 12px">Per <code>pdfimages -list</code>, the source PDF contains <strong>20 raw image objects</strong> (page 1: 12 images, page 3: 8 images). All 20 are <strong>decorative text strips from the original PowerPoint chapter slide-deck</strong> — chapter title, learning-objective bullet points, and running headers/footers. None of them contain medical content (anatomical illustrations, diagrams, clinical images, etc.), so none were embedded. Per the workflow rules (<em>"Avoid decorative stock photos, watermarked images, irrelevant visuals, duplicate visuals"</em>), these images are excluded from the infographic.</p>
+<h3 class="sub">External visuals</h3>
+<p style="font-size:13px;margin:0 0 12px"><strong>None.</strong> No external images were used in this infographic. All content is conveyed via <strong>color-coded cards, monospace callouts, tables, and structured bullet lists</strong>.</p>
+<h3 class="sub">Source-text preservation notes</h3>
+<ul style="font-size:13px;margin:0 0 0">
+<li><strong>"hydrocephalos"</strong> — preserved verbatim (Greek genitive-style form) in §3 fetal causes. The more familiar English form is <em>hydrocephalus</em>; the source form is preserved for fidelity.</li>
+<li><strong>"ascitis"</strong> — preserved verbatim in §3 fetal causes. The standard English form is <em>ascites</em>; the source form is preserved.</li>
+<li><strong>"conjoint twins"</strong> — preserved verbatim in §3 fetal causes. The standard English form is <em>conjoined twins</em>; the source form is preserved.</li>
+<li><strong>"fibroid,ovarian tumor"</strong> — preserved verbatim including the space-before-comma source form. Reads as a list of two pelvic-tumor types.</li>
+<li><strong>"Fibroid ,ovarian tumor"</strong> (with internal space) — note the space before the comma in the source; preserved verbatim.</li>
+<li><strong>"ketoacidosis"</strong> — preserved verbatim in §4 general examination.</li>
+<li><strong>"more than 12 hours"</strong> — preserved verbatim as the operational threshold in §4. Not 18, not 24 — the source explicitly says <strong>12 hours</strong>.</li>
+<li><strong>"large caput and moulding"</strong> — preserved verbatim in §4 vaginal examination.</li>
+<li><strong>"Pathological retraction ring"</strong> — preserved verbatim in §4 abdominal examination, with the source's capitalization. (See Chapter 33 §10 for the full Bandl's ring discussion.)</li>
+<li><strong>"in spite of good uterine contractions"</strong> — preserved verbatim in the §2 KEY DEFINITION. The word "in spite of" emphasizes the diagnostic contrast with prolonged-but-inefficient labor (Chapter 33).</li>
+<li><strong>"exploration of the birth canal"</strong> — preserved verbatim in §5 obstetric management. This is the post-CS step that prevents missed bladder/cervical injuries.</li>
+<li><strong>"for fear of postpartum hemorrhage"</strong> — preserved verbatim in §5 obstetric management. The source's specific phrasing of the indication for active third-stage management is preserved.</li>
+<li><strong>"Fistula (vesicovaginal)"</strong> — preserved verbatim in §6 complications, with the source's parenthetical disambiguator (vesicovaginal rather than rectovaginal).</li>
+<li><strong>"Convulsions (fits)"</strong> — preserved verbatim in §6 complications. The source's parenthetical British-English synonym (fits) is preserved for clarity.</li>
+<li><strong>"death"</strong> — preserved verbatim as the final fetal complication in §6. The bluntness of the source's wording is intentional and is preserved.</li>
+<li><strong>"check the departmental emergency records"</strong> — preserved verbatim in §7 student activity.</li>
+<li><strong>"find admitted (referred cases of obstructed labor)"</strong> — preserved verbatim in §7 student activity, including the source's parenthetical "referred cases".</li>
+<li><strong>"revise the picked records"</strong> — preserved verbatim in §7 student activity. "Picked" is a colloquial source form meaning "selected / chosen".</li>
+<li><strong>Google Form URL</strong> <code>https://forms.gle/iKh9gfcPh7pLBNKW6</code> — preserved verbatim in §7 Self-assessment.</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- FOOTER -->
+<footer>
+<strong>Topic 34 · Obstructed Labor</strong> · Book Obstetrics 2025-2026, p. 180-182 (3 pages) · 7 content sections preserved · 🟢 Source visuals: 0 (text-only chapter) · 🔴 External visuals: 0 · Self-assessment: <a href="https://forms.gle/iKh9gfcPh7pLBNKW6" rel="noopener" style="color:#1D4ED8" target="_blank">forms.gle/iKh9gfcPh7pLBNKW6</a>
+</footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

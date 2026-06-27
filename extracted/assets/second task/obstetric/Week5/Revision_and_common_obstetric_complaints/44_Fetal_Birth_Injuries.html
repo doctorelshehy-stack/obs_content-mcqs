@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 44 — Fetal Birth Injuries</title>
+<style>* { box-sizing: border-box; }
+  body { margin: 0; padding: 0; font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(180deg, #F0FDFA 0%, #F8FAFC 240px); color: #0F172A; line-height: 1.6; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 28px 64px 28px; }
+  .hero { background: linear-gradient(135deg, #134E4A 0%, #0F766E 50%, #0D9488 100%); color: white; border-radius: 18px; padding: 28px 32px; box-shadow: 0 6px 20px rgba(15,118,110,0.28); margin-bottom: 18px; }
+  .hero h1 { margin: 0 0 6px 0; font-size: 30px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 15.5px; opacity: 0.95; font-weight: 500; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32); padding: 5px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+  .toc { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .toc h2 { margin: 0 0 12px 0; font-size: 17px; color: #1E293B; display: flex; align-items: center; gap: 8px; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 14px; }
+  .toc-grid a { display: block; padding: 6px 10px; border-radius: 8px; text-decoration: none; color: #0F766E; font-size: 13.5px; font-weight: 500; border: 1px solid transparent; }
+  .toc-grid a:hover { background: #F1F5F9; border-color: #CBD5E1; }
+  .toc-grid .num { display: inline-block; min-width: 22px; color: #64748B; font-weight: 700; }
+  section { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px 26px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  section h2.sec { margin: 0 0 14px 0; font-size: 22px; color: #0F766E; display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 2px solid #CCFBF1; }
+  section h2.sec .num { background: #0F766E; color: white; border-radius: 8px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; }
+  h3.sub { font-size: 16px; color: #1E293B; margin: 18px 0 8px 0; padding-left: 10px; border-left: 4px solid #0D9488; font-weight: 700; }
+  h4 { font-size: 14.5px; color: #1E293B; margin: 14px 0 6px 0; font-weight: 700; }
+  p { margin: 6px 0; font-size: 13.5px; }
+  ul, ol { margin: 6px 0 10px 0; padding-left: 24px; }
+  li { margin: 3px 0; font-size: 13.5px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .keydef { background: #ECFDF5; border-left: 5px solid #059669; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .keydef::before { content: "KEY DEFINITION"; display: block; font-weight: 800; color: #065F46; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .pearl { background: #ECFEFF; border-left: 5px solid #0891B2; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .pearl::before { content: "CLINICAL PEARL"; display: block; font-weight: 800; color: #155E75; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .anchor { background: #FEF9C3; border-left: 5px solid #CA8A04; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .anchor::before { content: "MEMORY ANCHOR"; display: block; font-weight: 800; color: #713F12; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .warn { background: #FEF3C7; border-left: 5px solid #D97706; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .warn::before { content: "WARN"; display: block; font-weight: 800; color: #92400E; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .danger { background: #FEE2E2; border-left: 5px solid #DC2626; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .danger::before { content: "DANGER"; display: block; font-weight: 800; color: #991B1B; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .note { background: #F3E8FF; border-left: 5px solid #8B5CF6; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .note::before { content: "NOTE"; display: block; font-weight: 800; color: #6D28D9; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .contra { background: #FEF2F2; border-left: 5px solid #EF4444; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .contra::before { content: "CONTRAINDICATION / SPECIAL NOTE"; display: block; font-weight: 800; color: #991B1B; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  th { background: #F0FDFA; color: #134E4A; text-align: left; padding: 9px 12px; font-weight: 700; border-bottom: 2px solid #99F6E4; }
+  td { padding: 9px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  .footer { text-align: center; color: #64748B; font-size: 12.5px; padding: 18px 0 4px 0; }
+  .footer a { color: #0F766E; text-decoration: none; font-weight: 600; }
+  .qform-btn { display: inline-block; background: linear-gradient(135deg, #0F766E, #0D9488); color: white; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13.5px; margin: 6px 0; }
+  .qform-btn:hover { filter: brightness(1.1); }
+  .qform-code { display: inline-block; background: #F0FDFA; color: #134E4A; padding: 4px 10px; border-radius: 6px; font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace; font-size: 12.5px; margin-left: 8px; border: 1px solid #99F6E4; }
+  .click-card { background: #FAFBFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 0; margin: 10px 0; overflow: hidden; }
+  .click-card.green { border-left: 4px solid #22C55E; }
+  .click-card.blue { border-left: 4px solid #3B82F6; }
+  .click-card.purple { border-left: 4px solid #8B5CF6; }
+  .click-card summary { padding: 12px 18px; cursor: pointer; font-weight: 700; font-size: 14.5px; color: #1E293B; list-style: none; display: flex; align-items: center; gap: 10px; user-select: none; }
+  .click-card summary::before { content: "▶"; color: #64748B; transition: transform 0.2s; font-size: 11px; }
+  .click-card[open] summary::before { content: "▼"; }
+  .click-card[open] summary { border-bottom: 1px solid #E2E8F0; }
+  .click-card .body { padding: 14px 18px; font-size: 13.5px; }
+  .src-viz { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 14px; padding: 16px 20px; margin: 14px 0; }
+  .src-viz .badge { display: inline-block; background: #22C55E; color: white; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .src-viz img { max-width: 100%; max-height: 360px; object-fit: contain; border-radius: 10px; display: block; margin: 0 auto; }
+  .ext-viz { background: #FEF2F2; border: 1px solid #FECACA; border-radius: 14px; padding: 16px 20px; margin: 14px 0; }
+  .ext-viz .badge { display: inline-block; background: #EF4444; color: white; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .ext-viz img { max-width: 100%; max-height: 360px; object-fit: contain; border-radius: 10px; display: block; margin: 0 auto; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin: 10px 0; }
+  .card { background: white; border: 1px solid #E2E8F0; border-radius: 12px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .card .label { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #64748B; font-weight: 700; margin-bottom: 6px; }
+  .card .val { font-size: 14.5px; color: #0F172A; font-weight: 600; }
+  .src-caption { font-size: 12.5px; color: #475569; text-align: center; margin-top: 8px; }
+  .src-source { font-size: 12px; color: #64748B; text-align: center; margin-top: 4px; }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+<!-- HERO -->
+<div class="hero">
+<h1>Topic 44 — Fetal Birth Injuries</h1>
+<div class="sub">Trauma during delivery: causes, types, and management
+Source: Book Obstetrics 2025-2026, p. 225-227</div>
+<div class="meta">
+<span class="chip">Chapter · p. 225-227</span>
+<span class="chip">2 ILOs</span>
+<span class="chip">0 source images</span>
+<span class="chip">8 sections</span>
+</div>
+</div>
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+<h2>Table of Contents</h2>
+<div class="toc-grid">
+<a href="#s1"><span class="num">§1</span> ILOs of this chapter</a>
+<a href="#s2"><span class="num">§2</span> Causes of birth trauma</a>
+<a href="#s3"><span class="num">§3</span> Types — Fractures</a>
+<a href="#s4"><span class="num">§4</span> Types — Cephalohematomas</a>
+<a href="#s5"><span class="num">§5</span> Nerve palsies</a>
+<a href="#s6"><span class="num">§6</span> Sternomastoid tumors</a>
+<a href="#s7"><span class="num">§7</span> Lacerations</a>
+<a href="#s8"><span class="num">§8</span> Student activity · Questions · References</a>
+</div>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="num">1</span> ILOs of this chapter</h2>
+<ol>
+<li>To be able to explain the etiology of fetal injuries</li>
+<li>To be able to describe various forms of fetal injuries</li>
+</ol>
+</section>
+<!-- §2 Causes -->
+<section id="s2">
+<h2 class="sec"><span class="num">2</span> Causes of birth trauma</h2>
+<div class="keydef">
+<p><strong>Birth trauma:</strong> Marked compression or sudden compression-decompression during delivery.</p>
+</div>
+<p>Trauma can arise from three classic mechanisms plus iatrogenic causes:</p>
+<h3 class="sub">The 3 P’s</h3>
+<div class="card-grid">
+<div class="card">
+<div class="label">Passages</div>
+<div class="val">Contracted pelvis, soft tissue obstruction.</div>
+</div>
+<div class="card">
+<div class="label">Passenger</div>
+<div class="val">Fetal macrosomia, malpresentation, malposition.</div>
+</div>
+<div class="card">
+<div class="label">Power</div>
+<div class="val">Precipitate labor.</div>
+</div>
+</div>
+<h3 class="sub">Practice (Iatrogenic)</h3>
+<ul>
+<li>Instrumental delivery: ventouse, forceps.</li>
+<li>Intrauterine manipulation: internal podalic version, breech extraction.</li>
+</ul>
+</section>
+<!-- §3 Fractures -->
+<section id="s3">
+<h2 class="sec"><span class="num">3</span> Types — Fractures</h2>
+<p>Fractures usually result from traumatic deliveries as in shoulder dystocia and difficult instrumental deliveries.</p>
+<h3 class="sub">Hierarchy of frequency</h3>
+<ol>
+<li>Clavicle (most frequent).</li>
+<li>Humerus.</li>
+<li>Femur.</li>
+<li>Skull bones.</li>
+</ol>
+<h3 class="sub">By bone type</h3>
+<div class="grid-2">
+<div class="card">
+<div class="label">Clavicular fractures</div>
+<div class="val">Best treated conservatively. Mild analgesia may be helpful.</div>
+</div>
+<div class="card">
+<div class="label">Long bone fractures</div>
+<div class="val">May require simple splinting to immobilise the limb and thus reduce pain.</div>
+</div>
+</div>
+<h3 class="sub">Skull fractures</h3>
+<div class="danger">
+<strong>More serious:</strong> The possibility of underlying hemorrhage must be considered.
+    </div>
+<div class="pearl">
+<strong>Outlook:</strong> The majority of neonatal fractures will heal with conservative treatment.
+    </div>
+</section>
+<!-- §4 Cephalohematomas -->
+<section id="s4">
+<h2 class="sec"><span class="num">4</span> Types — Cephalohematomas</h2>
+<p>These result from bleeding between the periosteum and skull bones, and take the shape of the underlying skull bone.</p>
+<div class="warn">
+<strong>Rule out associated injury:</strong> Skull fracture or intracranial bleeding should always be ruled out.
+    </div>
+<div class="pearl">
+<strong>Prognosis:</strong> Most cephalohematomas are benign and resolve without problems.
+    </div>
+<h3 class="sub">Cephalohaematoma vs Caput Succedaneum — Comparison</h3>
+<table>
+<tr>
+<th>Feature</th>
+<th>Cephalohaematoma</th>
+<th>Caput Succedaneum</th>
+</tr>
+<tr>
+<td>Onset</td>
+<td>Develops hours or days after birth.</td>
+<td>Present at birth.</td>
+</tr>
+<tr>
+<td>Nature</td>
+<td>Localized hematoma to one bone, limited by sutures at its edges.</td>
+<td>Diffuse tissue oedema overlying more than one bone.</td>
+</tr>
+<tr>
+<td>Edges</td>
+<td>Well-defined edges.</td>
+<td>Ill-defined edges.</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>Elastic (does not pit on pressure).</td>
+<td>Soft (pits on pressure).</td>
+</tr>
+<tr>
+<td>Resolution</td>
+<td>Disappears within few weeks.</td>
+<td>Disappears within 1-2 days.</td>
+</tr>
+</table>
+</section>
+<!-- §5 Nerve palsies -->
+<section id="s5">
+<h2 class="sec"><span class="num">5</span> Nerve palsies</h2>
+<h3 class="sub">Erb’s palsy</h3>
+<ul>
+<li>Most common nerve palsy.</li>
+<li>Due to damage to the brachial plexus (C5, C6 and C7).</li>
+<li>Commonly associated with traction on the neck and shoulders during difficult deliveries.</li>
+<li>Result: flaccid arm held in a pronated and internally rotated position.</li>
+</ul>
+<div class="grid-2">
+<div class="card">
+<div class="label">Early management</div>
+<div class="val">Physiotherapy can help.</div>
+</div>
+<div class="card">
+<div class="label">Advanced options</div>
+<div class="val">Surgical treatment techniques to repair damaged nerves are now available.</div>
+</div>
+</div>
+<h3 class="sub">Facial palsy</h3>
+<ul>
+<li>Commonly caused by obstetric maneuvers, such as the use of forceps causing pressure damage.</li>
+<li>Most are probably the result of external pressure causing a lower motor neuron injury.</li>
+<li>Prognosis is excellent.</li>
+</ul>
+<div class="warn">
+<strong>Upper motor neuron lesion:</strong> If suspected, the infant should be investigated for possible cerebral injury or congenital disorders.
+    </div>
+<div class="pearl">
+<strong>Treatment:</strong> No specific treatment is required for facial palsy.
+    </div>
+</section>
+<!-- §6 Sternomastoid -->
+<section id="s6">
+<h2 class="sec"><span class="num">6</span> Sternomastoid tumors</h2>
+<ul>
+<li>Result from bleeding into the sternomastoid muscle.</li>
+<li>Not normally recognized at birth.</li>
+<li>Do not become obvious until a few weeks of age.</li>
+</ul>
+<div class="card">
+<div class="label">Management</div>
+<div class="val">Physiotherapy is required to prevent contracture of the muscle.</div>
+</div>
+<div class="pearl">
+<strong>Prognosis:</strong> Good.
+    </div>
+</section>
+<!-- §7 Lacerations -->
+<section id="s7">
+<h2 class="sec"><span class="num">7</span> Lacerations</h2>
+<ul>
+<li>The infant may suffer skin lacerations during delivery, usually during Caesarean section.</li>
+<li>They are usually superficial and heal without problems.</li>
+<li>Suturing may be needed for deeper wounds.</li>
+</ul>
+</section>
+<!-- §8 Student activity + Questions + References -->
+<section id="s8">
+<h2 class="sec"><span class="num">8</span> Student activity · Questions · References</h2>
+<details class="click-card blue">
+<summary>Student activity</summary>
+<div class="body">
+        Each group of students is requested to bring an illustrative diagram of one type of fetal injury to be revised by the tutor of bedside part of the clinical round.
+      </div>
+</details>
+<details class="click-card green">
+<summary>Questions</summary>
+<div class="body">
+<p>Test yourself with the official Google Form:</p>
+<a class="qform-btn" href="https://forms.gle/XFotQL6jGtGpaZTY9" rel="noopener" target="_blank">Open Questions Form ↗</a>
+<span class="qform-code">forms.gle/XFotQL6jGtGpaZTY9</span>
+</div>
+</details>
+<details class="click-card purple">
+<summary>References &amp; Visual Sources</summary>
+<div class="body">
+<p><strong>Source PDF:</strong> Book Obstetrics 2025-2026, Chapter 44 — Fetal Birth Injuries (p. 225-227).</p>
+<p><strong>Source images:</strong> 0 (chapter contains no embedded medical illustrations; `pdfimages -list` returned 0 images).</p>
+<p><strong>External images:</strong> 0</p>
+<p><strong>Source-text preservation notes:</strong></p>
+<ul>
+<li>ILOs preserved verbatim: "To be able to explain the etiology of fetal injuries" and "To be able to describe various forms of fetal injuries".</li>
+<li>Birth-trauma cause framework preserved verbatim: marked compression or sudden compression-decompression; 3 P's (Passages / Passenger / Power); Practice/iatrogenic (ventouse, forceps, internal podalic version, breech extraction).</li>
+<li>Fracture type hierarchy preserved verbatim: clavicle most frequent, then humerus, femur, skull bones.</li>
+<li>Conservative-treatment mantra for fractures preserved verbatim.</li>
+<li>Skull-fracture danger warning preserved verbatim: underlying hemorrhage must be considered.</li>
+<li>Cephalohematoma definition preserved verbatim: bleeding between periosteum and skull bones, shaped by underlying bone.</li>
+<li>Associated-injury warning preserved verbatim: skull fracture or intracranial bleeding.</li>
+<li>Benign prognosis preserved verbatim: most resolve without problems.</li>
+<li>Cephalohaematoma vs Caput Succedaneum comparison table built from source phrases only (all 5 rows preserve source wording).</li>
+<li>Erb's palsy preserved verbatim: brachial plexus C5, C6, C7; traction on neck and shoulders; flaccid arm pronated and internally rotated.</li>
+<li>Facial palsy etiology preserved verbatim: forceps pressure damage; lower motor neuron injury; excellent prognosis.</li>
+<li>Upper-motor-neuron workup rule preserved verbatim: investigate for cerebral injury or congenital disorders.</li>
+<li>Sternomastoid tumor timeline preserved verbatim: not recognized at birth, obvious at few weeks.</li>
+<li>Physiotherapy requirement for sternomastoid tumor preserved verbatim.</li>
+<li>Laceration context preserved verbatim: usually during Caesarean section, usually superficial.</li>
+<li>Suturing note preserved verbatim: suturing may be needed for deeper wounds.</li>
+</ul>
+</div>
+</details>
+<div class="footer">Source: Book Obstetrics 2025-2026, Chapter 44 — Fetal Birth Injuries (p. 225-227)</div>
+</section>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

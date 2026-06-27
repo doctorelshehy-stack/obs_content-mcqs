@@ -1,0 +1,344 @@
+{
+  "s2": [
+    {
+      "q": "Amniotic fluid embolism (AFE) is BEST described as:",
+      "options": [
+        "A true mechanical obstruction of pulmonary arteries by fetal debris",
+        "An anaphylactoid reaction to fetal fluid/tissue entering maternal circulation via the placental bed",
+        "A form of septic shock",
+        "A type of venous thromboembolism"
+      ],
+      "correct": 1,
+      "explain": "AFE is an anaphylactoid (not purely embolic) reaction to fetal antigens. Modern term: 'anaphylactoid syndrome of pregnancy'."
+    },
+    {
+      "q": "What is the approximate incidence of AFE?",
+      "options": [
+        "1-2 per 1,000 deliveries",
+        "1-2 per 40,000 deliveries",
+        "1 per 1,000 deliveries per year",
+        "1 per 10,000 deliveries"
+      ],
+      "correct": 1,
+      "explain": "AFE is rare (~1-2 per 40,000 deliveries) but accounts for 5-15% of maternal deaths in developed countries."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which TWO conditions allow amniotic fluid to enter maternal circulation?",
+      "options": [
+        "Increased intrauterine pressure and opened uterine/endocervical veins",
+        "Decreased intrauterine pressure and placental abruption",
+        "Fetal distress and meconium staining",
+        "Prolonged labor and maternal fever"
+      ],
+      "correct": 0,
+      "explain": "Two gateway mechanisms: (1) increased intrauterine pressure (abruption, oxytocin overdose), (2) opened uterine/endocervical veins (lacerations, rupture)."
+    },
+    {
+      "q": "Meconium in the setting of AFE:",
+      "options": [
+        "Is the primary cause of AFE",
+        "Potentiates the toxic nature of amniotic fluid and worsens the condition",
+        "Has no effect on the severity",
+        "Protects against the anaphylactoid reaction"
+      ],
+      "correct": 1,
+      "explain": "Meconium potentiates, does not initiate. It contains vasoactive substances that amplify the anaphylactoid reaction."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The pathophysiologic cascade of AFE begins with entry of AF into maternal veins, followed by:",
+      "options": [
+        "Acute cor pulmonale → anaphylaxis → DIC → hypoxia → death",
+        "Acute anaphylactoid reaction → pulmonary vascular obstruction → acute cor pulmonale → hypoxia/cardiogenic shock → DIC → coma/death",
+        "DIC → pulmonary obstruction → anaphylaxis → death",
+        "Hypoxia → DIC → anaphylaxis → cor pulmonale → death"
+      ],
+      "correct": 1,
+      "explain": "Correct cascade: Entry → Anaphylaxis → Pulmonary obstruction → Cor pulmonale → Hypoxia/Shock → DIC → Coma/death."
+    },
+    {
+      "q": "In AFE, acute cor pulmonale results from:",
+      "options": [
+        "Left ventricular failure",
+        "Abrupt increase in right ventricular afterload with decreased LV preload",
+        "Pulmonary venous hypertension",
+        "Myocardial infarction"
+      ],
+      "correct": 1,
+      "explain": "Pulmonary vascular obstruction causes abrupt ↑ RV afterload and ↓ LV preload, leading to acute cor pulmonale."
+    },
+    {
+      "q": "The final common pathway before death in AFE is:",
+      "options": [
+        "Renal failure",
+        "Hepatic failure",
+        "Hypoxic brain injury and multi-organ failure with DIC",
+        "Cardiac arrhythmia alone"
+      ],
+      "correct": 2,
+      "explain": "Step 7 of the cascade: deep coma → death from hypoxic brain injury and multi-organ failure. Immediate death occurs in >50% of cases."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which of the following is a risk factor for AFE?",
+      "options": [
+        "Placenta previa",
+        "Placental abruption",
+        "Headache and visual disturbances",
+        "Premature rupture of membranes"
+      ],
+      "correct": 1,
+      "explain": "Placental abruption is a key risk factor as disruption of the placental barrier allows AF entry. Other RFs include operative delivery, cervical lacerations."
+    },
+    {
+      "q": "Which of the following BEST describes AFE risk factor timing?",
+      "options": [
+        "Only occurs in the first trimester",
+        "Only occurs during cesarean section",
+        "Associated with conditions that disrupt the placental barrier or increase intrauterine pressure",
+        "Primarily seen in post-term pregnancies"
+      ],
+      "correct": 2,
+      "explain": "Any condition disrupting the placental bed (abruption, trauma, lacerations) or raising intrauterine pressure can precipitate AFE."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The classic clinical triad of AFE is:",
+      "options": [
+        "Fever, tachycardia, hypotension",
+        "Hypoxia, cardiovascular collapse, DIC",
+        "Bradycardia, hypertension, hyperthermia",
+        "Chest pain, hemoptysis, dyspnea"
+      ],
+      "correct": 1,
+      "explain": "The classic triad: hypoxia (severe dyspnea/cyanosis) + cardiovascular collapse + DIC, occurring within minutes of a difficult delivery."
+    },
+    {
+      "q": "The hallmark cardiovascular finding in AFE is:",
+      "options": [
+        "Hypertension and bradycardia",
+        "Hypotension, tachycardia, and signs of right heart failure",
+        "Atrial fibrillation",
+        "Widened pulse pressure"
+      ],
+      "correct": 1,
+      "explain": "Cardiovascular: hypotension, tachycardia, signs of right heart failure from acute cor pulmonale."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Which laboratory finding is most consistent with DIC in AFE?",
+      "options": [
+        "Elevated fibrinogen, normal PT/PTT",
+        "Prolonged PT/PTT, low fibrinogen, elevated D-dimer",
+        "Normal PT/PTT, elevated platelets",
+        "Low D-dimer, normal PT/PTT"
+      ],
+      "correct": 1,
+      "explain": "DIC shows: ↑↑ PT/PTT, ↓↓ fibrinogen, ↑↑ D-dimer, ↓ platelets. This guides blood-product replacement."
+    },
+    {
+      "q": "The definitive diagnostic finding for AFE is:",
+      "options": [
+        "CT chest showing pulmonary infiltrates",
+        "Low serum calcium",
+        "Identification of amniotic fluid debris (fetal squamous cells, lanugo, vernix) in pulmonary vessels at autopsy",
+        "Elevated serum tryptase"
+      ],
+      "correct": 2,
+      "explain": "Autopsy finding of AF debris in pulmonary vessels is the only histopathologically confirmatory test. In survivors, diagnosis remains presumptive."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

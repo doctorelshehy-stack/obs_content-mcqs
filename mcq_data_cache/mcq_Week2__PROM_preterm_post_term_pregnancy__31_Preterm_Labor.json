@@ -1,0 +1,515 @@
+{
+  "s2": [
+    {
+      "q": "Preterm labor is defined as regular uterine contractions associated with cervical change occurring between:",
+      "options": [
+        "16 to 34 weeks' gestation",
+        "20 to 37 weeks' gestation",
+        "24 to 40 weeks' gestation",
+        "28 to 36 weeks' gestation"
+      ],
+      "correct": 1,
+      "explain": "Preterm labor is defined as regular uterine contractions with cervical change between 20 and 37 weeks' gestation. The 20-week lower bound distinguishes it from late miscarriage."
+    },
+    {
+      "q": "What distinguishes true preterm labor from Braxton-Hicks contractions?",
+      "options": [
+        "Pain intensity alone",
+        "Effacement and dilatation of the cervix",
+        "Maternal heart rate > 100 bpm",
+        "Gestational age < 28 weeks"
+      ],
+      "correct": 1,
+      "explain": "Effacement and dilatation of the cervix distinguishes true labor from Braxton-Hicks contractions. Regular contractions alone are not sufficient for diagnosis."
+    },
+    {
+      "q": "A premature infant is defined as an infant born:",
+      "options": [
+        "Before 34 completed weeks",
+        "Before 37 completed weeks",
+        "Before 40 completed weeks",
+        "Before 32 completed weeks"
+      ],
+      "correct": 1,
+      "explain": "A premature infant is an infant born before 37 completed weeks of gestation."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "What is the most common cause of preterm labor?",
+      "options": [
+        "Cervical incompetence",
+        "Idiopathic (no specific risk factor identified)",
+        "Multiple gestation",
+        "Maternal infection"
+      ],
+      "correct": 1,
+      "explain": "The most common cause of preterm labor is idiopathic — i.e., when no specific risk factor is identified, idiopathic remains the leading cause."
+    },
+    {
+      "q": "Which of the following is NOT a maternal risk factor for preterm labor?",
+      "options": [
+        "Uterine overdistension (multiple gestations, polyhydramnios)",
+        "Previous preterm labor",
+        "Fetal congenital anomalies",
+        "Maternal age extremes ( 35 years)"
+      ],
+      "correct": 2,
+      "explain": "Fetal congenital anomalies are a fetal cause/risk factor, not a maternal one. Maternal risk factors include previous preterm labor, infection, uterine anomalies, smoking, obesity, overdistension, maternal age extremes, and bleeding."
+    },
+    {
+      "q": "Uterine overdistension as a maternal risk factor for PTL can result from:",
+      "options": [
+        "Uterine fibroids",
+        "Multiple gestations and polyhydramnios",
+        "Endometriosis",
+        "Cervical incompetence"
+      ],
+      "correct": 1,
+      "explain": "Multiple gestations (twins, triplets) and polyhydramnios mechanically stretch the myometrium, leading to uterine overdistension — a recognized maternal risk factor for preterm labor."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which maternal characteristic increases risk?",
+      "options": [
+        "Advanced maternal age",
+        "High parity",
+        "Previous obstetric history",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Multiple maternal factors contribute to obstetric risk."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which of the following are fetal causes/risk factors for preterm labor?",
+      "options": [
+        "Smoking and obesity",
+        "Previous preterm labor",
+        "Fetal anomalies and IUGR",
+        "Uterine anomalies and incompetent os"
+      ],
+      "correct": 2,
+      "explain": "Fetal causes of preterm labor include fetal anomalies (congenital structural malformations) and intrauterine growth restriction (IUGR)."
+    },
+    {
+      "q": "A compromised fetus may trigger earlier delivery in preterm labor through which fetal risk factor?",
+      "options": [
+        "Fetal macrosomia",
+        "Intrauterine growth restriction (IUGR)",
+        "Polyhydramnios",
+        "Cord prolapse"
+      ],
+      "correct": 1,
+      "explain": "IUGR (intrauterine growth restriction) — a compromised fetus may trigger earlier delivery as a fetal cause of preterm labor."
+    },
+    {
+      "q": "Congenital structural malformations associated with preterm labor include all EXCEPT:",
+      "options": [
+        "Neural tube defects",
+        "Cardiac anomalies",
+        "Adrenal hypoplasia",
+        "Hydrocephalus"
+      ],
+      "correct": 2,
+      "explain": "Adrenal hypoplasia is associated with postterm pregnancy (diminished fetal cortisol response), not preterm labor. Neural tube defects and cardiac anomalies are fetal causes of PTL."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which maternal characteristic increases risk?",
+      "options": [
+        "Advanced maternal age",
+        "High parity",
+        "Previous obstetric history",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Multiple maternal factors contribute to obstetric risk."
+    }
+  ],
+  "s5": [
+    {
+      "q": "According to the textbook, the contraction-frequency threshold that defines active preterm labor is:",
+      "options": [
+        "2 contractions in 10 minutes",
+        "4 contractions in 20 minutes or 8 in 60 minutes",
+        "6 contractions in 30 minutes",
+        "Continuous contractions lasting > 2 minutes"
+      ],
+      "correct": 1,
+      "explain": "The '4 in 20 / 8 in 60' rule is the textbook definition of active preterm labor — this frequency triggers tocolysis and corticosteroids."
+    },
+    {
+      "q": "Which of the following is a symptom/sign of preterm labor?",
+      "options": [
+        "Decreased fetal movements",
+        "Passage of blood-stained vaginal discharge (show)",
+        "Polyhydramnios",
+        "Maternal hypotension"
+      ],
+      "correct": 1,
+      "explain": "Symptoms and signs of PTL include uterine contractions (4 in 20 min or 8 in 60 min), lower back pain, passage of blood-stained vaginal discharge (show), sensation of pelvic pressure, and bulging membranes / rupture of membranes."
+    },
+    {
+      "q": "The sensation of pelvic pressure in preterm labor is described as:",
+      "options": [
+        "Sharp stabbing pain in the upper abdomen",
+        "Feeling that the fetus is pushing down",
+        "Constant dull ache in the right flank",
+        "Burning sensation during urination"
+      ],
+      "correct": 1,
+      "explain": "Sensation of pelvic pressure is described as a feeling that the fetus is pushing down — a classic symptom of preterm labor."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The normal shape of the cervix on transvaginal ultrasound progresses through which sequence as preterm labor approaches?",
+      "options": [
+        "U → V → Y → T",
+        "T → Y → V → U",
+        "Y → T → U → V",
+        "V → U → T → Y"
+      ],
+      "correct": 1,
+      "explain": "The cervical shape progression is T → Y → V → U. A U-shaped cervix on TVUS indicates imminent delivery."
+    },
+    {
+      "q": "What is the diagnostic window for the fetal fibronectin test in predicting preterm labor?",
+      "options": [
+        "20 to 28 weeks",
+        "24 to 34 weeks",
+        "28 to 37 weeks",
+        "16 to 24 weeks"
+      ],
+      "correct": 1,
+      "explain": "The fetal fibronectin test is useful only between 24 and 34 weeks. Before 24 weeks, fibronectin may normally be present; after 34 weeks, its presence is no longer predictive."
+    },
+    {
+      "q": "On transvaginal ultrasound, a cervical dilatation greater than what measurement suggests preterm labor?",
+      "options": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm"
+      ],
+      "correct": 1,
+      "explain": "Transvaginal ultrasound showing dilatation of cervix > 2 cm is suggestive of preterm labor."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "The first-line investigation is:",
+      "options": [
+        "Ultrasound",
+        "Complete blood count",
+        "Urine analysis",
+        "Depends on the clinical suspicion"
+      ],
+      "correct": 3,
+      "explain": "Choice of investigation depends on the suspected condition."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Which of the following is a prophylactic measure for preterm labor in women with cervical incompetence?",
+      "options": [
+        "Bed rest at 20 weeks",
+        "Cerclage surgery",
+        "Antenatal corticosteroids at 28 weeks",
+        "Tocolysis at 32 weeks"
+      ],
+      "correct": 1,
+      "explain": "Cerclage surgery (e.g., McDonald or Shirodkar suture) is placed prophylactically in women with a history of cervical insufficiency, typically at 12–14 weeks, and removed at 36–37 weeks."
+    },
+    {
+      "q": "Prophylactic management of preterm labor includes all of the following EXCEPT:",
+      "options": [
+        "Smoking cessation",
+        "Cerclage surgery",
+        "Progesterone",
+        "Intravenous tocolysis"
+      ],
+      "correct": 3,
+      "explain": "Prophylactic measures include stopping smoking, cerclage surgery (if cervical incompetence), and progesterone. IV tocolysis is part of curative/acute management, not prophylaxis."
+    },
+    {
+      "q": "At what gestational age is a prophylactic cerclage typically placed?",
+      "options": [
+        "6–8 weeks",
+        "12–14 weeks",
+        "20–24 weeks",
+        "28–32 weeks"
+      ],
+      "correct": 1,
+      "explain": "Cerclage is placed prophylactically at 12–14 weeks and removed at 36–37 weeks."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The three drug therapy pillars in curative management of established preterm labor are:",
+      "options": [
+        "Antibiotics, antihypertensives, and magnesium sulfate",
+        "Corticosteroids, tocolytics, and antibiotics",
+        "Oxytocin, prostaglandins, and ergometrine",
+        "Analgesics, sedatives, and antispasmodics"
+      ],
+      "correct": 1,
+      "explain": "In established PTL, the three drug-therapy pillars are corticosteroids (for fetal lung maturity), tocolytics (to delay delivery 48 hours), and antibiotics (for GBS prophylaxis)."
+    },
+    {
+      "q": "Why are tocolytics given alongside corticosteroids in preterm labor management?",
+      "options": [
+        "To prevent maternal hypertension",
+        "To buy 48 hours for corticosteroids to act on fetal lung maturity",
+        "To reduce fetal heart rate",
+        "To treat chorioamnionitis"
+      ],
+      "correct": 1,
+      "explain": "Corticosteroids need ~48 hours to complete their effect on fetal lung surfactant production. Tocolytics are given to delay delivery for those 48 hours."
+    },
+    {
+      "q": "Bed rest as part of curative management of PTL works by:",
+      "options": [
+        "Increasing uterine blood flow",
+        "Reducing gravitational and mechanical stimulus on the cervix",
+        "Preventing dehydration",
+        "Stimulating surfactant production"
+      ],
+      "correct": 1,
+      "explain": "Bed rest reduces the gravitational and mechanical stimulus on the cervix, which may delay delivery."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    }
+  ],
+  "s9": [
+    {
+      "q": "The recommended dose of betamethasone for fetal lung maturity is:",
+      "options": [
+        "6 mg IM × 4 doses, 12 hours apart",
+        "12 mg IM × 2 doses, 24 hours apart",
+        "12 mg IV × 2 doses, 12 hours apart",
+        "6 mg IM × 2 doses, 24 hours apart"
+      ],
+      "correct": 1,
+      "explain": "Betamethasone is given as 2 doses of 12 mg IM, 24 hours apart."
+    },
+    {
+      "q": "The recommended dose of dexamethasone for fetal lung maturity is:",
+      "options": [
+        "12 mg IM × 2 doses, 24 hours apart",
+        "6 mg IM × 4 doses, 12 hours apart",
+        "8 mg IV × 3 doses, 8 hours apart",
+        "4 mg IM × 4 doses, 6 hours apart"
+      ],
+      "correct": 1,
+      "explain": "Dexamethasone is given as 4 doses of 6 mg IM, 12 hours apart."
+    },
+    {
+      "q": "Corticosteroids in preterm labor decrease the risk of which neonatal complication?",
+      "options": [
+        "Neonatal jaundice",
+        "Respiratory distress syndrome (RDS)",
+        "Hypoglycemia",
+        "Congenital pneumonia"
+      ],
+      "correct": 1,
+      "explain": "Corticosteroids decrease the chance of respiratory distress syndrome (RDS) and other prematurity complications including IVH, NEC, and neonatal mortality."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s12": [
+    {
+      "q": "Which antibiotic is used for GBS prophylaxis in established preterm labor?",
+      "options": [
+        "Gentamicin",
+        "Benzyl penicillin or ampicillin",
+        "Metronidazole",
+        "Ceftriaxone"
+      ],
+      "correct": 1,
+      "explain": "Benzyl penicillin or ampicillin should be given for established PTL as prophylaxis against early onset neonatal sepsis due to group B streptococcus. In penicillin allergy, clindamycin can be used."
+    },
+    {
+      "q": "In a preterm labor patient with breech presentation at 32 weeks, the recommended mode of delivery is:",
+      "options": [
+        "Vaginal delivery",
+        "Cesarean section",
+        "Trial of forceps",
+        "Vacuum extraction"
+      ],
+      "correct": 1,
+      "explain": "For breech presentation before 34 weeks, cesarean section is done. Vaginal delivery is allowed for breech only if more than 34 weeks."
+    },
+    {
+      "q": "For preterm labor with cephalic presentation, the preferred mode of delivery is:",
+      "options": [
+        "Cesarean section for all gestations",
+        "Vaginal delivery even if < 34 weeks",
+        "Forceps delivery required",
+        "Vacuum extraction"
+      ],
+      "correct": 1,
+      "explain": "With cephalic presentation, vaginal delivery is the preferred mode even if delivery is at < 34 weeks."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

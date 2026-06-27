@@ -1,0 +1,572 @@
+{
+  "s3": [
+    {
+      "q": "A normal adequate uterine contraction has the following characteristics:",
+      "options": [
+        "Frequency 1 in 5 min, Duration 30 sec, Amplitude 40 mmHg",
+        "Frequency 1 in 3 min, Duration 45 sec, Amplitude 60 mmHg",
+        "Frequency 2 in 10 min, Duration 60 sec, Amplitude 80 mmHg",
+        "Frequency 1 in 2 min, Duration 20 sec, Amplitude 30 mmHg"
+      ],
+      "correct": 1,
+      "explain": "The '3·45·60' rule: Frequency 1 in 3 min, Duration 45 sec, Amplitude 60 mmHg, with basal tone 5-20 mmHg."
+    },
+    {
+      "q": "The normal basal tone of uterine muscle at relaxation during labor is:",
+      "options": [
+        "0-5 mmHg",
+        "5-20 mmHg",
+        "20-30 mmHg",
+        "30-40 mmHg"
+      ],
+      "correct": 1,
+      "explain": "Normal basal tone at relaxation is in the range of 5-20 mmHg. Elevated basal tone >20 mmHg is defined as hypertonic uterine contraction."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Which method is the gold standard for measuring true intrauterine pressure in mmHg?",
+      "options": [
+        "External tocodynamometry",
+        "Internal tocodynamometry (IUPC)",
+        "Manual palpation",
+        "Ultrasound"
+      ],
+      "correct": 1,
+      "explain": "Internal tocodynamometry using an intrauterine pressure catheter (IUPC) is the gold standard, giving true pressure in mmHg. External toco gives frequency and rough duration but unreliable absolute pressure."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Uterine tachysystole is defined as:",
+      "options": [
+        "A single contraction sustained >3 minutes",
+        "Elevated basal tone >20 mmHg",
+        "4 or more contractions in 10 minutes",
+        "Contractions every 5 minutes"
+      ],
+      "correct": 2,
+      "explain": "Uterine tachysystole is defined as 4 or more contractions in 10 minutes (ACOG: >5 in 10 min averaged over 30 min). Hyperstimulation = tachysystole + oxytocin + FHR abnormality."
+    },
+    {
+      "q": "A tetanic uterine contraction is defined as:",
+      "options": [
+        "More than 5 contractions in 10 min",
+        "A single contraction sustained for >3 minutes",
+        "Basal tone >20 mmHg",
+        "Contractions lasting >60 seconds"
+      ],
+      "correct": 1,
+      "explain": "A tetanic uterine contraction is a single contraction sustained for more than 3 minutes."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The first step in managing uterine overactivity is:",
+      "options": [
+        "Administer tocolytic",
+        "Discontinue oxytocin",
+        "Positioning the patient into lateral position",
+        "Consider immediate delivery"
+      ],
+      "correct": 2,
+      "explain": "The 5-step sequence: 1) Lateral positioning, 2) Oxygenation, 3) Discontinue oxytocin, 4) Administer tocolytic, 5) Consider immediate delivery if persistently ominous FHR tracing."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s8": [
+    {
+      "q": "In coordinate (normal polarity) abnormal uterine action, the fundal dominance is:",
+      "options": [
+        "Lost",
+        "Preserved",
+        "Reversed",
+        "Absent"
+      ],
+      "correct": 1,
+      "explain": "In coordinate abnormal uterine action, the fundal dominance is preserved — the contraction wave still starts at the fundus. Examples: precipitate labor, Bandl's ring, hypotonic inertia."
+    },
+    {
+      "q": "Which of the following is an incoordinate (abnormal polarity) uterine action?",
+      "options": [
+        "Precipitate labor",
+        "Hypotonic inertia",
+        "Constriction ring",
+        "Bandl's ring"
+      ],
+      "correct": 2,
+      "explain": "Constriction ring is an incoordinate uterine action where fundal dominance is lost. Others (precipitate labor, Bandl's, hypotonic inertia) are coordinate types."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s9": [
+    {
+      "q": "Precipitate labor is defined as labor lasting less than:",
+      "options": [
+        "1 hour",
+        "2 hours",
+        "3 hours",
+        "4 hours"
+      ],
+      "correct": 2,
+      "explain": "Precipitate labor lasts less than 3 hours. It is more common in multiparas with strong contractions, small baby, and roomy pelvis."
+    },
+    {
+      "q": "Which is a fetal complication of precipitate labor?",
+      "options": [
+        "Postpartum hemorrhage",
+        "Uterine inversion",
+        "Intracranial hemorrhage due to sudden compression/decompression of head",
+        "Cervical lacerations"
+      ],
+      "correct": 2,
+      "explain": "Fetal complications include intracranial hemorrhage (from sudden compression/decompression), fetal asphyxia, cord avulsion, and fetal injury. Maternal complications include lacerations, abruption, shock, inversion, PPH, and sepsis."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s10": [
+    {
+      "q": "Bandl's (pathological retraction) ring is a sign of:",
+      "options": [
+        "Normal labor progression",
+        "Impending uterine rupture",
+        "Constriction ring",
+        "Cervical dystocia"
+      ],
+      "correct": 1,
+      "explain": "Bandl's ring is a sign of obstructed labor with impending uterine rupture. The upper segment retracts and thickens while the lower segment is markedly stretched and thinned."
+    },
+    {
+      "q": "Pathological retraction ring can be detected by:",
+      "options": [
+        "Only vaginally",
+        "Only on ultrasound",
+        "Visible abdominally and palpable as a transverse groove",
+        "Only on CTG"
+      ],
+      "correct": 2,
+      "explain": "Bandl's ring is visible abdominally and palpable as a transverse groove rising between symphysis and umbilicus — in contrast to constriction ring which is felt only vaginally."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s11": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s12": [
+    {
+      "q": "Hypotonic uterine inertia is characterized by:",
+      "options": [
+        "Frequent strong contractions",
+        "Infrequent weak uterine contractions",
+        "Irregular painful contractions with no relaxation",
+        "Reversed polarity"
+      ],
+      "correct": 1,
+      "explain": "Hypotonic inertia features infrequent weak uterine contractions with slow cervical dilatation. Management includes amniotomy and oxytocin augmentation after excluding CPD."
+    },
+    {
+      "q": "Which is a contraindication to oxytocin augmentation?",
+      "options": [
+        "Cervical dilatation >3 cm",
+        "Cephalopelvic disproportion",
+        "Ruptured membranes",
+        "Engaged presenting part"
+      ],
+      "correct": 1,
+      "explain": "Contraindications to oxytocin include cephalopelvic disproportion, malpresentation, scarred uterus, and grand multipara."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s13": [
+    {
+      "q": "A key difference between pathological retraction ring and constriction ring is:",
+      "options": [
+        "Constriction ring is felt only vaginally; Bandl's ring is seen and felt abdominally",
+        "Constriction ring rises upward; Bandl's ring is fixed",
+        "Bandl's ring is localized; constriction ring is global",
+        "Both are managed the same way"
+      ],
+      "correct": 0,
+      "explain": "Bandl's ring is palpable abdominally as a rising transverse groove. Constriction ring is felt only vaginally and does not change position. This is the key bedside discriminator."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "s2": [
+    {
+      "q": "PROM is defined as:",
+      "options": [
+        "Rupture of membranes after the onset of labor",
+        "Spontaneous rupture of fetal membranes before the onset of labor",
+        "Rupture of membranes at full dilatation",
+        "Artificial rupture of membranes during induction"
+      ],
+      "correct": 1,
+      "explain": "PROM is a spontaneous rupture of the fetal membranes before the onset of labor."
+    },
+    {
+      "q": "Preterm PROM (PPROM) is defined as rupture of membranes occurring:",
+      "options": [
+        "After 42 weeks",
+        "Before 37 completed weeks of gestation",
+        "Between 37 and 40 weeks",
+        "Before 20 weeks"
+      ],
+      "correct": 1,
+      "explain": "Preterm PROM (PPROM) is spontaneous rupture of membranes before 37 completed weeks of gestation."
+    },
+    {
+      "q": "The key feature that distinguishes PROM from normal rupture of membranes is:",
+      "options": [
+        "The color of the fluid",
+        "The volume of fluid lost",
+        "Rupture occurring before the onset of labor",
+        "The presence of pain"
+      ],
+      "correct": 2,
+      "explain": "The phrase 'before the onset of labor' is what distinguishes PROM from the normal rupture of membranes that occurs during labor."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is the most clinically important cause of PROM?",
+      "options": [
+        "Prior history of PPROM",
+        "Intrauterine infection",
+        "Amniocentesis",
+        "Trauma"
+      ],
+      "correct": 1,
+      "explain": "Intrauterine infection (chorioamnionitis, subclinical deciduitis) is the most clinically important cause — infection weakens the chorioamniotic membranes and predisposes them to rupture."
+    },
+    {
+      "q": "Which of the following is NOT one of the 5 classic etiologies of PROM?",
+      "options": [
+        "Intrauterine infection",
+        "Prior history of PPROM",
+        "Fetal macrosomia",
+        "Polyhydramnios"
+      ],
+      "correct": 2,
+      "explain": "The 5 classic etiologies are: intrauterine infection, prior history of PPROM, trauma, amniocentesis, and polyhydramnios."
+    },
+    {
+      "q": "Polyhydramnios causes PROM through which mechanism?",
+      "options": [
+        "Direct damage to fetal membranes by inflammation",
+        "Mechanical over-distension of the uterus increasing membrane stress",
+        "Inhibition of surfactant production",
+        "Premature placental aging"
+      ],
+      "correct": 1,
+      "explain": "Polyhydramnios causes PROM by mechanically over-distending the uterus, increasing wall tension and membrane stress."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The etiology of this condition involves:",
+      "options": [
+        "Genetic factors alone",
+        "Environmental factors alone",
+        "A complex interplay of genetic, environmental, and multifactorial elements",
+        "Iatrogenic causes only"
+      ],
+      "correct": 2,
+      "explain": "Most obstetric conditions have multifactorial etiology."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The typical presentation of PROM is:",
+      "options": [
+        "Gradual leaking of thick white discharge",
+        "Sudden gush of clear or pale yellow fluid from vagina",
+        "Blood-stained mucus plug passage",
+        "Painful uterine contractions with heavy bleeding"
+      ],
+      "correct": 1,
+      "explain": "Patients present with a typical history of sudden gush of clear or pale yellow fluid leaking from the vagina."
+    },
+    {
+      "q": "Meconium-stained (green/brown) fluid in suspected PROM suggests:",
+      "options": [
+        "Chorioamnionitis",
+        "Fetal distress",
+        "['Normal finding in PROM', 'Maternal infection']"
+      ],
+      "correct": 1,
+      "explain": "Meconium-stained (green/brown) fluid suggests fetal distress, while foul-smelling fluid suggests chorioamnionitis."
+    },
+    {
+      "q": "A history of a sudden, single, large gush of fluid followed by continued leakage is characteristic of:",
+      "options": [
+        "Urinary incontinence",
+        "PROM",
+        "Excessive vaginal discharge",
+        "['Bacterial vaginosis']"
+      ],
+      "correct": 1,
+      "explain": "A history of a sudden, single, large gush followed by continued leakage distinguishes PROM from urinary incontinence (continuous, no gush) or excessive vaginal discharge (gradual, no gush)."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "What is the first step in the diagnosis of PROM?",
+      "options": [
+        "Ultrasound examination",
+        "Speculum examination",
+        "Nitrazine test",
+        "Fern test"
+      ],
+      "correct": 1,
+      "explain": "Speculum examination is the first step in the diagnosis of PROM — it is used to directly demonstrate leaking of fluid from the cervical os."
+    },
+    {
+      "q": "The nitrazine test for PROM is based on which principle?",
+      "options": [
+        "Specific gravity of amniotic fluid",
+        "pH difference: amniotic fluid (7–7.5) vs vaginal discharge (3.5–4.5)",
+        "Protein concentration of amniotic fluid",
+        "Glucose content of amniotic fluid"
+      ],
+      "correct": 1,
+      "explain": "The pH of amniotic fluid is 7–7.5 (alkaline) while vaginal discharge pH is 3.5–4.5 (acidic). Yellow nitrazine paper turning blue indicates alkaline amniotic fluid."
+    },
+    {
+      "q": "A positive fern test for PROM appears as:",
+      "options": [
+        "A blue coloration on the slide",
+        "Fern pattern (arborization) under microscopy after slide dries",
+        "Crystal formation at the bottom of the tube",
+        "Foam formation after shaking"
+      ],
+      "correct": 1,
+      "explain": "Fluid from the posterior vaginal fornix is swabbed on a glass slide and allowed to dry for 10 minutes. If a fern pattern (arborization) appears, amniotic fluid is present."
+    },
+    {
+      "q": "Fetal fibronectin is detected in what percentage of females with PROM?",
+      "options": [
+        "89%",
+        "39%",
+        "59%",
+        "75%"
+      ],
+      "correct": 1,
+      "explain": "Fetal fibronectin can be detected in only 39% of females with PROM by means of an ELISA test. Its sensitivity is limited."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which of the following is NOT one of the 4 effects of preterm PROM?",
+      "options": [
+        "Preterm labor",
+        "Pulmonary hypoplasia",
+        "Fetal macrosomia",
+        "Chorioamnionitis"
+      ],
+      "correct": 2,
+      "explain": "The 4 effects of preterm PROM are: preterm labor, pulmonary hypoplasia, skeletal and joint deformities, and chorioamnionitis. Fetal macrosomia is associated with postterm pregnancy, not PROM."
+    },
+    {
+      "q": "Pulmonary hypoplasia from PROM results from:",
+      "options": [
+        "Direct infection of fetal lung tissue",
+        "Severe oligohydramnios impairing lung development",
+        "Toxic effects of meconium",
+        "Premature closure of the ductus arteriosus"
+      ],
+      "correct": 1,
+      "explain": "Pulmonary hypoplasia is due to severe oligohydramnios — the fetus needs amniotic fluid for normal lung development; severe fluid loss impairs alveolar formation."
+    },
+    {
+      "q": "Why is pulmonary hypoplasia from prolonged PPROM considered irreversible?",
+      "options": [
+        "It responds only to surfactant therapy",
+        "The lungs never develop adequately after birth once alveolar formation is impaired in utero",
+        "It requires fetal surgery to correct",
+        "It resolves spontaneously after 34 weeks"
+      ],
+      "correct": 1,
+      "explain": "Pulmonary hypoplasia from prolonged severe oligohydramnios is not reversible after birth. This is why very early PPROM (< 24 weeks) carries very high neonatal mortality."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s7": [
+    {
+      "q": "General management of PROM includes all EXCEPT:",
+      "options": [
+        "Bed rest",
+        "Sterile pads for inspection",
+        "Immediate induction of labor",
+        "Monitoring for signs of meconium staining or infection"
+      ],
+      "correct": 2,
+      "explain": "General management includes bed rest and sterile pads for inspection for meconium staining, foul smell (infection), or blood. Immediate induction depends on gestational age."
+    },
+    {
+      "q": "Sterile pads in PROM management are used to inspect for:",
+      "options": [
+        "Amniotic fluid volume only",
+        "Meconium staining, foul smell (chorioamnionitis), and blood",
+        "pH changes in vaginal fluid",
+        "Fetal fibronectin levels"
+      ],
+      "correct": 1,
+      "explain": "Sterile pads are inspected for: meconium staining (greenish-brown — fetal distress), foul smell (chorioamnionitis), and blood (abruption or vasa previa)."
+    },
+    {
+      "q": "Greenish-brown staining on sterile pads in a PROM patient suggests:",
+      "options": [
+        "Chorioamnionitis",
+        "Fetal distress with meconium passage",
+        "['Placental abruption', 'Normal finding']"
+      ],
+      "correct": 1,
+      "explain": "Greenish-brown staining indicates meconium staining, which suggests fetal distress."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The recommended management for PROM occurring before 26 weeks is:",
+      "options": [
+        "Conservative management with antibiotics",
+        "Termination of pregnancy",
+        "Immediate tocolysis",
+        "Amnioinfusion"
+      ],
+      "correct": 1,
+      "explain": "Before 26 weeks, the risk of developing chorioamnionitis is very high, so termination of pregnancy is recommended."
+    },
+    {
+      "q": "Why is termination recommended for PROM before 26 weeks?",
+      "options": [
+        "Fetal lungs are too mature",
+        "Very high chorioamnionitis risk and pulmonary hypoplasia is likely",
+        "Maternal risk of hemorrhage is too high",
+        "Fetus is too large for vaginal delivery"
+      ],
+      "correct": 1,
+      "explain": "Reasons include very high chorioamnionitis risk, likely pulmonary hypoplasia from oligohydramnios, likely skeletal deformities (Potter sequence), and fetal viability below 24-26 weeks."
+    },
+    {
+      "q": "Potter sequence refers to:",
+      "options": [
+        "A specific genetic syndrome",
+        "Compression-related skeletal deformities from prolonged severe oligohydramnios",
+        "A pattern of maternal hypertension",
+        "Fetal cardiac arrhythmia pattern"
+      ],
+      "correct": 1,
+      "explain": "Compression-related deformities such as clubfoot from prolonged severe oligohydramnios are known as Potter sequence."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s10": [
+    {
+      "q": "For PROM occurring after 34 weeks, the recommended management is:",
+      "options": [
+        "Conservative management with antibiotics",
+        "Delivery",
+        "Tocolysis for 48 hours",
+        "Amnioinfusion"
+      ],
+      "correct": 1,
+      "explain": "After 34 weeks, the fetus is sufficiently mature that the risk of conservative management (chorioamnionitis, cord prolapse) outweighs the risk of prematurity. Delivery is indicated."
+    },
+    {
+      "q": "Why is the cutoff for PROM management set at 34 weeks?",
+      "options": [
+        "Fetal skull is fully ossified by 34 weeks",
+        "By 34 weeks, most fetuses produce enough endogenous surfactant, and risk of ongoing oligohydramnios dominates",
+        "Maternal mortality drops after 34 weeks",
+        "Cervical ripening is always successful after 34 weeks"
+      ],
+      "correct": 1,
+      "explain": "By 34 weeks, most fetuses have produced enough endogenous surfactant that additional benefit from corticosteroids is minimal, and the risk of ongoing oligohydramnios + ascending infection becomes the dominant clinical concern."
+    },
+    {
+      "q": "The 34-week cutoff in PROM management is the same as in which other obstetric condition management?",
+      "options": [
+        "Postterm pregnancy",
+        "Preterm labor (for tocolysis contraindication)",
+        "Placenta previa",
+        "Preeclampsia"
+      ],
+      "correct": 1,
+      "explain": "The 34-week cutoff is the same as in the management of preterm labor (Chapter 31) and is anchored on lung-maturation data."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s11": [
+    {
+      "q": "Chorioamnionitis is defined as:",
+      "options": [
+        "Infection of the placental parenchyma",
+        "Inflammation of fetal membranes (intrauterine infection)",
+        "Infection of the umbilical cord",
+        "Infection of the endometrium"
+      ],
+      "correct": 1,
+      "explain": "Chorioamnionitis is defined as inflammation of fetal membranes, which means intrauterine infection."
+    },
+    {
+      "q": "The diagnosis of chorioamnionitis requires fever > 38°C plus at least one of how many signs/investigations?",
+      "options": [
+        "3 signs",
+        "5 signs",
+        "7 signs",
+        "9 signs"
+      ],
+      "correct": 2,
+      "explain": "The diagnosis is made when fever > 38°C is present PLUS at least one of the 7 signs: maternal tachycardia, fetal tachycardia, uterine tenderness, foul smelling amniotic fluid, maternal leukocytosis > 16,000/cc, raised CRP > 2.5, or positive high vaginal swab."
+    },
+    {
+      "q": "Which of the following is a diagnostic sign of chorioamnionitis?",
+      "options": [
+        "Maternal bradycardia",
+        "Maternal leukocytosis > 16,000/cc",
+        "Decreased C-reactive protein",
+        "Oliguria"
+      ],
+      "correct": 1,
+      "explain": "Maternal leukocytosis > 16,000/cc is one of the 7 diagnostic signs of chorioamnionitis (along with fever > 38°C)."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s12": [
+    {
+      "q": "The definitive treatment for chorioamnionitis is:",
+      "options": [
+        "Broad-spectrum antibiotics alone",
+        "Delivery and evacuation of uterine contents",
+        "Antipyretics and observation",
+        "Uterine lavage"
+      ],
+      "correct": 1,
+      "explain": "The definitive treatment is delivery and evacuation of the uterine contents. Antibiotics alone are not curative while the infected focus (amniotic cavity) remains in place."
+    },
+    {
+      "q": "The antibiotic regimen for chorioamnionitis until delivery is:",
+      "options": [
+        "Ceftriaxone + Metronidazole",
+        "Ampicillin 2 g IV q6h + Gentamicin (2 mg/kg load, then 1.5 mg/kg IV q8h)",
+        "Penicillin + Clindamycin",
+        "Vancomycin + Gentamicin"
+      ],
+      "correct": 1,
+      "explain": "The regimen is ampicillin 2 g IV every 6 hours + gentamicin 2 mg/kg IV load then 1.5 mg/kg IV every 8 hours, continued until delivery."
+    },
+    {
+      "q": "When is clindamycin or metronidazole added to the chorioamnionitis antibiotic regimen?",
+      "options": [
+        "Always, regardless of delivery mode",
+        "Only if cesarean delivery is performed (for anaerobic coverage)",
+        "Only if vaginal delivery is performed",
+        "Only if the patient is penicillin-allergic"
+      ],
+      "correct": 1,
+      "explain": "If cesarean delivery is performed, clindamycin or metronidazole is added for anaerobic coverage because surgical incision exposes deep pelvic tissues to anaerobic flora from the vagina."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

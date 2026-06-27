@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Topic 40 — Intrauterine Growth Restriction (IUGR)</title>
+<style>* { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; background:#0d1117; color:#e6edf3; line-height:1.6; }
+  .container { max-width:1100px; margin:0 auto; padding:20px; }
+  .hero { background:linear-gradient(135deg,#1a365d 0%,#2563eb 60%,#3b82f6 100%); border-radius:16px; padding:48px 40px; margin-bottom:24px; position:relative; overflow:hidden; }
+  .hero::after { content:''; position:absolute; top:-50%; right:-20%; width:400px; height:400px; background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%); border-radius:50%; }
+  .hero h1 { font-size:2.2em; font-weight:800; margin-bottom:8px; position:relative; z-index:1; }
+  .hero .chapter-tag { display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:8px; padding:4px 14px; font-size:.85em; margin-bottom:14px; position:relative; z-index:1; }
+  .hero .subtitle { font-size:1.02em; opacity:.88; position:relative; z-index:1; }
+  .toc { background:#161b22; border:1px solid #30363d; border-radius:12px; padding:24px 28px; margin-bottom:28px; }
+  .toc h2 { font-size:1.15em; margin-bottom:14px; color:#58a6ff; }
+  .toc-grid { columns:2; column-gap:36px; list-style:none; }
+  .toc-grid li { padding:5px 0; break-inside:avoid; }
+  .toc-grid a { color:#8b949e; text-decoration:none; font-size:.92em; transition:color .2s; }
+  .toc-grid a:hover { color:#58a6ff; }
+  .section { margin-bottom:28px; }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:16px; padding:10px 16px; background:linear-gradient(90deg,rgba(37,99,235,.12),transparent); border-left:4px solid #2563eb; border-radius:8px; }
+  .section-num { width:36px; height:36px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.95em; flex-shrink:0; }
+  .section-title { font-size:1.2em; font-weight:700; }
+  .card { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:18px 20px; margin-bottom:14px; }
+  .card-green  { border-left:4px solid #2ea043; background:rgba(46,160,67,.06); }
+  .card-red    { border-left:4px solid #f85149; background:rgba(248,81,73,.06); }
+  .card-pink   { border-left:4px solid #db61a2; background:rgba(219,97,162,.06); }
+  .card-cyan   { border-left:4px solid #39c5cf; background:rgba(57,197,207,.06); }
+  .card-orange { border-left:4px solid #d29922; background:rgba(210,153,34,.06); }
+  .card-purple { border-left:4px solid #a371f7; background:rgba(163,113,247,.06); }
+  .card-blue   { border-left:4px solid #58a6ff; background:rgba(88,166,255,.06); }
+  .card-title { font-weight:700; margin-bottom:8px; font-size:1.02em; }
+  .card ul { padding-left:20px; }
+  .card ul li { margin-bottom:5px; font-size:.93em; }
+  .card p { font-size:.93em; margin-bottom:6px; }
+  .card ol { padding-left:20px; }
+  .card ol li { margin-bottom:5px; font-size:.93em; }
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+  .callout { border-radius:8px; padding:12px 16px; margin:10px 0; font-size:.9em; }
+  .callout-danger  { background:rgba(248,81,73,.1); border-left:4px solid #f85149; }
+  .callout-pearl   { background:rgba(219,97,162,.1); border-left:4px solid #db61a2; }
+  .callout-anchor  { background:rgba(163,113,247,.1); border-left:4px solid #a371f7; }
+  .callout-warn    { background:rgba(210,153,34,.1); border-left:4px solid #d29922; }
+  .callout-note    { background:rgba(57,197,207,.1); border-left:4px solid #39c5cf; }
+  .pill { display:inline-block; border-radius:20px; padding:2px 10px; font-size:.75em; font-weight:700; margin-right:6px; vertical-align:middle; }
+  .pill-danger  { background:#f85149; color:#fff; }
+  .pill-pearl   { background:#db61a2; color:#fff; }
+  .pill-anchor  { background:#a371f7; color:#fff; }
+  .pill-warn    { background:#d29922; color:#000; }
+  .pill-note    { background:#39c5cf; color:#000; }
+  .pill-keydef  { background:#a371f7; color:#fff; }
+  .src-viz { border:2px solid #2ea043; border-radius:10px; background:rgba(46,160,67,.05); padding:14px; margin-bottom:14px; }
+  .src-viz .badge { display:inline-block; background:#2ea043; color:#fff; font-size:.7em; font-weight:700; padding:2px 8px; border-radius:4px; margin-bottom:8px; }
+  .src-viz .img-frame { display:flex; justify-content:center; align-items:center; background:#161b22; border-radius:8px; padding:12px; margin-bottom:8px; }
+  .src-viz .img-frame img { max-width:100%; max-height:400px; object-fit:contain; margin:0 auto; }
+  .src-viz .caption { font-size:.85em; color:#8b949e; text-align:center; }
+  .src-viz .source-line { font-size:.78em; color:#484f58; margin-top:4px; }
+  details { background:#161b22; border:1px solid #30363d; border-radius:10px; margin-bottom:14px; }
+  details summary { padding:14px 18px; cursor:pointer; font-weight:700; font-size:1.02em; list-style:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details summary::before { content:'▶ '; font-size:.8em; }
+  details[open] summary::before { content:'▼ '; }
+  details.blue   { border-left:4px solid #58a6ff; }
+  details.green  { border-left:4px solid #2ea043; }
+  details.purple { border-left:4px solid #a371f7; }
+  details .inner { padding:14px 18px; font-size:.92em; }
+  .footer { text-align:center; padding:24px 0 8px; font-size:.8em; color:#484f58; border-top:1px solid #21262d; margin-top:28px; }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="container">
+<!-- HERO -->
+<div class="hero">
+<div class="chapter-tag">Chapter 40</div>
+<h1>Intrauterine Growth Restriction (IUGR)</h1>
+<p class="subtitle">Definition · Types · Etiology · Diagnosis · Investigations · Complications · Management</p>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>Table of Contents</h2>
+<ol class="toc-grid">
+<li><a href="#s1">ILOs of This Chapter</a></li>
+<li><a href="#s2">Definition</a></li>
+<li><a href="#s3">Types</a></li>
+<li><a href="#s4">Source Image — Multifactorial IUGR Causes</a></li>
+<li><a href="#s5">Etiology — Maternal Risk Factors</a></li>
+<li><a href="#s6">Etiology — Placental &amp; Fetal Risk Factors</a></li>
+<li><a href="#s7">Diagnosis — History &amp; Clinical Examination</a></li>
+<li><a href="#s8">Investigations</a></li>
+<li><a href="#s9">Complications</a></li>
+<li><a href="#s10">Management (Antenatal · Intranatal · Postnatal)</a></li>
+<li><a href="#s11">Student Activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<div class="section" id="s1">
+<div class="section-head">
+<div class="section-num">1</div>
+<div class="section-title">ILOs of This Chapter</div>
+</div>
+<div class="card card-cyan">
+<ul>
+<li>To understand the definition of IUGR</li>
+<li>To be able to explain the etiology of IUGR</li>
+<li>To be able to describe the types, diagnosis and management of IUGR</li>
+<li>To be able to outline complications of IUGR</li>
+</ul>
+</div>
+</div>
+<!-- §2 DEFINITION -->
+<div class="section" id="s2">
+<div class="section-head">
+<div class="section-num">2</div>
+<div class="section-title">Definition</div>
+</div>
+<div class="card card-purple">
+<p><span class="pill pill-keydef">KEY DEFINITION</span> A fetus with a fetal abdominal circumference (AC) or estimated fetal weight (EFW) less than the 10th centile for its gestational age.</p>
+</div>
+<div class="card card-cyan">
+<p>The fetus may be constitutionally small without being at increased risk of complications. Fetuses with IUGR have a <strong>2- to 6-fold increase in perinatal morbidity and mortality</strong>.</p>
+</div>
+<div class="callout callout-warn">
+<span class="pill pill-warn">WARN</span> IUGR is not simply "small for gestational age" (SGA). A constitutionally small fetus has normal growth velocity and Doppler studies. IUGR implies <em>pathological</em> growth restriction with abnormal Doppler findings.
+  </div>
+</div>
+<!-- §3 TYPES -->
+<div class="section" id="s3">
+<div class="section-head">
+<div class="section-num">3</div>
+<div class="section-title">Types</div>
+</div>
+<div class="grid-2">
+<div class="card card-orange">
+<div class="card-title">1 — Asymmetric IUGR</div>
+<p>Disproportionate growth restriction with a greater decrease in fetal body and limbs compared to head circumference.</p>
+<ul>
+<li>Caused by <strong>extrinsic factors</strong> such as placental insufficiency.</li>
+<li>Oxygen and nutrients are directed towards vital organs (brain and heart) by passing other organs (e.g. liver, muscle, and fat tissue).</li>
+<li>Affects the fetus <strong>later</strong> in gestation.</li>
+</ul>
+</div>
+<div class="card card-cyan">
+<div class="card-title">2 — Symmetric IUGR</div>
+<p>Proportional growth restriction in all parts of the fetus.</p>
+<ul>
+<li>Caused by <strong>intrinsic factors</strong> such as genetic abnormalities and intrauterine infections.</li>
+<li>Affects the fetus <strong>early</strong> in gestation.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-anchor">
+<span class="pill pill-anchor">MEMORY ANCHOR</span> <strong>A-S-L-E</strong>: <strong>A</strong>symmetric = <strong>S</strong>pare the head, <strong>L</strong>ater in gestation, <strong>E</strong>xtrinsic (placental). <strong>S</strong>ymmetric = <strong>S</strong>mall everywhere, <strong>E</strong>arly in gestation, <strong>I</strong>ntrinsic (genetic/infection).
+  </div>
+<div class="callout callout-pearl">
+<span class="pill pill-pearl">CLINICAL PEARL</span> Asymmetric IUGR shows "brain-sparing" — the fetus preferentially shunts blood to the brain and heart. This produces a high head circumference-to-abdominal circumference ratio.
+  </div>
+</div>
+<!-- §4 SOURCE IMAGE -->
+<div class="section" id="s4">
+<div class="section-head">
+<div class="section-num">4</div>
+<div class="section-title">Source Image — Multifactorial IUGR Causes</div>
+</div>
+<div class="src-viz">
+<div class="badge">SOURCE IMAGE · img-000</div>
+<div class="img-frame">
+<img alt="Multifactorial causes of IUGR — genetic, placental, fetal, and maternal factors" src="../../../../extracted_images/40_iugr/img-000.png"/>
+</div>
+<div class="caption">Multifactorial causes of IUGR — genetic, placental, fetal, and maternal factors</div>
+<div class="source-line">Source: Provided Material (Book Obstetrics 2025-2026, p. 214)</div>
+</div>
+<div class="callout callout-note">
+<span class="pill pill-note">NOTE</span> This diagram illustrates the four main categories of IUGR etiology: genetic factors, placental factors, fetal factors, and maternal factors — all converging on the central outcome of IUGR.
+  </div>
+</div>
+<!-- §5 ETIOLOGY — MATERNAL -->
+<div class="section" id="s5">
+<div class="section-head">
+<div class="section-num">5</div>
+<div class="section-title">Etiology — Maternal Risk Factors</div>
+</div>
+<div class="card card-orange">
+<div class="card-title">1 — Maternal Risk Factors</div>
+<p>Risk factors for IUGR can be divided into maternal, uteroplacental and fetal risk factors.</p>
+<ul>
+<li><strong>Maternal medical conditions:</strong> pre-existing diabetes mellitus, chronic hypertension, gestational hypertension, pre-eclampsia, systemic lupus erythematosus, antiphospholipid syndrome, sickle cell disease and severe anemia.</li>
+<li><strong>Substance use:</strong> tobacco, alcohol, cocaine, or narcotics.</li>
+<li><strong>Exposure to teratogenic drugs:</strong> ACE-inhibitors, warfarin, carbamazepine, phenytoin, cyclophosphamide or valproic acid.</li>
+<li>Previous pregnancy with IUGR.</li>
+</ul>
+</div>
+<div class="callout callout-anchor">
+<span class="pill pill-anchor">MEMORY ANCHOR</span> <strong>M-S-T-P</strong>: <strong>M</strong>edical conditions (DM, HTN, pre-eclampsia, SLE, APS, SCD, anemia) → <strong>S</strong>ubstance use (tobacco, alcohol, cocaine, narcotics) → <strong>T</strong>eratogenic drugs (ACE-i, warfarin, carbamazepine, phenytoin, cyclophosphamide, valproic acid) → <strong>P</strong>revious IUGR.
+  </div>
+</div>
+<!-- §6 ETIOLOGY — PLACENTAL & FETAL -->
+<div class="section" id="s6">
+<div class="section-head">
+<div class="section-num">6</div>
+<div class="section-title">Etiology — Placental &amp; Fetal Risk Factors</div>
+</div>
+<div class="card card-green">
+<div class="card-title">2 — Placental Risk Factors</div>
+<ul>
+<li>Placental insufficiency.</li>
+<li>Placenta previa or placental abruption.</li>
+<li>Multiple gestation.</li>
+</ul>
+</div>
+<div class="card card-red">
+<div class="card-title">3 — Fetal Risk Factors</div>
+<ul>
+<li><strong>Congenital/early intrauterine infections:</strong> toxoplasmosis, rubella, cytomegalovirus infection, varicella, herpes infections, HIV infection, syphilis, or malaria.</li>
+<li><strong>Genetic abnormalities:</strong> aneuploidy.</li>
+<li><strong>Congenital anomalies:</strong> cyanotic congenital heart disease.</li>
+</ul>
+</div>
+<div class="callout callout-danger">
+<span class="pill pill-danger">DANGER</span> TORCH infections (Toxoplasmosis, Other [syphilis, varicella, parvovirus], Rubella, CMV, Herpes) are a major fetal cause of symmetric IUGR — early screening and treatment can prevent severe growth restriction.
+  </div>
+</div>
+<!-- §7 DIAGNOSIS -->
+<div class="section" id="s7">
+<div class="section-head">
+<div class="section-num">7</div>
+<div class="section-title">Diagnosis — History &amp; Clinical Examination</div>
+</div>
+<div class="card card-cyan">
+<div class="card-title">History</div>
+<p>A thorough obstetric history is crucial to identify any risk factors for IUGR.</p>
+</div>
+<div class="card card-green">
+<div class="card-title">Clinical Examination</div>
+<ul>
+<li>Symphysial-fundal height (SFH) is decreased compared to gestational age (at least 3 cm less than gestational age in weeks).</li>
+<li>Fetus is small for gestational age.</li>
+<li>Fetal movements are reduced or absent.</li>
+</ul>
+</div>
+<div class="callout callout-warn">
+<span class="pill pill-warn">WARN</span> SFH lag of ≥ 3 cm below gestational age in weeks is the classic clinical sign. However, SFH measurement has poor sensitivity — serial measurements and ultrasound are more reliable.
+  </div>
+<div class="callout callout-pearl">
+<span class="pill pill-pearl">CLINICAL PEARL</span> Reduced or absent fetal movements in the context of a small-for-dates fetus should raise immediate suspicion of IUGR with fetal compromise — this is an obstetric emergency.
+  </div>
+</div>
+<!-- §8 INVESTIGATIONS -->
+<div class="section" id="s8">
+<div class="section-head">
+<div class="section-num">8</div>
+<div class="section-title">Investigations</div>
+</div>
+<div class="card card-green">
+<div class="card-title">Serial Ultrasound Scans</div>
+<p>To assess fetal biometry and estimated fetal weight. It also provides detailed information on fetal anatomy, placental morphology, and amniotic fluid volume.</p>
+<p>Findings may include:</p>
+<ul>
+<li>Decreased fetal growth and fetal weight</li>
+<li>Small placenta</li>
+<li>Oligohydramnios</li>
+</ul>
+</div>
+<div class="card card-cyan">
+<div class="card-title">Umbilical Artery Doppler</div>
+<p>Shows abnormalities such as reduced or reversed diastolic flow.</p>
+</div>
+<div class="card card-purple">
+<div class="card-title">Biophysical Profile (BPP)</div>
+<p>A non-invasive test that examines many parameters to assess fetal well-being.</p>
+<p>Typical findings in IUGR include:</p>
+<ul>
+<li>Oligohydramnios</li>
+<li>Absent fetal breathing movements</li>
+<li>Decreased fetal movements and tone</li>
+</ul>
+<div class="callout callout-danger">
+<span class="pill pill-danger">DANGER</span> A BPP score of <strong>≤ 4</strong> indicates the need for delivery.
+    </div>
+</div>
+<div class="callout callout-anchor">
+<span class="pill pill-anchor">MEMORY ANCHOR</span> <strong>U-A-B</strong>: <strong>U</strong>mbilical Doppler (reduced/reversed diastolic flow) → <strong>A</strong>mniotic fluid (oligohydramnios) → <strong>B</strong>PP (≤ 4 = deliver). These three investigations form the IUGR assessment triad.
+  </div>
+</div>
+<!-- §9 COMPLICATIONS -->
+<div class="section" id="s9">
+<div class="section-head">
+<div class="section-num">9</div>
+<div class="section-title">Complications</div>
+</div>
+<div class="card card-red">
+<div class="card-title">Perinatal Complications</div>
+<ul>
+<li>Preterm labor and delivery.</li>
+<li>Stillbirth.</li>
+<li>Perinatal asphyxia.</li>
+<li>Necrotising enterocolitis.</li>
+<li>Cognitive delay and behavioral issues.</li>
+<li>Adult-onset diseases (e.g. diabetes mellitus, obesity, coronary artery disease, hypertension).</li>
+<li>Motor and neurological disabilities.</li>
+<li>Intrauterine/neonatal death.</li>
+</ul>
+</div>
+<div class="callout callout-danger">
+<span class="pill pill-danger">DANGER</span> IUGR is not just a perinatal problem — it programmes the fetus for adult-onset diseases (Barker hypothesis). Adults who were IUGR fetuses have increased risks of diabetes, obesity, coronary artery disease, and hypertension.
+  </div>
+<div class="callout callout-pearl">
+<span class="pill pill-pearl">CLINICAL PEARL</span> The <strong>Barker hypothesis</strong> (thrifty phenotype): fetal undernutrition leads to permanent metabolic adaptations that increase risk of chronic disease in adulthood — IUGR is a lifelong condition, not just a delivery concern.
+  </div>
+</div>
+<!-- §10 MANAGEMENT -->
+<div class="section" id="s10">
+<div class="section-head">
+<div class="section-num">10</div>
+<div class="section-title">Management — Antenatal · Intranatal · Postnatal</div>
+</div>
+<div class="card card-green">
+<div class="card-title">A — Antenatal</div>
+<ol>
+<li>Treatment of the underlying cause and no smoking.</li>
+<li>Monitoring of fetal wellbeing.</li>
+<li>Good diet.</li>
+</ol>
+</div>
+<div class="card card-cyan">
+<div class="card-title">B — Intranatal</div>
+<ol>
+<li><strong>Mode of delivery:</strong> Cesarean section is the rule as the fetus does not tolerate the reduced oxygen supply and the birth trauma encountered during vaginal delivery.</li>
+<li>Continuous intranatal monitoring.</li>
+</ol>
+<div class="callout callout-warn">
+<span class="pill pill-warn">WARN</span> Cesarean section is the rule — the IUGR fetus has limited oxygen reserves and cannot tolerate the hemodynamic stress of labor and vaginal delivery.
+    </div>
+</div>
+<div class="card card-blue">
+<div class="card-title">C — Postnatal</div>
+<p>Identification and management of problems of dysmaturity.</p>
+</div>
+<div class="callout callout-note">
+<span class="pill pill-note">NOTE</span> Postnatal management focuses on dysmaturity complications: hypoglycemia, hypothermia, polycythemia, feeding difficulties, and long-term neurodevelopmental follow-up.
+  </div>
+</div>
+<!-- §11 STUDENT ACTIVITY · QUESTIONS · REFERENCES -->
+<div class="section" id="s11">
+<div class="section-head">
+<div class="section-num">11</div>
+<div class="section-title">Student Activity · Questions · References</div>
+</div>
+<details class="blue">
+<summary>Student Activity</summary>
+<div class="inner">
+<p>Each group of students is requested to prepare a small illustrative diagram to show the difference of small for gestational age "SGA" and IUGR.</p>
+</div>
+</details>
+<details class="green">
+<summary>Self-Assessment Questions</summary>
+<div class="inner">
+<p><a href="https://forms.gle/xwB9uV3GzqJaA88i6" style="color:#2ea043;" target="_blank">https://forms.gle/xwB9uV3GzqJaA88i6</a></p>
+<p style="font-size:.85em;color:#8b949e;margin-top:6px;">Google Form code: xwB9uV3GzqJaA88i6</p>
+</div>
+</details>
+<details class="purple">
+<summary>References &amp; Source-Text Preservation Notes</summary>
+<div class="inner">
+<p><strong>Source Material:</strong> Book Obstetrics 2025-2026, Chapter 40 (Intrauterine Growth Restriction), pages 214–217.</p>
+<p><strong>Source Visuals:</strong> 1 image (img-000) — multifactorial IUGR causes diagram, page 2 — embedded in green .src-viz card at §4.</p>
+<p><strong>External Visuals:</strong> None.</p>
+<hr style="border-color:#30363d;margin:10px 0;"/>
+<p style="font-weight:700;">Source-Text Preservation Notes:</p>
+<ol style="font-size:.88em; padding-left:20px;">
+<li>ILO "To understand the definition of IUGR" — verbatim.</li>
+<li>ILO "To be able to explain the etiology of IUGR" — verbatim.</li>
+<li>ILO "To be able to describe the types, diagnosis and management of IUGR" — verbatim.</li>
+<li>ILO "To be able to outline complications of IUGR" — verbatim.</li>
+<li>Definition "fetal abdominal circumference (AC) or estimated fetal weight (EFW) less than the 10th centile" — verbatim.</li>
+<li>"constitutionally small without being at increased risk of complications" — verbatim.</li>
+<li>"2- to 6-fold increase in perinatal morbidity and mortality" — verbatim.</li>
+<li>"Disproportionate growth restriction with a greater decrease in fetal body and limbs compared to head circumference" — verbatim.</li>
+<li>"extrinsic factors such as placental insufficiency" — verbatim.</li>
+<li>"oxygen and nutrients are directed towards vital organs (brain and heart) by passing other organs (e.g.liver, muscle, and fat tissue)" — verbatim.</li>
+<li>"Proportional growth restriction in all parts of the fetus" — verbatim.</li>
+<li>"intrinsic factors such as genetic abnormalities and intrauterine infections" — verbatim.</li>
+<li>"pre-existing diabetes mellitus, chronic hypertension, gestational hypertension, pre-eclampsia, systemic lupus erythematosus, antiphospholipid syndrome, sickle cell disease and severe anemia" — verbatim.</li>
+<li>"tobacco, alcohol, cocaine, or narcotics" — verbatim.</li>
+<li>"ACE-inhibitors, warfarin, carbamazepine, phenytoin, cyclophosphamide or valproic acid" — verbatim.</li>
+<li>"Previous pregnancy with IUGR" — verbatim.</li>
+<li>"Placental insufficiency" — verbatim.</li>
+<li>"Placenta previa or placental abruption" — verbatim.</li>
+<li>"Multiple gestation" — verbatim.</li>
+<li>"toxoplasmosis, rubella, cytomegalovirus infection, varicella, herpes infections, HIV infection, syphilis, or malaria" — verbatim.</li>
+<li>"aneuploidy" — verbatim.</li>
+<li>"cyanotic congenital heart disease" — verbatim.</li>
+<li>"Symphysial-fundal height (SFH) is decreased compared to gestational age (at least 3cm less than gestational age in weeks)" — verbatim.</li>
+<li>"Fetal movements are reduced or absent" — verbatim.</li>
+<li>"Serial ultrasound scans: to assess fetal biometry and estimated fetal weight" — verbatim.</li>
+<li>"Umbilical artery Doppler: shows abnormalities such as reduced or reversed diastolic flow" — verbatim.</li>
+<li>"Biophysical profile (BPP): is a non-invasive test that examines many parameters to assess fetal well-being" — verbatim.</li>
+<li>"A BPP score of ≤ 4 indicates the need for delivery" — verbatim.</li>
+<li>"Preterm labor and delivery" — verbatim.</li>
+<li>"Stillbirth" — verbatim.</li>
+<li>"Perinatal asphyxia" — verbatim.</li>
+<li>"Necrotising enterocolitis" — verbatim.</li>
+<li>"Cognitive delay and behavioral issues" — verbatim.</li>
+<li>"Adult-onset diseases (e.g. diabetes mellitus, obesity, coronary artery disease, hypertension)" — verbatim.</li>
+<li>"Motor and neurological disabilities" — verbatim.</li>
+<li>"Intrauterine/neonatal death" — verbatim.</li>
+<li>"Treatment of the underlying cause and no smoking" — verbatim.</li>
+<li>"Monitoring of fetal wellbeing" — verbatim.</li>
+<li>"Good diet" — verbatim.</li>
+<li>"Cesarean section is the rule as the fetus does not tolerate the reduced oxygen supply and the birth trauma encountered during vaginal delivery" — verbatim.</li>
+<li>"Continuous intranatal monitoring" — verbatim.</li>
+<li>"Identification and management of problems of dysmaturity" — verbatim.</li>
+<li>Student activity text — verbatim from source.</li>
+<li>Google Form URL https://forms.gle/xwB9uV3GzqJaA88i6 — preserved verbatim.</li>
+</ol>
+</div>
+</details>
+</div>
+<!-- FOOTER -->
+<div class="footer">
+<p>Topic 40 — Intrauterine Growth Restriction (IUGR) · Source: Book Obstetrics 2025-2026, pp. 214–217 · Generated by Hermes Agent</p>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

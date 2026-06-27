@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 27 — Shoulder Presentation (Transverse Lie)</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;
+    border-radius:0 0 22px 22px;
+    padding:28px 32px 30px;
+    margin:0 -28px 22px;
+    box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{
+    font-size:34px;line-height:1.15;margin:14px 0 10px;
+    font-weight:800;letter-spacing:-0.01em;
+  }
+  .hero h2.subtitle{
+    font-size:18px;color:#E0F2FE;margin:0 0 10px;font-weight:500;font-style:italic;
+  }
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;
+    font-weight:500;letter-spacing:0.01em;
+  }
+
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);
+    border-radius:12px;padding:16px 22px;margin:0 0 22px;
+    box-shadow:var(--shadow);
+  }
+  .toc h2{
+    font-size:14px;color:var(--prim2);margin:0 0 8px;
+    text-transform:uppercase;letter-spacing:0.08em;font-weight:700;
+  }
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;
+    padding:8px 0 8px 14px;border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{
+    font-size:15.5px;color:var(--prim2);margin:16px 0 8px;
+    font-weight:700;letter-spacing:0.01em;
+  }
+
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 18px;margin:0 0 14px;
+    box-shadow:var(--shadow);
+  }
+  .keydef{
+    background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);
+    border:1px solid #DDD6FE;border-left:5px solid #7C3AED;
+  }
+  .pearl{
+    background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);
+    border:1px solid #FBCFE8;border-left:5px solid #DB2777;
+  }
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{
+    background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);
+    border:1px solid #FDE68A;border-left:5px solid #D97706;
+  }
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{
+    background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);
+    border:1px solid #A5F3FC;border-left:5px solid #0891B2;
+  }
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .green-card{
+    background:linear-gradient(180deg,#ECFDF5 0%,#D1FAE5 100%);
+    border:1px solid #6EE7B7;border-left:5px solid #059669;
+  }
+  .green-card h4{color:#065F46;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .red-card{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .red-card h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;
+    border-radius:50%;text-align:center;line-height:24px;font-size:12px;
+    font-weight:700;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;
+    background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards (centered) */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;
+    margin:0 0 16px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:540px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;
+    color:#fff;padding:3px 9px;border-radius:999px;
+    font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+  .cause-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:10px 14px;box-shadow:var(--shadow);
+    border-left:4px solid var(--prim);
+  }
+  .cause-card b{color:var(--prim2);font-size:13.5px}
+  .cause-card p{font-size:12.5px;color:#475569;margin:4px 0 0}
+
+  .pos-card{
+    background:#fff;border:1px solid var(--line);border-radius:8px;
+    padding:8px 12px;box-shadow:var(--shadow);
+    border-left:4px solid var(--prim);
+    font-size:13px;
+  }
+  .pos-card b{color:var(--prim2);font-size:14px;display:block;margin-bottom:2px}
+
+  .dx-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:5px solid var(--prim);
+  }
+  .dx-card h3{font-size:14px;color:var(--prim2);margin:0 0 6px;font-weight:700}
+  .dx-card p{font-size:13px;color:#475569;margin:4px 0}
+
+  .indication{
+    background:#FEF2F2;border:1px solid #FECACA;border-left:4px solid #DC2626;
+    border-radius:10px;padding:8px 12px;margin:6px 0;font-size:13.5px;
+  }
+  .indication b{color:#991B1B}
+
+  .qref{font-size:14px;line-height:1.6;margin:6px 0}
+
+  /* Clickable expand/collapse cards */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;
+    font-size:15px;font-weight:700;color:var(--prim2);
+    background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;
+    display:flex;align-items:center;gap:10px;user-select:none;
+    position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,var(--primLite),#fff 40%);
+  }
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{
+    margin-left:auto;font-size:11px;font-weight:600;
+    color:#64748B;letter-spacing:0.04em;text-transform:uppercase;
+  }
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  footer{
+    margin-top:30px;padding:14px 16px;
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-radius:10px;font-size:12px;color:#1E40AF;
+    text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.cause-card,.indication,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- HERO -->
+<div class="hero">
+<span class="pill">Topic 27 · Chapter 27 · Shoulder Presentation</span>
+<h1>Shoulder Presentation</h1>
+<h2 class="subtitle">(Transverse Lie)</h2>
+<p>A malpresentation in which the fetus is in a transverse lie (its vertebral column is perpendicular to that of the mother). This chapter covers etiology, positions, diagnosis, management (ECV + cesarean), neglected shoulder, and internal podalic version.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 146-149 (4 pages)</span>
+<span class="chip">🟢 Source visuals: 4 (all embedded)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 13 content sections preserved</span>
+</div>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>📑 Table of Contents · 13 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definition</a></li>
+<li><a href="#s3">Etiology</a></li>
+<li><a href="#s4">Figure · Transverse lie</a></li>
+<li><a href="#s5">Positions</a></li>
+<li><a href="#s6">Diagnosis</a></li>
+<li><a href="#s7">Management (overview)</a></li>
+<li><a href="#s8">Singleton pregnancy management</a></li>
+<li><a href="#s9">Twin pregnancy management</a></li>
+<li><a href="#s10">Delivery by cesarean section</a></li>
+<li><a href="#s11">Neglected shoulder</a></li>
+<li><a href="#s12">Internal podalic version</a></li>
+<li><a href="#s13">Student activity · Assessment · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To understand the <strong>definition of shoulder presentation and neglected shoulder</strong>.</li>
+<li>To be able to explain the <strong>etiology of this malpresentation</strong>.</li>
+<li>To be able to describe the <strong>clinical picture and management of transverse lie</strong>.</li>
+<li>To be able to describe the <strong>management of neglected shoulder</strong>.</li>
+</ol>
+</div>
+</section>
+<!-- §2 Definition -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definition</h2>
+<div class="card keydef def-block">
+<p><strong>Shoulder presentation</strong> is a <strong>malpresentation in which the fetus is in a transverse lie (its vertebral column is perpendicular to that of the mother)</strong>.</p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — "Perpendicular"</h4>
+<p style="font-size:13px">The key word in the definition is <strong>perpendicular</strong>: the fetal spine forms a 90° angle to the maternal spine. In contrast to a breech or cephalic lie (both longitudinal), in a transverse lie the long axis of the fetus is across the uterine cavity — the fetal head sits in one maternal iliac fossa and the buttocks in the other.</p>
+</div>
+</section>
+<!-- §3 Etiology -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Etiology</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists 8 predisposing factors:</p>
+<div class="grid-4">
+<div class="cause-card"><b>1. Grand multiparity</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">(5 deliveries or more), lax abdominal musculature.</p></div>
+<div class="cause-card"><b>2. Uterine abnormalities</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Malformations or tumors (fibroids) distort the uterine cavity.</p></div>
+<div class="cause-card"><b>3. Twin pregnancy</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Crowding + the second twin's position can force a transverse lie.</p></div>
+<div class="cause-card"><b>4. Uterine overdistension</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">i.e., polyhydramnios.</p></div>
+<div class="cause-card"><b>5. Prematurity and small fetus</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Smaller fetus has more room to lie sideways.</p></div>
+<div class="cause-card"><b>6. Fetal malformation</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">A fetal structural abnormality may prevent normal longitudinal presentation.</p></div>
+<div class="cause-card"><b>7. Placenta previa</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Placenta in the lower segment can block the head from engaging.</p></div>
+<div class="cause-card"><b>8. Feto-pelvic disproportion</b><p style="font-size:12.5px;color:#475569;margin:4px 0 0">Disproportion between fetus and pelvis.</p></div>
+</div>
+</section>
+<!-- §4 Figure: Transverse lie -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Figure · Transverse lie (Definition)</h2>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-000</span>
+<div class="img-frame">
+<img alt="3D-rendered medical illustration of a fetus in transverse lie inside a pregnant uterus — the fetus lies horizontally across the uterus with the head on one side." src="../../../../extracted_images/27_shoulder_presentation/transverse_lie_3d.jpg"/>
+</div>
+<div class="cap">Figure 1 — 3D-rendered medical illustration of a fetus in a <strong>transverse lie</strong> inside the pregnant uterus. The fetal head sits in one maternal iliac fossa and the buttocks in the other, with the fetal vertebral column oriented <strong>perpendicular</strong> to the maternal spine — the exact arrangement described in §2 Definition. The illustration is placed on the title page of the chapter to anchor the reader's mental model of what a "transverse lie" looks like before the etiology, positions, and management sections begin.</div>
+</div>
+</section>
+<!-- §5 Positions -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Positions</h2>
+<div class="card keydef">
+<p style="font-size:14px"><strong>The denominator is the scapula (Sc).</strong></p>
+<p style="font-size:13px;color:#475569;margin:6px 0 0">In a shoulder presentation, the <strong>scapula (Sc)</strong> is used as the reference point (denominator) for naming the position — analogous to the occiput in cephalic, the sacrum in breech.</p>
+</div>
+<h3 class="sub">4 positions of the scapula (LScA / RScA / LScP / RScP)</h3>
+<div class="grid-2">
+<div class="pos-card"><b>LScA</b>Left Scapulo-Anterior — scapula points to the mother's <strong>left anterior</strong> quadrant</div>
+<div class="pos-card"><b>RScA</b>Right Scapulo-Anterior — scapula points to the mother's <strong>right anterior</strong> quadrant</div>
+<div class="pos-card"><b>LScP</b>Left Scapulo-Posterior — scapula points to the mother's <strong>left posterior</strong> quadrant</div>
+<div class="pos-card"><b>RScP</b>Right Scapulo-Posterior — scapula points to the mother's <strong>right posterior</strong> quadrant</div>
+</div>
+<div class="card pearl" style="margin-top:8px">
+<h4>💡 CLINICAL PEARL — Commonest position is LScA</h4>
+<p style="font-size:13px">The <strong>left scapulo-anterior (LScA)</strong> position is the commonest position for a shoulder presentation — i.e., the fetal scapula is directed toward the mother's left front. This mirrors the breech pattern, where the left sacro-anterior (LSA) position is also the commonest. (Both LScA and LSA share the underlying reason: the maternal rectosigmoid on the left displaces the fetus toward the right side of the uterus during the third trimester, so the fetal "back" tends to face the maternal left front.)</p>
+</div>
+</section>
+<!-- §6 Diagnosis -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Diagnosis</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Diagnosis is made by clinical examination (inspection, palpation, auscultation, pelvic exam) and confirmed by ultrasonography.</p>
+<h3 class="sub">📋 Examination</h3>
+<div class="grid-2">
+<div class="dx-card">
+<h3>Inspection</h3>
+<p>The <strong>abdomen is wide from side to side</strong>.</p>
+</div>
+<div class="dx-card">
+<h3>Palpation</h3>
+<p>Leopold's maneuvers will demonstrate the <strong>transverse lie of the fetus with the head in one side and buttock in the other side</strong>.</p>
+</div>
+<div class="dx-card">
+<h3>Auscultation</h3>
+<p><strong>Fetal heart heard at umbilical level</strong>.</p>
+</div>
+<div class="dx-card">
+<h3>Pelvic examination</h3>
+<p><strong>Head and buttock are not felt in the pelvis</strong>.</p>
+</div>
+</div>
+<div class="card note" style="margin-top:8px">
+<h4>🖥 Ultrasonography</h4>
+<p style="font-size:13.5px"><strong>Confirm the diagnosis, and may indicate possible causes</strong> such as multiple gestation or a tumor.</p>
+</div>
+</section>
+<!-- §7 Management overview -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Management — overview</h2>
+<div class="card keydef def-block">
+<p><strong>Good antenatal care, ECV, and elective cesarean section (CS) are the mainstay of management.</strong></p>
+</div>
+<div class="grid-3">
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:12px 14px">
+<h4 style="color:#065F46;margin:0 0 6px;font-size:14px">1. Good antenatal care</h4>
+<p style="font-size:13px;color:#475569;margin:0">Antenatal visits are the first line of defense: a transverse lie detected early in pregnancy may convert spontaneously to longitudinal; a persistent transverse lie at term requires active management.</p>
+</div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:12px 14px">
+<h4 style="color:#065F46;margin:0 0 6px;font-size:14px">2. ECV (External Cephalic Version)</h4>
+<p style="font-size:13px;color:#475569;margin:0">A procedure that attempts to convert a non-cephalic presentation to a cephalic one by manipulating the fetus through the maternal abdomen.</p>
+</div>
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:12px 14px">
+<h4 style="color:#065F46;margin:0 0 6px;font-size:14px">3. Elective cesarean section (CS)</h4>
+<p style="font-size:13px;color:#475569;margin:0">The definitive management for persistent transverse or oblique lie near term — see §8-§10 for details.</p>
+</div>
+</div>
+</section>
+<!-- §8 Singleton -->
+<section id="s8">
+<h2 class="sec"><span class="n">8</span>Management — Singleton pregnancy</h2>
+<div class="grid-2">
+<div class="green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:12px 14px">
+<h4 style="color:#065F46;margin:0 0 6px;font-size:14px">✅ Step 1 — ECV at 36 weeks</h4>
+<p style="font-size:13.5px"><strong>External cephalic version at 36 weeks gestation.</strong></p>
+</div>
+<div class="red-card" style="background:#FEF2F2;border:1px solid #FECACA;border-left:5px solid #DC2626;border-radius:10px;padding:12px 14px">
+<h4 style="color:#991B1B;margin:0 0 6px;font-size:14px">🚫 Step 2 — If ECV fails → CS</h4>
+<p style="font-size:13.5px"><strong>If this fails, delivery should be carried out by cesarean section.</strong></p>
+</div>
+</div>
+<div class="card warn" style="margin-top:4px">
+<h4>⚠ EXAM NOTE — Why ECV at 36 weeks</h4>
+<p style="font-size:13px">In a singleton pregnancy, ECV is performed at 36 weeks (slightly earlier than the 37 weeks for breech) because if ECV fails or the fetus reverts to transverse, there is still ~3-4 weeks for a planned cesarean before spontaneous labor. After 36 weeks, the risk of spontaneous reversion back to transverse is lower than at earlier gestations.</p>
+</div>
+</section>
+<!-- §9 Twin -->
+<section id="s9">
+<h2 class="sec"><span class="n">9</span>Management — Twin pregnancy</h2>
+<table>
+<thead>
+<tr><th style="width:45%">Scenario</th><th>Management</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First twin in transverse lie</strong></td>
+<td><strong>Cesarean section</strong> (mandatory — a transverse first twin cannot be delivered vaginally).</td>
+</tr>
+<tr>
+<td><strong>Second twin in transverse lie</strong></td>
+<td><strong>Internal podalic version and breech extraction</strong>, if failed → CS. (Internal podalic version is the unique procedure that makes vaginal delivery of a 2nd-twin transverse lie possible — see §12.)</td>
+</tr>
+</tbody>
+</table>
+<div class="card danger">
+<h4>🚨 DANGER — Why CS is mandatory for 1st-twin transverse</h4>
+<p style="font-size:13px">A 1st twin in transverse lie <strong>cannot be delivered vaginally</strong> under any circumstance. The only safe delivery is cesarean. (Internal podalic version is reserved for the 2nd twin only, after the 1st twin has already been delivered vaginally — by which point the uterus is open and access is direct.)</p>
+</div>
+</section>
+<!-- §10 CS -->
+<section id="s10">
+<h2 class="sec"><span class="n">10</span>Delivery by cesarean section</h2>
+<div class="card keydef def-block">
+<p><strong>It is the best and safest method of management in all cases of persistent transverse or oblique lie even if the baby is dead.</strong></p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — "Even if the baby is dead"</h4>
+<p style="font-size:13px">This is a striking statement that has historical and practical importance. In the era before modern obstetrics, a dead fetus in transverse lie was often delivered by destructive operations (decapitation, evisceration). The source explicitly states that <strong>CS is the safest option even in that scenario</strong> — which reflects modern risk-benefit analysis: the maternal morbidity and mortality of destructive procedures (uterine rupture, sepsis, hemorrhage) is now considered to outweigh the morbidity of a straightforward cesarean, even for a non-viable fetus.</p>
+</div>
+</section>
+<!-- §11 Neglected shoulder -->
+<section id="s11">
+<h2 class="sec"><span class="n">11</span>Neglected shoulder</h2>
+<div class="card keydef def-block">
+<h3 class="sub" style="margin-top:0;color:#5B21B6">📋 Definition</h3>
+<p><strong>Obstructed labor in which, the fetal shoulder is impacted with prolapsed arm, drained amniotic fluid, and the fetus is severely distressed or dead.</strong></p>
+</div>
+<div class="grid-2">
+<div class="card red-card">
+<h4>🚨 MANAGEMENT</h4>
+<p style="font-size:14px"><strong>Cesarean section.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0">The only safe option. Internal podalic version is contraindicated in neglected shoulder because the impacted shoulder prevents access to the feet, and forceful version would risk uterine rupture.</p>
+</div>
+<div class="img-card src-viz" style="margin:0">
+<span class="badge">Source Image · img-001</span>
+<div class="img-frame">
+<img alt="Black-and-white line drawing of a neglected shoulder presentation: fetus in transverse lie, arm/shoulder impacted in the maternal pelvis." src="../../../../extracted_images/27_shoulder_presentation/neglected_shoulder_bw.jpg"/>
+</div>
+<div class="cap">Figure 2 — Black-and-white line drawing of a <strong>neglected shoulder presentation</strong>: the fetus lies transversely with the shoulder impacted in the maternal pelvis and a fetal arm prolapsing below. This is the classic finding in obstructed labor with shoulder presentation — the fetus is severely distressed or already dead, the amniotic fluid has drained, and vaginal delivery is impossible without destructive operation or cesarean.</div>
+</div>
+</div>
+</section>
+<!-- §12 Internal podalic version -->
+<section id="s12">
+<h2 class="sec"><span class="n">12</span>Internal podalic version</h2>
+<div class="card keydef def-block">
+<h3 class="sub" style="margin-top:0;color:#5B21B6">📋 Definition</h3>
+<p><strong>Manual intrauterine procedure to convert a cephalic presentation or a transverse lie into a breech to allow a total breech extraction.</strong></p>
+</div>
+<h3 class="sub">📋 Indications</h3>
+<div class="card green-card" style="background:#ECFDF5;border:1px solid #6EE7B7;border-left:5px solid #059669;border-radius:10px;padding:12px 14px">
+<p style="font-size:14px;margin:0"><strong>Delivery of a second twin in cephalic presentation or transverse lie.</strong></p>
+</div>
+<h3 class="sub">📝 Precautions and technique</h3>
+<ol class="step-list">
+<li><strong>Strict asepsis:</strong> swab perineum with 10% povidone iodine, wear sterile gloves.</li>
+<li><strong>Perform spinal anesthesia if possible.</strong></li>
+<li>Insert the <strong>right hand</strong> and determine the position of the fetus and hold the fundus in place with the other hand on the abdomen.</li>
+<li><strong>Grasp one foot or, if possible, both feet, firmly</strong>. It is better not to rupture the membranes immediately because the uterine retraction and lack of amniotic fluid will make it difficult to grasp and move the fetus. The membranes will spontaneously rupture when pulling the foot or will be artificially ruptured once the foot is down.</li>
+<li><strong>Pull the foot/feet gently to the vaginal opening.</strong></li>
+<li>The delivery then continues normally as a <strong>breech delivery</strong>.</li>
+<li><strong>Manually explore the uterus after delivery of the placenta</strong> (to look for uterine rupture), and administer routinely antibiotic prophylaxis.</li>
+</ol>
+<div class="grid-2">
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-002</span>
+<div class="img-frame">
+<img alt="Black-and-white line drawing showing a gloved hand inserted through the maternal vagina into the uterus to grasp fetal feet (internal podalic version — hand insertion)." src="../../../../extracted_images/27_shoulder_presentation/internal_podalic_step1_hand.jpg"/>
+</div>
+<div class="cap">Figure 3 — <strong>Internal podalic version, step 1 — hand insertion.</strong> The operator's right hand is inserted through the vagina into the uterine cavity to grasp one or both fetal feet, while the other hand stabilizes the fundus on the maternal abdomen. The membranes are intentionally left intact until the foot is grasped, because ruptured membranes + retracted uterus = very difficult version. This drawing directly illustrates step 3-4 of the technique list above.</div>
+</div>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-003</span>
+<div class="img-frame">
+<img alt="Black-and-white line drawing of internal podalic version step 2 — the fetal feet are pulled down through the cervix into the vagina, converting the transverse lie into a breech." src="../../../../extracted_images/27_shoulder_presentation/internal_podalic_step2_pulling.jpg"/>
+</div>
+<div class="cap">Figure 4 — <strong>Internal podalic version, step 2 — pulling the feet.</strong> The grasped foot/feet are pulled gently to the vaginal opening, converting the transverse lie into a breech. From this point on, the delivery proceeds as a standard breech delivery (see Topic 26 for the full breech delivery technique). This drawing directly illustrates step 5 of the technique list above.</div>
+</div>
+</div>
+<div class="card danger" style="margin-top:4px">
+<h4>🚨 CRITICAL — Explore uterus after delivery</h4>
+<p style="font-size:13px"><strong>Manually explore the uterus after delivery of the placenta to look for uterine rupture, and administer routinely antibiotic prophylaxis.</strong> Internal podalic version carries a non-trivial risk of uterine rupture — the bimanual manipulation can tear the lower segment, especially in a primigravida or with a tightly retracted uterus. Routine manual exploration is therefore the standard of care.</p>
+</div>
+</section>
+<!-- §13 Clickable cards -->
+<section id="s13">
+<h2 class="sec"><span class="n">13</span>Student activity · Assessment · References</h2>
+<details class="click-card activity">
+<summary>🎓 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p><strong>Illustrative algorithmic diagrams of transverse lie are requested from students' groups.</strong></p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Why this activity matters:</strong> An algorithm forces you to make a decision tree out of 3-4 overlapping clinical scenarios (singleton, twin 1st, twin 2nd, neglected) that share the same starting point (transverse lie) but branch in very different directions. Drawing it reveals which branches you've memorised vs which you've only read about.</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested structure for the algorithm:</strong></p>
+<ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>START:</strong> Transverse lie suspected on abdominal palpation / US.</li>
+<li><strong>Confirm diagnosis:</strong> US confirms position (LScA / RScA / LScP / RScP) + EFW + placental location + any fetal abnormality + multiple gestation or not.</li>
+<li><strong>Decision 1 — Singleton?</strong> If yes → ECV at 36 weeks (see §8) → if ECV fails → planned CS. If no → go to Decision 2.</li>
+<li><strong>Decision 2 — Twin — which twin is transverse?</strong> If 1st twin → CS (mandatory, see §9 DANGER). If 2nd twin → attempt internal podalic version + breech extraction (see §12) → if version fails → CS.</li>
+<li><strong>Decision 3 — Is the shoulder impacted + amniotic fluid drained + fetus distressed/dead?</strong> If yes → Neglected shoulder → CS (see §11). No vaginal version in this scenario.</li>
+<li><strong>End of algorithm.</strong></li>
+</ol>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>✅ Self-assessment Google Form <span class="hint"></span></summary>
+<div class="click-body">
+<p>Please complete the self-assessment Google Form:</p>
+<p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/G4a4371xXFRMivgX8" style="color:#15803D;font-weight:700">https://forms.gle/G4a4371xXFRMivgX8</a></p>
+<p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+<ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+<li>Definition of shoulder presentation (transverse lie, perpendicular vertebral column).</li>
+<li>The 4 positions of the scapula (LScA, RScA, LScP, RScP) and commonest (LScA).</li>
+<li>The 8 predisposing factors / etiology (grand multiparity, uterine abnormalities, twin, polyhydramnios, prematurity, fetal malformation, placenta previa, FPD).</li>
+<li>Diagnosis by inspection (wide abdomen), palpation (Leopold), auscultation (umbilical level), pelvic exam, US.</li>
+<li>Management overview: antenatal care, ECV, CS.</li>
+<li>Singleton management: ECV at 36 weeks → if fails → CS.</li>
+<li>Twin management: 1st twin transverse → CS; 2nd twin transverse → internal podalic version + breech extraction → if fails → CS.</li>
+<li>Why CS is preferred "even if the baby is dead" in persistent transverse/oblique lie.</li>
+<li>Neglected shoulder: definition (impacted shoulder, prolapsed arm, drained fluid, distressed/dead fetus) + management (CS).</li>
+<li>Internal podalic version: definition, indications (2nd twin), 7-step precautions/technique.</li>
+</ul>
+</div>
+</details>
+<details class="click-card references">
+<summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+<div class="click-body">
+<ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+<li>The <strong>PDF source</strong> for this chapter is a 4-page document (p. 146-149) — one of the shorter chapters in the book.</li>
+<li>The source contains <strong>4 embedded images</strong> on pages 1, 2, 3, 4 of the PDF. <strong>All 4 are embedded</strong> in this infographic as green <code>.src-viz</code> cards. Each image was extracted to <code>extracted_images/27_shoulder_presentation/</code> for archival.</li>
+<li><strong>No external images were used</strong> in this chapter — all visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+<li><strong>Image inventory and disposition (all embedded):</strong>
+<ul>
+<li><strong>Figure 1 (img-000):</strong> 3D-rendered medical illustration of a fetus in transverse lie (225×225 px, page 1) — EMBEDDED in §4. Anchors the reader's mental model of what "transverse lie" looks like.</li>
+<li><strong>Figure 2 (img-001):</strong> Black-and-white line drawing of a neglected shoulder presentation (335×278 px, page 2) — EMBEDDED in §11. Shows the impacted shoulder with prolapsed arm in the maternal pelvis.</li>
+<li><strong>Figure 3 (img-002):</strong> Black-and-white line drawing of internal podalic version step 1 — hand insertion (504×483 px, page 3) — EMBEDDED in §12. Shows the operator's right hand inserted through the vagina to grasp fetal feet.</li>
+<li><strong>Figure 4 (img-003):</strong> Black-and-white line drawing of internal podalic version step 2 — pulling the feet (504×568 px, page 4) — EMBEDDED in §12. Shows the grasped feet pulled to the vaginal opening, converting transverse to breech.</li>
+</ul>
+</li>
+<li>Google Form self-assessment URL: <code>https://forms.gle/G4a4371xXFRMivgX8</code> (reproduced verbatim from source).</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- FOOTER -->
+<footer>
+    Topic 27 — Shoulder Presentation (Transverse Lie) · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 27 (p. 146-149, 4 pages) · Source-only visuals (4 of 4 in source) · 0 external visuals · Definition: fetus in transverse lie, vertebral column perpendicular to maternal spine · 4 positions of scapula (denominator = scapula, commonest LScA) · 8 etiologies (grand multiparity, uterine abnormalities, twin, polyhydramnios, prematurity, fetal malformation, placenta previa, FPD) · Singleton: ECV at 36 weeks → if fails → CS · Twin: 1st transverse → CS; 2nd transverse → internal podalic version + breech extraction · Neglected shoulder → CS · Internal podalic version: 7 steps + manual uterine exploration
+  </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

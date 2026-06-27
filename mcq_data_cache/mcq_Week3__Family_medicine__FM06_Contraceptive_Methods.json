@@ -1,0 +1,754 @@
+{
+  "s1": [
+    {
+      "q": "According to the WHO definition, family planning is:",
+      "options": [
+        "The use of contraceptive methods to prevent all pregnancies",
+        "The ability of individuals and couples to anticipate and attain their desired number of children and the spacing and timing of their births",
+        "A government program to limit population growth",
+        "Medical termination of unwanted pregnancies"
+      ],
+      "correct": 1,
+      "explain": "WHO defines family planning as the ability of individuals and couples to anticipate and attain their desired number of children and the spacing and timing of their births."
+    },
+    {
+      "q": "Which group represents the 'TOO Young' target for contraception?",
+      "options": [
+        "Under 16 years",
+        "Under 20 years",
+        "Under 18 years",
+        "Under 25 years"
+      ],
+      "correct": 1,
+      "explain": "The Four 'TOO' are: TOO Young (35 years)."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s2": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Which of the following is a reversible contraceptive method?",
+      "options": [
+        "Tubal ligation",
+        "Vasectomy",
+        "Physiological methods (periodic abstinence, withdrawal, LAM)",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Reversible methods include: physiological, barrier, hormonal, and IUDs. Permanent methods (tubal ligation, vasectomy) are not reversible."
+    },
+    {
+      "q": "Which contraceptive method provides STI protection?",
+      "options": [
+        "Combined oral contraceptives",
+        "Male condoms",
+        "IUD",
+        "Progestin-only injectable"
+      ],
+      "correct": 1,
+      "explain": "Male condoms provide STI protection in addition to pregnancy prevention."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s4": [
+    {
+      "q": "What are the three conditions that must ALL be met for Lactational Amenorrhea (LAM) to be effective?",
+      "options": [
+        "Baby is <6 months, mother exclusively pumps milk, mother uses backup contraception",
+        "Mother's monthly bleeding has not returned, baby is fully/nearly fully breastfed often day and night, baby is <6 months old",
+        "Baby is <3 months, mother has regular cycles, baby is formula-fed at night",
+        "Mother has irregular periods, baby is <1 year, breastfeeding is supplemented with solids"
+      ],
+      "correct": 1,
+      "explain": "All 3 conditions for LAM: (1) Mother's monthly bleeding has not returned, (2) Baby is fully or nearly fully breastfed, fed often day and night, (3) Baby is less than 6 months old."
+    },
+    {
+      "q": "The Standard Days Method of periodic abstinence involves avoiding unprotected intercourse on which days?",
+      "options": [
+        "Days 1-7 of the menstrual cycle",
+        "Days 8 through 19 of regular menstrual cycles",
+        "Days 20-28 of the cycle",
+        "Days 14-28 of the cycle"
+      ],
+      "correct": 1,
+      "explain": "The Standard Days Method: avoid unprotected intercourse on days 8 through 19 of regular menstrual cycles."
+    },
+    {
+      "q": "Which barrier method is placed in the vagina before intercourse and used with spermicides?",
+      "options": [
+        "Male condom",
+        "Vaginal diaphragm and cervical cap",
+        "Female condom",
+        "Spermicide alone"
+      ],
+      "correct": 1,
+      "explain": "The vaginal diaphragm and cervical cap are shallow cups placed in vagina before intercourse, used with spermicides for increased efficacy."
+    },
+    {
+      "q": "Which of the following is a non-contraceptive advantage of barrier methods?",
+      "options": [
+        "Regulates menstrual cycles",
+        "Reduces risk of ovarian cancer",
+        "Possible protection against some STIs and reduced cervical cancer risk",
+        "Improves bone density"
+      ],
+      "correct": 2,
+      "explain": "Non-contraceptive advantages include: ease of use, non-prescription, low cost, possible STI protection (GC, Chlamydia, Trichomonas), and reduced cervical cancer risk."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "What is the primary mechanism of action of combined hormonal contraceptives?",
+      "options": [
+        "Thickening cervical mucus",
+        "Suppression of ovulation",
+        "Endometrial changes preventing implantation",
+        "Sperm immobilization"
+      ],
+      "correct": 1,
+      "explain": "The triple mechanism of hormonal methods: (1) Suppression of ovulation (primary for combined), (2) Thickened cervical mucus, (3) Endometrial changes."
+    },
+    {
+      "q": "Which of the following is NOT a mechanism of action of hormonal contraceptives?",
+      "options": [
+        "Suppression of ovulation",
+        "Thickened cervical mucus",
+        "Endometrial changes",
+        "Direct killing of sperm"
+      ],
+      "correct": 3,
+      "explain": "The three mechanisms are: ovulation suppression, thickened cervical mucus, and endometrial changes. Direct killing of sperm is not a mechanism."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which combined hormonal method is administered every 4 weeks?",
+      "options": [
+        "Combined oral contraceptives",
+        "Combined monthly injectable",
+        "Combined patch",
+        "Combined vaginal ring"
+      ],
+      "correct": 1,
+      "explain": "The combined monthly injectable is given every 4 weeks (±7 days) and does not require daily administration."
+    },
+    {
+      "q": "What is the typical regimen for the combined vaginal ring?",
+      "options": [
+        "3 weeks in, 1 week off",
+        "Inserted daily",
+        "Changed monthly",
+        "24 weeks continuous use"
+      ],
+      "correct": 0,
+      "explain": "The combined vaginal ring is used for 3 weeks in, 1 week off."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s8": [
+    {
+      "q": "When should a fully breastfeeding woman start COCs?",
+      "options": [
+        "Immediately after delivery",
+        "4 weeks after giving birth",
+        "6 months after giving birth",
+        "At weaning"
+      ],
+      "correct": 2,
+      "explain": "For fully breastfeeding women, COCs should be started 6 months after giving birth."
+    },
+    {
+      "q": "Which of the following is a contraindication to COCs?",
+      "options": [
+        "Age under 30",
+        "History of migraine with aura or any migraine",
+        "History of DVT, stroke, MI, or serious heart problems",
+        "Nulliparity"
+      ],
+      "correct": 2,
+      "explain": "Contraindications include: breastfeeding baby 20 years, history of DVT/stroke/MI, breast cancer, migraine, liver disease, etc."
+    },
+    {
+      "q": "What should a woman do if she misses 3 or more pills in week 3 of her COC pack?",
+      "options": [
+        "Take the missed pill and continue as usual",
+        "Stop the pack and take a 7-day break",
+        "Take the most recent pill, finish the pack, start new pack immediately without 7-day break, use backup for 7 days",
+        "Take two pills daily for the rest of the pack"
+      ],
+      "correct": 2,
+      "explain": "If ≥3 pills missed in Week 3: take most recent pill ASAP, finish all pills, start new pack immediately without 7-day break, use backup for 7 days."
+    },
+    {
+      "q": "How often is DMPA progestin-only injectable given?",
+      "options": [
+        "Monthly",
+        "Every 2 months (±2 weeks)",
+        "Every 3 months (±2 weeks)",
+        "Every 6 months"
+      ],
+      "correct": 2,
+      "explain": "DMPA is given every 3 months (±2 weeks). NET-EN is given every 2 months (±2 weeks)."
+    },
+    {
+      "q": "What is the primary mechanism of action of progestin-only pills (minipills)?",
+      "options": [
+        "Suppression of ovulation in 100% of women",
+        "Thickening cervical mucus",
+        "Inducing endometrial atrophy",
+        "Blocking sperm production"
+      ],
+      "correct": 1,
+      "explain": "The primary mechanism of minipills is thickening cervical mucus. Secondary: prevents ovulation in ~50% of women."
+    },
+    {
+      "q": "How long can contraceptive implants provide protection?",
+      "options": [
+        "1-2 years",
+        "3-5 years depending on type",
+        "7-10 years",
+        "Lifelong"
+      ],
+      "correct": 1,
+      "explain": "Implants provide long-term protection for 3-5 years depending on type and are immediately reversible upon removal."
+    }
+  ],
+  "s9": [
+    {
+      "q": "How long is the TCu-380A copper IUD effective?",
+      "options": [
+        "5 years",
+        "10 years",
+        "15 years",
+        "Lifelong"
+      ],
+      "correct": 1,
+      "explain": "The TCu-380A copper IUD is effective for 10 years."
+    },
+    {
+      "q": "Which IUD type provides non-contraceptive advantages including reduction of heavy menstrual bleeding and dysmenorrhea?",
+      "options": [
+        "Copper IUD (Cu-IUD)",
+        "Levonorgestrel IUD (LNG-IUD)",
+        "Both equally",
+        "Neither"
+      ],
+      "correct": 1,
+      "explain": "The LNG-IUD reduces dysmenorrhea, heavy menstrual bleeding, and endometriosis symptoms. The Cu-IUD may cause menorrhagia."
+    },
+    {
+      "q": "When is the postpartum period during which IUD insertion is contraindicated?",
+      "options": [
+        "First 48 hours postpartum",
+        "Between 48 hours and 4 weeks postpartum",
+        "From 4-6 weeks postpartum",
+        "From 6-8 weeks postpartum"
+      ],
+      "correct": 1,
+      "explain": "IUD insertion is contraindicated between 48 hours and 4 weeks postpartum."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s10": [
+    {
+      "q": "Up to how many days after unprotected intercourse can emergency contraception be used?",
+      "options": [
+        "24 hours for all methods",
+        "Progestin-only pills up to 3 days (72 hrs); Combined pills and Cu-IUD up to 5 days",
+        "Up to 7 days for all methods",
+        "Up to 14 days for Cu-IUD"
+      ],
+      "correct": 1,
+      "explain": "Progestin-only pills: up to 3 days (72 hrs). Combined oral pills and Copper IUD: up to 5 days (120 hrs)."
+    },
+    {
+      "q": "Which emergency contraception method has the longest window and is most effective?",
+      "options": [
+        "Progestin-only pills",
+        "Combined oral pills",
+        "Copper IUD",
+        "All have the same window"
+      ],
+      "correct": 2,
+      "explain": "The Copper IUD can be inserted up to 5 days (120 hrs) after unprotected sex and is the most effective emergency contraception."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s11": [
+    {
+      "q": "What is the male sterilization procedure?",
+      "options": [
+        "Orchidectomy",
+        "Vasectomy — the vas deferens is cut or blocked",
+        "Circumcision",
+        "Prostatectomy"
+      ],
+      "correct": 1,
+      "explain": "Vasectomy is the cutting or blocking of the vas deferens to prevent sperm from entering the semen."
+    },
+    {
+      "q": "Which statement about permanent contraceptive methods is TRUE?",
+      "options": [
+        "They are easily reversible",
+        "Reversal is usually not possible",
+        "They provide protection for 10 years",
+        "They also protect against STIs"
+      ],
+      "correct": 1,
+      "explain": "Permanent methods are intended to provide lifelong, permanent protection. Reversal is usually not possible."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s12": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s13": [
+    {
+      "q": "What does WHO MEC Category 2 indicate?",
+      "options": [
+        "No restrictions for use",
+        "Generally use; some follow-up may be needed",
+        "Usually not recommended; requires clinical judgment",
+        "Method should not be used"
+      ],
+      "correct": 1,
+      "explain": "WHO MEC categories: 1 = No restrictions, 2 = Generally use (some follow-up), 3 = Usually not recommended (clinical judgment needed), 4 = Should not be used."
+    },
+    {
+      "q": "What does WHO MEC Category 4 indicate?",
+      "options": [
+        "No restrictions for use",
+        "Generally use; some follow-up may be needed",
+        "Usually not recommended; requires clinical judgment",
+        "Method should not be used"
+      ],
+      "correct": 3,
+      "explain": "Category 4 means the method should not be used due to unacceptable health risk."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 30 — Multiple Pregnancy</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;border-radius:0 0 22px 22px;padding:28px 32px 30px;
+    margin:0 -28px 22px;box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{font-size:34px;line-height:1.15;margin:14px 0 10px;font-weight:800;letter-spacing:-0.01em}
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;font-weight:500;
+  }
+
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);border-radius:12px;
+    padding:16px 22px;margin:0 0 22px;box-shadow:var(--shadow);
+  }
+  .toc h2{font-size:14px;color:var(--prim2);margin:0 0 8px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;padding:8px 0 8px 14px;
+    border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{font-size:15.5px;color:var(--prim2);margin:16px 0 8px;font-weight:700;letter-spacing:0.01em}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 14px;box-shadow:var(--shadow)}
+  .keydef{background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);border:1px solid #DDD6FE;border-left:5px solid #7C3AED}
+  .pearl{background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);border:1px solid #FBCFE8;border-left:5px solid #DB2777}
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);border:1px solid #FECACA;border-left:5px solid #DC2626}
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);border:1px solid #FDE68A;border-left:5px solid #D97706}
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);border:1px solid #A5F3FC;border-left:5px solid #0891B2}
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;border-radius:50%;
+    text-align:center;line-height:24px;font-size:12px;font-weight:700;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards (centered) */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;margin:0 0 16px;
+    overflow:hidden;background:#fff;box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:520px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;color:#fff;
+    padding:3px 9px;border-radius:999px;font-size:10.5px;letter-spacing:0.06em;
+    text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+  .def-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:5px solid #7C3AED}
+  .def-card h3{font-size:15px;color:#5B21B6;margin:0 0 6px;font-weight:700}
+  .def-card p{font-size:13.5px;color:#475569;margin:0}
+
+  .term-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:4px solid var(--prim);font-size:13px}
+  .term-card b{color:var(--prim2);font-size:14px;display:block;margin-bottom:2px}
+
+  .risk-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;box-shadow:var(--shadow);border-left:4px solid var(--prim);font-size:13px}
+  .risk-card b{color:var(--prim2);font-size:13.5px;display:block;margin-bottom:2px}
+
+  .diag-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+  .diag-card.sx{border-left:5px solid #0EA5E9;background:linear-gradient(180deg,#ECFEFF 0%,#fff 100%)}
+  .diag-card.sx h3{color:#0E7490}
+  .diag-card.exam{border-left:5px solid #7C3AED;background:linear-gradient(180deg,#F5F3FF 0%,#fff 100%)}
+  .diag-card.exam h3{color:#5B21B6}
+  .diag-card.us{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  .diag-card.us h3{color:#166534}
+  .diag-card h3{font-size:15px;margin:0 0 6px;font-weight:700}
+  .diag-card ul{font-size:13px;color:#475569;margin:0;padding-left:20px}
+
+  .chorio-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+  .chorio-card.dcda{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  .chorio-card.dcda h3{color:#166534}
+  .chorio-card.mcda{border-left:5px solid #0EA5E9;background:linear-gradient(180deg,#ECFEFF 0%,#fff 100%)}
+  .chorio-card.mcda h3{color:#0E7490}
+  .chorio-card.mcma{border-left:5px solid #D97706;background:linear-gradient(180deg,#FFFBEB 0%,#fff 100%)}
+  .chorio-card.mcma h3{color:#92400E}
+  .chorio-card h3{font-size:15px;margin:0 0 6px;font-weight:700}
+  .chorio-card ul{font-size:13px;color:#475569;margin:0;padding-left:20px}
+
+  .timing-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:5px solid var(--prim)}
+  .timing-card h3{font-size:14.5px;margin:0 0 4px;font-weight:700;color:var(--prim2)}
+  .timing-card p{font-size:13px;color:#475569;margin:2px 0}
+
+  .comp-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+  .comp-card.fetal{border-left:5px solid #DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .comp-card.fetal h3{color:#991B1B}
+  .comp-card.maternal{border-left:5px solid #DB2777;background:linear-gradient(180deg,#FDF2F8 0%,#fff 100%)}
+  .comp-card.maternal h3{color:#9D174D}
+  .comp-card h3{font-size:15px;margin:0 0 6px;font-weight:700}
+  .comp-card ul{font-size:13px;color:#475569;margin:0 0 0;padding-left:20px}
+
+  .ttts-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .ttts-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+  .ttts-card.donor{border-left:5px solid #DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .ttts-card.donor h3{color:#991B1B}
+  .ttts-card.recipient{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  .ttts-card.recipient h3{color:#166534}
+  .ttts-card h3{font-size:15px;margin:0 0 6px;font-weight:700}
+  .ttts-card ul{font-size:13px;color:#475569;margin:0;padding-left:20px}
+
+  .route-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow);border-left:5px solid var(--prim);margin-bottom:10px}
+  .route-card.cs{border-left-color:#DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .route-card.cs h3{color:#991B1B}
+  .route-card.vag{border-left-color:#16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  .route-card.vag h3{color:#166534}
+  .route-card.mixed{border-left-color:#D97706;background:linear-gradient(180deg,#FFFBEB 0%,#fff 100%)}
+  .route-card.mixed h3{color:#92400E}
+  .route-card h3{font-size:14.5px;margin:0 0 6px;font-weight:700}
+  .route-card p{font-size:13px;color:#475569;margin:0}
+
+  /* Clickable expand/collapse cards */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;font-size:15px;font-weight:700;
+    color:var(--prim2);background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;display:flex;align-items:center;
+    gap:10px;user-select:none;position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{border-bottom:1px solid var(--line);background:linear-gradient(90deg,var(--primLite),#fff 40%)}
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{margin-left:auto;font-size:11px;font-weight:600;color:#64748B;letter-spacing:0.04em;text-transform:uppercase}
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  footer{
+    margin-top:30px;padding:14px 16px;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:10px;
+    font-size:12px;color:#1E40AF;text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.term-card,.risk-card,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- HERO -->
+<div class="hero">
+<span class="pill">Topic 30 · Chapter 30 · Multiple Pregnancy</span>
+<h1>Multiple Pregnancy</h1>
+<p>A <strong>high-risk pregnancy with more than one fetus inside the uterus</strong>. This chapter covers the definition and key terminology (zygosity, chorionicity, amnionicity), the two embryological origins (monozygotic vs dizygotic), the timing-based classification of monozygotic cleavage (4 stages from days 1-3 to &gt;12 days), clinical and sonographic diagnosis, ultrasound chorionicity markers (lambda sign, T sign), antenatal + obstetric management (route of delivery by presentation, timing of delivery by chorionicity, third-stage precautions), and the full spectrum of maternal + fetal complications including <strong>twin-to-twin transfusion syndrome (TTTS)</strong>.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 155-161 (7 pages)</span>
+<span class="chip">🟢 Source visuals: 5 (all embedded)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 13 content sections preserved</span>
+</div>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>📑 Table of Contents · 13 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definition &amp; key terminology</a></li>
+<li><a href="#s3">Figure 1 · Singleton vs Twin comparison</a></li>
+<li><a href="#s4">Monozygotic vs Dizygotic twins (incidence, risk, classification)</a></li>
+<li><a href="#s5">Figure 2 · Monozygotic cleavage timing (4 stages)</a></li>
+<li><a href="#s6">Diagnosis (signs, abdominal exam, ultrasound)</a></li>
+<li><a href="#s7">Figures 3&amp;4 · Chorionicity ultrasound markers (Lambda &amp; T signs)</a></li>
+<li><a href="#s8">Management · Antenatal care</a></li>
+<li><a href="#s9">Management · Obstetric care (route + timing + 3rd stage)</a></li>
+<li><a href="#s10">Complications · Maternal</a></li>
+<li><a href="#s11">Complications · Fetal</a></li>
+<li><a href="#s12">Twin-to-Twin Transfusion Syndrome (TTTS)</a></li>
+<li><a href="#s13">Student activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To <strong>understand the definition and variable developmental forms of multiple pregnancy</strong>.</li>
+<li>To be able to <strong>describe the clinical picture, and obstetric management of multiple pregnancy</strong>.</li>
+<li>To be able to <strong>outline the possible maternal and fetal complications of multiple pregnancy</strong>.</li>
+</ol>
+</div>
+</section>
+<!-- §2 Definition + Key terminology -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definition &amp; key terminology</h2>
+<div class="def-card">
+<h3>📋 Definition</h3>
+<p><strong>A pregnancy with more than 1 fetus inside the uterus.</strong></p>
+</div>
+<p style="font-size:13.5px;color:#475569;margin:14px 0 6px">The chapter then defines the <strong>5 most important terms</strong> used in multiple pregnancy — these are the vocabulary that the rest of the chapter builds on, so they must be memorized first.</p>
+<table>
+<thead>
+<tr>
+<th style="width:24%">Term</th>
+<th>Definition (verbatim from source)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zygosity</strong></td>
+<td><strong>The genetic make up of a twin pregnancy</strong></td>
+</tr>
+<tr>
+<td><strong>Monozygotic twins</strong></td>
+<td><strong>Result from division of a single zygote</strong><br/>Share the same genetic material<br/>Identical twins</td>
+</tr>
+<tr>
+<td><strong>Dizygotic twins</strong></td>
+<td><strong>Result from 2 separate eggs fertilized by 2 separate sperm</strong><br/>Share approximately 50% of the genetic material<br/>Fraternal twins</td>
+</tr>
+<tr>
+<td><strong>Chorionicity</strong></td>
+<td><strong>The number of chorions (equal to the number of placentas)</strong></td>
+</tr>
+<tr>
+<td><strong>Amnionicity</strong></td>
+<td><strong>The number of amnions surrounding the fetuses</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — "Zygote" vs "Chorion" vs "Amnion"</h4>
+<p style="font-size:13px">These three words refer to three different layers of biology and three different diagnostic questions:</p>
+<ul style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>Zygote</strong> = the fertilized egg before it divides. <em>Zygosity</em> asks: <strong>"Did the twins come from one zygote or two?"</strong> → monozygotic (= one zygote → identical) vs dizygotic (= two zygotes → fraternal).</li>
+<li><strong>Chorion</strong> = the outer fetal membrane that becomes the placenta. <em>Chorionicity</em> asks: <strong>"How many placentas do the twins share?"</strong> → dichorionic (= 2 placentas) vs monochorionic (= 1 shared placenta).</li>
+<li><strong>Amnion</strong> = the inner fetal membrane that holds the amniotic fluid. <em>Amnionicity</em> asks: <strong>"How many amniotic sacs do the twins have?"</strong> → diamniotic (= 2 sacs) vs monoamniotic (= 1 shared sac).</li>
+</ul>
+<p style="font-size:13px;margin:6px 0 0">The <strong>timing</strong> of the monozygotic embryo's cleavage (see §5 + Figure 2) determines the chorionicity and amnionicity — the later the cleavage, the more structures the twins share. The clinical importance of chorionicity is that <strong>monochorionic twins share a placenta</strong> and can therefore develop <strong>twin-to-twin transfusion syndrome (TTTS)</strong> — see §12.</p>
+</div>
+</section>
+<!-- §3 Figure 1 — Singleton vs Twin comparison -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Figure 1 · Singleton vs Twin comparison</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The opening visual of the chapter — a side-by-side comparison of a <strong>singleton pregnancy</strong> (one fetus) and a <strong>twin pregnancy</strong> (two fetuses). The same pink/peach cross-sectional illustration style is used for both, with the number of yellow smiley-face icons below each panel reinforcing the count.</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-000</span>
+<div class="img-frame">
+<img alt="Side-by-side cross-sectional illustration: left panel shows a single-fetus pregnancy with one yellow smiley face below; right panel shows a twin pregnancy with two yellow smiley faces below." src="../../../../extracted_images/30_multiple_pregnancy/singleton_vs_twin_comparison.jpg"/>
+</div>
+<div class="cap">Figure 1 — <strong>Singleton vs Twin pregnancy: visual comparison of one fetus versus two fetuses inside the uterus.</strong> A pair of pink/peach cross-sectional diagrams of pregnant uteruses, presented side-by-side. The left panel contains a single fetus in cephalic presentation with its umbilical cord, accompanied by one yellow smiley face below the panel. The right panel contains two fetuses in the same uterus, each with its own umbilical cord, accompanied by two yellow smiley faces below the panel. This figure visually anchors the chapter's core concept — a <strong>multiple pregnancy</strong> is simply a pregnancy with more than one fetus — and it is the only figure in the chapter that uses smiley-face icons as a counting aid.</div>
+</div>
+<div class="card note">
+<h4>🧠 MEMORY ANCHOR — Why start with this comparison?</h4>
+<p style="font-size:13px">The chapter opens with this comparison because the entire downstream management is driven by one question: <strong>how many fetuses?</strong> Antenatal care frequency, ultrasound schedule, delivery route, delivery timing, third-stage precautions, and complication surveillance <em>all</em> change when the answer is 2 (or 3+) instead of 1. The smiley-face icons below each panel are the simplest possible "count" — and they remind the clinician that everything that follows in the chapter is a consequence of that count being greater than 1.</p>
+</div>
+</section>
+<!-- §4 Monozygotic vs Dizygotic twins -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Monozygotic vs Dizygotic twins</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Twins are classified by <strong>zygosity</strong> (genetic origin) into two main groups — <strong>monozygotic</strong> ("identical", from 1 zygote) and <strong>dizygotic</strong> ("fraternal", from 2 zygotes). The chapter gives the <strong>incidence</strong>, <strong>6 risk factors</strong> (one applies only to dizygotic), and the <strong>classification</strong> by chorionicity + amnionicity.</p>
+<h3 class="sub">📊 Incidence</h3>
+<div class="grid-2">
+<div class="def-card">
+<h3>Twins</h3>
+<p><strong>1 in 80 pregnancies.</strong></p>
+</div>
+<div class="def-card">
+<h3>Triplets</h3>
+<p><strong>1 in 80² = 1 in 6,400 pregnancies.</strong></p>
+</div>
+</div>
+<h3 class="sub">📋 Risk factors (6 — one applies only to dizygotic)</h3>
+<div class="grid-2">
+<div class="risk-card"><b>1. Prior history of multiple pregnancies</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Recurrence risk in subsequent pregnancies.</p></div>
+<div class="risk-card"><b>2. History of twins in the maternal family</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Hereditary predisposition, particularly for dizygotic twinning.</p></div>
+<div class="risk-card"><b>3. Maternal weight and height</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Women with a BMI ≥ 30 kg/m² <strong>and</strong> ≥ 165 cm are at <strong>↑ risk for dizygotic twin births</strong> (the only risk factor the source flags as <em>specific to dizygotic</em>).</p></div>
+<div class="risk-card"><b>4. ↑ Maternal age</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Older mothers have higher FSH levels, increasing the chance of multiple ovulation.</p></div>
+<div class="risk-card"><b>5. ↑ Parity</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Multiparous women have higher rates of multiple pregnancy.</p></div>
+<div class="risk-card"><b>6. Racial and ethnic variation</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Certain ethnic groups have higher baseline dizygotic twinning rates (e.g., West African populations have the highest rates worldwide; East Asian populations have among the lowest).</p></div>
+</div>
+<h3 class="sub">📋 Classification</h3>
+<div class="grid-2">
+<div class="def-card" style="border-left-color:#16A34A">
+<h3 style="color:#166534">Dizygotic twins</h3>
+<p><strong>Always dichorionic-diamniotic.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Two separate eggs + two separate sperm → two separate zygotes → each develops its own placenta and amniotic sac. There is no monochorionic form of dizygotic twinning.</em></p>
+</div>
+<div class="def-card" style="border-left-color:#0EA5E9">
+<h3 style="color:#0E7490">Monozygotic twins</h3>
+<p><strong>Classified based on the timing of cleavage after fertilization.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>The timing of cleavage determines chorionicity and amnionicity — the 4 stages are in §5 + Figure 2.</em></p>
+</div>
+</div>
+<div class="card danger" style="margin-top:6px">
+<h4>🚨 DANGER — BMI ≥ 30 AND height ≥ 165 cm is a SINGLE risk factor (not two)</h4>
+<p style="font-size:13px">The source lists "Maternal weight and height" as a single risk factor, with the specific quantitative criterion <strong>BMI ≥ 30 kg/m² AND ≥ 165 cm</strong> applying to <strong>dizygotic twin births</strong> only. It is easy to misread this as two separate risk factors (one for weight, one for height), but the source treats it as a single combined criterion — both the BMI threshold <em>and</em> the height threshold must be met for the increased dizygotic risk to apply.</p>
+</div>
+</section>
+<!-- §5 Figure 2 — Monozygotic cleavage timing -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Figure 2 · Monozygotic cleavage timing (4 stages)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">For monozygotic twins, the chapter's central embryological rule: <strong>the timing of cleavage after fertilization determines the chorionicity and amnionicity</strong>. The source lists 4 stages, ranging from <strong>days 1-3</strong> (earliest cleavage = most separate membranes) to <strong>after 12 days</strong> (latest cleavage = least separate = conjoined twins).</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-001</span>
+<div class="img-frame">
+<img alt="4-row embryology diagram showing the timing of monozygotic cleavage and the resulting type of twin pregnancy: row 1 morula (days 1-3) → dichorionic-diamniotic; row 2 blastocyst (days 4-8) → monochorionic-diamniotic; row 3 implanted blastocyst (days 8-13) → monochorionic-monoamniotic; row 4 embryonic disc (days 13-15) → conjoined twins." src="../../../../extracted_images/30_multiple_pregnancy/monozygotic_cleavage_timing.jpg"/>
+</div>
+<div class="cap">Figure 2 — <strong>Monozygotic cleavage timing: 4 stages from morula to embryonic disc, with the resulting chorionicity/amnionicity.</strong> A 4-row embryology diagram. Each row has three panels: the left shows the embryo at that developmental stage, the middle indicates the cleavage (splitting) event, and the right shows the resulting twin configuration. <strong>Row 1 (Morula, days 1-3):</strong> solid mulberry-like cell cluster → splits → <strong>Dichorionic-Diamniotic</strong> twins (2 separate placentas, 2 separate sacs). <strong>Row 2 (Blastocyst, days 4-8):</strong> hollow ring of trophoblast with inner cell mass → splits → <strong>Monochorionic-Diamniotic</strong> twins (1 shared placenta, 2 separate sacs). <strong>Row 3 (Implanted blastocyst, days 8-13):</strong> blastocyst embedded in uterine wall → splits → <strong>Monochorionic-Monoamniotic</strong> twins (1 shared placenta, 1 shared sac, no intertwin membrane). <strong>Row 4 (Formed embryonic disc, days 13-15):</strong> bilaminar disc with primitive streak → incomplete splits → <strong>Conjoined twins</strong> (fused at varying body sites). The unifying principle: <strong>the later the cleavage, the more structures the twins must share</strong>.</div>
+</div>
+<h3 class="sub">📋 The 4 stages of monozygotic cleavage (verbatim from source)</h3>
+<div class="grid-2">
+<div class="timing-card" style="border-left-color:#16A34A">
+<h3 style="color:#166534">Stage 1 · In 1st 3 days</h3>
+<p><strong>→ Dichorionic Diamniotic.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>Earliest cleavage. The morula splits before the chorion forms → each twin gets its own chorion and amnion, and its own placenta. The most separate form of identical twinning.</em></p>
+</div>
+<div class="timing-card" style="border-left-color:#0EA5E9">
+<h3 style="color:#0E7490">Stage 2 · 4-8 days</h3>
+<p><strong>→ Monochorionic Diamniotic.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>The blastocyst splits after the chorion has formed but before the amnion forms → twins share one chorion (one placenta) but each has its own amnion. The most common form of identical twinning. Risk of TTTS (see §12).</em></p>
+</div>
+<div class="timing-card" style="border-left-color:#D97706">
+<h3 style="color:#92400E">Stage 3 · 8-12 days</h3>
+<p><strong>→ Monochorionic Monoamniotic.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>The implanted blastocyst splits after the amnion has formed → twins share one chorion and one amnion (no intertwin membrane). Rare, and high-risk because of cord entanglement.</em></p>
+</div>
+<div class="timing-card" style="border-left-color:#DC2626">
+<h3 style="color:#991B1B">Stage 4 · After 12 days</h3>
+<p><strong>→ Conjoined twins.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>The embryonic disc splits only partially after it has formed → the twins are physically fused at varying body sites. The rarest and most severe form of monozygotic twinning.</em></p>
+</div>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — "The later, the more shared" — the unifying rule</h4>
+<p style="font-size:13px">Notice the pattern in the 4 stages: as the cleavage day number goes up (1-3 → 4-8 → 8-12 → &gt;12), the number of shared structures goes up (dichorionic-diamniotic → monochorionic-diamniotic → monochorionic-monoamniotic → conjoined). The biological reason is intuitive: the earlier the split, the more time each half-embryo has to develop its own membranes before the next membrane forms around it. Clinically, the more structures the twins share, the higher the risk of complications — so monochorionic-monoamniotic twins are higher-risk than monochorionic-diamniotic twins, which in turn are higher-risk than dichorionic-diamniotic twins.</p>
+</div>
+</section>
+<!-- §6 Diagnosis -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Diagnosis (signs, abdominal exam, ultrasound)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The chapter divides the diagnosis of multiple pregnancy into three streams: <strong>signs and symptoms</strong> (subjective/observed), <strong>abdominal examination</strong> (clinical bedside — inspection, palpation, auscultation), and <strong>ultrasound findings</strong> (definitive imaging). Ultrasound is the gold standard.</p>
+<h3 class="sub">📋 Signs and symptoms</h3>
+<div class="card">
+<ul style="font-size:13.5px;color:#475569;line-height:1.7;margin:6px 0 0;padding-left:20px">
+<li><strong>Exaggerated early pregnancy symptoms (e.g. hyperemesis gravidarum).</strong> The higher β-hCG of a multiple pregnancy worsens nausea and vomiting in the first trimester.</li>
+<li><strong>Symphyseal-fundal height is greater than expected for gestational age.</strong> Two fetuses fill the uterus faster than one, so the fundal height is disproportionately large.</li>
+<li><strong>Abdominal overdistension.</strong> Visible abdominal distension beyond what is expected for dates.</li>
+</ul>
+</div>
+<h3 class="sub">📋 Abdominal examination</h3>
+<div class="diag-card exam">
+<h3>I. Inspection</h3>
+<p style="font-size:13.5px;margin:0 0 6px"><strong>Oversized uterus.</strong> The abdomen is visibly larger than expected for gestational age.</p>
+</div>
+<div class="diag-card exam">
+<h3>II. Palpation</h3>
+<ul>
+<li><strong>Fundal level:</strong> higher than the period of amenorrhea (i.e. the fundus sits higher than the date would suggest).</li>
+<li><strong>Fundal, umbilical and first pelvic grips:</strong> can detect <strong>multiple fetal poles (at least 3 poles should be palpated)</strong>. Fetal limbs are felt as multiple knobs.</li>
+</ul>
+</div>
+<div class="diag-card exam">
+<h3>III. Auscultation</h3>
+<ul>
+<li><strong>Fetal heart sounds are heard simultaneously by 2 observers with a minimum difference of 10 beats/minute.</strong> Two observers, two stethoscopes, two fetuses — the two heart rates differ by ≥ 10 bpm, confirming two distinct fetuses.</li>
+<li><strong>Arnaux sign:</strong> The superimposition of 2 fetal heart sounds produce a <strong>gallop sound</strong>. (A "gallop" sound is a triphasic rhythm that emerges when two distinct but overlapping heart sounds fuse into one another at certain positions on the abdomen.)</li>
+</ul>
+</div>
+<h3 class="sub">📋 Ultrasound findings</h3>
+<div class="diag-card us">
+<h3>Sonographic diagnosis (gold standard)</h3>
+<ul>
+<li><strong>≥ 2 fetuses and ≥ 2 heart activities.</strong> Direct visualization of two or more fetuses, each with its own cardiac activity.</li>
+<li><strong>Diagnosis of congenital anomalies and placenta previa.</strong> Ultrasound also allows early detection of structural anomalies and abnormal placental position.</li>
+</ul>
+</div>
+<div class="card note">
+<h4>🧠 MEMORY ANCHOR — "3 poles, 2 rates, 1 gallop"</h4>
+<p style="font-size:13px">A simple way to remember the three bedside findings that distinguish a twin from a singleton pregnancy:</p>
+<ul style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>3 poles</strong> on palpation (instead of the usual 2 poles — head + breech) — at least 3 fetal poles must be palpable.</li>
+<li><strong>2 rates</strong> on auscultation — two observers hearing two distinct heart rates that differ by ≥ 10 bpm.</li>
+<li><strong>1 gallop</strong> on auscultation — Arnaux sign, the superimposition of two heart sounds producing a triphasic gallop rhythm.</li>
+</ul>
+<p style="font-size:13px;margin:6px 0 0">When all three findings are present, multiple pregnancy is highly likely at the bedside — and ultrasound is the next step to confirm and to determine chorionicity (see §7).</p>
+</div>
+</section>
+<!-- §7 Chorionicity ultrasound markers -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Figures 3&amp;4 · Chorionicity ultrasound markers (Lambda &amp; T signs)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">Once ultrasound has confirmed ≥ 2 fetuses, the next critical question is <strong>chorionicity</strong> — because the chorionicity determines the entire downstream management plan (frequency of ultrasounds, timing of delivery, risk of TTTS). The source describes the <strong>3 chorionicity patterns</strong> and their distinct ultrasound signatures.</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-002 · Dichorionic Triplets</span>
+<div class="img-frame">
+<img alt="Grayscale obstetric ultrasound image labeled 'Di-chorionic triplets' showing three fetuses, with an arrowhead pointing to a thin intertwin membrane and an arrow pointing to a thick intertwin membrane (lambda sign)." src="../../../../extracted_images/30_multiple_pregnancy/dichorionic_triplets_ultrasound.jpg"/>
+</div>
+<div class="cap">Figure 3 — <strong>Di-chorionic triplets: ultrasound showing one monochorionic-diamniotic twin pair + one singleton with its own chorion.</strong> A grayscale obstetric ultrasound image with three numbered fetuses (1, 2, 3). Fetus 1 is in the lower left, Fetus 2 is in the lower right, and Fetus 3 is in the upper right. An <strong>arrowhead</strong> (triangle) at the top of the image points to a <strong>thin intertwin membrane</strong> — the signature of a <strong>monochorionic-diamniotic (MCDA) twin pair</strong> (Fetuses 2 and 3 share one chorion, with a thin T-sign membrane between them). An <strong>arrow</strong> on the left points to a <strong>thick intertwin membrane</strong> with the <strong>lambda (twin peak) sign</strong> — the signature of a <strong>dichorionic-diamniotic (DCDA) separation</strong> (Fetus 1 has its own complete chorion). The image illustrates the most common form of "dichorionic" triplet pregnancy: one MCDA pair + one singleton sharing no chorion with either.</div>
+</div>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-003 · Trichorionic Triplets</span>
+<div class="img-frame">
+<img alt="Grayscale obstetric ultrasound image labeled 'Tri-chorionic triplets' showing three separate gestational sacs, each with its own fetus, and two white arrowheads pointing to thin intertwin membranes." src="../../../../extracted_images/30_multiple_pregnancy/trichorionic_triplets_ultrasound.jpg"/>
+</div>
+<div class="cap">Figure 4 — <strong>Tri-chorionic triplets: ultrasound showing three separate chorions, each with its own fetus and amniotic sac.</strong> A grayscale obstetric ultrasound image in the classic sector/fan-shaped format, with three labeled fetuses (1, 2, 3) in separate gestational sacs. Fetus 3 is in the upper portion, Fetus 2 in the center-left, and Fetus 1 in the lower right. <strong>Two white arrowheads</strong> (left and right) point to the <strong>thin intertwin membranes</strong> between the three chorionic sacs. The label box in the bottom right corner explicitly states <strong>"Tri-chorionic triplets"</strong>. This is the most favorable triplet configuration in terms of complications — there is no risk of TTTS because no two fetuses share a placenta.</div>
+</div>
+<h3 class="sub">📋 The 3 chorionicity patterns on ultrasound</h3>
+<div class="chorio-card dcda">
+<h3>🟢 Dichorionic-Diamniotic (DCDA)</h3>
+<ul>
+<li><strong>Lambda sign:</strong> a thick, triangular protrusion of tissue leading up to the intertwin membrane. (The "lambda" of the Greek letter λ — the wedge of chorionic tissue between the two amniotic sacs.)</li>
+<li><strong>Thick intertwin membrane.</strong></li>
+<li><strong>2 separate placentae.</strong></li>
+</ul>
+</div>
+<div class="chorio-card mcda">
+<h3>🔵 Monochorionic-Diamniotic (MCDA)</h3>
+<ul>
+<li><strong>T sign:</strong> the interface between 2 amniotic membranes. (The "T" of the letter T — two thin amniotic membranes meeting the placenta at a right angle, with no wedge of chorion between them.)</li>
+<li><strong>Thin intertwin membrane.</strong></li>
+<li><strong>Single placenta.</strong></li>
+</ul>
+</div>
+<div class="chorio-card mcma">
+<h3>🟠 Monochorionic-Monoamniotic (MCMA)</h3>
+<ul>
+<li><strong>No intertwin membrane.</strong> (Because both fetuses share the same amniotic sac, there is no membrane separating them on ultrasound — this is the diagnostic feature.)</li>
+</ul>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Lambda vs T sign in one line</h4>
+<p style="font-size:13px"><strong>Lambda (λ) = thick wedge = dichorionic</strong> (two placentas, the wedge is the chorion between them). <strong>T = thin interface = monochorionic</strong> (one placenta, the T is where the two amniotic membranes meet the shared placenta). This is the single most important ultrasound distinction in multiple pregnancy, because <strong>monochorionic = shared placenta = risk of TTTS</strong> (see §12).</p>
+</div>
+</section>
+<!-- §8 Management — Antenatal care -->
+<section id="s8">
+<h2 class="sec"><span class="n">8</span>Management · Antenatal care</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The opening of the management section: <strong>multiple pregnancy is considered a high-risk pregnancy</strong> and the antenatal care schedule is intensified accordingly. The source lists 7 specific adjustments.</p>
+<div class="card">
+<h3 class="sub" style="margin-top:0">📋 Antenatal care adjustments (7 — verbatim from source)</h3>
+<ol class="step-list">
+<li><strong>Multiple pregnancy is considered a high-risk pregnancy.</strong> This is the rationale for all the adjustments that follow.</li>
+<li><strong>More frequent prenatal visits.</strong> Standard prenatal visit frequency is insufficient for a multiple pregnancy.</li>
+<li><strong>More frequent ultrasounds to monitor fetal growth.</strong> Twin pregnancies have higher rates of growth restriction and discordant growth; serial growth scans are required.</li>
+<li><strong>Adequate maternal nutrition.</strong> Two fetuses require more calories, protein, iron, and folate than one.</li>
+<li><strong>Monitoring for maternal complications (e.g. gestational diabetes and preeclampsia).</strong> Both GDM and preeclampsia are more common in multiple pregnancies (see §10 complications).</li>
+<li><strong>Monitoring for fetal complications (e.g. congenital anomalies).</strong> The higher anomaly rate in multiple pregnancies (especially monozygotic) requires targeted sonographic surveillance.</li>
+<li><strong>Prevention of preterm delivery.</strong> Preterm labor is the most common fetal complication of multiple pregnancy (see §11), and proactive measures (cervical-length screening, progesterone in selected cases, lifestyle modification) are part of standard care.</li>
+</ol>
+</div>
+<div class="card note">
+<h4>🧠 MEMORY ANCHOR — "7 Antenatal care adjustments" (the rule of "more")</h4>
+<p style="font-size:13px">Notice that the theme running through all 7 adjustments is <strong>"more"</strong> — more visits, more ultrasounds, more nutrition, more monitoring (for both maternal and fetal complications), and more active prevention (of preterm delivery). The principle is: a multiple pregnancy concentrates the risks of a singleton pregnancy and adds new risks of its own, so antenatal care is intensified proportionally.</p>
+</div>
+</section>
+<!-- §9 Management — Obstetric care -->
+<section id="s9">
+<h2 class="sec"><span class="n">9</span>Management · Obstetric care (route + timing + 3rd stage)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The obstetric management of multiple pregnancy has three components: <strong>route of delivery</strong> (4 presentation-based rules), <strong>timing of delivery</strong> (3 chorionicity-based windows), and <strong>third-stage precautions</strong> (5 specific steps to reduce PPH and sepsis risk).</p>
+<h3 class="sub">📋 Route of delivery</h3>
+<div class="route-card cs">
+<h3>🚨 Cesarean section (CS) — mandatory in two situations</h3>
+<p><strong>Multiple pregnancies in which the presenting fetus is not vertex and for all higher-order multiple pregnancies (triplets) → Cesarean section.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Why: a non-vertex presenting twin (breech or transverse) cannot be safely delivered vaginally because the second twin is at high risk of head entrapment or cord prolapse. Triplets (≥ 3 fetuses) are also delivered by CS by convention — the logistical complexity of monitoring and delivering three fetuses in sequence makes vaginal delivery unsafe.</em></p>
+</div>
+<div class="route-card cs">
+<h3>🚨 Cesarean section — also mandatory for monochorionic-monoamniotic twins</h3>
+<p><strong>Monochorionic-monoamniotic twins → Cesarean section.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Why: MCMA twins share one amniotic sac with no intertwin membrane, so their umbilical cords can become entangled — vaginal delivery would risk sudden fetal death from cord compression during labor.</em></p>
+</div>
+<div class="route-card vag">
+<h3>✅ Vaginal delivery — vertex/vertex presentation</h3>
+<p><strong>Vertex/vertex presentation → vaginal delivery.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Both twins in cephalic presentation — the safest configuration for vaginal delivery.</em></p>
+</div>
+<div class="route-card mixed">
+<h3>🟠 Vaginal delivery of 1st twin + maneuver for 2nd twin — vertex/nonvertex</h3>
+<p><strong>Vertex/nonvertex presentation → vaginal delivery of the 1st twin. Then, external cephalic version or internal podalic version and breech extraction of 2nd twin.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>The first twin is delivered vaginally in cephalic presentation. The second twin (non-vertex) is then either turned to cephalic by external version, or delivered breech by internal podalic version followed by breech extraction. This combined approach is the standard of care for vertex/nonvertex twins.</em></p>
+</div>
+<h3 class="sub">📋 Timing of delivery in uncomplicated cases</h3>
+<p style="font-size:13.5px;color:#475569;margin:6px 0 8px">The source's rule: <strong>depending on chorionicity and amnionicity</strong>. The later the chorionicity in the cleavage timing (i.e. the more structures shared), the <strong>earlier</strong> the delivery — because the risk of shared-placenta complications (TTTS, cord entanglement) rises with gestational age.</p>
+<div class="grid-3">
+<div class="timing-card" style="border-left-color:#16A34A">
+<h3 style="color:#16634D">🟢 Dichorionic-Diamniotic</h3>
+<p><strong>38 0/7 weeks – 38 6/7 weeks.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>Lowest-risk chorionicity → can safely go to early term (38 weeks).</em></p>
+</div>
+<div class="timing-card" style="border-left-color:#0EA5E9">
+<h3 style="color:#0E7490">🔵 Monochorionic-Diamniotic</h3>
+<p><strong>34 0/7 weeks – 37 6/7 weeks.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>Shared placenta → higher late-pregnancy risk of TTTS and selective growth restriction → deliver before 38 weeks.</em></p>
+</div>
+<div class="timing-card" style="border-left-color:#D97706">
+<h3 style="color:#92400E">🟠 Monochorionic-Monoamniotic</h3>
+<p><strong>32 0/7 weeks – 34 6/7 weeks.</strong></p>
+<p style="font-size:12px;margin-top:4px"><em>Highest late-pregnancy risk (cord entanglement + TTTS) → deliver even earlier, around 32-34 weeks.</em></p>
+</div>
+</div>
+<h3 class="sub">📋 In the third stage of labor</h3>
+<p style="font-size:13.5px;color:#475569;margin:0 0 8px">5 precautions — the source lists them as 5 bullet points under "In the third stage":</p>
+<div class="card">
+<ol class="step-list">
+<li><strong>Examine the placenta and the membranes for zygosity.</strong> After delivery, the placenta and membranes are inspected — chorionicity can be confirmed anatomically, and zygosity can be inferred (monochorionic = monozygotic with rare exceptions; dichorionic = either dizygotic or early-cleavage monozygotic).</li>
+<li><strong>If retained, manual removal may be performed.</strong> The overdistended uterus is at higher risk of retained products; manual removal is performed if needed.</li>
+<li><strong>Exploration of genital tract for retained products and lacerations.</strong> Multiple pregnancy + operative delivery (in vertex/nonvertex) increases the risk of genital-tract trauma.</li>
+<li><strong>Guard against postpartum hemorrhage by uterine massage &amp; ecbolics.</strong> Uterine atony is a leading cause of PPH in multiple pregnancy — the overdistended uterus contracts poorly. Active management with uterine massage and ecbolic drugs (oxytocin, methylergometrine, misoprostol) is standard.</li>
+<li><strong>Guard against puerperal sepsis.</strong> Multiple pregnancy is associated with higher rates of chorioamnionitis and postpartum infection — antibiotic prophylaxis and close monitoring are required.</li>
+</ol>
+</div>
+<div class="card danger" style="margin-top:6px">
+<h4>🚨 DANGER — Source typo "amnioniticy" in §9 (preserved verbatim, inline note added)</h4>
+<p style="font-size:13px">The source's "Timing of delivery" subsection begins with the phrase "Depending on chorionicity and <strong>amnioniticy</strong>." The correct spelling is <strong>"amnionicity"</strong> (the property of having one or more amnions — parallel to "chorionicity"). The source's typo is preserved verbatim in the §9 heading below, and this inline DANGER callout explains the correction.</p>
+</div>
+</section>
+<!-- §10 Maternal complications -->
+<section id="s10">
+<h2 class="sec"><span class="n">10</span>Complications · Maternal</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists <strong>9 maternal complications</strong> of multiple pregnancy. Most are conditions that are also seen in singleton pregnancy but at <strong>higher frequency</strong> in multiples (GDM, preeclampsia, anemia, PPH) — and a few are <strong>multiples-specific</strong> in mechanism (postpartum hemorrhage from uterine overdistension, increased cesarean rate from malpresentation).</p>
+<div class="comp-card maternal">
+<h3>🤰 Maternal Complications (9 — verbatim from source)</h3>
+<ul>
+<li><strong>Hyperemesis gravidarum.</strong> Exaggerated nausea + vomiting in early pregnancy, driven by higher β-hCG.</li>
+<li><strong>Gestational diabetes mellitus.</strong> Higher placental mass → more insulin resistance.</li>
+<li><strong>Hypertensive pregnancy disorders (e.g. preeclampsia).</strong> Larger placental mass + greater cardiovascular demand.</li>
+<li><strong>Anemia.</strong> Greater iron + folate demand from two fetuses; iron-deficiency anemia is common.</li>
+<li><strong>Excessive weight gain.</strong> Two fetuses + extra placental tissue + extra amniotic fluid + extra maternal blood volume.</li>
+<li><strong>Postpartum hemorrhage (due to uterine atony or lacerations).</strong> Overdistended uterus contracts poorly (atony) and the higher rate of operative delivery increases genital-tract lacerations.</li>
+<li><strong>Miscarriages.</strong> Higher first-trimester pregnancy loss rate, particularly vanishing-twin phenomenon (one twin resorbs, the other continues).</li>
+<li><strong>Placental abnormalities (e.g., placenta previa).</strong> Larger placental footprint increases the chance that the placenta covers the cervical os.</li>
+<li><strong>Increased risk for cesarean delivery.</strong> Higher rate of non-vertex presentation, fetal distress, and CS-mandatory configurations (triplets, MCMA, non-vertex presenting twin).</li>
+</ul>
+</div>
+<div class="card note">
+<h4>🧠 MEMORY ANCHOR — The "3-fold higher" rule for maternal complications</h4>
+<p style="font-size:13px">A useful clinical rule of thumb: most of the complications in the list above (GDM, preeclampsia, anemia, PPH, preterm labor) occur <strong>2-3 times more often</strong> in twin pregnancies than in singleton pregnancies. The biological reason is that two fetuses effectively <strong>double</strong> the placental mass, the blood volume demand, the iron demand, the mechanical load on the uterus, and the cardiovascular workload — so every complication that scales with placental mass or cardiovascular demand is amplified proportionally.</p>
+</div>
+</section>
+<!-- §11 Fetal complications -->
+<section id="s11">
+<h2 class="sec"><span class="n">11</span>Complications · Fetal</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists <strong>5 fetal complications</strong>. Twin-to-twin transfusion syndrome (TTTS) is the most distinctive — it is unique to monochorionic twins and is covered in detail in §12.</p>
+<div class="comp-card fetal">
+<h3>🍼 Fetal Complications (5 — verbatim from source)</h3>
+<ul>
+<li><strong>Preterm labor and birth.</strong> The most common fetal complication; overdistended uterus triggers earlier labor. Mean gestational age at delivery for twins is ~36 weeks, and ~50% of twin pregnancies deliver before 37 weeks.</li>
+<li><strong>Congenital anomalies.</strong> Higher anomaly rate in multiples, especially monozygotic (cardiac, neural tube, and midline defects are all more common). Note: the same fetus cannot have two structurally identical anomalies from one set of genetic material, but monozygotic twins are at higher risk of structural defects than dizygotic twins.</li>
+<li><strong>Low birth weight.</strong> Each twin tends to be smaller than a singleton of the same gestational age — and many twins deliver preterm, compounding the LBW risk.</li>
+<li><strong>Discordant growth.</strong> Significant (&gt; 20%) difference in birth weight between the two twins. Discordant growth is associated with higher perinatal mortality, particularly when due to TTTS or selective fetal growth restriction (sFGR) in MCDA twins.</li>
+<li><strong>Neonatal death.</strong> The most severe fetal outcome; driven by the combination of preterm delivery, LBW, anomalies, and TTTS-related complications.</li>
+</ul>
+</div>
+<div class="card danger" style="margin-top:6px">
+<h4>🚨 DANGER — "Neonatal death" is the only fatal complication on the list</h4>
+<p style="font-size:13px">Of the 5 fetal complications, 4 (preterm labor, anomalies, LBW, discordant growth) are <strong>morbidities</strong> that may resolve with appropriate neonatal care — but <strong>neonatal death</strong> is a <strong>mortality</strong>, and it is what all the upstream interventions (intensified antenatal care, chorionicity-determined delivery timing, TTTS surveillance) are designed to prevent. Every other complication on the list is a risk factor for this one.</p>
+</div>
+</section>
+<!-- §12 TTTS -->
+<section id="s12">
+<h2 class="sec"><span class="n">12</span>Twin-to-Twin Transfusion Syndrome (TTTS)</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The chapter's most distinctive fetal complication: <strong>twin-to-twin transfusion syndrome</strong>, a disorder unique to <strong>monochorionic</strong> twins (twins sharing one placenta). The syndrome is driven by imbalanced blood flow through placental vascular anastomoses between the two fetuses.</p>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-004</span>
+<div class="img-frame">
+<img alt="Anatomical cross-sectional illustration of a twin pregnancy showing two fetuses in a shared uterus, each with its own umbilical cord connecting to a single shared placenta, with labels for Placenta, Umbilical Cord, Fetus, and Cervix." src="../../../../extracted_images/30_multiple_pregnancy/twin_to_twin_transfusion_anatomy.jpg"/>
+</div>
+<div class="cap">Figure 5 — <strong>Twin Pregnancy: Twin-to-Twin Transfusion — anatomical setup of a monochorionic twin pregnancy.</strong> A medical/educational illustration titled "Twin Pregnancy: Twin to Twin Transfusion" showing a cross-sectional, anatomical view of a pregnant uterus containing twins. The labeled structures are: <strong>Placenta</strong> (top right — the shared organ attached to the uterine wall where both umbilical cords connect), <strong>Umbilical Cord</strong> (two separate cords, one from each fetus, both attaching to the shared placenta), <strong>Fetus</strong> (two developing babies in curled fetal position, in different orientations), and <strong>Cervix</strong> (bottom — the lower portion of the uterus). The illustration highlights the anatomic prerequisite for TTTS: <strong>two fetuses sharing a single placenta</strong>. It is through this shared placenta that arterio-venous anastomoses allow imbalanced blood flow from one twin (the donor) to the other (the recipient).</div>
+</div>
+<div class="card danger">
+<h4>🚨 TTTS — definition (verbatim from source)</h4>
+<p style="font-size:13.5px;line-height:1.7;margin:0">
+<strong>Occurs in 10%-15% of monochorionic twins.</strong><br/>
+<strong>Due to arterio-venous anastomosis with imbalanced blood flow.</strong><br/>
+<strong>Blood flows in a fixed direction from 1 fetus (donor) to another (recipient).</strong>
+</p>
+</div>
+<h3 class="sub">📋 Donor twin vs Recipient twin — the asymmetric pathophysiology</h3>
+<div class="ttts-grid">
+<div class="ttts-card donor">
+<h3>🩸 Donor twin — gives blood away</h3>
+<ul>
+<li><strong>Anemia</strong> (low red-cell mass from losing blood to the recipient).</li>
+<li><strong>Growth restriction</strong> (poor perfusion of fetal tissues → IUGR).</li>
+<li><strong>Oligohydramnios</strong> (low amniotic fluid — the donor's sac becomes visibly "stuck" against the uterine wall on ultrasound, the "stuck twin" sign).</li>
+</ul>
+</div>
+<div class="ttts-card recipient">
+<h3>💧 Recipient twin — receives excess blood</h3>
+<ul>
+<li><strong>Polycythemia</strong> (high red-cell mass from receiving excess blood).</li>
+<li><strong>Macrosomia</strong> (oversized from excess perfusion and nutrients).</li>
+<li><strong>Polyhydramnios</strong> (high amniotic fluid — the recipient's sac becomes visibly overdistended, the "polyhydramnios" sign).</li>
+</ul>
+</div>
+</div>
+<h3 class="sub">📋 Management of TTTS</h3>
+<div class="card">
+<ol class="step-list">
+<li><strong>Amnioreduction.</strong> Needle drainage of excess amniotic fluid from the recipient twin's sac. Relieves the polyhydramnios temporarily and reduces the risk of preterm labor from uterine overdistension. Often performed serially.</li>
+<li><strong>Fetoscopic laser occlusion of placental vessels.</strong> Definitive treatment for TTTS — a fetoscope is inserted into the uterus, and the vascular anastomoses on the surface of the shared placenta are identified and laser-ablated. This separates the two fetal circulations and stops the imbalanced blood flow. The preferred treatment for severe TTTS (Quintero stage II-IV).</li>
+</ol>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — "Donor anemia/oligo, recipient poly/macro"</h4>
+<p style="font-size:13px">A simple way to remember the asymmetric picture of TTTS: <strong>the donor is "deficient"</strong> (anemia, growth restriction, oligohydramnios — all the "-penia" and "-restriction" words), and <strong>the recipient is "excessive"</strong> (polycythemia, macrosomia, polyhydramnios — all the "poly-" and "macro-" words). The same imbalanced blood flow that causes the donor's deficiency causes the recipient's excess — they are two sides of the same coin.</p>
+</div>
+<div class="card note">
+<h4>🧠 MEMORY ANCHOR — "Anastomosis = imbalance = Donor vs Recipient"</h4>
+<p style="font-size:13px">Three nested facts to remember about TTTS: (1) <strong>Anastomosis</strong> in the shared placenta is the anatomic prerequisite. (2) When the anastomoses are <strong>imbalanced</strong> (blood flows in one direction), the result is TTTS. (3) The clinical picture is always asymmetric — one twin (the donor) becomes deficient, the other (the recipient) becomes excessive. Fetoscopic laser occlusion is the definitive treatment because it eliminates the anatomic prerequisite by ablating the anastomoses themselves.</p>
+</div>
+</section>
+<!-- §13 Clickable cards -->
+<section id="s13">
+<h2 class="sec"><span class="n">13</span>Student activity · Questions · References</h2>
+<details class="click-card activity">
+<summary>🎓 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p><strong>The students' groups are requested to prepare illustrative diagrams of various developmental forms of twin pregnancy.</strong></p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>What this activity means in practice:</strong> the chapter's embryological content (Figure 2 in §5) is best learned by drawing it. The student groups should prepare a poster or hand-drawn diagram that captures the <strong>4 stages of monozygotic cleavage</strong> (days 1-3, 4-8, 8-12, &gt;12) and the resulting chorionicity/amnionicity. A good diagram will also show the <strong>dizygotic twin configuration</strong> (always DCDA) for comparison, and will label each configuration with its clinical risk profile (e.g. "MCDA — risk of TTTS").</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested diagram elements:</strong></p>
+<ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>Morula stage (days 1-3)</strong> → morula cluster with cleavage arrow → two morulae → DCDA twins (2 placentas, 2 sacs).</li>
+<li><strong>Blastocyst stage (days 4-8)</strong> → blastocyst with cleavage arrow → two blastocysts sharing one chorion → MCDA twins (1 placenta, 2 sacs).</li>
+<li><strong>Implanted blastocyst stage (days 8-12)</strong> → implanted blastocyst with cleavage arrow → two embryonic discs sharing one chorion and one amnion → MCMA twins (1 placenta, 1 sac, no intertwin membrane).</li>
+<li><strong>Embryonic disc stage (days &gt;12)</strong> → bilaminar disc with partial cleavage → two partially-fused embryos → conjoined twins.</li>
+<li><strong>Side panel: Dizygotic twins</strong> → two eggs + two sperm → two zygotes → two implantations → DCDA twins (always).</li>
+</ol>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>✅ Self-assessment Questions <span class="hint"></span></summary>
+<div class="click-body">
+<p>Please complete the self-assessment Google Form:</p>
+<p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/dsQLn79xRafpURMV9" style="color:#15803D;font-weight:700">https://forms.gle/dsQLn79xRafpURMV9</a></p>
+<p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+<ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+<li>Definition: pregnancy with more than 1 fetus inside the uterus.</li>
+<li>Incidence: twins 1 in 80; triplets 1 in 80².</li>
+<li>5 key terms: zygosity, monozygotic, dizygotic, chorionicity, amnionicity.</li>
+<li>6 risk factors (1 prior history, 2 family history, 3 weight+height, 4 maternal age, 5 parity, 6 race/ethnicity).</li>
+<li>BMI ≥ 30 AND ≥ 165 cm is the combined criterion for ↑ dizygotic risk (single risk factor, not two).</li>
+<li>Classification: dizygotic = always DCDA; monozygotic = classified by cleavage timing.</li>
+<li>4 stages of monozygotic cleavage: days 1-3 (DCDA), 4-8 (MCDA), 8-12 (MCMA), &gt;12 (conjoined).</li>
+<li>Diagnosis by signs + symptoms (hyperemesis, ↑ fundal height, abdominal overdistension).</li>
+<li>Diagnosis by abdominal exam (oversized uterus, ≥ 3 fetal poles, ≥ 2 heart rates ≥ 10 bpm apart, Arnaux sign/gallop).</li>
+<li>Ultrasound findings: ≥ 2 fetuses + ≥ 2 heart activities, anomalies + previa.</li>
+<li>Lambda sign = DCDA (thick wedge, 2 placentas, thick membrane).</li>
+<li>T sign = MCDA (thin interface, 1 placenta, thin membrane).</li>
+<li>MCMA = no intertwin membrane.</li>
+<li>7 antenatal care adjustments (high-risk, more visits, more US, nutrition, monitor maternal + fetal, prevent preterm).</li>
+<li>Route of delivery: CS for non-vertex presenting twin, triplets, MCMA; vaginal for vertex/vertex; vaginal 1st twin + version/extraction 2nd twin for vertex/nonvertex.</li>
+<li>Timing of delivery: DCDA 38 0/7-38 6/7, MCDA 34 0/7-37 6/7, MCMA 32 0/7-34 6/7.</li>
+<li>5 third-stage precautions (examine placenta/membranes, manual removal if retained, genital exploration, PPH guard with massage + ecbolics, puerperal sepsis guard).</li>
+<li>9 maternal complications (hyperemesis, GDM, HTN/preeclampsia, anemia, weight gain, PPH, miscarriage, previa, ↑ CS rate).</li>
+<li>5 fetal complications (preterm labor, anomalies, LBW, discordant growth, neonatal death).</li>
+<li>TTTS: 10-15% of monochorionic twins, AV anastomosis, fixed direction donor→recipient.</li>
+<li>Donor: anemia, growth restriction, oligohydramnios.</li>
+<li>Recipient: polycythemia, macrosomia, polyhydramnios.</li>
+<li>TTTS management: amnioreduction + fetoscopic laser occlusion of placental vessels.</li>
+</ul>
+</div>
+</details>
+<details class="click-card references">
+<summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+<div class="click-body">
+<ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+<li>The <strong>PDF source</strong> for this chapter is a 7-page document (p. 155-161).</li>
+<li>The source contains <strong>5 embedded images</strong> spread across pages 155, 157, and 161. <strong>All 5 are embedded</strong> in this infographic as green <code>.src-viz</code> cards. They were extracted to <code>extracted_images/30_multiple_pregnancy/</code> for archival.</li>
+<li><strong>No external images were used</strong> in this chapter — all 5 visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+<li><strong>Image inventory and disposition (all 5 embedded):</strong>
+<ul>
+<li><strong>Figure 1 (img-000):</strong> Singleton vs Twin comparison (450×220, 9,930 B, page 155) — side-by-side pink/peach cross-sectional diagrams: one fetus + one smiley face on the left, two fetuses + two smiley faces on the right. Caption: visual comparison of one fetus versus two. EMBEDDED in §3.</li>
+<li><strong>Figure 2 (img-001):</strong> Monozygotic cleavage timing (700×530, 59,421 B, page 156) — 4-row embryology diagram showing the 4 stages of monozygotic cleavage and the resulting chorionicity/amnionicity. No explicit source caption. EMBEDDED in §5.</li>
+<li><strong>Figure 3 (img-002):</strong> Di-chorionic triplets ultrasound (450×340, 17,132 B, page 157) — grayscale ultrasound with 3 labeled fetuses, arrowhead pointing to a thin intertwin membrane (MCDA pair), arrow pointing to a thick intertwin membrane (lambda sign, DCDA). Source caption: "Di-chorionic triplets." EMBEDDED in §7.</li>
+<li><strong>Figure 4 (img-003):</strong> Tri-chorionic triplets ultrasound (450×400, 20,819 B, page 157) — grayscale sector ultrasound with 3 labeled fetuses in separate sacs, 2 white arrowheads pointing to thin intertwin membranes. Source caption: "Tri-chorionic triplets." EMBEDDED in §7.</li>
+<li><strong>Figure 5 (img-004):</strong> Twin Pregnancy: Twin to Twin Transfusion (470×340, 14,626 B, page 161) — anatomical cross-section of a twin pregnancy with 2 fetuses + 2 umbilical cords + 1 shared placenta + cervix labeled. Title: "Twin Pregnancy: Twin to Twin Transfusion." EMBEDDED in §12.</li>
+</ul>
+</li>
+<li>Google Form self-assessment URL: <code>https://forms.gle/dsQLn79xRafpURMV9</code> (reproduced verbatim from source).</li>
+<li>The source contains the typo <strong>"amnioniticy"</strong> in the §9 timing-of-delivery subsection (verbatim from source). The correct spelling is <strong>"amnionicity"</strong> (parallel to "chorionicity"). Preserved verbatim; a DANGER callout in §9 explains the correction.</li>
+<li>The source's combined risk factor <strong>"Maternal weight and height" (BMI ≥ 30 AND ≥ 165 cm)</strong> applies specifically to <strong>dizygotic twin births</strong>. This is a single combined criterion, not two separate risk factors — preserved as a single risk-card in §4 with a DANGER callout explaining the combined-criterion reading.</li>
+<li>The source's "Lambda sign" definition ("a thick, triangular protrusion of tissue leading up to the intertwin membrane") and "T sign" definition ("the interface between 2 amniotic membranes") are the two key ultrasound markers for distinguishing DCDA from MCDA in the first trimester — both are preserved verbatim in §7.</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- FOOTER -->
+<footer>
+    Topic 30 — Multiple Pregnancy · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 30 (p. 155-161, 7 pages) · Source-only visuals (5 of 5 in source) · 0 external visuals · Definition: pregnancy with &gt;1 fetus · Incidence: twins 1/80, triplets 1/80² · 6 risk factors (BMI≥30 + height≥165 = dizygotic) · Dizygotic = always DCDA; monozygotic = 4 cleavage stages (1-3d DCDA, 4-8d MCDA, 8-12d MCMA, &gt;12d conjoined) · Diagnosis: 3 poles + 2 rates ≥10bpm + Arnaux gallop · Ultrasound: lambda sign (DCDA, thick wedge) vs T sign (MCDA, thin interface) · Management: 7 antenatal adjustments, 4 route rules (CS for non-vertex/triplets/MCMA), 3 timing windows (38w DCDA, 34-37w MCDA, 32-34w MCMA), 5 third-stage precautions · 9 maternal complications (hyperemesis, GDM, HTN, anemia, weight, PPH, miscarriage, previa, ↑CS) + 5 fetal (preterm, anomalies, LBW, discordant growth, neonatal death) · TTTS: 10-15% of monochorionic, AV anastomosis, donor (anemia/IUGR/oligo) vs recipient (polycythemia/macro/polyhydramnios), managed by amnioreduction + fetoscopic laser occlusion
+  </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

@@ -1,0 +1,458 @@
+{
+  "definition": [
+    {
+      "q": "Brow presentation is a cephalic presentation in which the fetal head is:",
+      "options": [
+        "Fully flexed",
+        "Fully extended",
+        "Midway between flexion and extension",
+        "Laterally rotated"
+      ],
+      "correct": 2,
+      "explain": "Brow presentation is a cephalic presentation in which the fetal head is midway between flexion and extension."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "causes": [
+    {
+      "q": "The causes of brow presentation are similar to those of:",
+      "options": [
+        "Face presentation",
+        "Breech presentation",
+        "Occipitoposterior position",
+        "Compound presentation"
+      ],
+      "correct": 2,
+      "explain": "The causes of brow presentation are the same as those of occipitoposterior position."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "denominator": [
+    {
+      "q": "What is the denominator in brow presentation?",
+      "options": [
+        "Occiput",
+        "Mentum",
+        "Sacrum",
+        "Frontal bone"
+      ],
+      "correct": 3,
+      "explain": "In brow presentation, the frontal bone is the denominator (reference point for describing position)."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "positions": [
+    {
+      "q": "How many named positions are recognized in brow presentation?",
+      "options": [
+        "2 (frontoanterior and frontoposterior) with 4 variants",
+        "3 (as in face presentation)",
+        "4 (as in OP position)",
+        "1 (direct brow)"
+      ],
+      "correct": 0,
+      "explain": "Brow presentation has two main position groups: Frontoanterior and Frontoposterior, each with right and left variants (4 named positions total)."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "diagnosis": [
+    {
+      "q": "On vaginal examination in brow presentation, which of the following is felt?",
+      "options": [
+        "Chin and mouth",
+        "Occiput and sagittal suture",
+        "Frontal bone, supraorbital ridge, and root of the nose",
+        "Sacrum and coccyx"
+      ],
+      "correct": 2,
+      "explain": "On PV examination in brow presentation, the frontal bone, supraorbital ridge, and root of the nose are felt. The chin is NOT felt — this distinguishes brow from face presentation."
+    },
+    {
+      "q": "The key feature distinguishing brow from face presentation on vaginal examination is:",
+      "options": [
+        "The occiput is palpable",
+        "The chin is not felt",
+        "The mouth is felt",
+        "The fontanelles are palpable"
+      ],
+      "correct": 1,
+      "explain": "The chin is NOT felt in brow presentation — that is the single most useful clinical sign separating it from face presentation, where the mentum (chin) is the leading point."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which clinical finding is most suggestive of this diagnosis?",
+      "options": [
+        "Pain and bleeding",
+        "Asymptomatic presentation",
+        "Abnormal laboratory values",
+        "Varies by condition — specific findings guide diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation differs by condition and guides diagnostic testing."
+    }
+  ],
+  "mechanism": [
+    {
+      "q": "Why is brow presentation essentially incompatible with vaginal delivery?",
+      "options": [
+        "The biparietal diameter is too large",
+        "The engaging mento-vertical diameter (13.75 cm) exceeds all pelvic inlet diameters",
+        "The head is too flexed",
+        "The head is too extended"
+      ],
+      "correct": 1,
+      "explain": "The engaged diameter is the mento-vertical diameter (13.75 cm), which is longer than any diameter of the female pelvic inlet, making labor obstructed from the start."
+    },
+    {
+      "q": "What is the mento-vertical diameter in brow presentation?",
+      "options": [
+        "9.5 cm",
+        "11.0 cm",
+        "13.75 cm",
+        "12.5 cm"
+      ],
+      "correct": 2,
+      "explain": "The mento-vertical diameter is 13.75 cm, measured from the chin (mentum) to the most distant point on the vertex (crown)."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "management": [
+    {
+      "q": "What is the standard management for brow presentation?",
+      "options": [
+        "Vacuum extraction",
+        "Forceps delivery",
+        "Cesarean section",
+        "Manual rotation to vertex"
+      ],
+      "correct": 2,
+      "explain": "Cesarean section is the only safe option for brow presentation because the mento-vertical diameter (13.75 cm) cannot pass through the pelvic inlet."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "complications": [
+    {
+      "q": "Which complication is a constant risk in brow presentation?",
+      "options": [
+        "Uterine atony",
+        "Shoulder dystocia",
+        "Cord prolapse",
+        "Postpartum hemorrhage"
+      ],
+      "correct": 2,
+      "explain": "Cord prolapse is a constant risk in brow presentation because the presenting part does not fit the pelvic inlet, leaving space for the cord to descend."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

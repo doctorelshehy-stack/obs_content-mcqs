@@ -1,0 +1,202 @@
+{
+  "1-definition-and-objectives-of-antenatal-care": [
+    {
+      "q": "Antenatal care is best defined as:",
+      "options": [
+        "Care given during labor only",
+        "A preventive obstetric program from conception to onset of labor",
+        "Care given after delivery",
+        "Care during the postpartum period"
+      ],
+      "correct": 1,
+      "explain": "Antenatal care is a preventive obstetric program including observations, medical care, investigations and advice from conception to labor onset."
+    },
+    {
+      "q": "All of the following are objectives of antenatal care EXCEPT:",
+      "options": [
+        "Identification of high-risk pregnancy",
+        "Early detection of complications",
+        "Management of labor and delivery",
+        "Giving advice for all pregnant patients"
+      ],
+      "correct": 2,
+      "explain": "Objectives include identifying/monitoring high-risk pregnancy, early detection of complications, advice, and managing minor problems. Labor management is intrapartum care."
+    }
+  ],
+  "2-frequency-of-visits": [
+    {
+      "q": "For low-risk pregnancies, follow-up visits are scheduled:",
+      "options": [
+        "Monthly till 28 weeks, every 2 weeks till 36 weeks, then weekly",
+        "Monthly throughout pregnancy",
+        "Every 2 weeks throughout pregnancy",
+        "Only at booking and at 36 weeks"
+      ],
+      "correct": 0,
+      "explain": "Low-risk schedule: every month till 28 weeks, every 2 weeks till 36 weeks, then every week till delivery."
+    },
+    {
+      "q": "For high-risk pregnancies after 36 weeks, the recommendation is:",
+      "options": [
+        "Every week till delivery",
+        "Every 2 weeks till delivery",
+        "Hospitalization till delivery",
+        "Every day as outpatient"
+      ],
+      "correct": 2,
+      "explain": "High-risk schedule: every 2 weeks till 28 weeks, every week till 36 weeks, then hospitalization till delivery."
+    }
+  ],
+  "3-initial-visit": [
+    {
+      "q": "The initial antenatal visit includes all EXCEPT:",
+      "options": [
+        "Diagnosis of pregnancy and accurate dating",
+        "Complete clinical evaluation",
+        "Scheduling cesarean delivery date",
+        "History taking and examination"
+      ],
+      "correct": 2,
+      "explain": "The initial visit includes pregnancy diagnosis, dating, and complete clinical evaluation (history, general, abdominal, and local examination)."
+    }
+  ],
+  "4-subsequent-visits": [
+    {
+      "q": "Which of the following is routinely checked at each subsequent antenatal visit?",
+      "options": [
+        "Blood glucose only",
+        "BP, weight, edema, and abdominal examination",
+        "Ultrasound scan",
+        "CBC and coagulation profile"
+      ],
+      "correct": 1,
+      "explain": "Each visit includes BP, weight, edema check, and abdominal examination. Urine for albumin/sugar is also checked."
+    }
+  ],
+  "5-screening-tests": [
+    {
+      "q": "Routine antenatal screening tests include all EXCEPT:",
+      "options": [
+        "ABO and Rh typing",
+        "Rubella antibodies",
+        "HBsAg",
+        "Amniocentesis"
+      ],
+      "correct": 3,
+      "explain": "Routine tests: ABO/Rh typing, CBC, postprandial glucose, HBsAg, rubella antibodies, cervicovaginal smear, urine analysis. Amniocentesis is a diagnostic test done only when indicated."
+    }
+  ],
+  "6-antenatal-advice-nutrition": [
+    {
+      "q": "The daily iron requirement during pregnancy is:",
+      "options": [
+        "15 mg",
+        "30\u201360 mg",
+        "100 mg",
+        "200 mg"
+      ],
+      "correct": 1,
+      "explain": "Daily iron requirement is 30\u201360 mg. Calcium: 1.5 g, folic acid: 400 \u00b5g, total calories: 2700 cal/day."
+    },
+    {
+      "q": "Daily folic acid requirement during pregnancy is:",
+      "options": [
+        "100 \u00b5g",
+        "200 \u00b5g",
+        "400 \u00b5g",
+        "800 \u00b5g"
+      ],
+      "correct": 2,
+      "explain": "Folic acid requirement is 400 \u00b5g/day. Total weight gain during pregnancy should be 10\u201312 kg."
+    }
+  ],
+  "7-antenatal-advice-lifestyle": [
+    {
+      "q": "Antenatal lifestyle advice includes all EXCEPT:",
+      "options": [
+        "8 hours sleep at night and 2 in afternoon",
+        "Avoid smoking and alcohol",
+        "Heavy exercise regimen",
+        "Avoid high-heeled shoes"
+      ],
+      "correct": 2,
+      "explain": "Advice includes: light clothing, avoid hot baths and swimming, adequate sleep, and avoidance of smoking/alcohol. Heavy exercise is not recommended."
+    }
+  ],
+  "8-immunization-during-pregnancy": [
+    {
+      "q": "Which of the following vaccines is safe during pregnancy?",
+      "options": [
+        "MMR",
+        "Polio (live)",
+        "Influenza (inactivated)",
+        "Rubella"
+      ],
+      "correct": 2,
+      "explain": "Inactivated viral vaccines (influenza, rabies) are safe. Live attenuated vaccines (MMR, polio) are contraindicated."
+    }
+  ],
+  "9-exposure-to-infection": [
+    {
+      "q": "Which infection is particularly teratogenic during pregnancy?",
+      "options": [
+        "Common cold",
+        "Rubella",
+        "Urinary tract infection",
+        "Candidiasis"
+      ],
+      "correct": 1,
+      "explain": "Rubella and cytomegalovirus are teratogenic and should be avoided during pregnancy."
+    }
+  ],
+  "10-exposure-to-irradiation": [
+    {
+      "q": "A radiation dose of 50\u2013100 rads during pregnancy is associated with:",
+      "options": [
+        "No harm",
+        "May cause harm",
+        "CNS malformation (CFMF)",
+        "Spontaneous abortion"
+      ],
+      "correct": 2,
+      "explain": "<5 rads: may not harm. 5\u201350 rads: may harm. 50\u2013100 rads: CFMF (CNS malformation). Note: 1 rad = 0.01 Gy."
+    }
+  ],
+  "11-medications": [
+    {
+      "q": "The key principle regarding medication use in pregnancy is:",
+      "options": [
+        "All OTC drugs are safe",
+        "Avoid all drugs in the first trimester and give smallest effective dose for shortest time",
+        "Only herbal remedies are allowed",
+        "Drugs are safe after 20 weeks"
+      ],
+      "correct": 1,
+      "explain": "Drugs should not be taken without obstetrician advice, all drugs should be avoided in the 1st trimester, and the smallest effective dose for the shortest time should be used."
+    }
+  ],
+  "12-warning-symptoms-of-pregnancy": [
+    {
+      "q": "Which of the following is a warning symptom of pregnancy that requires urgent review?",
+      "options": [
+        "Mild ankle edema",
+        "Increased appetite",
+        "Persistent headache with visual changes",
+        "Backache"
+      ],
+      "correct": 2,
+      "explain": "Persistent headache, blurring of vision, vomiting, and epigastric pain suggest PIH/pre-eclampsia. Other warning signs: vaginal bleeding, decreased fetal kicks, severe abdominal pain."
+    },
+    {
+      "q": "All of the following are warning symptoms EXCEPT:",
+      "options": [
+        "Swelling of face and fingers",
+        "Vaginal bleeding",
+        "Decreased fetal kicks",
+        "Mild nausea in the first trimester"
+      ],
+      "correct": 3,
+      "explain": "Mild nausea in early pregnancy is a normal symptom, not a warning sign. Warning signs include facial swelling, vaginal bleeding, decreased fetal kicks, fever, dyspnea, severe abdominal pain."
+    }
+  ]
+}

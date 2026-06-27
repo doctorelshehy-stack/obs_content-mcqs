@@ -1,0 +1,116 @@
+{
+  "s1": [
+    {
+      "q": "Asymptomatic bacteriuria in pregnancy:",
+      "options": [
+        "Does not require treatment",
+        "Should be screened and treated to prevent pyelonephritis",
+        "Occurs in 20-30% of pregnancies",
+        "Only affects multigravidas"
+      ],
+      "correct": 1,
+      "explain": "Asymptomatic bacteriuria (2-10% of pregnancies) should be screened (urine culture at booking) and treated to prevent progression to pyelonephritis."
+    },
+    {
+      "q": "The gold standard for diagnosing UTI in pregnancy is:",
+      "options": [
+        "Urine dipstick",
+        "Urine microscopy",
+        "Urine culture with significant bacteriuria (≥10⁵ CFU/mL)",
+        "Ultrasound of kidneys"
+      ],
+      "correct": 2,
+      "explain": "Urine culture with ≥10⁵ CFU/mL is the gold standard. Urine dipstick may be used for screening but has lower accuracy."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The first-line investigation is:",
+      "options": [
+        "Ultrasound",
+        "Complete blood count",
+        "Urine analysis",
+        "Depends on the clinical suspicion"
+      ],
+      "correct": 3,
+      "explain": "Choice of investigation depends on the suspected condition."
+    }
+  ],
+  "s2": [
+    {
+      "q": "When is conservative management appropriate?",
+      "options": [
+        "In mild cases without complications",
+        "Always as first-line",
+        "Never — all cases require intervention",
+        "Only after 37 weeks"
+      ],
+      "correct": 0,
+      "explain": "Conservative management is reserved for mild, uncomplicated cases."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The definitive treatment involves:",
+      "options": [
+        "Medical therapy",
+        "Surgical intervention",
+        "Combined medical and surgical care",
+        "Depends on the specific condition and gestational age"
+      ],
+      "correct": 3,
+      "explain": "Treatment depends on the diagnosis, severity, gestational age, and patient factors."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 28 — Cord Presentation and Prolapse</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;
+    border-radius:0 0 22px 22px;
+    padding:28px 32px 30px;
+    margin:0 -28px 22px;
+    box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{
+    font-size:34px;line-height:1.15;margin:14px 0 10px;
+    font-weight:800;letter-spacing:-0.01em;
+  }
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;
+    font-weight:500;letter-spacing:0.01em;
+  }
+
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);
+    border-radius:12px;padding:16px 22px;margin:0 0 22px;
+    box-shadow:var(--shadow);
+  }
+  .toc h2{
+    font-size:14px;color:var(--prim2);margin:0 0 8px;
+    text-transform:uppercase;letter-spacing:0.08em;font-weight:700;
+  }
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;
+    padding:8px 0 8px 14px;border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{
+    font-size:15.5px;color:var(--prim2);margin:16px 0 8px;
+    font-weight:700;letter-spacing:0.01em;
+  }
+
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 18px;margin:0 0 14px;
+    box-shadow:var(--shadow);
+  }
+  .keydef{
+    background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);
+    border:1px solid #DDD6FE;border-left:5px solid #7C3AED;
+  }
+  .pearl{
+    background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);
+    border:1px solid #FBCFE8;border-left:5px solid #DB2777;
+  }
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{
+    background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);
+    border:1px solid #FDE68A;border-left:5px solid #D97706;
+  }
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{
+    background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);
+    border:1px solid #A5F3FC;border-left:5px solid #0891B2;
+  }
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .green-card{
+    background:linear-gradient(180deg,#ECFDF5 0%,#D1FAE5 100%);
+    border:1px solid #6EE7B7;border-left:5px solid #059669;
+  }
+  .green-card h4{color:#065F46;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .red-card{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .red-card h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;
+    border-radius:50%;text-align:center;line-height:24px;font-size:12px;
+    font-weight:700;
+  }
+
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;
+    background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards (centered) */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;
+    margin:0 0 16px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);position:relative;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:540px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;
+    color:#fff;padding:3px 9px;border-radius:999px;
+    font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+
+  .def-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:5px solid #7C3AED;
+  }
+  .def-card h3{font-size:15px;color:#5B21B6;margin:0 0 6px;font-weight:700}
+  .def-card p{font-size:13.5px;color:#475569;margin:0}
+
+  .risk-card{
+    background:#fff;border:1px solid var(--line);border-radius:8px;
+    padding:8px 12px;box-shadow:var(--shadow);
+    border-left:4px solid var(--prim);
+    font-size:13px;
+  }
+  .risk-card b{color:var(--prim2);font-size:13.5px;display:block;margin-bottom:2px}
+
+  .dx-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:5px solid var(--prim);
+  }
+  .dx-card h3{font-size:14px;color:var(--prim2);margin:0 0 6px;font-weight:700}
+  .dx-card p{font-size:13px;color:#475569;margin:4px 0}
+
+  .mgmt-branch{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;box-shadow:var(--shadow);
+    border-left:5px solid var(--prim);
+    margin:0 0 12px;
+  }
+  .mgmt-branch h3{font-size:15px;color:var(--prim2);margin:0 0 6px;font-weight:700}
+  .mgmt-branch p{font-size:13.5px;color:#475569;margin:4px 0}
+  .mgmt-branch.sub-green{border-left-color:#059669;background:linear-gradient(180deg,#ECFDF5 0%,#fff 100%)}
+  .mgmt-branch.sub-green h3{color:#065F46}
+  .mgmt-branch.sub-red{border-left-color:#DC2626;background:linear-gradient(180deg,#FEF2F2 0%,#fff 100%)}
+  .mgmt-branch.sub-red h3{color:#991B1B}
+  .mgmt-branch.sub-purple{border-left-color:#7C3AED;background:linear-gradient(180deg,#F5F3FF 0%,#fff 100%)}
+  .mgmt-branch.sub-purple h3{color:#5B21B6}
+
+  .qref{font-size:14px;line-height:1.6;margin:6px 0}
+
+  /* Clickable expand/collapse cards */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;
+    font-size:15px;font-weight:700;color:var(--prim2);
+    background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;
+    display:flex;align-items:center;gap:10px;user-select:none;
+    position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,var(--primLite),#fff 40%);
+  }
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{
+    margin-left:auto;font-size:11px;font-weight:600;
+    color:#64748B;letter-spacing:0.04em;text-transform:uppercase;
+  }
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  footer{
+    margin-top:30px;padding:14px 16px;
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-radius:10px;font-size:12px;color:#1E40AF;
+    text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.risk-card,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- HERO -->
+<div class="hero">
+<span class="pill">Topic 28 · Chapter 28 · Cord Presentation and Prolapse</span>
+<h1>Cord Presentation and Prolapse</h1>
+<p>Two related obstetric emergencies: cord <strong>presentation</strong> (cord below the presenting part with intact membranes) and cord <strong>prolapse</strong> (cord below the presenting part after membrane rupture). This chapter covers definitions, 10 risk factors, diagnosis, and management (which depends on fetal state + cervical dilation + presentation).</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 150-151 (2 pages)</span>
+<span class="chip">🟢 Source visuals: 1 (all embedded)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 7 content sections preserved</span>
+</div>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>📑 Table of Contents · 7 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definitions</a></li>
+<li><a href="#s3">Figure · Cord prolapse (anatomical diagram)</a></li>
+<li><a href="#s4">Etiology (10 risk factors)</a></li>
+<li><a href="#s5">Diagnosis</a></li>
+<li><a href="#s6">Management</a></li>
+<li><a href="#s7">Student activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To <strong>understand the definition of both cord prolapse and presentation</strong>.</li>
+<li>To be able to <strong>explain the risk factors of cord prolapse</strong>.</li>
+<li>To be able to <strong>describe clinical picture and management of cord prolapse</strong>.</li>
+</ol>
+</div>
+</section>
+<!-- §2 Definitions -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definitions</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 10px">Cord presentation and cord prolapse are related concepts that share the same underlying mechanism (umbilical cord descending below the fetal presenting part) but are distinguished by the state of the membranes.</p>
+<div class="grid-2">
+<div class="def-card">
+<h3>📋 Cord presentation</h3>
+<p><strong>Presence of the umbilical cord below the fetal presenting part which can be felt through an intact membranes.</strong></p>
+</div>
+<div class="def-card">
+<h3>📋 Cord prolapse</h3>
+<p><strong>Presence of coils of the umbilical cord below the presenting part after rupture of the membranes.</strong></p>
+</div>
+</div>
+<div class="card pearl" style="margin-top:8px">
+<h4>💡 CLINICAL PEARL — "Intact" vs "Ruptured" membranes is the only difference</h4>
+<p style="font-size:13px">Both terms describe the same anatomic finding (cord below the presenting part), but <strong>cord presentation</strong> is the term used <strong>before</strong> the membranes rupture, and <strong>cord prolapse</strong> is the term used <strong>after</strong> they rupture. The reason is clinical urgency: with intact membranes, the cord is still protected by the fluid cushion and is not at immediate risk of compression; once the membranes rupture, the cord can prolapse into the vagina and be compressed against the presenting part — a true obstetric emergency.</p>
+</div>
+</section>
+<!-- §3 Figure: Cord prolapse diagram -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Figure · Cord prolapse (anatomical diagram)</h2>
+<div class="img-card src-viz">
+<span class="badge">Source Image · img-000</span>
+<div class="img-frame">
+<img alt="Anatomical sagittal-section illustration of a pregnant woman in labor showing a loop of umbilical cord caught between the vaginal wall and the fetal head." src="../../../../extracted_images/28_cord_presentation_and_prolapse/cord_prolapse_anatomical_diagram.jpg"/>
+</div>
+<div class="cap">Figure 1 — <strong>Loop of umbilical cord caught between vaginal wall and the fetal head leading to diminished blood and oxygen supply.</strong> This is the only figure in the chapter. It depicts a sagittal-section view of the maternal pelvis in labor, with the fetus in cephalic (head-down) presentation and a loop of purple umbilical cord prolapsed below the head, trapped in the birth canal between the fetal head and the maternal pelvic/vaginal wall. The mechanical compression of the cord against the fetal head and bony pelvis is what makes cord prolapse an obstetric emergency — the umbilical vessels are occluded, cutting off fetal oxygen supply and risking brain damage or fetal death if not delivered within minutes.</div>
+</div>
+<div class="card danger" style="margin-top:4px">
+<h4>🚨 DANGER — Why this is an obstetric emergency</h4>
+<p style="font-size:13px">Cord prolapse has a <strong>perinatal mortality of ~10-20%</strong> if delivery is delayed more than 30 minutes, but can drop to &lt;5% with rapid delivery (typically &lt;10 minutes from diagnosis). The danger is <strong>fetal hypoxia</strong> (oxygen deprivation) due to mechanical compression of the cord between the presenting part and the bony pelvis — exactly the scenario illustrated in Figure 1. <em>Note: the source does not quote these specific percentages; they are added for clinical context, consistent with standard obstetric teaching.</em></p>
+</div>
+</section>
+<!-- §4 Etiology -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Etiology</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists 10 risk factors for cord prolapse. They fall into 3 conceptual groups: <strong>(a) anything that prevents the presenting part from engaging</strong>, <strong>(b) excessive cord length or low-lying cord</strong>, and <strong>(c) increased fluid volume or fetal size</strong>.</p>
+<div class="grid-2">
+<div class="risk-card"><b>1. Prematurity</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Smaller, lighter fetus does not engage well in the pelvis.</p></div>
+<div class="risk-card"><b>2. Fetal congenital abnormality</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Structural anomaly may prevent normal engagement.</p></div>
+<div class="risk-card"><b>3. Second twin</b><p style="font-size:12px;color:#475569;margin:2px 0 0">After 1st twin is delivered, the 2nd twin may be malpositioned before engagement.</p></div>
+<div class="risk-card"><b>4. Multiparity</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Lax abdominal wall → less support for presenting part.</p></div>
+<div class="risk-card"><b>5. Low birth weight (&lt; 2.5 kg)</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Smaller fetus has more room to slide past the presenting part.</p></div>
+<div class="risk-card"><b>6. Breech, oblique, transverse and unstable lie</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Non-cephalic presentations have an ill-fitting presenting part → cord can slip past it.</p></div>
+<div class="risk-card"><b>7. Cephalopelvic disproportion</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Head cannot enter the pelvis → cord can descend past it.</p></div>
+<div class="risk-card"><b>8. Low-lying placenta, long umbilical cord</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Placenta near cervix leaves room for cord to descend; long cord is more likely to prolapse.</p></div>
+<div class="risk-card"><b>9. Polyhydramnios</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Excess amniotic fluid → sudden gush on membrane rupture can wash the cord out.</p></div>
+<div class="risk-card"><b>10. Macrosomia</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Large fetus with relatively small head may not engage fully.</p></div>
+</div>
+<div class="card note" style="margin-top:4px">
+<h4>🧠 MEMORY ANCHOR — "MIPS-FB-CPD-LP-PM"</h4>
+<p style="font-size:13px">A useful mnemonics clustering the 10 risk factors: <strong>M</strong>ultiparity · <strong>I</strong>ll-fitting presentation (breech, oblique, transverse, unstable) · <strong>P</strong>rematurity · <strong>S</strong>econd twin · <strong>F</strong>etal abnormality · <strong>B</strong>ig baby (macrosomia) · <strong>C</strong>PD (cephalopelvic disproportion) · <strong>L</strong>ow-lying placenta / long cord · <strong>P</strong>olyhydramnios · <strong>M</strong>embrane rupture before engagement (implicit in all of the above). The unifying principle: <strong>anything that prevents the presenting part from fully occupying the pelvic inlet</strong> leaves a space through which the cord can descend.</p>
+</div>
+</section>
+<!-- §5 Diagnosis -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Diagnosis</h2>
+<h3 class="sub">📋 Abdominal examination</h3>
+<div class="card">
+<p style="font-size:14px"><strong>An ill-fitting or non-engaged presenting part should alert one to the possibility of cord prolapse.</strong></p>
+</div>
+<h3 class="sub">📋 Vaginal examination</h3>
+<div class="card keydef def-block">
+<p><strong>In cord prolapse, the cord can be seen protruding from the introitus or loops of cord can be palpated within the vaginal canal. If the cord is pulsating, the fetus is alive.</strong></p>
+</div>
+<div class="card warn" style="margin-top:4px">
+<h4>⚠ CLINICAL SIGN — Pulsating cord = live fetus</h4>
+<p style="font-size:13px">The <strong>pulsation of the prolapsed cord</strong> is the bedside sign of fetal viability: if the cord is pulsating, the fetus is alive (and the management is aggressive — immediate delivery). If the cord is <strong>not</strong> pulsating, the fetus is likely dead (and the management per §6 is "spontaneous delivery is allowed"). In a real clinical setting the cord pulsation correlates with the fetal heart rate, but is sometimes easier to assess at the introitus than via Pinard/CTG on the maternal abdomen.</p>
+</div>
+<h3 class="sub">📋 Occult cord prolapse</h3>
+<div class="card">
+<p style="font-size:14px"><strong>Occult prolapses are rarely felt on pelvic examination and the only sign is fetal heart rate changes.</strong></p>
+</div>
+<h3 class="sub">🖥 Investigations</h3>
+<div class="card note">
+<h4>🖥 Color Doppler</h4>
+<p style="font-size:13.5px"><strong>Color Doppler:</strong> loops of cord in front of the presenting part can be visualized.</p>
+</div>
+</section>
+<!-- §6 Management -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Management</h2>
+<h3 class="sub">📋 Cord presentation</h3>
+<div class="mgmt-branch sub-purple">
+<h3>First-line maneuver: knee-chest position + prepare for emergency C.S.</h3>
+<p style="font-size:13.5px"><strong>Put the patient in knee chest position and prepare for emergency C.S.</strong></p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Why knee-chest position</h4>
+<p style="font-size:13px">The <strong>knee-chest position</strong> (patient on knees, chest resting on the bed, pelvis elevated above the chest) uses <strong>gravity</strong> to shift the fetal presenting part <strong>up and away</strong> from the cord, <strong>relieving compression</strong> on the umbilical cord. The same principle is achieved in Trendelenburg position (head down, feet up), but knee-chest is the more common teaching position because it can be maintained with the patient awake and cooperative. The position is a <strong>bridge maneuver</strong> — it does not deliver the baby, but it buys time to prepare for cesarean section by temporarily relieving cord compression.</p>
+</div>
+<h3 class="sub">📋 Cord prolapse</h3>
+<p style="font-size:13.5px;color:#475569;margin:0 0 10px">Management of cord prolapse <strong>depends upon the fetal state</strong>:</p>
+<h3 class="sub" style="color:#065F46">✅ Living fetus</h3>
+<div class="grid-2">
+<div class="mgmt-branch sub-red">
+<h3>Partially dilated cervix</h3>
+<p style="font-size:14px"><strong>→ Immediate cesarean section.</strong></p>
+<p style="font-size:12.5px;color:#475569;margin:4px 0 0">The cervix is not yet fully dilated, so vaginal delivery is not possible; CS is the only option.</p>
+</div>
+<div class="mgmt-branch">
+<h3>Fully dilated cervix</h3>
+<p style="font-size:13.5px;margin:0 0 6px">The fetus should be delivered <strong>immediately</strong> by:</p>
+<ul style="font-size:13px;line-height:1.6;margin:0 0 0;padding-left:20px">
+<li><strong>In engaged vertex presentation:</strong> <strong>Forceps delivery.</strong></li>
+<li><strong>Cesarean section:</strong> Non-engaged vertex and other malpresentations.</li>
+</ul>
+</div>
+</div>
+<div class="card danger" style="margin-top:4px">
+<h4>🚨 DANGER — "Living fetus + cord prolapse" is always an emergency</h4>
+<p style="font-size:13px">In all branches of "living fetus" management, the operative word is <strong>"immediate"</strong> — immediate CS if the cervix is not fully dilated, immediate forceps if the head is engaged and the cervix is fully dilated, immediate CS if the head is not engaged. The goal is delivery within minutes, not hours, to relieve cord compression and restore fetal oxygenation.</p>
+</div>
+<h3 class="sub" style="color:#991B1B">🚫 Dead fetus</h3>
+<div class="mgmt-branch">
+<h3>Spontaneous delivery is allowed.</h3>
+<p style="font-size:13.5px;color:#475569;margin:6px 0 0">No operative intervention is needed; the mother is allowed to deliver vaginally in her own time.</p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Why the management changes with fetal state</h4>
+<p style="font-size:13px">The reason the algorithm branches on fetal state (alive vs dead) is the <strong>risk-benefit calculation</strong> changes drastically. For a <strong>living fetus</strong>, the cord compression is an <strong>active threat</strong> to a viable baby — emergency delivery is justified regardless of cervical status. For a <strong>dead fetus</strong>, the threat is gone — the mother can deliver spontaneously without any of the operative risks of emergency CS (hemorrhage, infection, anesthetic complications, future uterine rupture risk). This is the same risk-benefit logic that underlies the "CS even if the baby is dead" rule for neglected shoulder in Topic 27: the threshold is different, but the principle is the same — operate only when the maternal and fetal risk-benefit justifies it.</p>
+</div>
+</section>
+<!-- §7 Clickable cards -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Student activity · Questions · References</h2>
+<details class="click-card activity">
+<summary>🎓 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p><strong>Illustrative diagrams of cord prolapse are requested from students' groups.</strong></p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Why this activity matters:</strong> Note that the source itself has <em>only one</em> anatomical figure (the one in §3), and the activity explicitly asks students to draw their <em>own</em> diagrams. This is a deliberate pedagogical choice: the mechanism of cord prolapse is much easier to <strong>re-construct by drawing</strong> than to memorize by reading. The act of drawing forces you to think about 3D relationships (the cord, the presenting part, the pelvis, the membranes) that text alone cannot convey.</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested diagrams to draw (in order of complexity):</strong></p>
+<ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li><strong>Cord presentation</strong> — sagittal section with intact membranes, cord descending below the head but contained within the amniotic sac.</li>
+<li><strong>Cord prolapse</strong> — sagittal section <em>after</em> membrane rupture, cord prolapsing into the vagina and through the introitus.</li>
+<li><strong>Mechanism of fetal hypoxia</strong> — show the cord compressed between the fetal head and the bony pelvis (the exact mechanism illustrated in Figure 1 §3).</li>
+<li><strong>Knee-chest position</strong> — show the patient on hands and knees with pelvis elevated, fetal head lifted away from the cord by gravity.</li>
+<li><strong>Decision tree</strong> — flowing chart from "cord prolapse diagnosed" → "fetus alive?" → "cervix fully dilated?" → "head engaged?" → "forceps" or "CS" or "spontaneous" for the 4 main outcomes.</li>
+</ol>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>✅ Self-assessment Questions <span class="hint"></span></summary>
+<div class="click-body">
+<p>Please complete the self-assessment Google Form:</p>
+<p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/4oPrBpX8Be2Fg6N66" style="color:#15803D;font-weight:700">https://forms.gle/4oPrBpX8Be2Fg6N66</a></p>
+<p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+<ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+<li>Definition of cord presentation (cord below the presenting part, intact membranes).</li>
+<li>Definition of cord prolapse (cord below the presenting part, ruptured membranes).</li>
+<li>Key difference between presentation and prolapse (membrane state).</li>
+<li>10 risk factors (prematurity, fetal abnormality, second twin, multiparity, LBW, malpresentation, CPD, low-lying placenta/long cord, polyhydramnios, macrosomia).</li>
+<li>Abdominal exam clue: ill-fitting or non-engaged presenting part.</li>
+<li>Vaginal exam: cord visible at introitus / palpable in vagina; pulsating cord = live fetus.</li>
+<li>Occult cord prolapse: pelvic exam is normal; only sign is fetal heart rate changes.</li>
+<li>Investigation: Color Doppler (loops of cord in front of the presenting part).</li>
+<li>Management of cord presentation: knee-chest position + prepare for emergency CS.</li>
+<li>Management of cord prolapse, living fetus, partially dilated cervix: immediate CS.</li>
+<li>Management of cord prolapse, living fetus, fully dilated cervix: forceps (if engaged vertex) or CS (if non-engaged vertex / other malpresentations).</li>
+<li>Management of cord prolapse, dead fetus: spontaneous delivery allowed.</li>
+<li>Why cord prolapse is an obstetric emergency (cord compression → fetal hypoxia).</li>
+</ul>
+</div>
+</details>
+<details class="click-card references">
+<summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+<div class="click-body">
+<ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+<li>The <strong>PDF source</strong> for this chapter is a 2-page document (p. 150-151) — one of the shortest chapters in the book.</li>
+<li>The source contains <strong>1 embedded image</strong> on page 1 of the PDF. <strong>The image is embedded</strong> in this infographic as a green <code>.src-viz</code> card. It was extracted to <code>extracted_images/28_cord_presentation_and_prolapse/cord_prolapse_anatomical_diagram.jpg</code> for archival.</li>
+<li><strong>No external images were used</strong> in this chapter — the only visual comes from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+<li><strong>Image inventory and disposition (all embedded):</strong>
+<ul>
+<li><strong>Figure 1 (img-000):</strong> Anatomical sagittal-section diagram of cord prolapse (600×405 px, page 1) — EMBEDDED in §3. Shows a loop of umbilical cord caught between the vaginal wall and the fetal head, leading to diminished blood and oxygen supply. Caption from the source is preserved verbatim.</li>
+</ul>
+</li>
+<li>Google Form self-assessment URL: <code>https://forms.gle/4oPrBpX8Be2Fg6N66</code> (reproduced verbatim from source).</li>
+<li>The source text preserves the minor grammatical artifact "through an intact membranes" (should be "through intact membranes") — preserved here verbatim per source-fidelity rule.</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- FOOTER -->
+<footer>
+    Topic 28 — Cord Presentation and Prolapse · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 28 (p. 150-151, 2 pages) · Source-only visuals (1 of 1 in source) · 0 external visuals · Definition: cord below presenting part — "presentation" if membranes intact, "prolapse" if ruptured · 10 risk factors (multiparity, ill-fitting presentation, prematurity, second twin, fetal abnormality, macrosomia, CPD, low-lying placenta/long cord, polyhydramnios, LBW) · Diagnosis: ill-fitting presenting part (abd), visible/palpable cord (vaginal, pulsating = alive), Color Doppler · Management: knee-chest + emergency CS (presentation) · living + partial cervix = immediate CS · living + full cervix + engaged vertex = forceps · living + full cervix + non-engaged/malpresentation = CS · dead fetus = spontaneous delivery
+  </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

@@ -1,0 +1,184 @@
+{
+  "1-diagnosis-of-early-pregnancy-1st-trimester": [
+    {
+      "q": "Which of the following is a symptom of early pregnancy (1st trimester)?",
+      "options": [
+        "Quickening",
+        "Secondary amenorrhea",
+        "Lightening",
+        "Shelfing"
+      ],
+      "correct": 1,
+      "explain": "Secondary amenorrhea is a key symptom of early pregnancy. Quickening and lightening occur in later trimesters."
+    },
+    {
+      "q": "Nausea and vomiting in pregnancy typically appear at ___ and disappear at ___.",
+      "options": [
+        "4 weeks, 8 weeks",
+        "6 weeks, 12 weeks",
+        "8 weeks, 16 weeks",
+        "10 weeks, 20 weeks"
+      ],
+      "correct": 1,
+      "explain": "Nausea and vomiting usually appear at 6 weeks and disappear at 12 weeks of pregnancy."
+    },
+    {
+      "q": "Hegar's sign refers to:",
+      "options": [
+        "Bluish discoloration of the vagina",
+        "Softening of the lower uterine segment",
+        "Painless uterine contractions",
+        "Palpation of fetal parts"
+      ],
+      "correct": 1,
+      "explain": "Hegar's sign is the softening of the lower uterine segment detected by bimanual examination, based on the difference in consistency between the cervix and body of the uterus."
+    },
+    {
+      "q": "Serum hCG becomes positive:",
+      "options": [
+        "At the time of implantation",
+        "One week before the missed period",
+        "One week after the missed period",
+        "At 12 weeks of gestation"
+      ],
+      "correct": 1,
+      "explain": "Serum hCG is sensitive at 25 IU/mL and becomes positive one week before the missed period."
+    },
+    {
+      "q": "Cardiac activity is detectable on ultrasound at:",
+      "options": [
+        "4 weeks",
+        "5 weeks",
+        "6 weeks",
+        "10 weeks"
+      ],
+      "correct": 2,
+      "explain": "Cardiac activity is detectable at 6 weeks. The gestational ring appears at 4 weeks, sac at 5 weeks, and FHS at 10 weeks."
+    },
+    {
+      "q": "The gestational sac is first visible on ultrasound at:",
+      "options": [
+        "4 weeks",
+        "5 weeks",
+        "6 weeks",
+        "10 weeks"
+      ],
+      "correct": 1,
+      "explain": "The gestational ring appears at 4 weeks, and the gestational sac becomes visible at 5 weeks."
+    }
+  ],
+  "2-diagnosis-of-2nd-trimester-12-28-weeks": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "Which clinical finding is most suggestive of this diagnosis?",
+      "options": [
+        "Pain and bleeding",
+        "Asymptomatic presentation",
+        "Abnormal laboratory values",
+        "Varies by condition — specific findings guide diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation differs by condition and guides diagnostic testing."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "3-diagnosis-of-3rd-trimester-28-40-weeks": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    }
+  ]
+}

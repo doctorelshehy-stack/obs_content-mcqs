@@ -1,0 +1,458 @@
+FILE: Week2/Antepartum_hemorrhage/08_Antepartum_Hemorrhage.html
+  SECTION: s2 â 2Definition
+  SECTION: s3 â 3Etiology (Classification)
+  SECTION: s4 â 4Placenta Previa — Definition & Incidence
+  SECTION: s5 â 5Placenta Previa — Degrees (Types I–IV)
+  SECTION: s6 â 6Placenta Previa — Clinical Picture
+  SECTION: s7 â 7Placenta Previa — Investigations
+  SECTION: s8 â 8Placenta Previa — Management
+  SECTION: s9 â 9Abruptio Placentae — Definition, Incidence & Classification
+  SECTION: s10 â 10Abruptio Placentae — Etiology
+  SECTION: s11 â 11Abruptio Placentae — Clinical Picture
+  SECTION: s12 â 12Abruptio Placentae — Investigations
+  SECTION: s13 â 13Abruptio Placentae — Complications
+  SECTION: s14 â 14Abruptio Placentae — Management
+  SECTION: s15 â 15Ruptured Uterus — Definition & Incidence
+  SECTION: s16 â 16Ruptured Uterus — Etiology
+  SECTION: s17 â 17Ruptured Uterus — Risk Factors
+  SECTION: s18 â 18Ruptured Uterus — Types, Site & Severity
+  SECTION: s19 â 19Ruptured Uterus — Clinical Picture
+  SECTION: s20 â 20Ruptured Uterus — Management
+  SECTION: s21 â 21Vasa Previa — Definition & Diagnosis
+  SECTION: s22 â 22Vasa Previa — Causes & Risk Factors
+  SECTION: s23 â 23Vasa Previa — Management
+  SECTION: s24 â 24Kleihauer–Betke Test
+  SECTION: s25 â 25Apt Test
+  SECTION: s26 â 26Placenta Previa vs. Abruptio Placentae
+
+FILE: Week2/Assessment_of_fetal_wellbeing/43_Intrauterine_Fetal_Death.html
+  SECTION: s2 â 2 Definition
+  SECTION: s3 â 3 Causes
+  SECTION: s4 â 4 Diagnosis
+  SECTION: s5 â 5 Investigations
+  SECTION: s6 â 6 Complications
+  SECTION: s7 â 7 Management
+
+FILE: Week2/Assessment_of_fetal_wellbeing/46_Assessment_of_Fetal_Well-being.html
+  SECTION: s2 â 2Non-stress Test (NST)
+  SECTION: s3 â 3Contraction Stress Test (CST)
+  SECTION: s4 â 4Cardiotocography (CTG)
+  SECTION: s5 â 5CTG parameters & interpretation (NICE, 2022)
+  SECTION: s6 â 6Fetal Biophysical Profile (BPP)
+  SECTION: s7 â 7Umbilical Artery Doppler Velocimetry
+  SECTION: s8 â 8Scalp blood sample & Fetal Hypoxia/Acidosis
+
+FILE: Week2/High_risk_pregnancy_identification/17_Infectious_Diseases_with_Pregnancy.html
+  SECTION: s2 â 2Background & the TORCH Acronym
+  SECTION: s3 â 3Toxoplasmosis (T. gondii)
+  SECTION: s4 â 4Rubella
+  SECTION: s5 â 5Cytomegalovirus (CMV)
+  SECTION: s6 â 6Herpes Simplex Virus (HSV)
+
+FILE: Week2/High_risk_pregnancy_identification/30_Multiple_Pregnancy.html
+  SECTION: s2 â 2Definition & key terminology
+  SECTION: s3 â 3Figure 1 · Singleton vs Twin comparison
+  SECTION: s4 â 4Monozygotic vs Dizygotic twins
+  SECTION: s5 â 5Figure 2 · Monozygotic cleavage timing (4 stages)
+  SECTION: s6 â 6Diagnosis (signs, abdominal exam, ultrasound)
+  SECTION: s7 â 7Figures 3&4 · Chorionicity ultrasound markers (Lambda & T signs)
+  SECTION: s8 â 8Management · Antenatal care
+  SECTION: s9 â 9Management · Obstetric care (route + timing + 3rd stage)
+  SECTION: s10 â 10Complications · Maternal
+  SECTION: s11 â 11Complications · Fetal
+  SECTION: s12 â 12Twin-to-Twin Transfusion Syndrome (TTTS)
+
+FILE: Week2/Polyhydramnios_IUGR_shoulder_dystocia/18_Amniotic_Fluid_Abnormalities.html
+  SECTION: s2 â Amniotic Fluid — Dynamics &amp; Function
+  SECTION: s3 â Polyhydramnios vs Oligohydramnios — Comparison
+  SECTION: s4 â Ultrasound Assessment — SDP &amp; AFI
+  SECTION: s5 â Complications
+  SECTION: s6 â Management
+
+FILE: Week2/Polyhydramnios_IUGR_shoulder_dystocia/29_Shoulder_Dystocia.html
+  SECTION: s2 â 2Definition & Incidence
+  SECTION: s3 â 3Figure 1 · Turtle-neck sign (clinical diagnosis)
+  SECTION: s4 â 4Figure 2 · Mechanism (anterior shoulder impaction)
+  SECTION: s5 â 5Risk factors
+  SECTION: s6 â 6Management · Steps 1-5 (call for help → posterior arm)
+  SECTION: s7 â 7Management · Steps 6-11 (rotational → last-resort maneuvers)
+  SECTION: s8 â 8Complications · Fetal & Maternal
+
+FILE: Week2/Polyhydramnios_IUGR_shoulder_dystocia/40_Intrauterine_Growth_Restriction.html
+  SECTION: s2 â Definition
+  SECTION: s3 â Types
+  SECTION: s4 â Source Image — Multifactorial IUGR Causes
+  SECTION: s5 â Etiology — Maternal Risk Factors
+  SECTION: s6 â Etiology — Placental &amp; Fetal Risk Factors
+  SECTION: s7 â Diagnosis — History &amp; Clinical Examination
+  SECTION: s8 â Investigations
+  SECTION: s9 â Complications
+  SECTION: s10 â Management — Antenatal · Intranatal · Postnatal
+
+FILE: Week2/Polyhydramnios_IUGR_shoulder_dystocia/42_Macrosomia.html
+  SECTION: s2 â 2 Definition
+  SECTION: s3 â 3 Risk factors
+  SECTION: s4 â 4 Causes
+  SECTION: s5 â 5 Clinical picture
+  SECTION: s6 â 6 Complications
+  SECTION: s7 â 7 Treatment
+
+FILE: Week2/PROM_preterm_post_term_pregnancy/31_Preterm_Labor.html
+  SECTION: s2 â 2Definition (preterm labor + premature infant)
+  SECTION: s3 â 3Causes & risk factors — Maternal
+  SECTION: s4 â 4Causes & risk factors — Fetal
+  SECTION: s5 â 5Diagnosis — Symptoms & signs
+  SECTION: s6 â 6Diagnosis — Investigations
+  SECTION: s7 â 7Management — Prophylactic
+  SECTION: s8 â 8Management — Curative
+  SECTION: s9 â 9Antenatal Corticosteroids
+  SECTION: s10 â 10Tocolytic drugs & contraindications
+  SECTION: s11 â 11Tocolytic dosing details
+  SECTION: s12 â 12Antibiotic therapy (GBS) + Mode of delivery
+
+FILE: Week2/PROM_preterm_post_term_pregnancy/32_Premature_Rupture_of_Membranes_PROM.html
+  SECTION: s2 â 2Definition (term vs preterm PROM)
+  SECTION: s3 â 3Etiology (5 risk factors)
+  SECTION: s4 â 4Presentation (sudden gush of fluid)
+  SECTION: s5 â 5Diagnosis — 5 modalities
+  SECTION: s6 â 6Effects of preterm PROM (4 consequences)
+  SECTION: s7 â 7Management — General (bed rest + sterile pads)
+  SECTION: s8 â 8Management — Before 26 weeks (termination)
+  SECTION: s9 â 9Management — 26–34 weeks (conservative, antibiotics, steroids, tocolysis)
+  SECTION: s10 â 10Management — After 34 weeks (delivery)
+  SECTION: s11 â 11Chorioamnionitis — Definition, Etiology, Diagnosis
+  SECTION: s12 â 12Chorioamnionitis — Management (ampicillin + gentamicin ± clindamycin)
+
+FILE: Week2/PROM_preterm_post_term_pregnancy/41_Postterm_Pregnancy.html
+  SECTION: s2 â Definition
+  SECTION: s3 â Causes
+  SECTION: s4 â Diagnosis — Antenatal
+  SECTION: s5 â Diagnosis — Postnatal
+  SECTION: s6 â Complications
+  SECTION: s7 â Management
+
+FILE: Week2/Vomiting_anemia_heart_disease/09_Vomiting_with_Pregnancy.html
+  SECTION: s2 â 2Causes of Vomiting in Pregnancy
+  SECTION: s3 â 3Emesis Gravidarum vs. Hyperemesis Gravidarum
+  SECTION: s4 â 4Etiology and Pathogenesis
+  SECTION: s5 â 5Prevention
+  SECTION: s6 â 6Complications of Hyperemesis Gravidarum
+  SECTION: s7 â 7Investigations
+  SECTION: s8 â 8Management — Without Hypovolemia
+  SECTION: s9 â 9Dietary Changes
+  SECTION: s10 â 10Trigger Avoidance & Pharmacotherapy
+  SECTION: s11 â 11Pharmacotherapy Dose Reference
+  SECTION: s12 â 12Management — With Hypovolemia (Hyperemesis Gravidarum)
+  SECTION: s13 â 13Indications for Termination of Pregnancy
+
+FILE: Week2/Vomiting_anemia_heart_disease/10_Anemia_with_Pregnancy.html
+  SECTION: s2 â 2Definition
+  SECTION: s3 â 3Normal Hemoglobin Values in Pregnancy
+  SECTION: s4 â 4Signs and Symptoms
+  SECTION: s5 â 5Causes — Mechanism-Based Classification
+  SECTION: s6 â 6Physiologic (Dilutional) Anemia
+  SECTION: s7 â 7Effects of Anemia on Pregnancy
+  SECTION: s8 â 8Effect of Pregnancy on Anemia
+  SECTION: s9 â 9Iron Deficiency Anemia
+  SECTION: s10 â 10Megaloblastic Anemia — Folic Acid Deficiency
+  SECTION: s11 â 11Vitamin B12 Deficiency Anemia
+  SECTION: s12 â 12Thalassemia — Definition and Inheritance
+  SECTION: s13 â 13α-Thalassemia — Major and Minor
+  SECTION: s14 â 14β-Thalassemia — Major and Minor
+  SECTION: s15 â 15Thalassemia — Investigations and Treatment
+
+FILE: Week2/Vomiting_anemia_heart_disease/11_Cardiac_Diseases_with_Pregnancy.html
+  SECTION: s2 â 2Cardiovascular Physiology During Pregnancy
+  SECTION: s3 â 3Incidence and Etiology
+  SECTION: s4 â 4NYHA Functional Classification
+  SECTION: s5 â 5Diagnosis — History
+  SECTION: s6 â 6Diagnosis — Examination
+  SECTION: s7 â 7Diagnosis — Investigations
+  SECTION: s8 â 8Misleading Findings in Pregnancy
+  SECTION: s9 â 9Effect of Pregnancy on Heart Disease
+  SECTION: s10 â 10Effect of Heart Disease on Pregnancy
+  SECTION: s11 â 11Management — During Pregnancy
+  SECTION: s12 â 12Management — During Delivery
+  SECTION: s13 â 13Management — Intrapartum (Stages 1–3)
+  SECTION: s14 â 14Puerperium & Contraception
+
+FILE: Week3/Family_medicine/FM01_Premarital_Care.html
+  SECTION: s2 â Overview
+  SECTION: s3 â Components of Premarital Care
+  SECTION: s4 â Premarital Assessment (Premarital Screening)
+  SECTION: s5 â Algorithm: Summary of Premarital Clinical Services
+  SECTION: s6 â Premarital Counselling
+  SECTION: s7 â Immunization
+  SECTION: s8 â Inter-conception Care
+
+FILE: Week3/Family_medicine/FM02_Antenatal_Care.html
+  SECTION: s2 â Definition &amp; Goal of Antenatal Care
+  SECTION: s3 â Components of Antenatal Care
+  SECTION: s4 â Timing &amp; Visit Schedule
+  SECTION: s5 â Barriers to Effective Antenatal Care
+  SECTION: s6 â First Antenatal Care Visit
+  SECTION: s7 â Repeated ANC Visits
+  SECTION: s8 â Weight Gain Guidelines During Pregnancy
+  SECTION: s9 â Detection &amp; Management of High-Risk Pregnancy
+  SECTION: s10 â Immunization During Pregnancy
+  SECTION: s11 â Health Education During ANC
+  SECTION: s12 â Dangerous Signs During Pregnancy (Red Flags)
+
+FILE: Week3/Family_medicine/FM03_Nutritional_Care.html
+  SECTION: s2 â Introduction &amp; Pre-pregnancy Preparation
+  SECTION: s3 â Components of Nutritional Care During Pregnancy
+  SECTION: s4 â Nutritional Assessment
+  SECTION: s5 â Weight Gain &amp; Anemia Classification Tables
+  SECTION: s6 â Nutrition Education
+  SECTION: s7 â Food Guide Pyramid During Pregnancy
+  SECTION: s8 â Nutrition Supplementation
+  SECTION: s9 â Correction of Nutritional Deficiencies — Anemia
+  SECTION: s10 â Folate Deficiency
+
+FILE: Week3/Family_medicine/FM04_Postpartum_Care.html
+  SECTION: s2 â Definition &amp; Objectives
+  SECTION: s3 â Clinical Picture — History Taking
+  SECTION: s4 â Physical Examination — Mother
+  SECTION: s5 â Infant Assessment
+  SECTION: s6 â Danger Symptoms &amp; Red Flags
+  SECTION: s7 â Health Education &amp; Counseling
+  SECTION: s8 â Timing of Postpartum Care
+  SECTION: s9 â Postpartum Care Flowchart &amp; Table
+
+FILE: Week3/Family_medicine/FM05_Postpartum_Problems.html
+  SECTION: s1 â Physical Problems
+  SECTION: s2 â Emotional &amp; Psychological Issues
+  SECTION: s3 â Psychosocial &amp; Lifestyle Concerns
+  SECTION: s4 â Common Postpartum Breast Problems
+  SECTION: s5 â Breast Engorgement
+  SECTION: s6 â Nipple Fissure (Cracked Nipples)
+  SECTION: s7 â Insufficient Milk Supply
+  SECTION: s8 â Health Education — Prevention of Breast Problems
+  SECTION: s9 â Baby Blues
+
+FILE: Week3/Family_medicine/FM06_Contraceptive_Methods.html
+  SECTION: s1 â 1 Family Planning Overview
+  SECTION: s2 â 2 Classification of Methods
+  SECTION: s3 â 3 Physiological Methods
+  SECTION: s4 â 4 Barrier Methods
+  SECTION: s5 â 5 Hormonal Methods — Mechanism of Action
+  SECTION: s6 â 6 Combined Estrogen &amp; Progesterone
+  SECTION: s7 â 7 Combined Oral Contraceptives (COCs)
+  SECTION: s8 â 8 Progestin-Only Methods
+  SECTION: s9 â 9 Intrauterine Devices (IUDs)
+  SECTION: s10 â 10 Emergency Contraception
+  SECTION: s11 â 11 Permanent Methods
+  SECTION: s12 â 12 WHO Medical Eligibility Criteria (MEC)
+
+FILE: Week3/Female_pelvis_fetus_fetal_skull/20_Female_Pelvis.html
+  SECTION: s2 â 2 · Anatomy of the Bony Pelvis — the three compartments
+  SECTION: s3 â 3 · The Pelvic Inlet — overview of the diameters
+  SECTION: s4 â 4 · Anteroposterior (conjugate) diameters of the inlet
+  SECTION: s5 â 5 · Transverse diameters of the inlet
+  SECTION: s6 â 6 · Oblique & sacro-cotyloid diameters of the inlet
+  SECTION: s7 â 7 · The Pelvic Cavity
+  SECTION: s8 â 8 · The Pelvic Outlet — anatomical & obstetric
+  SECTION: s9 â 9 · Diameters of the pelvic outlet (AP & transverse)
+  SECTION: s10 â 10 · The Obstetric Axis (Curve of Carus)
+  SECTION: s11 â 11 · Types of pelvis — Caldwell–Moloy classification
+  SECTION: s12 â 12 · Criteria of an adequate pelvis (pelvimetry findings)
+
+FILE: Week3/Female_pelvis_fetus_fetal_skull/21_Fetal_Skull.html
+  SECTION: s2 â 2 · The fetal skull — three parts separated by sutures and fontanelles
+  SECTION: s3 â 3 · Bones of the vault and the sutures between them
+  SECTION: s4 â 4 · The vertex and the brow
+  SECTION: s5 â 5 · The fontanelles — 6 areas, 2 clinically important
+  SECTION: s6 â 6 · Anterior vs posterior fontanelle — comparison
+  SECTION: s7 â 7 · Diameters of the fetal skull — overview
+  SECTION: s8 â 8 · Longitudinal diameters (6)
+  SECTION: s9 â 9 · Transverse diameters (4)
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/22_Occipitoposterior_Position.html
+  SECTION: s2 â 2 · Definition
+  SECTION: s3 â 3 · Etiology — general causes of malpresentations and malpositions
+  SECTION: s4 â 4 · Positions of OP — four named positions
+  SECTION: s5 â 5 · Types and incidence
+  SECTION: s6 â 6 · Diagnosis
+  SECTION: s7 â 7 · Mechanism of labor — four possible outcomes
+  SECTION: s8 â 8 · Management
+  SECTION: s9 â 9 · Complications of OP position
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/23_Face_Presentation.html
+  SECTION: sec2 â 2 · Definition
+  SECTION: sec3 â 3 · Causes
+  SECTION: sec4 â 4 · Positions
+  SECTION: sec5 â 5 · Types
+  SECTION: sec6 â 6 · Diagnosis
+  SECTION: sec7 â 7 · Mechanism of labor
+  SECTION: sec8 â 8 · Management
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/24_Brow_Presentation.html
+  SECTION: causes â 3Causes
+  SECTION: complications â 9Complications
+  SECTION: definition â 2Definition
+  SECTION: denominator â 4Denominator
+  SECTION: diagnosis â 6Diagnosis
+  SECTION: management â 8Management
+  SECTION: mechanism â 7Mechanism of labor
+  SECTION: positions â 5Positions
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/25_Compound_Presentation.html
+  SECTION: s2 â 2Definition
+  SECTION: s3 â 3Causes
+  SECTION: s4 â 4Diagnosis
+  SECTION: s5 â 5Management
+  SECTION: s6 â 6Figure · Compound Presentation In Utero
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/26_Breech_Presentation.html
+  SECTION: s2 â 2Definition & Incidence
+  SECTION: s3 â 3Etiology & Predisposing factors
+  SECTION: s4 â 4Types of breech
+  SECTION: s5 â 5Positions
+  SECTION: s6 â 6Diagnosis
+  SECTION: s7 â 7Figure · Leopold maneuvers (Diagnosis by palpation)
+  SECTION: s8 â 8Mechanism of labor in breech presentation (sacro-anterior position)
+  SECTION: s9 â 9Methods to deliver the head
+  SECTION: s10 â 10External Cephalic Version (ECV)
+  SECTION: s11 â 11Vaginal breech delivery
+  SECTION: s12 â 12Assisted delivery technique — step by step
+  SECTION: s13 â 13Arm delivery — Løvset maneuver (with source figures)
+  SECTION: s14 â 14Aftercoming head — MSV & Piper forceps application
+  SECTION: s15 â 15Piper's forceps
+  SECTION: s16 â 16Complications of vaginal breech delivery
+  SECTION: s17 â 17Total breech extraction
+  SECTION: s18 â 18Indications for cesarean section
+  SECTION: s19 â 19Complicated Breech Delivery
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/27_Shoulder_Presentation.html
+  SECTION: s2 â 2Definition
+  SECTION: s3 â 3Etiology
+  SECTION: s4 â 4Figure · Transverse lie (Definition)
+  SECTION: s5 â 5Positions
+  SECTION: s6 â 6Diagnosis
+  SECTION: s7 â 7Management — overview
+  SECTION: s8 â 8Management — Singleton pregnancy
+  SECTION: s9 â 9Management — Twin pregnancy
+  SECTION: s10 â 10Delivery by cesarean section
+  SECTION: s11 â 11Neglected shoulder
+  SECTION: s12 â 12Internal podalic version
+
+FILE: Week3/Malpresentations_OP_face_breech_cord/28_Cord_Presentation_and_Prolapse.html
+  SECTION: s2 â 2Definitions
+  SECTION: s3 â 3Figure · Cord prolapse (anatomical diagram)
+  SECTION: s4 â 4Etiology
+  SECTION: s5 â 5Diagnosis
+  SECTION: s6 â 6Management
+
+FILE: Week3/Operative_obstetrics/47_Operative_Obstetrics.html
+  SECTION: s2 â Cesarean Section — Definition &amp; Incidence
+  SECTION: s3 â Cesarean Section — Indications
+  SECTION: s4 â Lower Segment Cesarean Section — Steps
+  SECTION: s5 â Upper Segment Cesarean Section (Classical CS)
+  SECTION: s6 â CS — Skin Incisions
+  SECTION: s7 â CS — Complications &amp; VBAC
+  SECTION: s8 â Cesarean Hysterectomy &amp; Sterilization
+  SECTION: s9 â Dilatation &amp; Curettage (D&amp;C)
+  SECTION: s10 â Forceps Delivery
+  SECTION: s11 â Vacuum Extraction
+  SECTION: s12 â Episiotomy
+  SECTION: s13 â Version
+
+FILE: Week3/Operative_obstetrics/48_Instruments.html
+  SECTION: s1 â Uterine Sound
+  SECTION: s2 â Female Uterine Catheter
+  SECTION: s3 â Cervical Dilators
+  SECTION: s4 â Uterine Curette
+  SECTION: s5 â Special Forceps
+  SECTION: s6 â Vaginal Specula
+  SECTION: s7 â Uterine Holding Clamp
+  SECTION: s8 â Quick Reference Summary
+
+FILE: Week3/Physiology_and_management_of_normal_labour/19_Normal_Labor.html
+  SECTION: s2 â 2 · Definitions & causes of onset of labor
+  SECTION: s3 â 3 · Prelabor — the premonitory stage
+  SECTION: s4 â 4 · True vs False labor pains
+  SECTION: s5 â 5 · The four functional stages of labor
+  SECTION: s6 â 6 · Uterine contractions & Friedman curve
+  SECTION: s7 â 7 · Physiology of the first stage
+  SECTION: s8 â 8 · Abnormalities of the latent & active phases
+  SECTION: s9 â 9 · Second stage of labor & mechanism of labor
+  SECTION: s10 â 10 · Third stage, fourth stage & placental separation
+  SECTION: s11 â 11 · Active management of normal labor — First stage (history, exam, investigations)
+  SECTION: s12 â 12 · Active procedures & care of the newborn
+
+FILE: Week3/Stages_of_labour_partogram_FHR/33_Abnormal_Uterine_Action.html
+  SECTION: s2 â 2Introduction · The 3 "P"s of dystocia
+  SECTION: s3 â 3Characteristics of normal adequate uterine contraction
+  SECTION: s4 â 4Assessment of uterine contraction
+  SECTION: s5 â 5Figure 1 · External toco dynamometry tracing paper
+  SECTION: s6 â 6Clinical definitions of excessive uterine action
+  SECTION: s7 â 7First-aid measures for uterine overactivity
+  SECTION: s8 â 8Classification of abnormal uterine action
+  SECTION: s9 â 9Precipitate labor
+  SECTION: s10 â 10Pathological retraction ring (Bandl's ring)
+  SECTION: s11 â 11Figures 2 + 3 · Physiological vs Pathological retraction ring
+  SECTION: s12 â 12Uterine inertia · Hypotonic inertia
+  SECTION: s13 â 13Constriction (contraction) ring + Figure 4 + Comparison table
+  SECTION: s14 â 14Hypertonic inertia & Cervical dystocia
+
+FILE: Week5/Complications_of_3rd_stage_of_labour/36_Third_Stage_Complications.html
+  SECTION: s2 â 2 Postpartum Hemorrhage — Definition & Types
+  SECTION: s3 â 3 Primary PPH — Etiology (the "4 T’s") & Risk Factors
+  SECTION: s4 â 4 Primary PPH — Diagnosis & Prevention
+  SECTION: s5 â 5 Management of Atonic PPH
+  SECTION: s6 â 6 Traumatic PPH · Complications · Secondary PPH
+  SECTION: s7 â 7 Uterine Inversion
+  SECTION: s8 â 8 Retained Placenta & Postpartum Collapse
+
+FILE: Week5/Complications_of_3rd_stage_of_labour/37_Amniotic_Fluid_Embolism.html
+  SECTION: s2 â 2 Definition
+  SECTION: s3 â 3 Conditions Allowing Amniotic Fluid to Enter the Maternal Circulation
+  SECTION: s4 â 4 Pathophysiology Cascade
+  SECTION: s5 â 5 Risk Factors
+  SECTION: s6 â 6 Clinical Picture
+  SECTION: s7 â 7 Investigations
+
+FILE: Week5/Complications_of_3rd_stage_of_labour/38_Normal_and_Abnormal_Puerperium.html
+  SECTION: s2 â 2 Definition of the Puerperium
+  SECTION: s3 â 3 Genital tract changes
+  SECTION: s4 â 4 General body changes
+  SECTION: s5 â 5 Source image — Uterine involution
+  SECTION: s6 â 6 Management of normal puerperium
+  SECTION: s7 â 7 Abnormal puerperium · Subinvolution & Puerperal pyrexia
+
+FILE: Week5/Complications_of_3rd_stage_of_labour/39_Puerperal_Sepsis.html
+  SECTION: s2 â Definition
+  SECTION: s3 â Causative Organisms
+  SECTION: s4 â Mode of Infection
+  SECTION: s5 â Predisposing Factors
+  SECTION: s6 â Sites of Infection &amp; Pathology
+  SECTION: s7 â Diagnosis
+  SECTION: s8 â Complications
+  SECTION: s9 â Investigations
+  SECTION: s10 â Prevention — 3 Phases
+  SECTION: s11 â Treatment
+
+FILE: Week5/Contracted_pelvis_and_obstructed_labour/34_Obstructed_Labor.html
+  SECTION: s2 â 2Definition · The 3 P's revisited
+  SECTION: s3 â 3Causes · Maternal (Passages) + Fetal (Passenger)
+  SECTION: s4 â 4Diagnosis · General + Abdominal + Vaginal examination
+  SECTION: s5 â 5Management · Prevention + General + Obstetrics
+  SECTION: s6 â 6Complications · Maternal + Fetal
+
+FILE: Week5/Contracted_pelvis_and_obstructed_labour/35_Contracted_Pelvis.html
+  SECTION: s2 â 2Definition
+  SECTION: s3 â 3Etiology
+  SECTION: s4 â 4Classification by level of contraction
+  SECTION: s5 â 5Four degrees of contraction
+  SECTION: s6 â 6Diagnosis
+  SECTION: s7 â 7Complications
+  SECTION: s8 â 8Management
+
+FILE: Week5/Revision_and_common_obstetric_complaints/44_Fetal_Birth_Injuries.html
+  SECTION: s2 â 2 Causes of birth trauma
+  SECTION: s3 â 3 Types — Fractures
+  SECTION: s4 â 4 Types — Cephalohematomas
+  SECTION: s5 â 5 Nerve palsies
+  SECTION: s6 â 6 Sternomastoid tumors
+  SECTION: s7 â 7 Lacerations
+

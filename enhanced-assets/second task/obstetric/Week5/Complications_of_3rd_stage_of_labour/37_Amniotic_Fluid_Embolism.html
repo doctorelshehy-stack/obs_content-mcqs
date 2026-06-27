@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 37 — Amniotic Fluid Embolism</title>
+<style>* { box-sizing: border-box; }
+  body { margin: 0; padding: 0; font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(180deg, #FAF5FF 0%, #F8FAFC 240px); color: #0F172A; line-height: 1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 28px 64px 28px; }
+  .hero { background: linear-gradient(135deg, #4C0519 0%, #7F1D1D 55%, #9D174D 100%); color: white; border-radius: 18px; padding: 26px 30px; box-shadow: 0 6px 20px rgba(76,5,25,0.30); margin-bottom: 18px; }
+  .hero h1 { margin: 0 0 6px 0; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 15px; opacity: 0.95; font-weight: 500; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35); padding: 5px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+  .toc { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .toc h2 { margin: 0 0 12px 0; font-size: 17px; color: #1E293B; display: flex; align-items: center; gap: 8px; }
+  .toc h2::before { content: "📋"; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 14px; }
+  .toc-grid a { display: block; padding: 6px 10px; border-radius: 8px; text-decoration: none; color: #1E40AF; font-size: 13.5px; font-weight: 500; border: 1px solid transparent; }
+  .toc-grid a:hover { background: #F1F5F9; border-color: #CBD5E1; }
+  .toc-grid .num { display: inline-block; min-width: 22px; color: #64748B; font-weight: 700; }
+  section { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px 26px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  section h2.sec { margin: 0 0 14px 0; font-size: 22px; color: #7F1D1D; display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 2px solid #FECACA; }
+  section h2.sec .num { background: #7F1D1D; color: white; border-radius: 8px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; }
+  h3.sub { font-size: 16px; color: #1E293B; margin: 18px 0 8px 0; padding-left: 10px; border-left: 4px solid #9D174D; font-weight: 700; }
+  h4 { font-size: 14.5px; color: #1E293B; margin: 14px 0 6px 0; font-weight: 700; }
+  p { margin: 6px 0; font-size: 13.5px; }
+  ul, ol { margin: 6px 0 10px 0; padding-left: 24px; }
+  li { margin: 3px 0; font-size: 13.5px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .keydef { background: #ECFDF5; border-left: 5px solid #059669; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .keydef::before { content: "📘 KEY DEFINITION"; display: block; font-weight: 800; color: #065F46; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .pearl { background: #ECFEFF; border-left: 5px solid #0891B2; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .pearl::before { content: "💎 CLINICAL PEARL"; display: block; font-weight: 800; color: #155E75; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .anchor { background: #FEF9C3; border-left: 5px solid #CA8A04; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .anchor::before { content: "🧠 MEMORY ANCHOR"; display: block; font-weight: 800; color: #713F12; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .warn { background: #FEF3C7; border-left: 5px solid #D97706; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .warn::before { content: "⚠️ WARN"; display: block; font-weight: 800; color: #92400E; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .danger { background: #FEE2E2; border-left: 5px solid #DC2626; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .danger::before { content: "🚫 DANGER"; display: block; font-weight: 800; color: #7F1D1D; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .note { background: #FEFCE8; border-left: 5px solid #CA8A04; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .note::before { content: "📝 NOTE"; display: block; font-weight: 800; color: #713F12; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 14px 18px; margin: 10px 0; }
+  .card h4 { margin-top: 0; color: #1E40AF; }
+  .ext-viz { background: #FEF2F2; border: 2px solid #DC2626; border-radius: 10px; padding: 12px 18px; margin: 14px 0; }
+  .ext-viz h4 { color: #7F1D1D; margin-top: 0; display: flex; align-items: center; gap: 8px; }
+  .ext-viz h4::before { content: "🖼️"; }
+  .ext-viz-label { display: inline-block; background: #DC2626; color: white; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; margin-left: 8px; vertical-align: middle; }
+  .svg-frame { background: white; border: 1px solid #FECACA; border-radius: 8px; padding: 14px; margin: 10px auto; max-width: 800px; display: flex; justify-content: center; overflow-x: auto; }
+  .svg-frame svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px; }
+  th, td { border: 1px solid #CBD5E1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #F1F5F9; font-weight: 700; color: #1E293B; }
+  .eme-table th { background: #7F1D1D; color: white; }
+  details { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 0; margin: 10px 0; }
+  details[open] { background: #F1F5F9; }
+  summary { cursor: pointer; padding: 12px 16px; font-weight: 700; color: #1E40AF; font-size: 14px; list-style: none; display: flex; align-items: center; gap: 8px; }
+  summary::before { content: "▶"; font-size: 11px; transition: transform 0.2s; color: #64748B; }
+  details[open] summary::before { transform: rotate(90deg); }
+  details[open] summary::after { content: "click to collapse"; margin-left: auto; font-size: 10.5px; color: #94A3B8; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+  summary::after { content: "click to expand"; margin-left: auto; font-size: 10.5px; color: #94A3B8; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+  details > *:not(summary) { padding: 0 16px 14px 16px; font-size: 13.5px; }
+  .gf-link { display: inline-block; background: linear-gradient(135deg, #B91C1C 0%, #7F1D1D 100%); color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 14.5px; box-shadow: 0 4px 10px rgba(185,28,28,0.25); }
+  .gf-link:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(185,28,28,0.35); }
+  .gf-code { background: #1E293B; color: #F8FAFC; padding: 6px 12px; border-radius: 6px; font-family: monospace; font-size: 13px; display: inline-block; }
+  footer { text-align: center; padding: 24px 0 8px 0; color: #64748B; font-size: 12.5px; }
+  #s2 { border-top: 4px solid #7F1D1D; }
+  #s3 { border-top: 4px solid #9D174D; }
+  #s4 { border-top: 4px solid #831843; }
+  #s5 { border-top: 4px solid #B91C1C; }
+  #s6 { border-top: 4px solid #991B1B; }
+  #s7 { border-top: 4px solid #DC2626; }
+  #s8 { border-top: 4px solid #1E40AF; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+<div class="hero">
+<h1>Topic 37 — Amniotic Fluid Embolism</h1>
+<div class="sub">Anaphylactoid syndrome of pregnancy · Catastrophic obstetric emergency</div>
+<div class="meta">
+<span class="chip">📖 Book source: p. 203–204 (2 pages)</span>
+<span class="chip">🟢 Source visuals: 0 (text-only chapter)</span>
+<span class="chip">🔴 Generated diagrams: 2 (mechanism + 3-pillar management)</span>
+<span class="chip">📌 8 content sections preserved</span>
+<span class="chip">🔍 Entry → Anaphylaxis → Pulm. collapse → DIC</span>
+</div>
+</div>
+<nav class="toc">
+<h2>Table of Contents</h2>
+<div class="toc-grid">
+<a href="#s1"><span class="num">§1</span> Intended Learning Outcomes (ILOs)</a>
+<a href="#s2"><span class="num">§2</span> Definition</a>
+<a href="#s3"><span class="num">§3</span> Conditions Allowing AF Entry</a>
+<a href="#s4"><span class="num">§4</span> Pathophysiology Cascade</a>
+<a href="#s5"><span class="num">§5</span> Risk Factors</a>
+<a href="#s6"><span class="num">§6</span> Clinical Picture</a>
+<a href="#s7"><span class="num">§7</span> Investigations</a>
+<a href="#s8"><span class="num">§8</span> Management · Student Activity · Questions · References</a>
+</div>
+</nav>
+<section id="s1">
+<h2 class="sec"><span class="num">1</span> Intended Learning Outcomes (ILOs)</h2>
+<p>At the end of this chapter, the student should be able to:</p>
+<ol>
+<li><b>To understand the definition of amniotic fluid embolism</b></li>
+<li><b>To be able to explain the possible etiologies of this obstetric catastrophe</b></li>
+<li><b>To be able to describe the clinical picture and management of amniotic fluid embolism</b></li>
+</ol>
+<div class="note"><b>Source wording preserved verbatim.</b> The source uses "obstetric catastrophe" and "obstetric serious problem" to describe AFE — a deliberate emphasis on the severity and high mortality.</div>
+</section>
+<section id="s2">
+<h2 class="sec"><span class="num">2</span> Definition</h2>
+<div class="keydef">
+<b>Amniotic fluid embolism (AFE):</b> <b>It is a condition in which, fetal fluid, tissue, or debris enters the maternal circulation via the placental bed and causes acute anaphylaxis.</b>
+</div>
+<h3 class="sub">Synonyms / clinical context</h3>
+<ul>
+<li>Also called <b>"anaphylactoid syndrome of pregnancy"</b> in modern literature (the term "embolism" is a misnomer — the reaction is anaphylactic rather than purely mechanical obstruction).</li>
+<li>Rare (<b>~1–2 per 40,000 deliveries</b> in most series) but accounts for a disproportionate share of <b>maternal mortality</b> in developed countries (5–15% of maternal deaths).</li>
+<li>Despite the name, it is <b>NOT a true embolism</b> in the classical sense — the dominant mechanism is <b>anaphylaxis-like reaction</b> to fetal antigens (similar to anaphylactic shock) combined with mechanical obstruction of pulmonary vessels by fetal debris.</li>
+</ul>
+<div class="pearl"><b>Why "via the placental bed"?</b> The placenta is a high-flow, low-resistance vascular interface between mother and fetus. Disruption of this barrier (e.g., by placental abruption, uterine trauma, or operative delivery) is the gateway for fetal material to enter the maternal venous circulation.</div>
+
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Amniotic fluid embolism (AFE) is BEST described as:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A true mechanical obstruction of pulmonary arteries by fetal debris</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">An anaphylactoid reaction to fetal fluid/tissue entering maternal circulation via the placental bed</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">A form of septic shock</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">A type of venous thromboembolism</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">AFE is an anaphylactoid (not purely embolic) reaction to fetal antigens. Modern term: 'anaphylactoid syndrome of pregnancy'.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">What is the approximate incidence of AFE?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1-2 per 1,000 deliveries</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">1-2 per 40,000 deliveries</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">1 per 1,000 deliveries per year</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">1 per 10,000 deliveries</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">AFE is rare (~1-2 per 40,000 deliveries) but accounts for 5-15% of maternal deaths in developed countries.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+<section id="s3">
+<h2 class="sec"><span class="num">3</span> Conditions Allowing Amniotic Fluid to Enter the Maternal Circulation</h2>
+<p>Amniotic fluid may enter the maternal circulation in the following conditions (verbatim from source):</p>
+<ol>
+<li><b>Increased intrauterine pressure</b> (accidental hemorrhage, oxytocin overdose with intact membranes).</li>
+<li><b>Opened uterine or endocervical veins</b> (as in genital tract lacerations e.g. rupture uterus).</li>
+</ol>
+<div class="anchor"><b>Two gateway mechanisms — mechanical summary:</b>
+<ul style="margin-top:4px">
+<li><b>↑ Pressure gradient</b> (abruption, oxytocin over-stimulation) — forces AF through intact barrier.</li>
+<li><b>Open venous channels</b> (lacerations, rupture uterus) — provides direct conduit for AF entry.</li>
+</ul>
+</div>
+<h3 class="sub">Potentiation by meconium</h3>
+<p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"The above factors also lead to <b>fetal distress → meconium stained amniotic fluid → this potentiate the toxic nature of amniotic fluid and worsen the condition.</b>"</p>
+<div class="danger"><b>Meconium = potentiator, not initiator.</b> Meconium-stained AF carries vasoactive substances (bile acids, free fatty acids) and particulate matter that amplify the anaphylactoid reaction. Fetal distress is therefore both a consequence of the entry conditions and a worsening factor once AF enters the circulation.</div>
+
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which TWO conditions allow amniotic fluid to enter maternal circulation?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Increased intrauterine pressure and opened uterine/endocervical veins</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Decreased intrauterine pressure and placental abruption</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Fetal distress and meconium staining</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Prolonged labor and maternal fever</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Two gateway mechanisms: (1) increased intrauterine pressure (abruption, oxytocin overdose), (2) opened uterine/endocervical veins (lacerations, rupture).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Meconium in the setting of AFE:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Is the primary cause of AFE</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Potentiates the toxic nature of amniotic fluid and worsens the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Has no effect on the severity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Protects against the anaphylactoid reaction</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Meconium potentiates, does not initiate. It contains vasoactive substances that amplify the anaphylactoid reaction.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+<section id="s4">
+<h2 class="sec"><span class="num">4</span> Pathophysiology Cascade</h2>
+<p>Once amniotic fluid enters the maternal circulation, the following pathophysiologic cascade unfolds:</p>
+<div class="ext-viz">
+<h4>Generated Diagram 1 — Pathophysiology cascade of AFE <span class="ext-viz-label">GENERATED</span></h4>
+<div class="svg-frame">
+<svg font-family="-apple-system, 'Segoe UI', Roboto, sans-serif" viewbox="0 0 780 980" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="arr" markerheight="10" markerunits="strokeWidth" markerwidth="10" orient="auto" refx="9" refy="5">
+<path d="M0,0 L0,10 L10,5 z" fill="#7F1D1D"></path>
+</marker>
+<lineargradient id="gg" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#FECACA"></stop>
+<stop offset="1" stop-color="#FEE2E2"></stop>
+</lineargradient>
+<lineargradient id="gg2" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#FCA5A5"></stop>
+<stop offset="1" stop-color="#F87171"></stop>
+</lineargradient>
+<lineargradient id="gg3" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#DC2626"></stop>
+<stop offset="1" stop-color="#7F1D1D"></stop>
+</lineargradient>
+</defs>
+<!-- Title -->
+<text fill="#7F1D1D" font-size="18" font-weight="800" text-anchor="middle" x="390" y="28">Pathophysiology Cascade of Amniotic Fluid Embolism</text>
+<text fill="#64748B" font-size="11" font-style="italic" text-anchor="middle" x="390" y="48">Fetal fluid / tissue / debris → maternal anaphylactoid reaction</text>
+<!-- Step 1: Entry -->
+<rect fill="url(#gg)" height="64" rx="10" stroke="#7F1D1D" stroke-width="2" width="340" x="220" y="72"></rect>
+<text fill="#7F1D1D" font-size="14" font-weight="800" text-anchor="middle" x="390" y="96">STEP 1 — Entry of AF into maternal veins</text>
+<text fill="#1E293B" font-size="11" text-anchor="middle" x="390" y="115">via placental bed (↑ pressure OR opened veins)</text>
+<text fill="#475569" font-size="10" text-anchor="middle" x="390" y="130">Fetal fluid · tissue · debris · meconium</text>
+<line marker-end="url(#arr)" stroke="#7F1D1D" stroke-width="2.5" x1="390" x2="390" y1="136" y2="160"></line>
+<!-- Step 2: Anaphylaxis -->
+<rect fill="url(#gg)" height="62" rx="10" stroke="#7F1D1D" stroke-width="2" width="340" x="220" y="162"></rect>
+<text fill="#7F1D1D" font-size="14" font-weight="800" text-anchor="middle" x="390" y="186">STEP 2 — Acute anaphylactoid reaction</text>
+<text fill="#1E293B" font-size="11" text-anchor="middle" x="390" y="205">Mast-cell degranulation · complement activation</text>
+<text fill="#475569" font-size="10" text-anchor="middle" x="390" y="218">Massive release of histamine, tryptase, leukotrienes</text>
+<line marker-end="url(#arr)" stroke="#7F1D1D" stroke-width="2.5" x1="390" x2="390" y1="224" y2="248"></line>
+<!-- Step 3: Pulmonary vascular obstruction -->
+<rect fill="url(#gg2)" height="68" rx="10" stroke="#B91C1C" stroke-width="2" width="380" x="200" y="250"></rect>
+<text fill="#7F1D1D" font-size="14" font-weight="800" text-anchor="middle" x="390" y="274">STEP 3 — Pulmonary vascular obstruction</text>
+<text fill="#1E293B" font-size="11" text-anchor="middle" x="390" y="293">Particulate matter (squames, lanugo, vernix) lodges</text>
+<text fill="#1E293B" font-size="11" text-anchor="middle" x="390" y="306">in pulmonary arterioles + bronchoconstriction</text>
+<line marker-end="url(#arr)" stroke="#7F1D1D" stroke-width="2.5" x1="390" x2="390" y1="318" y2="342"></line>
+<!-- Step 4: Core pulmonale -->
+<rect fill="url(#gg2)" height="62" rx="10" stroke="#B91C1C" stroke-width="2" width="340" x="220" y="344"></rect>
+<text fill="#7F1D1D" font-size="14" font-weight="800" text-anchor="middle" x="390" y="368">STEP 4 — Acute core pulmonale</text>
+<text fill="#1E293B" font-size="11" text-anchor="middle" x="390" y="387">Abrupt ↑ RV afterload · ↓ LV preload</text>
+<text fill="#475569" font-size="10" text-anchor="middle" x="390" y="400">(right heart fails; left heart under-filled)</text>
+<line marker-end="url(#arr)" stroke="#7F1D1D" stroke-width="2.5" x1="390" x2="390" y1="406" y2="430"></line>
+<!-- Step 5: Hypoxia + CHF -->
+<rect fill="url(#gg3)" height="68" rx="10" stroke="#7F1D1D" stroke-width="2.5" width="380" x="200" y="432"></rect>
+<text fill="white" font-size="14" font-weight="800" text-anchor="middle" x="390" y="456">STEP 5 — Abrupt hypoxia &amp; cardiogenic shock</text>
+<text fill="white" font-size="11.5" text-anchor="middle" x="390" y="475">V/Q mismatch · ↓ cardiac output · pulmonary edema</text>
+<text fill="white" font-size="11.5" font-weight="700" text-anchor="middle" x="390" y="490">→ Severe dyspnea + cyanosis + respiratory distress</text>
+<line marker-end="url(#arr)" stroke="#7F1D1D" stroke-width="2.5" x1="390" x2="390" y1="500" y2="524"></line>
+<!-- Step 6: DIC -->
+<rect fill="url(#gg3)" height="68" rx="10" stroke="#7F1D1D" stroke-width="2.5" width="340" x="220" y="526"></rect>
+<text fill="white" font-size="14" font-weight="800" text-anchor="middle" x="390" y="550">STEP 6 — Disseminated Intravascular Coagulation</text>
+<text fill="white" font-size="11" text-anchor="middle" x="390" y="569">Tissue factor from AF triggers systemic coagulation</text>
+<text fill="white" font-size="11" font-weight="700" text-anchor="middle" x="390" y="582">→ Bleeding from genital tract &amp; ALL trauma sites</text>
+<line marker-end="url(#arr)" stroke="#7F1D1D" stroke-width="2.5" x1="390" x2="390" y1="594" y2="618"></line>
+<!-- Step 7: Coma + death -->
+<rect fill="#7F1D1D" height="76" rx="10" stroke="#450A0A" stroke-width="2.5" width="380" x="200" y="620"></rect>
+<text fill="white" font-size="14" font-weight="800" text-anchor="middle" x="390" y="645">STEP 7 — Deep coma → death</text>
+<text fill="white" font-size="12" text-anchor="middle" x="390" y="665">Hypoxic brain injury · multi-organ failure</text>
+<text fill="#FECACA" font-size="13" font-weight="800" text-anchor="middle" x="390" y="685">Immediate death in &gt;50% of cases</text>
+<!-- Side annotation -->
+<rect fill="#FEF2F2" height="350" rx="8" stroke="#FCA5A5" stroke-dasharray="4,3" stroke-width="1.5" width="160" x="600" y="260"></rect>
+<text fill="#7F1D1D" font-size="11" font-weight="800" text-anchor="middle" x="680" y="282">CLINICAL CLUES</text>
+<text fill="#1E293B" font-size="10" x="610" y="305">• Sudden dyspnea / cyanosis</text>
+<text fill="#1E293B" font-size="10" x="610" y="322">• Hypotension / shock</text>
+<text fill="#1E293B" font-size="10" x="610" y="339">• Seizures / loss of consciousness</text>
+<text fill="#1E293B" font-size="10" x="610" y="356">• DIC within minutes</text>
+<text fill="#1E293B" font-size="10" x="610" y="373">• Cardiopulmonary arrest</text>
+<text fill="#1E293B" font-size="10" x="610" y="390">• Fetal distress (if undelivered)</text>
+<text fill="#7F1D1D" font-size="10" font-weight="700" text-anchor="middle" x="610" y="412">— onset is "immediately or</text>
+<text fill="#7F1D1D" font-size="10" font-weight="700" text-anchor="middle" x="610" y="425">shortly after difficult</text>
+<text fill="#7F1D1D" font-size="10" font-weight="700" text-anchor="middle" x="610" y="438">delivery" —</text>
+<text fill="#475569" font-size="9" font-style="italic" text-anchor="middle" x="610" y="460">Suspect in any sudden</text>
+<text fill="#475569" font-size="9" font-style="italic" text-anchor="middle" x="610" y="473">postpartum collapse + DIC</text>
+<line stroke="none" x1="600" x2="600" y1="490" y2="490"></line>
+<!-- Bottom box: where to detect it -->
+<rect fill="#F0F9FF" height="248" rx="8" stroke="#0EA5E9" stroke-width="1.5" width="380" x="20" y="710"></rect>
+<text fill="#0C4A6E" font-size="12" font-weight="800" text-anchor="middle" x="210" y="734">INVESTIGATIONS (source p. 203)</text>
+<text fill="#1E293B" font-size="10.5" x="32" y="758"><tspan font-weight="700">1.</tspan> ABG, serum electrolytes,</text>
+<text fill="#1E293B" font-size="10.5" x="48" y="773">calcium, magnesium</text>
+<text fill="#1E293B" font-size="10.5" x="32" y="793"><tspan font-weight="700">2.</tspan> Coagulation profile + CBC</text>
+<text fill="#1E293B" font-size="10.5" x="32" y="813"><tspan font-weight="700">3.</tspan> CT / MRI of lung</text>
+<text fill="#1E293B" font-size="10.5" x="32" y="838"><tspan font-weight="700">4.</tspan> <tspan fill="#7F1D1D" font-style="italic">Autopsy (definitive):</tspan> AF debris</text>
+<text fill="#1E293B" font-size="10.5" x="48" y="853">— fetal squamous cells</text>
+<text fill="#1E293B" font-size="10.5" x="48" y="868">— lanugo hair</text>
+<text fill="#1E293B" font-size="10.5" x="48" y="883">— vernix</text>
+<text fill="#1E293B" font-size="10.5" x="48" y="903">in pulmonary vessels</text>
+<text fill="#475569" font-size="10" font-style="italic" x="32" y="935">⚠ AFE is a clinical diagnosis of exclusion —</text>
+<text fill="#475569" font-size="10" font-style="italic" x="32" y="950">no single test confirms it in real time.</text>
+<rect fill="#FAF5FF" height="248" rx="8" stroke="#A855F7" stroke-width="1.5" width="370" x="410" y="710"></rect>
+<text fill="#581C87" font-size="12" font-weight="800" text-anchor="middle" x="595" y="734">3-PILLAR MANAGEMENT (source p. 204)</text>
+<rect fill="white" height="60" rx="6" stroke="#7F1D1D" stroke-width="1.5" width="350" x="420" y="746"></rect>
+<text fill="#7F1D1D" font-size="11" font-weight="700" text-anchor="middle" x="595" y="766">PILLAR 1 · Cardiopulmonary support</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="782">ICU · CPR · inotropes · oxygenation ·</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="796">intubation / mechanical ventilation</text>
+<rect fill="white" height="60" rx="6" stroke="#7F1D1D" stroke-width="1.5" width="350" x="420" y="812"></rect>
+<text fill="#7F1D1D" font-size="11" font-weight="700" text-anchor="middle" x="595" y="832">PILLAR 2 · Management of DIC</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="848">FFP · cryoprecipitate · platelets ·</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="862">correct fibrinogen + coags</text>
+<rect fill="white" height="62" rx="6" stroke="#7F1D1D" stroke-width="1.5" width="350" x="420" y="878"></rect>
+<text fill="#7F1D1D" font-size="11" font-weight="700" text-anchor="middle" x="595" y="898">PILLAR 3 · Emergent delivery</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="914">If undelivered — for both fetal &amp;</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="928">maternal benefit (relieves IVC compression,</text>
+<text fill="#1E293B" font-size="10" text-anchor="middle" x="595" y="942">improves CPR effectiveness)</text>
+</svg>
+</div>
+<p style="font-size:11.5px;color:#7F1D1D;margin-top:4px"><i>Source: Generated mechanism diagram based on the pathophysiology described in <i>Book Obstetrics 2025-2026</i>, p. 203–204. The cascade is constructed from the source's clinical-picture text (respiratory distress, circulatory collapse, DIC). The 3-pillar management box mirrors the source's "In ICU" + 6-management list. <b>Not extracted from the source PDF — the source PDF (2 pages) contains no figures or diagrams.</b> The red "GENERATED" badge and red border identify this as a non-source visual per workflow rules.</i></p>
+</div>
+<h3 class="sub">Verbatim clinical-picture description (from source)</h3>
+<p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Immediately or shortly after difficult delivery: <b>Respiratory distress (RDS) (severe dyspnea and cyanosis), circulatory collapse (extensive pulmonary vascular obstruction due to the amniotic fluid particulate matter → acute core pulmonale → abrupt hypoxia and CHF.</b> <b>DIC → bleeding from genital tract and all other sites of trauma, deep coma and immediate death in more than 50% of cases.</b>"</p>
+
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The pathophysiologic cascade of AFE begins with entry of AF into maternal veins, followed by:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Acute cor pulmonale → anaphylaxis → DIC → hypoxia → death</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Acute anaphylactoid reaction → pulmonary vascular obstruction → acute cor pulmonale → hypoxia/cardiogenic shock → DIC → coma/death</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">DIC → pulmonary obstruction → anaphylaxis → death</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Hypoxia → DIC → anaphylaxis → cor pulmonale → death</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Correct cascade: Entry → Anaphylaxis → Pulmonary obstruction → Cor pulmonale → Hypoxia/Shock → DIC → Coma/death.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In AFE, acute cor pulmonale results from:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Left ventricular failure</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Abrupt increase in right ventricular afterload with decreased LV preload</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Pulmonary venous hypertension</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Myocardial infarction</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Pulmonary vascular obstruction causes abrupt ↑ RV afterload and ↓ LV preload, leading to acute cor pulmonale.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The final common pathway before death in AFE is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Renal failure</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Hepatic failure</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Hypoxic brain injury and multi-organ failure with DIC</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Cardiac arrhythmia alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Step 7 of the cascade: deep coma → death from hypoxic brain injury and multi-organ failure. Immediate death occurs in >50% of cases.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+<section id="s5">
+<h2 class="sec"><span class="num">5</span> Risk Factors</h2>
+<p>The source lists the following risk factors (verbatim):</p>
+<div class="card">
+<h4>Risk factors (9 items, verbatim from source)</h4>
+<ol>
+<li><b>Induced labor</b></li>
+<li><b>Advanced maternal age</b></li>
+<li><b>Multiparity</b></li>
+<li><b>Uterine rupture</b></li>
+<li><b>Abdominal trauma</b></li>
+<li><b>Placental abruption</b></li>
+<li><b>Diabetes</b></li>
+<li><b>Cervical lacerations</b></li>
+<li><b>Operative delivery</b></li>
+</ol>
+</div>
+<h3 class="sub">Pattern recognition — three clusters</h3>
+<div class="grid-2">
+<div class="card">
+<h4>Cluster A · Uterine over-distension / trauma</h4>
+<ul>
+<li>Uterine rupture</li>
+<li>Placental abruption</li>
+<li>Abdominal trauma</li>
+<li>Operative delivery (CS, forceps, vacuum)</li>
+<li>Cervical lacerations</li>
+</ul>
+<p style="font-size:11.5px;color:#475569;margin-top:4px"><i>Common theme: open venous channels or pressure surges that breach the maternal-fetal barrier.</i></p>
+</div>
+<div class="card">
+<h4>Cluster B · Labor induction / uterine stimulation</h4>
+<ul>
+<li>Induced labor (oxytocin, prostaglandins)</li>
+<li>Operative delivery (forceps, vacuum extraction)</li>
+</ul>
+<p style="font-size:11.5px;color:#475569;margin-top:4px"><i>Common theme: iatrogenic increases in intrauterine pressure — the same "↑ pressure" gateway described in §3.</i></p>
+</div>
+<div class="card">
+<h4>Cluster C · Maternal factors</h4>
+<ul>
+<li>Advanced maternal age</li>
+<li>Multiparity</li>
+<li>Diabetes</li>
+</ul>
+<p style="font-size:11.5px;color:#475569;margin-top:4px"><i>Common theme: pre-existing maternal vulnerability that may predispose to a more severe anaphylactoid response.</i></p>
+</div>
+</div>
+<div class="warn"><b>Source caveat:</b> AFE can occur in <b>any</b> pregnancy — most cases occur in women with NO identifiable risk factor. The list above describes <i>statistical associations</i>, not deterministic causes. A "low-risk" patient is not protected.</div>
+
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a risk factor for AFE?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Placenta previa</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Placental abruption</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Headache and visual disturbances</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Premature rupture of membranes</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Placental abruption is a key risk factor as disruption of the placental barrier allows AF entry. Other RFs include operative delivery, cervical lacerations.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following BEST describes AFE risk factor timing?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Only occurs in the first trimester</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Only occurs during cesarean section</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Associated with conditions that disrupt the placental barrier or increase intrauterine pressure</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Primarily seen in post-term pregnancies</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Any condition disrupting the placental bed (abruption, trauma, lacerations) or raising intrauterine pressure can precipitate AFE.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+<section id="s6">
+<h2 class="sec"><span class="num">6</span> Clinical Picture</h2>
+<p>Source: "Immediately or shortly after difficult delivery:"</p>
+<h3 class="sub">A. Respiratory distress (RDS)</h3>
+<ul>
+<li><b>Severe dyspnea</b> — sudden onset, often the first symptom</li>
+<li><b>Cyanosis</b> — refractory to oxygen in severe cases</li>
+<li>Tachypnea, accessory muscle use</li>
+<li>Pulmonary crackles (when pulmonary edema develops)</li>
+</ul>
+<h3 class="sub">B. Circulatory collapse</h3>
+<ul>
+<li><b>Extensive pulmonary vascular obstruction</b> due to the amniotic fluid particulate matter</li>
+<li>→ <b>Acute core pulmonale</b> (right heart failure)</li>
+<li>→ <b>Abrupt hypoxia</b> (V/Q mismatch, ↓ cardiac output)</li>
+<li>→ <b>Congestive heart failure (CHF)</b></li>
+<li>→ Hypotension, shock, cardiopulmonary arrest</li>
+</ul>
+<h3 class="sub">C. Disseminated Intravascular Coagulation (DIC)</h3>
+<ul>
+<li>Triggered by tissue factor released from amniotic fluid</li>
+<li><b>Bleeding from genital tract AND all other sites of trauma</b> (IV sites, surgical wounds, etc.)</li>
+<li>Consumptive coagulopathy — low fibrinogen, low platelets, prolonged PT/PTT, ↑ D-dimer</li>
+</ul>
+<h3 class="sub">D. Final outcomes</h3>
+<ul>
+<li><b>Deep coma</b> (from prolonged hypoxia)</li>
+<li><b>Immediate death in more than 50% of cases</b></li>
+<li>Survivors may have permanent hypoxic brain injury</li>
+</ul>
+<div class="danger"><b>Diagnostic suspicion rule (verbatim from source):</b> <b>"It is suspected in any case of sudden postpartum collapse and DIC."</b> — AFE is a <b>diagnosis of exclusion</b> with no confirmatory test in real time. Maintain a low threshold when collapse + DIC occur together, especially peripartum.</div>
+<h3 class="sub">E. The classic AFE triad</h3>
+<table class="eme-table">
+<tr>
+<th style="width:33%">Hypoxia / respiratory distress</th>
+<th style="width:33%">Cardiovascular collapse / shock</th>
+<th style="width:34%">DIC / consumptive coagulopathy</th>
+</tr>
+<tr>
+<td>Sudden dyspnea · cyanosis · pulmonary edema</td>
+<td>Hypotension · core pulmonale · arrest</td>
+<td>Bleeding from all sites · low fibrinogen</td>
+</tr>
+</table>
+<div class="anchor"><b>Mnemonic: "H-C-D" — Hypoxia, Collapse, DIC.</b> Any 2 of 3 within minutes of delivery should trigger AFE protocol.</div>
+
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The classic clinical triad of AFE is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Fever, tachycardia, hypotension</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Hypoxia, cardiovascular collapse, DIC</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Bradycardia, hypertension, hyperthermia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Chest pain, hemoptysis, dyspnea</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The classic triad: hypoxia (severe dyspnea/cyanosis) + cardiovascular collapse + DIC, occurring within minutes of a difficult delivery.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The hallmark cardiovascular finding in AFE is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Hypertension and bradycardia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Hypotension, tachycardia, and signs of right heart failure</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Atrial fibrillation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Widened pulse pressure</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Cardiovascular: hypotension, tachycardia, signs of right heart failure from acute cor pulmonale.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+<section id="s7">
+<h2 class="sec"><span class="num">7</span> Investigations</h2>
+<p>Source investigations list (verbatim):</p>
+<ol>
+<li><b>Arterial blood gas, serum electrolytes, calcium and magnesium levels, coagulation profile, and complete blood count.</b></li>
+<li><b>CT, MRI on the lung.</b></li>
+<li><b>Autopsy:</b> by finding AF debris (fetal squamous cells, lanugo hair, vernix) in pulmonary vessels.</li>
+</ol>
+<h3 class="sub">Bedside / immediate</h3>
+<table>
+<tr>
+<th style="width:30%">Test</th>
+<th style="width:35%">Expected finding in AFE</th>
+<th style="width:35%">Clinical purpose</th>
+</tr>
+<tr>
+<td><b>Arterial blood gas (ABG)</b></td>
+<td>Severe hypoxemia (PaO₂ &lt;&lt; 60), hyperventilation, metabolic acidosis from shock</td>
+<td>Quantify oxygenation defect · guide ventilator settings</td>
+</tr>
+<tr>
+<td><b>Serum electrolytes</b></td>
+<td>Often deranged from shock / tissue hypoperfusion</td>
+<td>Baseline + monitor</td>
+</tr>
+<tr>
+<td><b>Calcium &amp; magnesium</b></td>
+<td>↓ Calcium (binds to free fatty acids in AF)</td>
+<td>Hypocalcemia worsens myocardial depression — correct aggressively</td>
+</tr>
+<tr>
+<td><b>Coagulation profile (PT, PTT, fibrinogen, D-dimer)</b></td>
+<td>↑↑ PT/PTT · ↓↓ fibrinogen · ↑↑ D-dimer</td>
+<td>Confirms DIC; guides blood-product replacement</td>
+</tr>
+<tr>
+<td><b>CBC</b></td>
+<td>↓ Platelets · ↓ Hb (if bleeding)</td>
+<td>Tracks consumption and hemorrhage</td>
+</tr>
+</table>
+<h3 class="sub">Imaging</h3>
+<ul>
+<li><b>CT chest:</b> may show diffuse pulmonary infiltrates, pulmonary edema, or filling defects in pulmonary arteries</li>
+<li><b>MRI chest:</b> rarely feasible in acute setting, but may show similar findings</li>
+</ul>
+<h3 class="sub">Definitive / post-mortem</h3>
+<div class="card">
+<h4>Autopsy finding (definitive for AFE)</h4>
+<p>Identification of <b>amniotic fluid debris in pulmonary vessels</b>:</p>
+<ul>
+<li><b>Fetal squamous cells</b> (shed skin)</li>
+<li><b>Lanugo hair</b> (fine fetal hair)</li>
+<li><b>Vernix</b> (waxy fetal coating)</li>
+</ul>
+<p style="font-size:11.5px;color:#475569;margin-top:6px"><i>This is the only histopathologically confirmatory test. In survivors, the diagnosis remains presumptive (clinical + lab + imaging).</i></p>
+</div>
+<div class="pearl"><b>No test confirms AFE in real time.</b> The clinical triad (hypoxia + collapse + DIC) within minutes of a difficult delivery, in the absence of another clear cause, is the working definition used to start AFE resuscitation.</div>
+
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which laboratory finding is most consistent with DIC in AFE?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Elevated fibrinogen, normal PT/PTT</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Prolonged PT/PTT, low fibrinogen, elevated D-dimer</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Normal PT/PTT, elevated platelets</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Low D-dimer, normal PT/PTT</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">DIC shows: ↑↑ PT/PTT, ↓↓ fibrinogen, ↑↑ D-dimer, ↓ platelets. This guides blood-product replacement.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The definitive diagnostic finding for AFE is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">CT chest showing pulmonary infiltrates</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Low serum calcium</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Identification of amniotic fluid debris (fetal squamous cells, lanugo, vernix) in pulmonary vessels at autopsy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Elevated serum tryptase</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Autopsy finding of AF debris in pulmonary vessels is the only histopathologically confirmatory test. In survivors, diagnosis remains presumptive.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+<section id="s8">
+<h2 class="sec"><span class="num">8</span> Management · Student Activity · Questions · References</h2>
+<h3 class="sub">A. Management (verbatim from source p. 204)</h3>
+<p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"In ICU: Cardiopulmonary support. <b>Emergent delivery is required for both fetal and maternal benefits.</b> Management of DIC. Corticosteroids. Heparin. Monitoring of different organs."</p>
+<div class="card">
+<h4>Management measures (verbatim, 6 items)</h4>
+<ol>
+<li><b>Cardiopulmonary support</b> (the cornerstone of AFE resuscitation)</li>
+<li><b>Emergent delivery</b> — required for both fetal and maternal benefits</li>
+<li><b>Management of DIC</b> — blood products (FFP, platelets, cryoprecipitate)</li>
+<li><b>Corticosteroids</b> — for the anaphylactoid / inflammatory component</li>
+<li><b>Heparin</b> — controversial; may be used in the early hypercoagulable phase of DIC</li>
+<li><b>Monitoring of different organs</b> — renal, hepatic, cerebral, respiratory</li>
+</ol>
+</div>
+<h3 class="sub">B. Resuscitation framework (the 3 pillars)</h3>
+<div class="ext-viz">
+<h4>Generated Diagram 2 — 3-pillar resuscitation framework <span class="ext-viz-label">GENERATED</span></h4>
+<div class="svg-frame">
+<svg font-family="-apple-system, 'Segoe UI', Roboto, sans-serif" viewbox="0 0 780 360" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="pillar" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0" stop-color="#FEE2E2"></stop>
+<stop offset="1" stop-color="#FCA5A5"></stop>
+</lineargradient>
+</defs>
+<text fill="#7F1D1D" font-size="16" font-weight="800" text-anchor="middle" x="390" y="30">The 3 Pillars of AFE Resuscitation</text>
+<text fill="#64748B" font-size="11" font-style="italic" text-anchor="middle" x="390" y="48">All three start simultaneously · supported by corticosteroids, heparin, multi-organ monitoring</text>
+<!-- Pillar 1 -->
+<rect fill="url(#pillar)" height="240" rx="14" stroke="#7F1D1D" stroke-width="2.5" width="220" x="40" y="80"></rect>
+<text fill="#7F1D1D" font-size="32" font-weight="800" text-anchor="middle" x="150" y="110">1</text>
+<text fill="#7F1D1D" font-size="13" font-weight="800" text-anchor="middle" x="150" y="135">CARDIOPULMONARY</text>
+<text fill="#7F1D1D" font-size="13" font-weight="800" text-anchor="middle" x="150" y="152">SUPPORT</text>
+<line stroke="#7F1D1D" stroke-width="1" x1="60" x2="240" y1="166" y2="166"></line>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="150" y="184">• 100% O₂ / intubate</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="150" y="200">• Mechanical ventilation</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="150" y="216">• CPR if arrest</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="150" y="232">• Inotropes / vasopressors</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="150" y="248">• Treat core pulmonale</text>
+<text fill="#7F1D1D" font-size="9.5" font-style="italic" text-anchor="middle" x="150" y="270">— ICU care —</text>
+<text fill="#1E293B" font-size="10" font-weight="700" text-anchor="middle" x="150" y="290">Source: p. 204 line 1</text>
+<text fill="#475569" font-size="9" text-anchor="middle" x="150" y="305">"Cardiopulmonary support"</text>
+<!-- Pillar 2 -->
+<rect fill="url(#pillar)" height="240" rx="14" stroke="#7F1D1D" stroke-width="2.5" width="220" x="280" y="80"></rect>
+<text fill="#7F1D1D" font-size="32" font-weight="800" text-anchor="middle" x="390" y="110">2</text>
+<text fill="#7F1D1D" font-size="13" font-weight="800" text-anchor="middle" x="390" y="135">DIC</text>
+<text fill="#7F1D1D" font-size="13" font-weight="800" text-anchor="middle" x="390" y="152">MANAGEMENT</text>
+<line stroke="#7F1D1D" stroke-width="1" x1="300" x2="480" y1="166" y2="166"></line>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="390" y="184">• FFP (replaces factors)</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="390" y="200">• Cryoprecipitate (fibrinogen)</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="390" y="216">• Platelet transfusion</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="390" y="232">• Treat bleeding sites</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="390" y="248">• Correct hypocalcemia</text>
+<text fill="#7F1D1D" font-size="9.5" font-style="italic" text-anchor="middle" x="390" y="270">— plus Heparin —</text>
+<text fill="#1E293B" font-size="10" font-weight="700" text-anchor="middle" x="390" y="290">Source: p. 204 line 3 + 5</text>
+<text fill="#475569" font-size="9" text-anchor="middle" x="390" y="305">"Management of DIC. Heparin."</text>
+<!-- Pillar 3 -->
+<rect fill="url(#pillar)" height="240" rx="14" stroke="#7F1D1D" stroke-width="2.5" width="220" x="520" y="80"></rect>
+<text fill="#7F1D1D" font-size="32" font-weight="800" text-anchor="middle" x="630" y="110">3</text>
+<text fill="#7F1D1D" font-size="13" font-weight="800" text-anchor="middle" x="630" y="135">EMERGENT</text>
+<text fill="#7F1D1D" font-size="13" font-weight="800" text-anchor="middle" x="630" y="152">DELIVERY</text>
+<line stroke="#7F1D1D" stroke-width="1" x1="540" x2="720" y1="166" y2="166"></line>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="630" y="184">• For FETAL benefit</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="630" y="200">• For MATERNAL benefit</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="630" y="216">• Relieves IVC compression</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="630" y="232">• Improves CPR effectiveness</text>
+<text fill="#1E293B" font-size="10.5" text-anchor="middle" x="630" y="248">• If undelivered at arrest</text>
+<text fill="#7F1D1D" font-size="9.5" font-style="italic" text-anchor="middle" x="630" y="270">— both mother and baby —</text>
+<text fill="#1E293B" font-size="10" font-weight="700" text-anchor="middle" x="630" y="290">Source: p. 204 line 2</text>
+<text fill="#475569" font-size="9" text-anchor="middle" x="630" y="305">"Emergent delivery … both fetal and maternal benefits"</text>
+</svg>
+</div>
+<p style="font-size:11.5px;color:#7F1D1D;margin-top:4px"><i>Source: Generated framework diagram based on the 6-item management list in <i>Book Obstetrics 2025-2026</i>, p. 204. The 3 pillars group the 6 source items: cardiopulmonary support (#1), emergent delivery (#2), and DIC management (#4) — supported by corticosteroids (#3), heparin (#5), and multi-organ monitoring (#6). <b>Not extracted from the source PDF.</b></i></p>
+</div>
+<h3 class="sub">C. Practical ICU resuscitation sequence</h3>
+<ol>
+<li><b>Call for help</b> — multidisciplinary (obstetric, anesthesia, ICU, hematology, neonatology).</li>
+<li><b>Airway + Breathing</b> — 100 % O₂, intubate early, lung-protective ventilation.</li>
+<li><b>Circulation</b> — large-bore IV ×2, fluid resuscitate, inotropes/vasopressors.</li>
+<li><b>CPR</b> if arrest — left uterine displacement (if pregnant), consider <b>perimortem cesarean</b> within 4–5 min (see Topic 36 §8 for the 5-minute rule).</li>
+<li><b>Empirical AFE bundle</b> — corticosteroids, calcium, blood products.</li>
+<li><b>Lab + imaging</b> — ABG, coags, fibrinogen, CBC, electrolytes, CT chest.</li>
+<li><b>Multi-organ monitoring</b> — urine output, LFTs, neuro status, ventilator parameters.</li>
+</ol>
+<div class="warn"><b>Corticosteroids</b> in AFE: given for the anaphylactoid / systemic inflammatory component. The benefit is empirical, not from randomized trials (AFE is too rare for RCTs).</div>
+<div class="warn"><b>Heparin</b> in AFE-DIC: controversial. The source lists it, but modern practice usually reserves heparin for the early hypercoagulable phase of DIC, not the active bleeding phase. Use clinical judgment.</div>
+<h3 class="sub">D. Student activity (verbatim from source)</h3>
+<details>
+<summary>Illustrative diagram assignment — definition, etiology, clinical diagnosis &amp; management</summary>
+<p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"An illustrative diagram is requested from each students' group to show the definition, etiology, clinical diagnosis and management of this obstetric serious problem."</p>
+<p>Suggested diagram topics (one per group):</p>
+<ul>
+<li>Pathophysiology cascade (use Generated Diagram 1 above as a model)</li>
+<li>The two gateway mechanisms (↑ intrauterine pressure vs. open venous channels)</li>
+<li>The 3-pillar resuscitation framework (use Generated Diagram 2 above as a model)</li>
+<li>The clinical triad — hypoxia + collapse + DIC</li>
+<li>Risk-factor clusters (uterine trauma / induction / maternal vulnerability)</li>
+<li>Differential diagnosis of sudden postpartum collapse (AFE vs. PPH vs. PE vs. eclampsia vs. MI vs. inversion — see Topic 36 §8 for the 8-cause list)</li>
+</ul>
+</details>
+<h3 class="sub">E. Self-assessment questions</h3>
+<details>
+<summary>Online question bank — Topic 37 (Google Form)</summary>
+<p>Test your understanding of amniotic fluid embolism:</p>
+<p style="margin-top:10px"><a class="gf-link" href="https://forms.gle/Qdr6qfyCTKNZCGFD6" rel="noopener" target="_blank">📝 Open Topic 37 Question Form</a></p>
+<p style="margin-top:8px"><span class="gf-code">https://forms.gle/Qdr6qfyCTKNZCGFD6</span></p>
+</details>
+<h3 class="sub">F. References &amp; further reading</h3>
+<details>
+<summary>Source attribution and evidence base</summary>
+<ol>
+<li><b>Primary source:</b> <i>Book Obstetrics 2025-2026</i>, Chapter "Amniotic Fluid Embolism", p. 203–204 (2 pages).</li>
+<li><b>Online self-assessment:</b> Google Form — <a href="https://forms.gle/Qdr6qfyCTKNZCGFD6" rel="noopener" target="_blank">https://forms.gle/Qdr6qfyCTKNZCGFD6</a>.</li>
+<li><b>Source visuals (0):</b> the source PDF for this chapter contains <b>no figures, no diagrams, no images, no tables</b> (verified by both <code>pdfimages -all</code> extraction and vision analysis of rasterized pages). All diagrams in this infographic are <b>generated inlined SVGs based on the source text</b> and are clearly marked with the red "GENERATED" badge and red border to distinguish them from source visuals per workflow rules.</li>
+<li><b>Generated diagrams (2):</b> (a) Pathophysiology cascade in §4; (b) 3-pillar resuscitation framework in §8-B. Both are constructed directly from the source's clinical-picture and management text. The SVG inlining (rather than external image files) keeps the HTML fully self-contained.</li>
+<li><b>Other topics in this series</b> with related content: Topic 12 (DIC) · Topic 16 (Thromboembolism) · Topic 13 (DIC in pregnancy, full chapter) · Topic 17 (Normal third stage) · Topic 36 (Postpartum collapse — AFE is listed as one of 8 etiologies of postpartum collapse).</li>
+</ol>
+</details>
+<h3 class="sub">End of Topic 37</h3>
+<p style="text-align:center;margin-top:14px"><a class="gf-link" href="https://forms.gle/Qdr6qfyCTKNZCGFD6" rel="noopener" target="_blank">📝 Take the Topic 37 Self-Assessment Quiz</a></p>
+</section>
+<footer>
+<p>Topic 37 — Amniotic Fluid Embolism · Source: <i>Book Obstetrics 2025-2026</i>, p. 203–204 · 8 sections · 0 source visuals · 2 generated diagrams · <a href="https://forms.gle/Qdr6qfyCTKNZCGFD6" rel="noopener" target="_blank">Self-assessment form</a></p>
+</footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

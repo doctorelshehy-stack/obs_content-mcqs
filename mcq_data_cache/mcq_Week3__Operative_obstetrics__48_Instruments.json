@@ -1,0 +1,401 @@
+{
+  "s2": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The uterine sound has which of the following characteristics?",
+      "options": [
+        "Rigid, sharp-tipped, straight",
+        "Malleable, blunt-tipped, graduated and curved",
+        "Flexible, rounded, ungraduated",
+        "Metal, sharp-tipped, graduated"
+      ],
+      "correct": 1,
+      "explain": "The uterine sound is malleable, has a blunt tip (3-4 mm diameter), is graduated, and curved. It is used to measure cervical and uterine length."
+    },
+    {
+      "q": "Which is a complication of using a uterine sound?",
+      "options": [
+        "Infection only",
+        "Shock and perforation",
+        "Hemorrhage",
+        "Nerve injury"
+      ],
+      "correct": 1,
+      "explain": "Complications of uterine sound include shock and perforation of the uterus."
+    }
+  ],
+  "s3": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The female uterine catheter is used for:",
+      "options": [
+        "Measuring uterine length",
+        "Emptying the bladder during gynecologic operations",
+        "Dilating the cervix",
+        "Evacuating products of conception"
+      ],
+      "correct": 1,
+      "explain": "The female uterine catheter (available in rubber, metal, or plastic) is used for emptying the bladder during gynecologic operations."
+    }
+  ],
+  "s4": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a type of cervical dilator?",
+      "options": [
+        "Sims",
+        "Cusco",
+        "Hegar",
+        "Wrigley"
+      ],
+      "correct": 2,
+      "explain": "Cervical dilators include Hegar (graduated dilators) and Fenton (alternative design). They are used for dilatation of the cervix to facilitate intrauterine surgery."
+    },
+    {
+      "q": "Complications of cervical dilators include all EXCEPT:",
+      "options": [
+        "Neurogenic shock",
+        "Infection",
+        "Perforation",
+        "Uterine prolapse"
+      ],
+      "correct": 3,
+      "explain": "Complications include neurogenic shock, infection, perforation, and cervical lacerations. Uterine prolapse is not a complication of cervical dilatation."
+    }
+  ],
+  "s5": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The uterine curette is indicated for all EXCEPT:",
+      "options": [
+        "Evacuation in incomplete/missed abortion",
+        "Abnormal uterine bleeding",
+        "Delivery of a viable fetus",
+        "Removal of decidua"
+      ],
+      "correct": 2,
+      "explain": "The uterine curette (blunt or sharp) is used for evacuation of the uterus in incomplete/missed abortion and abnormal uterine bleeding, not for delivery of a viable fetus."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which forceps is used to hold the edges of the uterine incision during cesarean section?",
+      "options": [
+        "Ring forceps",
+        "Ovum forceps",
+        "Green Armytage forceps",
+        "Vulsellum"
+      ],
+      "correct": 2,
+      "explain": "Green Armytage forceps hold the edges of the uterine incision in cesarean section. Ring forceps have a lock and grasp the cervix during cerclage/curettage."
+    },
+    {
+      "q": "What distinguishes ovum forceps from ring forceps?",
+      "options": [
+        "Ovum forceps has a lock; ring forceps does not",
+        "Ring forceps has a lock; ovum forceps does not",
+        "Ovum forceps is used for CS",
+        "Ring forceps is longer"
+      ],
+      "correct": 1,
+      "explain": "Ring forceps has a lock while ovum forceps has no lock. Both are used to remove products of conception."
+    },
+    {
+      "q": "Vulsellum forceps are characterized by:",
+      "options": [
+        "Smooth grasping surface",
+        "Single or multiple teeth for grasping cervix",
+        "A lock and a long shank",
+        "Used mainly for suturing"
+      ],
+      "correct": 1,
+      "explain": "Vulsellum has single-toothed or multi-toothed tips for holding the cervix in different operations."
+    }
+  ],
+  "s7": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Sims vaginal speculum is used for:",
+      "options": [
+        "Cervical visualization and Pap smear",
+        "IUD removal",
+        "Vaginal operations and diagnosis of VVF",
+        "Cervical punch biopsy"
+      ],
+      "correct": 2,
+      "explain": "Sims speculum is used for vaginal operations and diagnosis of vesicovaginal fistula (VVF). Cusco (bivalve) speculum is used for cervical visualization, IUD removal, Pap smear, and punch biopsy."
+    },
+    {
+      "q": "Cusco speculum is used for all of the following EXCEPT:",
+      "options": [
+        "IUD removal",
+        "Pap smear",
+        "Cervical punch biopsy",
+        "Vaginal operations for VVF diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Cusco (bivalve) speculum is used for cervical visualization in vaginal procedures, IUD removal, Pap smear, and cervical punch biopsy. Sims speculum is used for vaginal operations and VVF diagnosis."
+    }
+  ],
+  "s8": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

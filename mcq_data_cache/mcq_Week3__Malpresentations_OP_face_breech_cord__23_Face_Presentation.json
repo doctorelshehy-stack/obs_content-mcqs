@@ -1,0 +1,401 @@
+{
+  "sec2": [
+    {
+      "q": "In face presentation, what is the presenting part?",
+      "options": [
+        "The occiput",
+        "The vertex",
+        "The chin (mentum)",
+        "The brow"
+      ],
+      "correct": 2,
+      "explain": "In face presentation, the head is hyperextended so that the occiput touches the fetal back and the chin (mentum) becomes the presenting part."
+    },
+    {
+      "q": "What is the denominator in face presentation?",
+      "options": [
+        "Occiput",
+        "Sacrum",
+        "Mentum (chin)",
+        "Frontal bone"
+      ],
+      "correct": 2,
+      "explain": "The denominator in face presentation is the mentum (chin), not the occiput."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    }
+  ],
+  "sec3": [
+    {
+      "q": "Which of the following is a cause specific to face presentation (not shared with OP position)?",
+      "options": [
+        "Prematurity",
+        "Android pelvis",
+        "Neck tumors",
+        "Polyhydramnios"
+      ],
+      "correct": 2,
+      "explain": "Neck tumors, cystic hygroma, and large fetal thyroid gland are specific causes of face presentation as they physically prevent head flexion by occupying space in the fetal neck."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "sec4": [
+    {
+      "q": "In mentoposterior position, the mentum is oriented toward the:",
+      "options": [
+        "Symphysis pubis",
+        "Sacrum",
+        "Left iliac fossa",
+        "Right iliac fossa"
+      ],
+      "correct": 1,
+      "explain": "In mentoposterior (MP) position, the mentum is oriented toward the posterior pelvis (sacrum). This is generally unfavorable and often requires cesarean section."
+    },
+    {
+      "q": "How many named positions does face presentation have?",
+      "options": [
+        "2 groups with 8 total variants",
+        "3 groups with 8 total variants",
+        "3 groups with 7 total variants",
+        "4 groups with 8 total variants"
+      ],
+      "correct": 1,
+      "explain": "Face presentation has 3 groups (Mentoanterior, Mentoposterior, Mentotransverse) with a total of 8 named positions (Direct MA, RMA, LMA, Direct MP, RMP, LMP, RMT, LMT)."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "sec5": [
+    {
+      "q": "Primary face presentation is present:",
+      "options": [
+        "Only during the second stage",
+        "During pregnancy",
+        "During labor only",
+        "After membrane rupture"
+      ],
+      "correct": 1,
+      "explain": "Primary face presentation is present during pregnancy, usually due to fetal causes. Secondary face presentation occurs during labor, commonly due to contracted pelvis or pendulous abdomen."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Classification is based on:",
+      "options": [
+        "Anatomical location",
+        "Severity of symptoms",
+        "Both anatomical and clinical criteria",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Most classifications combine anatomical and clinical parameters."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "sec6": [
+    {
+      "q": "On vaginal examination in face presentation, which structures are felt?",
+      "options": [
+        "Occiput and sagittal suture",
+        "Mouth, nose, orbital bones and chin",
+        "Frontal bone and anterior fontanelle",
+        "Sacrum and coccyx"
+      ],
+      "correct": 1,
+      "explain": "On PV examination in face presentation, the mouth, nose, orbital bones and chin are felt. The mouth and anus can be confused — the mouth and malar eminences form a triangle, while the ischial tuberosities and anus are in a straight line."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "sec7": [
+    {
+      "q": "What is the engaging diameter in face presentation (mentoanterior)?",
+      "options": [
+        "Occipito-frontal diameter (11.5 cm)",
+        "Submento-bregmatic diameter (9.5 cm)",
+        "Mento-vertical diameter (13.75 cm)",
+        "Biparietal diameter (9.5 cm)"
+      ],
+      "correct": 1,
+      "explain": "In mentoanterior position, the head engages by the submento-bregmatic diameter (9.5 cm). This is the favorable diameter that allows vaginal delivery."
+    },
+    {
+      "q": "In the absence of long anterior rotation in mentoposterior position, labor becomes:",
+      "options": [
+        "Accelerated",
+        "Obstructed",
+        "Precipitous",
+        "Unchanged"
+      ],
+      "correct": 1,
+      "explain": "In the absence of long anterior rotation, labor becomes obstructed and usually cesarean section is the only safe option."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "sec8": [
+    {
+      "q": "Which of the following is contraindicated in face presentation?",
+      "options": [
+        "Large episiotomy",
+        "Forceps extraction for mentoanterior",
+        "Vacuum extractor",
+        "Epidural analgesia"
+      ],
+      "correct": 2,
+      "explain": "Vacuum extractor is contraindicated in face presentation because the vacuum cup cannot be applied to a face (no scalp, no firm engagement surface)."
+    },
+    {
+      "q": "What should NOT be attempted in face presentation?",
+      "options": [
+        "Wait for spontaneous rotation",
+        "Convert face to vertex presentation",
+        "Epidural analgesia",
+        "Forceps in mentoanterior"
+      ],
+      "correct": 1,
+      "explain": "Do not try to convert face to vertex presentation. Internal version/manual conversion is contraindicated as it can cause uterine rupture, cord prolapse, and fetal trauma."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

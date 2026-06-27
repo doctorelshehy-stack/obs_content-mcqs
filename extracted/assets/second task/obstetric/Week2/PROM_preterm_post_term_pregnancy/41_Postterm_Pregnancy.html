@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Topic 41 — Postterm Pregnancy</title>
+<style>* { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; background:#0d1117; color:#e6edf3; line-height:1.6; }
+  .container { max-width:1100px; margin:0 auto; padding:20px; }
+  .hero { background:linear-gradient(135deg,#1a365d 0%,#2563eb 60%,#3b82f6 100%); border-radius:16px; padding:48px 40px; margin-bottom:24px; position:relative; overflow:hidden; }
+  .hero::after { content:''; position:absolute; top:-50%; right:-20%; width:400px; height:400px; background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%); border-radius:50%; }
+  .hero h1 { font-size:2.2em; font-weight:800; margin-bottom:8px; position:relative; z-index:1; }
+  .hero .chapter-tag { display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:8px; padding:4px 14px; font-size:.85em; margin-bottom:14px; position:relative; z-index:1; }
+  .hero .subtitle { font-size:1.02em; opacity:.88; position:relative; z-index:1; }
+  .toc { background:#161b22; border:1px solid #30363d; border-radius:12px; padding:24px 28px; margin-bottom:28px; }
+  .toc h2 { font-size:1.15em; margin-bottom:14px; color:#58a6ff; }
+  .toc-grid { columns:2; column-gap:36px; list-style:none; }
+  .toc-grid li { padding:5px 0; break-inside:avoid; }
+  .toc-grid a { color:#8b949e; text-decoration:none; font-size:.92em; transition:color .2s; }
+  .toc-grid a:hover { color:#58a6ff; }
+  .section { margin-bottom:28px; }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:16px; padding:10px 16px; background:linear-gradient(90deg,rgba(37,99,235,.12),transparent); border-left:4px solid #2563eb; border-radius:8px; }
+  .section-num { width:36px; height:36px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.95em; flex-shrink:0; }
+  .section-title { font-size:1.2em; font-weight:700; }
+  .card { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:18px 20px; margin-bottom:14px; }
+  .card-green  { border-left:4px solid #2ea043; background:rgba(46,160,67,.06); }
+  .card-red    { border-left:4px solid #f85149; background:rgba(248,81,73,.06); }
+  .card-pink   { border-left:4px solid #db61a2; background:rgba(219,97,162,.06); }
+  .card-cyan   { border-left:4px solid #39c5cf; background:rgba(57,197,207,.06); }
+  .card-orange { border-left:4px solid #d29922; background:rgba(210,153,34,.06); }
+  .card-purple { border-left:4px solid #a371f7; background:rgba(163,113,247,.06); }
+  .card-blue   { border-left:4px solid #58a6ff; background:rgba(88,166,255,.06); }
+  .card-title { font-weight:700; margin-bottom:8px; font-size:1.02em; }
+  .card ul { padding-left:20px; }
+  .card ul li { margin-bottom:5px; font-size:.93em; }
+  .card p { font-size:.93em; margin-bottom:6px; }
+  .card ol { padding-left:20px; }
+  .card ol li { margin-bottom:5px; font-size:.93em; }
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .callout { border-radius:8px; padding:12px 16px; margin:10px 0; font-size:.9em; }
+  .callout-danger  { background:rgba(248,81,73,.1); border-left:4px solid #f85149; }
+  .callout-pearl   { background:rgba(219,97,162,.1); border-left:4px solid #db61a2; }
+  .callout-anchor  { background:rgba(163,113,247,.1); border-left:4px solid #a371f7; }
+  .callout-warn    { background:rgba(210,153,34,.1); border-left:4px solid #d29922; }
+  .callout-note    { background:rgba(57,197,207,.1); border-left:4px solid #39c5cf; }
+  .pill { display:inline-block; border-radius:20px; padding:2px 10px; font-size:.75em; font-weight:700; margin-right:6px; vertical-align:middle; }
+  .pill-danger  { background:#f85149; color:#fff; }
+  .pill-pearl   { background:#db61a2; color:#fff; }
+  .pill-anchor  { background:#a371f7; color:#fff; }
+  .pill-warn    { background:#d29922; color:#000; }
+  .pill-note    { background:#39c5cf; color:#000; }
+  .pill-keydef  { background:#a371f7; color:#fff; }
+  details { background:#161b22; border:1px solid #30363d; border-radius:10px; margin-bottom:14px; }
+  details summary { padding:14px 18px; cursor:pointer; font-weight:700; font-size:1.02em; list-style:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details summary::before { content:'▶ '; font-size:.8em; }
+  details[open] summary::before { content:'▼ '; }
+  details.blue   { border-left:4px solid #58a6ff; }
+  details.green  { border-left:4px solid #2ea043; }
+  details.purple { border-left:4px solid #a371f7; }
+  details .inner { padding:14px 18px; font-size:.92em; }
+  .footer { text-align:center; padding:24px 0 8px; font-size:.8em; color:#484f58; border-top:1px solid #21262d; margin-top:28px; }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="container">
+<!-- HERO -->
+<div class="hero">
+<div class="chapter-tag">Chapter 41</div>
+<h1>Postterm Pregnancy</h1>
+<p class="subtitle">Definition · Causes · Diagnosis (Antenatal &amp; Postnatal) · Complications · Management</p>
+</div>
+<!-- TOC -->
+<div class="toc">
+<h2>Table of Contents</h2>
+<ol class="toc-grid">
+<li><a href="#s1">ILOs of This Chapter</a></li>
+<li><a href="#s2">Definition</a></li>
+<li><a href="#s3">Causes</a></li>
+<li><a href="#s4">Diagnosis — Antenatal</a></li>
+<li><a href="#s5">Diagnosis — Postnatal</a></li>
+<li><a href="#s6">Complications</a></li>
+<li><a href="#s7">Management</a></li>
+<li><a href="#s8">Student Activity · Questions · References</a></li>
+</ol>
+</div>
+<!-- §1 ILOs -->
+<div class="section" id="s1">
+<div class="section-head">
+<div class="section-num">1</div>
+<div class="section-title">ILOs of This Chapter</div>
+</div>
+<div class="card card-cyan">
+<ul>
+<li>To understand the definition of post term pregnancy</li>
+<li>To be able to explain the etiology of this obstetrical condition</li>
+<li>To be able to describe the clinical picture and management of this obstetrical situation</li>
+</ul>
+</div>
+</div>
+<!-- §2 DEFINITION -->
+<div class="section" id="s2">
+<div class="section-head">
+<div class="section-num">2</div>
+<div class="section-title">Definition</div>
+</div>
+<div class="card card-purple">
+<p><span class="pill pill-keydef">KEY DEFINITION</span> A pregnancy continuing <strong>beyond 42 weeks</strong>. Pregnancy between 41 to 42 weeks is called <strong>prolonged pregnancy</strong>.</p>
+</div>
+<div class="callout callout-anchor">
+<span class="pill pill-anchor">MEMORY ANCHOR</span> <strong>41–42 = Prolonged</strong> · <strong>&gt; 42 = Postterm</strong>. Do not confuse the two — management differs. Prolonged pregnancy is monitored; postterm pregnancy requires intervention.
+  </div>
+</div>
+<!-- §3 CAUSES -->
+<div class="section" id="s3">
+<div class="section-head">
+<div class="section-num">3</div>
+<div class="section-title">Causes</div>
+</div>
+<div class="card card-orange">
+<div class="card-title">Most Common Cause</div>
+<p>Most common cause of post term pregnancy is <strong>wrong date</strong> so a careful review of menstrual history is important in all such cases.</p>
+</div>
+<div class="grid-2">
+<div class="card card-cyan">
+<div class="card-title">Maternal Factors</div>
+<ul>
+<li>Primipara.</li>
+<li>History of previous prolonged pregnancy.</li>
+<li>Sedentary life.</li>
+</ul>
+</div>
+<div class="card card-red">
+<div class="card-title">Fetal Factors</div>
+<ul>
+<li>Anencephaly.</li>
+<li>Adrenal hypoplasia (diminished fetal cortisol response).</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-pearl">
+<span class="pill pill-pearl">CLINICAL PEARL</span> Anencephaly causes postterm pregnancy because the fetal hypothalamic-pituitary-adrenal axis is disrupted — without fetal cortisol, labor is not initiated. This is why dating must be confirmed before diagnosing postterm pregnancy.
+  </div>
+</div>
+<!-- §4 DIAGNOSIS — ANTENATAL -->
+<div class="section" id="s4">
+<div class="section-head">
+<div class="section-num">4</div>
+<div class="section-title">Diagnosis — Antenatal</div>
+</div>
+<div class="card card-green">
+<div class="card-title">(A) Antenatal</div>
+<ul>
+<li><strong>History:</strong> calculation of gestational age.</li>
+<li><strong>Examination:</strong> larger baby size.</li>
+<li><strong>Ultrasonography:</strong>
+<ul>
+<li>Biparietal diameter more than 9.6 cm.</li>
+<li>Increased fetal weight.</li>
+<li>Oligohydramnios.</li>
+<li>Increased placental calcification.</li>
+<li>Doppler to diagnose placental insufficiency.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="callout callout-warn">
+<span class="pill pill-warn">WARN</span> Increased placental calcification on US is a hallmark of placental aging — it reflects the pathophysiology of postterm pregnancy where the placenta becomes insufficient.
+  </div>
+<div class="callout callout-danger">
+<span class="pill pill-danger">DANGER</span> Oligohydramnios + placental insufficiency in a postterm pregnancy = high risk for cord compression, fetal hypoxia, and meconium aspiration. Delivery should not be delayed.
+  </div>
+</div>
+<!-- §5 DIAGNOSIS — POSTNATAL -->
+<div class="section" id="s5">
+<div class="section-head">
+<div class="section-num">5</div>
+<div class="section-title">Diagnosis — Postnatal</div>
+</div>
+<div class="card card-cyan">
+<div class="card-title">(B) Postnatal</div>
+<ul>
+<li><strong>Baby length:</strong> more than 54 cm.</li>
+<li><strong>Baby weight:</strong> more than 4.5 kg.</li>
+<li><strong>Skull:</strong> well ossified with smaller fontanelles.</li>
+<li><strong>Finger nails:</strong> project beyond finger tips.</li>
+</ul>
+</div>
+<div class="callout callout-anchor">
+<span class="pill pill-anchor">MEMORY ANCHOR</span> Postterm postnatal signs: <strong>L-W-S-F</strong>: <strong>L</strong>ength &gt; 54 cm · <strong>W</strong>eight &gt; 4.5 kg · <strong>S</strong>kull well ossified / small fontanelles · <strong>F</strong>inger nails beyond tips.
+  </div>
+</div>
+<!-- §6 COMPLICATIONS -->
+<div class="section" id="s6">
+<div class="section-head">
+<div class="section-num">6</div>
+<div class="section-title">Complications</div>
+</div>
+<div class="card card-red">
+<div class="card-title">Postterm Complications</div>
+<ul>
+<li>Aging of placenta lead to <strong>placental insufficiency, fetal hypoxia, acidosis, and stillbirth</strong>.</li>
+<li><strong>Oligohydramnios</strong> leading to cord compression and meconium aspiration.</li>
+<li><strong>Fetal macrosomia</strong> leading to shoulder dystocia, increase the chances of birth trauma (intracranial hemorrhage) and increase the chances of operative delivery.</li>
+<li><strong>Postpartum hge and infection.</strong></li>
+<li><strong>Increased operative delivery.</strong></li>
+</ul>
+</div>
+<div class="callout callout-danger">
+<span class="pill pill-danger">DANGER</span> The cascade of postterm complications: placental aging → hypoxia → acidosis → stillbirth. Each day past 42 weeks increases this risk — this is why timely delivery is essential.
+  </div>
+<div class="callout callout-warn">
+<span class="pill pill-warn">WARN</span> "Postpartum hge" — source abbreviation for "hemorrhage". Macrosomic postterm babies (&gt; 4.5 kg) carry high risk of shoulder dystocia and birth trauma.
+  </div>
+</div>
+<!-- §7 MANAGEMENT -->
+<div class="section" id="s7">
+<div class="section-head">
+<div class="section-num">7</div>
+<div class="section-title">Management</div>
+</div>
+<div class="card card-green">
+<div class="card-title">Termination of Pregnancy</div>
+<p>Termination of pregnancy.</p>
+</div>
+<div class="callout callout-note">
+<span class="pill pill-note">NOTE</span> The source is brief: management of postterm pregnancy is termination of pregnancy — induction of labor or cesarean section depending on cervical readiness and fetal status.
+  </div>
+</div>
+<!-- §8 STUDENT ACTIVITY · QUESTIONS · REFERENCES -->
+<div class="section" id="s8">
+<div class="section-head">
+<div class="section-num">8</div>
+<div class="section-title">Student Activity · Questions · References</div>
+</div>
+<details class="blue">
+<summary>Student Activity</summary>
+<div class="inner">
+<p>Each student is requested to calculate the EDD for two or three admitted pregnant women in labor in order to determine whether they are post-term or not.</p>
+</div>
+</details>
+<details class="green">
+<summary>Self-Assessment Questions</summary>
+<div class="inner">
+<p><a href="https://forms.gle/B6gE4sxqWZB17fBz5" style="color:#2ea043;" target="_blank">https://forms.gle/B6gE4sxqWZB17fBz5</a></p>
+<p style="font-size:.85em;color:#8b949e;margin-top:6px;">Google Form code: B6gE4sxqWZB17fBz5</p>
+</div>
+</details>
+<details class="purple">
+<summary>References &amp; Source-Text Preservation Notes</summary>
+<div class="inner">
+<p><strong>Source Material:</strong> Book Obstetrics 2025-2026, Chapter 41 (Postterm Pregnancy), pages 218–219.</p>
+<p><strong>Source Visuals:</strong> None — text-only chapter; verified by <code>pdfimages -list</code> returning empty.</p>
+<p><strong>External Visuals:</strong> None.</p>
+<hr style="border-color:#30363d;margin:10px 0;"/>
+<p style="font-weight:700;">Source-Text Preservation Notes:</p>
+<ol style="font-size:.88em; padding-left:20px;">
+<li>ILO "To understand the definition of post term pregnancy" — verbatim.</li>
+<li>ILO "To be able to explain the etiology of this obstetrical condition" — verbatim.</li>
+<li>ILO "To be able to describe the clinical picture and management of this obstetrical situation" — verbatim.</li>
+<li>"A pregnancy continuing beyond 42 weeks" — verbatim.</li>
+<li>"Pregnancy between 41 to 42 weeks is called prolonged pregnancy" — verbatim.</li>
+<li>"Most common cause of post term pregnancy is wrong date" — verbatim.</li>
+<li>"careful review of menstrual history is important" — verbatim.</li>
+<li>"Maternal factors: primipara, history of previous prolonged pregnancy and sedentary life" — verbatim.</li>
+<li>"Fetal factors: anencephaly, adrenal hypoplasia (diminished fetal cortisol response)" — verbatim.</li>
+<li>"Biparietal diameter more than 9.6 cm" — verbatim.</li>
+<li>"Increased fetal weight" — verbatim.</li>
+<li>"Oligohydramnios" — verbatim.</li>
+<li>"Increased placental calcification" — verbatim.</li>
+<li>"Doppler to diagnose placental insufficiency" — verbatim.</li>
+<li>"Baby length: more than 54 cm" — verbatim.</li>
+<li>"Baby weight: more than 4.5 kg" — verbatim.</li>
+<li>"Skull: well ossified with smaller fontanelles" — verbatim.</li>
+<li>"Finger nails: project beyond finger tips" — verbatim.</li>
+<li>"Aging of placenta lead to placental insufficiency, fetal hypoxia, acidosis, and stillbirth" — verbatim.</li>
+<li>"Oligohydramnios leading to cord compression and meconium aspiration" — verbatim.</li>
+<li>"Fetal macrosomia leading to shoulder dystocia, increase the chances of birth trauma (intracranial hemorrhage) and increase the chances of operative delivery" — verbatim.</li>
+<li>"Postpartum hge and infection" — verbatim (source abbreviation preserved).</li>
+<li>"Increased operative delivery" — verbatim.</li>
+<li>"Termination of pregnancy" — verbatim.</li>
+<li>Student activity text — verbatim from source.</li>
+<li>Google Form URL https://forms.gle/B6gE4sxqWZB17fBz5 — preserved verbatim.</li>
+</ol>
+</div>
+</details>
+</div>
+<!-- FOOTER -->
+<div class="footer">
+<p>Topic 41 — Postterm Pregnancy · Source: Book Obstetrics 2025-2026, pp. 218–219 · Generated by Hermes Agent</p>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

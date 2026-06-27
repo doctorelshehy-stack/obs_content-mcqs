@@ -1,0 +1,686 @@
+{
+  "s3": [
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Cesarean section is defined as:",
+      "options": [
+        "Delivery of fetus through vaginal route with instruments",
+        "Delivery of a viable fetus through an abdominal and uterine incision",
+        "Removal of the uterus through an abdominal incision",
+        "Incision of the perineum to facilitate delivery"
+      ],
+      "correct": 1,
+      "explain": "CS is delivery of a viable fetus through an abdominal and uterine incision. It is the most common major operation performed globally."
+    },
+    {
+      "q": "The incidence of cesarean section in Egypt approaches approximately:",
+      "options": [
+        "30%",
+        "50%",
+        "70%",
+        "90%"
+      ],
+      "correct": 2,
+      "explain": "Egypt has a CS rate approaching 70%, more than double the global average of about 30%."
+    }
+  ],
+  "s4": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is an absolute indication for cesarean section?",
+      "options": [
+        "Previous CS",
+        "Breech presentation",
+        "Major degree of placenta previa",
+        "Prolonged labor"
+      ],
+      "correct": 2,
+      "explain": "Absolute indications: extreme pelvic contraction, soft tissue obstruction, gross fetal anomalies, and major degree of placenta previa."
+    },
+    {
+      "q": "The four major indications for CS accounting for >70% of operations include all EXCEPT:",
+      "options": [
+        "Previous C-section",
+        "Dystocia",
+        "Malpresentation",
+        "Maternal request"
+      ],
+      "correct": 3,
+      "explain": "The four major indications are: 1) Previous C-section, 2) Dystocia, 3) Malpresentation, 4) Suspected acute fetal compromise."
+    },
+    {
+      "q": "A contraindication to cesarean section is:",
+      "options": [
+        "Placenta previa",
+        "Cephalopelvic disproportion",
+        "Dead fetus",
+        "Cord prolapse"
+      ],
+      "correct": 2,
+      "explain": "Contraindications to CS include dead fetus and gross anomalies of the fetus (though these may be relative depending on context)."
+    }
+  ],
+  "s5": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The most commonly used skin incision for lower segment CS is:",
+      "options": [
+        "Midline subumbilical",
+        "Paramedian",
+        "Pfannenstiel incision",
+        "Joel Cohen incision"
+      ],
+      "correct": 2,
+      "explain": "Pfannenstiel incision (transverse suprapubic) is the most commonly used skin incision for lower segment CS. The uterine incision is closed in 2 layers."
+    },
+    {
+      "q": "During lower segment CS, if the head is impacted in the pelvis, which forceps may be used for extraction?",
+      "options": [
+        "Kielland's forceps",
+        "Piper forceps",
+        "Wrigley's forceps",
+        "Simpson forceps"
+      ],
+      "correct": 2,
+      "explain": "If the head is impacted in the pelvis, it may be extracted by Wrigley's forceps through the uterine incision, or an assistant pushes the head upward by a hand in the vagina."
+    }
+  ],
+  "s6": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Upper segment (classical) CS is indicated in which situation?",
+      "options": [
+        "Routine repeat CS",
+        "Placenta previa and accreta",
+        "Normal singleton vertex presentation",
+        "Premature labor"
+      ],
+      "correct": 1,
+      "explain": "Indications for upper segment CS include placenta previa and accreta, extensive adhesions, large lower-segment fibroid, repaired fistulas, neglected shoulder presentation, planned hysterectomy, rapid delivery, and contraction ring."
+    },
+    {
+      "q": "The uterine incision in upper segment CS is closed in how many layers?",
+      "options": [
+        "1 layer",
+        "2 layers",
+        "3 layers",
+        "4 layers"
+      ],
+      "correct": 2,
+      "explain": "The uterine incision in upper segment CS is closed in 3 layers: deep muscle, main bulk of muscle, and superficial muscle + peritoneum. Lower segment CS is closed in 2 layers."
+    }
+  ],
+  "s7": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s8": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "A potential maternal complication includes:",
+      "options": [
+        "Hemorrhage",
+        "Infection",
+        "Thromboembolism",
+        "All of the above are possible"
+      ],
+      "correct": 3,
+      "explain": "Obstetric conditions can lead to hemorrhage, infection, thromboembolism, and other complications."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a complication of cesarean section?",
+      "options": [
+        "Postpartum hemorrhage due to uterine artery injury",
+        "Increased fetal lung maturity",
+        "Reduced risk of placenta previa",
+        "Improved fertility"
+      ],
+      "correct": 0,
+      "explain": "Complications include hemorrhage (mainly from uterine artery injury), bladder injury, anesthesia complications, shock, infection, paralytic ileus, thrombosis, adhesions, and scar rupture in subsequent pregnancies."
+    },
+    {
+      "q": "Vaginal birth after CS (VBAC) is allowed ONLY for women who have had:",
+      "options": [
+        "Upper segment CS",
+        "Lower segment CS",
+        "Classical CS",
+        "Any previous CS"
+      ],
+      "correct": 1,
+      "explain": "VBAC is only allowed for lower segment CS. No vaginal delivery trial is allowed for upper segment CS due to higher risk of uterine rupture (4% or more)."
+    }
+  ],
+  "s9": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Cesarean hysterectomy is indicated for all EXCEPT:",
+      "options": [
+        "Uncontrolled PPH",
+        "Placenta accreta",
+        "Desire for future pregnancy",
+        "Operable carcinoma of cervix"
+      ],
+      "correct": 2,
+      "explain": "Indications include uncontrolled PPH, concealed accidental hemorrhage, operable cervical carcinoma, placenta accreta, multiple fibroids in older patients. Postmortem CS is emergency CS within 10 minutes of maternal death."
+    }
+  ],
+  "s10": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "During D&C, the cervix is gradually dilated up to which Hegar size?",
+      "options": [
+        "Hegar 6",
+        "Hegar 8",
+        "Hegar 10 or more",
+        "Hegar 12"
+      ],
+      "correct": 2,
+      "explain": "During D&C, gradual dilatation of the cervix up to Hegar's 10 or more is performed before introducing the ovum forceps."
+    }
+  ],
+  "s11": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Kielland's forceps are specifically used for:",
+      "options": [
+        "After-coming head in breech",
+        "Deep transverse arrest of the fetal head",
+        "Routine outlet forceps",
+        "Preterm delivery"
+      ],
+      "correct": 1,
+      "explain": "Kielland's forceps have a minimal pelvic curve and sliding pivot, used for rotation in deep transverse arrest. Piper forceps are for after-coming head in breech."
+    },
+    {
+      "q": "Which condition must be fulfilled before forceps application?",
+      "options": [
+        "Partially dilated cervix",
+        "Intact membranes",
+        "Fully dilated cervix and engaged head",
+        "Empty pelvis"
+      ],
+      "correct": 2,
+      "explain": "Conditions include: anesthesia, adequate pelvic outlet, asepsis, empty bladder/bowel, uterine contractions, fully dilated cervix, engaged head in favorable position, and ruptured membranes."
+    }
+  ],
+  "s12": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which is a contraindication to vacuum extraction?",
+      "options": [
+        "Prolonged second stage",
+        "Fetal distress",
+        "Non-vertex presentation",
+        "Maternal exhaustion"
+      ],
+      "correct": 2,
+      "explain": "Contraindications include severe CPD, non-vertex presentation, premature fetus, and intact membranes. Fetal complications include cephalohematoma, scalp laceration, and rarely intracranial hemorrhage."
+    }
+  ],
+  "s13": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The mediolateral episiotomy:",
+      "options": [
+        "Is easier to repair than median",
+        "Has less risk of extension to anal sphincter",
+        "Is performed in midline",
+        "Requires less skill to repair"
+      ],
+      "correct": 1,
+      "explain": "Mediolateral episiotomy requires more skill for repair but carries a lower risk of unintended extension to the anal sphincter compared to median episiotomy."
+    }
+  ],
+  "s14": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ]
+}

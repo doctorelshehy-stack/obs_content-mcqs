@@ -1,0 +1,344 @@
+{
+  "s2": [
+    {
+      "q": "Birth trauma is caused by:",
+      "options": [
+        "Only maternal factors",
+        "Marked compression or sudden compression-decompression during delivery, including iatrogenic causes",
+        "Only fetal factors",
+        "Always due to congenital anomalies"
+      ],
+      "correct": 1,
+      "explain": "Birth trauma arises from the 3 P's (Passages, Passenger, Power) plus iatrogenic causes (instrumental delivery, intrauterine manipulation)."
+    },
+    {
+      "q": "Which of the following is an iatrogenic cause of birth trauma?",
+      "options": [
+        "Contracted pelvis",
+        "Fetal macrosomia",
+        "Forceps or ventouse delivery",
+        "Precipitate labor"
+      ],
+      "correct": 2,
+      "explain": "Iatrogenic: instrumental delivery (ventouse, forceps) and intrauterine manipulation (internal podalic version, breech extraction)."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "The most frequent birth fracture is of the:",
+      "options": [
+        "Skull",
+        "Humerus",
+        "Clavicle",
+        "Femur"
+      ],
+      "correct": 2,
+      "explain": "Hierarchy of frequency: 1. Clavicle, 2. Humerus, 3. Femur, 4. Skull bones. Clavicular fractures are best treated conservatively."
+    },
+    {
+      "q": "Skull fractures in the newborn are considered more serious because:",
+      "options": [
+        "They never heal",
+        "There is a possibility of underlying hemorrhage",
+        "Surgery is always required",
+        "They always cause neurological deficits"
+      ],
+      "correct": 1,
+      "explain": "Skull fractures: possibility of underlying hemorrhage must be considered. The majority of neonatal fractures heal with conservative treatment."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The most common type is:",
+      "options": [
+        "Type 1 — mild form",
+        "Type 2 — moderate form",
+        "Type 3 — severe form",
+        "Depends on the specific condition and classification system"
+      ],
+      "correct": 3,
+      "explain": "Classification varies by condition — each has its own typing system."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Cephalohematoma results from:",
+      "options": [
+        "Edema of the scalp present at birth",
+        "Bleeding between the periosteum and skull bone",
+        "Bleeding within the brain tissue",
+        "Fracture of the skull base"
+      ],
+      "correct": 1,
+      "explain": "Cephalohematoma = bleeding between the periosteum and skull bone, taking the shape of the underlying bone. Develops hours/days after birth."
+    },
+    {
+      "q": "Which is a key distinguishing feature of cephalohematoma compared to caput succedaneum?",
+      "options": [
+        "Present at birth",
+        "Crosses suture lines",
+        "Develops hours or days after birth",
+        "Is always pathological and requires drainage"
+      ],
+      "correct": 2,
+      "explain": "Cephalohematoma develops hours-days after birth (vs present at birth for caput), does NOT cross suture lines (caput does), and is usually benign."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Classification is based on:",
+      "options": [
+        "Anatomical location",
+        "Severity of symptoms",
+        "Both anatomical and clinical criteria",
+        "None of the above"
+      ],
+      "correct": 2,
+      "explain": "Most classifications combine anatomical and clinical parameters."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Erb-Duchenne palsy is caused by injury to nerve roots:",
+      "options": [
+        "C5-C6",
+        "C7-C8",
+        "C8-T1",
+        "L3-L4"
+      ],
+      "correct": 0,
+      "explain": "Erb-Duchenne palsy = C5-C6 (upper trunk). Klumpke's palsy = C8-T1 (lower trunk). Total arm paralysis = C5-T1."
+    },
+    {
+      "q": "Klumpke's palsy affects which nerve roots?",
+      "options": [
+        "C5-C6",
+        "C5-C6-C7",
+        "C8-T1",
+        "C5-T1"
+      ],
+      "correct": 2,
+      "explain": "Klumpke's palsy = C8-T1 (lower trunk), affecting hand and forearm muscles. Erb-Duchenne = C5-C6."
+    },
+    {
+      "q": "The prognosis for most brachial plexus injuries at birth is:",
+      "options": [
+        "Poor — most require surgery",
+        "Usually good — most recover spontaneously",
+        "Always fatal",
+        "Requires lifelong physiotherapy without improvement"
+      ],
+      "correct": 1,
+      "explain": "Most neonatal brachial plexus injuries recover spontaneously with conservative management (physiotherapy). Surgery is reserved for persistent cases."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Sternomastoid tumor is associated with:",
+      "options": [
+        "Forceps delivery",
+        "Difficult delivery, especially with hyperextension of the neck or breech extraction",
+        "Vacuum delivery",
+        "Normal spontaneous vaginal delivery"
+      ],
+      "correct": 1,
+      "explain": "Sternomastoid tumor results from difficult delivery with neck hyperextension or breech extraction, causing hematoma in the sternomastoid muscle."
+    },
+    {
+      "q": "Treatment of sternomastoid tumor is:",
+      "options": [
+        "Surgical excision",
+        "Radiotherapy",
+        "Passive stretching exercises and physiotherapy",
+        "No treatment required"
+      ],
+      "correct": 2,
+      "explain": "Conservative: passive stretching exercises and physiotherapy. Most resolve spontaneously. Surgery only if persistent after 1 year."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Facial lacerations from birth trauma:",
+      "options": [
+        "Always require plastic surgery",
+        "Usually heal well with conservative measures including cleansing and steri-strips",
+        "Never occur in modern obstetrics",
+        "Are always due to ventouse cup detachment"
+      ],
+      "correct": 1,
+      "explain": "Most facial/soft tissue lacerations heal well with conservative management: cleansing, steri-strips, and observation."
+    },
+    {
+      "q": "Scalp lacerations from fetal scalp electrodes or ventouse application:",
+      "options": [
+        "Require immediate suturing",
+        "Usually heal well with local cleansing and monitoring for infection",
+        "Always indicate underlying skull fracture",
+        "Should be explored surgically"
+      ],
+      "correct": 1,
+      "explain": "Scalp lacerations typically heal well with local cleansing and infection monitoring. The main concern is infection (cellulitis, abscess)."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

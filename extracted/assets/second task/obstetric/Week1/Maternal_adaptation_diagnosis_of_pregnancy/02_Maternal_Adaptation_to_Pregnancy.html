@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>02 - Maternal Adaptation to Pregnancy | Infographic</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+    color: #1f2a37;
+    background: #f5f7fa;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: #1e6091; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 36px 64px;
+    background: #ffffff;
+  }
+
+  .topic-header {
+    background: linear-gradient(135deg, #0f3a5f 0%, #1e6091 60%, #2a8fb5 100%);
+    color: #ffffff;
+    padding: 28px 32px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+  }
+  .topic-header .eyebrow {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #cfe6f3; font-weight: 600; margin-bottom: 8px;
+  }
+  .topic-header h1 { margin: 0 0 10px; font-size: 32px; line-height: 1.2; font-weight: 700; }
+  .topic-header .meta { font-size: 13px; color: #d4e6f1; }
+  .topic-header .meta span { margin-right: 18px; }
+
+  .section {
+    margin-bottom: 32px; padding: 24px 28px;
+    background: #fafbfc; border-left: 6px solid #1e6091; border-radius: 10px;
+  }
+  .section h2 { margin: 0 0 16px; font-size: 22px; color: #0f3a5f; border-bottom: 2px solid #d4e2ec; padding-bottom: 8px; }
+  .section h3 { margin: 18px 0 8px; font-size: 17px; color: #1e6091; }
+  .section h4 { margin: 14px 0 6px; font-size: 15px; color: #2a8fb5; }
+  .section p { margin: 8px 0; }
+
+  ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+  ul li, ol li { margin: 4px 0; }
+  ul.il-list { list-style: none; padding-left: 0; }
+  ul.il-list > li { position: relative; padding-left: 22px; margin: 6px 0; }
+  ul.il-list > li::before { content: "♦"; color: #1e6091; position: absolute; left: 0; top: 0; font-size: 14px; }
+  ul.bullet-list { list-style: none; padding-left: 0; }
+  ul.bullet-list > li { position: relative; padding-left: 20px; margin: 5px 0; }
+  ul.bullet-list > li::before { content: "•"; color: #2a8fb5; position: absolute; left: 6px; top: 0; font-size: 18px; line-height: 1; }
+  ul.dash-list { list-style: none; padding-left: 0; }
+  ul.dash-list > li { position: relative; padding-left: 22px; margin: 5px 0; }
+  ul.dash-list > li::before { content: "—"; color: #1e6091; position: absolute; left: 0; top: 0; font-weight: 600; }
+  ul.dash-sub { list-style: none; padding-left: 18px; margin-top: 4px; }
+  ul.dash-sub > li { position: relative; padding-left: 18px; margin: 4px 0; }
+  ul.dash-sub > li::before { content: "•"; color: #6b8aa3; position: absolute; left: 4px; top: 0; font-size: 14px; }
+
+  .card {
+    border-radius: 10px; padding: 14px; margin: 14px 0;
+    background: #ffffff; border: 2px solid;
+  }
+  .card .card-header {
+    display: inline-block; font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 700; padding: 4px 10px;
+    border-radius: 4px; margin-bottom: 10px;
+  }
+  .card .card-img-wrap { display: flex; justify-content: center; align-items: center; background: #ffffff; padding: 8px; border-radius: 6px; }
+  .card .card-img-wrap img { max-width: 100%; max-height: 360px; width: auto; height: auto; object-fit: contain; }
+  .card .card-caption { margin-top: 10px; font-size: 14px; font-weight: 600; color: #1f2a37; }
+  .card .card-source { margin-top: 4px; font-size: 12px; color: #4b5563; }
+
+  .card.source-image { background: #eaf6ec; border-color: #2e7d32; }
+  .card.source-image .card-header { background: #2e7d32; color: #ffffff; }
+  .card.source-image .card-source { color: #1b5e20; }
+
+  .card.external-image { background: #fdecea; border-color: #c62828; }
+  .card.external-image .card-header { background: #c62828; color: #ffffff; }
+  .card.external-image .card-source { color: #b71c1c; }
+
+  .callout {
+    border-left: 4px solid; padding: 12px 16px; margin: 14px 0;
+    border-radius: 6px; background: #ffffff;
+  }
+  .callout-note { border-color: #1e6091; background: #eef5fa; }
+  .callout-warn { border-color: #c62828; background: #fdecea; }
+  .callout-pearl { border-color: #2e7d32; background: #eaf6ec; }
+  .callout-title {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+    font-weight: 700; margin-bottom: 4px;
+  }
+  .callout-note .callout-title { color: #0f3a5f; }
+  .callout-warn .callout-title { color: #b71c1c; }
+  .callout-pearl .callout-title { color: #1b5e20; }
+
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: #ffffff; }
+  th, td { border: 1px solid #d4e2ec; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #1e6091; color: #ffffff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f5f8fb; }
+
+  .references {
+    background: #f0f3f7; border-radius: 10px; padding: 20px 24px;
+    margin-top: 32px; border: 1px solid #d4e2ec;
+  }
+  .references h2 { margin: 0 0 10px; font-size: 18px; color: #0f3a5f; }
+  .references ul { margin: 4px 0 0 18px; padding: 0; }
+  .references li { font-size: 13px; margin: 3px 0; color: #374151; }
+
+  .footer-note {
+    margin-top: 28px; padding-top: 16px; border-top: 1px solid #d4e2ec;
+    font-size: 12px; color: #6b7280; text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 18px 16px 32px; }
+    .topic-header { padding: 18px 20px; }
+    .topic-header h1 { font-size: 24px; }
+    .section { padding: 16px 18px; }
+    .section h2 { font-size: 18px; }
+  }
+
+  @media print {
+    body { background: #ffffff; }
+    .page { box-shadow: none; padding: 18px; max-width: none; }
+    .section { break-inside: avoid; }
+    .card { break-inside: avoid; }
+  }
+
+/* ====== Table of Contents (matches 05_Abortion.html premium design) ====== */
+.toc{
+  background:#FFFFFF;
+  border:1px solid #E5E7EB;
+  border-radius:12px;
+  padding:22px 28px 24px;
+  margin-bottom:28px;
+  box-shadow:0 1px 2px rgba(15,23,42,.04);
+}
+.toc-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  padding-bottom:14px;border-bottom:1px solid #E5E7EB;
+}
+.toc-head .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:#EFF6FF;color:#3B82F6;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.toc-head h2{margin:0;font-size:15px;font-weight:700;color:#0F172A;letter-spacing:.005em}
+.toc-head .count{margin-left:auto;font-size:12.5px;color:#64748B;font-weight:500}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  columns:2;column-gap:36px;
+  font-size:14px;
+}
+.toc-list li{margin:6px 0;break-inside:avoid}
+.toc-list a{
+  display:flex;align-items:center;gap:10px;
+  color:#334155;text-decoration:none;
+  padding:5px 0;border-bottom:1px dashed transparent;
+  transition:color .15s ease, border-color .15s ease;
+}
+.toc-list a:hover{color:#3B82F6;border-bottom-color:#60A5FA}
+.toc-list .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:6px;
+  background:#F8FAFC;color:#64748B;
+  font-size:11.5px;font-weight:700;flex-shrink:0;
+}
+@media (max-width:900px){
+  .toc-list{columns:1}
+}
+/* ====== End Table of Contents ====== */
+
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+<style>/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+}
+details.study-section > summary {
+    cursor: pointer;
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.05em;
+    color: #1e293b;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    list-style: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+    display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+    list-style: none;
+}
+details.study-section > summary::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.75em;
+    color: #64748b;
+    transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+    transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+    padding: 0;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */</style></head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<header class="topic-header">
+<div class="eyebrow">Topic 02 · Obstetrics</div>
+<h1>Maternal Adaptation to Pregnancy</h1>
+<div class="meta">
+<span>📚 Source: Book Obstetrics 2025-2026, Ch. 2</span>
+<span>📄 6 pages</span>
+<span>🏥 Medical / Educational Infographic</span>
+</div>
+</header>
+<nav class="toc">
+<div class="toc-head">
+<span class="ico">🗂</span>
+<h2>Table of Contents</h2>
+<span class="count">14 sections</span>
+</div>
+<ol class="toc-list">
+<li><a href="#intended-learning-objectives-ilos"><span class="n">1</span>Intended Learning Objectives (ILOs)</a></li>
+<li><a href="#1-genital-changes"><span class="n">2</span>1. Genital Changes</a></li>
+<li><a href="#2-hematological-changes"><span class="n">3</span>2. Hematological Changes</a></li>
+<li><a href="#3-cardiovascular-system"><span class="n">4</span>3. Cardiovascular System</a></li>
+<li><a href="#4-respiratory-system"><span class="n">5</span>4. Respiratory System</a></li>
+<li><a href="#5-urinary-system"><span class="n">6</span>5. Urinary System</a></li>
+<li><a href="#6-gastrointestinal-tract"><span class="n">7</span>6. Gastrointestinal Tract</a></li>
+<li><a href="#7-metabolic-changes"><span class="n">8</span>7. Metabolic Changes</a></li>
+<li><a href="#8-musculoskeletal-changes"><span class="n">9</span>8. Musculoskeletal Changes</a></li>
+<li><a href="#9-endocrine-changes"><span class="n">10</span>9. Endocrine Changes</a></li>
+<li><a href="#10-skin-changes"><span class="n">11</span>10. Skin Changes</a></li>
+<li><a href="#11-breast-changes"><span class="n">12</span>11. Breast Changes</a></li>
+<li><a href="#12-student-activity"><span class="n">13</span>12. Student Activity</a></li>
+<li><a href="#13-questions"><span class="n">14</span>13. Questions</a></li>
+</ol>
+</nav>
+<!-- ILOs -->
+<section class="section" id="intended-learning-objectives-ilos">
+<h2>Intended Learning Objectives (ILOs)</h2>
+<p>At the end of this chapter, the student should be able to:</p>
+<ul class="il-list">
+<li>Understand the genital and other maternal organs changes during pregnancy to help body adaptation to this important event of woman life.</li>
+<li>Describe the hematological, metabolic and endocrinal changes of pregnancy.</li>
+</ul>
+</section>
+<!-- 1. Genital changes -->
+<section class="section" id="1-genital-changes">
+<h2>1. Genital Changes</h2>
+<h3>I. Whole Uterus</h3>
+<ul class="bullet-list">
+<li><strong>Position:</strong> Dextrorotation.</li>
+<li><strong>Size:</strong> 2.5 × 5 × 7.5 cm (non-pregnant) → 20 × 25 × 35 cm at term.</li>
+<li><strong>Shape:</strong> Pyriform (non-pregnant) → Globular at 8 weeks → Pyriform at 16 weeks till term.</li>
+<li><strong>Weight:</strong> 50 g (non-pregnant) → 1000 g at term.</li>
+<li><strong>Volume:</strong> 10 mL (non-pregnant) → 5000 mL at term.</li>
+<li><strong>Consistency:</strong> softer due to increased vascularity and presence of amniotic fluid.</li>
+<li><strong>Contractility:</strong> Braxton Hicks contractions that cause discomfort late in pregnancy and may account for false labor pains.</li>
+</ul>
+<h3>II. Myometrial Changes</h3>
+<ul class="bullet-list">
+<li><strong>Hypertrophy:</strong> estrogenic effect.</li>
+<li><strong>Hyperplasia:</strong> progesterone effect.</li>
+<li><strong>Isthmus:</strong> area of the cervix between anatomical internal os above and the histological internal os below. It is 4–5 mm and lined by atrophic endometrium.</li>
+</ul>
+<div class="callout callout-pearl">
+<div class="callout-title">Significance — Lower Uterine Segment</div>
+<p>The isthmus and lower ½ inch of the body of the uterus develop to form the <strong>lower uterine segment</strong>, which starts to be formed at 12 weeks and gradually increases to 10 cm at full term.</p>
+</div>
+<h3>III. Uterine Vasculature</h3>
+<p>Uterine artery lumen is doubled and uterine blood flow increases progressively, reaching about 500 mL/min at term.</p>
+<h3>IV. Cervix</h3>
+<p>Hypertrophy, soft and bluish due to increased vascularity.</p>
+<h3>V. Vagina</h3>
+<p>Violet and edematous due to increased vascularity.</p>
+<h3>VI. Vulva</h3>
+<p>Violet and edematous due to increased vascularity.</p>
+<h3>VII. Fallopian Tube</h3>
+<p>Elongated, tortuous.</p>
+<h3>VIII. Ovary</h3>
+<p>Increased size due to increased vascularity, particularly the ovary that contains the corpus luteum.</p>
+</section>
+<!-- 2. Hematological changes -->
+<section class="section" id="2-hematological-changes">
+<h2>2. Hematological Changes</h2>
+<h3>2.1 Blood Volume</h3>
+<p>Increases gradually above the non-pregnant level by <strong>30%–40%</strong>, reaching its maximum by 32 weeks, then remains constant till full term.</p>
+<ul class="bullet-list">
+<li><strong>Plasma volume:</strong> 45% increase.</li>
+<li><strong>Red cell mass:</strong> 30% increase.</li>
+</ul>
+<p>The increase in plasma volume is more than the increase in red blood cell mass, resulting in <strong>hemodilution (physiological anemia)</strong>.</p>
+<h3>2.2 Blood Indices</h3>
+<ul class="bullet-list">
+<li>RBCs and hemoglobin concentrations decrease due to hemodilution.</li>
+<li>WBCs increase from 7,000 /mm³ to 10,500 /mm³, and up to 16,000 /mm³ during labor.</li>
+</ul>
+<h3>2.3 Coagulation Factors</h3>
+<ul class="bullet-list">
+<li><strong>Platelets:</strong> increase or decrease (controversial).</li>
+<li><strong>Fibrinogen:</strong> increases nearly doubled (from 200–400 mg% to 400–600 mg%).</li>
+<li><strong>Factor VIII:</strong> tripled.</li>
+<li><strong>Factor VII and X:</strong> doubled.</li>
+<li><strong>Fibrinolytic activity:</strong> decreased.</li>
+</ul>
+<div class="callout callout-warn">
+<div class="callout-title">Warning — Hypercoagulable State</div>
+<p>Pregnancy is a <strong>hypercoagulable state</strong> — increased clotting factors + decreased fibrinolysis → ↑ VTE risk.</p>
+</div>
+</section>
+<!-- 3. Cardiovascular system -->
+<section class="section" id="3-cardiovascular-system">
+<h2>3. Cardiovascular System</h2>
+<h3>3.1 Heart</h3>
+<ul class="bullet-list">
+<li><strong>Position:</strong> the uterus elevates the diaphragm and the apex beat is displaced upwards and to the left.</li>
+<li><strong>Pulse rate:</strong> increases by 10 beats /min.</li>
+<li><strong>Heart sounds:</strong> splitting of the 1<sup>st</sup> heart sound and appearance of 3<sup>rd</sup> heart sound.</li>
+</ul>
+<p>Most of the changes of the pulse and heart sound are due to hyperdynamic circulation caused by decreased peripheral resistance from peripheral vasodilation due to increased progesterone during pregnancy.</p>
+<h3>3.2 Cardiac Output (COP)</h3>
+<p>Increases above the non-pregnant level to reach its maximum of <strong>40% above the non-pregnant level at 20 weeks</strong>, then remains constant till term (6.5 L/min). This is due to increased stroke volume and heart rate.</p>
+<p><strong>During labor:</strong> COP increases more, especially during the second stage of labor, due to uterine contractions and bearing-down efforts.</p>
+<h3>3.3 Arterial Blood Pressure</h3>
+<p>Although COP is increased, blood pressure is decreased, especially in the second trimester, due to decreased peripheral resistance.</p>
+</section>
+<!-- 4. Respiratory system -->
+<section class="section" id="4-respiratory-system">
+<h2>4. Respiratory System</h2>
+<h3>4.1 Anatomical Changes</h3>
+<p>The enlarged uterus displaces the diaphragm up to 4 cm, leading to reduced diaphragmatic mobility and a widened subcostal angle.</p>
+<h3>4.2 Respiratory Functions</h3>
+<ul class="bullet-list">
+<li><strong>Tidal volume</strong> (amount of gas inspired or expired in each respiration) is increased throughout pregnancy by about 40%.</li>
+<li><strong>Residual volume</strong> is reduced.</li>
+</ul>
+<h3>4.3 Hyperventilation</h3>
+<p>Due to increased tidal volume from increased sensitivity of the respiratory center to excess progesterone.</p>
+</section>
+<!-- 5. Urinary system -->
+<section class="section" id="5-urinary-system">
+<h2>5. Urinary System</h2>
+<h3>5.1 Kidney</h3>
+<p>Renal blood flow and glomerular filtration rate (GFR) increase by 50%. This leads to increased excretion, so:</p>
+<ul class="bullet-list">
+<li>Decreased creatinine.</li>
+<li>Decreased urea.</li>
+<li>Increased excretion of glucose → reduced renal glucose threshold → <strong>renal glucosuria</strong>.</li>
+</ul>
+<h3>5.2 Ureters</h3>
+<p>Dilated due to the relaxing effect of progesterone and pressure against the pelvic brim by the uterus, especially on the right side due to dextrorotation of the uterus.</p>
+<h3>5.3 Urinary Bladder</h3>
+<p>Frequency is common in early pregnancy due to pressure on the bladder by the enlarging uterus, congestion of the bladder mucosa, and increased glomerular filtration rate.</p>
+</section>
+<!-- 6. Gastrointestinal tract -->
+<section class="section" id="6-gastrointestinal-tract">
+<h2>6. Gastrointestinal Tract</h2>
+<ul class="bullet-list">
+<li><strong>Gingivitis:</strong> due to increased vascularity and hypertrophy of interdental papillae.</li>
+<li><strong>Ptyalism:</strong> increased salivation due to increased vascularity of salivary glands.</li>
+<li><strong>Appetite changes (longing):</strong> the pregnant woman likes some foods. Reduced taste buds create the desire for markedly sweet, sour and salt foods.</li>
+<li><strong>Nausea (morning sickness) and vomiting (emesis gravidarum):</strong> starts between 4<sup>th</sup> and 6<sup>th</sup> weeks, improves by about 12<sup>th</sup> week of pregnancy.</li>
+<li><strong>Heart burn:</strong> due to reflux of acidic gastric contents to the esophagus from the relaxing effect of progesterone on the esophageal sphincter.</li>
+<li><strong>Indigestion and flatulence:</strong> due to reduced gastric motility and reflux of alkaline intestinal contents to the stomach from the relaxing effect of progesterone.</li>
+<li><strong>Constipation:</strong> due to reduced large-intestinal motility from the relaxing effect of progesterone.</li>
+<li><strong>Piles:</strong> due to laxity of the wall of the veins by progesterone.</li>
+<li><strong>Appendix:</strong> is displaced upward and laterally.</li>
+<li><strong>Gall bladder:</strong> more tendency for gall bladder stones due to delayed emptying of the gall bladder.</li>
+<li><strong>Liver:</strong> decreased albumin and increased globulin (↓ A/G ratio) and increased alkaline phosphatase enzyme.</li>
+</ul>
+<div class="callout callout-pearl">
+<div class="callout-title">Clinical Pearl — Progesterone Is the Common Denominator</div>
+<p>Many of the GI/urinary smooth-muscle changes of pregnancy (heartburn, constipation, piles, ureteric dilatation, biliary stasis) are driven by the same mechanism: <strong>progesterone-induced smooth-muscle relaxation</strong>.</p>
+</div>
+</section>
+<!-- 7. Metabolic changes -->
+<section class="section" id="7-metabolic-changes">
+<h2>7. Metabolic Changes</h2>
+<ul class="bullet-list">
+<li><strong>Weight gain:</strong> increased by 10–12 kg in pregnancy.</li>
+<li><strong>Water metabolism:</strong> tendency to water and sodium retention due to increased aldosterone.</li>
+<li><strong>Protein metabolism:</strong> positive nitrogen balance and increased daily requirements for protein intake.</li>
+<li><strong>Carbohydrate:</strong> mild fasting hypoglycemia and postprandial hyperglycemia. Pregnancy is diabetogenic due to pregnancy hormones.</li>
+<li><strong>Lipid:</strong> increased levels of total lipids and cholesterol.</li>
+</ul>
+</section>
+<!-- 8. Musculoskeletal changes -->
+<section class="section" id="8-musculoskeletal-changes">
+<h2>8. Musculoskeletal Changes</h2>
+<p>Progressive softening of pelvic joints caused by progressive lordosis and foot flattening.</p>
+</section>
+<!-- 9. Endocrine changes -->
+<section class="section" id="9-endocrine-changes">
+<h2>9. Endocrine Changes</h2>
+<ul class="bullet-list">
+<li><strong>Anterior pituitary:</strong> hypertrophy and increased vascularity, and increased number of prolactin-secreting cells.</li>
+<li><strong>Thyroid gland:</strong> slight enlargement of the gland due to increased vascularity → increased gland activity: ↑ TBG, ↑ total T3 and T4, ↓ TSH, and ↑ BMR.</li>
+<li><strong>Parathyroid gland:</strong> hypertrophy with increased demand for calcium.</li>
+<li><strong>Suprarenal gland:</strong> hypertrophy due to increased vascularity leading to increased aldosterone and cortisol.</li>
+</ul>
+</section>
+<!-- 10. Skin changes -->
+<section class="section" id="10-skin-changes">
+<h2>10. Skin Changes</h2>
+<ul class="bullet-list">
+<li><strong>Palmar erythema:</strong> due to increased estrogen.</li>
+<li><strong>Chloasma gravidarum:</strong> on the face.</li>
+<li><strong>Linea nigra pigmentation:</strong> in midline below the umbilicus.</li>
+<li><strong>Stria gravidarum:</strong> pigmentation in the lower abdomen flanks, inner thigh and buttocks due to mechanical stretching.</li>
+</ul>
+</section>
+<!-- 11. Breast changes -->
+<section class="section" id="11-breast-changes">
+<h2>11. Breast Changes</h2>
+<h3>I. First Month</h3>
+<ul class="bullet-list">
+<li>Increased size and vascularity.</li>
+<li>Mastodynia (from tingling to frank pain).</li>
+</ul>
+<h3>II. Second Month — Skin Pigmentation</h3>
+<ul class="bullet-list">
+<li>Increased pigmentation of nipple and primary areola.</li>
+<li><strong>Montgomery tubercles:</strong> hypertrophy of the lips of the orifices of the lacteal ducts.</li>
+</ul>
+<!-- SOURCE IMAGE: Montgomery tubercles -->
+<div class="card source-image">
+<div class="card-header">Source Image</div>
+<div class="card-img-wrap">
+<img alt="Close-up grayscale photograph of nipple and areola with arrows pointing to Montgomery tubercles" src="../../../../extracted_images/02_maternal_adaptation_to_pregnancy/montgomery_tubercles.jpg"/>
+</div>
+<div class="card-caption">Montgomery Tubercles on the Areola</div>
+<div class="card-source">Source: Provided Material — Book Obstetrics 2025-2026, Ch. 2 (p. 12)</div>
+</div>
+<h3>III. Third Month</h3>
+<p>Colostrum secretion.</p>
+<h3>IV. Fifth Month</h3>
+<p>Secondary areola — pigmented area around the primary areola.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Month</th><th>Breast Changes</th></tr>
+</thead>
+<tbody>
+<tr><td>1<sup>st</sup> month</td><td>↑ Size and vascularity; mastodynia (tingling to pain).</td></tr>
+<tr><td>2<sup>nd</sup> month</td><td>↑ Pigmentation of nipple &amp; primary areola; Montgomery tubercles appear.</td></tr>
+<tr><td>3<sup>rd</sup> month</td><td>Colostrum secretion begins.</td></tr>
+<tr><td>5<sup>th</sup> month</td><td>Secondary areola — pigmented area around the primary areola.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 12. Student activity -->
+<section class="section" id="12-student-activity">
+<h2>12. Student Activity</h2>
+<p>Each student should compare CBC of a pregnant woman against another non-pregnant woman during the bedside-teaching part of the clinical round.</p>
+</section>
+<!-- 13. Questions -->
+<section class="section" id="13-questions">
+<h2>13. Questions</h2>
+<p>Practice questions for this chapter are available at the following link:</p>
+<p>🔗 <a href="https://forms.gle/2w4PQJcFc6idtDLi7" rel="noopener noreferrer" target="_blank">https://forms.gle/2w4PQJcFc6idtDLi7</a></p>
+</section>
+<!-- REFERENCES -->
+<details class="study-section"><summary>References &amp; Visual Sources</summary><section class="references">
+<h2>References &amp; Visual Sources</h2>
+<p>The following sources were used in the preparation of this infographic. Every external image, diagram, and website consulted is cited below.</p>
+<ul>
+<li><strong>Primary source material:</strong> Book Obstetrics 2025-2026, Chapter 2 — <em>Maternal Adaptation to Pregnancy</em> (6 pages).</li>
+<li><strong>Source image 1 — Montgomery tubercles on the areola:</strong> Provided Material — Book Obstetrics 2025-2026, Ch. 2 (p. 12). No watermark; preserved at original aspect ratio inside a green-bordered SOURCE IMAGE card.</li>
+<li><strong>Source image 2 (withheld):</strong> A striae-gravidarum slide embedded in the source PDF carried a faint "© 2004" copyright notice in the corner. Per the visual-rule against watermarked images, it has been deliberately omitted. The full text description of stria gravidarum (skin changes section) preserves the educational content.</li>
+<li><strong>Source image 3 (withheld):</strong> A skincare "before/after" face comparison was embedded in the source PDF but is decorative commercial stock content with no direct relation to maternal adaptation. It has been deliberately omitted per the rules against decorative stock photos and irrelevant visuals.</li>
+<li><strong>External resource (questions / online quiz):</strong> Google Forms — <a href="https://forms.gle/2w4PQJcFc6idtDLi7" rel="noopener noreferrer" target="_blank">https://forms.gle/2w4PQJcFc6idtDLi7</a></li>
+</ul>
+</section></details>
+<div class="footer-note">
+    Generated as Topic 02 of the Sequential Infographic Generation System. All source content has been preserved verbatim; no information was summarized, compressed, or omitted.
+  </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script><!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

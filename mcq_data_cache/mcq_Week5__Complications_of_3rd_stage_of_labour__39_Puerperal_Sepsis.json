@@ -1,0 +1,684 @@
+{
+  "s2": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Puerperal sepsis is defined as:",
+      "options": [
+        "Any fever after childbirth",
+        "A genital tract infection resulting from bacterial invasion during or after labor or abortion",
+        "A urinary tract infection after delivery",
+        "Wound infection after cesarean section"
+      ],
+      "correct": 1,
+      "explain": "Puerperal sepsis is specifically a genital tract infection from bacterial invasion during or after labor or abortion."
+    },
+    {
+      "q": "The timing window for puerperal sepsis includes:",
+      "options": [
+        "Only during labor",
+        "During labor, after labor, or after abortion",
+        "Only after hospital discharge",
+        "Only before delivery"
+      ],
+      "correct": 1,
+      "explain": "The timing window is broad: during labor, after labor, or after abortion."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The single most common causative organism in puerperal sepsis is:",
+      "options": [
+        "E. coli",
+        "Staphylococcus aureus",
+        "Anaerobic streptococci",
+        "Clostridium welchii"
+      ],
+      "correct": 2,
+      "explain": "Anaerobic streptococci is the single most common organism. Remember the mnemonic A-G-A: Aerobic Gram+/Gram−, Anaerobic Gram+ (commonest) + Gram−."
+    },
+    {
+      "q": "Which of the following is an anaerobic Gram-negative organism causing puerperal sepsis?",
+      "options": [
+        "Hemolytic streptococcus group A",
+        "Staphylococcus aureus",
+        "Clostridium welchii",
+        "E. coli"
+      ],
+      "correct": 2,
+      "explain": "Clostridium welchii and Bacteroids are anaerobic Gram-negative organisms. Hemolytic streptococcus A and Staph aureus are aerobic Gram-positive."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The endogenous source of puerperal sepsis is:",
+      "options": [
+        "Infection from hospital instruments",
+        "Infected attendants and dust",
+        "Anaerobic streptococci normally present in the genital tract that become pathogenic in devitalized tissue",
+        "Contaminated IV lines"
+      ],
+      "correct": 2,
+      "explain": "Endogenous: organisms normally present (e.g., anaerobic streptococci) become pathogenic in presence of devitalized tissues."
+    },
+    {
+      "q": "Which mode of infection is considered more insidious?",
+      "options": [
+        "Exogenous — from instruments and attendants",
+        "Endogenous — normal commensals becoming pathogenic",
+        "Airborne transmission",
+        "Blood transfusion"
+      ],
+      "correct": 1,
+      "explain": "The endogenous pathway is more insidious — harmless commensals before delivery become virulent once devitalized tissue provides a substrate."
+    }
+  ],
+  "s6": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a local predisposing factor for puerperal sepsis?",
+      "options": [
+        "Anemia",
+        "Diabetes",
+        "Prolonged labor",
+        "Debilitating diseases"
+      ],
+      "correct": 2,
+      "explain": "Prolonged labor is a local risk factor. Anemia, diabetes, and debilitating diseases are general predisposing factors."
+    },
+    {
+      "q": "The mnemonic for local predisposing factors (7) is P-P-I-L-M-R-I. The 'M' stands for:",
+      "options": [
+        "Maternal age >35",
+        "Marked blood loss",
+        "Multiple pregnancy",
+        "Malpresentation"
+      ],
+      "correct": 1,
+      "explain": "P-P-I-L-M-R-I: PROM, Prolonged labor, Instrumental delivery, Lacerations, Marked blood loss, Retained products, Improper aseptic technique."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The primary sites of puerperal infection include:",
+      "options": [
+        "Kidneys and ureters",
+        "Lacerations of the vulva/vagina/cervix and the placental site",
+        "Lungs and pleura",
+        "Heart valves"
+      ],
+      "correct": 1,
+      "explain": "Primary sites: (1) lacerations of vulva/vagina/cervix, (2) uterus — placental site or retained products."
+    },
+    {
+      "q": "Secondary spread from primary puerperal infection can occur via:",
+      "options": [
+        "Direct extension only",
+        "Pelvic spread (PID, parametritis, abscess) and blood spread (bacteremia/septicemia)",
+        "Lymphatic spread only",
+        "Neural spread"
+      ],
+      "correct": 1,
+      "explain": "Pelvic spread → acute PID, parametritis, pelvic abscess. Blood spread → bacteremia or septicemia."
+    }
+  ],
+  "s8": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The classic presentation of puerperal sepsis occurs:",
+      "options": [
+        "Immediately after delivery",
+        "48-72 hours following labor or abortion",
+        "One week postpartum",
+        "At the 6-week postnatal check"
+      ],
+      "correct": 1,
+      "explain": "Symptoms appear shortly (48-72 hours) following labor or abortion: fever/rigors, abdominal pain, offensive vaginal discharge."
+    },
+    {
+      "q": "The diagnostic temperature criterion for puerperal sepsis is:",
+      "options": [
+        "Temperature >37.5°C for 12 hours",
+        "Temperature >38°C for 24 hours",
+        "Temperature >39°C at any single reading",
+        "Temperature >40°C"
+      ],
+      "correct": 1,
+      "explain": "Temperature >38°C for 24 hours is the key diagnostic criterion on general examination."
+    }
+  ],
+  "s9": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "An early complication of puerperal sepsis is:",
+      "options": [
+        "Chronic pelvic pain",
+        "Tubal infertility",
+        "Spread to secondary sites e.g. pelvic abscess",
+        "Ectopic pregnancy"
+      ],
+      "correct": 2,
+      "explain": "Early: spread to secondary sites and complications of septicemia/pyemia. Remote: chronic PID, infertility, dyspareunia."
+    },
+    {
+      "q": "Which of the following is a remote complication of puerperal sepsis?",
+      "options": [
+        "Pelvic abscess",
+        "Septicemia",
+        "Chronic pelvic inflammatory disease and infertility",
+        "Septic shock"
+      ],
+      "correct": 2,
+      "explain": "Remote complications include chronic PID, infertility, dyspareunia, menorrhagia, and intestinal obstruction. Pelvic abscess and septicemia are early."
+    }
+  ],
+  "s10": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Essential investigations in suspected puerperal sepsis include all EXCEPT:",
+      "options": [
+        "Blood picture (leucocytosis)",
+        "Swab from cervix and upper vagina for aerobic and anaerobic culture",
+        "Blood culture",
+        "CT scan of the abdomen routinely"
+      ],
+      "correct": 3,
+      "explain": "Investigations: blood picture, urine analysis/culture, cervical swab (aerobic + anaerobic), blood culture, U/S for retained parts/abscess. CT is not routine."
+    },
+    {
+      "q": "Why must cervical swabs cover both aerobic and anaerobic cultures?",
+      "options": [
+        "Aerobic organisms are never present",
+        "Most cases are caused by anaerobic streptococci which a standard aerobic-only culture would miss",
+        "Anaerobic organisms are always drug-resistant",
+        "Only anaerobes cause puerperal sepsis"
+      ],
+      "correct": 1,
+      "explain": "Anaerobic streptococci are the most common organism. An aerobic-only culture would miss them, leading to incorrect treatment."
+    }
+  ],
+  "s11": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which of the following is an intranatal preventive measure for puerperal sepsis?",
+      "options": [
+        "Proper diet and vitamins",
+        "Treatment of anemia",
+        "Prophylactic antibiotics in PROM and prolonged/instrumental delivery",
+        "Care of perineal wounds postpartum"
+      ],
+      "correct": 2,
+      "explain": "Intranatal measures: strict asepsis, minimize vaginal exams, avoid excessive blood loss, suture lacerations immediately, prophylactic antibiotics for PROM/prolonged labor."
+    },
+    {
+      "q": "The prevention triad for puerperal sepsis follows the order:",
+      "options": [
+        "Postnatal → Intranatal → Antenatal",
+        "Antenatal → Intranatal → Postnatal",
+        "Intranatal → Antenatal → Postnatal",
+        "Postnatal → Antenatal → Intranatal"
+      ],
+      "correct": 1,
+      "explain": "Chronological triad: Antenatal (diet, treat anemia/infection) → Intranatal (asepsis, antibiotics) → Postnatal (perineal care, isolation)."
+    }
+  ],
+  "s12": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The recommended empirical antibiotic regimen for puerperal sepsis includes:",
+      "options": [
+        "Metronidazole alone",
+        "Broad-spectrum antibiotic (ampicillin/cephalosporin) + gentamycin + metronidazole",
+        "Gentamycin alone",
+        "Amoxicillin + clavulanic acid alone"
+      ],
+      "correct": 1,
+      "explain": "Triple therapy: broad-spectrum (ampicillin/cephalosporin) + gentamycin + metronidazole. Or clindamycin + gentamycin. Metronidazole covers anaerobes."
+    },
+    {
+      "q": "Which of the following is a general measure in treating puerperal sepsis?",
+      "options": [
+        "Immediate hysterectomy",
+        "Isolation in a separate room or fever hospital",
+        "High-dose steroids",
+        "Heparin therapy"
+      ],
+      "correct": 1,
+      "explain": "General measures: isolation, light nutritious diet with plenty of fluids, IV fluids, correction of anemia."
+    },
+    {
+      "q": "Antitoxin serum is specifically indicated in puerperal sepsis caused by:",
+      "options": [
+        "E. coli",
+        "Staphylococcus aureus",
+        "Clostridium welchii",
+        "Anaerobic streptococci"
+      ],
+      "correct": 2,
+      "explain": "Antitoxin serum is given specifically for Cl. welchii infection."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ]
+}

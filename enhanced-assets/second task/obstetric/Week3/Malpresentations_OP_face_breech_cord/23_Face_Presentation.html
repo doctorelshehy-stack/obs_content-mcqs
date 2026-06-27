@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 23 — Face Presentation</title>
+<style>
+  :root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --primary:#6366F1; --primary-dark:#4F46E5;
+    --accent:#0EA5E9; --accent-dark:#0369A1;
+    --soft:#EEF2FF; --line:#E2E8F0; --ok:#16A34A; --warn:#D97706; --danger:#DC2626; --note:#0EA5E9;
+    --border:#E5E7EB; --bg-alt:#F1F5F9;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55}
+  .page{max-width:1180px;margin:0 auto;background:var(--card);padding:0 28px 60px}
+  header.hero{background:linear-gradient(135deg,#4F46E5 0%,#0EA5E9 100%);color:#fff;padding:36px 32px 30px;border-radius:0 0 22px 22px;margin:0 -28px 28px;box-shadow:0 4px 18px rgba(79,70,229,.18)}
+  header.hero .kicker{display:inline-block;background:rgba(255,255,255,.18);color:#fff;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px}
+  header.hero h1{font-size:38px;line-height:1.18;margin:0 0 12px;font-weight:800;letter-spacing:-.4px}
+  header.hero .summary{font-size:16px;line-height:1.6;max-width:920px;opacity:.96;margin-bottom:18px}
+  header.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  header.hero .chip{background:rgba(255,255,255,.16);color:#fff;font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25)}
+  section.block{margin:32px 0;padding:0}
+  section.block h2{font-size:24px;color:var(--primary-dark);margin:0 0 14px;padding:10px 0 10px 14px;border-left:6px solid var(--primary);background:var(--soft);border-radius:0 10px 10px 0}
+  section.block h3{font-size:18px;color:var(--accent-dark);margin:18px 0 8px}
+  section.block p{margin:8px 0;font-size:15px}
+  section.block ul,section.block ol{margin:8px 0 12px;padding-left:22px}
+  section.block li{margin:4px 0;font-size:14.5px}
+  .keydef{background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);border-left:5px solid var(--primary);padding:14px 18px;border-radius:10px;margin:12px 0;font-size:15px;line-height:1.65}
+  .keydef strong{color:var(--primary-dark)}
+  .src-viz{margin:22px 0;padding:18px;background:#DCFCE7;border:3px solid #22C55E;border-radius:14px}
+  .src-viz .tag{display:inline-block;background:#22C55E;color:#fff;padding:4px 11px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;margin-bottom:12px}
+  .src-viz .figcap{font-size:13px;color:#166534;font-style:italic;margin-top:10px;line-height:1.55}
+  .src-viz img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:6px;background:#fff}
+  .ext-viz{margin:22px 0;padding:18px;background:#FEE2E2;border:3px solid #EF4444;border-radius:14px}
+  .ext-viz .tag{display:inline-block;background:#EF4444;color:#fff;padding:4px 11px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;margin-bottom:12px}
+  .pearl{background:linear-gradient(180deg,#FAF5FF 0%,#F3E8FF 100%);border-left:5px solid #A855F7;padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14.5px}
+  .pearl::before{content:"💎 PEARL — ";font-weight:800;color:#7E22CE}
+  .warn{background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);border-left:5px solid #D97706;padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14.5px}
+  .warn::before{content:"⚠ WARNING — ";font-weight:800;color:#92400E}
+  .danger{background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);border-left:5px solid #DC2626;padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14.5px;font-weight:600}
+  .danger::before{content:"🚫 DANGER — ";font-weight:800;color:#991B1B}
+  .note{background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);border-left:5px solid #0EA5E9;padding:14px 18px;border-radius:10px;margin:14px 0;font-size:14.5px}
+  .note::before{content:"📝 NOTE — ";font-weight:800;color:#0E7490}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:14px 0}
+  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:14px 0}
+  .card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px 18px}
+  .card h4{margin:0 0 10px;font-size:16px;color:var(--primary-dark)}
+  .card ul{margin:6px 0;padding-left:20px}
+  .card li{margin:4px 0;font-size:14px}
+  .pos-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:14px 0}
+  .pos-card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px}
+  .pos-card .pos-name{font-size:16px;font-weight:800;color:var(--primary-dark);margin-bottom:8px}
+  .pos-card .pos-variants{font-size:13.5px;color:var(--muted);line-height:1.6}
+  .pos-card .pos-variants ul{margin:6px 0;padding-left:18px}
+  table.cmp{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+  table.cmp th{background:var(--primary);color:#fff;padding:10px 12px;text-align:left;font-weight:700;font-size:13.5px;text-transform:uppercase;letter-spacing:.3px}
+  table.cmp td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+  table.cmp tr:nth-child(even) td{background:#F8FAFC}
+  .toc{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:var(--soft);padding:18px 22px;border-radius:12px;margin:18px 0}
+  .toc ol{margin:0;padding-left:22px;font-size:14px;line-height:1.7}
+  .toc a{color:var(--primary-dark);text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  ul.ref-list{margin:10px 0;padding-left:22px}
+  ul.ref-list li{margin:6px 0;font-size:14px;line-height:1.6}
+  .activity{background:linear-gradient(135deg,#F0F9FF 0%,#E0F2FE 100%);border:2px solid #0EA5E9;border-radius:14px;padding:18px 22px;margin:18px 0}
+  .activity h3{margin:0 0 10px;color:#0369A1;font-size:18px}
+  .assessment{background:linear-gradient(135deg,#F0FDF4 0%,#DCFCE7 100%);border:2px solid #16A34A;border-radius:14px;padding:18px 22px;margin:18px 0}
+  .assessment h3{margin:0 0 10px;color:#166534;font-size:18px}
+  .assessment a{color:#15803D;font-weight:600}
+  .step-list{counter-reset:step;list-style:none;padding-left:0;margin:10px 0}
+  .step-list li{counter-increment:step;padding:8px 12px 8px 50px;position:relative;margin:6px 0;background:var(--bg-alt);border-radius:8px;font-size:14.5px}
+  .step-list li::before{content:counter(step);position:absolute;left:10px;top:8px;background:var(--primary);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+  footer{margin-top:36px;padding-top:20px;border-top:2px solid var(--line);text-align:center;font-size:12.5px;color:var(--muted);line-height:1.7}
+  @media (max-width:800px){
+    .two-col,.three-col,.pos-grid,.toc{grid-template-columns:1fr}
+    header.hero h1{font-size:30px}
+    section.block h2{font-size:20px}
+  }
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+
+  <header class="hero">
+    <span class="kicker">Topic 23 · Chapter 23 · Malpresentation Series</span>
+    <h1>Face Presentation</h1>
+    <p class="summary">A <strong>rare cephalic malpresentation</strong> in which the fetal head is completely <strong>hyperextended</strong>, so that the <em>occiput touches the fetal back</em> and the <em>chin (mentum) becomes the presenting part</em>. The chapter covers definition, causes, the 3 position groups (Mentoanterior / Mentoposterior / Mentotransverse), diagnosis, mechanism of labor, and management rules — including why you must <strong>not convert it to vertex</strong> and why <strong>vacuum and scalp electrode are contraindicated</strong>.</p>
+    <div class="chips">
+      <span class="chip">3 positions × variants</span>
+      <span class="chip">Mentum is denominator</span>
+      <span class="chip">Submento-bregmatic 9.5 cm</span>
+      <span class="chip">Primary vs Secondary</span>
+      <span class="chip">Long anterior rotation = safe</span>
+      <span class="chip">No rotation = obstructed → CS</span>
+      <span class="chip">3 source diagrams · 0 external visuals</span>
+    </div>
+  </header>
+
+  <section class="block">
+    <h2>Contents</h2>
+    <nav class="toc">
+      <ol>
+        <li><a href="#sec1">Intended Learning Outcomes (ILOs)</a></li>
+        <li><a href="#sec2">Definition</a></li>
+        <li><a href="#sec3">Causes</a></li>
+        <li><a href="#sec4">Positions</a></li>
+        <li><a href="#sec5">Types</a></li>
+      </ol>
+      <ol start="6">
+        <li><a href="#sec6">Diagnosis (palpation, US, during labor)</a></li>
+        <li><a href="#sec7">Mechanism of labor</a></li>
+        <li><a href="#sec8">Management (do's &amp; don'ts)</a></li>
+        <li><a href="#sec9">Student activity · Assessment · References</a></li>
+      </ol>
+    </nav>
+  </section>
+
+  <section class="block" id="sec1">
+    <h2>1 · Intended Learning Outcomes (ILOs)</h2>
+    <p>By the end of this chapter, the student should be able to:</p>
+    <ul class="step-list">
+      <li>To understand the <strong>definition and etiology</strong> of this malpresentation</li>
+      <li>To be able to describe the <strong>diagnosis of face presentation</strong></li>
+      <li>To be able to describe the <strong>management of this rare malpresentation</strong></li>
+    </ul>
+  </section>
+
+  <section class="block" id="sec2">
+    <h2>2 · Definition</h2>
+    <div class="keydef">
+      <strong>Face Presentation</strong> is a <em>cephalic presentation</em> in which the head is <strong>hyperextended</strong> so that the <strong>Occiput is in contact with the fetal back</strong> and the <strong>chin (mentum) is presenting</strong>.
+    </div>
+    <div class="pearl">Face presentation is a <strong>rare</strong> malpresentation (about 0.1–0.2% of births). The denominator in face presentation is the <strong>mentum (chin)</strong>, not the occiput. Because the head is hyperextended (not flexed as in vertex), engagement of the presenting part is delayed and the head negotiates the pelvis by a different set of cardinal movements.</div>
+  
+
+        <div class="mcq-block" data-subtopic="sec2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In face presentation, what is the presenting part?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The occiput</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The vertex</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">The chin (mentum)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The brow</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In face presentation, the head is hyperextended so that the occiput touches the fetal back and the chin (mentum) becomes the presenting part.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">What is the denominator in face presentation?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Occiput</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Sacrum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Mentum (chin)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Frontal bone</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The denominator in face presentation is the mentum (chin), not the occiput.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following best defines this condition?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A pathological deviation from normal anatomy or function</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">A condition requiring surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">An incidental finding with no clinical significance</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">A self-limiting disorder of pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">A definition describes the essential nature of a condition as a deviation from normal.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The incidence of this condition is highest in which population?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Primigravidas</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Multiparous women</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Women aged 35+ years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition and risk factors</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Incidence varies by condition — each has its own epidemiology and risk profile.</div>
+        </div>
+</section>
+
+  <section class="block" id="sec3">
+    <h2>3 · Causes</h2>
+    <p>The causes of face presentation are the <strong>same as those of occipito-posterior position plus</strong> the three fetal neck-space-occupying causes listed below:</p>
+    <div class="two-col">
+      <div class="card" style="border-top:4px solid var(--primary)">
+        <h4>3a · Like in occipito-posterior (general)</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin-top:0">All the fetal and maternal causes listed for OP position also apply to face presentation (see Chapter 22 for the full list):</p>
+        <ul>
+          <li>Marked deflexion of the fetal head</li>
+          <li>Prematurity, macrosomia, multiple pregnancy</li>
+          <li>Polyhydramnios, congenital anomalies (anencephaly, hydrocephalus)</li>
+          <li>Cord around the neck, android / anthropoid pelvis</li>
+          <li>Pendulous abdomen, placenta previa, pelvic tumors</li>
+          <li>Uterine anomalies (bicornuate, septate), abnormal uterine contractions</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:4px solid #D97706">
+        <h4>3b · Specific to face presentation</h4>
+        <p style="font-size:13.5px;color:var(--muted);margin-top:0">Three fetal neck-space-occupying causes prevent flexion of the head, forcing hyperextension:</p>
+        <ul>
+          <li><strong>Neck tumors</strong></li>
+          <li><strong>Cystic hygroma</strong></li>
+          <li><strong>Large fetal thyroid gland</strong></li>
+        </ul>
+        <div class="note" style="margin-top:10px;margin-bottom:0">All three are space-occupying lesions in the fetal neck that physically prevent head flexion. They are typically diagnosed on antenatal ultrasound.</div>
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="sec3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a cause specific to face presentation (not shared with OP position)?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Prematurity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Android pelvis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Neck tumors</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Polyhydramnios</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Neck tumors, cystic hygroma, and large fetal thyroid gland are specific causes of face presentation as they physically prevent head flexion by occupying space in the fetal neck.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <section class="block" id="sec4">
+    <h2>4 · Positions</h2>
+    <p>Face presentation has <strong>three groups of positions</strong>, defined by where the <em>mentum (chin)</em> lies within the maternal pelvis. Each group has a <em>direct</em> and <em>right/left</em> variants:</p>
+    <div class="pos-grid">
+      <div class="pos-card" style="border-top:5px solid #16A34A">
+        <div class="pos-name">🟢 Mentoanterior</div>
+        <div class="pos-variants">
+          <ul>
+            <li>Direct (mentum on the symphysis pubis)</li>
+            <li>Right mentoanterior</li>
+            <li>Left mentoanterior</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pos-card" style="border-top:5px solid #D97706">
+        <div class="pos-name">🟡 Mentoposterior</div>
+        <div class="pos-variants">
+          <ul>
+            <li>Direct (mentum on the sacrum)</li>
+            <li>Right mentoposterior</li>
+            <li>Left mentoposterior</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pos-card" style="border-top:5px solid #0EA5E9">
+        <div class="pos-name">🔵 Mentotransverse</div>
+        <div class="pos-variants">
+          <ul>
+            <li>Right mentotransverse</li>
+            <li>Left mentotransverse</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="src-viz" style="margin-top:18px">
+      <span class="tag">SOURCE IMAGE</span>
+      <img src="../../../../../extracted/assets/extracted_images/23_face_presentation/img-000.jpg" alt="Two-panel medical illustration of face presentation — (a) Chin anterior and (b) Chin posterior, with lateral and inferior views of the fetal head in the maternal pelvis">
+      <div class="figcap">Figure 1 — Two-panel medical illustration of face presentation: <strong>(a) Chin anterior</strong> (mentum oriented to the front of the maternal pelvis — favorable for vaginal delivery) and <strong>(b) Chin posterior</strong> (mentum oriented to the sacrum — generally unfavorable and often requires cesarean section). Each panel shows a lateral view of the fetus in the birth canal (top) and an inferior view of the fetal head at the pelvic outlet (bottom). Source: Provided Material (Chapter 23 — Face Presentation).</div>
+    </div>
+
+    <div class="src-viz">
+      <span class="tag">SOURCE IMAGE</span>
+      <img src="../../../../../extracted/assets/extracted_images/23_face_presentation/img-001.jpg" alt="Educational diagram showing 45° head rotation technique with hands cradling the head and an angle indicator">
+      <div class="figcap">Figure 2 — Educational diagram of the <strong>45° rotational maneuver</strong> used to assess or correct fetal head orientation. Two illustrations: (left) the head lying supine cradled by two hands with a curved rotation arrow; (right) the head rotated 45° to one side, demonstrating the final position after the maneuver. This visual supports the chapter's instruction on the importance of recognizing chin orientation (anterior vs posterior) before deciding on mode of delivery. Label: <strong>B</strong>. Source: Provided Material (Chapter 23 — Face Presentation).</div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="sec4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In mentoposterior position, the mentum is oriented toward the:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Symphysis pubis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Sacrum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Left iliac fossa</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Right iliac fossa</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In mentoposterior (MP) position, the mentum is oriented toward the posterior pelvis (sacrum). This is generally unfavorable and often requires cesarean section.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">How many named positions does face presentation have?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">2 groups with 8 total variants</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">3 groups with 8 total variants</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">3 groups with 7 total variants</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">4 groups with 8 total variants</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Face presentation has 3 groups (Mentoanterior, Mentoposterior, Mentotransverse) with a total of 8 named positions (Direct MA, RMA, LMA, Direct MP, RMP, LMP, RMT, LMT).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+
+  <section class="block" id="sec5">
+    <h2>5 · Types</h2>
+    <table class="cmp">
+      <thead>
+        <tr><th style="width:35%">Type</th><th>Definition &amp; timing</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Primary face presentation</strong></td>
+          <td>Present <strong>during pregnancy</strong> — usually due to <strong>fetal causes</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Secondary face presentation</strong></td>
+          <td>Commonly occurs <strong>during labor</strong>, due to <strong>contracted pelvis</strong> or <strong>pendulous abdomen</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">A face presentation that develops <em>de novo</em> during labor (secondary type) is the more common form, and is usually caused by extension of an OP position when the head encounters resistance from a contracted pelvis or a pendulous abdomen that allows the head to fall backward.</div>
+  
+
+        <div class="mcq-block" data-subtopic="sec5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Primary face presentation is present:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Only during the second stage</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">During pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">During labor only</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">After membrane rupture</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Primary face presentation is present during pregnancy, usually due to fetal causes. Secondary face presentation occurs during labor, commonly due to contracted pelvis or pendulous abdomen.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Classification is based on:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Anatomical location</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Severity of symptoms</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both anatomical and clinical criteria</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">None of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Most classifications combine anatomical and clinical parameters.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <section class="block" id="sec6">
+    <h2>6 · Diagnosis</h2>
+
+    <h3>6.1 · Palpation</h3>
+    <table class="cmp">
+      <thead>
+        <tr><th style="width:30%">Grip</th><th>Finding in face presentation</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Fundal level</strong></td>
+          <td>Corresponds to the <strong>period of amenorrhea</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Fundal grip</strong></td>
+          <td>The <strong>buttocks are felt</strong> as a <strong>soft, bulky, irregular non-ballotable mass</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Umbilical grip</strong></td>
+          <td>A <strong>sulcus is felt between the extended neck &amp; back</strong> in <strong>mentoposterior (MP) positions</strong>. The <strong>limbs are easily felt near</strong>, while the <strong>back is difficult to be felt in mentoanterior (MA) positions</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>First pelvic grip</strong></td>
+          <td>The head is <strong>usually not engaged</strong> due to <strong>deflexion</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>6.2 · Ultrasound</h3>
+    <p><strong>Ultrasound is conclusive</strong> — it directly demonstrates the hyperextended fetal head with the chin as the presenting part.</p>
+
+    <h3>6.3 · During labor</h3>
+    <ul>
+      <li><strong>PV (vaginal examination):</strong> The <strong>mouth, nose, orbital bones and chin</strong> are felt.</li>
+      <li><strong>Prolonged labor.</strong></li>
+      <li><strong>Early PROM</strong> (premature rupture of membranes).</li>
+      <li><strong>Obstructed labor.</strong></li>
+    </ul>
+
+    <div class="warn">PV in face presentation must be performed gently. The mouth and anus can be confused — the key distinguishing features are: the <strong>mouth and malar eminences form a triangle</strong>, while the <strong>ischial tuberosities and anus are in a straight line</strong>. Traction on the mouth (mistaking it for the anus) can injure the fetal jaw.</div>
+  
+
+        <div class="mcq-block" data-subtopic="sec6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">On vaginal examination in face presentation, which structures are felt?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Occiput and sagittal suture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Mouth, nose, orbital bones and chin</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Frontal bone and anterior fontanelle</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Sacrum and coccyx</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">On PV examination in face presentation, the mouth, nose, orbital bones and chin are felt. The mouth and anus can be confused — the mouth and malar eminences form a triangle, while the ischial tuberosities and anus are in a straight line.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The gold standard diagnostic test is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ultrasound imaging</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory blood tests</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Clinical examination alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+
+  <section class="block" id="sec7">
+    <h2>7 · Mechanism of labor</h2>
+    <div class="keydef">
+      <strong>Denominator = the mentum (chin).</strong> In face presentation the mentum — not the occiput — is the reference point used to describe the cardinal movements.
+    </div>
+
+    <h3>7.1 · Mentoanterior position (favorable — chin is anterior)</h3>
+    <ol class="step-list">
+      <li><strong>Descent.</strong></li>
+      <li><strong>Engagement:</strong> by the <strong>submento-bregmatic diameter (9.5 cm)</strong>.</li>
+      <li><strong>Increased extension.</strong></li>
+      <li><strong>Internal rotation of chin 1/8 cycle anteriorly</strong> (chin moves to the symphysis pubis).</li>
+      <li><strong>Head delivered by flexion.</strong></li>
+      <li><strong>Restitution.</strong></li>
+      <li><strong>External rotation.</strong></li>
+    </ol>
+    <div class="note"><strong>Delayed engagement</strong> is characteristic of face presentation — it occurs <em>late</em> in labor because of the <strong>absence of moulding</strong> (the head cannot be compressed into a smaller presenting diameter as it can in vertex presentation).</div>
+
+    <h3>7.2 · Mentoposterior position (unfavorable — chin is posterior)</h3>
+    <p>If the chin is posterior at the onset of labor, <strong>four possible outcomes</strong> exist, depending on the type of rotation that occurs:</p>
+    <table class="cmp">
+      <thead>
+        <tr><th style="width:40%">Outcome</th><th>What happens</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Long anterior rotation</strong></td>
+          <td>Chin rotates the long way around to anterior → <strong>delivered as mentoanterior</strong> (safe).</td>
+        </tr>
+        <tr>
+          <td><strong>Deep transverse arrest</strong></td>
+          <td>Occurs if <strong>short anterior rotation</strong> occurred and the chin arrested in the transverse diameter.</td>
+        </tr>
+        <tr>
+          <td><strong>Persistent mentoposterior</strong></td>
+          <td>Occurs if <strong>no rotation</strong> occurred — chin remains posterior.</td>
+        </tr>
+        <tr>
+          <td><strong>Direct mentoposterior</strong></td>
+          <td>Occurs if <strong>short posterior rotation</strong> occurred — chin moves a short way posteriorly instead of anteriorly.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="danger">In the <strong>absence of long anterior rotation</strong>, labor becomes <strong>obstructed</strong> — usually <strong>cesarean section is safe</strong> (and is the only safe option for the fetus and the mother).</div>
+
+    <div class="src-viz" style="margin-top:18px">
+      <span class="tag">SOURCE IMAGE</span>
+      <img src="../../../../../extracted/assets/extracted_images/23_face_presentation/img-002.jpg" alt="Four-figure medical diagram showing the cardinal movements of internal rotation of the fetal head in face presentation, from occipitotransverse to occipitoanterior with 45° angle markers">
+      <div class="figcap">Figure 3 — Four-figure medical diagram of the <strong>cardinal movements of internal rotation</strong> during labor. Section A (first three figures) shows the fetal head at the pelvic inlet in the <em>transverse (occipitotransverse) position</em> and the progressive internal rotation, with 45° angle markers and curved arrows indicating the direction of rotation. Section B (fourth figure) shows the head after completion of internal rotation, now in the <em>anterior position (occipitoanterior)</em>, ready for extension and delivery. The diagram illustrates the general principle that 45° of rotation per stage allows the head to negotiate the bony pelvis. Source: Provided Material (Chapter 23 — Face Presentation).</div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="sec7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What is the engaging diameter in face presentation (mentoanterior)?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Occipito-frontal diameter (11.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Submento-bregmatic diameter (9.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Mento-vertical diameter (13.75 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Biparietal diameter (9.5 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In mentoanterior position, the head engages by the submento-bregmatic diameter (9.5 cm). This is the favorable diameter that allows vaginal delivery.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In the absence of long anterior rotation in mentoposterior position, labor becomes:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Accelerated</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Obstructed</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Precipitous</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Unchanged</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In the absence of long anterior rotation, labor becomes obstructed and usually cesarean section is the only safe option.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <section class="block" id="sec8">
+    <h2>8 · Management</h2>
+    <p>The management of face presentation is governed by a set of strict <strong>do's</strong> and <strong>don'ts</strong>:</p>
+
+    <h3>8.1 · Do not's (contraindicated maneuvers)</h3>
+    <div class="two-col">
+      <div class="danger">
+        <strong>1. Don't try to convert face to vertex presentation.</strong> Internal version / manual conversion is contraindicated — it can cause uterine rupture, cord prolapse, and fetal trauma.
+      </div>
+      <div class="danger">
+        <strong>2. Don't apply vacuum extractor.</strong> The vacuum cup cannot be applied to a face (no scalp, no firm engagement surface). Attempting it can cause serious fetal injury.
+      </div>
+    </div>
+    <div class="danger">
+      <strong>3. Don't apply internal scalp electrode.</strong> The fetal scalp electrode (FSE) is a fetal monitoring device applied to the scalp — in face presentation there is no accessible scalp, and applying it to the face is contraindicated.
+    </div>
+
+    <h3>8.2 · Do's (recommended management)</h3>
+    <ol class="step-list">
+      <li><strong>Wait for spontaneous rotation and delivery.</strong> Patience is the cornerstone of face-presentation management — the mentum has a high chance of rotating anteriorly with descent.</li>
+      <li><strong>Consider large episiotomy</strong> if vaginal delivery occurs — to prevent perineal laceration as the face emerges by flexion under the symphysis.</li>
+      <li><strong>Epidural analgesia</strong> if labor is prolonged — to allow the parturient to tolerate the longer labor and assist rotation.</li>
+      <li><strong>Mentoanterior: you may use forceps extraction</strong> — once the chin is anterior and the head is low, low-cavity forceps can assist delivery.</li>
+    </ol>
+
+    <h3>8.3 · When labor becomes obstructed</h3>
+    <div class="danger">For <strong>persistent mentoposterior</strong>, <strong>deep transverse arrest</strong>, and <strong>direct mentoposterior</strong>: labor becomes <strong>obstructed</strong> and <strong>CS (cesarean section) is done</strong>. These three outcomes of MP position cannot deliver vaginally and represent the surgical indications in face presentation.</div>
+
+    <div class="note">A face presentation that is diagnosed late, with the head already deeply engaged in MP position, is one of the most challenging obstetric emergencies. Do not attempt instrumental delivery from MP — the chin cannot rotate the 135° needed for vaginal delivery once the head is that low.</div>
+  
+
+        <div class="mcq-block" data-subtopic="sec8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is contraindicated in face presentation?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Large episiotomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Forceps extraction for mentoanterior</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec8-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Vacuum extractor</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Epidural analgesia</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Vacuum extractor is contraindicated in face presentation because the vacuum cup cannot be applied to a face (no scalp, no firm engagement surface).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">What should NOT be attempted in face presentation?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Wait for spontaneous rotation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec8-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Convert face to vertex presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Epidural analgesia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Forceps in mentoanterior</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Do not try to convert face to vertex presentation. Internal version/manual conversion is contraindicated as it can cause uterine rupture, cord prolapse, and fetal trauma.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which factor most influences the choice of treatment?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Gestational age at presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Maternal preference</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Facility resources</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec8-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above — treatment is individualized</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Obstetric management is tailored to gestational age, maternal status, and available resources.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec8-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="sec8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-sec8-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-sec8-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <details class="study-section"><summary>Student activity · Assessment · References</summary><section class="block" id="sec9">
+    <h2>9 · Student activity · Assessment · References</h2>
+
+    <div class="activity">
+      <h3>🎓 Student activity</h3>
+      <p style="margin:0">Each group of students is requested to <strong>design a summarizing algorithm of the face malpresentation</strong>, <em>guided with bedside tutor of the clinical round</em>.</p>
+    </div>
+
+    <div class="assessment">
+      <h3>✅ Questions (self-assessment)</h3>
+      <p style="margin:0 0 6px">Please complete the self-assessment Google Form:</p>
+      <p style="margin:0"><strong>Google Form:</strong> <a href="https://forms.gle/gJjbgLBesH7ktGtR7" target="_blank" rel="noopener">https://forms.gle/gJjbgLBesH7ktGtR7</a></p>
+    </div>
+
+    <h3>References &amp; visual sources</h3>
+    <ul class="ref-list">
+      <li>The PDF source for this chapter contains <strong>3 embedded images</strong>. Of these, <strong>3 are embedded in this infographic</strong> as green .src-viz cards. All 3 images are extracted to <code>extracted_images/23_face_presentation/</code> for archival.</li>
+      <li>Image inventory and disposition:
+        <ul>
+          <li>Figure 1 (img-000): Two-panel medical illustration — Chin anterior &amp; Chin posterior — <strong>EMBEDDED</strong> in §4 — provided material.</li>
+          <li>Figure 2 (img-001): Educational diagram of the 45° head rotation maneuver — <strong>EMBEDDED</strong> in §4 — provided material.</li>
+          <li>Figure 3 (img-002): Four-figure medical diagram of the cardinal movements of internal rotation — <strong>EMBEDDED</strong> in §7 — provided material.</li>
+        </ul>
+      </li>
+      <li><strong>No external images</strong> were used in this chapter. All embedded visuals are sourced from the provided <em>Book Obstetrics 2025-2026</em> PDF.</li>
+      <li>Self-assessment questions: Google Form — <a href="https://forms.gle/gJjbgLBesH7ktGtR7" target="_blank" rel="noopener">https://forms.gle/gJjbgLBesH7ktGtR7</a></li>
+    </ul>
+  </section></details>
+
+  <footer>
+    Topic 23 — Face Presentation · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 23 · Source-only visuals (3 of 3 in source) · 0 external visuals
+  </footer>
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

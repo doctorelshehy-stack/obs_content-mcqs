@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FM03 - Nutritional Care During Pregnancy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: #F0F4F8;
+    color: #1E293B;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container { max-width: 1280px; margin: 0 auto; padding: 20px; }
+  .hero {
+    background: linear-gradient(135deg, #0B3D6B, #2563EB);
+    color: white; padding: 40px 30px; border-radius: 16px;
+    margin-bottom: 24px; text-align: center;
+  }
+  .hero h1 { font-size: 34px; font-weight: 800; margin-bottom: 8px; }
+  .hero .topic-badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; margin-bottom: 8px;
+  }
+  .hero p { font-size: 17px; opacity: 0.9; }
+  .toc {
+    background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .toc h2 { font-size: 18px; font-weight: 700; color: #0B3D6B; margin-bottom: 12px; }
+  .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+  .toc-item { padding: 4px 0; color: #475569; font-size: 14px; border-bottom: 1px solid #F1F5F9; }
+  .toc-item a { color: #2563EB; text-decoration: none; font-weight: 500; }
+  .toc-item a:hover { text-decoration: underline; }
+  .section {
+    background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+    padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    background: #F8FAFC; padding: 10px 16px; border-radius: 10px; border-left: 4px solid #3B82F6;
+  }
+  .section-number {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%; background: #3B82F6;
+    color: white; font-weight: 700; font-size: 15px; flex-shrink: 0;
+  }
+  .section-header h2 { font-size: 20px; font-weight: 700; color: #1E293B; }
+  .subsection-title {
+    font-weight: 600; font-size: 17px; color: #0B3D6B;
+    margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #DBEAFE;
+  }
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .card {
+    background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+    padding: 14px 16px; box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .card-title { font-weight: 600; font-size: 14px; margin-bottom: 6px; color: #1E293B; }
+  .card-green { border-left: 4px solid #22C55E; }
+  .card-red { border-left: 4px solid #EF4444; }
+  .card-blue { border-left: 4px solid #3B82F6; }
+  .card-purple { border-left: 4px solid #8B5CF6; }
+  .card-orange { border-left: 4px solid #F59E0B; }
+  .card-pink { border-left: 4px solid #EC4899; }
+  .card-cyan { border-left: 4px solid #06B6D4; }
+  .card-navy { border-left: 4px solid #0B3D6B; }
+  .card-teal { border-left: 4px solid #14B8A6; }
+  .card-amber { border-left: 4px solid #D97706; }
+
+  .alert {
+    padding: 12px 16px; border-radius: 10px; margin: 10px 0;
+    border-left: 4px solid; font-size: 14px;
+  }
+  .alert-green { background: #F0FDF4; border-color: #22C55E; }
+  .alert-orange { background: #FFFBEB; border-color: #F59E0B; }
+  .alert-red { background: #FEF2F2; border-color: #EF4444; }
+  .alert-purple { background: #FAF5FF; border-color: #8B5CF6; }
+  .alert-blue { background: #EFF6FF; border-color: #3B82F6; }
+  .alert-yellow { background: #FFFBEB; border-color: #D97706; }
+  .alert-label { font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+  .alert-green .alert-label { color: #16A34A; }
+  .alert-orange .alert-label { color: #D97706; }
+  .alert-red .alert-label { color: #DC2626; }
+  .alert-purple .alert-label { color: #7C3AED; }
+  .alert-blue .alert-label { color: #2563EB; }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px;
+  }
+  th { background: #F1F5F9; color: #1E293B; font-weight: 600; padding: 8px 10px; border: 1px solid #E2E8F0; text-align: left; }
+  td { padding: 7px 10px; border: 1px solid #E2E8F0; }
+
+  .img-frame {
+    margin: 14px 0; text-align: center;
+  }
+  .img-frame img {
+    max-width: 85%; max-height: 50vh; border: 1px solid #D1D5DB; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .img-frame .caption { font-size: 13px; color: #64748B; margin-top: 6px; font-style: italic; }
+
+  .food-pyramid-viz {
+    display: flex; flex-direction: column; align-items: center;
+    width: 100%; max-width: 500px; margin: 16px auto;
+  }
+  .pyramid-level {
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; font-size: 13px; font-weight: 600;
+    border: 2px solid #D1D5DB; border-bottom: none; position: relative;
+  }
+  .pyramid-level:last-child { border-bottom: 2px solid #D1D5DB; }
+  .pyramid-level .label { flex: 1; }
+  .pyramid-level .servings { font-weight: 400; font-size: 11px; color: #64748B; }
+
+  .bmi-table {
+    width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px;
+    border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .bmi-table th { padding: 10px 14px; text-align: left; font-weight: 600; background: #1E40AF; color: white; }
+  .bmi-table td { padding: 8px 14px; border-bottom: 1px solid #E2E8F0; }
+  .bmi-under td { background: #EFF6FF; }
+  .bmi-normal td { background: #F0FDF4; }
+  .bmi-over td { background: #FFFBEB; }
+  .bmi-obese td { background: #FAF5FF; }
+
+  .anemia-table {
+    width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px;
+    border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .anemia-table th { padding: 10px 14px; text-align: left; font-weight: 600; background: #991B1B; color: white; }
+  .anemia-table td { padding: 8px 14px; border-bottom: 1px solid #E2E8F0; }
+  .anemia-none td { background: #F0FDF4; }
+  .anemia-mild td { background: #FEF9C3; }
+  .anemia-mod td { background: #FED7AA; }
+  .anemia-sev td { background: #FECACA; }
+
+  /* ── Dietary Screening Questionnaire Infographic ── */
+  .questionnaire-infographic {
+    background: #fff; border: 2px solid #CBD5E1; border-radius: 16px;
+    padding: 20px; margin: 14px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  .q-header {
+    font-size: 17px; font-weight: 700; color: #0B3D6B; margin-bottom: 4px;
+  }
+  .q-subhead {
+    font-size: 14px; color: #64748B; margin-bottom: 14px; font-weight: 500;
+    font-style: italic;
+  }
+  .q-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    border-radius: 10px; overflow: hidden;
+  }
+  .q-table th {
+    padding: 10px 12px; text-align: left; font-weight: 600;
+    border: 1px solid #E2E8F0; font-size: 13px;
+  }
+  .q-col-q { background: #F1F5F9; color: #1E293B; width: 40%; }
+  .q-col-0 { background: #166534; color: #fff; width: 20%; }
+  .q-col-1 { background: #92400E; color: #fff; width: 20%; }
+  .q-col-2 { background: #991B1B; color: #fff; width: 20%; }
+  .q-table th span { font-size: 11px; font-weight: 400; opacity: 0.85; }
+  .q-table td {
+    padding: 8px 12px; border: 1px solid #E2E8F0; vertical-align: middle;
+  }
+  .q-cell-q { background: #FAFBFC; font-weight: 500; }
+  .q-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #0B3D6B; color: #fff; font-weight: 700;
+    font-size: 12px; margin-right: 8px; flex-shrink: 0;
+  }
+  .q-cell-0 { background: #F0FDF4; color: #166534; font-weight: 500; }
+  .q-cell-1 { background: #FFFBEB; color: #92400E; font-weight: 500; }
+  .q-cell-2 { background: #FEF2F2; color: #991B1B; font-weight: 500; }
+  .q-table tr:hover td { filter: brightness(0.96); }
+
+  .q-footer { margin-top: 16px; padding-top: 14px; border-top: 2px dashed #E2E8F0; }
+  .q-score-box { text-align: center; }
+  .q-score-box strong { font-size: 15px; color: #1E293B; display: block; margin-bottom: 10px; }
+  .q-score-bar {
+    display: flex; justify-content: center; gap: 0;
+    border-radius: 30px; overflow: hidden;
+    max-width: 420px; margin: 0 auto 6px;
+  }
+  .q-score-bar span {
+    flex: 1; text-align: center; padding: 6px 0;
+    font-weight: 600; font-size: 14px;
+  }
+  .q-score-0 { background: #22C55E; color: #052E16; }
+  .q-score-1 { background: #FBBF24; color: #451A03; }
+  .q-score-2 { background: #EF4444; color: #450A0A; }
+  .q-score-label {
+    display: flex; justify-content: center; gap: 0;
+    max-width: 420px; margin: 0 auto; font-size: 12px;
+  }
+  .q-score-label span { flex: 1; text-align: center; }
+  .q-score-label-0 { color: #16A34A; font-weight: 600; }
+  .q-score-label-1 { color: #D97706; font-weight: 600; }
+  .q-score-label-2 { color: #DC2626; font-weight: 600; }
+
+  ul, ol { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 4px; }
+
+  .supplement-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 12px 0;
+  }
+  .supp-card {
+    padding: 16px; border-radius: 12px; border: 2px solid #E2E8F0;
+    text-align: center;
+  }
+  .supp-card h4 { font-size: 15px; margin-bottom: 6px; }
+  .supp-iron { border-color: #FCA5A5; background: #FEF2F2; }
+  .supp-folate { border-color: #86EFAC; background: #F0FDF4; }
+  .supp-calcium { border-color: #93C5FD; background: #EFF6FF; }
+
+  .footer {
+    text-align: center; color: #94A3B8; font-size: 13px;
+    padding: 20px; border-top: 1px solid #E2E8F0; margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .card-grid, .card-grid-3, .card-grid-4 { grid-template-columns: 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .supplement-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 26px; }
+    .container { padding: 12px; }
+    .section { padding: 16px; }
+    .img-frame img { max-width: 100%; }
+    .q-table { font-size: 12px; }
+    .q-table td, .q-table th { padding: 6px 8px; }
+    .q-num { width: 18px; height: 18px; font-size: 10px; margin-right: 4px; }
+    .q-score-bar { max-width: 100%; }
+  }
+
+  @media print {
+    body { background: white; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .bmi-table, .anemia-table { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="topic-badge">FM Topic 3</div>
+    <h1>Nutritional Care During Pregnancy</h1>
+    <p>Nutritional Assessment · Education · Supplementation · Correction of Deficiencies</p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <div class="toc-grid">
+      <div class="toc-item"><a href="#s1">§1 ILOs</a></div>
+      <div class="toc-item"><a href="#s2">§2 Introduction &amp; Preparation</a></div>
+      <div class="toc-item"><a href="#s3">§3 Components of Nutritional Care</a></div>
+      <div class="toc-item"><a href="#s4">§4 Nutritional Assessment</a></div>
+      <div class="toc-item"><a href="#s5">§5 Weight Gain &amp; Anemia Tables</a></div>
+      <div class="toc-item"><a href="#s6">§6 Nutrition Education</a></div>
+      <div class="toc-item"><a href="#s7">§7 Food Guide Pyramid</a></div>
+      <div class="toc-item"><a href="#s8">§8 Supplementation</a></div>
+      <div class="toc-item"><a href="#s9">§9 Correction of Anemia</a></div>
+      <div class="toc-item"><a href="#s10">§10 Folate Deficiency</a></div>
+      <div class="toc-item"><a href="#s11">§11 Review Questions</a></div>
+    </div>
+  </div>
+
+  <!-- §1 ILOs -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>ILOs</h2>
+    </div>
+    <ul>
+      <li>Describe the components of nutritional care during pregnancy</li>
+      <li>Conduct nutritional assessment for a pregnant woman</li>
+      <li>Provide appropriate nutritional counselling and supplementation</li>
+      <li>Recognize and manage nutritional deficiencies (anemia, folate deficiency)</li>
+    </ul>
+  </div>
+
+  <!-- §2 Introduction & Preparation -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Introduction &amp; Pre-pregnancy Preparation</h2>
+    </div>
+    <div class="alert alert-blue">
+      <div class="alert-label">KEY POINT</div>
+      Maternal nutrition before and during pregnancy influences the course of pregnancy, fetal development, and the child's health in early and adult life. Maternal underweight before pregnancy (BMI &lt;19.8 kg/m²) and low pregnancy weight gain increase risk of low infant birth weight.
+    </div>
+    <div class="card-grid">
+      <div class="card card-navy">
+        <div class="card-title">Pre-pregnancy Preparation</div>
+        <ol>
+          <li>Achieve and maintain healthy body weight</li>
+          <li>Choose an adequate and balanced diet</li>
+          <li>Be physically active</li>
+          <li>Receive regular medical care</li>
+          <li>Manage chronic conditions</li>
+        </ol>
+      </div>
+      <div class="card card-green">
+        <div class="card-title">Energy &amp; Nutrition Requirements</div>
+        <ul>
+          <li>To meet basic metabolic needs</li>
+          <li>Blood production and cell growth</li>
+          <li>Fetal growth and development</li>
+          <li>Maternal red blood cell mass</li>
+          <li>DNA and new cell synthesis (Folate, Vitamin B12, Iron, Zinc)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- §3 Components -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Components of Nutritional Care During Pregnancy</h2>
+    </div>
+    <div class="card-grid-4">
+      <div class="card card-blue"><strong>① Nutritional Assessment</strong><br>History, exam, lab</div>
+      <div class="card card-green"><strong>② Nutrition Education</strong><br>Food pyramid, healthy eating</div>
+      <div class="card card-purple"><strong>③ Nutrition Supplementation</strong><br>Iron, folate, calcium</div>
+      <div class="card card-orange"><strong>④ Correction of Deficiencies</strong><br>Anemia, folate deficiency</div>
+    </div>
+  </div>
+
+  <!-- §4 Nutritional Assessment -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Nutritional Assessment</h2>
+    </div>
+
+    <div class="subsection-title">A. History</div>
+    <div class="alert alert-orange">
+      <div class="alert-label">DIETARY HISTORY</div>
+      <strong>24-hour recall method:</strong> useful for semi-quantitative/qualitative analysis to identify expected major deficiencies.<br>
+      <strong>Screening questionnaire</strong> (Table 1) — assesses healthy eating habits. Scores 0–16; lower = better diet.
+    </div>
+
+    <div class="questionnaire-infographic">
+      <div class="q-header">Table 1: Dietary Screening Questionnaire — Assessing Healthy Eating in Pregnancy</div>
+      <div class="q-subhead">Over the past few months:</div>
+
+      <table class="q-table">
+        <thead>
+          <tr>
+            <th class="q-col-q">Question</th>
+            <th class="q-col-0">0 points<br><span>Healthiest</span></th>
+            <th class="q-col-1">1 point<br><span>Moderate</span></th>
+            <th class="q-col-2">2 points<br><span>Least Healthy</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">1</span> How many times a week do you eat fast food meals or snacks?</td>
+            <td class="q-cell-0"> Less than one time</td>
+            <td class="q-cell-1"> One to three times</td>
+            <td class="q-cell-2"> Four or more times</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">2</span> How many servings of fruit did you eat each day?</td>
+            <td class="q-cell-0"> Five or more</td>
+            <td class="q-cell-1"> Three to four</td>
+            <td class="q-cell-2"> Two or less</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">3</span> How many servings of vegetables did you eat each day?</td>
+            <td class="q-cell-0"> Five or more</td>
+            <td class="q-cell-1"> Three to four</td>
+            <td class="q-cell-2"> Two or less</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">4</span> How many regular sodas or glasses of sweet tea did you drink each day?</td>
+            <td class="q-cell-0"> Less than one</td>
+            <td class="q-cell-1"> One to two</td>
+            <td class="q-cell-2"> Three or more</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">5</span> How many times a week did you eat beans, chicken, or fish?</td>
+            <td class="q-cell-0"> Three or more times</td>
+            <td class="q-cell-1"> One to two times</td>
+            <td class="q-cell-2"> Less than one time</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">6</span> How many times a week did you eat regular snack chips or crackers (not low-fat)?</td>
+            <td class="q-cell-0"> One time or less</td>
+            <td class="q-cell-1"> Two to three times</td>
+            <td class="q-cell-2"> Four or more times</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">7</span> How many times a week did you eat desserts and other sweets (not the low-fat kind)?</td>
+            <td class="q-cell-0"> One time or less</td>
+            <td class="q-cell-1"> Two to three times</td>
+            <td class="q-cell-2"> Four or more times</td>
+          </tr>
+          <tr>
+            <td class="q-cell-q"><span class="q-num">8</span> How much margarine, butter, or meat fat do you use to season vegetables or put on potatoes, bread, or corn?</td>
+            <td class="q-cell-0"> Very little</td>
+            <td class="q-cell-1"> Some</td>
+            <td class="q-cell-2"> A lot</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="q-footer">
+        <div class="q-score-box">
+          <strong>Summary score (sum of all items)</strong>
+          <div class="q-score-bar">
+            <span class="q-score-0">0–5</span>
+            <span class="q-score-1">6–10</span>
+            <span class="q-score-2">11–16</span>
+          </div>
+          <div class="q-score-label">
+            <span class="q-score-label-0">Good dietary habits</span>
+            <span class="q-score-label-1">Moderate</span>
+            <span class="q-score-label-2">Poor — needs counselling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-blue">
+      <div class="alert-label">MEDICAL, SURGICAL &amp; OBSTETRIC HISTORY</div>
+      Conditions causing nutrition-related health risks (Table 2):
+    </div>
+    <div class="card-grid">
+      <div class="card card-red">
+        <div class="card-title">Medical Conditions</div>
+        Type 1/2 diabetes, inborn metabolic errors (PKU, maple syrup urine disease)
+      </div>
+      <div class="card card-pink">
+        <div class="card-title">Obstetric History</div>
+        Previous child with NTD, gestational diabetes, hyperemesis gravidarum, hypertensive disorders, multifetal pregnancy
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">Surgical / GI</div>
+        Bariatric surgery, bowel resection, Crohn disease, ulcerative colitis, cystic fibrosis, celiac disease
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">Lifestyle &amp; Diet</div>
+        Obesity/overweight, eating disorders (past/current), supplement use, food avoidances, skipping meals, lack of resources, low nutrient-dense foods, high added sugars/fats, cigarettes, alcohol, illicit drugs
+      </div>
+    </div>
+
+    <div class="subsection-title">B. Physical Examination</div>
+    <div class="alert alert-green">
+      <div class="alert-label">BMI ASSESSMENT</div>
+      Centers on height and weight to calculate BMI. Use pre-pregnancy weight (at last menstrual period) as baseline. Weight gain is monitored throughout pregnancy.
+    </div>
+
+    <div class="subsection-title">C. Laboratory Investigations</div>
+    <div class="card-grid">
+      <div class="card card-red">
+        <div class="card-title">Hemoglobin / Hematocrit</div>
+        Routinely checked at first visit and late 2nd/early 3rd trimester to assess for anemia.
+        <div style="margin-top:6px;font-size:13px;">
+          Anemia in pregnancy (Hb &lt;11 g/dL by Egyptian guidelines):
+          <ul style="padding-left:14px;">
+            <li>1st trimester: Hb &lt;11 g/dL</li>
+            <li>2nd trimester: Hb &lt;10.5 g/dL</li>
+            <li>3rd trimester: Hb &lt;11 g/dL</li>
+            <li>Postpartum: Hb &lt;10 g/dL</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card card-cyan">
+        <div class="card-title">Vitamin D</div>
+        Routine broad-based screening not necessary. Measure in: obesity, minimal sun exposure, malabsorption (celiac, IBD), northern latitudes, vegan diet, dark skin.
+      </div>
+    </div>
+  </div>
+
+  <!-- §5 Weight Gain & Anemia Tables -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Weight Gain &amp; Anemia Classification Tables</h2>
+    </div>
+
+    <div class="subsection-title">Gestational Weight Gain (National Academy of Medicine)</div>
+    <table class="bmi-table">
+      <thead>
+        <tr>
+          <th>Pre-pregnancy BMI</th>
+          <th>Total Weight Gain (kg)</th>
+          <th>Mean Rate (kg/wk)*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bmi-under">
+          <td><strong>Underweight</strong> (&lt;18.5 kg/m²)</td>
+          <td>12.5 – 18 kg</td>
+          <td>0.51</td>
+        </tr>
+        <tr class="bmi-normal">
+          <td><strong>Normal</strong> (18.5 – 24.9 kg/m²)</td>
+          <td>11.5 – 16 kg</td>
+          <td>0.42</td>
+        </tr>
+        <tr class="bmi-over">
+          <td><strong>Overweight</strong> (25 – 29.9 kg/m²)</td>
+          <td>7 – 11.5 kg</td>
+          <td>0.28</td>
+        </tr>
+        <tr class="bmi-obese">
+          <td><strong>Obese</strong> (≥30 kg/m²)</td>
+          <td>5 – 9 kg</td>
+          <td>0.22</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#64748B;">* Assumes 0.5–2 kg weight gain in the first trimester</p>
+
+    <div class="subsection-title">Classification of Anemia During Pregnancy</div>
+    <table class="anemia-table">
+      <thead>
+        <tr>
+          <th>Level of Anemia</th>
+          <th>Hemoglobin (g/dL)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="anemia-none">
+          <td>No anemia</td>
+          <td>≥ 11</td>
+        </tr>
+        <tr class="anemia-mild">
+          <td>Mild</td>
+          <td>10 – 10.9</td>
+        </tr>
+        <tr class="anemia-mod">
+          <td>Moderate</td>
+          <td>7 – 9.9</td>
+        </tr>
+        <tr class="anemia-sev">
+          <td>Severe</td>
+          <td>&lt; 7</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- §6 Nutrition Education -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Nutrition Education</h2>
+    </div>
+    <div class="alert alert-green">
+      <div class="alert-label">OPPORTUNITY</div>
+      Nutrition education during pregnancy provides an excellent opportunity to improve the nutritional status for the whole family.
+    </div>
+    <p><strong>Key components of healthy eating:</strong></p>
+    <div class="card-grid">
+      <div class="card card-blue">Limit added sugars, saturated fat, and sodium</div>
+      <div class="card card-green">Appropriate vitamin &amp; mineral supplementation</div>
+      <div class="card card-orange">Appropriate gestational weight gain</div>
+      <div class="card card-red">Avoid alcohol and harmful substances (e.g., mercury)</div>
+      <div class="card card-purple">Limit caffeine to &lt;200–300 mg/day</div>
+      <div class="card card-pink">Safe food handling — avoid foodborne infections (congenital disease, miscarriage, preterm labor, fetal death)</div>
+    </div>
+  </div>
+
+  <!-- §7 Food Guide Pyramid -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Food Guide Pyramid During Pregnancy</h2>
+    </div>
+
+    <div class="img-frame">
+      <img src="../extracted_images/03_nutritional_care/food_pyramid.jpg" alt="Food Guide Pyramid During Pregnancy">
+      <div class="caption">Figure (1): The Food Guide Pyramid During Pregnancy</div>
+    </div>
+
+    <p style="margin:12px 0;">The general principle is to select foods according to the Food Guide Pyramid with modifications:</p>
+
+    <div class="card-grid-4">
+      <div class="card card-navy">
+        <div class="card-title">🥖 Base: Cereals</div>
+        Bread, rice, pasta.<br>
+        <strong>6–11 servings/day</strong>
+      </div>
+      <div class="card card-green">
+        <div class="card-title">🥦 Vegetables &amp; Fruits</div>
+        Vitamins, minerals, fiber. Deep green veg = iron source. Colored veg/fruits + dairy + egg yolk + liver = vitamin A.<br>
+        <strong>Veg: 3–5, Fruit: 3–4 servings/day</strong>
+      </div>
+      <div class="card card-cyan">
+        <div class="card-title">🥛 Milk Group</div>
+        Milk, yogurt, cheese, milk-based desserts (mehlabeya). Fat-free cheese (Gebna Kareesh) is useful — low salt.<br>
+        <strong>4 servings/day</strong>
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">🥩 Meat &amp; Protein</div>
+        Meat, poultry, eggs, beans supply proteins.<br>
+        <strong>3–4 servings/day</strong>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card card-amber">
+        <div class="card-title">🫒 Fats (Top Layer)</div>
+        If mother receives enough animal protein (⅔ of protein requirements), fat content is adequate.<br>
+        <strong>Occasionally</strong>
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">💧 Water</div>
+        Pregnant mothers should receive enough water daily.
+      </div>
+    </div>
+  </div>
+
+  <!-- §8 Supplementation -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Nutrition Supplementation</h2>
+    </div>
+
+    <div class="supplement-grid">
+      <div class="supp-card supp-iron">
+        <h4>💊 Iron</h4>
+        <p style="font-size:13px;">All pregnant mothers (after 3 months):<br>
+        <strong>220 mg ferrous fumarate/sulphate</strong> + folic acid once daily</p>
+        <div class="alert alert-orange" style="margin-top:6px;padding:6px 10px;font-size:11px;">
+          <strong>NICE note:</strong> Iron supplementation should not be offered routinely to all — may not benefit and may have unpleasant side effects.
+        </div>
+      </div>
+      <div class="supp-card supp-folate">
+        <h4>💊 Folic Acid</h4>
+        <p style="font-size:13px;">
+          <strong>Routine:</strong> 400 µg (0.4 mg) once daily<br>
+          <strong>High-risk (NTD):</strong> 4 mg once daily prior to conception through first 12 weeks<br>
+          Multivitamins may also be given
+        </p>
+      </div>
+      <div class="supp-card supp-calcium">
+        <h4>💊 Calcium</h4>
+        <p style="font-size:13px;">If unsure the mother consumes enough milk:<br>
+        <strong>500 mg tablets twice daily</strong> in the 2nd trimester</p>
+      </div>
+    </div>
+
+    <div class="alert alert-red">
+      <div class="alert-label">⚠ WARNING — VITAMIN A</div>
+      Pregnant women should be informed that vitamin A supplementation (intake above 700 micrograms) might be <strong>teratogenic</strong> and should therefore be avoided.
+    </div>
+  </div>
+
+  <!-- §9 Correction of Anemia -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Correction of Nutritional Deficiencies — Anemia</h2>
+    </div>
+    <div class="alert alert-red">
+      <div class="alert-label">MOST COMMON</div>
+      The most common deficiency is anemia. Correction by higher doses of iron + folic acid.
+    </div>
+
+    <div class="subsection-title">Curative Management of Iron Deficiency Anemia</div>
+    <ul>
+      <li>Give <strong>ferrous fumarate or sulphate 200 mg 3 times daily</strong></li>
+      <li>GI intolerance: change to another variety or decrease dose</li>
+      <li>Improve absorption: avoid coffee, tea, milk at the time of iron intake</li>
+    </ul>
+
+    <div class="subsection-title">Oral vs IV Iron</div>
+    <div class="card-grid">
+      <div class="card card-green">
+        <div class="card-title">Oral Iron (First-Line)</div>
+        Used for most pregnant women with iron deficiency who can tolerate it. Used for all individuals in the 1st trimester.
+      </div>
+      <div class="card card-purple">
+        <div class="card-title">IV Iron — Indications</div>
+        <ul style="padding-left:14px;">
+          <li>Beyond 1st trimester &amp; cannot tolerate oral iron</li>
+          <li>Severe or symptomatic anemia (especially later in pregnancy)</li>
+          <li>Oral iron ineffective (impaired absorption/adherence)</li>
+          <li>Can fully correct deficiency in a single administration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subsection-title">Assessing Response to Treatment</div>
+    <div class="card-grid-3">
+      <div class="card card-green">
+        <div class="card-title">1 Week</div>
+        Start reticulocytosis
+      </div>
+      <div class="card card-orange">
+        <div class="card-title">2–3 Weeks</div>
+        Hb increase ≥ 1 g/dL
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Within 3 Weeks</div>
+        Serum ferritin → normal range
+      </div>
+    </div>
+    <p style="margin-top:6px;">Response is similar with oral or IV. Reasons for lack of response: non-adherence, reduced absorption, ongoing bleeding, or other cause of anemia.</p>
+
+    <div class="alert alert-red">
+      <div class="alert-label">REFERRAL INDICATIONS</div>
+      <ul>
+        <li>Hb &lt; 7 g/dL</li>
+        <li>Intolerance to oral iron</li>
+        <li>Persistent anemia</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- §10 Folate Deficiency -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>Folate Deficiency</h2>
+    </div>
+    <div class="alert alert-orange">
+      <div class="alert-label">MOST COMMON CAUSE</div>
+      Folate deficiency is the most common cause of megaloblastic anemia during pregnancy, often associated with diets low in animal proteins, fresh leafy vegetables, and legumes.
+    </div>
+
+    <div class="subsection-title">Effects on Pregnancy Outcome</div>
+    <div class="card-grid">
+      <div class="card card-red">
+        <div class="card-title">🧠 Neural Tube Defect</div>
+        Incomplete closure of neural tube
+      </div>
+      <div class="card card-red">
+        <div class="card-title">🫁 Anencephaly</div>
+        Brain is either missing or fails to develop
+      </div>
+      <div class="card card-red">
+        <div class="card-title">🦴 Spina Bifida</div>
+        Incomplete closure of spinal cord &amp; its bony encasement
+      </div>
+    </div>
+
+    <div class="subsection-title">Folic Acid Supplementation Recommendations</div>
+    <ul>
+      <li><strong>Periconceptional/first-trimester:</strong> reduce occurrence and recurrence of NTDs</li>
+      <li><strong>Most women:</strong> 0.4 mg folic acid once daily beginning at least 1 month prior to conception through first trimester</li>
+      <li><strong>All women of childbearing potential</strong> (not just those attempting to conceive) should receive folic acid — unplanned pregnancies are common and neural tube closes very early</li>
+      <li><strong>Previous NTD or NTD in either parent:</strong> 4 mg once daily from at least 1 month prior to conception through first trimester, then decrease to 0.4 mg/day after 1st trimester</li>
+      <li>Measurement of maternal folate levels before or after supplementation is <strong>not recommended</strong></li>
+      <li>In the absence of vitamin B12 deficiency, there are <strong>no clear harms</strong> from folic acid supplementation</li>
+    </ul>
+  </div>
+
+  <!-- §11 Review Questions -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <h2>Review Questions</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card card-blue">
+        <div class="card-title">Q1</div>
+        Describe the components of nutritional care during pregnancy.
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q2</div>
+        What are the recommended weight gain ranges for each BMI category?
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q3</div>
+        Classify anemia during pregnancy by hemoglobin level.
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q4</div>
+        What are the routine iron and folic acid supplementation doses?
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q5</div>
+        List the effects of folate deficiency on pregnancy outcome.
+      </div>
+      <div class="card card-blue">
+        <div class="card-title">Q6</div>
+        What are the indications for IV iron administration in pregnancy?
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>FM Topic 3 — Nutritional Care During Pregnancy</strong> · Family Medicine Review</p>
+    <p>Source: FM-OBS Book (Pages 20-28)</p>
+    <p style="margin-top:6px;">
+      <span style="display:inline-block;background:#22C55E;color:white;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;">✓ Quality Reviewed</span>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

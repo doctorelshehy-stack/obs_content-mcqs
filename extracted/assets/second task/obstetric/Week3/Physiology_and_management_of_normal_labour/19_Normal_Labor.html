@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 19 — Physiology and Management of Normal Labor</title>
+<style>
+  :root{
+    --ink:#1F2A44; --muted:#5C6B86; --bg:#F7F9FC; --card:#FFFFFF;
+    --primary:#1F6FEB; --primary-soft:#E8F0FE; --accent:#0E7C66; --accent-soft:#E1F4EE;
+    --warn:#B45309; --warn-soft:#FEF3C7; --danger:#B91C1C; --danger-soft:#FEE2E2;
+    --pearl:#7C3AED; --pearl-soft:#EDE9FE; --note:#0E7490; --note-soft:#CFFAFE;
+    --border:#D9E1EE; --soft:#EEF2F8;
+    --src:#1F6FEB; --src-bg:#E8F0FE;       /* blue  — SOURCE visuals */
+    --ext:#0E7C66; --ext-bg:#E1F4EE;       /* green — EXTERNAL visuals */
+    --shadow:0 1px 2px rgba(31,42,68,.06), 0 4px 14px rgba(31,42,68,.06);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1180px;margin:0 auto;padding:36px 28px 80px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,#0B3D91 0%,#1F6FEB 60%,#3B82F6 100%);
+    color:#fff;border-radius:18px;padding:32px 36px;box-shadow:var(--shadow);
+    margin-bottom:28px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+    background:radial-gradient(circle,rgba(255,255,255,.18),transparent 60%);}
+  .hero .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85;font-weight:600;}
+  .hero h1{margin:8px 0 6px;font-size:34px;line-height:1.18;font-weight:800;}
+  .hero .sub{opacity:.95;font-size:15px;max-width:780px;}
+  .chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    color:#fff;font-size:12px;padding:5px 10px;border-radius:999px;font-weight:600;}
+
+  /* ---------- TOC ---------- */
+  .toc{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:18px 22px;box-shadow:var(--shadow);margin-bottom:28px;}
+  .toc h2{margin:0 0 10px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:30px;}
+  .toc li{margin:4px 0;break-inside:avoid;}
+  .toc a{color:var(--primary);text-decoration:none;font-weight:600;font-size:14px;}
+  .toc a:hover{text-decoration:underline;}
+
+  /* ---------- Section ---------- */
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:24px 28px;box-shadow:var(--shadow);margin-bottom:22px;scroll-margin-top:20px;}
+  section h2{margin:0 0 14px;font-size:22px;color:var(--ink);
+    border-left:5px solid var(--primary);padding-left:12px;font-weight:800;}
+  section h3{margin:18px 0 8px;font-size:16px;color:var(--primary);font-weight:700;}
+  section p{margin:8px 0;color:#243049;}
+  section ul,section ol{margin:8px 0 8px 22px;padding:0;}
+  section li{margin:4px 0;}
+
+  /* ---------- Sub-blocks ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .card{background:var(--soft);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .card h4{margin:0 0 6px;font-size:14px;color:var(--ink);font-weight:700;}
+  .card p, .card li{font-size:14px;color:#243049;}
+  .card.alt{background:#F0F4FB;}
+
+  /* ---------- Table ---------- */
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px;
+    background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+  th,td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--primary-soft);color:var(--ink);font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.04em;}
+  tr:nth-child(even) td{background:#FAFBFE;}
+  td.center, th.center{text-align:center;}
+
+  /* ---------- Callouts ---------- */
+  .pearl,.warn,.danger,.note{border-radius:10px;padding:12px 16px;margin:14px 0;
+    border-left:6px solid;font-size:14px;}
+  .pearl{background:var(--pearl-soft);border-color:var(--pearl);color:#4C1D95;}
+  .warn{background:var(--warn-soft);border-color:var(--warn);color:#7C2D12;}
+  .danger{background:var(--danger-soft);border-color:var(--danger);color:#7F1D1D;}
+  .note{background:var(--note-soft);border-color:var(--note);color:#155E75;}
+  .pearl::before{content:"💎 PEARL  ";font-weight:800;letter-spacing:.04em;}
+  .warn::before{content:"⚠ WARN   ";font-weight:800;letter-spacing:.04em;}
+  .danger::before{content:"⛔ DANGER ";font-weight:800;letter-spacing:.04em;}
+  .note::before{content:"📝 NOTE   ";font-weight:800;letter-spacing:.04em;}
+
+  /* ---------- Visual markers ---------- */
+  .src-viz{background:var(--src-bg);border:2px dashed var(--src);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .ext-viz{background:var(--ext-bg);border:2px dashed var(--ext);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .src-viz .tag,.ext-viz .tag{display:inline-block;font-size:11px;font-weight:800;
+    letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+    margin-bottom:8px;}
+  .src-viz .tag{background:var(--src);color:#fff;}
+  .ext-viz .tag{background:var(--ext);color:#fff;}
+  .viz-caption{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px;}
+  .src-viz img,.ext-viz img{max-width:100%;height:auto;display:block;margin:6px auto 0;border-radius:6px;}
+
+  /* ---------- Misc ---------- */
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;}
+  .pill{background:var(--primary-soft);color:var(--primary);font-size:12px;font-weight:700;
+    padding:4px 10px;border-radius:999px;border:1px solid #BFD3F5;}
+  .pill.alt{background:var(--accent-soft);color:var(--accent);border-color:#B7E4D4;}
+  .pill.warn{background:var(--warn-soft);color:var(--warn);border-color:#FCD9A1;}
+  .pill.danger{background:var(--danger-soft);color:var(--danger);border-color:#F4B8B8;}
+
+  .meta{font-size:12px;color:var(--muted);margin-top:6px;}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:30px;text-align:center;color:var(--muted);font-size:12px;}
+
+  @media (max-width:900px){
+    .grid2,.grid3,.grid4{grid-template-columns:1fr;}
+    .toc ol{columns:1;}
+    .hero h1{font-size:26px;}
+  }
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ============================================================ HERO -->
+  <header class="hero">
+    <div class="kicker">Topic 19 · Chapter 19</div>
+    <h1>Physiology and Management of Normal Labor</h1>
+    <div class="sub">Definition of labor, causes of onset, the four functional stages, the partogram/friedman curve, mechanism of labor, and the active management protocol — from first contraction to placental separation.</div>
+    <div class="chips">
+      <span class="chip">9 source pages · 297 lines</span>
+      <span class="chip">4 functional stages</span>
+      <span class="chip">7 cardinal movements</span>
+      <span class="chip">Friedman curve included</span>
+      <span class="chip">Active vs Expectant management</span>
+      <span class="chip">1 source diagram (Friedman curve)</span>
+    </div>
+  </header>
+
+  <!-- ============================================================ TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of contents</h2>
+    <ol>
+      <li><a href="#s1">Intended learning outcomes (ILOs)</a></li>
+      <li><a href="#s2">Definitions &amp; causes of onset of labor</a></li>
+      <li><a href="#s3">Prelabor — the premonitory stage</a></li>
+      <li><a href="#s4">True vs False labor pains</a></li>
+      <li><a href="#s5">The four functional stages of labor</a></li>
+      <li><a href="#s6">Uterine contractions &amp; Friedman curve</a></li>
+      <li><a href="#s7">Physiology of the first stage</a></li>
+      <li><a href="#s8">Abnormalities of the latent &amp; active phases</a></li>
+      <li><a href="#s9">Second stage &amp; mechanism of labor</a></li>
+      <li><a href="#s10">Third stage, fourth stage &amp; placental separation</a></li>
+      <li><a href="#s11">Active management — history, exam, investigations</a></li>
+      <li><a href="#s12">Active procedures &amp; care of the newborn</a></li>
+      <li><a href="#s13">Student activity · Questions · References</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================================================ s1 -->
+  <section id="s1">
+    <h2>1 · Intended Learning Outcomes (ILOs)</h2>
+    <p>At the end of this chapter the student should be able to:</p>
+    <ul>
+      <li>To understand the definition of labor and its causes</li>
+      <li>To be able to describe physiological changes of labor</li>
+      <li>To be able to explain the mechanism of labor</li>
+      <li>To be able to outline the active management of labor</li>
+    </ul>
+  </section>
+
+  <!-- ============================================================ s2 -->
+  <section id="s2">
+    <h2>2 · Definitions &amp; causes of onset of labor</h2>
+
+    <h3>Normal labor</h3>
+    <p><strong>Definition:</strong> It is the process of spontaneous delivery of single full term viable fetus presented by the vertex through the birth canal within reasonable time without interference or complications to the mother or the fetus.</p>
+
+    <h3>Abnormal labor (dystocia)</h3>
+    <p>Any deviation from the definition of normal labor is called abnormal labor.</p>
+
+    <h3>Causes of onset of labor</h3>
+    <div class="grid2">
+      <div class="card">
+        <h4>1 — Hormonal factors</h4>
+        <p>↑ Estrogen, ↓ Progesterone, ↑ Prostaglandin F2α and ↑ Oxytocin → uterine contraction.</p>
+      </div>
+      <div class="card alt">
+        <h4>2 — Mechanical factors</h4>
+        <p>Uterine distension and stretch of the lower uterine segment → uterine contraction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ s3 -->
+  <section id="s3">
+    <h2>3 · Prelabor — the premonitory stage</h2>
+    <p><strong>Prelabor</strong> is the premonitory stage of labor and begins 2–3 weeks before the onset of true labor in primigravida and a few days before in multipara.</p>
+    <p>It is associated with an increase in <strong>oxytocin receptors</strong> in myometrium.</p>
+
+    <h3>Changes seen during prelabor</h3>
+    <div class="grid3">
+      <div class="card">
+        <h4>Lightening</h4>
+        <p>The decrease in fundal height seen at term. This is due to the descend of presenting part into the pelvis.</p>
+      </div>
+      <div class="card">
+        <h4>Cervical ripening</h4>
+        <p>Softening of the cervix.</p>
+      </div>
+      <div class="card">
+        <h4>False labor pains</h4>
+        <p>Irregular contractions that do not produce cervical change (see comparison below).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ s4 -->
+  <section id="s4">
+    <h2>4 · True vs False labor pains</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>True labor pains</th>
+          <th>False labor pains</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cervical changes</strong> (dilatation and effacement)</td>
+          <td>Present</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>Frequency and duration of contractions</td>
+          <td>Regular and gradually increase</td>
+          <td>Irregular</td>
+        </tr>
+        <tr>
+          <td>Pain</td>
+          <td>Lower abdomen and back, radiating to thighs</td>
+          <td>Lower abdominal only</td>
+        </tr>
+        <tr>
+          <td>Bag of water</td>
+          <td>Formed</td>
+          <td>Not formed</td>
+        </tr>
+        <tr>
+          <td>Show</td>
+          <td>Present</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>Relief with enema / sedation</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============================================================ s5 -->
+  <section id="s5">
+    <h2>5 · The four functional stages of labor</h2>
+    <p>Onset of true labor is characterized by:</p>
+    <ul>
+      <li>Appearance of true labor pain.</li>
+      <li>Appearance of show.</li>
+    </ul>
+    <p>True labor is divided into four functional stages:</p>
+
+    <div class="grid4">
+      <div class="card">
+        <h4>First stage</h4>
+        <p>Starts with onset of true labor pain and ends with full dilatation of cervix (10&nbsp;cm). Duration is <strong>12 hours in primi</strong> and <strong>6 hours in multipara</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Second stage</h4>
+        <p>Starts with full dilatation of cervix and ends with expulsion of fetus from birth canal. Duration is <strong>1–2 hours in primi</strong> and <strong>30 minutes in multipara</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Third stage</h4>
+        <p>Begins after expulsion of fetus and ends with expulsion of placenta and membranes (after births). Duration is about <strong>15 minutes</strong> in both primi &amp; multipara. The duration is reduced to <strong>5 minutes</strong> in active management.</p>
+      </div>
+      <div class="card">
+        <h4>Fourth stage</h4>
+        <p>1 hour observation period after the delivery of placenta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ s6 -->
+  <section id="s6">
+    <h2>6 · Uterine contractions &amp; Friedman curve</h2>
+
+    <h3>Uterine contractions</h3>
+    <ul>
+      <li>Throughout pregnancy, a pregnant female experiences contractions which are painless and irregular called as <strong>Braxton Hicks contractions</strong>.</li>
+      <li>During labor: the contractions are painful and lead to dilatation of cervix.</li>
+      <li>The <strong>pacemaker of uterine contractions</strong> is situated at the cornu (the right pacemaker predominates over the left).</li>
+      <li>Contractions spread from pacemaker area throughout uterus at <strong>2 cm/sec</strong>, depolarizing the whole organ within <strong>15 secs</strong>.</li>
+      <li>Contractions are predominant over the <strong>fundus</strong>.</li>
+    </ul>
+
+    <h3>Units for measuring uterine contractions</h3>
+    <ol>
+      <li>mmHg.</li>
+      <li><strong>Montevideo unit (MV unit)</strong> = Intensity of uterine contraction × number of contractions in 3 minutes.</li>
+    </ol>
+
+    <h3>The Friedman curve (cervical dilatation over time)</h3>
+    <div class="src-viz">
+      <span class="tag">Source visual</span>
+      <img src="../../../../extracted_images/19_normal_labor/img_000.jpg" alt="Friedman curve: sigmoid plot of cervical dilatation (cm) vs time (h) showing latent, active (with acceleration, maximum slope, deceleration sub-phases) and second stage" loading="lazy">
+      <div class="viz-caption">Figure 1 — Friedman curve. The pattern of cervical dilatation during the latent and active phase of normal labor is a sigmoid curve. This curve is called as Friedman curve.</div>
+    </div>
+  </section>
+
+  <!-- ============================================================ s7 -->
+  <section id="s7">
+    <h2>7 · Physiology of the first stage</h2>
+
+    <div class="grid2">
+      <div class="card">
+        <h4>Presentation</h4>
+        <p>The first part of the fetus felt by vaginal examination. It is cephalic in <strong>95%</strong>, breech in <strong>3.5%</strong> and shoulder in <strong>0.5%</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Lie</h4>
+        <p>The relation of the long axis of the fetus to the long axis of the mother. If the long axis of the fetus is parallel to that of the mother, it is a <strong>longitudinal lie (99%)</strong>. If it is perpendicular or oblique, it is a <strong>transverse or oblique lie (1%)</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Attitude</h4>
+        <p>The relation of the fetal parts to each other. Normally, the fetus is in an attitude of <strong>generalized flexion</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Position &amp; Denominator</h4>
+        <p>Position: the relation of certain point on the presenting part of the fetus (the denominator) to the back of the mother.</p>
+        <p>Denominator: is the occiput in vertex presentation, the chin in face, the frontal bone in brow, and the sacrum in breech presentation.</p>
+      </div>
+    </div>
+
+    <p><strong>Occipito-anterior (OA)</strong> position is more common than occipito-posterior (OP).<br>
+       <strong>Left OA</strong> is more common than right OA.</p>
+
+    <h3>First stage of labor — Latent vs Active stage</h3>
+    <p>The stage of cervical effacement and dilatation is further divided into 2 phases.</p>
+    <table>
+      <thead>
+        <tr><th>Latent stage</th><th>Active stage</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>It starts from true labor pains and ends when cervix is <strong>3 to 5 cm</strong> dilated. Its duration is <strong>12 hours in nulliparous</strong> and <strong>8 hours in multiparous</strong> females.</td>
+          <td>It begins with cervical dilatation of <strong>3–5 cm</strong>, with regular uterine contractions. Normal cervical dilatation rate in primi is <strong>1.2 cm/hr</strong> and <strong>1.5 cm/hr</strong> for multiparous women.</td>
+        </tr>
+        <tr>
+          <td>Mainly concerned with <strong>cervical effacement</strong>.</td>
+          <td>Mainly concerned with <strong>cervical dilatation</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Friedman sub-phases of the active phase</h3>
+    <table>
+      <thead>
+        <tr><th>Sub-phase</th><th>Cervical dilatation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Acceleration phase</td><td>3–4 cm</td></tr>
+        <tr><td>Phase of maximum slope</td><td>4–9 cm</td></tr>
+        <tr><td>Deceleration phase</td><td>9–10 cm</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============================================================ s8 -->
+  <section id="s8">
+    <h2>8 · Abnormalities of the latent &amp; active phases</h2>
+
+    <h3>Prolonged latent phase</h3>
+    <ul>
+      <li>Greater than <strong>20 hours in primi</strong>.</li>
+      <li>Greater than <strong>14 hours in multipara</strong>.</li>
+    </ul>
+    <h4>Causes</h4>
+    <ul>
+      <li>Excessive sedation or epidural analgesia.</li>
+      <li>Poor cervical conditions (e.g. thick, uneffaced or undilated).</li>
+      <li>False labor (most common cause in multipara).</li>
+    </ul>
+    <h4>Management — either of 2 options</h4>
+    <ul>
+      <li><strong>Therapeutic test:</strong> 15 mg of morphine is given intramuscularly. Most of the patients are asleep within 1 hour and awake 4 to 5 hours later, in active labour or in no labor.</li>
+      <li><strong>Oxytocin stimulation.</strong></li>
+    </ul>
+
+    <h3>Abnormalities of active phase</h3>
+    <p><strong>Protracted active phase</strong> = slow rate of cervical dilatation or descent of head.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Cervical dilatation</th>
+          <th>Descend of head</th>
+          <th>Management</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nulliparous</td>
+          <td class="center">&lt; 1.2 cm/hr</td>
+          <td class="center">&lt; 1 cm/hr</td>
+          <td rowspan="2" class="center">Expectant and support. If CPD is present → CS</td>
+        </tr>
+        <tr>
+          <td>multiparous</td>
+          <td class="center">&lt; 1.5 cm/hr</td>
+          <td class="center">&lt; 2 cm/hr</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Arrest disorders</h3>
+    <ul>
+      <li><strong>Arrest of dilatation:</strong> cessation of dilatation for <strong>2 or more hours</strong>.</li>
+      <li><strong>Arrest of descent:</strong> cessation of descent for <strong>1 or more hours</strong>.</li>
+    </ul>
+
+    <h4>Factors contributing to arrest and dilatation</h4>
+    <ul>
+      <li>Excessive sedation.</li>
+      <li>Epidural analgesia.</li>
+      <li>Fetal malposition.</li>
+      <li>CPD.</li>
+    </ul>
+    <div class="pearl">Treatment of protracted disorders is expectant management and oxytocin in absence of any cephalopelvic disproportion.</div>
+  </section>
+
+  <!-- ============================================================ s9 -->
+  <section id="s9">
+    <h2>9 · Second stage of labor &amp; mechanism of labor</h2>
+    <p>It begins from full dilatation of cervix and ends with expulsion of fetus. In the second stage, the expulsive efforts by a woman play more important role than uterine contractions.</p>
+
+    <h3>Second stage timing</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Parity</th>
+          <th>Normal</th>
+          <th>Prolonged without epidural</th>
+          <th>Prolonged with epidural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nulliparous</td>
+          <td class="center">1 hr</td>
+          <td class="center">2 hrs (+1 for arrest)</td>
+          <td class="center">3 hrs (+1 for arrest)</td>
+        </tr>
+        <tr>
+          <td>Multiparous</td>
+          <td class="center">30 mins</td>
+          <td class="center">1 hr (+1 for arrest)</td>
+          <td class="center">2 hrs (+1 for arrest)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>2nd stage arrest:</strong> when there is no change in descent of head for 1 hour more than prolonged.</p>
+
+    <h3>Mechanism of normal labor</h3>
+    <p><strong>A. Delivery of the head</strong> — includes the following movements:</p>
+    <ol>
+      <li><strong>Descent:</strong> caused by uterine contractions.</li>
+      <li><strong>Engagement:</strong> it is the passage of the widest transverse diameter of the presenting part (biparietal diameter in vertex presentation) through the pelvic brim.<br>
+        <em>Diagnosed by:</em>
+        <ul>
+          <li><strong>Abdominally:</strong> rule of fifths: 2/5 or less of the head is felt abdominally above the symphysis pubis by the pelvic grip.</li>
+          <li><strong>Vaginally:</strong> the vertex is felt at or below the ischial spine (zero station).</li>
+        </ul>
+      </li>
+      <li><strong>Increased flexion</strong></li>
+      <li><strong>Internal rotation</strong></li>
+      <li><strong>Extension</strong></li>
+      <li><strong>Restitution</strong></li>
+      <li><strong>External rotation</strong></li>
+    </ol>
+    <p><strong>B. Delivery of the shoulder and body.</strong></p>
+  </section>
+
+  <!-- ============================================================ s10 -->
+  <section id="s10">
+    <h2>10 · Third stage, fourth stage &amp; placental separation</h2>
+
+    <p>It extends from the delivery of the baby to complete expulsion of placenta and membranes.</p>
+
+    <h3>Expectant vs Active management of the third stage</h3>
+    <table>
+      <thead>
+        <tr><th>Expectant management</th><th>Active management</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>In this method the placental separation and its descent into vagina is allowed to occur spontaneously with minimal assistance.</td>
+          <td>The placental separation is actively facilitated and powerful uterine contractions are initiated to reduce the incidence of third stage complications (like PPH).</td>
+        </tr>
+        <tr>
+          <td>Duration of third stage is <strong>15 mins</strong>, so increased chances of PPH and increased maternal mortality.</td>
+          <td>Duration is reduced to <strong>5 mins</strong>, so less chances of PPH and maternal mortality.</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>Active management of labor includes: administration of a uterotonic soon after birth of baby, delayed cord clamping, controlled cord traction and uterine massage.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>The fourth stage</h3>
+    <p>Some consider the first hour after third stage is critical and the mother should be under close observation for PPH.</p>
+    <div class="danger">Active management of third stage is preferred over expectant management because it cuts duration from 15 min to 5 min and lowers PPH risk and maternal mortality.</div>
+
+    <h3>Signs of placental separation (6 items)</h3>
+    <ol>
+      <li>Uterus becomes globular, hard and mobile.</li>
+      <li>Sudden gush of blood.</li>
+      <li>Suprapubic bulge due to the separated placenta that occupies the upper vagina and lower uterine segment.</li>
+      <li>Rise of the fundal level above the umbilicus.</li>
+      <li>Lengthening of the umbilical.</li>
+      <li>Absence of pulsation in the umbilical stump.</li>
+    </ol>
+  </section>
+
+  <!-- ============================================================ s11 -->
+  <section id="s11">
+    <h2>11 · Active management of normal labor — First stage (history, exam, investigations)</h2>
+
+    <h3>(I) History taking</h3>
+    <ul>
+      <li><strong>Complete obstetric history.</strong></li>
+      <li><strong>History of present pregnancy:</strong>
+        <ul>
+          <li>Duration of pregnancy.</li>
+          <li>Medical disorders and complications during this pregnancy.</li>
+        </ul>
+      </li>
+      <li><strong>History of present labor:</strong>
+        <ul>
+          <li>Labor pains: onset, frequency and duration.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>(II) Examination</h3>
+    <div class="grid3">
+      <div class="card">
+        <h4>General examination</h4>
+        <ul>
+          <li>Vital signs.</li>
+          <li>Chest and heart examination.</li>
+          <li>Lower limbs for oedema.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Abdominal examination</h4>
+        <ul>
+          <li>Fundal level — Fundal grip — Umbilical grip — Pelvic grips — FHS.</li>
+          <li>Scar of previous operations (e.g. C.S, myomectomy or hysterotomy).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Pelvic examination</h4>
+        <ul>
+          <li><strong>a — Cervix:</strong> Dilatation, Effacement, Membranes (ruptured or intact).</li>
+          <li><strong>b — Presenting part</strong> and its position.</li>
+          <li><strong>c — Station</strong> of the presenting part.</li>
+          <li><strong>d — Pelvic capacity.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>(III) Investigations</h3>
+    <ol>
+      <li>Blood group — Rh typing.</li>
+      <li>Urine for albumin and sugar.</li>
+      <li>Hb%.</li>
+      <li>Ultrasonography.</li>
+    </ol>
+  </section>
+
+  <!-- ============================================================ s12 -->
+  <section id="s12">
+    <h2>12 · Active procedures &amp; care of the newborn</h2>
+
+    <h3>(IV) Active procedures — 1st stage</h3>
+    <ul>
+      <li><strong>Evacuation</strong> of the rectum and bladder.</li>
+      <li><strong>Analgesia.</strong></li>
+      <li><strong>Partogram:</strong> graphic recording of all events of labor either maternal (vital signs, uterine contractions, cervical dilatation, and used fluid and drugs) or fetal (fetal heart rate, head descent).</li>
+      <li><strong>Amniotomy.</strong></li>
+      <li><strong>Oxytocin</strong> to augment labor and regulate uterine contraction (3 in 10 minutes).</li>
+      <li><strong>Fetal monitoring.</strong></li>
+    </ul>
+
+    <h3>2nd stage</h3>
+    <ul>
+      <li>Transfer to delivery room.</li>
+      <li>Delivery of the head: the important goal is prevention of perineal lacerations by good support of the perineum and episiotomy.</li>
+      <li>Clamping of the cord: but it is contraindicated in preterm baby and in Rh – ve mothers.</li>
+    </ul>
+
+    <h3>3rd stage</h3>
+    <ul>
+      <li><strong>Ecbolics:</strong> Oxytocin and Ergometrine for rapid separation of the placenta.</li>
+      <li>Examination of the placenta and membranes.</li>
+      <li>Exploration of the genital tract for any laceration and repairing of it.</li>
+    </ul>
+
+    <h3>Care of the newborn</h3>
+    <ul>
+      <li>Clearance of the air passages: by aspiration of the mucus from the pharynx.</li>
+      <li>Determination of the <strong>APGAR score</strong>.</li>
+      <li>Examination for congenital anomalies or injuries.</li>
+      <li>Care of the eyes by putting antibiotic drops.</li>
+    </ul>
+
+    <div class="warn">Cord clamping is contraindicated in preterm baby and in Rh – ve mothers.</div>
+  </section>
+
+  <!-- ============================================================ s13 -->
+  <details class="study-section"><summary>Student activity · Assessment · References</summary><section id="s13">
+    <h2>13 · Student activity · Questions · References</h2>
+
+    <h3>Student activity</h3>
+    <p>Each student is requested to attend the delivery ward to observe the various stages and the management of a laboring woman.</p>
+
+    <h3>Questions</h3>
+    <p>Use the chapter Google Form to submit your answers:</p>
+    <p><a href="https://forms.gle/PkRHxhaPKJ8736Xn9" target="_blank" rel="noopener noreferrer">https://forms.gle/PkRHxhaPKJ8736Xn9</a></p>
+
+    <h3>References</h3>
+    <ol>
+      <li>Williams Obstetrics — normal labor &amp; its stages</li>
+      <li>Friedman EA — the Friedman labor curve (cervical dilatation sigmoid vs time)</li>
+      <li>ACOG / RCOG — definitions of protracted &amp; arrest disorders in active phase</li>
+      <li>WHO partogram recommendations</li>
+      <li>Active vs expectant management of third stage (Cochrane / WHO)</li>
+      <li>Source: <em>Book Obstetrics 2025-2026, Topic 19 (pages 101–109)</em> — 9 PDF pages, 297 lines of text, 1 source image (Friedman curve).</li>
+    </ol>
+
+    <div class="note">Preserved verbatim from source: spelling "primi" / "primigravida" / "nulliparous" / "multiparous" / "multipara" (used interchangeably by the source), punctuation in "2-3 weeks" / "3-5 cm" / "1- 2 hours" / "15 mins" (mixed forms retained), and the comma in "1 hr (+1 for arrest)".</div>
+  </section></details>
+
+  <footer>
+    Topic 19 · Physiology and Management of Normal Labor · Generated 2026-06-05 · Source: Book Obstetrics 2025-2026-019.pdf (9 pages, 297 lines, 1 source image)
+  </footer>
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

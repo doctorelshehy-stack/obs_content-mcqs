@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Topic 25 — Compound Presentation</title>
+<style>:root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;
+    border-radius:0 0 22px 22px;
+    padding:28px 32px 30px;
+    margin:0 -28px 22px;
+    box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{
+    font-size:34px;line-height:1.15;margin:14px 0 10px;
+    font-weight:800;letter-spacing:-0.01em;
+  }
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;
+    font-weight:500;letter-spacing:0.01em;
+  }
+
+  /* TOC */
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);
+    border-radius:12px;padding:16px 22px;margin:0 0 22px;
+    box-shadow:var(--shadow);
+  }
+  .toc h2{
+    font-size:14px;color:var(--prim2);margin:0 0 8px;
+    text-transform:uppercase;letter-spacing:0.08em;font-weight:700;
+  }
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13.5px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  /* Section */
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;
+    padding:8px 0 8px 14px;border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{
+    font-size:15.5px;color:var(--prim2);margin:16px 0 8px;
+    font-weight:700;letter-spacing:0.01em;
+  }
+
+  /* Cards / boxes */
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 18px;margin:0 0 14px;
+    box-shadow:var(--shadow);
+  }
+  .keydef{
+    background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);
+    border:1px solid #DDD6FE;border-left:5px solid #7C3AED;
+  }
+  .pearl{
+    background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);
+    border:1px solid #FBCFE8;border-left:5px solid #DB2777;
+  }
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{
+    background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);
+    border:1px solid #FDE68A;border-left:5px solid #D97706;
+  }
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{
+    background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);
+    border:1px solid #A5F3FC;border-left:5px solid #0891B2;
+  }
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+
+  /* Definition block specifically */
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  /* Lists */
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;
+    border-radius:50%;text-align:center;line-height:24px;font-size:12px;
+    font-weight:700;
+  }
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;
+    background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;
+    margin:0 0 16px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:540px;object-fit:contain;margin:0 auto}
+  .img-card .img-frame{display:flex;justify-content:center;align-items:center;padding:14px;background:#F0FDF4}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;
+    color:#fff;padding:3px 9px;border-radius:999px;
+    font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+  .img-card{position:relative}
+
+  /* Two-column grid for pairs */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+
+  .cause-card{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:10px 14px;box-shadow:var(--shadow);
+    border-left:4px solid var(--prim);
+  }
+  .cause-card b{color:var(--prim2);font-size:13.5px}
+
+  .indication{
+    background:#FEF2F2;border:1px solid #FECACA;border-left:4px solid #DC2626;
+    border-radius:10px;padding:8px 12px;margin:6px 0;font-size:13.5px;
+  }
+  .indication b{color:#991B1B}
+
+  .qref{font-size:14px;line-height:1.6;margin:6px 0}
+
+  /* Clickable expand/collapse cards (Student activity / Assessment / References) */
+  details.click-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    margin:0 0 14px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.click-card > summary{
+    list-style:none;cursor:pointer;padding:14px 18px;
+    font-size:15px;font-weight:700;color:var(--prim2);
+    background:linear-gradient(90deg,var(--primLite),#fff 70%);
+    border-bottom:1px solid transparent;
+    display:flex;align-items:center;gap:10px;user-select:none;
+    position:relative;
+  }
+  details.click-card > summary::-webkit-details-marker{display:none}
+  details.click-card > summary::before{
+    content:"▶";display:inline-block;width:22px;height:22px;
+    background:var(--prim);color:#fff;border-radius:50%;
+    text-align:center;line-height:22px;font-size:10px;
+    transition:transform .2s ease;flex-shrink:0;
+  }
+  details.click-card[open] > summary{
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg,var(--primLite),#fff 40%);
+  }
+  details.click-card[open] > summary::before{transform:rotate(90deg)}
+  details.click-card > summary:hover{background:linear-gradient(90deg,#DBEAFE,#fff 70%)}
+  details.click-card > summary .hint{
+    margin-left:auto;font-size:11px;font-weight:600;
+    color:#64748B;letter-spacing:0.04em;text-transform:uppercase;
+  }
+  details.click-card[open] > summary .hint::after{content:"· click to collapse"}
+  details.click-card:not([open]) > summary .hint::after{content:"· click to expand"}
+  details.click-card > .click-body{padding:14px 18px;background:#fff}
+  details.click-card.activity{border-left:5px solid var(--prim)}
+  details.click-card.activity > summary{color:#1D4ED8}
+  details.click-card.assessment{border-left:5px solid #16A34A;background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%)}
+  details.click-card.assessment > summary{color:#166534;background:linear-gradient(90deg,#DCFCE7,#fff 70%)}
+  details.click-card.assessment[open] > summary{background:linear-gradient(90deg,#DCFCE7,#fff 40%)}
+  details.click-card.assessment > .click-body{background:linear-gradient(180deg,#F0FDF4 0%,#fff 100%)}
+  details.click-card.references{border-left:5px solid #7C3AED}
+  details.click-card.references > summary{color:#5B21B6;background:linear-gradient(90deg,#F5F3FF,#fff 70%)}
+  details.click-card.references[open] > summary{background:linear-gradient(90deg,#F5F3FF,#fff 40%)}
+
+  /* Footer */
+  footer{
+    margin-top:30px;padding:14px 16px;
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-radius:10px;font-size:12px;color:#1E40AF;
+    text-align:center;line-height:1.5;
+  }
+
+  @media print{
+    body{background:#fff}
+    .hero{box-shadow:none}
+    .card,.toc,.cause-card,.indication,table{box-shadow:none;break-inside:avoid}
+    section{break-inside:avoid}
+  }
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+<!-- ============ HERO ============ -->
+<div class="hero">
+<span class="pill">Topic 25 · Chapter 25</span>
+<h1>Compound Presentation</h1>
+<p>Cephalic presentation in which a limb (usually upper limb and less commonly lower limb) prolapses beside the presenting part.</p>
+<div class="chips">
+<span class="chip">📖 Book Obstetrics 2025-2026 · p. 131</span>
+<span class="chip">🟢 Source visuals: 1 (img-000)</span>
+<span class="chip">🔴 External visuals: 0</span>
+<span class="chip">📚 7 content sections preserved</span>
+</div>
+</div>
+<!-- ============ TOC ============ -->
+<div class="toc">
+<h2>📑 Table of Contents · 7 sections</h2>
+<ol>
+<li><a href="#s1">ILOs of this chapter</a></li>
+<li><a href="#s2">Definition</a></li>
+<li><a href="#s3">Causes</a></li>
+<li><a href="#s4">Diagnosis</a></li>
+<li><a href="#s5">Management</a></li>
+<li><a href="#s6">Figure · Compound Presentation In Utero</a></li>
+<li><a href="#s7">Student activity · Assessment · References</a></li>
+</ol>
+</div>
+<!-- ============ §1 ILOs ============ -->
+<section id="s1">
+<h2 class="sec"><span class="n">1</span>ILOs of this chapter</h2>
+<div class="card">
+<h3 class="sub" style="margin-top:0">Intended Learning Outcomes</h3>
+<ol class="step-list">
+<li>To understand the <strong>definition of compound presentation</strong>.</li>
+<li>To be able to describe the <strong>etiology and management</strong> of this malpresentation.</li>
+</ol>
+</div>
+</section>
+<!-- ============ §2 Definition ============ -->
+<section id="s2">
+<h2 class="sec"><span class="n">2</span>Definition</h2>
+<div class="card keydef def-block">
+<p><strong>Compound presentation</strong> is a <strong>cephalic presentation</strong> in which a <strong>limb (usually upper limb and less commonly lower limb) prolapses beside the presenting part</strong>.</p>
+</div>
+<div class="card pearl">
+<h4>💡 CLINICAL PEARL — Why "compound"?</h4>
+<p>Two parts of the fetus present at the pelvic inlet <em>simultaneously</em> — the head and a limb. This is the hallmark of a compound presentation: the presenting part is "compounded" of two anatomical structures instead of one.</p>
+</div>
+</section>
+<!-- ============ §3 Causes ============ -->
+<section id="s3">
+<h2 class="sec"><span class="n">3</span>Causes</h2>
+<p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source enumerates 7 etiologic factors — all of which create extra room at the pelvic inlet and allow a limb to slip down beside the head:</p>
+<div class="grid-4">
+<div class="cause-card"><b>1. Prematurity</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Smaller fetus, more space around the head → limb can prolapse alongside.</p></div>
+<div class="cause-card"><b>2. PROM</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Loss of the bag of forewaters removes the cushion that holds the head applied to the cervix.</p></div>
+<div class="cause-card"><b>3. Polyhydramnios</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Excess fluid → fetus is mobile; limb floats down into the inlet.</p></div>
+<div class="cause-card"><b>4. Multiparity</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Lax abdominal &amp; uterine walls → poor support of the presenting part.</p></div>
+<div class="cause-card"><b>5. Contracted pelvis</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Head cannot engage properly → limb descends through the gap.</p></div>
+<div class="cause-card"><b>6. Pelvic tumors</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Space-occupying lesion prevents head engagement → limb prolapses.</p></div>
+<div class="cause-card"><b>7. Twins</b><p style="font-size:12.5px;margin:4px 0 0;color:#475569">Crowding in utero + one twin's limb may descend with the other twin's head.</p></div>
+<div class="cause-card" style="border-left:4px solid #7C3AED;background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%)">
+<b style="color:#5B21B6">📋 7 causes</b>
+<p style="font-size:12.5px;margin:4px 0 0;color:#475569">All create <em>poor fit</em> or <em>excess room</em> at the pelvic inlet.</p>
+</div>
+</div>
+</section>
+<!-- ============ §4 Diagnosis ============ -->
+<section id="s4">
+<h2 class="sec"><span class="n">4</span>Diagnosis</h2>
+<div class="grid-2">
+<div class="card" style="border-left:5px solid var(--prim)">
+<h3 class="sub" style="margin-top:0">📋 Clinical clue</h3>
+<p><strong>Delayed engagement.</strong></p>
+<p style="font-size:13px;color:#475569">The fetal head does not descend into the pelvis at the expected time because the prolapsed limb is occupying space alongside it.</p>
+</div>
+<div class="card" style="border-left:5px solid #0EA5E9">
+<h3 class="sub" style="margin-top:0">🤚 PV examination (definitive)</h3>
+<p>The <strong>prolapsed limb is felt beside the presenting part</strong> on vaginal examination.</p>
+<p style="font-size:13px;color:#475569">The examiner's fingers find the fetal head and, alongside it, a small hand or foot — confirming the compound presentation.</p>
+</div>
+</div>
+</section>
+<!-- ============ §5 Management ============ -->
+<section id="s5">
+<h2 class="sec"><span class="n">5</span>Management</h2>
+<div class="card" style="background:linear-gradient(180deg,#ECFDF5 0%,#D1FAE5 100%);border:1px solid #6EE7B7;border-left:5px solid #059669">
+<h3 class="sub" style="margin-top:0;color:#065F46">🤲 Conservative step — Gentle reduction</h3>
+<p><strong>Gently try to reduce the prolapsed limb upwards above the pelvic brim and hold it till contraction, then push the head down into the pelvis.</strong></p>
+<p style="font-size:13px;color:#475569">This maneuvre is performed between contractions so the relaxed uterus allows the limb to be lifted above the head; the subsequent contraction then drives the head into the pelvis.</p>
+</div>
+<h3 class="sub">⚠️ Cesarean section is indicated if any of the following develops:</h3>
+<div class="indication"><b>1. Abnormal FHR pattern.</b> Fetal heart rate abnormalities signal fetal compromise — deliver by CS.</div>
+<div class="indication"><b>2. Cord prolapse.</b> The compound presentation is a high-risk setup for cord prolapse; if it occurs, immediate CS is required.</div>
+<div class="indication"><b>3. Poor progress of labor.</b> If the head does not engage / labor does not advance despite the conservative maneuvre, CS is indicated.</div>
+<div class="card danger">
+<h4>🚨 DANGER — Cord prolapse is the critical watch-item</h4>
+<p>Because the presenting part does <em>not</em> fit the pelvic inlet snugly, the umbilical cord can slip past the head and prolapse — a true obstetric emergency. Any patient with a compound presentation in labor must be monitored continuously for cord prolapse. A sudden fetal heart rate deceleration should be assumed to be cord prolapse until proven otherwise.</p>
+</div>
+</section>
+<!-- ============ §6 Figure (source image) ============ -->
+<section id="s6">
+<h2 class="sec"><span class="n">6</span>Figure · Compound Presentation In Utero</h2>
+<div class="img-card src-viz">
+<span class="badge">Source Image</span>
+<div class="img-frame">
+<img alt="Sagittal medical illustration of compound presentation — a fetal limb prolapses alongside the fetal head at the pelvic inlet in a pregnant uterus." src="../../../../extracted_images/25_compound_presentation/compound_presentation_limb_prolapse.jpg"/>
+</div>
+<div class="cap">Figure 1 — Sagittal medical illustration of a <strong>compound presentation in utero</strong>. A fetal limb is seen prolapsing through the cervix <strong>beside the fetal head</strong>, which is partially engaged in the maternal pelvis. Visible anatomical landmarks: maternal abdominal wall, lumbar spine, sacrum, uterine wall, fetus in flexed position, presenting head, and the small prolapsed limb (annotated in the source figure as "prolapse ... the head"). This is the hallmark of a compound presentation — two fetal parts presenting simultaneously at the pelvic inlet.</div>
+</div>
+</section>
+<!-- ============ §7 Student activity + Assessment + References ============ -->
+<section id="s7">
+<h2 class="sec"><span class="n">7</span>Student activity · Assessment · References</h2>
+<details class="click-card activity">
+<summary>🎓 Student activity <span class="hint"></span></summary>
+<div class="click-body">
+<p>Each group of student is requested to <strong>prepare a diagram illustrative of compound presentation</strong>.</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Why this activity matters:</strong> Drawing the fetus in utero with the head at the pelvic inlet and a prolapsed limb beside it forces you to visualise the exact 3-D relationship that defines a compound presentation — far more durable than just reading the words "head + limb prolapse."</p>
+<p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested steps for the group:</strong></p>
+<ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+<li>Draw a sagittal section of the maternal pelvis and uterus (sacrum, symphysis pubis, cervix, uterine wall).</li>
+<li>Show the fetal head partially engaged in the pelvic inlet.</li>
+<li>Add a fetal upper limb descending <em>beside</em> the head through the cervix — the prolapse.</li>
+<li>Label: presenting part (head), prolapsed limb, pelvic inlet, cervix, sacral promontory.</li>
+<li>Compare your drawing with Figure 1 in §6 of this page.</li>
+</ol>
+</div>
+</details>
+<details class="click-card assessment">
+<summary>✅ Self-assessment Google Form <span class="hint"></span></summary>
+<div class="click-body">
+<p>Please complete the self-assessment Google Form:</p>
+<p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/szMrPB7z9Q1LaTid6" style="color:#15803D;font-weight:700">https://forms.gle/szMrPB7z9Q1LaTid6</a></p>
+<p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+<ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+<li>Definition of compound presentation (head + prolapsed limb).</li>
+<li>The 7 etiologic factors (Prematurity, PROM, Polyhydramnios, Multiparity, Contracted pelvis, Pelvic tumors, Twins).</li>
+<li>Diagnostic method (delayed engagement + PV examination finding the limb beside the head).</li>
+<li>Conservative maneuvre: gentle reduction of the limb + pushing the head into the pelvis between contractions.</li>
+<li>The 3 indications for Cesarean section (abnormal FHR, cord prolapse, poor progress of labor).</li>
+</ul>
+</div>
+</details>
+<details class="click-card references">
+<summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+<div class="click-body">
+<ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+<li>The <strong>PDF source</strong> for this chapter contains <strong>2 embedded images</strong> on page 131. Of these, <strong>1 is embedded in this infographic</strong> as a green <code>.src-viz</code> card. The image is extracted to <code>extracted_images/25_compound_presentation/</code> for archival.</li>
+<li><strong>No external images were used</strong> in this chapter — all visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+<li><strong>Image inventory and disposition:</strong>
+<ul>
+<li>Figure 1 (img-000): Sagittal medical illustration of compound presentation in utero, with a fetal limb prolapsing beside the head — <strong>EMBEDDED</strong> in §6 — provided material.</li>
+<li>img-001: A 3-panel illustration of <em>breech presentations</em> (Complete / Footling / Frank breech) extracted from page 131. This figure is <strong>NOT</strong> related to compound presentation (it depicts a different malpresentation) and is therefore <strong>NOT embedded</strong> in this infographic. Documented here for source-faithfulness so that the inventory of source images is complete.</li>
+</ul>
+</li>
+<li>Google Form self-assessment URL: <code>https://forms.gle/szMrPB7z9Q1LaTid6</code> (reproduced verbatim from source).</li>
+</ul>
+</div>
+</details>
+</section>
+<!-- ============ FOOTER ============ -->
+<footer>
+    Topic 25 — Compound Presentation · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 25 (p. 131) · Source-only visuals (1 of 2 in source) · 0 external visuals · Definition: cephalic presentation + prolapsed limb beside presenting part · 7 causes · Conservative: gentle reduction · CS if: abnormal FHR / cord prolapse / poor progress
+  </footer>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("details").forEach((d) => {
+    d.removeAttribute("open");
+    d.open = false;
+  });
+});</script>
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+</body>
+</html>

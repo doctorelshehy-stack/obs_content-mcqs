@@ -1,0 +1,67 @@
+{
+  "s2": [
+    {
+      "q": "DIC is best described as:",
+      "options": [
+        "A localized clotting disorder",
+        "An acquired thrombotic and hemorrhagic syndrome due to excessive activation of coagulation",
+        "A congenital bleeding disorder",
+        "A platelet disorder"
+      ],
+      "correct": 1,
+      "explain": "DIC is an acquired syndrome characterized by excessive activation of coagulation leading to thrombosis and consumption of clotting factors causing hemorrhage."
+    }
+  ],
+  "s3": [
+    {
+      "q": "The clinical picture of DIC includes all EXCEPT:",
+      "options": [
+        "Bleeding from multiple sites",
+        "Renal impairment",
+        "Isolated petechiae on legs only",
+        "Organ dysfunction"
+      ],
+      "correct": 2,
+      "explain": "DIC presents with bleeding from multiple sites (gingival, IV sites, wounds), petechiae, purpura, and multi-organ dysfunction."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Common obstetric causes of DIC include all EXCEPT:",
+      "options": [
+        "Placental abruption",
+        "Amniotic fluid embolism",
+        "Physiological pregnancy",
+        "Sepsis"
+      ],
+      "correct": 2,
+      "explain": "Obstetric DIC triggers: placental abruption, amniotic fluid embolism, severe preeclampsia/HELLP, sepsis, and retained dead fetus."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Laboratory findings in DIC include all EXCEPT:",
+      "options": [
+        "Prolonged PT and PTT",
+        "Low fibrinogen",
+        "Elevated platelets",
+        "Elevated D-dimer"
+      ],
+      "correct": 2,
+      "explain": "DIC shows thrombocytopenia (low platelets), prolonged PT/PTT, low fibrinogen, elevated D-dimer, and schistocytes on blood film."
+    }
+  ],
+  "s6": [
+    {
+      "q": "The cornerstone of DIC management is:",
+      "options": [
+        "Heparin therapy",
+        "Treating the underlying cause",
+        "Platelet transfusion only",
+        "Fresh frozen plasma only"
+      ],
+      "correct": 1,
+      "explain": "Treating the underlying obstetric cause is the cornerstone. Blood products (FFP, cryoprecipitate, platelets) are given for active bleeding."
+    }
+  ]
+}

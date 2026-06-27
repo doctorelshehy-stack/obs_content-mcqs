@@ -1,0 +1,4097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>06 — Ectopic Pregnancy | Obstetrics Reference</title>
+<style>
+/* ============================================================
+   06_Ectopic_Pregnancy — Premium Medical-Reference Style
+   Inspired by Amboss, Osmosis, Notion, UpToDate
+   All source content preserved verbatim; visual presentation only
+   ============================================================ */
+
+:root{
+  --bg:           #F7F9FC;
+  --surface:      #FFFFFF;
+  --surface-alt:  #F8FAFC;
+  --surface-2:    #F1F5F9;
+
+  --ink:          #0F172A;
+  --ink-soft:     #334155;
+  --ink-mute:     #64748B;
+  --ink-faint:    #94A3B8;
+
+  --rule:         #E5E7EB;
+  --rule-strong:  #CBD5E1;
+
+  --accent:       #60A5FA;
+  --accent-deep:  #3B82F6;
+  --accent-soft:  #EFF6FF;
+
+  --pearl:        #0D9488;
+  --pearl-soft:   #ECFEFF;
+  --pearl-border: #99F6E4;
+
+  --note:         #7C3AED;
+  --note-soft:    #F5F3FF;
+  --note-border:  #DDD6FE;
+
+  --warn:         #B45309;
+  --warn-soft:    #FFFBEB;
+  --warn-border:  #FDE68A;
+
+  --danger:       #B91C1C;
+  --danger-soft:  #FEF2F2;
+  --danger-border:#FECACA;
+
+  --src-green:        #16A34A;
+  --src-green-soft:   #F0FDF4;
+  --src-green-border: #BBF7D0;
+  --src-red:          #DC2626;
+  --src-red-soft:     #FEF2F2;
+  --src-red-border:   #FECACA;
+
+  --shadow-xs:  0 1px 2px rgba(15,23,42,.04);
+  --shadow-sm:  0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.04);
+  --shadow-md:  0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.04);
+
+  --radius-sm:  8px;
+  --radius:     12px;
+  --radius-lg:  16px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink-soft);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+              "Helvetica Neue",Arial,sans-serif;
+  font-size:15.5px;line-height:1.65;letter-spacing:-.005em;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;}
+
+a{color:var(--accent-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.page{max-width:1240px;margin:0 auto;padding:40px 32px 96px}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#FFFFFF 0%,#F8FAFC 100%);
+  border:1px solid var(--rule);
+  border-radius:var(--radius-lg);
+  padding:40px 44px;
+  margin-bottom:32px;
+  box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:linear-gradient(180deg,#60A5FA 0%,#3B82F6 100%);
+}
+.hero .crumb{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-mute);font-weight:600;margin-bottom:14px;
+}
+.hero .crumb .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero h1{
+  font-size:44px;font-weight:800;color:var(--ink);
+  margin:0 0 10px;letter-spacing:-.025em;line-height:1.1;
+}
+.hero .lede{
+  font-size:17px;color:var(--ink-soft);font-weight:400;
+  max-width:820px;line-height:1.6;margin:0;
+}
+.hero .meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;
+}
+.hero .chip{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:999px;
+  padding:7px 14px;
+  font-size:13px;color:var(--ink-soft);font-weight:500;
+  text-decoration:none !important;
+  transition:all .15s ease;
+}
+.hero .chip:hover{border-color:var(--accent);color:var(--accent-deep);box-shadow:var(--shadow-xs)}
+.hero .chip.ico{font-size:14px}
+
+/* TOC */
+.toc{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:22px 28px 24px;
+  margin-bottom:28px;
+  box-shadow:var(--shadow-xs);
+}
+.toc-head{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  padding-bottom:14px;border-bottom:1px solid var(--rule);
+}
+.toc-head .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent-deep);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.toc-head h2{margin:0;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.005em}
+.toc-head .count{margin-left:auto;font-size:12.5px;color:var(--ink-mute);font-weight:500}
+.toc-list{
+  list-style:none;padding:0;margin:0;
+  columns:2;column-gap:36px;
+  font-size:14px;
+}
+.toc-list li{margin:6px 0;break-inside:avoid}
+.toc-list a{
+  display:flex;align-items:center;gap:10px;
+  color:var(--ink-soft);text-decoration:none;
+  padding:5px 0;border-bottom:1px dashed transparent;
+  transition:color .15s ease, border-color .15s ease;
+}
+.toc-list a:hover{color:var(--accent-deep);border-bottom-color:var(--accent)}
+.toc-list .n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border-radius:6px;
+  background:var(--surface-2);color:var(--ink-mute);
+  font-size:11.5px;font-weight:700;flex-shrink:0;
+}
+
+/* SECTION CARD */
+section{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:28px 32px 30px;
+  margin-bottom:22px;
+  box-shadow:var(--shadow-xs);
+  scroll-margin-top:20px;
+}
+section.refs{background:var(--surface-alt);border-style:solid}
+
+/* SECTION HEADER */
+.sh{
+  display:flex;align-items:center;gap:14px;
+  background:var(--surface-alt);
+  border:1px solid var(--rule);
+  border-left:4px solid var(--accent);
+  border-radius:10px;
+  padding:14px 18px;
+  margin:0 0 22px;
+}
+.sh .badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:34px;height:34px;padding:0 10px;
+  border-radius:8px;
+  background:#FFFFFF;
+  border:1px solid var(--rule);
+  color:var(--accent-deep);
+  font-size:13.5px;font-weight:700;letter-spacing:.02em;
+  flex-shrink:0;
+  box-shadow:var(--shadow-xs);
+}
+.sh .ttl{
+  font-size:19px;font-weight:700;
+  color:#334155;
+  letter-spacing:-.012em;
+  line-height:1.25;
+  margin:0;
+}
+.sh .sub{
+  display:block;
+  font-size:13px;font-weight:500;
+  color:var(--ink-mute);
+  margin-top:2px;letter-spacing:0;
+  line-height:1.4;
+}
+
+section h3, .h3{
+  font-size:16px;font-weight:700;color:var(--ink);
+  margin:22px 0 10px;display:flex;align-items:center;gap:8px;
+  letter-spacing:-.005em;
+}
+section h3::before, .h3::before{
+  content:"";display:inline-block;width:3px;height:16px;
+  background:var(--accent);border-radius:2px;flex-shrink:0;
+}
+section h4, .h4{
+  font-size:12.5px;font-weight:700;color:var(--ink-mute);
+  margin:14px 0 6px;text-transform:uppercase;letter-spacing:.08em;
+}
+
+p{margin:8px 0;color:var(--ink-soft)}
+ul,ol{margin:6px 0 14px;padding-left:22px;color:var(--ink-soft)}
+ul li,ol li{margin:4px 0}
+ul li::marker{color:var(--accent)}
+ol li::marker{color:var(--ink-mute);font-weight:600}
+
+.lede{font-size:16.5px;color:var(--ink);font-weight:500}
+
+strong,b{color:var(--ink);font-weight:700}
+em{color:var(--ink);font-style:italic}
+code{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:13px;background:var(--surface-2);padding:1px 6px;border-radius:4px;
+  color:var(--ink-soft)}
+
+/* DEFINITION BOX */
+.defbox{
+  background:linear-gradient(135deg,#F0F7FF 0%,#F8FAFC 100%);
+  border:1px solid #DBEAFE;
+  border-left:4px solid var(--accent);
+  border-radius:10px;
+  padding:16px 20px;
+  margin:14px 0;
+}
+.defbox .lbl{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;letter-spacing:.16em;
+  color:var(--accent-deep);text-transform:uppercase;margin-bottom:6px;
+}
+.defbox .lbl::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+}
+.defbox .body{font-size:15.5px;color:var(--ink);font-weight:500;line-height:1.6}
+.defbox .incidence{font-size:14px;color:var(--ink-soft);margin-top:6px;font-weight:400}
+
+/* CALLOUTS */
+.callout{
+  border-radius:10px;
+  padding:14px 18px;
+  margin:14px 0;
+  border:1px solid;
+  display:flex;gap:12px;align-items:flex-start;
+  background:#FFFFFF;
+}
+.callout .ico{
+  width:28px;height:28px;border-radius:8px;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0;line-height:1;
+}
+.callout .body{flex:1;font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+.callout .body b,.callout .body strong{color:var(--ink);font-weight:700}
+
+.callout.pearl{background:var(--pearl-soft);border-color:var(--pearl-border)}
+.callout.pearl .ico{background:rgba(13,148,136,.12);color:var(--pearl)}
+.callout.pearl .body b{color:var(--pearl)}
+
+.callout.note{background:var(--note-soft);border-color:var(--note-border)}
+.callout.note .ico{background:rgba(124,58,237,.12);color:var(--note)}
+.callout.note .body b{color:var(--note)}
+
+.callout.warn{background:var(--warn-soft);border-color:var(--warn-border)}
+.callout.warn .ico{background:rgba(180,83,9,.14);color:var(--warn)}
+.callout.warn .body b{color:var(--warn)}
+
+.callout.danger{background:var(--danger-soft);border-color:var(--danger-border)}
+.callout.danger .ico{background:rgba(185,28,28,.12);color:var(--danger)}
+.callout.danger .body b{color:var(--danger)}
+
+/* GRID UTILITIES */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:14px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+
+.mini-card{
+  background:#FAFBFC;border:1px solid var(--rule);border-radius:10px;
+  padding:13px 15px;
+}
+.mini-card .lbl{
+  font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-mute);font-weight:700;margin-bottom:4px;
+}
+.mini-card .val{font-size:14.5px;color:var(--ink);font-weight:600;line-height:1.4}
+
+/* TABLES */
+table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  margin:14px 0;font-size:14px;
+  background:#FFFFFF;border:1px solid var(--rule);border-radius:10px;
+  overflow:hidden;
+}
+table th,table td{
+  padding:11px 14px;text-align:left;
+  border-bottom:1px solid var(--rule);vertical-align:top;
+}
+table th{
+  background:#F8FAFC;color:var(--ink);
+  font-weight:700;font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+}
+table td{color:var(--ink-soft);font-size:14px}
+table tr:last-child td{border-bottom:none}
+table tr:nth-child(even) td{background:#FBFCFD}
+
+.compare-table th{background:#EFF6FF;color:#1E40AF}
+.compare-table .check{color:#16A34A;font-weight:700}
+.compare-table .xmark{color:#DC2626;font-weight:700}
+.compare-table .circle{color:#D97706;font-weight:700}
+
+/* BULLET GRID */
+.bullet-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:8px 28px;margin:10px 0 14px;padding:0;list-style:none;
+}
+.bullet-grid li{
+  position:relative;padding-left:22px;
+  color:var(--ink-soft);font-size:14.5px;line-height:1.55;
+}
+.bullet-grid li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+}
+
+/* COMPARISON ROW */
+.comparison-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0;
+}
+.comparison-row .col{
+  background:#FAFBFC;border:1px solid var(--rule);border-radius:10px;
+  padding:14px 16px;
+}
+.comparison-row .col .head{
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-deep);margin-bottom:8px;padding-bottom:6px;
+  border-bottom:1px solid var(--rule);
+}
+.comparison-row .col p{margin:6px 0 0;font-size:14px}
+
+/* IMAGE CARDS */
+.image-card{
+  border-radius:12px;overflow:hidden;margin:16px 0;
+  border:1px solid var(--rule);box-shadow:var(--shadow-xs);
+}
+.image-card.source{background:var(--src-green-soft);border-color:var(--src-green-border)}
+.image-card.external{background:var(--src-red-soft);border-color:var(--src-red-border)}
+.image-card .header{
+  padding:10px 18px;font-weight:700;font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+.image-card.source .header{background:var(--src-green);color:#FFFFFF}
+.image-card.external .header{background:var(--src-red);color:#FFFFFF}
+.image-card .pic{
+  display:flex;justify-content:center;align-items:center;
+  background:#FFFFFF;padding:18px;
+}
+.image-card .pic img{max-width:100%;max-height:520px;object-fit:contain;display:block;border-radius:6px}
+.image-card .caption{
+  padding:12px 18px;font-size:14px;color:var(--ink);font-weight:600;
+  border-top:1px solid rgba(0,0,0,.06);background:rgba(255,255,255,.7);
+}
+.image-card .source-line{padding:8px 18px 14px;font-size:12.5px;color:var(--ink-mute);font-style:italic}
+
+/* REFERENCES */
+.references{
+  background:var(--surface-alt);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+  padding:24px 28px;
+  margin-top:24px;
+  box-shadow:var(--shadow-xs);
+}
+.references h2{
+  font-size:17px;font-weight:700;margin:0 0 14px;color:var(--ink);
+  display:flex;align-items:center;gap:10px;
+}
+.references h2 .ico{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent-deep);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:14px;
+}
+.references ol{padding-left:22px;margin:0}
+.references li{font-size:13.5px;color:var(--ink-soft);line-height:1.65;margin:8px 0}
+.references a{color:var(--accent-deep);border-bottom:1px dotted var(--accent)}
+.references a:hover{border-bottom-style:solid;text-decoration:none}
+
+/* FOOTER */
+footer{
+  margin-top:32px;padding:20px;text-align:center;
+  color:var(--ink-mute);font-size:12.5px;
+  border-top:1px solid var(--rule);
+}
+footer code{background:transparent;color:var(--ink-mute);padding:0}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .grid-2,.grid-3,.grid-4,.bullet-grid,.comparison-row{grid-template-columns:1fr}
+  .toc-list{columns:1}
+  .hero h1{font-size:30px}
+  .hero{padding:24px 22px}
+  .page{padding:20px 14px 60px}
+  section{padding:20px 18px}
+  .sh{flex-wrap:wrap}
+  table{font-size:13px}
+}
+
+@media print{
+  body{background:#fff}
+  .page{padding:0 4px}
+  section,.toc,.references{break-inside:avoid;box-shadow:none}
+}
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="crumb"><span class="dot"></span>Obstetrics Reference · Topic 06</div>
+  <h1>Ectopic Pregnancy</h1>
+  <p class="lede">A complete visual study guide on the definition, sites, risk factors, clinical types (undisturbed, acute disturbed, chronic disturbed), investigations (β-hCG, ultrasound, discriminatory zone, progesterone, laparoscopy), and treatment policies (expectant, medical, surgical) of ectopic pregnancy — including interstitial, ovarian, cervical, cesarean-scar, heterotopic, and pregnancy of unknown location (PUL).</p>
+  <div class="meta">
+    <a class="chip" href="#"><span class="ico">📄</span>Source: <em>Book Obstetrics 2025-2026-006.pdf</em></a>
+    <a class="chip" href="https://youtu.be/NPR1ocFayFc?si=gZObKUQ2Jt7tfKSp" target="_blank" rel="noopener"><span class="ico">🎥</span>Watch Lecture on YouTube</a>
+    <a class="chip" href="https://forms.gle/J1rMkBL6Jx9kjfyg8" target="_blank" rel="noopener"><span class="ico">📝</span>Self-test Quiz</a>
+  </div>
+</header>
+
+<!-- ===================== TABLE OF CONTENTS ===================== -->
+<nav class="toc">
+  <div class="toc-head">
+    <span class="ico">🗂</span>
+    <h2>Table of Contents</h2>
+    <span class="count">18 sections</span>
+  </div>
+  <ol class="toc-list">
+    <li><a href="#ilos"><span class="n">1</span>Intended Learning Outcomes (ILOs)</a></li>
+    <li><a href="#definition"><span class="n">2</span>Definition, Incidence &amp; Sites</a></li>
+    <li><a href="#risk"><span class="n">3</span>Etiology &amp; Risk Factors</a></li>
+    <li><a href="#tubal-sites"><span class="n">4</span>Tubal Implantation Sites</a></li>
+    <li><a href="#clinical"><span class="n">5</span>Clinical Picture</a></li>
+    <li><a href="#investigations"><span class="n">6</span>Investigations</a></li>
+    <li><a href="#discriminatory"><span class="n">7</span>Discriminatory Zone &amp; Visual</a></li>
+    <li><a href="#differential"><span class="n">8</span>Differential Diagnosis</a></li>
+    <li><a href="#treatment"><span class="n">9</span>Treatment Overview &amp; Resuscitation</a></li>
+    <li><a href="#expectant"><span class="n">10</span>Expectant Management</a></li>
+    <li><a href="#medical"><span class="n">11</span>Medical Treatment (Methotrexate)</a></li>
+    <li><a href="#contraindications"><span class="n">12</span>MTX Contraindications</a></li>
+    <li><a href="#surgical"><span class="n">13</span>Surgical Treatment</a></li>
+    <li><a href="#salpingostomy"><span class="n">14</span>Salpingostomy vs Salpingectomy</a></li>
+    <li><a href="#interstitial"><span class="n">15</span>Interstitial (Cornual) Pregnancy</a></li>
+    <li><a href="#ovarian"><span class="n">16</span>Ovarian, Cervical, Scar, Heterotopic &amp; PUL</a></li>
+    <li><a href="#activity"><span class="n">17</span>Student Activity</a></li>
+    <li><a href="#references"><span class="n">18</span>References &amp; Visual Sources</a></li>
+  </ol>
+</nav>
+
+<!-- ===================== ILOs ===================== -->
+<section id="ilos">
+  <div class="sh">
+    <span class="badge">01</span>
+    <div>
+      <h2 class="ttl">Intended Learning Outcomes (ILOs)</h2>
+      <span class="sub">What you should be able to do after studying this chapter</span>
+    </div>
+  </div>
+  <ul class="bullet-grid">
+    <li>To identify variable risk factors of ectopic pregnancy</li>
+    <li>To identify different types of ectopic pregnancy</li>
+    <li>To be able to describe clinical picture of ectopic pregnancy</li>
+    <li>To be able request suitable investigations for diagnosis of ectopic pregnancy</li>
+    <li>To understand the concept of discriminatory zone when both ultrasound and human chorionic gonadotrophin level are used for diagnosis of ectopic pregnancy</li>
+    <li>To be able to describe variable treatment policies of ectopic pregnancy</li>
+  </ul>
+</section>
+
+<!-- ===================== DEFINITION ===================== -->
+<section id="definition">
+  <div class="sh">
+    <span class="badge">02</span>
+    <div>
+      <h2 class="ttl">Definition, Incidence &amp; Sites</h2>
+      <span class="sub">Implantation of the fertilized ovum outside the uterine cavity</span>
+    </div>
+  </div>
+
+  <div class="defbox">
+    <div class="lbl">Definition</div>
+    <div class="body">Implantation of the fertilized ovum outside the uterine cavity.</div>
+    <div class="incidence"><strong>Incidence:</strong> 2% of all pregnancies.</div>
+  </div>
+
+  <h3>Sites of Ectopic Pregnancy</h3>
+  <ul class="bullet-grid">
+    <li><strong>Tubal pregnancy</strong> — the commonest site (99% of all ectopic pregnancy).</li>
+    <li>Cervical pregnancy.</li>
+    <li>Pregnancy in rudimentary horn.</li>
+    <li>Corneal (cornual) pregnancy.</li>
+    <li>Ovarian pregnancy.</li>
+    <li>Abdominal pregnancy.</li>
+    <li>Broad ligamentary pregnancy.</li>
+  </ul>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> <b>~99% of ectopic pregnancies are tubal</b> — every other site (cervical, ovarian, abdominal, cornual, rudimentary horn, broad ligament) accounts for the remaining ~1% combined. Always think <b>tubal first</b>.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="definition">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Ectopic pregnancy is defined as:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Implantation in the lower uterine segment</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-definition-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Implantation and development of the ovum outside the normal uterine cavity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Implantation in the cervix</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Tubal abortion</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Ectopic pregnancy is the implantation and development of the ovum outside the normal uterine cavity.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="definition">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The most common site of ectopic pregnancy is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ovary</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Interstitial part of tube</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-definition-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Ampulla of the fallopian tube</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Abdominal cavity</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The ampulla is the most common site for ectopic pregnancy.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="definition">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-definition-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="definition">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-definition-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="definition">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-definition-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-definition-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== RISK FACTORS ===================== -->
+<section id="risk">
+  <div class="sh">
+    <span class="badge">03</span>
+    <div>
+      <h2 class="ttl">Etiology &amp; Risk Factors</h2>
+      <span class="sub">Anything that impairs tubal transport or the endometrial environment</span>
+    </div>
+  </div>
+
+  <ul class="bullet-grid">
+    <li><strong>PID</strong> — Pelvic Inflammatory Disease.</li>
+    <li><strong>Previous ectopic</strong> pregnancy.</li>
+    <li>Previous tubal surgery.</li>
+    <li>Previous pelvic or abdominal surgery.</li>
+    <li><strong>Tubal pathology.</strong></li>
+    <li><strong>IUCD</strong> — Intrauterine Contraceptive Device.</li>
+    <li>Tubal sterilization.</li>
+    <li><strong>Cigarette smoking.</strong></li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> The single strongest risk factor is a <b>previous ectopic pregnancy</b>. After one ectopic, recurrence risk rises substantially — always document and counsel.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="risk">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In a ruptured ectopic pregnancy with hemodynamic instability, the treatment of choice is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Methotrexate therapy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Salpingostomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-risk-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Emergency laparotomy with salpingectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Expectant management</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Ruptured ectopic with instability requires emergency laparotomy and salpingectomy. Salpingostomy (incision, remove, preserve tube) is for unruptured cases desiring fertility.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="risk">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-risk-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="risk">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The etiology of this condition involves:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Genetic factors alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Environmental factors alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-risk-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">A complex interplay of genetic, environmental, and multifactorial elements</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Iatrogenic causes only</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Most obstetric conditions have multifactorial etiology.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="risk">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Modifiable risk factors include:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-risk-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Smoking and obesity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Age and parity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Genetic predisposition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">None of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Smoking, obesity, and nutritional status are modifiable risk factors.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="risk">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-risk-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-risk-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== TUBAL SITES ===================== -->
+<section id="tubal-sites">
+  <div class="sh">
+    <span class="badge">04</span>
+    <div>
+      <h2 class="ttl">Tubal Implantation Sites</h2>
+      <span class="sub">Distribution within the fallopian tube</span>
+    </div>
+  </div>
+  <ul class="bullet-grid">
+    <li><strong>Ampulla</strong> — 80% of tubal pregnancy.</li>
+    <li><strong>Isthmus</strong> — 12% of tubal pregnancy.</li>
+    <li>Interstitial part.</li>
+    <li>Fimbrial end.</li>
+  </ul>
+
+  <div class="grid-2" style="margin-top:14px">
+    <div class="mini-card">
+      <div class="lbl">Ampulla</div>
+      <div class="val">80%</div>
+    </div>
+    <div class="mini-card">
+      <div class="lbl">Isthmus</div>
+      <div class="val">12%</div>
+    </div>
+  </div>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> The <b>ampulla</b> is by far the most common tubal site (<b>80%</b>), followed by the <b>isthmus</b> (<b>12%</b>). Interstitial and fimbrial sites are rare.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="tubal-sites">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Interstitial ectopic pregnancy is treated by:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Salpingectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-tubal-sites-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Cornuostomy or cornual resection</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Methotrexate only</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Salpingostomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Interstitial (cornual) ectopic pregnancy is treated by cornuostomy or cornual resection due to its location in the uterine cornua.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="tubal-sites">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Ovarian ectopic pregnancy is treated by:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Oophorectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Salpingo-oophorectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-tubal-sites-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Ovarian wedge resection or oophorectomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Medical treatment only</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Ovarian ectopic is managed by ovarian wedge resection or oophorectomy.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="tubal-sites">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-tubal-sites-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="tubal-sites">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-tubal-sites-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="tubal-sites">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-tubal-sites-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-tubal-sites-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== CLINICAL PICTURE ===================== -->
+<section id="clinical">
+  <div class="sh">
+    <span class="badge">05</span>
+    <div>
+      <h2 class="ttl">Clinical Picture</h2>
+      <span class="sub">The clinical picture differs according to the type of ectopic pregnancy</span>
+    </div>
+  </div>
+
+  <h3>General — Symptoms</h3>
+  <ul class="bullet-grid">
+    <li>History of missed period.</li>
+    <li>Vaginal bleeding.</li>
+    <li>Abdominal or pelvic pain.</li>
+  </ul>
+
+  <h3>General — Signs</h3>
+  <h4>General examination</h4>
+  <ul class="bullet-grid">
+    <li>Signs of pregnancy.</li>
+  </ul>
+  <h4>Abdominal</h4>
+  <ul class="bullet-grid">
+    <li>Abdominal or pelvic tenderness.</li>
+    <li>Abdominal rigidity.</li>
+  </ul>
+  <h4>Vaginal</h4>
+  <ul class="bullet-grid">
+    <li>Soft enlarged uterus.</li>
+    <li>Cervical motion tenderness (jumping sign).</li>
+  </ul>
+
+  <p>Then the clinical picture differs according to the type of ectopic pregnancy:</p>
+
+  <!-- 1. UNDISTURBED -->
+  <h3>1. Undisturbed Ectopic</h3>
+  <p>The clinical picture is mentioned before.</p>
+
+  <!-- 2. ACUTE DISTURBED -->
+  <h3>2. Acute Disturbed Ectopic</h3>
+  <h4>General examination</h4>
+  <ul class="bullet-grid">
+    <li>Signs of pregnancy.</li>
+    <li>Pallor, fainting attacks, shoulder pain.</li>
+    <li><strong>Shock, tachycardia and hypotension.</strong></li>
+  </ul>
+  <h4>Abdominal</h4>
+  <ul class="bullet-grid">
+    <li>Abdominal or pelvic tenderness.</li>
+    <li><strong>Rebound tenderness.</strong></li>
+    <li>Abdominal rigidity.</li>
+  </ul>
+  <h4>Vaginal</h4>
+  <ul class="bullet-grid">
+    <li>Cervical motion tenderness (jumping sign) — <strong>severe</strong>.</li>
+  </ul>
+
+  <div class="callout danger">
+    <div class="ico">🛑</div>
+    <div class="body">
+      <b>Danger:</b> The combination of <b>shoulder pain + fainting + shock + tachycardia + hypotension</b> in any pregnant woman is ruptured ectopic until proven otherwise. <b>Resuscitate first, diagnose second.</b>
+    </div>
+  </div>
+
+  <!-- 3. CHRONIC DISTURBED -->
+  <h3>3. Chronic Disturbed Ectopic</h3>
+  <ul class="bullet-grid">
+    <li>Recurrent lower abdominal pain.</li>
+    <li>Pelvic heaviness, rectal tenesmus, dysuria, dyschezia and dyspareunia.</li>
+    <li>Tender cervical motion.</li>
+    <li>Tender adnexal swelling.</li>
+  </ul>
+
+  <div class="callout note">
+    <div class="ico">📝</div>
+    <div class="body">
+      <b>Note:</b> Chronic disturbed ectopic mimics pelvic inflammatory disease / endometriosis. The triad of <b>recurrent lower abdominal pain + pelvic heaviness + tender adnexal swelling</b> in a woman of reproductive age should raise suspicion.
+    </div>
+  </div>
+
+  <h3>Quick-Reference — 3 Clinical Patterns</h3>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Key Symptoms / Signs</th>
+        <th>Hemodynamic Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Undisturbed</b></td>
+        <td>Missed period; vaginal bleeding; abdominal/pelvic pain; soft enlarged uterus; cervical motion tenderness.</td>
+        <td>Stable</td>
+      </tr>
+      <tr>
+        <td><b>Acute disturbed</b></td>
+        <td>Pallor, fainting, <b>shoulder pain</b>; rebound tenderness; severe cervical motion tenderness.</td>
+        <td><b>Shock, tachycardia, hypotension</b></td>
+      </tr>
+      <tr>
+        <td><b>Chronic disturbed</b></td>
+        <td>Recurrent lower abdominal pain; pelvic heaviness; rectal tenesmus; dysuria; dyschezia; dyspareunia; tender cervical motion; tender adnexal swelling.</td>
+        <td>Stable (subacute)</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+        <div class="mcq-block" data-subtopic="clinical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The most common presenting symptom is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Pain</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Abnormal bleeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both pain and abnormal bleeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-clinical-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Clinical presentation varies — pain and bleeding are common but not universal symptoms.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="clinical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which sign on examination is characteristic?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Abnormal vital signs</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Palpable abdominal mass</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-clinical-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Specific findings vary by condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">None of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Examination findings depend heavily on the specific obstetric condition.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="clinical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-clinical-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="clinical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-clinical-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="clinical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-clinical-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-clinical-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+<!-- ===================== INVESTIGATIONS ===================== -->
+<section id="investigations">
+  <div class="sh">
+    <span class="badge">06</span>
+    <div>
+      <h2 class="ttl">Investigations</h2>
+      <span class="sub">β-hCG, ultrasound, discriminatory zone, progesterone, laparoscopy</span>
+    </div>
+  </div>
+
+  <h3>1. Quantitative Beta Human Chorionic Gonadotropin (β-hCG)</h3>
+  <p>If the test is negative, normal and abnormal pregnancy including ectopic are excluded.</p>
+
+  <h4>Doubling time</h4>
+  <ul class="bullet-grid">
+    <li>In normal pregnancy, the β-hCG level is doubling every <strong>48 hours</strong> during the first 42 days of gestation.</li>
+    <li>Ectopic pregnancy usually shows <strong>less than 66% increase in β-hCG level within 48 hours</strong>.</li>
+  </ul>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> A <b>&lt;66% rise in β-hCG over 48 hours</b> in early pregnancy is highly suspicious for ectopic — normal pregnancy doubles in 48 hours during the first 42 days.
+    </div>
+  </div>
+
+  <h3>2. Ultrasound and Doppler</h3>
+  <p>Visualization of intrauterine sac + fetal pulsation: <strong>mostly excludes ectopic pregnancy</strong>.</p>
+
+  <h4>Signs of ectopic pregnancy</h4>
+  <ol>
+    <li>Empty uterine cavity.</li>
+    <li>Free fluid in Douglas pouch.</li>
+    <li>Adnexal swelling: if associated with fetal pulsation → <strong>sure sign of ectopic</strong>.</li>
+  </ol>
+
+  <h3>3. β-hCG + U/S — The Discriminatory Zone</h3>
+  <div class="defbox">
+    <div class="lbl">Definition</div>
+    <div class="body">HCG, at which all intrauterine pregnancies should be visible on US.</div>
+  </div>
+  <div class="grid-2" style="margin-top:12px">
+    <div class="mini-card">
+      <div class="lbl">Transabdominal U/S (TAU)</div>
+      <div class="val">6000 mIU/ml</div>
+    </div>
+    <div class="mini-card">
+      <div class="lbl">Transvaginal U/S (TVU)</div>
+      <div class="val">2000 mIU/ml</div>
+    </div>
+  </div>
+  <p style="margin-top:10px">If the HCG is above the discriminatory zone and the uterus is empty on U/S → <strong>ectopic pregnancy</strong>.</p>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> TVU has a <b>3× lower discriminatory zone</b> (2000 vs 6000 mIU/ml) than TAU. In any woman with β-hCG above her modality's discriminatory zone and an <b>empty uterus on ultrasound</b>, presume ectopic pregnancy.
+    </div>
+  </div>
+
+  <h3>4. Progesterone</h3>
+  <p>It is lower in ectopic than normal pregnancy (<strong>&lt; 15 ng/ml</strong>).</p>
+
+  <h3>5. Laparoscopy</h3>
+  <p>For diagnosis and treatment.</p>
+
+
+        <div class="mcq-block" data-subtopic="investigations">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The first-line investigation is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ultrasound</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Complete blood count</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Urine analysis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-investigations-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the clinical suspicion</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Choice of investigation depends on the suspected condition.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="investigations">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-investigations-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="investigations">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-investigations-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="investigations">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which laboratory test is most relevant?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Hemoglobin level</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Coagulation profile</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-investigations-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Specific test depends on the condition being investigated</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above should be checked routinely</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Investigations are guided by clinical suspicion and differential diagnosis.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="investigations">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-investigations-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-investigations-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== DISCRIMINATORY ZONE & VISUAL ===================== -->
+<section id="discriminatory">
+  <div class="sh">
+    <span class="badge">07</span>
+    <div>
+      <h2 class="ttl">Discriminatory Zone &amp; Surgical Options</h2>
+      <span class="sub">Visual reference: single-dose vs two-dose MTX protocols</span>
+    </div>
+  </div>
+
+  <p>The following comparison table was extracted directly from the source material and summarizes the single-dose and two-dose methotrexate protocols for medical management of unruptured ectopic pregnancy.</p>
+
+  <div class="image-card source">
+    <div class="header">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:4px;background:rgba(255,255,255,.25);font-size:11px">✓</span>
+      SOURCE IMAGE — MTX PROTOCOL COMPARISON
+    </div>
+    <div class="pic">
+      <img src="../../../../../extracted/assets/extracted_images/06_ectopic_pregnancy/mtx_protocol_comparison.jpg" alt="Single-dose vs Two-dose Methotrexate protocol comparison for ectopic pregnancy management">
+    </div>
+    <div class="caption">Methotrexate (MTX) Protocol Comparison — Single-Dose vs Two-Dose Regimens</div>
+    <div class="source-line">Source: Provided Material — <em>Book Obstetrics 2025-2026-006.pdf</em> (extracted via <code>pdfimages -j</code> → <code>img-001.jpg</code>). No watermark, on-topic clinical reference content. Used as SOURCE IMAGE (green-bordered card).</div>
+  </div>
+
+  <p>For the surgical options, the following illustration contrasts <strong>salpingostomy</strong> (incision to remove the gestational sac, preserves the tube) with <strong>salpingectomy</strong> (resection of the affected tube segment).</p>
+
+  <div class="image-card source">
+    <div class="header">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:4px;background:rgba(255,255,255,.25);font-size:11px">✓</span>
+      SOURCE IMAGE — SURGICAL OPTIONS
+    </div>
+    <div class="pic">
+      <img src="../../../../../extracted/assets/extracted_images/06_ectopic_pregnancy/salpingostomy_vs_salpingectomy.jpg" alt="Salpingostomy (linear incision) vs Salpingectomy (resection) for tubal ectopic pregnancy">
+    </div>
+    <div class="caption">Surgical Management of Tubal Ectopic — Salpingostomy (left, dashed line indicates linear tubal incision) vs Salpingectomy (right, dashed lines indicate resection boundaries)</div>
+    <div class="source-line">Source: Provided Material — <em>Book Obstetrics 2025-2026-006.pdf</em> (extracted via <code>pdfimages -j</code> → <code>img-002.jpg</code>). No watermark, on-topic educational illustration. Used as SOURCE IMAGE (green-bordered card).</div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="discriminatory">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-discriminatory-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="discriminatory">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-discriminatory-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="discriminatory">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-discriminatory-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="discriminatory">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-discriminatory-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="discriminatory">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-discriminatory-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-discriminatory-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== DIFFERENTIAL DIAGNOSIS ===================== -->
+<section id="differential">
+  <div class="sh">
+    <span class="badge">08</span>
+    <div>
+      <h2 class="ttl">Differential Diagnosis</h2>
+      <span class="sub">Two clinical scenarios to consider</span>
+    </div>
+  </div>
+  <ol>
+    <li>From other causes of bleeding in early pregnancy (abortion, vesicular mole).</li>
+    <li>From other causes of acute abdomen during pregnancy.</li>
+  </ol>
+
+
+        <div class="mcq-block" data-subtopic="differential">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-differential-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="differential">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which clinical finding is most suggestive of this diagnosis?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Pain and bleeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Asymptomatic presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Abnormal laboratory values</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-differential-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Varies by condition — specific findings guide diagnosis</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Clinical presentation differs by condition and guides diagnostic testing.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="differential">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The gold standard diagnostic test is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ultrasound imaging</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory blood tests</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Clinical examination alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-differential-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="differential">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-differential-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="differential">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-differential-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-differential-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== TREATMENT OVERVIEW ===================== -->
+<section id="treatment">
+  <div class="sh">
+    <span class="badge">09</span>
+    <div>
+      <h2 class="ttl">Treatment Overview &amp; Resuscitation</h2>
+      <span class="sub">Resuscitate first in any unstable patient, then treat</span>
+    </div>
+  </div>
+
+  <h3>Resuscitation in Unstable Patient — Immediately</h3>
+  <ul class="bullet-grid">
+    <li><strong>2 large bore I.V lines + fluids.</strong></li>
+    <li>Oxygen: <strong>100% by mask.</strong></li>
+    <li>Cardiac monitor and pulse-oximetry.</li>
+    <li>CBC and blood groups.</li>
+    <li>Blood transfusion.</li>
+  </ul>
+
+  <div class="callout danger">
+    <div class="ico">🛑</div>
+    <div class="body">
+      <b>Danger:</b> In the hemodynamically unstable patient with suspected ruptured ectopic, do <b>NOT</b> delay resuscitation for imaging. <b>2 large-bore IV lines + fluids + crossmatch → theatre</b>. Diagnosis can wait; shock cannot.
+    </div>
+  </div>
+
+  <h3>Three Treatment Policies</h3>
+  <div class="grid-3" style="margin-top:14px">
+    <div class="mini-card">
+      <div class="lbl">Option A</div>
+      <div class="val">Expectant</div>
+    </div>
+    <div class="mini-card">
+      <div class="lbl">Option B</div>
+      <div class="val">Medical (Methotrexate)</div>
+    </div>
+    <div class="mini-card">
+      <div class="lbl">Option C</div>
+      <div class="val">Surgical</div>
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="treatment">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-treatment-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="treatment">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-treatment-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="treatment">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When is conservative management appropriate?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-treatment-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">In mild cases without complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Always as first-line</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Never — all cases require intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Only after 37 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Conservative management is reserved for mild, uncomplicated cases.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="treatment">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-treatment-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="treatment">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-treatment-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-treatment-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+<!-- ===================== EXPECTANT ===================== -->
+<section id="expectant">
+  <div class="sh">
+    <span class="badge">10</span>
+    <div>
+      <h2 class="ttl">Expectant Management</h2>
+      <span class="sub">Watchful waiting — only in highly selected, stable patients</span>
+    </div>
+  </div>
+
+  <h3>Indications</h3>
+  <ul class="bullet-grid">
+    <li>Women who are <strong>clinically stable</strong>.</li>
+    <li>Size of the ectopic pregnancy is <strong>&lt; 3.5 cm with no visible heartbeat on TVU</strong>.</li>
+    <li>Serum β-hCG <strong>less than 1500 IU/L</strong>.</li>
+  </ul>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> The threshold of <b>β-hCG &lt; 1500 IU/L</b> and mass <b>&lt; 3.5 cm</b> on TVU is the classic expectant-management window. Above these cutoffs, success rates fall and risk of rupture rises.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="expectant">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-expectant-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="expectant">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which factor most influences the choice of treatment?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Gestational age at presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Maternal preference</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Facility resources</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-expectant-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above — treatment is individualized</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Obstetric management is tailored to gestational age, maternal status, and available resources.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="expectant">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-expectant-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="expectant">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-expectant-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="expectant">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-expectant-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-expectant-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== MEDICAL ===================== -->
+<section id="medical">
+  <div class="sh">
+    <span class="badge">11</span>
+    <div>
+      <h2 class="ttl">Medical Treatment (Methotrexate)</h2>
+      <span class="sub">For unruptured tubal ectopic in hemodynamically stable patients</span>
+    </div>
+  </div>
+
+  <h3>Indications</h3>
+  <ul class="bullet-grid">
+    <li>No significant pain.</li>
+    <li>Unruptured tubal ectopic pregnancy with <strong>adnexal mass &lt; 3.5 cm and no visible fetal cardiac pulsations</strong>.</li>
+    <li>β hCG <strong>&lt; 1500 IU/L</strong>.</li>
+    <li>No intrauterine pregnancy.</li>
+    <li>The patient is able to return for follow up.</li>
+  </ul>
+
+  <h3>Reference: Single-Dose vs Two-Dose MTX</h3>
+  <p style="margin-top:6px">See the source-image comparison table in Section 7 for the full single-dose vs two-dose protocol, including the <strong>50 mg/m² BSA</strong> dose, day-0 / day-4 / day-7 / day-11 / day-14 monitoring schedule, and the <strong>15% decline</strong> threshold for an additional dose.</p>
+
+  <div class="callout note">
+    <div class="ico">📝</div>
+    <div class="body">
+      <b>Note:</b> The two protocols share the <b>same dose (50 mg/m² BSA)</b> and the same <b>15% β-hCG decline criterion</b> — the difference is the number of doses and the surveillance schedule. The two-dose regimen extends monitoring to <b>days 11 and 14</b> if a repeat dose is given.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="medical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When is conservative management appropriate?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-medical-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">In mild cases without complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Always as first-line</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Never — all cases require intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Only after 37 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Conservative management is reserved for mild, uncomplicated cases.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="medical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-medical-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="medical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-medical-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="medical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-medical-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="medical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-medical-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-medical-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== CONTRAINDICATIONS ===================== -->
+<section id="contraindications">
+  <div class="sh">
+    <span class="badge">12</span>
+    <div>
+      <h2 class="ttl">MTX Contraindications</h2>
+      <span class="sub">When methotrexate must NOT be used</span>
+    </div>
+  </div>
+
+  <ul class="bullet-grid">
+    <li><strong>Hepatic dysfunction.</strong></li>
+    <li><strong>Renal disease</strong> — serum creatinine level &gt; 1.5 mg/dL.</li>
+    <li>Active peptic ulcer disease.</li>
+    <li><strong>Blood diseases</strong> — leukocyte count &lt; 3000 cells/μL or platelet count &lt; 100,000/μL.</li>
+    <li>Poor patient compliance.</li>
+    <li>History of active hepatic or renal disease.</li>
+    <li>Presence of fetal cardiac activity.</li>
+    <li>Breast feeding.</li>
+    <li>Known sensitivity to methotrexate.</li>
+    <li>Active pulmonary disease.</li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> A <b>positive fetal heartbeat</b>, <b>β-hCG &gt; 5000 IU/L</b>, or <b>mass &gt; 3.5 cm</b> are <b>relative contraindications</b> to MTX and absolute indications for surgery.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="contraindications">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-contraindications-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="contraindications">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-contraindications-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="contraindications">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-contraindications-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="contraindications">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-contraindications-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="contraindications">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-contraindications-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-contraindications-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== SURGICAL ===================== -->
+<section id="surgical">
+  <div class="sh">
+    <span class="badge">13</span>
+    <div>
+      <h2 class="ttl">Surgical Treatment</h2>
+      <span class="sub">Laparotomy or laparoscopy — the two main approaches</span>
+    </div>
+  </div>
+
+  <h3>Indications</h3>
+  <ul class="bullet-grid">
+    <li><strong>Significant pain.</strong></li>
+    <li>Ectopic pregnancy with <strong>adnexal mass &gt; 3.5 cm</strong> or with <strong>visible fetal cardiac pulsations</strong>.</li>
+    <li>β hCG <strong>&gt; 5000 IU/L</strong>.</li>
+  </ul>
+
+  <p style="margin-top:6px">Either of the following is done by laparotomy or laparoscopy:</p>
+
+  <h3>Treatment Policies at a Glance</h3>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Policy</th>
+        <th>Best Candidate</th>
+        <th>β-hCG Threshold</th>
+        <th>Mass Size</th>
+        <th>Pain</th>
+        <th>Fetal Heartbeat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Expectant</b></td>
+        <td>Clinically stable; reliable for follow-up</td>
+        <td>&lt; 1500 IU/L</td>
+        <td>&lt; 3.5 cm, no heartbeat on TVU</td>
+        <td>None / minimal</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td><b>Medical (MTX)</b></td>
+        <td>Stable; can return for follow-up</td>
+        <td>&lt; 1500 IU/L</td>
+        <td>&lt; 3.5 cm, no fetal cardiac pulsations</td>
+        <td>No significant pain</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td><b>Surgical</b></td>
+        <td>Unstable, ruptured, or contraindications to MTX</td>
+        <td>&gt; 5000 IU/L</td>
+        <td>&gt; 3.5 cm, or with visible fetal cardiac pulsations</td>
+        <td>Significant pain</td>
+        <td>May be present</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+        <div class="mcq-block" data-subtopic="surgical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-surgical-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="surgical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-surgical-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="surgical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The definitive treatment involves:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Medical therapy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Combined medical and surgical care</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-surgical-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition and gestational age</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Treatment depends on the diagnosis, severity, gestational age, and patient factors.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="surgical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-surgical-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="surgical">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When is conservative management appropriate?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-surgical-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">In mild cases without complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Always as first-line</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Never — all cases require intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-surgical-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Only after 37 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Conservative management is reserved for mild, uncomplicated cases.</div>
+        </div>
+</section>
+
+<!-- ===================== SALPINGOSTOMY ===================== -->
+<section id="salpingostomy">
+  <div class="sh">
+    <span class="badge">14</span>
+    <div>
+      <h2 class="ttl">Salpingostomy vs Salpingectomy</h2>
+      <span class="sub">Two surgical options for tubal ectopic pregnancy</span>
+    </div>
+  </div>
+
+  <p>See Section 7 for the surgical-options visual that contrasts the two procedures.</p>
+
+  <div class="comparison-row">
+    <div class="col">
+      <div class="head">1. Salpingostomy</div>
+      <p><strong>Definition:</strong> Removal of the gestational sac through linear tubal incision.</p>
+      <h4>Indication</h4>
+      <ul style="margin-top:6px">
+        <li>When future fertility is required.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="head">2. Salpingectomy</div>
+      <p><strong>Definition:</strong> Removal of the tube containing ectopic pregnancy.</p>
+      <h4>Indications</h4>
+      <ul style="margin-top:6px">
+        <li>&gt; 40 years.</li>
+        <li>Completed her family.</li>
+        <li>Uncontrolled bleeding during salpingostomy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout pearl">
+    <div class="ico">💎</div>
+    <div class="body">
+      <b>Clinical Pearl:</b> The <b>tubal conservation vs removal</b> decision hinges on <b>future fertility intent</b>: <b>salpingostomy</b> when future fertility is required; <b>salpingectomy</b> in older patients, those who have completed their family, or if bleeding is uncontrolled during the attempt to conserve the tube.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="salpingostomy">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-salpingostomy-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="salpingostomy">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-salpingostomy-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="salpingostomy">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-salpingostomy-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="salpingostomy">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-salpingostomy-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="salpingostomy">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-salpingostomy-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-salpingostomy-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== INTERSTITIAL ===================== -->
+<section id="interstitial">
+  <div class="sh">
+    <span class="badge">15</span>
+    <div>
+      <h2 class="ttl">Interstitial (Cornual) Pregnancy</h2>
+      <span class="sub">Implantation in the proximal tubal segment within the muscular uterine wall</span>
+    </div>
+  </div>
+  <ul class="bullet-grid">
+    <li>Interstitial pregnancy implants in the proximal tubal segment that lies within the muscular uterine wall.</li>
+    <li><strong>Swelling lateral to the insertion of the round ligament is the characteristic anatomic finding.</strong></li>
+    <li>Because of the proximity of these pregnancies to the uterine and ovarian arteries, there is a <strong>risk of severe hemorrhage</strong>.</li>
+    <li>Surgical management involves <strong>cornual resection</strong> either by laparotomy or laparoscopy.</li>
+    <li>The <strong>risk of uterine rupture</strong> with subsequent pregnancies is high. Thus, careful observation of these women, along with consideration of <strong>elective cesarean delivery</strong>, is warranted.</li>
+  </ul>
+
+  <div class="callout danger">
+    <div class="ico">🛑</div>
+    <div class="body">
+      <b>Danger:</b> Cornual pregnancy can rupture catastrophically because of the rich anastomosis between <b>uterine and ovarian arteries</b>. Always plan for <b>large-bore IV access and blood</b> on standby, and counsel the patient about <b>future uterine rupture risk</b> and <b>elective cesarean delivery</b> in subsequent pregnancies.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="interstitial">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-interstitial-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="interstitial">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-interstitial-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="interstitial">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-interstitial-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="interstitial">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-interstitial-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="interstitial">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-interstitial-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-interstitial-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== OVARIAN / CERVICAL / SCAR / HETERO / PUL ===================== -->
+<section id="ovarian">
+  <div class="sh">
+    <span class="badge">16</span>
+    <div>
+      <h2 class="ttl">Ovarian, Cervical, Cesarean-Scar, Heterotopic &amp; PUL</h2>
+      <span class="sub">Special ectopic types — diagnostic criteria and management</span>
+    </div>
+  </div>
+
+  <!-- OVARIAN -->
+  <h3>Ovarian Ectopic Pregnancy</h3>
+  <p>C/P is the same as tubal ectopic. The diagnosis is by <strong>Spiegelberg criteria</strong>:</p>
+  <ol>
+    <li>The pregnancy occupies the site of the ovary and cannot be separated from it &amp; surrounded by healthy ovarian tissues.</li>
+    <li>The gestational sac is connected to the uterus by ovarian ligament.</li>
+    <li>No adhesion between the tube and the ovary.</li>
+    <li>Fallopian tube on the affected side is healthy &amp; the mesosalpinx on the affected side is free from hemorrhage or masses.</li>
+  </ol>
+  <p><strong>Treatment:</strong> oophorectomy.</p>
+
+  <!-- CERVICAL -->
+  <h3>Cervical Ectopic Pregnancy</h3>
+  <p>Two diagnostic criteria are necessary for confirmation of cervical pregnancy:</p>
+  <ul class="bullet-grid">
+    <li>The presence of cervical glands opposite the placental attachment site.</li>
+    <li>A portion of or the entire placenta must be located below the entrance of the uterine vessels.</li>
+  </ul>
+  <p>Early diagnosis of cervical pregnancy is important to avoid severe hemorrhage and subsequent hysterectomy in these women.</p>
+  <p><strong>Treatment:</strong> medically by methotrexate or by cervical evacuation and packing. In severe bleeding, hysterectomy is done.</p>
+
+  <!-- CESAREAN SCAR -->
+  <h3>Cesarean Section Scar Pregnancy</h3>
+  <p>Implantation of the pregnancy sac within the scar of a previous cesarean delivery. It can cause <strong>serious maternal morbidity and mortality from massive hemorrhage</strong>.</p>
+  <p>Differentiating between a cervical ectopic pregnancy and a cesarean delivery scar pregnancy can be difficult. There are four sonographic criteria that must be met to reach the diagnosis:</p>
+  <ol>
+    <li>An empty uterine cavity.</li>
+    <li>An empty cervical canal.</li>
+    <li>A gestational sac in the anterior part of the uterine isthmus.</li>
+    <li>Absence of healthy myometrium between the bladder and gestational sac.</li>
+  </ol>
+  <p>Imaging with three-dimensional color Doppler or magnetic resonance imaging can aid in the evaluation.</p>
+  <p><strong>Treatment:</strong> using methotrexate, or resection by laparoscopy or laparotomy.</p>
+
+  <!-- HETEROTOPIC -->
+  <h3>Heterotopic Pregnancy</h3>
+  <ul class="bullet-grid">
+    <li>Presence of a uterine pregnancy with an extrauterine pregnancy.</li>
+    <li>When a tubal pregnancy coexists with a uterine pregnancy, <strong>potassium chloride can be injected into the tubal pregnancy sac</strong>.</li>
+    <li><strong>Methotrexate is contraindicated</strong> due to the detrimental effects on the normal pregnancy.</li>
+  </ul>
+
+  <!-- PUL -->
+  <h3>Pregnancy of Unknown Location (PUL)</h3>
+  <p>A condition in which there is a positive pregnancy test and absent intrauterine gestational sac without any evidence of extrauterine pregnancy. This term is used till a final diagnosis is made, either an abnormal or normal intrauterine pregnancy or ectopic.</p>
+
+  <h3>Special Types at a Glance</h3>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Diagnostic Anchor</th>
+        <th>Treatment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Ovarian</b></td>
+        <td>Spiegelberg criteria (4 items)</td>
+        <td>Oophorectomy</td>
+      </tr>
+      <tr>
+        <td><b>Cervical</b></td>
+        <td>Cervical glands opposite placental attachment; placenta below uterine vessels</td>
+        <td>MTX, or cervical evacuation + packing; hysterectomy if severe bleeding</td>
+      </tr>
+      <tr>
+        <td><b>Cesarean scar</b></td>
+        <td>4 sonographic criteria (empty cavity, empty cervical canal, sac in anterior isthmus, no myometrium between bladder and sac)</td>
+        <td>MTX, or resection by laparoscopy / laparotomy</td>
+      </tr>
+      <tr>
+        <td><b>Heterotopic</b></td>
+        <td>Uterine + extrauterine pregnancy</td>
+        <td>KCl into tubal sac; <b>MTX contraindicated</b></td>
+      </tr>
+      <tr>
+        <td><b>PUL</b></td>
+        <td>Positive pregnancy test, no IUGS, no extrauterine evidence on imaging</td>
+        <td>Surveillance until final diagnosis (normal IUP / abnormal IUP / ectopic)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="ico">⚠️</div>
+    <div class="body">
+      <b>Warning:</b> In <b>heterotopic pregnancy</b>, the uterine pregnancy is normal — <b>MTX is contraindicated</b> because it will harm the viable intrauterine fetus. The treatment of the tubal component is local <b>potassium chloride injection</b>.
+    </div>
+  </div>
+
+
+        <div class="mcq-block" data-subtopic="ovarian">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-ovarian-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="ovarian">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-ovarian-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="ovarian">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-ovarian-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="ovarian">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-ovarian-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="ovarian">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-ovarian-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-ovarian-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+<!-- ===================== STUDENT ACTIVITY ===================== -->
+<details class="study-section"><summary>Student Activity</summary><section id="activity">
+  <div class="sh">
+    <span class="badge">17</span>
+    <div>
+      <h2 class="ttl">Student Activity</h2>
+      <span class="sub">Bedside teaching — bring ultrasound images to your tutor</span>
+    </div>
+  </div>
+  <p>Each student is requested to navigate the web in order to provide online three ultrasonographic pictures of three ectopic pregnancies to be shown to his (her) tutor in bedside teaching part of the clinical round.</p>
+
+  <div class="callout note">
+    <div class="ico">📝</div>
+    <div class="body">
+      <b>Note:</b> This activity is <b>bedside teaching</b> — bring the <b>Discriminatory Zone</b> (Section 6) and the <b>3 Clinical Patterns</b> (Section 5) reference tables with you to the clinical round. Use the three ultrasound images to walk through: <b>type of ectopic → sonographic features → appropriate management</b>.
+    </div>
+  </div>
+
+  <p style="margin-top:14px">
+    <a href="https://forms.gle/J1rMkBL6Jx9kjfyg8" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent-deep);color:#fff;padding:11px 20px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;letter-spacing:.005em;box-shadow:var(--shadow-sm)">
+      <span>📝</span> Open the Google Forms Quiz →
+    </a>
+  </p>
+</section></details>
+
+<!-- ===================== REFERENCES ===================== -->
+<details class="study-section"><summary>References & Visual Sources</summary><section id="references" class="references">
+  <h2><span class="ico">📚</span>References &amp; Visual Sources</h2>
+  <ol>
+    <li><strong>Source PDF:</strong> <em>Book Obstetrics 2025-2026-006.pdf</em> — Chapter: Ectopic Pregnancy. Pages 27–35. Provided course material.</li>
+    <li><strong>Source Image (retained #1):</strong> "Single-dose vs Two-dose Methotrexate protocol comparison for ectopic pregnancy management" — dosing, monitoring schedule (days 0/4/7/11/14), 50 mg/m² BSA dose, 15% decline criterion, post-therapy surveillance. Extracted from the source PDF via <code>pdfimages -j</code> → <code>img-001.jpg</code>. Renamed to <code>extracted_images/06_ectopic_pregnancy/mtx_protocol_comparison.jpg</code>. No watermark, on-topic, used as a SOURCE IMAGE (green-bordered card).</li>
+    <li><strong>Source Image (retained #2):</strong> "Surgical Management of Tubal Ectopic — Salpingostomy (left, linear incision) vs Salpingectomy (right, resection boundaries)" — anatomical watercolor-style illustration of fallopian tube with ectopic gestational mass. Extracted from the source PDF via <code>pdfimages -j</code> → <code>img-002.jpg</code>. Renamed to <code>extracted_images/06_ectopic_pregnancy/salpingostomy_vs_salpingectomy.jpg</code>. No watermark, on-topic, used as a SOURCE IMAGE (green-bordered card).</li>
+    <li><strong>Source image omitted (watermark):</strong> "Ectopic Pregnancy — labelled diagram of all implantation sites" (Fallopian tube, Interstitial/Cornual, Ampullary, Isthmic, Ovarian, Infundibular, Abdominal, Caesarean Scar, Cervical). Extracted from the source PDF via <code>pdfimages -j</code> → <code>img-000.jpg</code>. <strong>Omitted</strong> because the image carries a visible external <strong>"© Pregmed.org"</strong> watermark in the bottom-left corner. Per the workflow rule "Avoid: Watermarked images". All its educational content (implantation sites) is preserved verbatim in the textual section "Definition, Incidence &amp; Sites" (Section 2) and "Tubal Implantation Sites" (Section 4).</li>
+    <li><strong>Source image omitted (off-topic):</strong> "Two white owl silhouettes on a black background". Extracted from the source PDF via <code>pdfimages -j</code> → <code>img-003.jpg</code>. <strong>Omitted</strong> because the image is decorative, has no medical content, and has no connection to ectopic pregnancy. Per the workflow rule "Avoid: Decorative stock photos / Irrelevant visuals".</li>
+    <li><strong>Source Video (referenced by URL inside the source PDF, not embedded):</strong> YouTube lecture on Ectopic Pregnancy — <a href="https://youtu.be/NPR1ocFayFc?si=gZObKUQ2Jt7tfKSp" target="_blank" rel="noopener">https://youtu.be/NPR1ocFayFc?si=gZObKUQ2Jt7tfKSp</a></li>
+    <li><strong>Source Self-Assessment (referenced by URL inside the source PDF, not embedded):</strong> Google Forms quiz — <a href="https://forms.gle/J1rMkBL6Jx9kjfyg8" target="_blank" rel="noopener">https://forms.gle/J1rMkBL6Jx9kjfyg8</a></li>
+    <li><strong>No external images were used</strong> in this infographic. All visuals originate from the provided material.</li>
+  </ol>
+</section></details>
+
+<footer>
+  Generated as part of the Sequential Infographic Generation System (Topic 06: Ectopic Pregnancy) — Premium Reference.<br>
+  Source: <em>Book Obstetrics 2025-2026-006.pdf</em> · Outputs: <code>html/06_Ectopic_Pregnancy.html</code> · <code>images/06_Ectopic_Pregnancy.png</code> · <code>quality_reports/06_Ectopic_Pregnancy_quality_report.md</code>
+</footer>
+
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 18 — Amniotic Fluid Abnormalities</title>
+<style>
+:root{
+  --accent:#60A5FA;
+  --surface-alt:#F8FAFC;
+  --ink:#334155;
+  --ink-soft:#475569;
+  --line:#E5E7EB;
+  --shadow-xs:0 1px 2px rgba(15,23,42,.04);
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06);
+  --r-md:10px;
+  --r-lg:12px;
+  --font-sans:'Inter','Segoe UI','Roboto',system-ui,-apple-system,sans-serif;
+  --c-red:#EF4444;
+  --c-orange:#F59E0B;
+  --c-green:#22C55E;
+  --c-purple:#8B5CF6;
+  --c-teal:#14B8A6;
+  --c-blue:#3B82F6;
+  --c-yellow:#EAB308;
+  --c-navy:#1E3A8A;
+  --c-cyan:#06B6D4;
+  --c-pink:#EC4899;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#F7F9FC;color:var(--ink);font-family:var(--font-sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{padding:24px 18px 60px}
+.wrap{max-width:1240px;margin:0 auto}
+
+/* HERO */
+.hero{
+  background:var(--surface-alt);
+  border:1px solid var(--line);
+  border-left:6px solid var(--accent);
+  border-radius:var(--r-lg);
+  padding:28px 32px 26px;
+  margin-bottom:22px;
+  box-shadow:var(--shadow-xs);
+  position:relative;
+}
+.hero .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px}
+.hero h1{font-size:38px;line-height:1.15;color:var(--ink);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.hero .sub{font-size:17px;color:var(--ink-soft);max-width:920px;margin-bottom:16px}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:6px 12px;
+  font-size:12.5px;color:var(--ink-soft);
+}
+.chip svg{width:14px;height:14px;flex-shrink:0}
+.chip a{color:inherit;text-decoration:none}
+.chip a:hover{color:var(--accent);text-decoration:underline}
+.chip.poly{background:#F0F9FF;border-color:#BAE6FD;color:#0369A1}
+.chip.oligo{background:#FEF3C7;border-color:#FDE68A;color:#92400E}
+.chip.scope{background:#F1F5F9;border-color:#CBD5E1;color:#475569}
+
+/* SECTION HEADER (panel) */
+.sh{
+  background:var(--surface-alt);
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+  border-radius:var(--r-md);
+  padding:14px 18px 14px 18px;
+  margin:28px 0 14px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:var(--shadow-xs);
+}
+.sh .badge{
+  width:34px;height:34px;background:#fff;
+  border:1px solid var(--line);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:var(--accent);font-size:15px;
+  flex-shrink:0;
+}
+.sh h2.ttl{font-size:21px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.sh h2.sub{font-size:13px;color:var(--ink-soft);font-weight:500;margin-top:2px}
+.sh .meta{margin-left:auto;font-size:12px;color:var(--ink-soft);font-weight:500}
+
+/* TOC */
+.toc{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:18px 20px 20px;
+  box-shadow:var(--shadow-xs);
+  margin-bottom:24px;
+}
+.toc-head{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.toc-head h3{font-size:15px;font-weight:700;color:var(--ink)}
+.toc-head .count{font-size:12px;color:var(--ink-soft);background:var(--surface-alt);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.toc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.toc-grid a{
+  display:flex;align-items:center;gap:10px;
+  background:var(--surface-alt);
+  border:1px solid var(--line);
+  border-radius:8px;padding:9px 12px;
+  text-decoration:none;color:var(--ink);
+  font-size:14px;line-height:1.35;
+  transition:background .15s,border-color .15s;
+}
+.toc-grid a:hover{background:#EFF6FF;border-color:#BFDBFE}
+.toc-grid .num{
+  width:22px;height:22px;border-radius:6px;
+  background:#fff;border:1px solid var(--line);
+  color:var(--accent);font-weight:700;font-size:12px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* SECTION CONTENT */
+section.content{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:22px 24px 24px;
+  box-shadow:var(--shadow-xs);
+  margin-bottom:18px;
+}
+section.content p{margin-bottom:10px}
+section.content p:last-child{margin-bottom:0}
+
+/* GRIDS */
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid-4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mini-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:14px 16px;box-shadow:var(--shadow-xs);
+  display:flex;flex-direction:column;gap:6px;
+}
+.mini-card .head{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  font-weight:700;
+}
+.mini-card .head .dot{width:10px;height:10px;border-radius:50%}
+.mini-card h4{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.mini-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+.mini-card ul{margin:6px 0 0 18px}
+.mini-card ul li{font-size:14.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:3px}
+.mini-card.bg-cyan{background:#ECFEFF;border-color:#A5F3FC}
+.mini-card.bg-cyan .head{color:#0E7490}
+.mini-card.bg-blue{background:#EFF6FF;border-color:#BFDBFE}
+.mini-card.bg-blue .head{color:#1D4ED8}
+.mini-card.bg-teal{background:#F0FDFA;border-color:#99F6E4}
+.mini-card.bg-teal .head{color:#0F766E}
+.mini-card.bg-yellow{background:#FFFBEB;border-color:#FDE68A}
+.mini-card.bg-yellow .head{color:#A16207}
+.mini-card.bg-orange{background:#FFF7ED;border-color:#FED7AA}
+.mini-card.bg-orange .head{color:#C2410C}
+.mini-card.bg-red{background:#FEF2F2;border-color:#FECACA}
+.mini-card.bg-red .head{color:#B91C1C}
+.mini-card.bg-green{background:#F0FDF4;border-color:#BBF7D0}
+.mini-card.bg-green .head{color:#15803D}
+.mini-card.bg-purple{background:#F5F3FF;border-color:#DDD6FE}
+.mini-card.bg-purple .head{color:#6D28D9}
+.mini-card.bg-slate{background:#F8FAFC;border-color:#CBD5E1}
+.mini-card.bg-slate .head{color:#475569}
+
+/* COMPARISON TABLE */
+.cmp{
+  width:100%;border-collapse:separate;border-spacing:0;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  overflow:hidden;font-size:14.5px;
+}
+.cmp th, .cmp td{
+  padding:12px 14px;text-align:left;vertical-align:top;
+  border-bottom:1px solid var(--line);line-height:1.5;
+}
+.cmp tr:last-child th, .cmp tr:last-child td{border-bottom:0}
+.cmp th{
+  background:var(--surface-alt);color:var(--ink);
+  font-weight:700;font-size:13px;letter-spacing:.04em;
+  border-right:1px solid var(--line);
+}
+.cmp td{border-right:1px solid var(--line);color:var(--ink-soft)}
+.cmp th:first-child, .cmp td:first-child{width:18%;background:#F1F5F9;font-weight:600;color:var(--ink)}
+.cmp .poly-col{background:#F0F9FF;color:#0C4A6E}
+.cmp .oligo-col{background:#FFFBEB;color:#78350F}
+
+/* LISTS */
+ul.bul, ol.num{margin:6px 0 0 22px}
+ul.bul li, ol.num li{font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:4px}
+ul.bul li::marker{color:var(--accent)}
+ol.num li::marker{color:var(--accent);font-weight:700}
+
+/* CALLOUTS */
+.callout{
+  display:flex;gap:12px;align-items:flex-start;
+  border:1px solid var(--line);border-left:4px solid var(--c-blue);
+  background:#EFF6FF;border-radius:var(--r-md);
+  padding:12px 14px;margin:14px 0;
+  font-size:14.5px;color:var(--ink);line-height:1.55;
+}
+.callout .ic{
+  width:28px;height:28px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;flex-shrink:0;font-weight:800;
+  background:#fff;border:1px solid var(--line);
+}
+.callout .ic.pearl{color:#15803D;background:#F0FDF4;border-color:#BBF7D0}
+.callout .ic.warn{color:#A16207;background:#FFFBEB;border-color:#FDE68A}
+.callout .ic.danger{color:#B91C1C;background:#FEF2F2;border-color:#FECACA}
+.callout .ic.note{color:#6D28D9;background:#F5F3FF;border-color:#DDD6FE}
+.callout .ic.cyan{color:#0E7490;background:#ECFEFF;border-color:#A5F3FC}
+.callout .body strong{color:var(--ink);font-weight:700}
+.callout.pearl{border-left-color:var(--c-green);background:#F0FDF4}
+.callout.warn{border-left-color:var(--c-orange);background:#FFFBEB}
+.callout.danger{border-left-color:var(--c-red);background:#FEF2F2}
+.callout.note{border-left-color:var(--c-purple);background:#F5F3FF}
+.callout.cyan{border-left-color:var(--c-cyan);background:#ECFEFF}
+
+/* KEY-VALUE PILLS */
+.kv{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.kv .k{
+  background:#fff;border:1px solid var(--line);
+  border-radius:8px;padding:6px 12px;
+  font-size:13.5px;color:var(--ink);
+  display:inline-flex;align-items:center;gap:8px;
+}
+.kv .k b{color:var(--accent);font-weight:700}
+.kv .k.red{border-color:#FECACA;background:#FEF2F2;color:#991B1B}
+.kv .k.amber{border-color:#FDE68A;background:#FFFBEB;color:#92400E}
+.kv .k.green{border-color:#BBF7D0;background:#F0FDF4;color:#166534}
+.kv .k.blue{border-color:#BFDBFE;background:#EFF6FF;color:#1E40AF}
+
+/* BADGE BANNER */
+.banner{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:14px 18px;margin:14px 0;
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;
+}
+.banner .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink-soft)}
+
+/* SOURCE / EXTERNAL IMAGE CARD */
+.card.src{
+  background:#F0FDF4;border:2px solid #16A34A;border-radius:var(--r-md);
+  padding:12px 14px;display:flex;flex-direction:column;gap:8px;
+  box-shadow:var(--shadow-xs);
+}
+.card.src .ch{
+  display:inline-block;background:#16A34A;color:#fff;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  padding:4px 10px;border-radius:4px;align-self:flex-start;
+}
+.card.src .ci{
+  display:flex;justify-content:center;align-items:center;
+  background:#fff;padding:8px;border-radius:6px;
+}
+.card.src .ci img{max-width:100%;max-height:360px;width:auto;height:auto;object-fit:contain}
+.card.src .cc{font-size:14px;color:var(--ink);font-weight:600}
+.card.src .cs{font-size:12.5px;color:var(--ink-soft)}
+.card.ext{
+  background:#FEF2F2;border:2px solid #DC2626;border-radius:var(--r-md);
+  padding:12px 14px;display:flex;flex-direction:column;gap:8px;
+  box-shadow:var(--shadow-xs);
+}
+.card.ext .ch{
+  display:inline-block;background:#DC2626;color:#fff;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  padding:4px 10px;border-radius:4px;align-self:flex-start;
+}
+.card.ext .ci{
+  display:flex;justify-content:center;align-items:center;
+  background:#fff;padding:8px;border-radius:6px;
+}
+.card.ext .ci img{max-width:100%;max-height:360px;width:auto;height:auto;object-fit:contain}
+.card.ext .cc{font-size:14px;color:var(--ink);font-weight:600}
+.card.ext .cs{font-size:12.5px;color:var(--ink-soft)}
+
+/* REFERENCES */
+.refs{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:20px 24px 22px;box-shadow:var(--shadow-xs);
+}
+.refs h2{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em}
+.refs p{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+.refs ul{margin:0 0 0 22px}
+.refs li{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:6px}
+.refs li strong{color:var(--ink);font-weight:600}
+
+/* FOOTER */
+.foot{
+  text-align:center;color:var(--ink-soft);
+  font-size:12.5px;margin-top:24px;padding:14px;
+  border-top:1px solid var(--line);
+}
+.foot a{color:var(--accent);text-decoration:none}
+.foot a:hover{text-decoration:underline}
+
+@media (max-width:900px){
+  .toc-grid,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+}
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">Topic 18 — Chapter content</div>
+    <h1>Amniotic Fluid Abnormalities</h1>
+    <p class="sub">Polyhydramnios &amp; Oligohydramnios — dynamics, definitions, etiology, clinical picture, ultrasound (SDP &amp; AFI), complications, and management.</p>
+    <div class="chips">
+      <span class="chip poly">● Polyhydramnios</span>
+      <span class="chip oligo">● Oligohydramnios</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 8.5a4.5 4.5 0 0 0-8.8-1.2A4.5 4.5 0 1 0 7 12.5h0a4.5 4.5 0 0 0 8 3"/></svg> Dynamic AF</span>
+      <span class="chip scope">Pages 99–100</span>
+      <span class="chip scope">0 source images (text-only chapter)</span>
+    </div>
+  </header>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-head">
+      <h3>Table of contents</h3>
+      <span class="count">9 sections</span>
+    </div>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">1</span><span>ILOs of this chapter</span></a>
+      <a href="#s2"><span class="num">2</span><span>Amniotic Fluid — Dynamics &amp; Function</span></a>
+      <a href="#s3"><span class="num">3</span><span>Polyhydramnios vs Oligohydramnios — Comparison</span></a>
+      <a href="#s4"><span class="num">4</span><span>Ultrasound Assessment — SDP &amp; AFI</span></a>
+      <a href="#s5"><span class="num">5</span><span>Complications</span></a>
+      <a href="#s6"><span class="num">6</span><span>Management</span></a>
+      <a href="#s7"><span class="num">7</span><span>Student Activity</span></a>
+      <a href="#s8"><span class="num">8</span><span>Questions &amp; Google Form Self-Test</span></a>
+      <a href="#s9"><span class="num">9</span><span>References &amp; Visual Sources</span></a>
+    </div>
+  </nav>
+
+  <!-- SECTION 1: ILOs -->
+  <div class="sh" id="s1">
+    <div class="badge">1</div>
+    <div>
+      <h2 class="ttl">ILOs of this chapter</h2>
+      <h2 class="sub">Intended Learning Outcomes</h2>
+    </div>
+    <div class="meta">3 ILOs</div>
+  </div>
+  <section class="content">
+    <ul class="bul">
+      <li>To understand realize the dynamics of amniotic fluid</li>
+      <li>To be able to describe the difference between polyhydramnios and oligohydramnios</li>
+      <li>To be able to explain the management of either excess or poor amount of amniotic fluid</li>
+    </ul>
+  </section>
+
+  <!-- SECTION 2: DYNAMICS & FUNCTION -->
+  <div class="sh" id="s2">
+    <div class="badge">2</div>
+    <div>
+      <h2 class="ttl">Amniotic Fluid — Dynamics &amp; Function</h2>
+      <h2 class="sub">Production, resorption, and physiologic role</h2>
+    </div>
+    <div class="meta">2 panels</div>
+  </div>
+  <section class="content">
+    <p style="font-size:15.5px;color:var(--ink);">Amniotic fluid (AF) is accumulated in dynamic manner and its volume depends on the production and resorption of it.</p>
+
+    <div class="grid-2" style="margin-top:14px">
+      <div class="mini-card bg-blue">
+        <div class="head"><span class="dot" style="background:#3B82F6"></span> Production of AF</div>
+        <h4>Source shifts with gestational age</h4>
+        <ul>
+          <li><b>First half of pregnancy</b> — from maternal circulation</li>
+          <li><b>Second half of pregnancy</b> — fetal urination</li>
+        </ul>
+      </div>
+      <div class="mini-card bg-teal">
+        <div class="head"><span class="dot" style="background:#14B8A6"></span> Resorption of AF</div>
+        <h4>Through fetal swallowing</h4>
+        <p style="font-size:14.5px;color:var(--ink-soft)">Fetal swallowing is the main route of amniotic fluid clearance during the second half of pregnancy.</p>
+      </div>
+    </div>
+
+    <div class="callout cyan" style="margin-top:16px">
+      <div class="ic cyan">i</div>
+      <div class="body"><strong>Function of AF.</strong> Amniotic fluid surrounds the growing fetus and protects the fetus from injury and temperature changes. It also allows for fetal movement and permits musculoskeletal development.</div>
+    
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is the main source of amniotic fluid during the first half of pregnancy?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Fetal urination</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Maternal circulation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Fetal swallowing</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Amniotic epithelium</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In the first half of pregnancy, amniotic fluid is produced from maternal circulation. In the second half, fetal urination becomes the main source.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">What is the primary route of amniotic fluid resorption during the second half of pregnancy?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Maternal absorption</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Fetal swallowing</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Placental transfer</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Transmembrane diffusion</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Fetal swallowing is the main route of amniotic fluid clearance during the second half of pregnancy.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT a function of amniotic fluid?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Protection from injury</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Temperature regulation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Nutrient supply to the fetus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Allowing fetal movement</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Amniotic fluid surrounds and protects the fetus, regulates temperature, and allows fetal movement. Nutrient supply is through the placenta.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</div>
+  </section>
+
+  <!-- SECTION 3: COMPARISON -->
+  <div class="sh" id="s3">
+    <div class="badge">3</div>
+    <div>
+      <h2 class="ttl">Polyhydramnios vs Oligohydramnios — Comparison</h2>
+      <h2 class="sub">Definition, etiology, examination, FHS, fetal parts, vaginal exam, investigations</h2>
+    </div>
+    <div class="meta">Source comparison table</div>
+  </div>
+  <section class="content">
+    <table class="cmp" aria-label="Polyhydramnios vs Oligohydramnios comparison">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="poly-col">Polyhydramnios</th>
+          <th class="oligo-col">Oligohydramnios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Definition</th>
+          <td>
+            Excess accumulation of amniotic fluid.<br>
+            <span class="kv"><span class="k blue">AFV <b>&gt; 2 000 mL</b></span></span>
+          </td>
+          <td>
+            Less accumulation of amniotic fluid.<br>
+            <span class="kv"><span class="k amber">AFV <b>&lt; 500 mL</b></span></span>
+          </td>
+        </tr>
+        <tr>
+          <th>Etiology</th>
+          <td>
+            <ul class="bul">
+              <li>Idiopathic (most common)</li>
+              <li>Fetal malformations (anencephaly, esophageal, duodenal atresia)</li>
+              <li>Diabetes mellitus</li>
+              <li>Multiple pregnancies</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="bul">
+              <li>Idiopathic (most common)</li>
+              <li>PROM</li>
+              <li>Fetal malformations (renal agenesis)</li>
+              <li>Post-term pregnancy</li>
+              <li>Placental insufficiency</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>General Examination</th>
+          <td>Orthopnea and LL edema</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <th>Abdominal Examination</th>
+          <td>
+            <ul class="bul">
+              <li>More than period of amenorrhea</li>
+              <li>Difficult auscultation</li>
+            </ul>
+          </td>
+          <td>
+            <ul class="bul">
+              <li>Less than period of amenorrhea</li>
+              <li>Easy auscultation</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Fundal level</th>
+          <td>Difficult palpation</td>
+          <td>Easy palpation</td>
+        </tr>
+        <tr>
+          <th>FHS</th>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <th>Fetal parts</th>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <th>Vaginal Examination</th>
+          <td>Usually effaced cervix</td>
+          <td>Contraindicated if PROM</td>
+        </tr>
+        <tr>
+          <th>Investigations</th>
+          <td>75 g oral glucose tolerance test</td>
+          <td>Leucocytic count in cases of PROM</td>
+        </tr>
+        <tr>
+          <th>Ultrasound</th>
+          <td colspan="2" style="text-align:center;color:var(--ink-soft);font-style:italic">See Section 4 — SDP &amp; AFI cutoffs</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout pearl" style="margin-top:14px">
+      <div class="ic pearl">★</div>
+      <div class="body"><strong>Bedside rule of thumb.</strong> Poly = "more than dates, hard to hear, hard to feel" · Oligo = "less than dates, easy to hear, easy to feel". Both share <em>Idiopathic (most common)</em> as the leading etiology — search for the underlying cause before attributing it to idiopathic.</div>
+    
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Polyhydramnios is defined as an amniotic fluid volume (AFV) greater than:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1,000 mL</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">1,500 mL</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">2,000 mL</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">2,500 mL</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Polyhydramnios is defined as AFV > 2,000 mL. Oligohydramnios is defined as AFV < 500 mL.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which is the most common cause of both polyhydramnios and oligohydramnios?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Diabetes mellitus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Fetal malformations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Idiopathic</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Premature rupture of membranes</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Idiopathic (unknown cause) is the most common etiology for both polyhydramnios and oligohydramnios.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">A patient has fundal height more than expected, difficult palpation and difficult FHS auscultation. Which condition is most likely?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Oligohydramnios</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Polyhydramnios</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Normal pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Placental insufficiency</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Classic polyhydramnios: uterus larger than dates, difficult palpation and auscultation of fetal parts and heart sounds.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which fetal malformation is associated with polyhydramnios?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Renal agenesis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Esophageal atresia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Post-term pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Placental insufficiency</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Fetal esophageal and duodenal atresia prevent fetal swallowing, leading to polyhydramnios. Renal agenesis causes oligohydramnios.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+  </section>
+
+  <!-- SECTION 4: ULTRASOUND -->
+  <div class="sh" id="s4">
+    <div class="badge">4</div>
+    <div>
+      <h2 class="ttl">Ultrasound Assessment — SDP &amp; AFI</h2>
+      <h2 class="sub">Two sonographic methods to quantify amniotic fluid</h2>
+    </div>
+    <div class="meta">2 methods · 6 cutoffs</div>
+  </div>
+  <section class="content">
+    <div class="grid-2">
+      <div class="mini-card bg-blue">
+        <div class="head"><span class="dot" style="background:#3B82F6"></span> 1 — Single Deepest Pocket (SDP)</div>
+        <h4>Single vertical pocket</h4>
+        <div class="kv">
+          <span class="k red">SDP &lt; 2 cm → <b>Oligo</b></span>
+          <span class="k green">SDP 2–8 cm → <b>Normal</b></span>
+          <span class="k blue">SDP &gt; 8 cm → <b>Poly</b></span>
+        </div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">SDP &lt; 2 cm = oligohydramnios. SDP between 2 – 8 cm = Normal. SDP &gt; 8 cm = polyhydramnios.</p>
+      </div>
+      <div class="mini-card bg-teal">
+        <div class="head"><span class="dot" style="background:#14B8A6"></span> 2 — Amniotic Fluid Index (AFI)</div>
+        <h4>4-quadrant method (sum)</h4>
+        <p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:4px">The deepest amniotic pocket in each of the four quadrants is measured vertically and the values added together (The 4-quadrant method).</p>
+        <div class="kv">
+          <span class="k red">AFI &lt; 5 cm → <b>Oligo</b></span>
+          <span class="k green">AFI 10–20 cm → <b>Normal</b></span>
+          <span class="k blue">AFI &gt; 25 cm → <b>Poly</b></span>
+        </div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">AFI &lt; 5 cm = oligohydramnios. AFI between 10 and 20 cm = normal. AFI &gt; 25 cm = polyhydramnios.</p>
+      </div>
+    </div>
+
+    <div class="callout note" style="margin-top:16px">
+      <div class="ic note">N</div>
+      <div class="body"><strong>No AFI "5 to &lt;10" gray zone in the source.</strong> The source only gives three AFI states (oligo / normal / poly). Anything in between is left to clinical judgment — verify with SDP and the full clinical picture.</div>
+    
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Using Single Deepest Pocket (SDP), oligohydramnios is diagnosed when SDP is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">< 2 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">< 5 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">< 8 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">< 10 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">SDP  8 cm = polyhydramnios.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Using the Amniotic Fluid Index (AFI), polyhydramnios is defined as:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">AFI > 8 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">AFI > 20 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">AFI > 25 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">AFI > 30 cm</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">AFI > 25 cm = polyhydramnios. AFI 10-20 cm = normal. AFI < 5 cm = oligohydramnios.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The Amniotic Fluid Index (AFI) uses the:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Single vertical pocket method</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">4-quadrant method summing deepest pockets</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Multiplication of SDP by 4</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Total AF volume estimation</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">AFI uses the 4-quadrant method: the deepest vertical amniotic pocket in each quadrant is measured and summed.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</div>
+  </section>
+
+  <!-- SECTION 5: COMPLICATIONS -->
+  <div class="sh" id="s5">
+    <div class="badge">5</div>
+    <div>
+      <h2 class="ttl">Complications</h2>
+      <h2 class="sub">Maternal and fetal consequences of abnormal AF volume</h2>
+    </div>
+    <div class="meta">Poly 6 · Oligo 3</div>
+  </div>
+  <section class="content">
+    <div class="grid-2">
+      <div class="mini-card bg-blue">
+        <div class="head"><span class="dot" style="background:#3B82F6"></span> Polyhydramnios complications</div>
+        <ul>
+          <li>Maternal dyspnea</li>
+          <li>Preterm labor</li>
+          <li>Premature rupture of membranes</li>
+          <li>Abnormal fetal presentation</li>
+          <li>Umbilical cord prolapse</li>
+          <li>Postpartum hemorrhage</li>
+        </ul>
+      </div>
+      <div class="mini-card bg-yellow">
+        <div class="head"><span class="dot" style="background:#EAB308"></span> Oligohydramnios complications</div>
+        <ul>
+          <li>Fetal pulmonary hypoplasia</li>
+          <li>Preterm labor</li>
+          <li>Abnormal fetal presentation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout danger" style="margin-top:16px">
+      <div class="ic danger">!</div>
+      <div class="body"><strong>Shared critical complications.</strong> Both states share <em>preterm labor</em> and <em>abnormal fetal presentation</em>. In poly, also suspect <em>umbilical cord prolapse</em> (sudden decompression after ROM). In oligo, anticipate <em>pulmonary hypoplasia</em> — a major cause of neonatal mortality when oligohydramnios is prolonged.</div>
+    
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which complication is specific to oligohydramnios and a major cause of neonatal mortality when prolonged?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Umbilical cord prolapse</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Postpartum hemorrhage</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Fetal pulmonary hypoplasia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Maternal dyspnea</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Pulmonary hypoplasia is a major complication of prolonged oligohydramnios as fetal lung development is impaired.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which complication is shared by both polyhydramnios and oligohydramnios?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Umbilical cord prolapse</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Pulmonary hypoplasia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Postpartum hemorrhage</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Preterm labor</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Both polyhydramnios and oligohydramnios share preterm labor and abnormal fetal presentation as common complications.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Umbilical cord prolapse is more commonly associated with:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Oligohydramnios</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Polyhydramnios</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both equally</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Neither</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Umbilical cord prolapse is a complication of polyhydramnios, especially after sudden decompression following ROM.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Fetal complications may include:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Preterm birth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Growth restriction</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Hypoxic injury</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</div>
+  </section>
+
+  <!-- SECTION 6: MANAGEMENT -->
+  <div class="sh" id="s6">
+    <div class="badge">6</div>
+    <div>
+      <h2 class="ttl">Management</h2>
+      <h2 class="sub">Cause-specific and volume-directed interventions</h2>
+    </div>
+    <div class="meta">Poly 3 · Oligo 3</div>
+  </div>
+  <section class="content">
+    <div class="grid-2">
+      <div class="mini-card bg-blue">
+        <div class="head"><span class="dot" style="background:#3B82F6"></span> Polyhydramnios management</div>
+        <ol class="num">
+          <li>Amnio-reduction</li>
+          <li>Prostaglandin synthetase inhibitor</li>
+          <li>Treatment of the cause e.g. DM</li>
+        </ol>
+      </div>
+      <div class="mini-card bg-yellow">
+        <div class="head"><span class="dot" style="background:#EAB308"></span> Oligohydramnios management</div>
+        <ol class="num">
+          <li>Amnio-infusion</li>
+          <li>Rehydration of the mother</li>
+          <li>Post-term pregnancy: termination</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="callout pearl" style="margin-top:14px">
+      <div class="ic pearl">★</div>
+      <div class="body"><strong>Always treat the cause.</strong> Source places "Treatment of the cause" (e.g. DM) under poly management, but the same principle applies to oligohydramnios (treat PROM, renal agenesis, post-term pregnancy, placental insufficiency as appropriate).</div>
+    </div>
+    <div class="callout warn" style="margin-top:10px">
+      <div class="ic warn">⚠</div>
+      <div class="body"><strong>Post-term + oligohydramnios = deliver.</strong> The source lists "Postterm pregnancy: termination" as an oligo management step. When the pregnancy is post-term and AF is low, the next move is delivery rather than watchful waiting.</div>
+    
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which is a management option for polyhydramnios?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Amnio-infusion</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Amnio-reduction</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Maternal rehydration</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Termination</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Amnio-reduction (drainage of excess fluid) is used for polyhydramnios. Amnio-infusion is for oligohydramnios.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">A post-term pregnancy with oligohydramnios should be managed by:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Watchful waiting</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Maternal rehydration</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Amnio-infusion</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">When the pregnancy is post-term and AF is low, delivery rather than watchful waiting is indicated.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which medication can be used in managing polyhydramnios?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Oxytocin</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Prostaglandin synthetase inhibitor</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Misoprostol</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Calcium gluconate</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">A prostaglandin synthetase inhibitor (e.g., indomethacin) can reduce amniotic fluid production in polyhydramnios.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</div>
+  </section>
+
+  <!-- SECTION 7: STUDENT ACTIVITY -->
+  <details class="study-section"><summary>Student Activity</summary><div class="sh" id="s7">
+    <div class="badge">7</div>
+    <div>
+      <h2 class="ttl">Student Activity</h2>
+      <h2 class="sub">Bedside sonographic exposure</h2>
+    </div>
+    <div class="meta">1 activity</div>
+  </div>
+  <section class="content">
+    <div class="mini-card bg-slate">
+      <div class="head"><span class="dot" style="background:#64748B"></span> Departmental outpatient clinic — third trimester</div>
+      <h4>Sonographic evaluation of amniotic fluid</h4>
+      <p style="font-size:15px;color:var(--ink-soft)">Each student is requested to attend ultrasonographic obstetric evaluation of a third trimester pregnant woman at departmental outpatient clinic to check with the sonogarapher how amniotic fluid is evaluated.</p>
+    </div>
+    <div class="callout cyan" style="margin-top:14px">
+      <div class="ic cyan">i</div>
+      <div class="body"><strong>What to observe.</strong> Watch the sonographer measure the <b>SDP</b> (single vertical pocket) and the <b>AFI</b> (sum of the 4 quadrants), then apply the cutoffs from Section 4 to classify the case. Note the source preserves the spelling <em>"sonogarapher"</em> verbatim — see References §6.</div>
+    </div>
+  </section></details>
+
+  <!-- SECTION 8: QUESTIONS / GOOGLE FORM -->
+  <details class="study-section"><summary>Questions &amp; Google Form Self-Test</summary><div class="sh" id="s8">
+    <div class="badge">8</div>
+    <div>
+      <h2 class="ttl">Questions &amp; Google Form Self-Test</h2>
+      <h2 class="sub">End-of-chapter self-assessment</h2>
+    </div>
+    <div class="meta">1 form</div>
+  </div>
+  <section class="content">
+    <p style="font-size:15.5px;color:var(--ink)">The chapter directs students to the departmental Google Form for self-testing on Amniotic Fluid Abnormalities.</p>
+
+    <div class="banner" style="margin-top:10px">
+      <span class="lbl">Self-test</span>
+      <a class="chip" style="background:#EFF6FF;border-color:#BFDBFE;color:#1D4ED8;text-decoration:none" href="https://forms.gle/HGCzDNHnA75KBged7" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Google Form — Topic 18 Questions
+      </a>
+      <a class="chip" style="background:#FEF2F2;border-color:#FECACA;color:#B91C1C;text-decoration:none" href="https://youtu.be/gjN83EyWd6s?si=9NU_DUSW4EaIzYzM" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        YouTube — Chapter video
+      </a>
+    </div>
+  </section></details>
+
+  <!-- SECTION 9: REFERENCES -->
+  <details class="study-section"><summary>References &amp; Visual Sources</summary><div class="sh" id="s9">
+    <div class="badge">9</div>
+    <div>
+      <h2 class="ttl">References &amp; Visual Sources</h2>
+      <h2 class="sub">Provenance of every visual and citation</h2>
+    </div>
+    <div class="meta">6 items</div>
+  </div>
+  <section class="refs" aria-label="References">
+    <h2>References &amp; Visual Sources</h2>
+    <p>The following sources were used in the preparation of this infographic. Every visual, diagram, and website consulted is cited below.</p>
+    <ul>
+      <li><strong>Primary source material:</strong> <em>Book Obstetrics 2025-2026</em>, Chapter 18 — Amniotic Fluid Abnormalities (pp. 99–100 of the source document).</li>
+      <li><strong>Source images:</strong> The source PDF (<code>Book Obstetrics 2025-2026-018.pdf</code>) is text-only — <code>pdfimages -list</code> returns 0 image objects. No SOURCE IMAGE (green-bordered) cards were required.</li>
+      <li><strong>External images:</strong> None used. No EXTERNAL IMAGE (red-bordered) cards were required.</li>
+      <li><strong>Self-test resource:</strong> Google Form — <a href="https://forms.gle/HGCzDNHnA75KBged7" target="_blank" rel="noopener">https://forms.gle/HGCzDNHnA75KBged7</a> (department-issued, linked verbatim from the source).</li>
+      <li><strong>Companion video resource:</strong> YouTube — <a href="https://youtu.be/gjN83EyWd6s?si=9NU_DUSW4EaIzYzM" target="_blank" rel="noopener">https://youtu.be/gjN83EyWd6s?si=9NU_DUSW4EaIzYzM</a> (linked verbatim from the source).</li>
+      <li><strong>Source-faithfulness notes:</strong> Source spelling <em>"sonogarapher"</em> (Student activity, §7) preserved verbatim per the no-summarization rule; source spelling <em>"orthopnea"</em> preserved verbatim; source's mixed phrasing "Postterm pregnancy: termination" preserved verbatim (the "Post-term" form is used elsewhere in the source). All other source phrases are preserved verbatim.</li>
+    </ul>
+  </section></details>
+
+  <div class="foot">
+    Generated as part of the <strong>Sequential Infographic Generation System</strong> (Topic 18: Amniotic Fluid Abnormalities) — based on <em>Book Obstetrics 2025-2026</em>, Chapter 18 (pp. 99–100).<br>
+    Outputs: <code>html/18_Amniotic_Fluid_Abnormalities.html</code> &middot; <code>images/18_Amniotic_Fluid_Abnormalities.png</code> &middot; <code>quality_reports/18_Amniotic_Fluid_Abnormalities_quality_report.md</code>
+  </div>
+
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+{
+  "s2": [
+    {
+      "q": "The anatomical definition of contracted pelvis is:",
+      "options": [
+        "A pelvis that interferes with normal childbirth",
+        "A pelvis in which one or more diameters is reduced below normal by at least 1 cm",
+        "A pelvis with a diagonal conjugate <10 cm",
+        "A pelvis with an outlet diameter <8 cm"
+      ],
+      "correct": 1,
+      "explain": "Anatomical: diameters reduced ≥1 cm below normal. Obstetric definition adds: interferes with normal childbirth."
+    },
+    {
+      "q": "Which definition of contracted pelvis is more clinically relevant?",
+      "options": [
+        "The anatomical definition (measurement-based)",
+        "The obstetric definition (interferes with the normal mechanism of labor)",
+        "Both are equally important",
+        "Neither is used in practice"
+      ],
+      "correct": 1,
+      "explain": "The obstetric definition is more relevant because it couples the small diameter to interference with childbirth — this changes clinical management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Naegele's pelvis is characterized by:",
+      "options": [
+        "Transversely contracted due to absence of 2 sacral alae",
+        "Asymmetric/obliquely contracted due to absence of one sacral ala",
+        "Sacrum made of 6 fused segments (high assimilation)",
+        "Sacrum made of 4 fused segments (low assimilation)"
+      ],
+      "correct": 1,
+      "explain": "Naegele's = asymmetric (one sacral ala missing → oblique contraction). Robert's = bilateral (double Naegele) → transverse contraction."
+    },
+    {
+      "q": "Which acquired condition causes contracted pelvis through metabolic bone disease?",
+      "options": [
+        "Kyphosis",
+        "Scoliosis",
+        "Rickets or osteomalacia",
+        "Spondylolisthesis"
+      ],
+      "correct": 2,
+      "explain": "Rickets/osteomalacia are metabolic diseases affecting pelvic bones. The others (kyphosis, scoliosis, spondylolisthesis) are vertebral column causes."
+    },
+    {
+      "q": "Acquired causes of contracted pelvis are classified into three compartments: pelvic bones, vertebral column, and:",
+      "options": [
+        "Lower limbs",
+        "Joints",
+        "Abdominal muscles",
+        "Upper limbs"
+      ],
+      "correct": 0,
+      "explain": "The B-V-L mnemonic: Bones (pelvic), Vertebrae (column), Legs (lower limb) = the 3 load-bearing columns shaping the pelvis."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Contracted pelvis with only the outlet affected is:",
+      "options": [
+        "The most common type",
+        "Very rare (about 1% of cases)",
+        "Always associated with inlet contraction",
+        "The most severe form"
+      ],
+      "correct": 1,
+      "explain": "Outlet contraction is the rarest (~1%). Midpelvic contraction is more common. There are 4 levels: inlet, midpelvic, outlet, and both inlet+outlet."
+    },
+    {
+      "q": "Pelvic inlet contraction is diagnosed when the diagonal conjugate is:",
+      "options": [
+        "<13 cm",
+        "<12 cm",
+        "<11.5 cm",
+        "<10 cm"
+      ],
+      "correct": 2,
+      "explain": "Inlet contraction: A-P diameter <10 cm OR transverse <12 cm. Diagnosed by diagonal conjugate <11.5 cm."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s5": [
+    {
+      "q": "In 1st degree contracted pelvis, the conjugate vera is:",
+      "options": [
+        "10-11 cm (normal is 11 cm)",
+        "9-10 cm",
+        "8-9 cm",
+        "<8 cm"
+      ],
+      "correct": 0,
+      "explain": "Four degrees: 1st (10-11 cm, normal = 11 cm), 2nd (9-10 cm), 3rd (8-9 cm), 4th (<8 cm)."
+    },
+    {
+      "q": "A conjugate vera of 7.5 cm corresponds to which degree of pelvic contraction?",
+      "options": [
+        "1st degree",
+        "2nd degree",
+        "3rd degree",
+        "4th degree"
+      ],
+      "correct": 3,
+      "explain": "4th degree: conjugate vera <8 cm. 1st: 10-11 cm, 2nd: 9-10 cm, 3rd: 8-9 cm, 4th: <8 cm."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Radiological pelvimetry is indicated for:",
+      "options": [
+        "All pregnant women",
+        "Suspected CPD (cephalo-pelvic disproportion) or cases with previous CS for CPD",
+        "Only primigravidas",
+        "Only women with breech presentation"
+      ],
+      "correct": 1,
+      "explain": "Radiological pelvimetry is indicated for suspected CPD and previous CS for CPD."
+    },
+    {
+      "q": "Clinical pelvimetry includes assessment of all EXCEPT:",
+      "options": [
+        "Diagonal conjugate",
+        "Transverse diameter of inlet",
+        "Fetal blood sampling",
+        "Bi-spinous and bi-tuberous diameters"
+      ],
+      "correct": 2,
+      "explain": "Clinical pelvimetry assesses diagonal conjugate, transverse diameter, bi-spinous, bi-tuberous, and outlet diameters. Fetal blood sampling is not pelvic assessment."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which clinical finding is most suggestive of this diagnosis?",
+      "options": [
+        "Pain and bleeding",
+        "Asymptomatic presentation",
+        "Abnormal laboratory values",
+        "Varies by condition — specific findings guide diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation differs by condition and guides diagnostic testing."
+    }
+  ],
+  "s7": [
+    {
+      "q": "A common complication of contracted pelvis is:",
+      "options": [
+        "Preterm labor",
+        "Prolonged labor and obstructed labor",
+        "Polyhydramnios",
+        "Placenta previa"
+      ],
+      "correct": 1,
+      "explain": "Complications include prolonged/obstructed labor, postpartum hemorrhage, rupture uterus, puerperal sepsis, vesicovaginal fistula, and fetal complications."
+    },
+    {
+      "q": "Which of the following is a fetal complication of contracted pelvis?",
+      "options": [
+        "Uterine rupture",
+        "Vesicovaginal fistula",
+        "Intracranial hemorrhage and nerve palsies",
+        "Sepsis"
+      ],
+      "correct": 2,
+      "explain": "Fetal: intracranial hemorrhage, nerve palsies, fractures, asphyxia, and neonatal death. Uterine rupture and VVF are maternal complications."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Management of contracted pelvis depends primarily on:",
+      "options": [
+        "Maternal age",
+        "Degree of contraction and presence of CPD",
+        "Fetal gender",
+        "Gestational age at diagnosis"
+      ],
+      "correct": 1,
+      "explain": "Management depends on degree of contraction and presence of CPD. Trial of labor may be attempted for mild/non-CPD cases; severe cases require CS."
+    },
+    {
+      "q": "In mild contracted pelvis without CPD, the recommended approach is:",
+      "options": [
+        "Elective cesarean section at 39 weeks",
+        "Trial of labor under close monitoring with partograph",
+        "Induction of labor at 37 weeks",
+        "Immediate cesarean section at diagnosis"
+      ],
+      "correct": 1,
+      "explain": "A trial of labor with close partograph monitoring is appropriate for mild cases without CPD. Severe contraction or definite CPD = cesarean section."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ]
+}

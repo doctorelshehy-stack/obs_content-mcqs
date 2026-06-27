@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 42 — Macrosomia</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(180deg, #F0FDFA 0%, #F8FAFC 240px); color: #0F172A; line-height: 1.6; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 28px 64px 28px; }
+  .hero { background: linear-gradient(135deg, #134E4A 0%, #0F766E 50%, #0D9488 100%); color: white; border-radius: 18px; padding: 28px 32px; box-shadow: 0 6px 20px rgba(15,118,110,0.28); margin-bottom: 18px; }
+  .hero h1 { margin: 0 0 6px 0; font-size: 30px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .sub { font-size: 15.5px; opacity: 0.95; font-weight: 500; }
+  .hero .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.32); padding: 5px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600; }
+  .toc { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 18px 22px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .toc h2 { margin: 0 0 12px 0; font-size: 17px; color: #1E293B; display: flex; align-items: center; gap: 8px; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 14px; }
+  .toc-grid a { display: block; padding: 6px 10px; border-radius: 8px; text-decoration: none; color: #0F766E; font-size: 13.5px; font-weight: 500; border: 1px solid transparent; }
+  .toc-grid a:hover { background: #F1F5F9; border-color: #CBD5E1; }
+  .toc-grid .num { display: inline-block; min-width: 22px; color: #64748B; font-weight: 700; }
+  section { background: white; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px 26px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  section h2.sec { margin: 0 0 14px 0; font-size: 22px; color: #0F766E; display: flex; align-items: center; gap: 10px; padding-bottom: 10px; border-bottom: 2px solid #CCFBF1; }
+  section h2.sec .num { background: #0F766E; color: white; border-radius: 8px; width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; }
+  h3.sub { font-size: 16px; color: #1E293B; margin: 18px 0 8px 0; padding-left: 10px; border-left: 4px solid #0D9488; font-weight: 700; }
+  h4 { font-size: 14.5px; color: #1E293B; margin: 14px 0 6px 0; font-weight: 700; }
+  ul, ol { margin: 6px 0 10px 0; padding-left: 24px; }
+  li { margin: 3px 0; font-size: 13.5px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .keydef { background: #ECFDF5; border-left: 5px solid #059669; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .keydef::before { content: "KEY DEFINITION"; display: block; font-weight: 800; color: #065F46; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .pearl { background: #ECFEFF; border-left: 5px solid #0891B2; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .pearl::before { content: "CLINICAL PEARL"; display: block; font-weight: 800; color: #155E75; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .anchor { background: #FEF9C3; border-left: 5px solid #CA8A04; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .anchor::before { content: "MEMORY ANCHOR"; display: block; font-weight: 800; color: #713F12; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .warn { background: #FEF3C7; border-left: 5px solid #D97706; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .warn::before { content: "WARN"; display: block; font-weight: 800; color: #92400E; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .danger { background: #FEE2E2; border-left: 5px solid #DC2626; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .danger::before { content: "DANGER"; display: block; font-weight: 800; color: #991B1B; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .note { background: #F3E8FF; border-left: 5px solid #8B5CF6; padding: 12px 16px; border-radius: 8px; margin: 12px 0; }
+  .note::before { content: "NOTE"; display: block; font-weight: 800; color: #6D28D9; font-size: 12.5px; letter-spacing: 0.05em; margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  th { background: #F0FDFA; color: #134E4A; text-align: left; padding: 9px 12px; font-weight: 700; border-bottom: 2px solid #99F6E4; }
+  td { padding: 9px 12px; border-bottom: 1px solid #E2E8F0; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #F8FAFC; }
+  .footer { text-align: center; color: #64748B; font-size: 12.5px; padding: 18px 0 4px 0; }
+  .footer a { color: #0F766E; text-decoration: none; font-weight: 600; }
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Topic 42 — Macrosomia</h1>
+    <div class="sub">Fetal weight > 4,000 g: risk factors, causes, diagnosis, complications, and delivery considerations
+Source: Book Obstetrics 2025-2026, p. 220-221</div>
+    <div class="meta">
+      <span class="chip">Chapter · p. 220-221</span>
+      <span class="chip">3 ILOs</span>
+      <span class="chip">0 source images</span>
+      <span class="chip">7 sections</span>
+    </div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">§1</span> ILOs of this chapter</a>
+      <a href="#s2"><span class="num">§2</span> Definition</a>
+      <a href="#s3"><span class="num">§3</span> Risk factors</a>
+      <a href="#s4"><span class="num">§4</span> Causes</a>
+      <a href="#s5"><span class="num">§5</span> Clinical picture</a>
+      <a href="#s6"><span class="num">§6</span> Complications</a>
+      <a href="#s7"><span class="num">§7</span> Treatment</a>
+      <a href="#s8"><span class="num">§8</span> Student activity · Questions · References</a>
+    </div>
+  </div>
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h2 class="sec"><span class="num">1</span> ILOs of this chapter</h2>
+    <ol>
+      <li>To understand the definition of macrosomia</li>
+      <li>To be able to explain the risk factors of macrosomia</li>
+      <li>To be able to describe the management and complications fetal macrosomia</li>
+    </ol>
+  </section>
+
+  <!-- §2 Definition -->
+  <section id="s2">
+    <h2 class="sec"><span class="num">2</span> Definition</h2>
+    <div class="keydef">
+      <p><strong>Macrosomia:</strong> A fetal weight <strong>&gt; 4,000 grams</strong>.</p>
+    </div>
+  </section>
+
+  <!-- §3 Risk factors -->
+  <section id="s3">
+    <h2 class="sec"><span class="num">3</span> Risk factors</h2>
+    <ul>
+      <li>History of fetal macrosomia.</li>
+      <li>Maternal obesity.</li>
+      <li>Excessive weight gain during pregnancy.</li>
+      <li>Previous pregnancies: The risk increases with each pregnancy.</li>
+      <li>Male infants: typically weigh slightly more than female infants.</li>
+      <li>Maternal age: Women older than 35 are more likely to have a baby diagnosed with fetal macrosomia.</li>
+    </ul>
+  </section>
+
+  <!-- §4 Causes -->
+  <section id="s4">
+    <h2 class="sec"><span class="num">4</span> Causes</h2>
+    <ol>
+      <li>Genetic factors.</li>
+      <li>Maternal conditions such as diabetes can cause fetal macrosomia.</li>
+      <li>Multiparity.</li>
+      <li>Postterm pregnancy.</li>
+    </ol>
+  </section>
+
+  <!-- §5 Clinical picture -->
+  <section id="s5">
+    <h2 class="sec"><span class="num">5</span> Clinical picture</h2>
+    <ul>
+      <li>Large fundal height.</li>
+      <li>Excessive amniotic fluid (polyhydramnios).</li>
+    </ul>
+  </section>
+
+  <!-- §6 Complications -->
+  <section id="s6">
+    <h2 class="sec"><span class="num">6</span> Complications</h2>
+    <ul>
+      <li>Prolonged and obstructed labor.</li>
+      <li>Shoulder dystocia.</li>
+      <li>Fetal injuries.</li>
+      <li>Meconium aspiration syndrome.</li>
+      <li>Genital tract lacerations.</li>
+      <li>Postpartum hemorrhage.</li>
+      <li>Uterine rupture.</li>
+    </ul>
+  </section>
+
+  <!-- §7 Treatment -->
+  <section id="s7">
+    <h2 class="sec"><span class="num">7</span> Treatment</h2>
+    <ol>
+      <li>Proper antenatal care: to prevent macrosomia and diagnose it before labor.</li>
+      <li>Cesarean section: is safe for both mother and fetus.</li>
+      <li>Postnatal: proper examination of the neonate and management of any problem.</li>
+    </ol>
+  </section>
+
+  <!-- §8 Student activity + Questions + References -->
+  <section id="s8">
+    <h2 class="sec"><span class="num">8</span> Student activity · Questions · References</h2>
+    <div class="pearl"><strong>Student activity</strong><br>Each student is requested to attend the weighing of a newborn in order to assign whether is macrosomic or not. In case of newborn diagnosed to be macrosomic, the etiology should be sought with the aid of the tutor of bedside part of the clinical round.</div>
+    <p>Test yourself with the official Google Form:</p>
+    <a class="qform-btn" href="https://forms.gle/YhuS8wyqwuLv2rFy7" target="_blank" rel="noopener">Open Questions Form ↗</a>
+    <span class="qform-code">forms.gle/YhuS8wyqwuLv2rFy7</span>
+    <div class="footer">Source: Book Obstetrics 2025-2026, Chapter 42 — Macrosomia (p. 220-221)</div>
+  </section>
+</div>
+</body>
+</html>

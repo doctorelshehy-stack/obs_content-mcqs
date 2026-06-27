@@ -1,0 +1,401 @@
+{
+  "s2": [
+    {
+      "q": "Which of the following BEST defines primary postpartum hemorrhage (PPH)?",
+      "options": [
+        "Blood loss >500 mL within the first 24 hours after delivery",
+        "Blood loss >1000 mL within the first 24 hours after delivery",
+        "Blood loss >500 mL from 24 hours to 6 weeks postpartum",
+        "Blood loss >1000 mL regardless of timing"
+      ],
+      "correct": 0,
+      "explain": "Primary PPH is defined as blood loss >500 mL within the first 24 hours after delivery."
+    },
+    {
+      "q": "The most common cause of primary postpartum hemorrhage is:",
+      "options": [
+        "Trauma (lacerations/rupture)",
+        "Uterine atony",
+        "Retained placenta",
+        "Coagulopathy (the 4th T)"
+      ],
+      "correct": 1,
+      "explain": "Uterine atony accounts for approximately 70-80% of primary PPH cases."
+    },
+    {
+      "q": "Which statement about PPH types is TRUE?",
+      "options": [
+        "Primary PPH occurs after 24 hours up to 6 weeks",
+        "Secondary PPH occurs within the first 24 hours",
+        "Primary PPH occurs within the first 24 hours after delivery",
+        "Secondary PPH is always due to trauma"
+      ],
+      "correct": 2,
+      "explain": "Primary PPH = first 24 hours; Secondary PPH = after 24 hours up to 6 weeks."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The incidence of this condition is highest in which population?",
+      "options": [
+        "Primigravidas",
+        "Multiparous women",
+        "Women aged 35+ years",
+        "Depends on the specific condition and risk factors"
+      ],
+      "correct": 3,
+      "explain": "Incidence varies by condition — each has its own epidemiology and risk profile."
+    }
+  ],
+  "s3": [
+    {
+      "q": "The '4 T's' of primary PPH etiology include all EXCEPT:",
+      "options": [
+        "Tone (uterine atony)",
+        "Trauma (lacerations, rupture)",
+        "Tissue (retained placenta)",
+        "Toxins (sepsis)"
+      ],
+      "correct": 3,
+      "explain": "The 4 T's are: Tone (atony), Trauma, Tissue (retained), and Thrombin (coagulopathy)."
+    },
+    {
+      "q": "Which of the following is a risk factor for uterine atony?",
+      "options": [
+        "Prolonged labor",
+        "Placenta previa",
+        "Multiple pregnancy",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "All are risk factors. Overdistension (twins/polyhydramnios), prolonged labor, and placental abnormalities all predispose to atony."
+    },
+    {
+      "q": "The most common type of PPH is due to:",
+      "options": [
+        "Coagulation disorders",
+        "Genital tract trauma",
+        "Uterine atony",
+        "Retained placental tissue"
+      ],
+      "correct": 2,
+      "explain": "Atonic PPH (uterine atony) is the single most common cause, accounting for ~80% of primary PPH."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "The etiology of this condition involves:",
+      "options": [
+        "Genetic factors alone",
+        "Environmental factors alone",
+        "A complex interplay of genetic, environmental, and multifactorial elements",
+        "Iatrogenic causes only"
+      ],
+      "correct": 2,
+      "explain": "Most obstetric conditions have multifactorial etiology."
+    }
+  ],
+  "s4": [
+    {
+      "q": "The fastest bedside differentiator between atonic and traumatic PPH is:",
+      "options": [
+        "Color of the blood (dark vs bright red)",
+        "Uterine tone (soft/boggy vs contracted)",
+        "Amount of blood loss",
+        "Maternal heart rate"
+      ],
+      "correct": 1,
+      "explain": "A soft, boggy uterus = atony; a firm, contracted uterus with ongoing bleeding = trauma until proven otherwise."
+    },
+    {
+      "q": "Which of the following is a preventive measure for PPH during labor?",
+      "options": [
+        "Correction of anemia in pregnancy",
+        "Routine use of uterotonics (oxytocin) after delivery of the baby",
+        "Exploration of the birth canal after delivery",
+        "Careful observation in the 4th stage of labor"
+      ],
+      "correct": 1,
+      "explain": "Routine uterotonics after delivery of the baby is the key intrapartum preventive measure. The other options are also valid but belong to different phases."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which uterotonic is contraindicated in a woman with preeclampsia and PPH?",
+      "options": [
+        "Oxytocin",
+        "Misoprostol",
+        "Methylergonovine (Methergine)",
+        "Carboprost"
+      ],
+      "correct": 2,
+      "explain": "Ergot alkaloids (methylergonovine/ergometrine) are contraindicated in hypertension/preeclampsia as they raise blood pressure. Safe options: oxytocin and misoprostol."
+    },
+    {
+      "q": "What is the FIRST step in managing atonic PPH?",
+      "options": [
+        "B-Lynch suture",
+        "Uterine massage",
+        "Hysterectomy",
+        "Balloon tamponade"
+      ],
+      "correct": 1,
+      "explain": "Uterine massage is the first-line mechanical treatment. The stepwise approach is: massage → aortic compression if severe → medications → surgery/balloon."
+    },
+    {
+      "q": "Oxytocin is considered first-line medical treatment for PPH. Its recommended dose is:",
+      "options": [
+        "0.2-0.4 mg IM",
+        "10-40 IU IM or IV drip",
+        "0.25 mg intramyometrially",
+        "200-1000 mcg sublingual"
+      ],
+      "correct": 1,
+      "explain": "Oxytocin dose: 10-40 IU IM or IV drip. Options A, C, D correspond to ergometrine, carboprost, and misoprostol respectively."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Secondary postpartum hemorrhage is defined as bleeding after the first 24 hours up to:",
+      "options": [
+        "2 weeks postpartum",
+        "6 weeks postpartum (end of puerperium)",
+        "3 months postpartum",
+        "1 year postpartum"
+      ],
+      "correct": 1,
+      "explain": "Secondary PPH is bleeding after 24 hours until 6 weeks (end of puerperium). Its etiology is fundamentally different: infection + retention."
+    },
+    {
+      "q": "Which of the following is a late complication of massive PPH?",
+      "options": [
+        "Transfusion-related lung injury",
+        "Sheehan syndrome (postpartum hypopituitarism)",
+        "Infections",
+        "Hemolytic transfusion reaction"
+      ],
+      "correct": 1,
+      "explain": "Sheehan syndrome = ischemic pituitary infarction following massive hemorrhage, leading to panhypopituitarism. The others are early/management-related complications."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Uterine inversion is defined as:",
+      "options": [
+        "Prolapse of the uterus into the vagina",
+        "Collapse of the fundus into the uterine cavity — the uterus is turned inside out",
+        "Retroversion of the gravid uterus",
+        "Rupture of the lower uterine segment"
+      ],
+      "correct": 1,
+      "explain": "Uterine inversion: the fundus collapses into the uterine cavity, turning the uterus inside outward."
+    },
+    {
+      "q": "The MOST common cause of uterine inversion is:",
+      "options": [
+        "Spontaneous inversion from precipitate labor",
+        "Iatrogenic — excessive cord traction with fundal placental attachment",
+        "Severe coughing postpartum",
+        "Short umbilical cord"
+      ],
+      "correct": 1,
+      "explain": "Iatrogenic inversion (most common) from excessive cord traction with a fundal placenta or fundal pressure on a relaxed uterus."
+    },
+    {
+      "q": "In 1st degree uterine inversion, the fundus is:",
+      "options": [
+        "Depressed within the endometrial cavity",
+        "Protruding through the cervical os",
+        "Protruding to or beyond the introitus",
+        "Outside the vagina completely"
+      ],
+      "correct": 0,
+      "explain": "1st degree (incomplete) = fundus depressed within endometrial cavity; 2nd = through cervical os; 3rd = to/beyond introitus."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Retained placenta is defined as failure of the placenta to spontaneously separate within:",
+      "options": [
+        "15 minutes after delivery of the fetus",
+        "30 minutes after delivery of the fetus",
+        "1 hour after delivery of the fetus",
+        "Immediately after delivery of the fetus"
+      ],
+      "correct": 1,
+      "explain": "Retained placenta = placenta fails to separate within 30 minutes after delivery of the fetus. It is the second leading cause of PPH."
+    },
+    {
+      "q": "In placenta accreta, the chorionic villi penetrate:",
+      "options": [
+        "Up to the peritoneal coat",
+        "The superficial layer of the myometrium",
+        "The deep layer of the myometrium",
+        "Only the decidua basalis"
+      ],
+      "correct": 1,
+      "explain": "P. accreta = villi penetrate superficial myometrium; P. increta = deep myometrium; P. percreta = up to peritoneal coat."
+    },
+    {
+      "q": "Which of the following is a cause of postpartum collapse?",
+      "options": [
+        "Amniotic fluid embolism",
+        "Pulmonary embolism",
+        "Rupture of the uterus",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Postpartum collapse has 8 causes including anesthetic complications, MI, pulmonary embolism, AFE, rupture uterus, eclampsia, massive hemorrhage, and sepsis."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ]
+}

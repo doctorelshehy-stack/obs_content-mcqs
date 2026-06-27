@@ -1,0 +1,2817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 19 — Physiology and Management of Normal Labor</title>
+<style>
+  :root{
+    --ink:#1F2A44; --muted:#5C6B86; --bg:#F7F9FC; --card:#FFFFFF;
+    --primary:#1F6FEB; --primary-soft:#E8F0FE; --accent:#0E7C66; --accent-soft:#E1F4EE;
+    --warn:#B45309; --warn-soft:#FEF3C7; --danger:#B91C1C; --danger-soft:#FEE2E2;
+    --pearl:#7C3AED; --pearl-soft:#EDE9FE; --note:#0E7490; --note-soft:#CFFAFE;
+    --border:#D9E1EE; --soft:#EEF2F8;
+    --src:#1F6FEB; --src-bg:#E8F0FE;       /* blue  — SOURCE visuals */
+    --ext:#0E7C66; --ext-bg:#E1F4EE;       /* green — EXTERNAL visuals */
+    --shadow:0 1px 2px rgba(31,42,68,.06), 0 4px 14px rgba(31,42,68,.06);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1180px;margin:0 auto;padding:36px 28px 80px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,#0B3D91 0%,#1F6FEB 60%,#3B82F6 100%);
+    color:#fff;border-radius:18px;padding:32px 36px;box-shadow:var(--shadow);
+    margin-bottom:28px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+    background:radial-gradient(circle,rgba(255,255,255,.18),transparent 60%);}
+  .hero .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.85;font-weight:600;}
+  .hero h1{margin:8px 0 6px;font-size:34px;line-height:1.18;font-weight:800;}
+  .hero .sub{opacity:.95;font-size:15px;max-width:780px;}
+  .chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    color:#fff;font-size:12px;padding:5px 10px;border-radius:999px;font-weight:600;}
+
+  /* ---------- TOC ---------- */
+  .toc{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:18px 22px;box-shadow:var(--shadow);margin-bottom:28px;}
+  .toc h2{margin:0 0 10px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:30px;}
+  .toc li{margin:4px 0;break-inside:avoid;}
+  .toc a{color:var(--primary);text-decoration:none;font-weight:600;font-size:14px;}
+  .toc a:hover{text-decoration:underline;}
+
+  /* ---------- Section ---------- */
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:24px 28px;box-shadow:var(--shadow);margin-bottom:22px;scroll-margin-top:20px;}
+  section h2{margin:0 0 14px;font-size:22px;color:var(--ink);
+    border-left:5px solid var(--primary);padding-left:12px;font-weight:800;}
+  section h3{margin:18px 0 8px;font-size:16px;color:var(--primary);font-weight:700;}
+  section p{margin:8px 0;color:#243049;}
+  section ul,section ol{margin:8px 0 8px 22px;padding:0;}
+  section li{margin:4px 0;}
+
+  /* ---------- Sub-blocks ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .card{background:var(--soft);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .card h4{margin:0 0 6px;font-size:14px;color:var(--ink);font-weight:700;}
+  .card p, .card li{font-size:14px;color:#243049;}
+  .card.alt{background:#F0F4FB;}
+
+  /* ---------- Table ---------- */
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px;
+    background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+  th,td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--primary-soft);color:var(--ink);font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.04em;}
+  tr:nth-child(even) td{background:#FAFBFE;}
+  td.center, th.center{text-align:center;}
+
+  /* ---------- Callouts ---------- */
+  .pearl,.warn,.danger,.note{border-radius:10px;padding:12px 16px;margin:14px 0;
+    border-left:6px solid;font-size:14px;}
+  .pearl{background:var(--pearl-soft);border-color:var(--pearl);color:#4C1D95;}
+  .warn{background:var(--warn-soft);border-color:var(--warn);color:#7C2D12;}
+  .danger{background:var(--danger-soft);border-color:var(--danger);color:#7F1D1D;}
+  .note{background:var(--note-soft);border-color:var(--note);color:#155E75;}
+  .pearl::before{content:"💎 PEARL  ";font-weight:800;letter-spacing:.04em;}
+  .warn::before{content:"⚠ WARN   ";font-weight:800;letter-spacing:.04em;}
+  .danger::before{content:"⛔ DANGER ";font-weight:800;letter-spacing:.04em;}
+  .note::before{content:"📝 NOTE   ";font-weight:800;letter-spacing:.04em;}
+
+  /* ---------- Visual markers ---------- */
+  .src-viz{background:var(--src-bg);border:2px dashed var(--src);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .ext-viz{background:var(--ext-bg);border:2px dashed var(--ext);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .src-viz .tag,.ext-viz .tag{display:inline-block;font-size:11px;font-weight:800;
+    letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+    margin-bottom:8px;}
+  .src-viz .tag{background:var(--src);color:#fff;}
+  .ext-viz .tag{background:var(--ext);color:#fff;}
+  .viz-caption{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px;}
+  .src-viz img,.ext-viz img{max-width:100%;height:auto;display:block;margin:6px auto 0;border-radius:6px;}
+
+  /* ---------- Misc ---------- */
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;}
+  .pill{background:var(--primary-soft);color:var(--primary);font-size:12px;font-weight:700;
+    padding:4px 10px;border-radius:999px;border:1px solid #BFD3F5;}
+  .pill.alt{background:var(--accent-soft);color:var(--accent);border-color:#B7E4D4;}
+  .pill.warn{background:var(--warn-soft);color:var(--warn);border-color:#FCD9A1;}
+  .pill.danger{background:var(--danger-soft);color:var(--danger);border-color:#F4B8B8;}
+
+  .meta{font-size:12px;color:var(--muted);margin-top:6px;}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:30px;text-align:center;color:var(--muted);font-size:12px;}
+
+  @media (max-width:900px){
+    .grid2,.grid3,.grid4{grid-template-columns:1fr;}
+    .toc ol{columns:1;}
+    .hero h1{font-size:26px;}
+  }
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ============================================================ HERO -->
+  <header class="hero">
+    <div class="kicker">Topic 19 · Chapter 19</div>
+    <h1>Physiology and Management of Normal Labor</h1>
+    <div class="sub">Definition of labor, causes of onset, the four functional stages, the partogram/friedman curve, mechanism of labor, and the active management protocol — from first contraction to placental separation.</div>
+    <div class="chips">
+      <span class="chip">9 source pages · 297 lines</span>
+      <span class="chip">4 functional stages</span>
+      <span class="chip">7 cardinal movements</span>
+      <span class="chip">Friedman curve included</span>
+      <span class="chip">Active vs Expectant management</span>
+      <span class="chip">1 source diagram (Friedman curve)</span>
+    </div>
+  </header>
+
+  <!-- ============================================================ TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of contents</h2>
+    <ol>
+      <li><a href="#s1">Intended learning outcomes (ILOs)</a></li>
+      <li><a href="#s2">Definitions &amp; causes of onset of labor</a></li>
+      <li><a href="#s3">Prelabor — the premonitory stage</a></li>
+      <li><a href="#s4">True vs False labor pains</a></li>
+      <li><a href="#s5">The four functional stages of labor</a></li>
+      <li><a href="#s6">Uterine contractions &amp; Friedman curve</a></li>
+      <li><a href="#s7">Physiology of the first stage</a></li>
+      <li><a href="#s8">Abnormalities of the latent &amp; active phases</a></li>
+      <li><a href="#s9">Second stage &amp; mechanism of labor</a></li>
+      <li><a href="#s10">Third stage, fourth stage &amp; placental separation</a></li>
+      <li><a href="#s11">Active management — history, exam, investigations</a></li>
+      <li><a href="#s12">Active procedures &amp; care of the newborn</a></li>
+      <li><a href="#s13">Student activity · Questions · References</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================================================ s1 -->
+  <section id="s1">
+    <h2>1 · Intended Learning Outcomes (ILOs)</h2>
+    <p>At the end of this chapter the student should be able to:</p>
+    <ul>
+      <li>To understand the definition of labor and its causes</li>
+      <li>To be able to describe physiological changes of labor</li>
+      <li>To be able to explain the mechanism of labor</li>
+      <li>To be able to outline the active management of labor</li>
+    </ul>
+  </section>
+
+  <!-- ============================================================ s2 -->
+  <section id="s2">
+    <h2>2 · Definitions &amp; causes of onset of labor</h2>
+
+    <h3>Normal labor</h3>
+    <p><strong>Definition:</strong> It is the process of spontaneous delivery of single full term viable fetus presented by the vertex through the birth canal within reasonable time without interference or complications to the mother or the fetus.</p>
+
+    <h3>Abnormal labor (dystocia)</h3>
+    <p>Any deviation from the definition of normal labor is called abnormal labor.</p>
+
+    <h3>Causes of onset of labor</h3>
+    <div class="grid2">
+      <div class="card">
+        <h4>1 — Hormonal factors</h4>
+        <p>↑ Estrogen, ↓ Progesterone, ↑ Prostaglandin F2α and ↑ Oxytocin → uterine contraction.</p>
+      </div>
+      <div class="card alt">
+        <h4>2 — Mechanical factors</h4>
+        <p>Uterine distension and stretch of the lower uterine segment → uterine contraction.</p>
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a cause of onset of normal labor?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Decreased estrogen, increased progesterone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Increased estrogen, decreased progesterone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Decreased prostaglandin F2α</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Decreased oxytocin</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Onset of labor is associated with ↑ Estrogen, ↓ Progesterone, ↑ Prostaglandin F2α and ↑ Oxytocin, leading to uterine contractions. Mechanical factors (uterine distension) also contribute.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following best defines this condition?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A pathological deviation from normal anatomy or function</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">A condition requiring surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">An incidental finding with no clinical significance</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">A self-limiting disorder of pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">A definition describes the essential nature of a condition as a deviation from normal.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The incidence of this condition is highest in which population?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Primigravidas</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Multiparous women</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Women aged 35+ years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition and risk factors</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Incidence varies by condition — each has its own epidemiology and risk profile.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s3 -->
+  <section id="s3">
+    <h2>3 · Prelabor — the premonitory stage</h2>
+    <p><strong>Prelabor</strong> is the premonitory stage of labor and begins 2–3 weeks before the onset of true labor in primigravida and a few days before in multipara.</p>
+    <p>It is associated with an increase in <strong>oxytocin receptors</strong> in myometrium.</p>
+
+    <h3>Changes seen during prelabor</h3>
+    <div class="grid3">
+      <div class="card">
+        <h4>Lightening</h4>
+        <p>The decrease in fundal height seen at term. This is due to the descend of presenting part into the pelvis.</p>
+      </div>
+      <div class="card">
+        <h4>Cervical ripening</h4>
+        <p>Softening of the cervix.</p>
+      </div>
+      <div class="card">
+        <h4>False labor pains</h4>
+        <p>Irregular contractions that do not produce cervical change (see comparison below).</p>
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Prelabor (premonitory stage) begins how long before true labor in primigravida?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A few days</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">1 week</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">2-3 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">4-5 weeks</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Prelabor begins 2-3 weeks before true labor in primigravida and a few days before in multipara. It is associated with increased oxytocin receptors.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT a change seen during prelabor?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Lightening</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Cervical ripening</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Formation of bag of water</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">False labor pains</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Changes during prelabor include lightening, cervical ripening, and false labor pains. The bag of water forms during true labor, not prelabor.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s4 -->
+  <section id="s4">
+    <h2>4 · True vs False labor pains</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>True labor pains</th>
+          <th>False labor pains</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cervical changes</strong> (dilatation and effacement)</td>
+          <td>Present</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>Frequency and duration of contractions</td>
+          <td>Regular and gradually increase</td>
+          <td>Irregular</td>
+        </tr>
+        <tr>
+          <td>Pain</td>
+          <td>Lower abdomen and back, radiating to thighs</td>
+          <td>Lower abdominal only</td>
+        </tr>
+        <tr>
+          <td>Bag of water</td>
+          <td>Formed</td>
+          <td>Not formed</td>
+        </tr>
+        <tr>
+          <td>Show</td>
+          <td>Present</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>Relief with enema / sedation</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which feature distinguishes true labor pains from false labor pains?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Pain location is only lower abdomen</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Relief with enema/sedation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Progressive cervical dilatation and effacement</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Irregular contractions</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">True labor pains produce cervical changes (dilatation and effacement), while false labor pains do not. True contractions are regular and progressive, and show (blood-stained mucus) is present.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s5 -->
+  <section id="s5">
+    <h2>5 · The four functional stages of labor</h2>
+    <p>Onset of true labor is characterized by:</p>
+    <ul>
+      <li>Appearance of true labor pain.</li>
+      <li>Appearance of show.</li>
+    </ul>
+    <p>True labor is divided into four functional stages:</p>
+
+    <div class="grid4">
+      <div class="card">
+        <h4>First stage</h4>
+        <p>Starts with onset of true labor pain and ends with full dilatation of cervix (10&nbsp;cm). Duration is <strong>12 hours in primi</strong> and <strong>6 hours in multipara</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Second stage</h4>
+        <p>Starts with full dilatation of cervix and ends with expulsion of fetus from birth canal. Duration is <strong>1–2 hours in primi</strong> and <strong>30 minutes in multipara</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Third stage</h4>
+        <p>Begins after expulsion of fetus and ends with expulsion of placenta and membranes (after births). Duration is about <strong>15 minutes</strong> in both primi &amp; multipara. The duration is reduced to <strong>5 minutes</strong> in active management.</p>
+      </div>
+      <div class="card">
+        <h4>Fourth stage</h4>
+        <p>1 hour observation period after the delivery of placenta.</p>
+      </div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The first stage of labor ends with:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Expulsion of the fetus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Full dilatation of cervix (10 cm)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Expulsion of placenta</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">First hour after delivery</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The first stage starts with onset of true labor pain and ends with full dilatation of cervix (10 cm). Duration is 12 hours in primi and 6 hours in multipara.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The third stage of labor normally lasts about:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">5 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">15 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">30 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">1 hour</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The third stage (from fetal expulsion to placental expulsion) lasts about 15 minutes in both primi and multipara with expectant management, reduced to 5 minutes with active management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s6 -->
+  <section id="s6">
+    <h2>6 · Uterine contractions &amp; Friedman curve</h2>
+
+    <h3>Uterine contractions</h3>
+    <ul>
+      <li>Throughout pregnancy, a pregnant female experiences contractions which are painless and irregular called as <strong>Braxton Hicks contractions</strong>.</li>
+      <li>During labor: the contractions are painful and lead to dilatation of cervix.</li>
+      <li>The <strong>pacemaker of uterine contractions</strong> is situated at the cornu (the right pacemaker predominates over the left).</li>
+      <li>Contractions spread from pacemaker area throughout uterus at <strong>2 cm/sec</strong>, depolarizing the whole organ within <strong>15 secs</strong>.</li>
+      <li>Contractions are predominant over the <strong>fundus</strong>.</li>
+    </ul>
+
+    <h3>Units for measuring uterine contractions</h3>
+    <ol>
+      <li>mmHg.</li>
+      <li><strong>Montevideo unit (MV unit)</strong> = Intensity of uterine contraction × number of contractions in 3 minutes.</li>
+    </ol>
+
+    <h3>The Friedman curve (cervical dilatation over time)</h3>
+    <div class="src-viz">
+      <span class="tag">Source visual</span>
+      <img src="../../../../../extracted/assets/extracted_images/19_normal_labor/img_000.jpg" alt="Friedman curve: sigmoid plot of cervical dilatation (cm) vs time (h) showing latent, active (with acceleration, maximum slope, deceleration sub-phases) and second stage" loading="lazy">
+      <div class="viz-caption">Figure 1 — Friedman curve. The pattern of cervical dilatation during the latent and active phase of normal labor is a sigmoid curve. This curve is called as Friedman curve.</div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The pacemaker of uterine contractions is situated at:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The cervix</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The lower uterine segment</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">The cornu (right predominates over left)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The fundus only</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The pacemaker of uterine contractions is at the cornu, with the right pacemaker predominating over the left. Contractions spread at 2 cm/sec, depolarizing the whole organ within 15 seconds.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">A Montevideo unit measures uterine contractions as:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Duration × frequency</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Intensity × number of contractions in 3 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Amplitude × duration</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Basal tone × frequency</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Montevideo unit (MV unit) = Intensity of uterine contraction × number of contractions in 3 minutes. It quantifies uterine activity.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s7 -->
+  <section id="s7">
+    <h2>7 · Physiology of the first stage</h2>
+
+    <div class="grid2">
+      <div class="card">
+        <h4>Presentation</h4>
+        <p>The first part of the fetus felt by vaginal examination. It is cephalic in <strong>95%</strong>, breech in <strong>3.5%</strong> and shoulder in <strong>0.5%</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Lie</h4>
+        <p>The relation of the long axis of the fetus to the long axis of the mother. If the long axis of the fetus is parallel to that of the mother, it is a <strong>longitudinal lie (99%)</strong>. If it is perpendicular or oblique, it is a <strong>transverse or oblique lie (1%)</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Attitude</h4>
+        <p>The relation of the fetal parts to each other. Normally, the fetus is in an attitude of <strong>generalized flexion</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>Position &amp; Denominator</h4>
+        <p>Position: the relation of certain point on the presenting part of the fetus (the denominator) to the back of the mother.</p>
+        <p>Denominator: is the occiput in vertex presentation, the chin in face, the frontal bone in brow, and the sacrum in breech presentation.</p>
+      </div>
+    </div>
+
+    <p><strong>Occipito-anterior (OA)</strong> position is more common than occipito-posterior (OP).<br>
+       <strong>Left OA</strong> is more common than right OA.</p>
+
+    <h3>First stage of labor — Latent vs Active stage</h3>
+    <p>The stage of cervical effacement and dilatation is further divided into 2 phases.</p>
+    <table>
+      <thead>
+        <tr><th>Latent stage</th><th>Active stage</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>It starts from true labor pains and ends when cervix is <strong>3 to 5 cm</strong> dilated. Its duration is <strong>12 hours in nulliparous</strong> and <strong>8 hours in multiparous</strong> females.</td>
+          <td>It begins with cervical dilatation of <strong>3–5 cm</strong>, with regular uterine contractions. Normal cervical dilatation rate in primi is <strong>1.2 cm/hr</strong> and <strong>1.5 cm/hr</strong> for multiparous women.</td>
+        </tr>
+        <tr>
+          <td>Mainly concerned with <strong>cervical effacement</strong>.</td>
+          <td>Mainly concerned with <strong>cervical dilatation</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Friedman sub-phases of the active phase</h3>
+    <table>
+      <thead>
+        <tr><th>Sub-phase</th><th>Cervical dilatation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Acceleration phase</td><td>3–4 cm</td></tr>
+        <tr><td>Phase of maximum slope</td><td>4–9 cm</td></tr>
+        <tr><td>Deceleration phase</td><td>9–10 cm</td></tr>
+      </tbody>
+    </table>
+  
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In a normal labor, cephalic presentation occurs in what percentage of cases?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">99%</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">95%</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">90%</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">85%</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Cephalic presentation occurs in 95% of labors, breech in 3.5%, and shoulder in 0.5%.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">The normal cervical dilatation rate in active phase for nulliparous women is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">0.5 cm/hr</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">1.2 cm/hr</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">1.5 cm/hr</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">2.0 cm/hr</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In the active phase, normal cervical dilatation rate is 1.2 cm/hr for primigravida and 1.5 cm/hr for multiparous women.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The latent stage of first stage is mainly concerned with:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Cervical dilatation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Cervical effacement</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Descent of head</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Expulsion of fetus</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The latent stage is mainly concerned with cervical effacement, while the active stage is mainly concerned with cervical dilatation.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s8 -->
+  <section id="s8">
+    <h2>8 · Abnormalities of the latent &amp; active phases</h2>
+
+    <h3>Prolonged latent phase</h3>
+    <ul>
+      <li>Greater than <strong>20 hours in primi</strong>.</li>
+      <li>Greater than <strong>14 hours in multipara</strong>.</li>
+    </ul>
+    <h4>Causes</h4>
+    <ul>
+      <li>Excessive sedation or epidural analgesia.</li>
+      <li>Poor cervical conditions (e.g. thick, uneffaced or undilated).</li>
+      <li>False labor (most common cause in multipara).</li>
+    </ul>
+    <h4>Management — either of 2 options</h4>
+    <ul>
+      <li><strong>Therapeutic test:</strong> 15 mg of morphine is given intramuscularly. Most of the patients are asleep within 1 hour and awake 4 to 5 hours later, in active labour or in no labor.</li>
+      <li><strong>Oxytocin stimulation.</strong></li>
+    </ul>
+
+    <h3>Abnormalities of active phase</h3>
+    <p><strong>Protracted active phase</strong> = slow rate of cervical dilatation or descent of head.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Cervical dilatation</th>
+          <th>Descend of head</th>
+          <th>Management</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nulliparous</td>
+          <td class="center">&lt; 1.2 cm/hr</td>
+          <td class="center">&lt; 1 cm/hr</td>
+          <td rowspan="2" class="center">Expectant and support. If CPD is present → CS</td>
+        </tr>
+        <tr>
+          <td>multiparous</td>
+          <td class="center">&lt; 1.5 cm/hr</td>
+          <td class="center">&lt; 2 cm/hr</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Arrest disorders</h3>
+    <ul>
+      <li><strong>Arrest of dilatation:</strong> cessation of dilatation for <strong>2 or more hours</strong>.</li>
+      <li><strong>Arrest of descent:</strong> cessation of descent for <strong>1 or more hours</strong>.</li>
+    </ul>
+
+    <h4>Factors contributing to arrest and dilatation</h4>
+    <ul>
+      <li>Excessive sedation.</li>
+      <li>Epidural analgesia.</li>
+      <li>Fetal malposition.</li>
+      <li>CPD.</li>
+    </ul>
+    <div class="pearl">Treatment of protracted disorders is expectant management and oxytocin in absence of any cephalopelvic disproportion.</div>
+  
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">A prolonged latent phase is defined as greater than how many hours in nulliparous women?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">12 hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">14 hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">20 hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">24 hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Prolonged latent phase is >20 hours in primigravida and >14 hours in multipara. Management includes a therapeutic test with morphine or oxytocin stimulation.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Arrest of dilatation is defined as cessation of dilatation for:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">1 or more hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">2 or more hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">3 or more hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">4 or more hours</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Arrest of dilatation is cessation of dilatation for 2 or more hours. Arrest of descent is cessation of descent for 1 or more hours.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s9 -->
+  <section id="s9">
+    <h2>9 · Second stage of labor &amp; mechanism of labor</h2>
+    <p>It begins from full dilatation of cervix and ends with expulsion of fetus. In the second stage, the expulsive efforts by a woman play more important role than uterine contractions.</p>
+
+    <h3>Second stage timing</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Parity</th>
+          <th>Normal</th>
+          <th>Prolonged without epidural</th>
+          <th>Prolonged with epidural</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nulliparous</td>
+          <td class="center">1 hr</td>
+          <td class="center">2 hrs (+1 for arrest)</td>
+          <td class="center">3 hrs (+1 for arrest)</td>
+        </tr>
+        <tr>
+          <td>Multiparous</td>
+          <td class="center">30 mins</td>
+          <td class="center">1 hr (+1 for arrest)</td>
+          <td class="center">2 hrs (+1 for arrest)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><strong>2nd stage arrest:</strong> when there is no change in descent of head for 1 hour more than prolonged.</p>
+
+    <h3>Mechanism of normal labor</h3>
+    <p><strong>A. Delivery of the head</strong> — includes the following movements:</p>
+    <ol>
+      <li><strong>Descent:</strong> caused by uterine contractions.</li>
+      <li><strong>Engagement:</strong> it is the passage of the widest transverse diameter of the presenting part (biparietal diameter in vertex presentation) through the pelvic brim.<br>
+        <em>Diagnosed by:</em>
+        <ul>
+          <li><strong>Abdominally:</strong> rule of fifths: 2/5 or less of the head is felt abdominally above the symphysis pubis by the pelvic grip.</li>
+          <li><strong>Vaginally:</strong> the vertex is felt at or below the ischial spine (zero station).</li>
+        </ul>
+      </li>
+      <li><strong>Increased flexion</strong></li>
+      <li><strong>Internal rotation</strong></li>
+      <li><strong>Extension</strong></li>
+      <li><strong>Restitution</strong></li>
+      <li><strong>External rotation</strong></li>
+    </ol>
+    <p><strong>B. Delivery of the shoulder and body.</strong></p>
+  
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT one of the cardinal movements of the mechanism of labor?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Engagement</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Internal rotation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">External rotation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Cervical dilatation</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The cardinal movements are: descent, engagement, increased flexion, internal rotation, extension, restitution, and external rotation. Cervical dilatation is not a fetal movement — it occurs due to uterine contractions.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Engagement of the vertex is diagnosed vaginally when:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">The head is at +1 station</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">The vertex is felt at or below the ischial spine (zero station)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">The cervix is fully dilated</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">The membranes are ruptured</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Engagement is diagnosed vaginally when the vertex is at or below the ischial spine (zero station). Abdominally, 2/5 or less of the head is felt above the symphysis pubis.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s10 -->
+  <section id="s10">
+    <h2>10 · Third stage, fourth stage &amp; placental separation</h2>
+
+    <p>It extends from the delivery of the baby to complete expulsion of placenta and membranes.</p>
+
+    <h3>Expectant vs Active management of the third stage</h3>
+    <table>
+      <thead>
+        <tr><th>Expectant management</th><th>Active management</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>In this method the placental separation and its descent into vagina is allowed to occur spontaneously with minimal assistance.</td>
+          <td>The placental separation is actively facilitated and powerful uterine contractions are initiated to reduce the incidence of third stage complications (like PPH).</td>
+        </tr>
+        <tr>
+          <td>Duration of third stage is <strong>15 mins</strong>, so increased chances of PPH and increased maternal mortality.</td>
+          <td>Duration is reduced to <strong>5 mins</strong>, so less chances of PPH and maternal mortality.</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>Active management of labor includes: administration of a uterotonic soon after birth of baby, delayed cord clamping, controlled cord traction and uterine massage.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>The fourth stage</h3>
+    <p>Some consider the first hour after third stage is critical and the mother should be under close observation for PPH.</p>
+    <div class="danger">Active management of third stage is preferred over expectant management because it cuts duration from 15 min to 5 min and lowers PPH risk and maternal mortality.</div>
+
+    <h3>Signs of placental separation (6 items)</h3>
+    <ol>
+      <li>Uterus becomes globular, hard and mobile.</li>
+      <li>Sudden gush of blood.</li>
+      <li>Suprapubic bulge due to the separated placenta that occupies the upper vagina and lower uterine segment.</li>
+      <li>Rise of the fundal level above the umbilicus.</li>
+      <li>Lengthening of the umbilical.</li>
+      <li>Absence of pulsation in the umbilical stump.</li>
+    </ol>
+  
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">The active management of the third stage reduces its duration to:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">15 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">10 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">5 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">2 minutes</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Active management reduces the third stage duration from 15 minutes (expectant) to 5 minutes, lowering the risk of PPH and maternal mortality.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a sign of placental separation?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Fundus becomes low and soft</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Umbilical cord shortens</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Uterus becomes globular, hard, and mobile with a sudden gush of blood</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Cervix closes completely</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Signs include: uterus becomes globular/hard/mobile, sudden gush of blood, suprapubic bulge, rise of fundal level, lengthening of cord, and absence of cord pulsation.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s10">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s10-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s10-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s11 -->
+  <section id="s11">
+    <h2>11 · Active management of normal labor — First stage (history, exam, investigations)</h2>
+
+    <h3>(I) History taking</h3>
+    <ul>
+      <li><strong>Complete obstetric history.</strong></li>
+      <li><strong>History of present pregnancy:</strong>
+        <ul>
+          <li>Duration of pregnancy.</li>
+          <li>Medical disorders and complications during this pregnancy.</li>
+        </ul>
+      </li>
+      <li><strong>History of present labor:</strong>
+        <ul>
+          <li>Labor pains: onset, frequency and duration.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>(II) Examination</h3>
+    <div class="grid3">
+      <div class="card">
+        <h4>General examination</h4>
+        <ul>
+          <li>Vital signs.</li>
+          <li>Chest and heart examination.</li>
+          <li>Lower limbs for oedema.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Abdominal examination</h4>
+        <ul>
+          <li>Fundal level — Fundal grip — Umbilical grip — Pelvic grips — FHS.</li>
+          <li>Scar of previous operations (e.g. C.S, myomectomy or hysterotomy).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Pelvic examination</h4>
+        <ul>
+          <li><strong>a — Cervix:</strong> Dilatation, Effacement, Membranes (ruptured or intact).</li>
+          <li><strong>b — Presenting part</strong> and its position.</li>
+          <li><strong>c — Station</strong> of the presenting part.</li>
+          <li><strong>d — Pelvic capacity.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>(III) Investigations</h3>
+    <ol>
+      <li>Blood group — Rh typing.</li>
+      <li>Urine for albumin and sugar.</li>
+      <li>Hb%.</li>
+      <li>Ultrasonography.</li>
+    </ol>
+  
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT part of the active management of the first stage?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Partogram recording</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Amniotomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Oxytocin augmentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Fundal pressure during contractions</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Active first-stage procedures include evacuation of rectum/bladder, analgesia, partogram, amniotomy, oxytocin augmentation, and fetal monitoring. Fundal pressure is not recommended.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">First-line management consists of:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Immediate surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Conservative/medical management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Referral to a specialist</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition and severity</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Management approach varies — some conditions require surgery, others medical or conservative care.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The first-line investigation is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ultrasound</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Complete blood count</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Urine analysis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the clinical suspicion</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Choice of investigation depends on the suspected condition.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s11">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s11-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s11-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s12 -->
+  <section id="s12">
+    <h2>12 · Active procedures &amp; care of the newborn</h2>
+
+    <h3>(IV) Active procedures — 1st stage</h3>
+    <ul>
+      <li><strong>Evacuation</strong> of the rectum and bladder.</li>
+      <li><strong>Analgesia.</strong></li>
+      <li><strong>Partogram:</strong> graphic recording of all events of labor either maternal (vital signs, uterine contractions, cervical dilatation, and used fluid and drugs) or fetal (fetal heart rate, head descent).</li>
+      <li><strong>Amniotomy.</strong></li>
+      <li><strong>Oxytocin</strong> to augment labor and regulate uterine contraction (3 in 10 minutes).</li>
+      <li><strong>Fetal monitoring.</strong></li>
+    </ul>
+
+    <h3>2nd stage</h3>
+    <ul>
+      <li>Transfer to delivery room.</li>
+      <li>Delivery of the head: the important goal is prevention of perineal lacerations by good support of the perineum and episiotomy.</li>
+      <li>Clamping of the cord: but it is contraindicated in preterm baby and in Rh – ve mothers.</li>
+    </ul>
+
+    <h3>3rd stage</h3>
+    <ul>
+      <li><strong>Ecbolics:</strong> Oxytocin and Ergometrine for rapid separation of the placenta.</li>
+      <li>Examination of the placenta and membranes.</li>
+      <li>Exploration of the genital tract for any laceration and repairing of it.</li>
+    </ul>
+
+    <h3>Care of the newborn</h3>
+    <ul>
+      <li>Clearance of the air passages: by aspiration of the mucus from the pharynx.</li>
+      <li>Determination of the <strong>APGAR score</strong>.</li>
+      <li>Examination for congenital anomalies or injuries.</li>
+      <li>Care of the eyes by putting antibiotic drops.</li>
+    </ul>
+
+    <div class="warn">Cord clamping is contraindicated in preterm baby and in Rh – ve mothers.</div>
+  
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Cord clamping is contraindicated in which of the following?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Term baby</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Preterm baby and Rh-negative mothers</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Vertex presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Multiparous women</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Cord clamping is contraindicated in preterm babies and Rh-negative mothers. The newborn care also includes airway clearance, APGAR scoring, examination, and eye care with antibiotics.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s12">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s12-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s12-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s13 -->
+  <details class="study-section"><summary>Student activity · Assessment · References</summary><section id="s13">
+    <h2>13 · Student activity · Questions · References</h2>
+
+    <h3>Student activity</h3>
+    <p>Each student is requested to attend the delivery ward to observe the various stages and the management of a laboring woman.</p>
+
+    <h3>Questions</h3>
+    <p>Use the chapter Google Form to submit your answers:</p>
+    <p><a href="https://forms.gle/PkRHxhaPKJ8736Xn9" target="_blank" rel="noopener noreferrer">https://forms.gle/PkRHxhaPKJ8736Xn9</a></p>
+
+    <h3>References</h3>
+    <ol>
+      <li>Williams Obstetrics — normal labor &amp; its stages</li>
+      <li>Friedman EA — the Friedman labor curve (cervical dilatation sigmoid vs time)</li>
+      <li>ACOG / RCOG — definitions of protracted &amp; arrest disorders in active phase</li>
+      <li>WHO partogram recommendations</li>
+      <li>Active vs expectant management of third stage (Cochrane / WHO)</li>
+      <li>Source: <em>Book Obstetrics 2025-2026, Topic 19 (pages 101–109)</em> — 9 PDF pages, 297 lines of text, 1 source image (Friedman curve).</li>
+    </ol>
+
+    <div class="note">Preserved verbatim from source: spelling "primi" / "primigravida" / "nulliparous" / "multiparous" / "multipara" (used interchangeably by the source), punctuation in "2-3 weeks" / "3-5 cm" / "1- 2 hours" / "15 mins" (mixed forms retained), and the comma in "1 hr (+1 for arrest)".</div>
+  </section></details>
+
+  <footer>
+    Topic 19 · Physiology and Management of Normal Labor · Generated 2026-06-05 · Source: Book Obstetrics 2025-2026-019.pdf (9 pages, 297 lines, 1 source image)
+  </footer>
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

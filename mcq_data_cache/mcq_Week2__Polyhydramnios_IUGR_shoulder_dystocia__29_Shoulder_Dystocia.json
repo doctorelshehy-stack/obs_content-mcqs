@@ -1,0 +1,401 @@
+{
+  "s2": [
+    {
+      "q": "What is the reported incidence of shoulder dystocia?",
+      "options": [
+        "0.1-0.2%",
+        "0.2-0.3%",
+        "1-2%",
+        "2-3%"
+      ],
+      "correct": 1,
+      "explain": "Shoulder dystocia occurs in 0.2-0.3% of deliveries."
+    },
+    {
+      "q": "Which two adjectives best describe shoulder dystocia?",
+      "options": [
+        "Common and preventable",
+        "Predictable and treatable",
+        "Unpredictable and unpreventable",
+        "Rare and self-limiting"
+      ],
+      "correct": 2,
+      "explain": "Shoulder dystocia is unpredictable (cannot be reliably forecast) and unpreventable (no prophylactic intervention)."
+    },
+    {
+      "q": "Shoulder dystocia is defined as:",
+      "options": [
+        "Arrested delivery of fetal head",
+        "Arrested delivery of fetal shoulder after head delivery requiring additional maneuvers",
+        "Failure of fetal rotation in pelvic outlet",
+        "Prolonged second stage > 3 hours"
+      ],
+      "correct": 1,
+      "explain": "It is specifically the arrested delivery of the fetal shoulder after delivery of the fetal head, requiring additional maneuvers."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "Which of the following best defines this condition?",
+      "options": [
+        "A pathological deviation from normal anatomy or function",
+        "A condition requiring surgical intervention",
+        "An incidental finding with no clinical significance",
+        "A self-limiting disorder of pregnancy"
+      ],
+      "correct": 0,
+      "explain": "A definition describes the essential nature of a condition as a deviation from normal."
+    }
+  ],
+  "s3": [
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which clinical finding is most suggestive of this diagnosis?",
+      "options": [
+        "Pain and bleeding",
+        "Asymptomatic presentation",
+        "Abnormal laboratory values",
+        "Varies by condition — specific findings guide diagnosis"
+      ],
+      "correct": 3,
+      "explain": "Clinical presentation differs by condition and guides diagnostic testing."
+    },
+    {
+      "q": "The gold standard diagnostic test is:",
+      "options": [
+        "Ultrasound imaging",
+        "Laboratory blood tests",
+        "Clinical examination alone",
+        "Depends on the specific condition"
+      ],
+      "correct": 3,
+      "explain": "The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s4": [
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "In obstetric practice, this knowledge helps:",
+      "options": [
+        "Predict and prevent complications",
+        "Diagnose conditions early",
+        "Choose appropriate management",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Comprehensive knowledge enables prevention, early diagnosis, and optimal management."
+    },
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Which is an antepartum risk factor for shoulder dystocia?",
+      "options": [
+        "Prolonged first stage",
+        "Secondary arrest",
+        "Previous shoulder dystocia",
+        "Oxytocin augmentation"
+      ],
+      "correct": 2,
+      "explain": "Previous shoulder dystocia (recurrence ~10%), macrosomia, DM, BMI > 30, and induction of labor are the 5 antepartum risk factors."
+    },
+    {
+      "q": "Which is an intrapartum risk factor for shoulder dystocia?",
+      "options": [
+        "Macrosomia",
+        "Diabetes mellitus",
+        "Maternal obesity",
+        "Prolonged second stage"
+      ],
+      "correct": 3,
+      "explain": "Prolonged 1st/2nd stage, secondary arrest, oxytocin augmentation, and assisted vaginal delivery are the 5 intrapartum risk factors."
+    },
+    {
+      "q": "The single most common risk factor for shoulder dystocia is:",
+      "options": [
+        "Previous shoulder dystocia",
+        "Macrosomia",
+        "Diabetes mellitus",
+        "Assisted delivery"
+      ],
+      "correct": 1,
+      "explain": "Macrosomia (BW > 4,000 g or > 4,500 g in diabetic mothers) is the single most common risk factor."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    }
+  ],
+  "s6": [
+    {
+      "q": "Which maneuver is the most effective single intervention in shoulder dystocia?",
+      "options": [
+        "Delivery of posterior arm",
+        "Episiotomy",
+        "McRobert's maneuver",
+        "Suprapubic pressure"
+      ],
+      "correct": 2,
+      "explain": "McRobert's maneuver (hyperflexion of maternal hips) is the most effective intervention, resolving ~90% when combined with suprapubic pressure."
+    },
+    {
+      "q": "McRobert's + suprapubic pressure resolves approximately what % of cases?",
+      "options": [
+        "50%",
+        "70%",
+        "90%",
+        "99%"
+      ],
+      "correct": 2,
+      "explain": "The combination resolves approximately 90% of shoulder dystocia cases."
+    },
+    {
+      "q": "What is the purpose of episiotomy in shoulder dystocia management?",
+      "options": [
+        "To resolve the impaction",
+        "To facilitate internal maneuvers by enlarging the vaginal opening",
+        "To reduce fetal head circumference",
+        "To prevent perineal tearing"
+      ],
+      "correct": 1,
+      "explain": "Episiotomy alone does not resolve dystocia — it enlarges the opening to allow room for internal manipulation."
+    },
+    {
+      "q": "Which complication is most associated with delivery of the posterior arm?",
+      "options": [
+        "Uterine rupture",
+        "Fracture of humerus or clavicle",
+        "Maternal hemorrhage",
+        "Erb's palsy"
+      ],
+      "correct": 1,
+      "explain": "Delivery of the posterior arm carries a higher risk of fracturing the humerus or clavicle, which usually heal well."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    }
+  ],
+  "s7": [
+    {
+      "q": "Which of the following is a key concept?",
+      "options": [
+        "It is essential for understanding the condition",
+        "It is rarely relevant in clinical practice",
+        "It applies only to specific populations",
+        "It has been replaced by newer classifications"
+      ],
+      "correct": 0,
+      "explain": "Understanding key concepts is fundamental to clinical management."
+    },
+    {
+      "q": "Which factor most influences the choice of treatment?",
+      "options": [
+        "Gestational age at presentation",
+        "Maternal preference",
+        "Facility resources",
+        "All of the above — treatment is individualized"
+      ],
+      "correct": 3,
+      "explain": "Obstetric management is tailored to gestational age, maternal status, and available resources."
+    },
+    {
+      "q": "The clinical significance of this section is:",
+      "options": [
+        "It guides management decisions",
+        "It is primarily theoretical",
+        "It applies only to research settings",
+        "It has limited clinical utility"
+      ],
+      "correct": 0,
+      "explain": "Understanding these concepts directly informs clinical management."
+    },
+    {
+      "q": "When assessing this aspect, the most important factor is:",
+      "options": [
+        "Clinical correlation with patient presentation",
+        "Laboratory confirmation",
+        "Imaging evidence",
+        "All of the above together"
+      ],
+      "correct": 3,
+      "explain": "Assessment requires integration of clinical, laboratory, and imaging findings."
+    },
+    {
+      "q": "First-line management consists of:",
+      "options": [
+        "Immediate surgical intervention",
+        "Conservative/medical management",
+        "Referral to a specialist",
+        "Depends on the specific condition and severity"
+      ],
+      "correct": 3,
+      "explain": "Management approach varies — some conditions require surgery, others medical or conservative care."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Which fetal complication involves injury to C5-C6 nerve roots causing 'waiter's tip' deformity?",
+      "options": [
+        "Brachial plexus injury",
+        "Erb's palsy",
+        "Klumpke's palsy",
+        "Hypoxic brain injury"
+      ],
+      "correct": 1,
+      "explain": "Erb's palsy affects C5-C6 roots, causing 'waiter's tip' deformity (arm adducted, internally rotated, forearm pronated)."
+    },
+    {
+      "q": "Which is a maternal complication of shoulder dystocia?",
+      "options": [
+        "Brachial plexus injury",
+        "Erb's palsy",
+        "Post-partum hemorrhage",
+        "Bone fractures"
+      ],
+      "correct": 2,
+      "explain": "PPH (from uterine atony or perineal trauma) is one of 4 maternal complications: PPH, lacerations/tears, uterine rupture, psychological stress."
+    },
+    {
+      "q": "How many fetal vs maternal complications are listed for shoulder dystocia?",
+      "options": [
+        "4 fetal, 4 maternal",
+        "5 fetal, 4 maternal",
+        "3 fetal, 5 maternal",
+        "6 fetal, 3 maternal"
+      ],
+      "correct": 1,
+      "explain": "5 fetal (brachial plexus injury, Erb's palsy, fractures, hypoxic brain injury, death) and 4 maternal."
+    },
+    {
+      "q": "A potential maternal complication includes:",
+      "options": [
+        "Hemorrhage",
+        "Infection",
+        "Thromboembolism",
+        "All of the above are possible"
+      ],
+      "correct": 3,
+      "explain": "Obstetric conditions can lead to hemorrhage, infection, thromboembolism, and other complications."
+    },
+    {
+      "q": "Fetal complications may include:",
+      "options": [
+        "Preterm birth",
+        "Growth restriction",
+        "Hypoxic injury",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explain": "Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible."
+    }
+  ]
+}

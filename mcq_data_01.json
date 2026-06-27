@@ -1,0 +1,557 @@
+{
+  "1-fertilization": [
+    {
+      "q": "Where does fertilization normally occur?",
+      "options": [
+        "Ampulla of the fallopian tube",
+        "Uterine cavity",
+        "Fimbriae of the fallopian tube",
+        "Cervical canal"
+      ],
+      "correct": 0,
+      "explain": "Fertilization occurs at the ampulla of the fallopian tube, forming a zygote."
+    },
+    {
+      "q": "How many days after fertilization does the morula reach the uterine cavity?",
+      "options": [
+        "1 day",
+        "2 days",
+        "3 days",
+        "5 days"
+      ],
+      "correct": 2,
+      "explain": "The morula reaches the uterine cavity 3 days after fertilization, aided by cilia motility."
+    },
+    {
+      "q": "The inner cell mass of the blastocyst will form:",
+      "options": [
+        "The placenta",
+        "The embryo",
+        "The trophoblast",
+        "The chorion"
+      ],
+      "correct": 1,
+      "explain": "The inner cell mass (embryonic mass) will form the embryo, while the outer cell mass (trophoblast) provides nutrition."
+    },
+    {
+      "q": "What enzyme is released by the sperm during capacitation to aid fertilization?",
+      "options": [
+        "Protease",
+        "Lipase",
+        "Hyaluronidase",
+        "Amylase"
+      ],
+      "correct": 2,
+      "explain": "The sperm head swells and increases hyaluronidase enzymes during capacitation to penetrate the ovum."
+    },
+    {
+      "q": "The blastocyst remains free in the uterine cavity for how long before implantation?",
+      "options": [
+        "1 day",
+        "3 days",
+        "5 days",
+        "7 days"
+      ],
+      "correct": 1,
+      "explain": "The blastocyst remains free for 3 days in the uterine cavity, nourished by secretions from the endometrium."
+    }
+  ],
+  "2-implantation": [
+    {
+      "q": "Implantation occurs on which day after ovulation?",
+      "options": [
+        "3rd\u20134th day",
+        "6th\u20137th day",
+        "10th\u201312th day",
+        "14th day"
+      ],
+      "correct": 1,
+      "explain": "Implantation occurs on the 6th\u20137th day after ovulation by penetration of the trophoblast into the secretory endometrium (decidua basalis)."
+    },
+    {
+      "q": "During implantation, the trophoblast penetrates into which layer?",
+      "options": [
+        "Myometrium",
+        "Decidua capsularis",
+        "Decidua basalis",
+        "Chorion laeve"
+      ],
+      "correct": 2,
+      "explain": "The trophoblast penetrates into the secretory endometrium, specifically the decidua basalis."
+    },
+    {
+      "q": "All of the following are functions of the decidua EXCEPT:",
+      "options": [
+        "Site of implantation and nutrition of the blastocyst",
+        "Sharing in formation of the placenta",
+        "Secretion of hCG",
+        "Protective layer against invasive power of trophoblast"
+      ],
+      "correct": 2,
+      "explain": "hCG is secreted by the syncytiotrophoblast, not the decidua. The decidua functions as implantation site, placental formation, and protection against trophoblast invasion."
+    },
+    {
+      "q": "The decidua protects the uterus by:",
+      "options": [
+        "Preventing infection",
+        "Protecting against the invasive power of trophoblast",
+        "Maintaining the corpus luteum",
+        "Producing progesterone"
+      ],
+      "correct": 1,
+      "explain": "The decidua acts as a protective layer against the invasive power of the trophoblast, preventing excessive invasion into the uterine wall."
+    }
+  ],
+  "3-formation-of-the-villi": [
+    {
+      "q": "The trophoblast differentiates into which two layers?",
+      "options": [
+        "Cytotrophoblast (outer) and syncytiotrophoblast (inner)",
+        "Cytotrophoblast (inner) and syncytiotrophoblast (outer)",
+        "Cytotrophoblast and decidua",
+        "Syncytiotrophoblast and chorion"
+      ],
+      "correct": 1,
+      "explain": "The trophoblast differentiates into the inner cytotrophoblast layer and the outer syncytiotrophoblast layer."
+    },
+    {
+      "q": "The primary villus (1\u00b0 villus) is composed of:",
+      "options": [
+        "Trophoblast only",
+        "Trophoblast + mesoderm",
+        "Trophoblast + mesoderm + fetal vessels",
+        "Mesoderm only"
+      ],
+      "correct": 0,
+      "explain": "The primary villus consists of trophoblast forming finger-like projections into the decidua."
+    },
+    {
+      "q": "The secondary villus (2\u00b0 villus) is formed when:",
+      "options": [
+        "Trophoblast invades the decidua",
+        "Mesoderm develops in the primary villus forming a connective tissue core",
+        "Fetal vessels vascularize the villus",
+        "The villus anchors to the decidua"
+      ],
+      "correct": 1,
+      "explain": "A secondary villus forms when mesoderm develops into the primary villus, giving it a connective tissue core."
+    },
+    {
+      "q": "Which type of villi is responsible for hormone production (hCG)?",
+      "options": [
+        "Anchoring villi",
+        "Free villi",
+        "Primary villi",
+        "Tertiary villi"
+      ],
+      "correct": 1,
+      "explain": "Free villi are the functional unit for hormone production (hCG). They are highly vascular and maintain the corpus luteum for 10 weeks."
+    },
+    {
+      "q": "Anchoring villi are primarily responsible for:",
+      "options": [
+        "Nutrition and gas exchange",
+        "Hormone production",
+        "Fixation and attachment",
+        "Fetal blood circulation"
+      ],
+      "correct": 2,
+      "explain": "Anchoring villi provide fixation and attachment of the placenta to the decidua."
+    }
+  ],
+  "4-formation-of-choriodecidual-spaces": [
+    {
+      "q": "The first wave of trophoblastic invasion involves:",
+      "options": [
+        "Invasion of the spiral artery media",
+        "Invasion of the mouth of endometrial vessels",
+        "Invasion of the myometrium",
+        "Invasion of decidua capsularis"
+      ],
+      "correct": 1,
+      "explain": "The first wave of invasion involves trophoblast invading the mouth of endometrial vessels, delivering maternal blood into the choriodecidual space."
+    },
+    {
+      "q": "At what gestational age does the second wave of trophoblastic invasion occur?",
+      "options": [
+        "12 weeks",
+        "16 weeks",
+        "20 weeks",
+        "28 weeks"
+      ],
+      "correct": 2,
+      "explain": "The second wave occurs at 20 weeks, where trophoblast invades and destroys the media of spiral vessels, converting them into wide-mouthed sinuses."
+    },
+    {
+      "q": "Failure of the second wave of trophoblastic invasion is a key mechanism in:",
+      "options": [
+        "Placenta previa and abortion",
+        "Pre-eclampsia and IUGR",
+        "Gestational diabetes and macrosomia",
+        "Post-term pregnancy and polyhydramnios"
+      ],
+      "correct": 1,
+      "explain": "Failure of the second wave of trophoblastic invasion of spiral arteries is a key mechanism in pre-eclampsia and intrauterine growth restriction (IUGR)."
+    },
+    {
+      "q": "The second wave of trophoblastic invasion converts spiral vessels into:",
+      "options": [
+        "Choriodecidual spaces",
+        "Wide-mouthed sinuses",
+        "Intervillous lakes",
+        "Venous plexuses"
+      ],
+      "correct": 1,
+      "explain": "The second wave destroys the media of spiral vessels, converting them into wide-mouthed sinuses to ensure adequate blood supply."
+    }
+  ],
+  "5-placenta": [
+    {
+      "q": "Which of the following describes the normal placenta?",
+      "options": [
+        "Discoid, 500 g, 20\u201325 cm diameter",
+        "Spherical, 300 g, 15 cm diameter",
+        "Oval, 700 g, 30 cm diameter",
+        "Discoid, 250 g, 10 cm diameter"
+      ],
+      "correct": 0,
+      "explain": "The normal placenta is discoid, weighs approximately 500 g, and measures 20\u201325 cm in diameter."
+    },
+    {
+      "q": "The fetal surface of the placenta is:",
+      "options": [
+        "Divided into 12\u201315 cotyledons",
+        "Smooth and covered by membranes",
+        "Attached directly to the myometrium",
+        "Irregular and rough"
+      ],
+      "correct": 1,
+      "explain": "The fetal surface is smooth and covered by membranes, while the maternal surface is divided into 12\u201315 cotyledons."
+    },
+    {
+      "q": "The fetal part of the placenta is the:",
+      "options": [
+        "Decidua basalis",
+        "Chorion laeve",
+        "Chorion frondosum",
+        "Decidua capsularis"
+      ],
+      "correct": 2,
+      "explain": "The placenta consists of a fetal part (chorion frondosum) and a maternal part (decidua basalis)."
+    },
+    {
+      "q": "Glucose and amino acids cross the placenta by:",
+      "options": [
+        "Simple diffusion",
+        "Facilitated diffusion",
+        "Active transport",
+        "Pinocytosis"
+      ],
+      "correct": 1,
+      "explain": "Glucose and amino acids cross the placenta by facilitated diffusion. Water and electrolytes use simple diffusion; calcium and iron use active transport; immunoglobulins use pinocytosis."
+    },
+    {
+      "q": "Calcium and iron cross the placenta by:",
+      "options": [
+        "Simple diffusion",
+        "Facilitated diffusion",
+        "Active transport",
+        "Pinocytosis"
+      ],
+      "correct": 2,
+      "explain": "Calcium and iron (minerals) require active transport to cross the placenta."
+    },
+    {
+      "q": "All of the following are abnormal placental shapes EXCEPT:",
+      "options": [
+        "Placenta succenturiata",
+        "Placenta circumvallate",
+        "Placenta previa",
+        "Placenta fenestrate"
+      ],
+      "correct": 2,
+      "explain": "Placenta previa is an abnormal site of implantation (in the lower uterine segment), not an abnormal shape. The others are shape abnormalities."
+    },
+    {
+      "q": "Placenta circumvallate is characterized by:",
+      "options": [
+        "Two separate placental lobes",
+        "An opening in the placental tissue",
+        "A whitish ring of decidua on the fetal surface",
+        "An accessory lobe connected by vessels"
+      ],
+      "correct": 2,
+      "explain": "Placenta circumvallate shows a whitish ring composed of decidua seen around the placenta from its fetal surface."
+    },
+    {
+      "q": "Placenta accreta represents an abnormality of:",
+      "options": [
+        "Placental shape",
+        "Placental adherence",
+        "Placental size",
+        "Placental site"
+      ],
+      "correct": 1,
+      "explain": "Placenta accreta is an abnormal adherence of the placenta to the uterine wall."
+    },
+    {
+      "q": "A large placenta (hyperplacentosis) may be associated with all EXCEPT:",
+      "options": [
+        "Rh incompatibility",
+        "Diabetes mellitus",
+        "Intrauterine growth restriction (IUGR)",
+        "Multiple pregnancy"
+      ],
+      "correct": 2,
+      "explain": "A large placenta (hyperplacentosis) is associated with Rh incompatibility, DM, twins, and syphilis. IUGR is associated with a small placenta."
+    },
+    {
+      "q": "Which decidual layer covers the rest of the uterine cavity not involved with implantation?",
+      "options": [
+        "Decidua basalis",
+        "Decidua capsularis",
+        "Decidua parietalis (vera)",
+        "Chorion laeve"
+      ],
+      "correct": 2,
+      "explain": "The decidua covering the rest of the uterine cavity is the decidua parietalis (vera)."
+    }
+  ],
+  "6-umbilical-cord": [
+    {
+      "q": "The umbilical cord normally contains:",
+      "options": [
+        "2 arteries and 2 veins",
+        "2 arteries and 1 vein",
+        "1 artery and 2 veins",
+        "1 artery and 1 vein"
+      ],
+      "correct": 1,
+      "explain": "The umbilical cord contains 2 arteries and 1 vein, surrounded by Wharton's jelly. Mnemonic: AVA (2 Arteries carry blood Away, 1 Vein carries blood to the fetus)."
+    },
+    {
+      "q": "The single umbilical vein carries:",
+      "options": [
+        "Deoxygenated blood away from the fetus",
+        "Oxygenated blood to the fetus",
+        "Deoxygenated blood to the fetus",
+        "Oxygenated blood away from the fetus"
+      ],
+      "correct": 1,
+      "explain": "The umbilical vein carries oxygenated blood to the fetus, while the two arteries carry deoxygenated blood away from the fetus."
+    },
+    {
+      "q": "A very long umbilical cord may predispose to:",
+      "options": [
+        "Malpresentation and non-engagement",
+        "Coiling around the fetus and cord prolapse",
+        "Placenta previa",
+        "Preterm labor"
+      ],
+      "correct": 1,
+      "explain": "A very long cord may lead to coiling around the fetus and cord prolapse. A short cord may cause malpresentation and non-engagement."
+    },
+    {
+      "q": "Velamentous insertion of the cord is associated with:",
+      "options": [
+        "Placenta succenturiata",
+        "Vasa previa",
+        "Placenta accreta",
+        "Cord prolapse"
+      ],
+      "correct": 1,
+      "explain": "Velamentous insertion, where the cord vessels insert into the membranes rather than the placenta, is associated with vasa previa."
+    },
+    {
+      "q": "A false knot in the umbilical cord represents:",
+      "options": [
+        "A true knot that has not tightened",
+        "Localized collection of Wharton's jelly",
+        "Velamentous cord insertion",
+        "A hematoma of the cord"
+      ],
+      "correct": 1,
+      "explain": "A false knot is a localized collection of Wharton's jelly, not a true knot."
+    },
+    {
+      "q": "Single umbilical artery (SUA) is associated with all EXCEPT:",
+      "options": [
+        "Congenital fetal malformations",
+        "Intrauterine growth restriction",
+        "Post-term pregnancy",
+        "Requires detailed ultrasound assessment"
+      ],
+      "correct": 2,
+      "explain": "SUA is associated with congenital fetal malformations (CFMF) and IUGR, warranting detailed ultrasound. Post-term pregnancy is not a known association."
+    }
+  ],
+  "7-amniotic-fluid": [
+    {
+      "q": "In the first half of pregnancy, amniotic fluid is mainly derived from:",
+      "options": [
+        "Fetal urine",
+        "Maternal transudation through placenta and cord",
+        "Fetal lung secretions",
+        "Amniotic membrane secretion"
+      ],
+      "correct": 1,
+      "explain": "In the first half of pregnancy, amniotic fluid is mainly derived from maternal transudation through the placenta and cord."
+    },
+    {
+      "q": "In the second half of pregnancy, amniotic fluid is mainly derived from:",
+      "options": [
+        "Maternal transudation",
+        "Fetal urine",
+        "Fetal lung fluid",
+        "Placental secretion"
+      ],
+      "correct": 1,
+      "explain": "In the second half of pregnancy, fetal urine becomes the main source of amniotic fluid."
+    },
+    {
+      "q": "The normal volume of amniotic fluid at 36 weeks is approximately:",
+      "options": [
+        "300 mL",
+        "600 mL",
+        "1000 mL",
+        "1500 mL"
+      ],
+      "correct": 2,
+      "explain": "Amniotic fluid volume increases to approximately 1000 mL at 36 weeks, then decreases to 800 mL at 38\u201340 weeks."
+    },
+    {
+      "q": "Which of the following is a function of amniotic fluid during labor?",
+      "options": [
+        "Protection against trauma",
+        "Prevention of adhesions between fetal skin and amnion",
+        "Helping cervical dilatation",
+        "Thermoregulation"
+      ],
+      "correct": 2,
+      "explain": "During labor, amniotic fluid helps cervical dilatation, prevents direct fetal/placental compression, and washes the birth canal."
+    },
+    {
+      "q": "Amniotic fluid is removed by:",
+      "options": [
+        "Fetal urination only",
+        "Transudation and fetal swallowing",
+        "Placental absorption",
+        "Membrane rupture only"
+      ],
+      "correct": 1,
+      "explain": "Amniotic fluid is removed by transudation and fetal swallowing, maintaining a dynamic circulation that keeps volume in the normal range."
+    },
+    {
+      "q": "Decreased amniotic fluid volume is called:",
+      "options": [
+        "Polyhydramnios",
+        "Oligohydramnios",
+        "Anhydramnios",
+        "Hydramnios"
+      ],
+      "correct": 1,
+      "explain": "Decreased volume is oligohydramnios; increased volume is polyhydramnios."
+    },
+    {
+      "q": "Meconium staining of amniotic fluid may lead to:",
+      "options": [
+        "Chorioamnionitis",
+        "Meconium aspiration syndrome",
+        "Polyhydramnios",
+        "Oligohydramnios"
+      ],
+      "correct": 1,
+      "explain": "Meconium staining can lead to meconium aspiration syndrome in the newborn."
+    }
+  ],
+  "8-hormones": [
+    {
+      "q": "Human chorionic gonadotrophin (hCG) is secreted by:",
+      "options": [
+        "Cytotrophoblast",
+        "Syncytiotrophoblast",
+        "Decidua",
+        "Corpus luteum"
+      ],
+      "correct": 1,
+      "explain": "hCG is secreted by the syncytiotrophoblast and can be detected one week before the missed period."
+    },
+    {
+      "q": "The beta subunit of hCG is:",
+      "options": [
+        "Similar to FSH",
+        "Similar to LH",
+        "Specific to hCG",
+        "Similar to TSH"
+      ],
+      "correct": 2,
+      "explain": "hCG has two subunits: the alpha subunit is similar to FSH, LH, and TSH; the beta subunit is specific to hCG."
+    },
+    {
+      "q": "The main function of hCG is:",
+      "options": [
+        "Stimulation of breast growth",
+        "Maintenance of the corpus luteum (luteotropic)",
+        "Anti-insulin effect",
+        "Stimulation of uterine contractions"
+      ],
+      "correct": 1,
+      "explain": "hCG is a luteotropic hormone that maintains the corpus luteum. It also has immunological suppressive action and stimulates fetal testosterone secretion."
+    },
+    {
+      "q": "hCG can be detected:",
+      "options": [
+        "At the time of implantation",
+        "One week before the missed period",
+        "Only after 12 weeks of gestation",
+        "Only after the missed period"
+      ],
+      "correct": 1,
+      "explain": "hCG can be detected one week before the missed period, making it useful for early pregnancy diagnosis."
+    },
+    {
+      "q": "Human placental lactogen (hPL) has an anti-insulin effect that:",
+      "options": [
+        "Decreases maternal blood glucose",
+        "Spares glucose and fatty acids for the fetus",
+        "Increases maternal insulin production",
+        "Reduces fetal growth"
+      ],
+      "correct": 1,
+      "explain": "hPL has an anti-insulin effect that spares glucose and fatty acids for the fetus, ensuring adequate fetal nutrition."
+    },
+    {
+      "q": "hPL is structurally very similar to:",
+      "options": [
+        "FSH and LH",
+        "Growth hormone and prolactin",
+        "TSH and ACTH",
+        "Estrogen and progesterone"
+      ],
+      "correct": 1,
+      "explain": "hPL is very similar to growth hormone and prolactin and may stimulate growth of the breasts."
+    },
+    {
+      "q": "Estrogen during pregnancy is formed by conversion of:",
+      "options": [
+        "Maternal cholesterol",
+        "DHEAS from maternal and fetal sources",
+        "Pregnenolone",
+        "Progesterone"
+      ],
+      "correct": 1,
+      "explain": "Estrogens are formed by conversion of DHEAS from maternal and fetal (mainly adrenal) sources to estradiol (E2) and estriol (E3)."
+    },
+    {
+      "q": "Progesterone is synthesized by the syncytiotrophoblast from:",
+      "options": [
+        "DHEAS",
+        "Maternal cholesterol",
+        "Fetal androgens",
+        "Pregnenolone"
+      ],
+      "correct": 1,
+      "explain": "Progesterone is synthesized by the syncytiotrophoblast from maternal cholesterol and provides a precursor for the fetal adrenal to produce glucocorticoids and mineralocorticoids."
+    }
+  ]
+}

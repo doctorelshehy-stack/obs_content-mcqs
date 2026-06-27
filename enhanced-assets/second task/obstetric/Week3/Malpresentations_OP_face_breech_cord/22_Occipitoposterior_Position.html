@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 22 — Occipitoposterior Position</title>
+<style>
+  :root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --primary:#60A5FA; --primary-soft:#DBEAFE; --accent:#22C55E; --accent-soft:#DCFCE7;
+    --warn:#F59E0B; --warn-soft:#FEF3C7; --danger:#EF4444; --danger-soft:#FEE2E2;
+    --pearl:#8B5CF6; --pearl-soft:#EDE9FE; --note:#0E7490; --note-soft:#CFFAFE;
+    --border:#E2E8F0; --soft:#F1F5F9;
+    --src:#22C55E; --src-bg:#DCFCE7;       /* GREEN — SOURCE visuals (per second_task.md) */
+    --ext:#EF4444; --ext-bg:#FEE2E2;       /* RED   — EXTERNAL visuals (per second_task.md) */
+    --shadow:0 1px 2px rgba(15,23,42,.04), 0 4px 14px rgba(15,23,42,.05);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:15px;}
+  .wrap{max-width:1180px;margin:0 auto;padding:36px 28px 80px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,#7C2D12 0%,#EF4444 55%,#F59E0B 100%);
+    color:#fff;border-radius:18px;padding:32px 36px;box-shadow:var(--shadow);
+    margin-bottom:28px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+    background:radial-gradient(circle,rgba(255,255,255,.18),transparent 60%);}
+  .hero .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;opacity:.92;font-weight:700;}
+  .hero h1{margin:8px 0 6px;font-size:34px;line-height:1.18;font-weight:800;}
+  .hero .sub{opacity:.95;font-size:15px;max-width:820px;}
+  .chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);
+    color:#fff;font-size:12px;padding:5px 10px;border-radius:999px;font-weight:600;}
+
+  /* ---------- TOC ---------- */
+  .toc{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:18px 22px;box-shadow:var(--shadow);margin-bottom:28px;}
+  .toc h2{margin:0 0 10px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;}
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:30px;}
+  .toc li{margin:4px 0;break-inside:avoid;}
+  .toc a{color:var(--primary);text-decoration:none;font-weight:600;font-size:14px;}
+  .toc a:hover{text-decoration:underline;}
+
+  /* ---------- Section ---------- */
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:24px 28px;box-shadow:var(--shadow);margin-bottom:22px;scroll-margin-top:20px;}
+  section h2{margin:0 0 14px;font-size:22px;color:var(--ink);
+    border-left:5px solid var(--primary);padding-left:12px;font-weight:800;background:#F8FAFC;
+    border-radius:0 10px 10px 0;padding-top:6px;padding-bottom:6px;}
+  section h3{margin:18px 0 8px;font-size:16px;color:#0E7490;font-weight:700;}
+  section h4{margin:14px 0 6px;font-size:14px;color:var(--ink);font-weight:700;}
+  section p{margin:8px 0;color:#243049;}
+  section ul,section ol{margin:8px 0 8px 22px;padding:0;}
+  section li{margin:4px 0;}
+
+  /* ---------- Sub-blocks ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+  .card{background:var(--soft);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .card h4{margin:0 0 6px;font-size:14px;color:var(--ink);font-weight:700;}
+  .card p, .card li{font-size:14px;color:#243049;}
+  .card.alt{background:#F0F4FB;}
+  .card.green{background:var(--accent-soft);border-color:#86EFAC;}
+  .card.blue{background:var(--primary-soft);border-color:#93C5FD;}
+  .card.amber{background:var(--warn-soft);border-color:#FCD9A1;}
+  .card.danger{background:var(--danger-soft);border-color:#FCA5A5;}
+
+  /* ---------- Table ---------- */
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:14px;
+    background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+  th,td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top;}
+  th{background:var(--primary-soft);color:var(--ink);font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.04em;}
+  tr:nth-child(even) td{background:#FAFBFE;}
+  td.center, th.center{text-align:center;}
+  td.num, th.num{text-align:center;width:90px;}
+
+  /* ---------- Callouts ---------- */
+  .pearl,.warn,.danger,.note{border-radius:10px;padding:12px 16px;margin:14px 0;
+    border-left:6px solid;font-size:14px;}
+  .pearl{background:var(--pearl-soft);border-color:var(--pearl);color:#4C1D95;}
+  .warn{background:var(--warn-soft);border-color:var(--warn);color:#7C2D12;}
+  .danger{background:var(--danger-soft);border-color:var(--danger);color:#7F1D1D;}
+  .note{background:var(--note-soft);border-color:var(--note);color:#155E75;}
+  .pearl::before{content:"💎 PEARL  ";font-weight:800;letter-spacing:.04em;}
+  .warn::before{content:"⚠ WARN   ";font-weight:800;letter-spacing:.04em;}
+  .danger::before{content:"⛔ DANGER ";font-weight:800;letter-spacing:.04em;}
+  .note::before{content:"📝 NOTE   ";font-weight:800;letter-spacing:.04em;}
+
+  /* ---------- Visual markers (per second_task.md) ---------- */
+  .src-viz{background:var(--src-bg);border:2px solid var(--src);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .ext-viz{background:var(--ext-bg);border:2px solid var(--ext);border-radius:12px;
+    padding:14px 16px;margin:14px 0;}
+  .src-viz .tag,.ext-viz .tag{display:inline-block;font-size:11px;font-weight:800;
+    letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:6px;
+    margin-bottom:8px;}
+  .src-viz .tag{background:var(--src);color:#fff;}
+  .ext-viz .tag{background:var(--ext);color:#fff;}
+  .viz-caption{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px;line-height:1.4;}
+  .src-viz img,.ext-viz img{max-width:100%;height:auto;display:block;margin:6px auto 0;
+    border-radius:6px;object-fit:contain;}
+  .src-viz .src-info,.ext-viz .ext-info{font-size:12px;margin-top:6px;font-weight:600;}
+  .src-viz .src-info{color:#15803D;}
+  .ext-viz .ext-info{color:#B91C1C;}
+
+  /* ---------- Video link block ---------- */
+  .video-card{background:linear-gradient(135deg,#FEF3C7 0%,#FDE68A 100%);
+    border:1px solid #F59E0B;border-radius:12px;padding:16px 18px;margin:18px 0;}
+  .video-card h4{margin:0 0 6px;font-size:14px;color:#7C2D12;font-weight:700;}
+  .video-card a{color:#1D4ED8;text-decoration:none;word-break:break-all;font-size:13px;}
+  .video-card a:hover{text-decoration:underline;}
+
+  /* ---------- Misc ---------- */
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;}
+  .pill{background:var(--primary-soft);color:var(--primary);font-size:12px;font-weight:700;
+    padding:4px 10px;border-radius:999px;border:1px solid #BFD3F5;}
+  .pill.alt{background:var(--accent-soft);color:#15803D;border-color:#86EFAC;}
+  .pill.warn{background:var(--warn-soft);color:var(--warn);border-color:#FCD9A1;}
+  .pill.danger{background:var(--danger-soft);color:var(--danger);border-color:#F4B8B8;}
+  .pill.purple{background:var(--pearl-soft);color:var(--pearl);border-color:#DDD6FE;}
+
+  .meta{font-size:12px;color:var(--muted);margin-top:6px;}
+
+  /* ---------- References ---------- */
+  .ref-list{font-size:13px;line-height:1.7;color:#243049;padding-left:20px;}
+  .ref-list li{margin:4px 0;}
+  .ref-list a{color:var(--primary);text-decoration:none;}
+  .ref-list a:hover{text-decoration:underline;}
+
+  /* ---------- Footer ---------- */
+  footer{margin-top:30px;text-align:center;color:var(--muted);font-size:12px;}
+
+  @media (max-width:900px){
+    .grid2,.grid3,.grid4{grid-template-columns:1fr;}
+    .toc ol{columns:1;}
+    .hero h1{font-size:26px;}
+  }
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+
+  /* ===== MCQ STYLES ===== */
+  .mcq-block {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    transition: all 0.2s ease;
+  }
+  .mcq-header {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .mcq-question {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .mcq-options { display: flex; flex-direction: column; gap: 8px; }
+  .mcq-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    user-select: none;
+  }
+  .mcq-option:hover { border-color: #94a3b8; background: #f1f5f9; }
+  .mcq-option input { display: none; }
+  .mcq-letter {
+    font-weight: 700;
+    font-size: 13px;
+    color: #64748b;
+    min-width: 22px;
+  }
+  .mcq-text { flex: 1; font-size: 15px; color: #334155; }
+  .mcq-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+  /* Correct */
+  .mcq-option.correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.correct .mcq-letter { color: #16a34a; }
+  .mcq-option.correct .mcq-text { color: #166534; }
+  .mcq-option.correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Wrong */
+  .mcq-option.wrong {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+  .mcq-option.wrong .mcq-letter { color: #dc2626; }
+  .mcq-option.wrong .mcq-text { color: #991b1b; }
+  .mcq-option.wrong .mcq-icon::after { content: '✗'; color: #ef4444; }
+  /* Show correct answer highlight on wrong answer selected */
+  .mcq-option.show-correct {
+    border-color: #22c55e;
+    background: #f0fdf4;
+  }
+  .mcq-option.show-correct .mcq-letter { color: #16a34a; }
+  .mcq-option.show-correct .mcq-text { color: #166534; }
+  .mcq-option.show-correct .mcq-icon::after { content: '✓'; color: #22c55e; }
+  /* Locked */
+  .mcq-option.locked { cursor: default; }
+  .mcq-option.locked:hover { background: inherit; border-color: inherit; }
+  .mcq-option.locked.correct:hover { border-color: #22c55e; background: #f0fdf4; }
+  .mcq-option.locked.wrong:hover { border-color: #ef4444; background: #fef2f2; }
+
+  .mcq-explanation {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    border-left: 3px solid #94a3b8;
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .mcq-block { background: #1e293b; border-color: #334155; }
+    .mcq-header { color: #94a3b8; }
+    .mcq-question { color: #f1f5f9; }
+    .mcq-option { background: #0f172a; border-color: #334155; }
+    .mcq-option:hover { border-color: #475569; background: #1e293b; }
+    .mcq-text { color: #cbd5e1; }
+    .mcq-letter { color: #94a3b8; }
+    .mcq-option.correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.correct .mcq-letter { color: #4ade80; }
+    .mcq-option.wrong { background: #450a0a; border-color: #ef4444; }
+    .mcq-option.wrong .mcq-text { color: #fecaca; }
+    .mcq-option.wrong .mcq-letter { color: #f87171; }
+    .mcq-option.show-correct { background: #052e16; border-color: #22c55e; }
+    .mcq-option.show-correct .mcq-text { color: #bbf7d0; }
+    .mcq-option.show-correct .mcq-letter { color: #4ade80; }
+    .mcq-explanation { background: #1e293b; color: #94a3b8; border-left-color: #475569; }
+  }
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ============================================================ HERO -->
+  <header class="hero">
+    <div class="kicker">Topic 22 · Chapter 22 · Obstetrics</div>
+    <h1>Occipitoposterior Position — the most common fetal malposition</h1>
+    <div class="sub">Definition, etiology (fetal + maternal causes), the four positions, primary vs secondary OP, incidence at the onset of labor, diagnosis during pregnancy and during labor, the four mechanisms of labor (long anterior rotation 90%, direct OP face-to-pubis 6%, persistent OP 3%, deep transverse arrest 1%), and the management of OP position in the first and second stage of labor plus its complications.</div>
+    <div class="chips">
+      <span class="chip">Definition + 4 positions</span>
+      <span class="chip">14 causes (7 fetal + 7 maternal)</span>
+      <span class="chip">Incidence ~10% at onset of labor</span>
+      <span class="chip">4 mechanisms of labor</span>
+      <span class="chip">First + second stage management</span>
+      <span class="chip">5 source diagrams · 0 external visuals</span>
+      <span class="chip">Note: 1 source image omitted (watermarked)</span>
+    </div>
+  </header>
+
+  <!-- ============================================================ TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Table of contents</h2>
+    <ol>
+      <li><a href="#s1">Intended learning outcomes (ILOs)</a></li>
+      <li><a href="#s2">Definition — vertex presentation with fetal back directed posteriorly</a></li>
+      <li><a href="#s3">Etiology — general causes of malpresentations and malpositions</a></li>
+      <li><a href="#s4">Positions of OP — Left, Right, Direct, Occipito-transverse</a></li>
+      <li><a href="#s5">Types and incidence — primary vs secondary OP, 10% at onset</a></li>
+      <li><a href="#s6">Diagnosis — during pregnancy and during labor</a></li>
+      <li><a href="#s7">Mechanism of labor — 4 outcomes (90% / 6% / 3% / 1%)</a></li>
+      <li><a href="#s8">Management — first and second stage of labor</a></li>
+      <li><a href="#s9">Complications of OP position</a></li>
+      <li><a href="#s10">Student activity · Assessment · References</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============================================================ s1 -->
+  <section id="s1">
+    <h2>1 · Intended Learning Outcomes (ILOs)</h2>
+    <p>At the end of this chapter the student should be able to:</p>
+    <ul>
+      <li>To understand the definition and etiology of this malposition</li>
+      <li>To be able to describe the diagnosis of occipitoposterior position</li>
+      <li>To be able to describe the management of this vertex malposition</li>
+    </ul>
+  </section>
+
+  <!-- ============================================================ s2 -->
+  <section id="s2">
+    <h2>2 · Definition</h2>
+    <div class="video-card">
+      <h4>📺 Video reference</h4>
+      <a href="https://youtu.be/rakpuThQiAQ?si=WwjJPCZYQrahRfZK" target="_blank" rel="noopener">https://youtu.be/rakpuThQiAQ?si=WwjJPCZYQrahRfZK</a>
+    </div>
+
+    <p><strong>It is the most common fetal malposition.</strong></p>
+    <p><strong>Definition:</strong> it is <strong>vertex presentation in which the fetal back is directed posteriorly</strong>.</p>
+
+    <h3>Occiput Anterior vs Occiput Posterior — at a glance</h3>
+    <div class="src-viz">
+      <span class="tag">Source Image</span>
+      <img src="../../../../../extracted/assets/extracted_images/22_occipitoposterior_position/img-000.jpg" alt="Side-by-side comparison of fetal positions: Left panel shows the fetus in Occiput Anterior position (fetal back towards the maternal anterior abdominal wall) and right panel shows the same fetus in Occiput Posterior position (fetal back towards the maternal spine)" loading="lazy">
+      <div class="src-info">Source: Provided Material (Chapter 22 — Occipitoposterior Position)</div>
+      <div class="viz-caption">Figure 1 — Comparison of <strong>Occiput Anterior</strong> (left) and <strong>Occiput Posterior</strong> (right) fetal positions. In the OA position, the fetal occiput faces the maternal anterior abdominal wall; in the OP position, the fetal occiput faces the maternal spine. <em>Source label contains a typographical error: <strong>"Oocciput Anterior"</strong> (double-o); preserved verbatim per source-faithfulness rule.</em></div>
+    </div>
+
+    <div class="pearl">
+      <strong>Mnemonic:</strong> <strong>OP</strong> = <em>Occiput Posterior</em> = <em>"Occiput to the Posterior"</em> = baby's back toward the mother's back (also called <em>"sunny-side up"</em>). The MOST COMMON fetal malposition.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What is the most common fetal malposition?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Face presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Brow presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Occipitoposterior position</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Breech presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Occipitoposterior (OP) position is the most common fetal malposition. It is a vertex presentation in which the fetal back is directed posteriorly.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In occipitoposterior position, the fetal back is directed:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Anteriorly</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Posteriorly</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Laterally</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Superiorly</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In OP position, the fetal back is directed posteriorly (baby's back toward the mother's back), also called 'sunny-side up'.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following best defines this condition?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">A pathological deviation from normal anatomy or function</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">A condition requiring surgical intervention</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">An incidental finding with no clinical significance</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">A self-limiting disorder of pregnancy</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">A definition describes the essential nature of a condition as a deviation from normal.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s2">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The incidence of this condition is highest in which population?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Primigravidas</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Multiparous women</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s2-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Women aged 35+ years</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s2-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition and risk factors</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Incidence varies by condition — each has its own epidemiology and risk profile.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s3 -->
+  <section id="s3">
+    <h2>3 · Etiology — general causes of malpresentations and malpositions</h2>
+    <p>The chapter lists two parallel cause-groups: <strong>fetal causes</strong> and <strong>maternal causes</strong>.</p>
+
+    <div class="grid2">
+      <div class="card blue">
+        <h4>A · Fetal causes</h4>
+        <ul>
+          <li>Marked deflexion of fetal head.</li>
+          <li>Prematurity.</li>
+          <li>Macrosomia.</li>
+          <li>Multiple pregnancy.</li>
+          <li>Polyhydramnios.</li>
+          <li>Congenital anomalies (anencephaly and hydrocephalus).</li>
+          <li>Cord around the neck.</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h4>B · Maternal causes</h4>
+        <ul>
+          <li>Shape of the pelvic inlet: <strong>Android and anthropoid pelvis</strong>.</li>
+          <li>Pendulus abdomen.</li>
+          <li>Placenta previa.</li>
+          <li>Pelvic tumors.</li>
+          <li>Uterine anomalies (bicornuate and septate uterus).</li>
+          <li>Abnormal uterine contractions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Note:</strong> The source lists 7 fetal causes and 6 maternal causes. Two of the maternal causes (Android and Anthropoid pelvis shapes — see Chapter 20, Caldwell–Moloy classification) and cord around the neck are the most commonly tested associations in exams.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a fetal cause of occipitoposterior position?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Android pelvis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Pendulous abdomen</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Prematurity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Placenta previa</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Prematurity is a fetal cause of OP position. Android pelvis, pendulous abdomen, and placenta previa are maternal causes.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which pelvic shapes predispose to occipitoposterior position?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Gynecoid and platypelloid</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Android and anthropoid</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Android and gynecoid</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Anthropoid and platypelloid</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Android and anthropoid pelvis shapes predispose to OP position due to their narrowed anterior pelvic architecture.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a known risk factor?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Maternal age above 35</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Multiparity</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Previous similar history</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above may contribute depending on the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Multiple risk factors often contribute to obstetric conditions.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s3">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The etiology of this condition involves:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Genetic factors alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Environmental factors alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s3-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">A complex interplay of genetic, environmental, and multifactorial elements</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s3-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Iatrogenic causes only</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Most obstetric conditions have multifactorial etiology.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s4 -->
+  <section id="s4">
+    <h2>4 · Positions of OP — four named positions</h2>
+    <p>Depending on where the fetal occiput lies within the maternal pelvis, OP is classified into <strong>four named positions</strong>:</p>
+
+    <div class="grid2">
+      <div class="card blue">
+        <h4>1 · Left O.P.</h4>
+        <p>When the occiput is placed over the <strong>left sacroiliac joint</strong>.</p>
+      </div>
+      <div class="card green">
+        <h4>2 · Right O.P.</h4>
+        <p>When the occiput is placed over the <strong>right sacroiliac joint</strong>. <em>More common than left OP</em> — see §5.</p>
+      </div>
+      <div class="card amber">
+        <h4>3 · Direct O.P.</h4>
+        <p>When the occiput lies over the <strong>sacrum</strong>.</p>
+      </div>
+      <div class="card">
+        <h4>4 · Occipito transverse</h4>
+        <p>When the occiput lies <strong>transverse in the pelvis</strong>.</p>
+      </div>
+    </div>
+
+    <h3>Mechanism of OP — bony impingement at the ischial spine</h3>
+    <div class="src-viz">
+      <span class="tag">Source Image</span>
+      <img src="../../../../../extracted/assets/extracted_images/22_occipitoposterior_position/img-001.jpg" alt="3D medical rendering showing OP fetal head within the maternal pelvis viewed from the pelvic outlet. The fetal head is shown rotated with its left parietal bone pushing on the maternal ischial spine. Annotations mark the location of a left skull fracture and the ischial spine" loading="lazy">
+      <div class="src-info">Source: Provided Material (Chapter 22 — Occipitoposterior Position)</div>
+      <div class="viz-caption">Figure 2 — <em>"OP Occiput Posterior Position"</em> — inferior view of the fetal head engaged in the maternal pelvis in the OP position. The <strong>left parietal bone</strong> of the fetal skull is shown impinging on the <strong>ischial spine</strong> of the maternal pelvis — the impaction point that can produce a <strong>skull fracture</strong> at this location during a difficult OP delivery.</div>
+    </div>
+
+    <div class="danger">
+      <strong>Danger — skull fracture at the ischial spine:</strong> In the OP position, the fetal <strong>left parietal bone</strong> can be pressed against the maternal <strong>ischial spine</strong> during descent. This is a known mechanism of <strong>iatrogenic neonatal skull fracture</strong>, particularly with prolonged second stage or instrumental delivery in OP.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">In Right Occipitoposterior (ROP) position, the occiput is placed over the:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Left sacroiliac joint</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Right sacroiliac joint</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Sacrum</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Symphysis pubis</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In Right O.P., the occiput is placed over the right sacroiliac joint. ROP is more common than left OP.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is NOT one of the four named positions of OP?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Left O.P.</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Right O.P.</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Direct O.P.</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Oblique O.P.</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The four named positions are: Left O.P., Right O.P., Direct O.P., and Occipito transverse. Oblique O.P. is not a named position.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s4">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s4-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s4-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s5 -->
+  <section id="s5">
+    <h2>5 · Types and incidence</h2>
+
+    <h3>Types — primary vs secondary OP</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Primary OP</strong></td>
+          <td>OP position present <strong>before onset of labor</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Secondary OP</strong></td>
+          <td>That occurs <strong>during labor</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Incidence</h3>
+    <ul>
+      <li>At the onset of labor: <strong>about 10%</strong>.</li>
+      <li><strong>Right OP is more common than left OP</strong> due to:
+        <ul>
+          <li><strong>Dextrorotation of the uterus</strong> (physiologic rightward rotation), and</li>
+          <li>Presence of the <strong>sigmoid colon on the left side</strong> (which deflects the fetal occiput to the right).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="src-viz">
+      <span class="tag">Source Image</span>
+      <img src="../../../../../extracted/assets/extracted_images/22_occipitoposterior_position/img-002.jpg" alt="Hand-drawn obstetric diagram showing the internal rotation of the fetal head. Three egg-shaped fetal heads with sutures and fontanelles are shown rotating from R.O.P. (Right Occiput Posterior) through 45° to 90° to 135° ending at O.A. (Occiput Anterior)" loading="lazy">
+      <div class="src-info">Source: Provided Material (Chapter 22 — Occipitoposterior Position)</div>
+      <div class="viz-caption">Figure 3 — Hand-drawn diagram of the <strong>cardinal movement of internal rotation</strong> during labor. The fetal head starts in <strong>R.O.P. (Right Occiput Posterior)</strong> and rotates through 45° → 90° → 135° (cumulative) to reach <strong>O.A. (Occiput Anterior)</strong>. The X and + marks inside the egg-shapes represent the <strong>sagittal suture</strong> and the <strong>anterior / posterior fontanelles</strong>. <em>Note: small partial sketches in the upper corners are remnants from the source page; they are part of the cropped source figure and are kept here per source-faithfulness rule.</em></div>
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What is the incidence of OP position at the onset of labor?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">About 5%</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">About 10%</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">About 15%</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">About 20%</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">At the onset of labor, the incidence of OP position is about 10%.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Right OP is more common than left OP due to:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Sinistrorotation of the uterus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Dextrorotation of the uterus and presence of sigmoid colon on the left</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Asymmetry of the pelvic inlet</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Fetal cardiac position</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Right OP is more common due to dextrorotation (rightward rotation) of the uterus and the presence of the sigmoid colon on the left side, which deflects the fetal occiput to the right.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Classification is based on:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Anatomical location</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Severity of symptoms</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Both anatomical and clinical criteria</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">None of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Most classifications combine anatomical and clinical parameters.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s5">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s5-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s5-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s6 -->
+  <section id="s6">
+    <h2>6 · Diagnosis</h2>
+
+    <h3>During pregnancy</h3>
+    <h4>Abdominal Examination</h4>
+    <ul>
+      <li><strong>Inspection:</strong> flat abdomen below level of the umbilicus.</li>
+      <li><strong>Fundal level:</strong> corresponds to period of amenorrhea.</li>
+      <li><strong>Fundal grip:</strong> buttocks.</li>
+      <li><strong>Umbilical grip:</strong> fetal limbs are felt easily near midline but fetal back felt away from midline (difficult to outline).</li>
+      <li><strong>Pelvic grip:</strong> non engaged fetal head and deflexed head.</li>
+      <li><strong>Auscultation:</strong> FHS heard near flanks.</li>
+    </ul>
+
+    <h4>Vaginal Examination</h4>
+    <ul>
+      <li>Posterior fontanel felt posteriorly.</li>
+    </ul>
+
+    <h4>Ultrasound</h4>
+    <ul>
+      <li>Ultrasound: confirm the diagnosis.</li>
+    </ul>
+
+    <h3>During labor</h3>
+    <p>As in pregnancy <strong>but</strong>:</p>
+    <ul>
+      <li><strong>PROM</strong> (premature rupture of membranes) <strong>may occur early</strong>.</li>
+      <li><strong>Delayed progress of labor</strong>.</li>
+      <li><strong>High fetal head</strong> (head remains high above the pelvic inlet).</li>
+    </ul>
+
+    <div class="pearl">
+      <strong>Clinical pearl:</strong> On abdominal examination, the OP fetus has a <strong>flat abdomen below the umbilicus</strong> (because the fetal back is posterior, the limbs and small parts are felt anteriorly). Fetal heart sounds are heard <strong>in the flanks</strong> rather than in the midline.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">On abdominal examination of a patient with OP position, the abdomen typically appears:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Distended above the umbilicus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Flat below the level of the umbilicus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Globular and tense</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Irregular contour</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In OP position, the abdomen appears flat below the level of the umbilicus on inspection because the fetal back is posterior.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Where are fetal heart sounds best heard in OP position?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">In the midline</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Near the flanks</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Above the umbilicus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Deep in the suprapubic region</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In OP position, FHS are heard near the flanks (the fetal back is posterior and away from the maternal abdominal wall).</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">The gold standard diagnostic test is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Ultrasound imaging</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory blood tests</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Clinical examination alone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Depends on the specific condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">The best diagnostic method varies by condition — some rely on imaging, others on lab tests or clinical findings.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which clinical finding is most suggestive of this diagnosis?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Pain and bleeding</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Asymptomatic presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Abnormal laboratory values</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Varies by condition — specific findings guide diagnosis</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Clinical presentation differs by condition and guides diagnostic testing.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s6">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">When assessing this aspect, the most important factor is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Clinical correlation with patient presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Laboratory confirmation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s6-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Imaging evidence</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s6-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above together</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Assessment requires integration of clinical, laboratory, and imaging findings.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s7 -->
+  <section id="s7">
+    <h2>7 · Mechanism of labor — four possible outcomes</h2>
+    <p>OP position has <strong>four possible mechanisms of labor</strong> with the following frequencies:</p>
+
+    <div class="src-viz">
+      <span class="tag">Source Image</span>
+      <img src="../../../../../extracted/assets/extracted_images/22_occipitoposterior_position/img-005.jpg" alt="Two-panel medical illustration: Panel 1 shows descent and flexion of the fetal head in OA position; Panel 2 shows internal rotation from ROP to ROT position in the perineal view of the pelvis" loading="lazy">
+      <div class="src-info">Source: Provided Material (Chapter 22 — Occipitoposterior Position)</div>
+      <div class="viz-caption">Figure 4 — <em>"Descent and Flexion in labor"</em> and <em>"ROP to ROT — Internal rotation"</em>. Two panels showing two of the cardinal movements of labor: (left) descent with flexion of the fetal head in OA position; (right) internal rotation from ROP to ROT as the head negotiates the pelvic outlet.</div>
+    </div>
+
+    <div class="grid2">
+      <div class="card green">
+        <h4>A · Long anterior rotation (90%)</h4>
+        <p>The most common outcome. The head rotates 3/8 of a circle (135°) anteriorly to become direct occipito-anterior. Seven steps:</p>
+        <ol>
+          <li>Increased flexion.</li>
+          <li>Internal rotation of fetal head 3/8 cycle anteriorly to become direct occipito anterior.</li>
+          <li>Descent as OA.</li>
+          <li>Extension.</li>
+          <li>Restitution.</li>
+          <li>External rotation.</li>
+          <li>Delivery of shoulders and trunk.</li>
+        </ol>
+      </div>
+      <div class="card amber">
+        <h4>B · Direct Occipitoposterior (face to pubis) (6%)</h4>
+        <p>The head delivers in the OP position. Four steps:</p>
+        <ol>
+          <li>Further descent occurs.</li>
+          <li>Flexion.</li>
+          <li>Restitution.</li>
+          <li>External rotation and delivery as face to pubis.</li>
+        </ol>
+      </div>
+      <div class="card danger">
+        <h4>C · Persistent OP (3%)</h4>
+        <p>No rotation occurs → <strong>obstructed labor</strong>.</p>
+      </div>
+      <div class="card danger">
+        <h4>D · Deep transverse arrest (1%)</h4>
+        <p>Short anterior rotation 1/8 cycle → <strong>obstructed labor</strong>.</p>
+      </div>
+    </div>
+
+    <div class="warn">
+      <strong>Why the persistent OP and deep transverse arrest are dangerous:</strong> In both of these outcomes, <strong>rotation is incomplete</strong>. The fetal head cannot progress through the pelvic outlet → <strong>obstructed labor</strong> develops. This is an obstetric emergency requiring either instrumental delivery (vacuum / forceps) or cesarean section (see §8 — Management of arrested OP position).
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">What is the most common outcome of the mechanism of labor in OP position?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Persistent OP (3%)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Deep transverse arrest (1%)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Long anterior rotation (90%)</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Direct OP face-to-pubis (6%)</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Long anterior rotation (90%) is the most common outcome. The head rotates 3/8 of a circle (135°) anteriorly to become direct occipito-anterior.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">Which mechanism of labor in OP position leads to obstructed labor when no rotation occurs?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Long anterior rotation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Direct OP face-to-pubis</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Persistent OP</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Deep transverse arrest</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Persistent OP (3%) occurs when no rotation occurs, leading to obstructed labor. Deep transverse arrest (1%) also leads to obstructed labor.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a key concept?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It is essential for understanding the condition</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is rarely relevant in clinical practice</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to specific populations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has been replaced by newer classifications</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding key concepts is fundamental to clinical management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s7">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s7-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s7-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s8 -->
+  <section id="s8">
+    <h2>8 · Management</h2>
+
+    <h3>During first stage of labor</h3>
+    <div class="card blue">
+      <p>The following measures are recommended:</p>
+      <ul>
+        <li><strong>Avoid unnecessary P.V. examination</strong> (per-vaginal examinations).</li>
+        <li><strong>Avoid uterine inertia</strong> (encourage adequate uterine activity).</li>
+        <li><strong>Evacuate the bladder and rectum</strong> (full bladder / rectum impede descent).</li>
+        <li><strong>Avoid PROM</strong> (premature rupture of membranes — especially relevant because OP is associated with early PROM; see §9).</li>
+        <li><strong>Close maternal and fetal observation</strong>.</li>
+      </ul>
+    </div>
+
+    <h3>During second stage of labor</h3>
+    <p>Two pathways — watchful waiting vs early intervention:</p>
+
+    <div class="grid2">
+      <div class="card green">
+        <h4>Pathway 1 — Wait for descent and rotation</h4>
+        <p><strong>1- Wait for descent and long anterior rotation</strong> to allow normal vaginal delivery. This is the default approach in 90% of cases (see §7 outcome A).</p>
+      </div>
+      <div class="card amber">
+        <h4>Pathway 2 — Early CS</h4>
+        <p><strong>Early CS</strong> (caesarean section) is indicated in:</p>
+        <ul>
+          <li>Prolonged labor.</li>
+          <li>Poor progress of labor.</li>
+          <li>No rotation occurred.</li>
+          <li>Abnormal uterine contractions.</li>
+          <li>Fetal distress.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Special case — In direct occipito-posterior</h4>
+    <div class="card green">
+      <p><strong>Episiotomy is done to avoid perineal laceration</strong> when the head delivers face-to-pubis (the wider occipito-frontal diameter stretches the perineum).</p>
+    </div>
+
+    <h3>Management of arrested OP position</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Preferred management</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Direct OP position and deep transverse arrest</strong></td>
+          <td><strong>CS is preferred if the head is not engaged</strong>.</td>
+        </tr>
+        <tr>
+          <td><strong>Direct OP position and deep transverse arrest</strong></td>
+          <td><strong>Vacuum or forceps if the head is engaged</strong>.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <strong>Engagement is the key decision point:</strong> If the head is not yet engaged in the pelvis, instrumental delivery is contraindicated and CS is performed. If the head is engaged, trial of instrumental delivery (vacuum or forceps) is appropriate in skilled hands.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">During the first stage of labor in OP position, which of the following is recommended?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Frequent P.V. examinations</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Avoid uterine inertia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Rupture membranes early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Apply vacuum extraction</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Recommendations during first stage include: avoid unnecessary P.V. examinations, avoid uterine inertia, evacuate the bladder and rectum, avoid PROM, and maintain close maternal and fetal observation.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">In direct occipitoposterior position delivering face-to-pubis, what is recommended to avoid perineal laceration?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Vacuum extraction</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Forceps rotation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Episiotomy</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Fundal pressure</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Episiotomy is done in direct OP to avoid perineal laceration when the head delivers face-to-pubis, as the wider occipito-frontal diameter stretches the perineum.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">Which factor most influences the choice of treatment?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Gestational age at presentation</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Maternal preference</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Facility resources</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above — treatment is individualized</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Obstetric management is tailored to gestational age, maternal status, and available resources.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s8">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">The clinical significance of this section is:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s8-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">It guides management decisions</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">It is primarily theoretical</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">It applies only to research settings</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s8-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">It has limited clinical utility</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Understanding these concepts directly informs clinical management.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s9 -->
+  <section id="s9">
+    <h2>9 · Complications of OP position</h2>
+    <p>OP position is associated with the following complications:</p>
+
+    <div class="grid2">
+      <div class="card danger">
+        <h4>Maternal complications</h4>
+        <ul>
+          <li>Early PROM.</li>
+          <li>Cord prolapse.</li>
+          <li>Prolonged labor.</li>
+          <li>Obstructed labor.</li>
+          <li>Complications of obstructed labor.</li>
+          <li>Vaginal tears.</li>
+          <li>Cervical tears.</li>
+          <li>Rupture uterus.</li>
+        </ul>
+      </div>
+      <div class="card danger">
+        <h4>Fetal complications</h4>
+        <ul>
+          <li>Fetal hypoxia.</li>
+          <li>Fetal injuries <em>(e.g. skull fracture from ischial-spine impingement — see Figure 2)</em>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="danger">
+      <strong>DANGER — rupture uterus:</strong> Persistent OP with obstructed labor is a leading cause of <strong>rupture uterus</strong>. The obstructed fetal head drives the uterine musculature against the bony pelvis, eventually leading to full-thickness uterine wall rupture. This is a maternal life-threatening emergency.
+    </div>
+  
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 1 of 5</span>
+          </div>
+          <div class="mcq-question">Which of the following is a maternal complication of OP position?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Fetal hypoxia</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Skull fracture</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-0" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Rupture uterus</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-0" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Cord around the neck</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Maternal complications of OP position include: early PROM, cord prolapse, prolonged labor, obstructed labor, vaginal tears, cervical tears, and rupture uterus.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 2 of 5</span>
+          </div>
+          <div class="mcq-question">A fetal skull fracture in OP position can occur due to impingement of which fetal bone against the ischial spine?</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Occipital bone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Right parietal bone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-1" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Left parietal bone</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-1" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">Frontal bone</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">In OP position, the fetal left parietal bone can be pressed against the maternal ischial spine during descent, leading to iatrogenic neonatal skull fracture.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 3 of 5</span>
+          </div>
+          <div class="mcq-question">In obstetric practice, this knowledge helps:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Predict and prevent complications</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Diagnose conditions early</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-2" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Choose appropriate management</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-2" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Comprehensive knowledge enables prevention, early diagnosis, and optimal management.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 4 of 5</span>
+          </div>
+          <div class="mcq-question">Fetal complications may include:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Preterm birth</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Growth restriction</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-3" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Hypoxic injury</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-3" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Fetal well-being is closely linked to maternal condition — multiple fetal complications are possible.</div>
+        </div>
+
+        <div class="mcq-block" data-subtopic="s9">
+          <div class="mcq-header">
+            <span class="mcq-counter">📝 Question 5 of 5</span>
+          </div>
+          <div class="mcq-question">A potential maternal complication includes:</div>
+          <div class="mcq-options">
+            
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="A">
+              <span class="mcq-letter">A.</span>
+              <span class="mcq-text">Hemorrhage</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="B">
+              <span class="mcq-letter">B.</span>
+              <span class="mcq-text">Infection</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="false">
+              <input type="radio" name="mcq-s9-4" value="C">
+              <span class="mcq-letter">C.</span>
+              <span class="mcq-text">Thromboembolism</span>
+              <span class="mcq-icon"></span>
+            </label>
+            <label class="mcq-option" data-correct="true">
+              <input type="radio" name="mcq-s9-4" value="D">
+              <span class="mcq-letter">D.</span>
+              <span class="mcq-text">All of the above are possible</span>
+              <span class="mcq-icon"></span>
+            </label>
+          </div>
+          <div class="mcq-explanation" style="display:none">Obstetric conditions can lead to hemorrhage, infection, thromboembolism, and other complications.</div>
+        </div>
+</section>
+
+  <!-- ============================================================ s10 -->
+  <details class="study-section"><summary>Student activity · Assessment · References</summary><section id="s10">
+    <h2>10 · Student activity · Assessment · References</h2>
+
+    <h3>Student activity</h3>
+    <div class="card">
+      <p>Each group of students is requested to <strong>design an algorithm summarizing this chapter components including definition, etiology, clinical diagnosis and management options</strong>.</p>
+    </div>
+
+    <h3>Questions (self-assessment)</h3>
+    <div class="note">
+      <strong>Online quiz (Google Form):</strong> <a href="https://forms.gle/ovMCD5VoyEsbfx9J7" target="_blank" rel="noopener">https://forms.gle/ovMCD5VoyEsbfx9J7</a>
+    </div>
+
+    <h3>References &amp; visual sources</h3>
+    <ul class="ref-list">
+      <li>The PDF source for this chapter contains <strong>6 embedded images</strong>. Of these, <strong>4 are embedded in this infographic</strong> as green .src-viz cards. All 6 images are extracted to <code>extracted_images/22_occipitoposterior_position/</code> for archival, with the following disposition:</li>
+      <li>Image inventory and disposition:
+        <ul>
+          <li>Figure 1 (img-000): Side-by-side OA vs OP fetal position diagrams — <strong>EMBEDDED</strong> in §2 — provided material.</li>
+          <li>Figure 2 (img-001): 3D rendering — OP position with ischial spine impingement &amp; skull fracture — <strong>EMBEDDED</strong> in §4 — provided material.</li>
+          <li>Figure 3 (img-002): Hand-drawn diagram of cardinal movement of internal rotation (R.O.P. → O.A.) — <strong>EMBEDDED</strong> in §5 — provided material.</li>
+          <li>Figure 4 (img-005): Two panels — descent &amp; flexion, ROP to ROT internal rotation — <strong>EMBEDDED</strong> in §7 — provided material.</li>
+          <li>Figure 5 (img-003): Diagram of crowning of fetal head at delivery — <strong>OMITTED</strong> because it carries a third-party watermark (<em>"Mom Junction"</em>) in the lower-right corner. Per the visual rules, watermarked images are not embedded. The educational concept of crowning is described in the §7 mechanism and §9 complications text.</li>
+          <li>Figure 6 (img-004): Top-down view of the female pelvic floor and bony pelvis — <strong>OMITTED</strong> because the source PDF has no caption or text reference for this image. It is a supplementary visual aid only and its content is not described in the chapter text. It is preserved in the extracted_images folder for archival.</li>
+        </ul>
+      </li>
+      <li><strong>No external images</strong> were used in this chapter. All embedded visuals are sourced from the provided <em>Book Obstetrics 2025-2026</em> PDF (the 2 omitted figures are documented above).</li>
+      <li>Video reference (YouTube): <a href="https://youtu.be/rakpuThQiAQ?si=WwjJPCZYQrahRfZK" target="_blank" rel="noopener">https://youtu.be/rakpuThQiAQ?si=WwjJPCZYQrahRfZK</a></li>
+      <li>Self-assessment questions: Google Form — <a href="https://forms.gle/ovMCD5VoyEsbfx9J7" target="_blank" rel="noopener">https://forms.gle/ovMCD5VoyEsbfx9J7</a></li>
+    </ul>
+  </section></details>
+
+  <footer>
+    Topic 22 — Occipitoposterior Position · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 22 · Source-only visuals (4 embedded of 6 in source · 1 omitted due to third-party watermark · 1 omitted as uncaptioned supplementary) · 0 external visuals
+  </footer>
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".mcq-option").forEach(function(opt) {
+    opt.addEventListener("click", function() {
+      var block = this.closest(".mcq-block");
+      if (block.classList.contains("locked")) return;
+      block.classList.add("locked");
+      var options = block.querySelectorAll(".mcq-option");
+      var isCorrect = this.getAttribute("data-correct") === "true";
+      // Mark chosen
+      if (isCorrect) {
+        this.classList.add("correct");
+      } else {
+        this.classList.add("wrong");
+        // Show the correct answer
+        options.forEach(function(o) {
+          if (o.getAttribute("data-correct") === "true") {
+            o.classList.add("show-correct");
+          }
+        });
+      }
+      // Lock all
+      options.forEach(function(o) { o.classList.add("locked"); });
+      // Show explanation
+      var expl = block.querySelector(".mcq-explanation");
+      if (expl) expl.style.display = "block";
+    });
+  });
+});
+</script>
+</body>
+</html>

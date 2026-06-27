@@ -1,0 +1,91 @@
+{
+  "s2": [
+    {
+      "q": "Rh incompatibility occurs when:",
+      "options": [
+        "An Rh-positive mother carries an Rh-negative fetus",
+        "An Rh-negative mother carries an Rh-positive fetus",
+        "Both mother and fetus are Rh-negative",
+        "There is ABO incompatibility"
+      ],
+      "correct": 1,
+      "explain": "Rh incompatibility occurs when an Rh-negative mother carries an Rh-positive fetus, and maternal exposure to Rh-positive RBCs causes sensitization."
+    }
+  ],
+  "s3": [
+    {
+      "q": "Fetal red blood cells enter the maternal circulation mainly at:",
+      "options": [
+        "Conception",
+        "Delivery (especially when placenta separates)",
+        "During the first trimester",
+        "During embryogenesis"
+      ],
+      "correct": 1,
+      "explain": "Fetomaternal hemorrhage occurs mainly at delivery when the placenta separates, or during invasive procedures/abdominal trauma."
+    },
+    {
+      "q": "Maternal anti-D antibodies are of which immunoglobulin class and cross the placenta?",
+      "options": [
+        "IgM",
+        "IgG",
+        "IgA",
+        "IgE"
+      ],
+      "correct": 1,
+      "explain": "IgG antibodies cross the placenta and cause fetal hemolysis. Initial sensitization produces IgM, but subsequent exposure produces IgG."
+    }
+  ],
+  "s4": [
+    {
+      "q": "Assessment of severity in Rh-sensitized pregnancy includes all EXCEPT:",
+      "options": [
+        "Maternal anti-D antibody titers",
+        "Middle cerebral artery peak systolic velocity (MCA-PSV) by Doppler",
+        "Amniocentesis for delta OD 450 (Liley curve)",
+        "Maternal blood glucose"
+      ],
+      "correct": 3,
+      "explain": "Assessment: maternal antibody titers, MCA-PSV Doppler, amniotic fluid delta OD 450 (Liley curve), and fetal ultrasound for hydrops."
+    }
+  ],
+  "s5": [
+    {
+      "q": "Prophylaxis for Rh incompatibility includes anti-D immunoglobulin given:",
+      "options": [
+        "Only after delivery",
+        "At 28-32 weeks and after delivery if baby is Rh-positive",
+        "Only after miscarriage",
+        "During the first trimester only"
+      ],
+      "correct": 1,
+      "explain": "Anti-D is given at 28-32 weeks antenatally and within 72 hours of delivery if baby is Rh-positive, plus after any sensitizing event."
+    }
+  ],
+  "s8": [
+    {
+      "q": "Exchange transfusion in the Rh-affected neonate is performed to:",
+      "options": [
+        "Increase blood volume",
+        "Remove bilirubin and anti-D antibodies, and correct anemia",
+        "Prevent infection",
+        "Improve feeding"
+      ],
+      "correct": 1,
+      "explain": "Exchange transfusion removes bilirubin, anti-D antibodies, and sensitized RBCs while correcting anemia with compatible Rh-negative blood."
+    }
+  ],
+  "s9": [
+    {
+      "q": "ABO incompatibility differs from Rh incompatibility in that:",
+      "options": [
+        "ABO is more severe and often causes hydrops",
+        "ABO often affects the first pregnancy and is typically milder",
+        "ABO requires anti-D prophylaxis",
+        "ABO only affects mothers with blood type AB"
+      ],
+      "correct": 1,
+      "explain": "ABO incompatibility often affects the first pregnancy (mild) as anti-A/anti-B are naturally occurring IgM that don't cross placenta well. It is typically milder than Rh disease."
+    }
+  ]
+}

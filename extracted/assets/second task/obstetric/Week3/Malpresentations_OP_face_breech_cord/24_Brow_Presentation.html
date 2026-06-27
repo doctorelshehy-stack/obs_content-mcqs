@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 24 — Brow Presentation</title>
+<style>
+  :root{
+    --ink:#334155; --muted:#475569; --bg:#F8FAFC; --card:#FFFFFF;
+    --prim:#2563EB; --prim2:#1D4ED8; --primLite:#EFF6FF; --primBorder:#BFDBFE;
+    --accent:#0EA5E9;
+    --line:#E2E8F0;
+    --shadow:0 2px 6px rgba(15,23,42,0.05), 0 8px 24px rgba(15,23,42,0.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#EFF6FF 0%,#F8FAFC 240px,#F8FAFC 100%);
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+  }
+  .page{max-width:1180px;margin:0 auto;padding:0 28px 60px}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#1D4ED8 0%,#0EA5E9 100%);
+    color:#fff;
+    border-radius:0 0 22px 22px;
+    padding:28px 32px 30px;
+    margin:0 -28px 22px;
+    box-shadow:var(--shadow);
+  }
+  .hero .pill{
+    display:inline-block;background:rgba(15,23,42,0.30);color:#E0F2FE;
+    padding:5px 12px;border-radius:999px;font-size:11px;letter-spacing:0.08em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .hero h1{
+    font-size:34px;line-height:1.15;margin:14px 0 10px;
+    font-weight:800;letter-spacing:-0.01em;
+  }
+  .hero p{font-size:14.5px;color:#DBEAFE;max-width:980px;margin:0 0 14px}
+  .hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .hero .chip{
+    background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+    color:#E0F2FE;padding:6px 12px;border-radius:999px;font-size:11.5px;
+    font-weight:500;letter-spacing:0.01em;
+  }
+
+  /* TOC */
+  .toc{
+    background:var(--primLite);border:1px solid var(--primBorder);
+    border-left:5px solid var(--prim);
+    border-radius:12px;padding:16px 22px;margin:0 0 22px;
+    box-shadow:var(--shadow);
+  }
+  .toc h2{
+    font-size:14px;color:var(--prim2);margin:0 0 8px;
+    text-transform:uppercase;letter-spacing:0.08em;font-weight:700;
+  }
+  .toc ol{margin:0;padding:0 0 0 22px;columns:2;column-gap:36px;column-fill:balance}
+  .toc li{margin:3px 0;font-size:13.5px;color:#1E293B;break-inside:avoid}
+  .toc a{color:#1D4ED8;text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+
+  /* Section */
+  section{scroll-margin-top:20px}
+  h2.sec{
+    font-size:20px;color:#0F172A;margin:26px 0 12px;
+    padding:8px 0 8px 14px;border-left:6px solid var(--prim);
+    background:linear-gradient(90deg,var(--primLite),transparent 65%);
+    border-radius:6px;font-weight:700;
+  }
+  h2.sec .n{
+    display:inline-block;background:var(--prim);color:#fff;
+    width:30px;height:30px;border-radius:50%;text-align:center;
+    line-height:30px;font-size:14px;margin-right:10px;vertical-align:middle;
+  }
+  h3.sub{
+    font-size:15.5px;color:var(--prim2);margin:16px 0 8px;
+    font-weight:700;letter-spacing:0.01em;
+  }
+
+  /* Cards / boxes */
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 18px;margin:0 0 14px;
+    box-shadow:var(--shadow);
+  }
+  .keydef{
+    background:linear-gradient(180deg,#F5F3FF 0%,#EDE9FE 100%);
+    border:1px solid #DDD6FE;border-left:5px solid #7C3AED;
+  }
+  .pearl{
+    background:linear-gradient(180deg,#FDF2F8 0%,#FCE7F3 100%);
+    border:1px solid #FBCFE8;border-left:5px solid #DB2777;
+  }
+  .pearl h4{color:#9D174D;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .danger{
+    background:linear-gradient(180deg,#FEF2F2 0%,#FEE2E2 100%);
+    border:1px solid #FECACA;border-left:5px solid #DC2626;
+  }
+  .danger h4{color:#991B1B;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .warn{
+    background:linear-gradient(180deg,#FFFBEB 0%,#FEF3C7 100%);
+    border:1px solid #FDE68A;border-left:5px solid #D97706;
+  }
+  .warn h4{color:#92400E;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+  .note{
+    background:linear-gradient(180deg,#ECFEFF 0%,#CFFAFE 100%);
+    border:1px solid #A5F3FC;border-left:5px solid #0891B2;
+  }
+  .note h4{color:#155E75;margin:0 0 6px;font-size:13.5px;letter-spacing:0.05em}
+
+  /* Definition block specifically */
+  .def-block{font-size:15px;color:#1F2937}
+  .def-block strong{color:#6D28D9}
+
+  /* Lists */
+  ul,ol{padding-left:22px;margin:0 0 8px}
+  ul li,ol li{margin:4px 0}
+  .step-list{list-style:none;counter-reset:step;padding-left:0}
+  .step-list li{
+    counter-increment:step;background:var(--primLite);
+    border:1px solid var(--primBorder);border-radius:8px;
+    padding:8px 12px 8px 44px;margin:6px 0;position:relative;font-size:13.5px;
+  }
+  .step-list li::before{
+    content:counter(step);position:absolute;left:10px;top:8px;
+    background:var(--prim);color:#fff;width:24px;height:24px;
+    border-radius:50%;text-align:center;line-height:24px;font-size:12px;
+    font-weight:700;
+  }
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:0 0 14px;
+    background:var(--card);box-shadow:var(--shadow);border-radius:10px;overflow:hidden}
+  th{background:var(--prim);color:#fff;padding:9px 12px;text-align:left;font-size:13px;letter-spacing:0.02em}
+  td{padding:8px 12px;border-top:1px solid var(--line);font-size:13.5px;vertical-align:top}
+  tr:nth-child(even) td{background:#F8FAFC}
+  td strong{color:var(--prim2)}
+
+  /* Image cards */
+  .img-card{
+    border:1px solid var(--line);border-radius:12px;
+    margin:0 0 16px;overflow:hidden;background:#fff;
+    box-shadow:var(--shadow);
+  }
+  .img-card .img-frame{
+    padding:10px;display:flex;justify-content:center;align-items:center;
+    background:#FAFBFC;
+  }
+  .img-card img{max-width:100%;height:auto;display:block;max-height:540px;object-fit:contain}
+  .img-card .cap{
+    padding:10px 14px;font-size:12.5px;color:#475569;
+    background:#F8FAFC;border-top:1px solid var(--line);font-style:italic;line-height:1.5;
+  }
+  .src-viz{border:2px solid #22C55E;background:#DCFCE7}
+  .src-viz .img-frame{background:#F0FDF4}
+  .src-viz .cap{background:#F0FDF4;border-top:1px solid #86EFAC;color:#14532D}
+  .ext-viz{border:2px solid #EF4444;background:#FEE2E2}
+  .ext-viz .img-frame{background:#FEF2F2}
+  .ext-viz .cap{background:#FEF2F2;border-top:1px solid #FCA5A5;color:#7F1D1D}
+  .src-viz .badge,.ext-viz .badge{
+    position:absolute;top:10px;left:10px;z-index:2;
+    color:#fff;padding:3px 9px;border-radius:999px;
+    font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;
+  }
+  .src-viz .badge{background:#15803D}
+  .ext-viz .badge{background:#B91C1C}
+  .img-card{position:relative}
+
+  /* Two-column grid for pairs */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+  /* Footer */
+  footer{
+    margin-top:30px;padding:14px 20px;border-top:1px solid var(--line);
+    text-align:center;font-size:11.5px;color:#64748B;
+    background:#F1F5F9;border-radius:8px;
+  }
+  footer em{color:#0EA5E9;font-style:normal;font-weight:600}
+
+  /* Position cards (color-coded dots) */
+  .pos-card{
+    border:1px solid var(--line);border-radius:10px;padding:12px 14px;
+    background:#fff;box-shadow:var(--shadow);
+  }
+  .pos-card .pos-title{font-weight:700;font-size:14px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .pos-card .dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+  .dot.green{background:#22C55E}
+  .dot.amber{background:#F59E0B}
+  .dot.rose{background:#F43F5E}
+  .dot.violet{background:#8B5CF6}
+  .dot.cyan{background:#06B6D4}
+  .pos-card ul{margin:4px 0 0;padding-left:18px;font-size:13px}
+
+  /* Quick ref */
+  .qref{font-size:14px;color:#0F172A}
+  .qref strong{color:var(--prim2)}
+
+/* === HERMES-ACCORDION: study-section accordion panels === */
+details.study-section {
+  display: block;
+  margin: 18px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+details.study-section > summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #1e293b;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  list-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+details.study-section > summary::-webkit-details-marker {
+  display: none;
+}
+details.study-section > summary::-moz-list-bullet {
+  list-style: none;
+}
+details.study-section > summary::before {
+  content: "\25B6";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.75em;
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+details.study-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+details.study-section > summary:hover {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-color: #cbd5e1;
+}
+details.study-section[open] > summary {
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+details.study-section > :not(summary) {
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+/* END HERMES-ACCORDION */
+
+.topic-navigation{display:flex;gap:12px;margin-bottom:20px;position:sticky;top:0;z-index:100;background:var(--surface,#FFFFFF);padding:10px 0;border-radius:12px;}
+.topic-navigation button,.topic-navigation a{background:var(--surface-2,#F1F5F9);border:1px solid var(--rule,#E5E7EB);border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink,#0F172A);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s;}
+.topic-navigation button:hover,.topic-navigation a:hover{background:var(--rule,#E5E7EB);}
+
+</style>
+</head>
+<body>
+<nav class="topic-navigation">
+    <button onclick="history.back()">← Back</button>
+    <a href="../../../../weekly-dashboard/index.html">🏠 Home</a>
+</nav>
+
+<div class="page">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <span class="pill">Topic 24 · Chapter 24 · Malpresentation Series</span>
+    <h1>Brow Presentation</h1>
+    <p>A rare cephalic malpresentation in which the fetal head is <strong>midway between flexion and extension</strong> — the brow is the presenting part and the <strong>frontal bone</strong> is the denominator. The chapter covers definition, causes, positions, diagnosis, the key mechanism fact (mento-vertical diameter 13.75 cm is <strong>longer than any pelvic-inlet diameter</strong>), and the clinical reality that vaginal delivery is essentially impossible — management is <strong>Cesarean section</strong>.</p>
+    <div class="chips">
+      <span class="chip">Frontal bone = denominator</span>
+      <span class="chip">Mento-vertical 13.75 cm</span>
+      <span class="chip">Frontoanterior / Frontoposterior</span>
+      <span class="chip">No flexion, no extension</span>
+      <span class="chip">Cesarean section is the rule</span>
+      <span class="chip">1 source diagram · 0 external visuals</span>
+    </div>
+  </header>
+
+  <!-- ============ TOC ============ -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#ilos">Intended Learning Outcomes (ILOs)</a></li>
+      <li><a href="#definition">Definition</a></li>
+      <li><a href="#causes">Causes</a></li>
+      <li><a href="#denominator">Denominator</a></li>
+      <li><a href="#positions">Positions</a></li>
+      <li><a href="#diagnosis">Diagnosis</a></li>
+      <li><a href="#mechanism">Mechanism of labor</a></li>
+      <li><a href="#management">Management</a></li>
+      <li><a href="#complications">Complications</a></li>
+      <li><a href="#activity">Student activity · Assessment · References</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ §1 ILOs ============ -->
+  <section id="ilos">
+    <h2 class="sec"><span class="n">1</span>Intended Learning Outcomes (ILOs)</h2>
+    <p>By the end of this chapter, the student should be able to:</p>
+    <ol class="step-list">
+      <li>To understand the <strong>definition of brow presentation</strong></li>
+      <li>To be able to describe the <strong>management of such presentation</strong></li>
+    </ol>
+  </section>
+
+  <!-- ============ §2 Definition ============ -->
+  <section id="definition">
+    <h2 class="sec"><span class="n">2</span>Definition</h2>
+    <div class="card keydef def-block">
+      <strong>Brow Presentation</strong> — It is a <em>cephalic presentation</em> in which the fetal head is <strong>midway between flexion and extension</strong>.
+    </div>
+
+    <div class="card pearl">
+      <h4>PEARL — Brow = "half-way" position</h4>
+      <p>Brow presentation sits <em>between</em> the two well-known cephalic attitudes:</p>
+      <ul>
+        <li>More flexed than face presentation (the brow is the presenting part, not the chin).</li>
+        <li>More extended than vertex presentation (the occiput is not the leading point).</li>
+      </ul>
+      <p>Because the head is neither flexed nor fully extended, the <strong>largest presenting anteroposterior diameter</strong> of the skull engages the pelvis — and that diameter is <strong>too large to fit</strong> through the pelvic inlet.</p>
+    </div>
+  </section>
+
+  <!-- ============ §3 Causes ============ -->
+  <section id="causes">
+    <h2 class="sec"><span class="n">3</span>Causes</h2>
+    <div class="card">
+      <p>Causes: <strong>like in occipito-posterior</strong></p>
+      <p class="qref">The full fetal and maternal causes listed for <strong>occipito-posterior position</strong> (Chapter 22) also apply to brow presentation — prematurity, macrosomia, multiple pregnancy, polyhydramnios, congenital anomalies, cord around the neck, android / anthropoid pelvis, pendulous abdomen, placenta previa, pelvic tumors, uterine anomalies, and abnormal uterine contractions. See Chapter 22 for the complete list.</p>
+    </div>
+  </section>
+
+  <!-- ============ §4 Denominator ============ -->
+  <section id="denominator">
+    <h2 class="sec"><span class="n">4</span>Denominator</h2>
+    <div class="card keydef def-block">
+      <strong>Denominator: frontal bone.</strong>
+    </div>
+    <p class="qref">In brow presentation, the <strong>frontal bone</strong> is the reference point used to describe the position of the head (compare with face presentation where the denominator is the mentum, and vertex where it is the occiput).</p>
+  </section>
+
+  <!-- ============ §5 Positions ============ -->
+  <section id="positions">
+    <h2 class="sec"><span class="n">5</span>Positions</h2>
+    <p>The brow can present in <strong>two main position groups</strong>, each with <em>right</em> and <em>left</em> variants (4 named positions total):</p>
+    <div class="grid-2">
+      <div class="pos-card">
+        <div class="pos-title"><span class="dot green"></span>Frontoanterior</div>
+        <ul>
+          <li>Right frontoanterior</li>
+          <li>Left frontoanterior</li>
+        </ul>
+        <p class="qref" style="margin-top:8px;color:#475569"><em>The frontal bone is oriented toward the anterior pelvis (symphysis pubis).</em></p>
+      </div>
+      <div class="pos-card">
+        <div class="pos-title"><span class="dot amber"></span>Frontoposterior</div>
+        <ul>
+          <li>Right frontoposterior</li>
+          <li>Left frontoposterior</li>
+        </ul>
+        <p class="qref" style="margin-top:8px;color:#475569"><em>The frontal bone is oriented toward the posterior pelvis (sacrum).</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ §6 Diagnosis ============ -->
+  <section id="diagnosis">
+    <h2 class="sec"><span class="n">6</span>Diagnosis</h2>
+
+    <h3 class="sub">6.1 · During pregnancy</h3>
+    <div class="card">
+      <ul>
+        <li>The <strong>occiput and sinciput</strong> felt at the <strong>same level</strong> on abdominal palpation.</li>
+        <li><strong>Ultrasound is conclusive</strong>.</li>
+      </ul>
+    </div>
+
+    <h3 class="sub">6.2 · During labor</h3>
+    <div class="card">
+      <p>On <strong>vaginal examination (PV)</strong>:</p>
+      <ul>
+        <li>The <strong>frontal bone</strong>, <strong>supraorbital ridge</strong>, and <strong>root of the nose</strong> are felt.</li>
+        <li>The <strong>chin is not felt</strong> — this is the key feature that distinguishes brow from face presentation (in face presentation the chin is palpable).</li>
+      </ul>
+    </div>
+
+    <div class="card warn">
+      <h4>WARNING — Distinguishing brow from face presentation on PV</h4>
+      <p>The <strong>chin is not felt</strong> in brow presentation — that is the single most useful clinical sign separating it from a face presentation. In face presentation the mentum (chin) is the leading point and is felt on PV; in brow presentation the leading point is the frontal bone and brow ridge, with the chin remaining out of reach.</p>
+    </div>
+  </section>
+
+  <!-- ============ §7 Mechanism of labor ============ -->
+  <section id="mechanism">
+    <h2 class="sec"><span class="n">7</span>Mechanism of labor</h2>
+    <div class="card danger">
+      <h4>DANGER — Brow presentation is essentially incompatible with vaginal delivery</h4>
+      <p>The engaged diameter is <strong>mento-vertical diameter 13.75 cm</strong> which is <strong>longer than any diameter of female pelvic inlet</strong>, so <strong>labor becomes obstructed from the start</strong>.</p>
+    </div>
+
+    <div class="card note">
+      <h4>NOTE — The 13.75 cm mento-vertical diameter</h4>
+      <p>The mento-vertical diameter is measured from the <strong>chin (mentum)</strong> to the <strong>most distant point on the vertex (crown)</strong>. When the head is in the brow attitude, this is the anteroposterior diameter that must pass through the pelvic inlet. The female pelvic inlet has the following anteroposterior diameters (conjugate measurements):</p>
+      <ul>
+        <li><strong>True conjugate (anatomical conjugate / conjugata vera)</strong> — about 11.0 cm (the smallest AP diameter of the inlet)</li>
+        <li><strong>Diagonal conjugate</strong> — about 12.5–13.0 cm</li>
+        <li><strong>Obstetric conjugate</strong> — about 10.0–10.5 cm (the shortest AP distance the fetal head must traverse)</li>
+      </ul>
+      <p>Because the mento-vertical diameter (13.75 cm) <strong>exceeds all of these</strong>, engagement of a brow presentation through the pelvic inlet is mechanically impossible — obstruction is present from the very first stage of labor.</p>
+    </div>
+
+    <div class="card pearl">
+      <h4>PEARL — Why the head cannot convert to vertex or face</h4>
+      <p>Brow presentation is the only cephalic presentation in which <strong>no mechanism of labor is possible</strong>:</p>
+      <ul>
+        <li>It is <strong>not flexed enough</strong> to behave like a vertex presentation.</li>
+        <li>It is <strong>not extended enough</strong> to behave like a face presentation (in face, the mento-vertical diameter is partially replaced by the submento-bregmatic 9.5 cm diameter as the head extends further).</li>
+        <li>The fetal head in brow attitude is locked at the largest diameter of the skull — and that diameter does not fit.</li>
+      </ul>
+    </div>
+
+    <!-- Figure 1 (img-000) — Source image of brow presentation in utero -->
+    <div class="img-card src-viz">
+      <span class="badge">Source Image</span>
+      <div class="img-frame">
+        <img src="../../../../extracted_images/24_brow_presentation/img-000.jpg" alt="Lateral cross-sectional medical illustration of a pregnant uterus with a fetus in brow presentation — fetal head is partially extended with the brow as the presenting part. Artist signature: ChMuddith.">
+      </div>
+      <div class="cap">Figure 1 — Lateral (side-view) medical illustration of a fetus in <strong>brow presentation</strong> within the mother's uterus. The fetal head is <em>partially extended</em> with the <strong>brow/forehead as the leading presenting part</strong> — sitting midway between the fully flexed (vertex) and fully extended (face) attitudes. Visible: maternal abdominal wall, spine, pelvis, uterus, fetus in curled position, umbilical cord. The artist signature <strong>ChMuddith</strong> is the source attribution of the original illustration. Source: Provided Material (Chapter 24 — Brow Presentation).</div>
+    </div>
+  </section>
+
+  <!-- ============ §8 Management ============ -->
+  <section id="management">
+    <h2 class="sec"><span class="n">8</span>Management</h2>
+    <div class="card danger">
+      <h4>DANGER — Cesarean section is the only safe option</h4>
+      <p><strong>Cesarean section.</strong></p>
+      <p>Because the mento-vertical diameter (13.75 cm) cannot pass through the pelvic inlet, vaginal delivery is not possible. Any attempt at vaginal delivery will result in <strong>obstructed labor</strong>, with risk of uterine rupture, fetal trauma, and maternal exhaustion. The standard of care is <strong>Cesarean section</strong> as soon as the diagnosis is confirmed.</p>
+    </div>
+
+    <div class="card note">
+      <h4>NOTE — Why the source gives only "Cesarean section"</h4>
+      <p>The source's management section is intentionally a single line — <strong>Cesarean section</strong> — because brow presentation has no safe vaginal option. There is no instrument, no maneuver, and no position that can convert this diameter to one that fits the pelvis. The head is in a mechanical dead-end; the only way out is operative delivery through an abdominal incision.</p>
+    </div>
+  </section>
+
+  <!-- ============ §9 Complications ============ -->
+  <section id="complications">
+    <h2 class="sec"><span class="n">9</span>Complications</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3 class="sub" style="color:#B91C1C;margin-top:0">Maternal</h3>
+        <ul>
+          <li><strong>PROM</strong> (Premature Rupture Of Membranes).</li>
+          <li><strong>Cord prolapse.</strong></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="sub" style="color:#B91C1C;margin-top:0">Fetal</h3>
+        <ul>
+          <li>Related to <strong>operative delivery</strong> and <strong>obstructed labor</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card warn">
+      <h4>WARN — Cord prolapse is a constant risk</h4>
+      <p>Because the presenting part (the brow) does not fit the pelvic inlet, the membranes are not well supported and <strong>PROM and cord prolapse</strong> are common. Any patient with brow presentation in labor must be monitored continuously for cord prolapse — a sudden fetal heart rate deceleration in a brow presentation should be assumed to be cord prolapse until proven otherwise.</p>
+    </div>
+  </section>
+
+  <!-- ============ §10 Student activity + Assessment + References ============ -->
+  <details class="study-section"><summary>Student activity · Assessment · References</summary><section id="activity">
+    <h2 class="sec"><span class="n">10</span>Student activity · Assessment · References</h2>
+
+    <div class="card" style="background:linear-gradient(180deg,#EFF6FF 0%,#DBEAFE 100%);border:1px solid var(--primBorder);border-left:5px solid var(--prim)">
+      <h3 class="sub" style="margin-top:0">🎓 Student activity</h3>
+      <p>Each student is requested to <strong>attend skill lab in order to be shown why</strong> (via using <strong>manikin simulation explanation</strong>) <strong>brow presentation leads to obstructed labor</strong> guided by bedside tutor of clinical round.</p>
+    </div>
+
+    <div class="card" style="background:linear-gradient(180deg,#F0FDF4 0%,#DCFCE7 100%);border:1px solid #86EFAC;border-left:5px solid #16A34A">
+      <h3 class="sub" style="margin-top:0;color:#166534">✅ Questions (self-assessment)</h3>
+      <p>Please complete the self-assessment Google Form:</p>
+      <p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/JFZ9UxpSpoNPm9A86" style="color:#15803D;font-weight:700">https://forms.gle/JFZ9UxpSpoNPm9A86</a></p>
+    </div>
+
+    <h3 class="sub">References &amp; visual sources</h3>
+    <ul style="font-size:13.5px;color:#334155;line-height:1.7">
+      <li>The <strong>PDF source</strong> for this chapter contains <strong>1 embedded image</strong>. Of this, <strong>1 is embedded in this infographic</strong> as a green <code>.src-viz</code> card. The image is extracted to <code>extracted_images/24_brow_presentation/</code> for archival.</li>
+      <li><strong>No external images were used</strong> in this chapter — all visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+      <li><strong>Image inventory and disposition:</strong>
+        <ul>
+          <li>Figure 1 (img-000): Lateral cross-sectional medical illustration of fetus in brow presentation in utero — <strong>EMBEDDED</strong> in §7 — provided material. <em>Artist signature "ChMuddith" is the original source attribution of the illustration.</em></li>
+        </ul>
+      </li>
+    </ul>
+  </section></details>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    Topic 24 — Brow Presentation · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 24 · Source-only visuals (1 of 1 in source) · 0 external visuals · Brow = denominator is frontal bone · Mento-vertical 13.75 cm &gt; all pelvic-inlet AP diameters · Management: Cesarean section
+  </footer>
+
+</div>
+
+<!-- ACCORDION SYSTEM: ALL DETAILS DEFAULT CLOSED + JS RESET ACTIVE -->
+<script>
+(function() {
+  try {
+    document.querySelectorAll("details").forEach(function(d) {
+      d.removeAttribute("open");
+      d.open = false;
+    });
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

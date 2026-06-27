@@ -4,43 +4,167 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ObsTaric — Obstetrics Study</title>
-  <meta http-equiv="refresh" content="0; url=dashboard-enhanced.html">
-  <script>
-    window.location.replace('dashboard-enhanced.html');
-  </script>
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       background: #f0f2f5;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      color: #4a5568;
+      padding: 20px;
     }
-    .loading {
+    .container {
+      max-width: 560px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a202c;
       text-align: center;
+      margin-bottom: 8px;
     }
-    .loading .spinner {
-      width: 32px;
-      height: 32px;
-      border: 3px solid #e2e8f0;
-      border-top-color: #2563eb;
-      border-radius: 50%;
-      animation: spin 0.6s linear infinite;
-      margin: 0 auto 16px;
+    .subtitle {
+      font-size: 14px;
+      color: #64748b;
+      text-align: center;
+      margin-bottom: 28px;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .loading p { font-size: 14px; }
-    .loading a { color: #2563eb; text-decoration: underline; }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+      transform: translateY(-2px);
+    }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .card-icon.original {
+      background: #f1f5f9;
+      color: #64748b;
+    }
+    .card-icon.enhanced {
+      background: #dcfce7;
+      color: #16a34a;
+    }
+    .card-content {
+      flex: 1;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 4px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 8px;
+      margin-top: 4px;
+    }
+    .badge-original {
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .badge-enhanced {
+      background: #dcfce7;
+      color: #15803d;
+    }
+    .card-arrow {
+      font-size: 18px;
+      color: #94a3b8;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+    .card:hover .card-arrow {
+      transform: translateX(4px);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f1117; }
+      h1 { color: #e2e8f0; }
+      .subtitle { color: #64748b; }
+      .card {
+        background: #1a1b26;
+        border-color: #2d3748;
+      }
+      .card:hover { border-color: #60a5fa; }
+      .card-title { color: #e2e8f0; }
+      .card-icon.original { background: #2d3748; color: #94a3b8; }
+      .card-icon.enhanced { background: #064e3b; color: #4ade80; }
+      .badge-original { background: #2d3748; color: #94a3b8; }
+      .badge-enhanced { background: #064e3b; color: #4ade80; }
+    }
   </style>
 </head>
 <body>
-  <div class="loading">
-    <div class="spinner"></div>
-    <p>جاري التحميل...</p>
-    <p><a href="dashboard-enhanced.html">اضغط هنا إذا لم يتم التحويل تلقائياً</a></p>
+  <div class="container">
+    <h1>📚 ObsTaric</h1>
+    <p class="subtitle">اختر لوحة الدراسة المناسبة لك</p>
+
+    <div class="cards">
+      <a class="card" href="dashboard.html">
+        <div class="card-icon original">📖</div>
+        <div class="card-content">
+          <div class="card-title">الملفات الأصلية</div>
+          <div class="card-desc">المحتوى الدراسي بدون أسئلة MCQ — التصميم الأصلي</div>
+          <span class="card-badge badge-original">54 ملف · بدون أسئلة</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a class="card" href="dashboard-enhanced.html">
+        <div class="card-icon enhanced">✅</div>
+        <div class="card-content">
+          <div class="card-title">الملفات المحسّنة</div>
+          <div class="card-desc">نفس المحتوى + أسئلة تفاعلية MCQ في نهاية كل قسم</div>
+          <span class="card-badge badge-enhanced">54 ملف · 2525 سؤال</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      <span>بعد تفعيل GitHub Pages، افتح الموقع 👆</span>
+    </div>
   </div>
 </body>
 </html>

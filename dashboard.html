@@ -331,6 +331,27 @@
     color: var(--text-primary);
   }
 
+  .home-btn {
+    background: var(--bg-toggle);
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-secondary);
+    transition: all var(--transition);
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+  .home-btn:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
   /* ===== MAIN CONTENT ===== */
   .main-content {
     flex: 1;
@@ -504,6 +525,7 @@
           <button class="toggle-btn" data-theme="dark" title="Dark mode" role="radio" aria-checked="false">🌙</button>
         </div>
       </div>
+      <a href="index.html" class="home-btn" title="Back to Main Menu">🏠</a>
       <button class="sidebar-toggle-btn" id="sidebarCollapseBtn" title="Toggle sidebar" aria-label="Toggle sidebar">◀</button>
     </div>
   </aside>

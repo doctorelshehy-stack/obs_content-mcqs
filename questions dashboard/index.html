@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OB/GYN Question Dashboard — SUPPORT 41</title>
+<script src="data/questions-data.js"></script>
+<style>
+/* ===== CSS Variables (Light) ===== */
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface2: #f0f2f6;
+  --surface3: #e8ebf0;
+  --text: #1a1d23;
+  --text2: #4a4e59;
+  --text3: #7c808e;
+  --border: #dce0e8;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #dbeafe;
+  --accent: #10b981;
+  --accent-light: #d1fae5;
+  --danger: #ef4444;
+  --danger-light: #fee2e2;
+  --warning: #f59e0b;
+  --success: #10b981;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.10);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --sidebar-w: 280px;
+  --header-h: 64px;
+}
+
+/* ===== CSS Variables (Dark) ===== */
+[data-theme="dark"] {
+  --bg: #0f1117;
+  --surface: #1a1d28;
+  --surface2: #222635;
+  --surface3: #2a2e3f;
+  --text: #e8eaed;
+  --text2: #9ca0b0;
+  --text3: #6b7085;
+  --border: #2e3348;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: #1e3a5f;
+  --accent: #34d399;
+  --accent-light: #064e3b;
+  --danger: #f87171;
+  --danger-light: #450a0a;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+  display: flex;
+  line-height: 1.5;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text2); }
+
+/* ===== Header ===== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: var(--header-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 24px;
+  gap: 16px;
+  transition: background var(--transition), border-color var(--transition);
+}
+.header-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 1.1rem;
+  color: var(--primary);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.header-logo svg { width: 28px; height: 28px; }
+.header-back:hover { background: var(--surface2); color: var(--primary) !important; }
+.header-search {
+  flex: 1; max-width: 480px;
+  position: relative;
+}
+.header-search input {
+  width: 100%;
+  padding: 8px 14px 8px 40px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface2);
+  color: var(--text);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.header-search input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+  background: var(--surface);
+}
+.header-search .search-icon {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  color: var(--text3);
+  pointer-events: none;
+}
+.header-actions {
+  display: flex; align-items: center; gap: 12px;
+  margin-left: auto;
+}
+.progress-badge {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.85rem; color: var(--text2);
+  padding: 6px 14px; border-radius: 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  transition: background var(--transition), border-color var(--transition);
+}
+.progress-badge .pct {
+  font-weight: 600; color: var(--primary);
+  min-width: 36px;
+}
+.theme-toggle {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text2);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  transition: all var(--transition);
+}
+.theme-toggle:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  z-index: 50;
+  transition: background var(--transition), border-color var(--transition), transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.sidebar-inner { padding: 16px 12px; }
+.sidebar-section { margin-bottom: 20px; }
+.sidebar-section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text3);
+  padding: 0 12px 8px;
+}
+.topic-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: 2px;
+  position: relative;
+}
+.topic-item:hover { background: var(--surface2); }
+.topic-item.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 500;
+}
+.topic-item .topic-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.topic-item .topic-label { flex: 1; font-size: 0.9rem; }
+.topic-item .topic-count {
+  font-size: 0.78rem;
+  color: var(--text3);
+  background: var(--surface3);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+.topic-item.active .topic-count {
+  background: var(--primary);
+  color: #fff;
+}
+.sidebar-progress {
+  padding: 0 12px;
+}
+.sidebar-progress .stat-row {
+  display: flex; justify-content: space-between;
+  font-size: 0.85rem; color: var(--text2);
+  margin-bottom: 6px;
+}
+.sidebar-progress .stat-row strong { color: var(--text); }
+.sidebar-progress .bar-bg {
+  height: 6px; border-radius: 3px;
+  background: var(--surface3);
+  overflow: hidden;
+}
+.sidebar-progress .bar-fill {
+  height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.5s ease;
+}
+.sidebar-toggle-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px; left: 16px;
+  z-index: 60;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  transition: all var(--transition);
+}
+.sidebar-toggle-btn:hover { background: var(--primary-light); color: var(--primary); }
+
+/* ===== Main Content ===== */
+.main {
+  margin-left: var(--sidebar-w);
+  margin-top: var(--header-h);
+  flex: 1;
+  padding: 24px;
+  min-height: calc(100vh - var(--header-h));
+  transition: margin-left 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.main-header {
+  margin-bottom: 24px;
+}
+.main-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.main-header p {
+  color: var(--text2);
+  font-size: 0.9rem;
+}
+.filter-bar {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.filter-chip {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text2);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-weight: 500;
+}
+.filter-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+.filter-chip.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.filter-chip span {
+  opacity: 0.7;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+/* ===== Question Cards ===== */
+.q-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.q-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  transition: all var(--transition);
+  animation: cardIn 0.35s ease both;
+}
+.q-card:hover {
+  box-shadow: var(--shadow);
+}
+.q-card.completed {
+  border-left: 4px solid var(--accent);
+  opacity: 0.85;
+}
+.q-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+.q-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 10px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.q-type-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.q-type-badge.mcq { background: var(--primary-light); color: var(--primary); }
+.q-type-badge.essay { background: var(--warning); color: #000; }
+.q-type-badge.problem { background: #fef3c7; color: #92400e; }
+.q-type-badge.matching { background: #e0e7ff; color: #3730a3; }
+.q-type-badge.short_answer { background: #fce7f3; color: #9d174d; }
+.q-topic-tag {
+  font-size: 0.75rem;
+  color: var(--text3);
+  display: flex; align-items: center; gap: 4px;
+}
+.q-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+.q-text code, .q-text pre {
+  font-size: 0.85em;
+  background: var(--surface2);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+.q-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.q-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.q-option:hover:not(.locked) {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+.q-option .opt-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--surface3);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text2);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.q-option .opt-text { flex: 1; }
+.q-option.correct {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.q-option.correct .opt-label {
+  background: var(--accent);
+  color: #fff;
+}
+.q-option.wrong {
+  border-color: var(--danger);
+  background: var(--danger-light);
+}
+.q-option.wrong .opt-label {
+  background: var(--danger);
+  color: #fff;
+}
+.q-option.reveal-correct {
+  border-color: var(--accent);
+  opacity: 0.8;
+}
+
+.q-answer-reveal {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
+  font-size: 0.85rem;
+  display: none;
+  animation: fadeSlideIn 0.3s ease;
+  line-height: 1.5;
+}
+.q-answer-reveal .answer-label {
+  font-weight: 600;
+  color: var(--accent);
+}
+.q-answer-reveal .answer-just {
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+.q-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.q-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text2);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.q-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.q-btn.primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.q-btn.primary:hover {
+  background: var(--primary-hover);
+}
+.q-btn.success {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.q-btn.success:hover {
+  opacity: 0.9;
+}
+.q-btn.completed-btn.active {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ===== No results ===== */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text3);
+}
+.no-results svg { width: 64px; height: 64px; margin-bottom: 16px; opacity: 0.4; }
+.no-results h3 { font-weight: 600; margin-bottom: 4px; color: var(--text2); }
+
+/* ===== Animations ===== */
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.q-card { animation: cardIn 0.35s ease both; }
+.q-card:nth-child(1) { animation-delay: 0s; }
+.q-card:nth-child(2) { animation-delay: 0.04s; }
+.q-card:nth-child(3) { animation-delay: 0.08s; }
+.q-card:nth-child(4) { animation-delay: 0.12s; }
+.q-card:nth-child(5) { animation-delay: 0.16s; }
+.q-card:nth-child(6) { animation-delay: 0.20s; }
+.q-card:nth-child(7) { animation-delay: 0.24s; }
+.q-card:nth-child(8) { animation-delay: 0.28s; }
+
+/* ===== Loading ===== */
+.loading {
+  display: flex; align-items: center; justify-content: center;
+  padding: 80px; color: var(--text3); gap: 12px;
+}
+.spinner {
+  width: 24px; height: 24px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .sidebar-toggle-btn { display: flex; }
+  .main {
+    margin-left: 0;
+    padding: 16px;
+  }
+  .header { padding: 0 12px; gap: 8px; }
+  .header-logo span { display: none; }
+  .header-search { max-width: none; }
+  .progress-badge .pct-label { display: none; }
+  .q-card { padding: 16px; }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  :root { --sidebar-w: 220px; }
+}
+
+/* ===== Print ===== */
+@media print {
+  .sidebar, .header, .filter-bar, .q-card-actions, .theme-toggle, .sidebar-toggle-btn { display: none; }
+  .main { margin: 0; padding: 0; }
+  .q-card { break-inside: avoid; border: 1px solid #ddd; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <a href="../index.html" class="header-back" title="Back to Main Menu" style="display:flex;align-items:center;gap:6px;color:var(--text2);text-decoration:none;font-size:0.9rem;padding:6px 10px;border-radius:8px;transition:all var(--transition);margin-right:-4px;">
+    ← <span style="display:none" class="back-label">Back</span>
+  </a>
+  <a href="#" class="header-logo">
+    <svg viewBox="0 0 28 28" fill="none"><path d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12 12-5.373 12-12S20.627 2 14 2z" fill="currentColor" opacity="0.2"/><path d="M14 6a8 8 0 100 16 8 8 0 000-16zm-1 12v-4H9v-2h4V8h2v4h4v2h-4v4h-2z" fill="currentColor"/></svg>
+    <span>OB/GYN Q‑Dashboard</span>
+  </a>
+  <div class="header-search">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search questions, keywords..." autocomplete="off">
+  </div>
+  <div class="header-actions">
+    <div class="progress-badge">
+      <span class="pct-label">Progress</span>
+      <span class="pct" id="headerPct">0%</span>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<!-- ===== SIDEBAR TOGGLE (mobile) ===== -->
+<button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">Subjects</div>
+      <div id="topicList"></div>
+    </div>
+    <div class="sidebar-section sidebar-progress">
+      <div class="sidebar-section-title">Overall Progress</div>
+      <div class="stat-row">
+        <span>Completed</span>
+        <span><strong id="completedCount">0</strong> / <span id="totalCount">0</span></span>
+      </div>
+      <div class="bar-bg"><div class="bar-fill" id="progressBar" style="width:0%"></div></div>
+      <div class="stat-row" style="margin-top:8px">
+        <span>Questions</span>
+        <span id="questionsWithAnswers">0 with answers</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main" id="mainContent">
+  <div class="main-header">
+    <h1 id="mainTitle">All Questions</h1>
+    <p id="mainSubtitle">Browse all OB/GYN questions across topics</p>
+  </div>
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-chip active" data-filter="all">All <span id="allCount"></span></button>
+    <button class="filter-chip" data-filter="mcq">MCQ <span id="mcqCount"></span></button>
+    <button class="filter-chip" data-filter="essay">Essay</button>
+    <button class="filter-chip" data-filter="problem">Problem</button>
+    <button class="filter-chip" data-filter="matching">Matching</button>
+    <button class="filter-chip" data-filter="completed">Completed ✓</button>
+  </div>
+  <div id="questionList"></div>
+</main>
+
+<script>
+(function() {
+  'use strict';
+
+  const DATA = QUESTIONS_DATA;
+  const ALL_QUESTIONS = DATA.questions;
+  const TOPICS = DATA.topics;
+
+  // === State ===
+  const state = {
+    currentTopic: 'all',
+    currentFilter: 'all',
+    searchQuery: '',
+    completed: new Set(),
+    answered: new Map(), // id -> { selected, correct }
+  };
+
+  // === Load saved state ===
+  function loadState() {
+    try {
+      const saved = localStorage.getItem('obgyn_dashboard_state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.completed) state.completed = new Set(parsed.completed);
+        if (parsed.answered) state.answered = new Map(Object.entries(parsed.answered));
+        if (parsed.currentTopic) state.currentTopic = parsed.currentTopic;
+        if (parsed.currentFilter) state.currentFilter = parsed.currentFilter;
+        if (parsed.searchQuery) state.searchQuery = parsed.searchQuery;
+      }
+    } catch(e) { /* ignore */ }
+
+    // Theme
+    const savedTheme = localStorage.getItem('obgyn_theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    }
+  }
+
+  function saveState() {
+    try {
+      localStorage.setItem('obgyn_dashboard_state', JSON.stringify({
+        completed: [...state.completed],
+        answered: Object.fromEntries(state.answered),
+        currentTopic: state.currentTopic,
+        currentFilter: state.currentFilter,
+        searchQuery: state.searchQuery,
+      }));
+    } catch(e) { /* ignore */ }
+  }
+
+  // === Theme ===
+  document.getElementById('themeToggle').addEventListener('click', function() {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    this.textContent = next === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('obgyn_theme', next);
+  });
+
+  // === Topic colors ===
+  const TOPIC_COLORS = ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
+
+  // === Build sidebar ===
+  function buildSidebar() {
+    const list = document.getElementById('topicList');
+    let html = '';
+    const topicKeys = Object.keys(TOPICS);
+    const allCount = ALL_QUESTIONS.length;
+    const allAnswered = [...state.answered.values()].filter(v => v.correct).length;
+
+    html += `<div class="topic-item ${state.currentTopic === 'all' ? 'active' : ''}" data-topic="all">
+      <span class="topic-dot" style="background:#6b7280"></span>
+      <span class="topic-label">All Questions</span>
+      <span class="topic-count">${allCount}</span>
+    </div>`;
+
+    topicKeys.forEach((key, i) => {
+      const info = TOPICS[key];
+      const color = TOPIC_COLORS[i % TOPIC_COLORS.length];
+      const count = info.totalCount;
+      const label = info.label;
+      html += `<div class="topic-item ${state.currentTopic === key ? 'active' : ''}" data-topic="${key}">
+        <span class="topic-dot" style="background:${color}"></span>
+        <span class="topic-label">${label}</span>
+        <span class="topic-count">${count}</span>
+      </div>`;
+    });
+
+    list.innerHTML = html;
+
+    // Click handler
+    list.querySelectorAll('.topic-item').forEach(el => {
+      el.addEventListener('click', function() {
+        state.currentTopic = this.dataset.topic;
+        list.querySelectorAll('.topic-item').forEach(x => x.classList.remove('active'));
+        this.classList.add('active');
+        saveState();
+        render();
+        // Close sidebar on mobile
+        document.getElementById('sidebar').classList.remove('open');
+      });
+    });
+  }
+
+  // === Render questions ===
+  function render() {
+    const list = document.getElementById('questionList');
+    const mainTitle = document.getElementById('mainTitle');
+    const mainSubtitle = document.getElementById('mainSubtitle');
+
+    let filtered = ALL_QUESTIONS;
+
+    // Filter by topic
+    if (state.currentTopic !== 'all') {
+      filtered = filtered.filter(q => q.topic === state.currentTopic);
+    }
+
+    // Filter by type
+    if (state.currentFilter !== 'all') {
+      if (state.currentFilter === 'completed') {
+        filtered = filtered.filter(q => state.completed.has(q.id));
+      } else {
+        filtered = filtered.filter(q => q.type === state.currentFilter);
+      }
+    }
+
+    // Search
+    if (state.searchQuery.trim()) {
+      const q = state.searchQuery.trim().toLowerCase();
+      filtered = filtered.filter(item => {
+        const searchText = (item.question + ' ' + (item.answerText || '') + ' ' + (item.justification || '')).toLowerCase();
+        // Also search option texts
+        const optText = item.options.map(o => o.text).join(' ').toLowerCase();
+        return searchText.includes(q) || optText.includes(q);
+      });
+    }
+
+    // Update header
+    const topicLabel = state.currentTopic === 'all' ? 'All Questions' : (TOPICS[state.currentTopic]?.label || state.currentTopic);
+    mainTitle.textContent = state.searchQuery
+      ? `Results for "${state.searchQuery}"`
+      : state.currentFilter === 'completed'
+        ? 'Completed Questions'
+        : topicLabel;
+    mainSubtitle.textContent = `${filtered.length} question${filtered.length !== 1 ? 's' : ''}`;
+
+    if (filtered.length === 0) {
+      list.innerHTML = `<div class="no-results">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <h3>No questions found</h3>
+        <p>Try adjusting your search or filters.</p>
+      </div>`;
+      updateProgress();
+      return;
+    }
+
+    let html = '<div class="q-grid">';
+    filtered.forEach((q, idx) => {
+      const isCompleted = state.completed.has(q.id);
+      const answered = state.answered.get(q.id);
+      const hasAnswer = q.answer !== null && q.answer !== undefined;
+      const typeLabel = q.type.toUpperCase().replace(/_/g, ' ');
+      const topicColor = TOPIC_COLORS[Object.keys(TOPICS).indexOf(q.topic) % TOPIC_COLORS.length] || '#6b7280';
+
+      html += `<div class="q-card ${isCompleted ? 'completed' : ''}" data-id="${q.id}" style="animation-delay:${(idx % 8) * 0.04}s">`;
+
+      // Header
+      html += `<div class="q-card-header">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <span class="q-number">#${q.number}</span>
+          <span class="q-type-badge ${q.type}">${typeLabel}</span>
+          ${q.section ? `<span class="q-topic-tag">${q.section}</span>` : ''}
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <span class="q-topic-tag">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${topicColor}"></span>
+            ${TOPICS[q.topic]?.label || q.topic}
+          </span>
+        </div>
+      </div>`;
+
+      // Question text
+      html += `<div class="q-text">${escapeHtml(q.question)}</div>`;
+
+      // Options (MCQ only)
+      if (q.options && q.options.length > 0) {
+        const isLocked = answered !== undefined;
+        html += `<div class="q-options">`;
+        q.options.forEach(opt => {
+          let extraClass = '';
+          if (isLocked) {
+            if (opt.label === answered.selected && opt.label === answered.correct) {
+              extraClass = 'correct locked';
+            } else if (opt.label === answered.selected && opt.label !== answered.correct) {
+              extraClass = 'wrong locked';
+            } else if (opt.label === answered.correct) {
+              extraClass = 'reveal-correct locked';
+            }
+          }
+          html += `<div class="q-option ${extraClass}" data-qid="${q.id}" data-label="${opt.label}" data-correct="${hasAnswer ? q.answer : ''}">
+            <span class="opt-label">${opt.label}</span>
+            <span class="opt-text">${escapeHtml(opt.text)}</span>
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      // Answer reveal
+      if (hasAnswer && answered) {
+        const answerOpt = q.options.find(o => o.label === q.answer);
+        html += `<div class="q-answer-reveal" style="display:block">
+          <div class="answer-label">✓ ${q.answer.toUpperCase()}) ${escapeHtml(answerOpt ? answerOpt.text : (q.answerText || ''))}</div>
+          ${q.justification ? `<div class="answer-just">${escapeHtml(q.justification)}</div>` : ''}
+        </div>`;
+      }
+
+      // Actions
+      html += `<div class="q-card-actions">`;
+      if (q.options && q.options.length > 0 && hasAnswer) {
+        if (!answered) {
+          html += `<button class="q-btn primary show-answer-btn" data-qid="${q.id}">Show Answer</button>`;
+        } else {
+          html += `<button class="q-btn hide-answer-btn" data-qid="${q.id}">Hide Answer</button>`;
+        }
+      }
+      html += `<button class="q-btn completed-btn ${isCompleted ? 'success active' : ''}" data-qid="${q.id}">
+        ${isCompleted ? '✓ Completed' : '○ Mark Complete'}
+      </button>`;
+      html += `</div>`;
+
+      html += `</div>`;
+    });
+    html += '</div>';
+
+    list.innerHTML = html;
+    updateProgress();
+
+    // === Event Delegation ===
+
+    // Option click
+    list.querySelectorAll('.q-option:not(.locked)').forEach(el => {
+      el.addEventListener('click', function() {
+        const qid = this.dataset.qid;
+        const label = this.dataset.label;
+        const correct = this.dataset.correct;
+        const isCorrect = label === correct;
+
+        if (state.answered.has(qid)) return;
+
+        // Mark all options for this question as locked
+        const siblings = document.querySelectorAll(`.q-option[data-qid="${qid}"]`);
+        siblings.forEach(s => s.classList.add('locked'));
+
+        // Highlight selected
+        this.classList.add(isCorrect ? 'correct' : 'wrong');
+        // Highlight correct if wrong selected
+        if (!isCorrect) {
+          siblings.forEach(s => {
+            if (s.dataset.label === correct) {
+              s.classList.add('reveal-correct');
+            }
+          });
+        }
+
+        state.answered.set(qid, { selected: label, correct: correct });
+        saveState();
+
+        // Show the answer reveal
+        renderAnswerReveal(qid);
+
+        // Re-render just the answer section
+        updateProgress();
+      });
+    });
+
+    // Show answer button
+    list.querySelectorAll('.show-answer-btn').forEach(el => {
+      el.addEventListener('click', function() {
+        const qid = this.dataset.qid;
+        const q = ALL_QUESTIONS.find(x => x.id === qid);
+        if (!q) return;
+
+        // If already answered (e.g. from a previous click), just show answer
+        if (state.answered.has(qid)) {
+          renderAnswerReveal(qid);
+          return;
+        }
+
+        // Auto-select the correct answer
+        const siblings = document.querySelectorAll(`.q-option[data-qid="${qid}"]`);
+        siblings.forEach(s => {
+          s.classList.add('locked');
+          if (s.dataset.label === q.answer) {
+            s.classList.add('correct');
+          }
+        });
+
+        state.answered.set(qid, { selected: q.answer, correct: q.answer });
+        saveState();
+        renderAnswerReveal(qid);
+        updateProgress();
+      });
+    });
+
+    // Hide answer button
+    list.querySelectorAll('.hide-answer-btn').forEach(el => {
+      el.addEventListener('click', function() {
+        const qid = this.dataset.qid;
+        // Just re-render the whole card
+        render();
+      });
+    });
+
+    // Mark complete toggle
+    list.querySelectorAll('.completed-btn').forEach(el => {
+      el.addEventListener('click', function() {
+        const qid = this.dataset.qid;
+        if (state.completed.has(qid)) {
+          state.completed.delete(qid);
+        } else {
+          state.completed.add(qid);
+        }
+        saveState();
+        render();
+      });
+    });
+  }
+
+  function renderAnswerReveal(qid) {
+    const card = document.querySelector(`.q-card[data-id="${qid}"]`);
+    if (!card) return;
+    const q = ALL_QUESTIONS.find(x => x.id === qid);
+    if (!q || !q.answer) return;
+
+    // Check if answer reveal already exists
+    let reveal = card.querySelector('.q-answer-reveal');
+    const actionsArea = card.querySelector('.q-card-actions');
+
+    const answerOpt = q.options.find(o => o.label === q.answer);
+    const revealHtml = `<div class="q-answer-reveal" style="display:block">
+      <div class="answer-label">✓ ${q.answer.toUpperCase()}) ${escapeHtml(answerOpt ? answerOpt.text : (q.answerText || ''))}</div>
+      ${q.justification ? `<div class="answer-just">${escapeHtml(q.justification)}</div>` : ''}
+    </div>`;
+
+    if (reveal) {
+      reveal.outerHTML = revealHtml;
+    } else {
+      // Insert before actions
+      actionsArea.insertAdjacentHTML('beforebegin', revealHtml);
+    }
+
+    // Update buttons
+    if (actionsArea) {
+      const showBtn = actionsArea.querySelector('.show-answer-btn');
+      if (showBtn) {
+        showBtn.outerHTML = `<button class="q-btn hide-answer-btn" data-qid="${qid}">Hide Answer</button>`;
+        actionsArea.querySelector('.hide-answer-btn')?.addEventListener('click', function() {
+          render();
+        });
+      }
+    }
+  }
+
+  function updateProgress() {
+    const total = ALL_QUESTIONS.length;
+    const completed = state.completed.size;
+    const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+    document.getElementById('headerPct').textContent = pct + '%';
+    document.getElementById('completedCount').textContent = completed;
+    document.getElementById('totalCount').textContent = total;
+    document.getElementById('progressBar').style.width = pct + '%';
+
+    // Update all count
+    const allCountEl = document.getElementById('allCount');
+    if (allCountEl) allCountEl.textContent = total;
+
+    // MCQ count
+    const mcqCount = ALL_QUESTIONS.filter(x => x.type === 'mcq').length;
+    const mcqCountEl = document.getElementById('mcqCount');
+    if (mcqCountEl) mcqCountEl.textContent = mcqCount;
+
+    // Questions with answers
+    const withAns = ALL_QUESTIONS.filter(x => x.answer !== null).length;
+    document.getElementById('questionsWithAnswers').textContent = withAns + ' with answers';
+  }
+
+  // === Filter chips ===
+  document.getElementById('filterBar').addEventListener('click', function(e) {
+    const chip = e.target.closest('.filter-chip');
+    if (!chip) return;
+    state.currentFilter = chip.dataset.filter;
+    this.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    saveState();
+    render();
+  });
+
+  // === Search ===
+  let searchTimer;
+  document.getElementById('searchInput').addEventListener('input', function() {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      state.searchQuery = this.value;
+      saveState();
+      render();
+    }, 300);
+  });
+
+  // === Sidebar toggle (mobile) ===
+  document.getElementById('sidebarToggle').addEventListener('click', function() {
+    document.getElementById('sidebar').classList.toggle('open');
+  });
+
+  // === Helpers ===
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // === Init ===
+  loadState();
+  document.getElementById('searchInput').value = state.searchQuery;
+
+  // Set active filter chip
+  document.querySelectorAll('.filter-chip').forEach(c => {
+    if (c.dataset.filter === state.currentFilter) c.classList.add('active');
+    else c.classList.remove('active');
+  });
+
+  // Set active topic
+  buildSidebar();
+  render();
+})();
+</script>
+</body>
+</html>

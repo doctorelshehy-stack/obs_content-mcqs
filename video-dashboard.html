@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>🎬 Obstetrics Video Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --dim: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d29922;
+    --red: #f85149;
+    --purple: #bc8cff;
+    --teal: #56d4dd;
+    --pink: #f778ba;
+    --radius: 12px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    min-height: 100vh;
+  }
+  .container { max-width: 1400px; margin:0 auto; }
+
+  /* Header */
+  .header {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px; margin-bottom: 24px;
+  }
+  .header h1 {
+    font-size: 28px; font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--pink));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header .sub {
+    color: var(--dim); font-size: 14px;
+  }
+  .badge-group { display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--border); background: var(--card);
+  }
+  .badge span { font-size: 18px; margin-right: 4px; }
+
+  /* Stats Row */
+  .stats-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px; text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .num.green { color: var(--green); }
+  .stat-card .num.blue { color: var(--accent); }
+  .stat-card .num.orange { color: var(--orange); }
+  .stat-card .num.purple { color: var(--purple); }
+  .stat-card .label { font-size: 12px; color: var(--dim); margin-top: 4px; }
+
+  /* Video Player Section */
+  .player-section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); margin-bottom: 24px; overflow: hidden;
+    display: none;
+  }
+  .player-section.active { display: block; }
+  .player-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 18px; border-bottom: 1px solid var(--border);
+  }
+  .player-header .title { font-size: 16px; font-weight: 600; }
+  .player-header .close {
+    background: none; border: none; color: var(--dim); font-size: 22px;
+    cursor: pointer; padding: 4px 8px; border-radius: 6px;
+  }
+  .player-header .close:hover { background: rgba(248,81,73,0.15); color: var(--red); }
+  video {
+    width: 100%; display: block;
+    background: #000;
+    max-height: 70vh;
+  }
+
+  /* Topic Grid */
+  .section-title {
+    font-size: 18px; font-weight: 600; margin-bottom: 16px;
+    color: var(--dim);
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+  }
+
+  /* Video Card */
+  .video-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px;
+    cursor: pointer; transition: all 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .video-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(88,166,255,0.1);
+  }
+  .video-card .thumb {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1a2332, #0d1117);
+    border-radius: 8px; margin-bottom: 12px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .video-card .thumb .play-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(88,166,255,0.2);
+    border: 2px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s;
+  }
+  .video-card:hover .thumb .play-icon {
+    background: rgba(88,166,255,0.35);
+    transform: scale(1.1);
+  }
+  .video-card .thumb .play-icon::after {
+    content: "▶"; font-size: 22px; color: var(--accent);
+    margin-left: 3px;
+  }
+  .video-card .thumb .topic-num {
+    position: absolute; top: 8px; left: 8px;
+    font-size: 10px; font-weight: 700;
+    padding: 2px 10px; border-radius: 8px;
+    background: rgba(13,17,23,0.8);
+    border: 1px solid var(--border);
+    color: var(--dim);
+  }
+  .video-card .name {
+    font-size: 15px; font-weight: 600; margin-bottom: 8px;
+  }
+  .video-card .meta {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    font-size: 12px; color: var(--dim);
+  }
+  .video-card .meta span {
+    display: flex; align-items: center; gap: 4px;
+  }
+  .video-card .meta .icon { font-size: 14px; }
+
+  /* Topic number colors */
+  .card-t1 .thumb { background: linear-gradient(135deg, #1a2a1a, #0d1117); }
+  .card-t2 .thumb { background: linear-gradient(135deg, #2a2a1a, #0d1117); }
+  .card-t3 .thumb { background: linear-gradient(135deg, #1a2a2a, #0d1117); }
+  .card-t4 .thumb { background: linear-gradient(135deg, #1a3a2a, #0d1117); }
+  .card-t5 .thumb { background: linear-gradient(135deg, #3a1a1a, #0d1117); }
+  .card-t6 .thumb { background: linear-gradient(135deg, #1a1a3a, #0d1117); }
+  .card-t7 .thumb { background: linear-gradient(135deg, #3a2a1a, #0d1117); }
+  .card-t12 .thumb { background: linear-gradient(135deg, #2a1a3a, #0d1117); }
+  .card-t13 .thumb { background: linear-gradient(135deg, #3a1a2a, #0d1117); }
+  .card-t14 .thumb { background: linear-gradient(135deg, #1a2a3a, #0d1117); }
+  .card-t15 .thumb { background: linear-gradient(135deg, #2a3a1a, #0d1117); }
+  .card-t16 .thumb { background: linear-gradient(135deg, #1a3a3a, #0d1117); }
+  .card-t45 .thumb { background: linear-gradient(135deg, #3a2a2a, #0d1117); }
+
+  .footer {
+    text-align: center; padding: 24px 0 8px;
+    color: var(--dim); font-size: 12px;
+    border-top: 1px solid var(--border); margin-top: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .video-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 22px; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+  <a href="index.html" style="padding:7px 16px;border-radius:20px;font-size:13px;font-weight:600;border:1px solid var(--border);background:var(--card);color:var(--text);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📊 Progress</a>
+  <a href="video-dashboard.html" style="padding:7px 16px;border-radius:20px;font-size:13px;font-weight:600;border:1px solid var(--accent);background:rgba(88,166,255,0.12);color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;">🎬 Videos</a>
+</nav>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>🎬 Obstetrics Video Dashboard</h1>
+      <div class="sub">Week 1 — Complete Lecture Collection</div>
+    </div>
+    <div class="badge-group">
+      <div class="badge"><span>🎥</span> <span id="totalVids">13</span> Videos</div>
+      <div class="badge"><span>⏱️</span> <span id="totalTime">—</span></div>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num blue" id="statVideos">13</div><div class="label">Total Videos</div></div>
+    <div class="stat-card"><div class="num orange" id="statDuration">—</div><div class="label">Total Duration</div></div>
+    <div class="stat-card"><div class="num purple" id="statSize">—</div><div class="label">Total Size</div></div>
+    <div class="stat-card"><div class="num green" id="statAvg">—</div><div class="label">Avg Duration</div></div>
+  </div>
+
+  <!-- Video Player -->
+  <div class="player-section" id="playerSection">
+    <div class="player-header">
+      <div class="title" id="playerTitle">Now Playing</div>
+      <button class="close" onclick="closePlayer()">✕</button>
+    </div>
+    <video id="videoPlayer" controls autoplay preload="metadata"></video>
+  </div>
+
+  <!-- Video Grid -->
+  <div class="section-title">📚 All Lectures</div>
+  <div class="video-grid" id="videoGrid"></div>
+
+  <div class="footer">
+    Obstetrics &amp; Gynecology Study System — Dr. Khaled Abdelmalek Curriculum
+  </div>
+</div>
+
+<script>
+const videos = [
+  { id: 't01', dir: 'week1_topic1', file: 'physiology_of_reproduction.mp4', name: 'Physiology of Reproduction', dur: '9m 30s', durSec: 570, size: '17.0 MB' },
+  { id: 't02', dir: 'week1_topic2', file: 'maternal_adaptation.mp4', name: 'Maternal Adaptation', dur: '20m 58s', durSec: 1258, size: '36.0 MB' },
+  { id: 't03', dir: 'week1_topic3', file: 'diagnosis_of_pregnancy.mp4', name: 'Diagnosis of Pregnancy', dur: '17m 49s', durSec: 1069, size: '31.0 MB' },
+  { id: 't04', dir: 'week1_topic4_antenatal', file: 'antenatal_care.mp4', name: 'Antenatal Care', dur: '9m 11s', durSec: 551, size: '13.7 MB' },
+  { id: 't05', dir: 'week1_topic5_abortion', file: 'abortion.mp4', name: 'Abortion', dur: '9m 14s', durSec: 554, size: '13.5 MB' },
+  { id: 't06', dir: 'week1_topic6_ectopic', file: 'ectopic_pregnancy.mp4', name: 'Ectopic Pregnancy', dur: '10m 39s', durSec: 639, size: '15.6 MB' },
+  { id: 't07', dir: 'week1_topic7_gtd', file: 'gtd.mp4', name: 'Gestational Trophoblastic Disease', dur: '9m 14s', durSec: 554, size: '13.5 MB' },
+  { id: 't12', dir: 'week1_topic12_hypertension_with_pregnancy', file: 'hypertension.mp4', name: 'Hypertension with Pregnancy', dur: '10m 12s', durSec: 612, size: '14.7 MB' },
+  { id: 't13', dir: 'week1_topic13_dic', file: 'dic.mp4', name: 'DIC', dur: '10m 04s', durSec: 604, size: '14.2 MB' },
+  { id: 't14', dir: 'week1_topic14_diabetes_mellitus_with_pregnancy', file: 'diabetes.mp4', name: 'Diabetes Mellitus with Pregnancy', dur: '10m 12s', durSec: 612, size: '15.3 MB' },
+  { id: 't15', dir: 'week1_topic15_uti_in_pregnancy', file: 'uti_in_pregnancy.mp4', name: 'UTI in Pregnancy', dur: '9m 25s', durSec: 565, size: '13.2 MB' },
+  { id: 't16', dir: 'week1_topic16_thromboembolism', file: 'thromboembolism.mp4', name: 'Thromboembolism', dur: '10m 53s', durSec: 653, size: '14.6 MB' },
+  { id: 't45', dir: 'week1_topic45_rh_incompatibility', file: 'rh_incompatibility.mp4', name: 'RH Incompatibility', dur: '11m 56s', durSec: 716, size: '16.9 MB' },
+];
+
+const BASE = 'file:///home/mohamed/study-system/videos/';
+
+function formatMinutes(sec) {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${m}m ${s.toString().padStart(2, '0')}s`;
+}
+
+function playVideo(v) {
+  const player = document.getElementById('videoPlayer');
+  const section = document.getElementById('playerSection');
+  const title = document.getElementById('playerTitle');
+  player.src = BASE + v.dir + '/' + v.file;
+  title.textContent = '▶ ' + v.name + ' (' + v.dur + ')';
+  section.classList.add('active');
+  player.load();
+  player.play().catch(() => {});
+  player.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closePlayer() {
+  const player = document.getElementById('videoPlayer');
+  const section = document.getElementById('playerSection');
+  player.pause();
+  player.removeAttribute('src');
+  player.load();
+  section.classList.remove('active');
+}
+
+function buildGrid() {
+  const grid = document.getElementById('videoGrid');
+  grid.innerHTML = '';
+  videos.forEach(v => {
+    const card = document.createElement('div');
+    card.className = 'video-card card-' + v.id;
+    card.onclick = () => playVideo(v);
+
+    // Topic number
+    const num = v.id.replace('t', '');
+    const label = {
+      '01': 'Physiology', '02': 'Maternal Adaptation', '03': 'Dx of Pregnancy',
+      '04': 'Antenatal Care', '05': 'Abortion', '06': 'Ectopic',
+      '07': 'GTD', '12': 'HTN', '13': 'DIC', '14': 'DM',
+      '15': 'UTI', '16': 'TE', '45': 'RH'
+    }[num] || v.name;
+
+    card.innerHTML = `
+      <div class="thumb">
+        <div class="topic-num">Topic ${num}</div>
+        <div class="play-icon"></div>
+      </div>
+      <div class="name">${v.name}</div>
+      <div class="meta">
+        <span><span class="icon">⏱️</span> ${v.dur}</span>
+        <span><span class="icon">💾</span> ${v.size}</span>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// Compute stats
+function computeStats() {
+  const totalSec = videos.reduce((a, v) => a + v.durSec, 0);
+  const totalSizeMB = videos.reduce((a, v) => a + parseFloat(v.size), 0);
+  const hours = Math.floor(totalSec / 3600);
+  const mins = Math.floor((totalSec % 3600) / 60);
+  const durStr = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+  document.getElementById('totalTime').textContent = durStr;
+  document.getElementById('statDuration').textContent = durStr;
+  document.getElementById('statSize').textContent = totalSizeMB.toFixed(0) + ' MB';
+  const avgSec = Math.round(totalSec / videos.length);
+  document.getElementById('statAvg').textContent = formatMinutes(avgSec);
+}
+
+buildGrid();
+computeStats();
+</script>
+</body>
+</html>

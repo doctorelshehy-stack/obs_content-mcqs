@@ -7,21 +7,23 @@
 <style>
 @viewport { width: 420px; }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{width:420px;overflow-x:hidden;zoom:1!important}
-html,body{width:420px;max-width:420px;min-width:420px;overflow-x:hidden}
+html{overflow-x:hidden;zoom:1!important}
 body{
   font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-  color:#1f2a37;background:#f0f2f5;
+  color:#1f2a37;background:#e8e8e8;
   line-height:1.55;font-size:14px;
   -webkit-font-smoothing:antialiased;
-  width:420px;max-width:420px;
+  max-width:420px;margin:0 auto;
   -webkit-text-size-adjust:none;
   text-size-adjust:none;
+  min-height:100vh;
+  box-shadow:0 0 30px rgba(0,0,0,.15);
 }
 
-/* FORCE NO ZOOM/SCALING */
+/* Desktop: center the 420px column with dark gutter */
 @media screen and (min-width:421px){
-  body{transform-origin:top left;transform:scale(1)}
+  body{background:#2a2a2a;box-shadow:0 0 40px rgba(0,0,0,.4)}
+  .sec,.hero,.nav,.footer-wrap{max-width:420px}
 }
 
 /* STICKY NAV */

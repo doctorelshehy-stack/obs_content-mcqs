@@ -5,57 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Week 2 — High-Risk Pregnancy Infographic</title>
 <style>
-@viewport { width: device-width; }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{overflow-x:hidden;zoom:1!important}
+html{overflow-x:hidden}
 body{
   font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
   color:#1f2a37;background:#f0f2f5;
   line-height:1.55;font-size:14px;
   -webkit-font-smoothing:antialiased;
-  -webkit-text-size-adjust:none;
-  text-size-adjust:none;
+  -webkit-text-size-adjust:none;text-size-adjust:none;
 }
-
-/* STICKY NAV */
 .nav{position:sticky;top:0;z-index:9999;background:linear-gradient(135deg,#b71c1c,#c62828);padding:10px 14px;box-shadow:0 2px 10px rgba(0,0,0,.3)}
 .nav-row{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .nav-row::-webkit-scrollbar{display:none}
 .nav a{color:#ffcdd2;text-decoration:none;font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;white-space:nowrap;background:rgba(255,255,255,.08);transition:all .2s}
 .nav a:hover,.nav a:active{background:rgba(255,255,255,.2);color:#fff}
 .nav-back{color:#fff!important;background:rgba(255,255,255,.15)!important;margin-right:4px}
-
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,#b71c1c 0%,#c62828 30%,#d32f2f 60%,#e53935 100%);
-  color:#fff;text-align:center;padding:28px 18px 22px;
-  position:relative;overflow:hidden;
-}
+.hero{background:linear-gradient(135deg,#b71c1c 0%,#c62828 30%,#d32f2f 60%,#e53935 100%);color:#fff;text-align:center;padding:28px 18px 22px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(255,255,255,.06);border-radius:50%}
 .hero h1{font-size:22px;font-weight:800;line-height:1.25;letter-spacing:-.3px}
 .hero .sub{font-size:13px;color:#ffcdd2;margin-top:6px}
-.hero .stats{display:flex;justify-content:center;gap:12px;margin-top:12px}
+.hero .stats{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap}
 .hero .st{background:rgba(255,255,255,.12);border-radius:10px;padding:6px 14px;text-align:center}
 .hero .st .n{font-size:18px;font-weight:800}
 .hero .st .l{font-size:10px;color:#ffcdd2;text-transform:uppercase;letter-spacing:.04em}
-
-/* CONTAINER */
 .ct{padding:0 10px 30px}
-
-/* TOPIC SECTION */
 .sec{margin-top:14px;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.1);background:#fff}
 .sec-hdr{padding:14px 16px;color:#fff;display:flex;align-items:center;gap:10px}
 .sec-hdr h2{font-size:17px;font-weight:700;line-height:1.3;flex:1}
 .sec-hdr .ico{font-size:26px;flex-shrink:0}
 .sec-bd{padding:12px 16px 16px}
-
-/* HEADINGS */
 .sec-bd h3{margin:14px 0 6px;font-size:15px;color:#0f3a5f;padding-bottom:3px;border-bottom:2px solid #e3e8ef}
 .sec-bd h4{margin:10px 0 4px;font-size:13px;color:#1e6091}
 .sec-bd h5{margin:8px 0 3px;font-size:12px;color:#2a8fb5;font-weight:600}
 .sec-bd p{margin:3px 0;font-size:13px;line-height:1.5}
-
-/* LISTS */
 ul{list-style:none;padding:0;margin:3px 0 6px}
 ul li{position:relative;padding-left:16px;margin:2px 0;font-size:13px;line-height:1.5}
 ul li::before{content:"\2022";color:#c62828;position:absolute;left:3px;top:1px;font-weight:bold;font-size:13px}
@@ -64,8 +46,6 @@ ul.sl li{padding-left:14px;font-size:12px;color:#374151;margin:1px 0}
 ul.sl li::before{content:"\203A";color:#e57373;left:2px;top:0;font-size:11px}
 ol{padding-left:20px;margin:3px 0 6px}
 ol li{margin:2px 0;font-size:13px;line-height:1.5}
-
-/* CALLOUTS */
 .co{border-left:3px solid;padding:7px 10px;margin:7px 0;border-radius:6px;background:#fff;font-size:12.5px}
 .co-p{border-color:#2e7d32;background:#eaf6ec}
 .co-n{border-color:#1e6091;background:#eef5fa}
@@ -74,27 +54,14 @@ ol li{margin:2px 0;font-size:13px;line-height:1.5}
 .co-p .co-t{color:#1b5e20}
 .co-n .co-t{color:#0f3a5f}
 .co-w .co-t{color:#b71c1c}
-
-/* TABLES */
 .tw{overflow-x:auto;margin:6px 0;-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;font-size:11.5px;direction:ltr;text-align:left}
 th,td{border:1px solid #e0e0e0;padding:5px 6px;text-align:left;vertical-align:top;direction:ltr}
 th{background:#c62828;color:#fff;font-weight:600;font-size:11px;white-space:nowrap}
 tr:nth-child(even) td{background:#fafafa}
 strong{color:#b71c1c}
-
-/* COMPARISON BOXES */
-.cmp{border:2px solid #e0e0e0;border-radius:10px;padding:10px 12px;margin:8px 0;background:#fafafa}
-.cmp-title{font-size:12px;font-weight:700;color:#c62828;margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
-
-/* DIVIDER */
-.divider{height:2px;background:linear-gradient(90deg,transparent,#e0e0e0,transparent);margin:12px 0}
-
-/* FOOTER */
 .footer{text-align:center;padding:20px 14px;font-size:11px;color:#999}
 .footer a{color:#c62828;text-decoration:none}
-
-/* NO PRINT BREAK INSIDE */
 .sec{break-inside:avoid}
 @media print{.nav{display:none}.sec{break-inside:avoid;box-shadow:none;border:1px solid #ddd}}
 </style>
@@ -109,13 +76,15 @@ strong{color:#b71c1c}
 <a href="#11_cardiac_diseases_with_pregnancy">🫀 Cardiac Diseases w</a>
 <a href="#17_infectious_diseases_with_pregnancy">🦠 Infectious Disease</a>
 <a href="#18_amniotic_fluid_abnormalities">🩵 Amniotic Fluid Abn</a>
+<a href="#29_shoulder_dystocia">🤟 Shoulder Dystocia</a>
+<a href="#30_multiple_pregnancy">👯 Multiple Pregnancy</a>
 </div></div>
 <div class="hero">
 <h1>Week 2 &mdash; High-Risk Pregnancy</h1>
-<div class="sub">Comprehensive Infographic &mdash; All Information Included</div>
+<div class="sub">Comprehensive Infographic &mdash; All 8 Topics, No Summaries</div>
 <div class="stats">
-<div class="st"><div class="n">6</div><div class="l">Topics</div></div>
-<div class="st"><div class="n">133K</div><div class="l">Characters</div></div>
+<div class="st"><div class="n">8</div><div class="l">Topics</div></div>
+<div class="st"><div class="n">220K</div><div class="l">Characters</div></div>
 <div class="st"><div class="n">100%</div><div class="l">Content</div></div>
 </div></div>
 <div class="ct">
@@ -2758,6 +2727,993 @@ strong{color:#b71c1c}
     Generated as part of the <strong>Sequential Infographic Generation System</strong> (Topic 18: Amniotic Fluid Abnormalities) — based on <em>Book Obstetrics 2025-2026</em>, Chapter 18 (pp. 99–100).<br>
     Outputs: <code>html/18_Amniotic_Fluid_Abnormalities.html</code> &middot; <code>images/18_Amniotic_Fluid_Abnormalities.png</code> &middot; <code>quality_reports/18_Amniotic_Fluid_Abnormalities_quality_report.md</code>
   </div>
+
+</div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="29_shoulder_dystocia">
+<div class="sec-hdr" style="background:#bf360c"><span class="ico">🤟</span><h2>Shoulder Dystocia</h2></div>
+<div class="sec-bd" style="background:#fbe9e7">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 29 — Shoulder Dystocia</title>
+
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="pill">Topic 29 · Chapter 29 · Shoulder Dystocia</span>
+    <h1>Shoulder Dystocia</h1>
+    <p>An <strong>unpredictable and unpreventable obstetric emergency</strong> (0.2-0.3% of deliveries) that occurs when the fetal head is delivered but the fetal shoulder becomes impacted behind the maternal pubic symphysis, requiring additional maneuvers to deliver. This chapter covers the definition, antepartum + intrapartum risk factors, the classic "turtle sign", the 11-step management algorithm (McRobert's first — resolves 90% of cases), and fetal + maternal complications.</p>
+    <div class="chips">
+      <span class="chip">📖 Book Obstetrics 2025-2026 · p. 152-154 (3 pages)</span>
+      <span class="chip">🟢 Source visuals: 5 (all embedded)</span>
+      <span class="chip">🔴 External visuals: 0</span>
+      <span class="chip">📚 9 content sections preserved</span>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📑 Table of Contents · 9 sections</h3>
+    <ol>
+      <li><a href="#s1">ILOs of this chapter</a></li>
+      <li><a href="#s2">Definition &amp; Incidence</a></li>
+      <li><a href="#s3">Figure 1 · Turtle-neck sign (clinical diagnosis)</a></li>
+      <li><a href="#s4">Figure 2 · Mechanism (anterior shoulder impaction)</a></li>
+      <li><a href="#s5">Risk factors (Antepartum + Intrapartum)</a></li>
+      <li><a href="#s6">Management · Steps 1-5 (call for help → posterior arm)</a></li>
+      <li><a href="#s7">Management · Steps 6-11 (rotational → last-resort maneuvers)</a></li>
+      <li><a href="#s8">Complications · Fetal &amp; Maternal</a></li>
+      <li><a href="#s9">Student activity · Questions · References</a></li>
+    </ol>
+  </div>
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h3 class="sec"><span class="n">1</span>ILOs of this chapter</h3>
+    <div class="card">
+      <h4 class="sub" style="margin-top:0">Intended Learning Outcomes</h4>
+      <ol class="step-list">
+        <li>To <strong>understand the definition of shoulder dystocia</strong>.</li>
+        <li>To be able to <strong>outline the risk factors of such obstetric emergency</strong>.</li>
+        <li>To be able to <strong>describe the clinical picture and management of shoulder dystocia</strong>.</li>
+        <li>To be able to <strong>explain possible maternal and fetal complications of this obstetric emergency</strong>.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- §2 Definition + Incidence -->
+  <section id="s2">
+    <h3 class="sec"><span class="n">2</span>Definition &amp; Incidence</h3>
+    <div class="grid-2">
+      <div class="def-card">
+        <h4>📋 Definition</h4>
+        <p><strong>Arrested delivery of fetal shoulder after delivery of fetal head and the need for additional maneuver to deliver fetal shoulder.</strong></p>
+      </div>
+      <div class="def-card">
+        <h4>📊 Incidence</h4>
+        <p><strong>Unpredictable and unpreventable obstetric complication (0.2-0.3% of deliveries).</strong></p>
+      </div>
+    </div>
+    <div class="card danger" style="margin-top:8px">
+      <h5>🚨 DANGER — "Unpredictable and unpreventable"</h5>
+      <p style="font-size:13px">The two most important adjectives in the definition are <strong>unpredictable</strong> and <strong>unpreventable</strong>. <strong>Unpredictable</strong> means: even with all known risk factors present (macrosomia, diabetes, previous shoulder dystocia, etc.), the event cannot be reliably forecast; conversely, shoulder dystocia can occur in deliveries with no risk factors at all. <strong>Unpreventable</strong> means: there is no prophylactic intervention (e.g., elective cesarean for suspected macrosomia) that reliably prevents it; the only effective response is to recognize it quickly and execute the management algorithm. <em>Note: this is why all delivery personnel — obstetrician, midwife, anesthetist, pediatric team — must be familiar with the maneuvers in §6-§7 even if they have never personally seen a case.</em></p>
+    </div>
+  </section>
+
+  <!-- §3 Figure 1 — Turtle-neck sign -->
+  <section id="s3">
+    <h3 class="sec"><span class="n">3</span>Figure 1 · Turtle-neck sign (clinical diagnosis)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source chapter's only intrapartum diagnostic finding: the <strong>"turtle sign"</strong> — the fetal head emerges but then <strong>retracts tightly back against the perineum</strong>, resembling a turtle withdrawing into its shell.</p>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-000</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 1 — <strong>Turtle-neck sign: Fetal head emerges and retracts against the perineum.</strong> The composite source image shows a real obstetric delivery photograph (fetal head emerging but held back by the impacted anterior shoulder) on the left, paired with a yellow diamond turtle-crossing road sign on the right as a visual mnemonic. The clinical sign gets its name from the resemblance: just as a turtle pulls its head back into its shell, the fetal head is pulled back against the perineum when the anterior shoulder is trapped behind the pubic symphysis. Recognition of this sign is the <strong>first diagnostic step</strong> in shoulder dystocia — the moment it appears, the operator must <strong>stop pulling</strong> on the head and call for help.</div>
+    </div>
+    <div class="card pearl">
+      <h5>💡 CLINICAL PEARL — Why you must stop pulling on the head</h5>
+      <p style="font-size:13px">The natural instinct when the head is delivered is to keep pulling. <strong>Resist this urge.</strong> Continued axial traction on the head stretches the brachial plexus against the pubic symphysis and dramatically increases the risk of <strong>Erb's palsy</strong> and other nerve injuries. Once the turtle sign is recognized, the correct sequence is: (1) call for help (§6 step 1), (2) <strong>stop pulling</strong>, (3) ask the mother to stop pushing, (4) start with McRobert's maneuver (§6 step 3) — these four steps together typically resolve 90% of cases without any internal manipulation.</p>
+    </div>
+  </section>
+
+  <!-- §4 Figure 2 — Mechanism -->
+  <section id="s4">
+    <h3 class="sec"><span class="n">4</span>Figure 2 · Mechanism (anterior shoulder impaction)</h3>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-002</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 2 — <strong>Mechanism of shoulder dystocia: anterior fetal shoulder impacted behind the maternal pubic symphysis.</strong> A sagittal (side-view) cross-section of the mother in the second stage of labor. The fetal head has already been delivered and is visible exiting the birth canal, but the <strong>anterior fetal shoulder is wedged behind the pubic bone</strong> (the bold black arrow points to the exact site of obstruction). The bisacromial diameter (shoulder-to-shoulder distance) of the baby is too large to navigate the anteroposterior diameter of the pelvic inlet in this orientation — the shoulder cannot rotate to the wider oblique diameter on its own, hence the need for the maneuvers in §6-§7.</div>
+    </div>
+    <div class="card note">
+      <h5>🧠 MECHANISM — Why McRobert's works</h5>
+      <p style="font-size:13px">Looking at Figure 2, you can see that the obstruction is the <strong>pubic symphysis</strong> catching the anterior shoulder. The <strong>McRobert's maneuver</strong> (next section) works because hyperflexing the maternal hips <strong>rotates the pubic symphysis cephalad</strong> (upward, away from the shoulder), effectively shortening the distance the shoulder needs to travel. Suprapubic pressure (also next section) then pushes the anterior shoulder <strong>down and laterally</strong> so it slips under the symphysis. This is why these two maneuvers together — and not internal rotation — are the <strong>first-line</strong> approach.</p>
+    </div>
+  </section>
+
+  <!-- §5 Risk factors -->
+  <section id="s5">
+    <h3 class="sec"><span class="n">5</span>Risk factors</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists <strong>10 risk factors</strong> split into two groups — <strong>5 Antepartum</strong> (identifiable before labor) and <strong>5 Intrapartum</strong> (develop during labor). Remember: shoulder dystocia is unpredictable and unpreventable, so risk factors are useful for <strong>awareness and preparation</strong>, not for prevention.</p>
+
+    <h4 class="sub">📋 Antepartum risk factors (5)</h4>
+    <div class="grid-2">
+      <div class="risk-card"><b>1. Previous shoulder dystocia</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Recurrence rate ~10% in subsequent pregnancies.</p></div>
+      <div class="risk-card"><b>2. Macrosomia</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Birth weight &gt; 4,000 g (or &gt; 4,500 g in diabetic mothers) — the single most common risk factor.</p></div>
+      <div class="risk-card"><b>3. Diabetes mellitus</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Fetal hyperinsulinemia → increased shoulder and chest girth relative to head.</p></div>
+      <div class="risk-card"><b>4. Maternal BMI &gt; 30 kg/m²</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Maternal obesity is associated with fetal macrosomia + soft-tissue dystocia.</p></div>
+      <div class="risk-card"><b>5. Induction of labor</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Induction may be performed for macrosomia or other indications, increasing shoulder-dystocia risk if fetus is large.</p></div>
+    </div>
+
+    <h4 class="sub">📋 Intrapartum risk factors (5)</h4>
+    <div class="grid-2">
+      <div class="risk-card"><b>6. Prolonged first stage of labor</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Slow cervical dilation may indicate relative cephalopelvic disproportion.</p></div>
+      <div class="risk-card"><b>7. Secondary arrest</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Cervix dilated to a point, then no further progress in the active phase.</p></div>
+      <div class="risk-card"><b>8. Prolonged second stage of labor</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Pushing &gt; 2h (or &gt; 3h with epidural) — head may be malpositioned, increasing shoulder-dystocia risk.</p></div>
+      <div class="risk-card"><b>9. Oxytocin augmentation</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Strong contractions may drive the head past the shoulders before the shoulders have rotated to the oblique diameter.</p></div>
+      <div class="risk-card"><b>10. Assisted vaginal delivery</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Vacuum or forceps — the operator may pull the head past the shoulders.</p></div>
+    </div>
+
+    <div class="card note" style="margin-top:4px">
+      <h5>🧠 MEMORY ANCHOR — "5+5 = 10 Risk factors"</h5>
+      <p style="font-size:13px">The 10 risk factors split as <strong>"5 A's" (Antepartum) + "5 P's" (Intrapartum)</strong>:</p>
+      <p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Antepartum (5):</strong> <strong>P</strong>revious SD · <strong>M</strong>acrosomia · <strong>D</strong>iabetes mellitus · <strong>O</strong>besity (BMI &gt; 30) · <strong>I</strong>nduction of labor — <em>(mnemonic: PMDOI = "Primed for Macrosomia, Diabetes, Obesity, Induction")</em></p>
+      <p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Intrapartum (5):</strong> <strong>P</strong>rolonged 1st stage · <strong>S</strong>econdary arrest · <strong>P</strong>rolonged 2nd stage · <strong>O</strong>xytocin augmentation · <strong>A</strong>ssisted vaginal delivery — <em>(mnemonic: PSPOA = "Prolonged-Slow-Pushed-Out-Assisted")</em></p>
+      <p style="font-size:13px;line-height:1.7;margin:6px 0 0"><strong>Unifying principle:</strong> every risk factor — antepartum or intrapartum — is a factor that <strong>increases the size of the fetus</strong> (macrosomia, DM, obesity), <strong>changes the dynamics of labor</strong> (induction, prolonged stages, oxytocin, arrest), or <strong>increases the operator's force</strong> (assisted delivery, previous SD). All three mechanisms ultimately converge on the same anatomic event shown in Figure 2: the anterior shoulder is too big to fit under the pubic symphysis.</p>
+    </div>
+  </section>
+
+  <!-- §6 Management steps 1-5 -->
+  <section id="s6">
+    <h3 class="sec"><span class="n">6</span>Management · Steps 1-5 (call for help → posterior arm)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The first 5 steps of the 11-step algorithm: call for help, episiotomy, McRobert's, suprapubic pressure, and delivery of the posterior arm. <strong>McRobert's + suprapubic pressure</strong> together resolve <strong>~90% of cases</strong> — so these are the most important to memorize.</p>
+
+    <h4 class="sub">📋 Step 1 — Call for help (HALT the natural impulse to pull)</h4>
+    <div class="maneuver-card step1">
+      <h4>🚨 Immediately after recognition of shoulder dystocia, extra help should be called</h4>
+      <p><strong>Senior obstetrician, a pediatric resuscitation team, and an anesthetist should be present.</strong></p>
+      <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Why this step is the first:</em> the operator alone cannot manage shoulder dystocia — McRobert's requires an assistant, suprapubic pressure requires a second pair of hands, the pediatric team must be ready for a possibly hypoxic or injured neonate, and the anesthetist may be needed for uterine relaxation if the Zavanelli maneuver (§7) is required.</p>
+    </div>
+
+    <h4 class="sub">📋 Step 2 — Episiotomy</h4>
+    <div class="maneuver-card step2">
+      <h4>✂ Episiotomy: to facilitate different maneuvers.</h4>
+      <p>Enlarges the vaginal opening to allow internal manipulation (steps 4-5, and the rotational maneuvers in §7). <em>Note: episiotomy alone does not resolve shoulder dystocia — the obstruction is at the pelvic brim (Figure 2), not at the introitus — but it gives the operator room to work.</em></p>
+    </div>
+
+    <h4 class="sub">📋 Step 3 — McRobert's maneuver (the most effective single intervention)</h4>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-001</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 3 — <strong>McRobert's maneuver combined with suprapubic pressure.</strong> The source illustration shows a sagittal cross-section with the mother in the McRobert's position (thighs hyperflexed onto the abdomen) and a gloved hand applying suprapubic pressure (the purple arrows show the force vectors: the leg arrow shows the thigh being pushed back toward the chest; the suprapubic arrow shows the hand pressing down and laterally just above the pubic bone). The fetal head is delivered externally; the anterior shoulder remains impacted against the pubic symphysis. McRobert's is described in the source as "the most effective intervention and should be performed first" — it resolves 90% of cases when combined with suprapubic pressure.</div>
+    </div>
+    <div class="maneuver-card step3">
+      <h4>🦵 McRobert's maneuver</h4>
+      <p><strong>Flexion and abduction of the maternal hips positioning the maternal thighs on her abdomen.</strong> It is the most effective intervention and should be performed first (resolve 90% of cases).</p>
+      <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>If delivery is not achieved, add suprapubic pressure (step 4).</em></p>
+    </div>
+    <div class="card pearl">
+      <h5>💡 CLINICAL PEARL — Why "resolve 90% of cases" applies to the McRobert's + suprapubic combination, not McRobert's alone</h5>
+      <p style="font-size:13px">The source text says McRobert's is the "most effective intervention and should be performed first" and "resolve 90% of cases" — but then immediately notes "If delivery is not achieved, added suprapubic pressure." This is the source's way of saying: <strong>McRobert's alone is not 90% effective; the combination of McRobert's + suprapubic pressure is</strong>. The two maneuvers are applied <em>together</em> by default — the operator flexes the maternal hips while an assistant applies suprapubic pressure. Internal maneuvers (steps 4-5 and §7) are reserved for the ~10% of cases that do not resolve with this combination.</p>
+    </div>
+
+    <h4 class="sub">📋 Step 4 — Suprapubic pressure</h4>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-003</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 4 — <strong>Suprapubic pressure (clinical hand position, view 1).</strong> A hand-drawn clinical illustration showing a fetus impacted in the maternal pelvis, with a yellow/orange hand applying downward pressure to the anterior shoulder from the suprapubic region. The goal is to adduct the shoulders (push the anterior shoulder under the pubic symphysis) and rotate them into the wider oblique pelvic diameter. The image emphasizes the correct location of the hand — just above the pubic bone, not on the uterine fundus.</div>
+    </div>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-004</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 5 — <strong>Suprapubic pressure (force vector, view 2).</strong> A second hand-drawn illustration of suprapubic pressure, this time emphasizing the <strong>direction of force</strong> with bold black arrows. The arrows show the pressure is applied in an <strong>oblique direction</strong> (laterally and slightly downward, toward the fetal back/anterior shoulder) — not directly downward onto the uterine fundus, which would be ineffective. The two hand-drawn views (Figure 4 + Figure 5) together teach the position of the hand and the direction of force; the sagittal cross-section (Figure 3) shows the underlying anatomy.</div>
+    </div>
+    <div class="maneuver-card step4">
+      <h4>👊 Suprapubic pressure</h4>
+      <p>Pressure applied by an assistant just above the maternal pubic bone, directed downward and laterally toward the fetal back. Aims to adduct the anterior shoulder and rotate it under the pubic symphysis. Typically combined with McRobert's (step 3) — see Figure 3.</p>
+    </div>
+
+    <h4 class="sub">📋 Step 5 — Delivery of the posterior arm</h4>
+    <div class="maneuver-card">
+      <h4>🤚 Delivery of the posterior arm (3 sub-steps)</h4>
+      <p>When McRobert's + suprapubic pressure fail, the next maneuver is to deliver the posterior arm:</p>
+      <ol style="font-size:13.5px;color:#475569;line-height:1.7;margin:6px 0 0;padding-left:20px">
+        <li><strong>Insert a hand in the vagina and flex the elbow.</strong> The operator's hand reaches into the vagina along the curve of the sacrum, locates the posterior fetal arm, and flexes the elbow by pressing on the antecubital fossa.</li>
+        <li><strong>Sweep arm over the chest.</strong> Once the elbow is flexed, the forearm is swept across the fetal chest and out of the vagina.</li>
+        <li><strong>Deliver the posterior arm.</strong> With the posterior arm delivered, the bisacromial diameter is reduced (one shoulder is no longer trapped), and the anterior shoulder can usually be delivered with gentle downward traction on the head.</li>
+      </ol>
+    </div>
+    <div class="card warn" style="margin-top:4px">
+      <h5>⚠ CLINICAL NOTE — Posterior arm delivery can fracture the humerus or clavicle</h5>
+      <p style="font-size:13px">This is a more aggressive maneuver than McRobert's + suprapubic pressure, and it carries a higher risk of <strong>fracturing the humerus or clavicle</strong> of the posterior arm. The fractures usually heal well in newborns, but they should be acknowledged in the documentation. If the posterior arm cannot be reached easily, do not pull hard — proceed to the rotational maneuvers in §7 (Rubin, Wood's corkscrew) or delivery of the posterior shoulder instead.</p>
+    </div>
+  </section>
+
+  <!-- §7 Management steps 6-11 -->
+  <section id="s7">
+    <h3 class="sec"><span class="n">7</span>Management · Steps 6-11 (rotational → last-resort maneuvers)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Steps 6-11 are reserved for the rare cases (~10%) that do not resolve with McRobert's + suprapubic pressure + posterior arm. They progress from <strong>internal rotational maneuvers</strong> (steps 6-7) to <strong>positional and surgical maneuvers</strong> (steps 8-11).</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:60px">Step</th>
+          <th>Maneuver</th>
+          <th>Description (verbatim from source)</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>6</strong></td>
+          <td><strong>Rubin maneuver</strong></td>
+          <td><strong>The anterior fetal shoulder is rotated obliquely with a vaginal hand.</strong></td>
+          <td>Internal rotational</td>
+        </tr>
+        <tr>
+          <td><strong>7</strong></td>
+          <td><strong>Wood corkscrew</strong></td>
+          <td><strong>The posterior shoulder is rotated over 180 degrees with a Vaginal hand to assist delivery of the shoulders.</strong></td>
+          <td>Internal rotational</td>
+        </tr>
+        <tr>
+          <td><strong>8</strong></td>
+          <td><strong>Gaskin maneuver</strong></td>
+          <td><strong>Facilitated in a patient without regional anesthesia, she is Turned over on "all fours" inverting the anterior and posterior shoulders.</strong></td>
+          <td>Positional</td>
+        </tr>
+        <tr>
+          <td><strong>9</strong></td>
+          <td><strong>Cleidotomy</strong></td>
+          <td><strong>It is cutting of the clavicle.</strong></td>
+          <td>Surgical (destructive)</td>
+        </tr>
+        <tr>
+          <td><strong>10</strong></td>
+          <td><strong>Symphysiotomy</strong></td>
+          <td><strong>Incising the cartilaginous portion of the symphysis pubis to release the anterior shoulder.</strong></td>
+          <td>Surgical (pelvic)</td>
+        </tr>
+        <tr>
+          <td><strong>11</strong></td>
+          <td><strong>Zavanelli maneuver</strong></td>
+          <td><strong>The fetal head is flexed and pushed back up into the uterus and emergent cesarean section is done.</strong></td>
+          <td>Reversal + CS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card note">
+      <h5>🧠 MEMORY ANCHOR — "R-W-G-C-S-Z" (Steps 6-11 mnemonic)</h5>
+      <p style="font-size:13px">A simple way to remember the 6 advanced maneuvers in order: <strong>R</strong>ubin · <strong>W</strong>ood corkscrew · <strong>G</strong>askin · <strong>C</strong>leidotomy · <strong>S</strong>ymphysiotomy · <strong>Z</strong>avanelli. The progression goes from <strong>internal rotation</strong> (R, W) → <strong>positional</strong> (G) → <strong>destructive surgery</strong> (C, S) → <strong>reversal + CS</strong> (Z). In a real case, the operator rarely gets past step 8 — by that point the case is in the hands of a senior obstetrician, an anesthetist, and a pediatric team.</p>
+    </div>
+
+    <div class="card danger">
+      <h5>🚨 DANGER — Why the source preserves the typo "Vaginal hand" in Wood corkscrew</h5>
+      <p style="font-size:13px">The source's Wood corkscrew step says "with a <strong>Vaginal hand</strong>" (with a capital V and using "Vaginal" as a noun). The corrected form is "with a vaginal hand" (lowercase, used as an adjective). The source's odd capitalization is preserved verbatim here per the source-fidelity rule. It does not change the meaning — both refer to the operator's hand placed inside the vagina to rotate the posterior fetal shoulder through 180°.</p>
+    </div>
+  </section>
+
+  <!-- §8 Complications -->
+  <section id="s8">
+    <h3 class="sec"><span class="n">8</span>Complications · Fetal &amp; Maternal</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Shoulder dystocia complications split into <strong>fetal</strong> (5 items in the source) and <strong>maternal</strong> (4 items in the source). Fetal complications are usually more severe and more visible; maternal complications are usually less severe but more common.</p>
+
+    <div class="grid-2">
+      <div class="comp-card fetal">
+        <h4>🍼 Fetal Complications (5)</h4>
+        <ul>
+          <li><strong>Brachial plexus injury.</strong> Stretching of the nerve network supplying the arm — most common after excessive lateral traction on the head.</li>
+          <li><strong>Erb's palsy.</strong> A specific brachial plexus injury (C5-C6 roots) causing "waiter's tip" deformity (arm adducted, internally rotated, forearm pronated).</li>
+          <li><strong>Bone fractures (humerus and clavicle).</strong> Most common after delivery of the posterior arm (§6 step 5) or excessive traction on the shoulder. Usually heal well.</li>
+          <li><strong>Hypoxic ischemic brain injury.</strong> From prolonged cord compression / head compression during the dystocia. The time-pressure to deliver is to prevent this.</li>
+          <li><strong>Fetal death.</strong> The worst outcome; most often from prolonged hypoxic injury when all maneuvers fail.</li>
+        </ul>
+      </div>
+      <div class="comp-card maternal">
+        <h4>🤰 Maternal Complications (4)</h4>
+        <ul>
+          <li><strong>Post-partum hemorrhage.</strong> From uterine atony (the exhausted uterus after prolonged labor) or from perineal trauma.</li>
+          <li><strong>Vaginal lacerations and anal tears.</strong> From operative delivery, episiotomy, or the maneuvers themselves.</li>
+          <li><strong>Uterine rupture.</strong> Rare but possible, especially if oxytocin was used for augmentation (§5 risk factor 9).</li>
+          <li><strong>Maternal psychological stress.</strong> PTSD, fear of future pregnancies, postpartum depression — often under-recognized but a real complication of any emergency delivery.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card warn" style="margin-top:4px">
+      <h5>⚠ CLINICAL NOTE — Documentation is part of management</h5>
+      <p style="font-size:13px">Every shoulder dystocia case must be <strong>documented in detail</strong> — the maneuvers used, the order they were used, the time from recognition to delivery, the neonatal assessment (Apgar, cord pH, evidence of injury), and the maternal assessment (blood loss, perineal trauma). This documentation serves three purposes: (1) clinical handover to the pediatric and postnatal teams, (2) medico-legal record (shoulder dystocia is one of the most litigated obstetric events), and (3) counseling for future pregnancies (a mother who had shoulder dystocia has a ~10% recurrence risk — §5 risk factor 1).</p>
+    </div>
+  </section>
+
+  <!-- §9 Clickable cards -->
+  <section id="s9">
+    <h3 class="sec"><span class="n">9</span>Student activity · Questions · References</h3>
+
+    <details class="click-card activity" open>
+      <summary>🎓 Student activity <span class="hint"></span></summary>
+      <div class="click-body">
+        <p><strong>Each student should attend the departmental skill lab in order to revise with his (her) tutor of bedside part of the clinical round various maneuvers for management of shoulder dystocia illustrated on pelvic maniquin.</strong></p>
+        <p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>What this activity means in practice:</strong> the management of shoulder dystocia is a <strong>hands-on skill</strong> — it cannot be learned from reading or from lectures. The departmental skill lab will have a <strong>pelvic maniquin</strong> (a model of the maternal pelvis with a fetal maniquin) on which each student practices the maneuvers under the supervision of a tutor. By the end of the lab, the student should be able to perform the 11-step algorithm in order, with the correct hand positions and force vectors.</p>
+        <p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested practice sequence (in the skill lab):</strong></p>
+        <ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+          <li><strong>McRobert's + suprapubic pressure</strong> (steps 3-4) — practice the hyperflexion of the hips and the oblique direction of the suprapubic force.</li>
+          <li><strong>Delivery of the posterior arm</strong> (step 5) — practice inserting the hand along the sacral curve, locating the elbow, flexing it, and sweeping the forearm across the chest.</li>
+          <li><strong>Rubin maneuver</strong> (step 6) — practice rotating the anterior shoulder obliquely with the vaginal hand.</li>
+          <li><strong>Wood's corkscrew</strong> (step 7) — practice the 180° rotation of the posterior shoulder.</li>
+          <li><strong>Gaskin maneuver</strong> (step 8) — practice turning the patient to "all fours" (requires a cooperative patient without regional anesthesia).</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="click-card assessment" open>
+      <summary>✅ Self-assessment Questions <span class="hint"></span></summary>
+      <div class="click-body">
+        <p>Please complete the self-assessment Google Form:</p>
+        <p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/9rUuinHypUbjcESn6" style="color:#15803D;font-weight:700">https://forms.gle/9rUuinHypUbjcESn6</a></p>
+        <p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+        <ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+          <li>Definition: arrested delivery of fetal shoulder after delivery of fetal head requiring additional maneuvers.</li>
+          <li>Incidence: 0.2-0.3% of deliveries; unpredictable and unpreventable.</li>
+          <li>4 ILOs (definition, risk factors, clinical picture + management, complications).</li>
+          <li>5 Antepartum risk factors (previous SD, macrosomia, DM, BMI&gt;30, induction).</li>
+          <li>5 Intrapartum risk factors (prolonged 1st stage, secondary arrest, prolonged 2nd stage, oxytocin augmentation, assisted vaginal delivery).</li>
+          <li>Clinical picture: turtle-neck sign (fetal head emerges and retracts against perineum).</li>
+          <li>Step 1: call for help (senior obstetrician, pediatric resuscitation team, anesthetist).</li>
+          <li>Step 2: episiotomy (to facilitate maneuvers, not to resolve dystocia itself).</li>
+          <li>Step 3: McRobert's maneuver (most effective, 90% of cases with suprapubic).</li>
+          <li>Step 4: suprapubic pressure (oblique direction, just above pubic bone).</li>
+          <li>Step 5: delivery of posterior arm (3 sub-steps: insert + flex elbow, sweep over chest, deliver arm).</li>
+          <li>Steps 6-11 advanced maneuvers (Rubin, Wood corkscrew, Gaskin, Cleidotomy, Symphysiotomy, Zavanelli).</li>
+          <li>5 Fetal complications (brachial plexus, Erb's palsy, bone fractures, hypoxic brain injury, fetal death).</li>
+          <li>4 Maternal complications (PPH, vaginal lacerations + anal tears, uterine rupture, psychological stress).</li>
+          <li>Why shoulder dystocia is unpredictable + unpreventable (no reliable risk-factor-based prevention).</li>
+          <li>Why the operator must stop pulling on the head when the turtle sign is recognized.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="click-card references" open>
+      <summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+      <div class="click-body">
+        <ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+          <li>The <strong>PDF source</strong> for this chapter is a 3-page document (p. 152-154).</li>
+          <li>The source contains <strong>5 embedded images</strong> on page 2 of the PDF. <strong>All 5 are embedded</strong> in this infographic as green <code>.src-viz</code> cards. They were extracted to <code>extracted_images/29_shoulder_dystocia/</code> for archival.</li>
+          <li><strong>No external images were used</strong> in this chapter — all 5 visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+          <li><strong>Image inventory and disposition (all 5 embedded):</strong>
+            <ul>
+              <li><strong>Figure 1 (img-000):</strong> Turtle-neck sign composite (437×258, 12,025 B, page 2) — clinical photograph of fetal head retracting against perineum + turtle-crossing road sign as visual mnemonic. Caption: "Fetal head emerges and retracts against the perineum" — EMBEDDED in §3.</li>
+              <li><strong>Figure 2 (img-002):</strong> Anterior shoulder impaction mechanism (448×360, 26,481 B, page 2) — sagittal watercolor cross-section with arrow pointing to the impact site. No explicit source caption — EMBEDDED in §4.</li>
+              <li><strong>Figure 3 (img-001):</strong> McRobert's maneuver with suprapubic pressure (535×286, 13,053 B, page 2) — sagittal cross-section with purple arrows showing force vectors. No explicit source caption — EMBEDDED in §6 (step 3).</li>
+              <li><strong>Figure 4 (img-003):</strong> Suprapubic pressure — hand-drawn, view 1 (334×336, 21,780 B, page 2) — yellow/orange hand applying pressure to the impacted shoulder. No explicit source caption — EMBEDDED in §6 (step 4).</li>
+              <li><strong>Figure 5 (img-004):</strong> Suprapubic pressure — hand-drawn, view 2 (369×341, 20,953 B, page 2) — bold black arrows showing the oblique direction of force. No explicit source caption — EMBEDDED in §6 (step 4).</li>
+            </ul>
+          </li>
+          <li>Google Form self-assessment URL: <code>https://forms.gle/9rUuinHypUbjcESn6</code> (reproduced verbatim from source).</li>
+          <li>The source has a duplicate "1" label in the management algorithm — both "Call for help" and "Episiotomy" are labeled "1" in the source. In this HTML, they are sequentially renumbered 1-2 to avoid confusion, but the source's original numbering is preserved in the management table for the §7 steps (which are correctly numbered 5-10 in the source, with step 4 being "Suprapubic pressure" and step 5 being "Delivery of posterior arm").</li>
+          <li>The source's odd capitalization "Vaginal hand" (capital V, used as noun) in step 7 (Wood corkscrew) is preserved verbatim in the §7 table, with an inline note explaining the corrected form.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Topic 29 — Shoulder Dystocia · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 29 (p. 152-154, 3 pages) · Source-only visuals (5 of 5 in source) · 0 external visuals · Definition: arrested delivery of fetal shoulder after head delivery · Incidence 0.2-0.3% · "Unpredictable + unpreventable" · Turtle-neck sign (fetal head retracts against perineum) · 10 risk factors (5 antepartum + 5 intrapartum) · 11-step management (call for help → episiotomy → McRobert's + suprapubic = 90% → posterior arm → Rubin → Wood corkscrew → Gaskin → Cleidotomy → Symphysiotomy → Zavanelli) · 5 fetal complications (brachial plexus, Erb's, fractures, hypoxic brain injury, fetal death) + 4 maternal (PPH, lacerations, uterine rupture, psychological stress)
+  </footer>
+
+</div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="30_multiple_pregnancy">
+<div class="sec-hdr" style="background:#4a148c"><span class="ico">👯</span><h2>Multiple Pregnancy (Twins)</h2></div>
+<div class="sec-bd" style="background:#f3e5f5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 30 — Multiple Pregnancy</title>
+
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="pill">Topic 30 · Chapter 30 · Multiple Pregnancy</span>
+    <h1>Multiple Pregnancy</h1>
+    <p>A <strong>high-risk pregnancy with more than one fetus inside the uterus</strong>. This chapter covers the definition and key terminology (zygosity, chorionicity, amnionicity), the two embryological origins (monozygotic vs dizygotic), the timing-based classification of monozygotic cleavage (4 stages from days 1-3 to &gt;12 days), clinical and sonographic diagnosis, ultrasound chorionicity markers (lambda sign, T sign), antenatal + obstetric management (route of delivery by presentation, timing of delivery by chorionicity, third-stage precautions), and the full spectrum of maternal + fetal complications including <strong>twin-to-twin transfusion syndrome (TTTS)</strong>.</p>
+    <div class="chips">
+      <span class="chip">📖 Book Obstetrics 2025-2026 · p. 155-161 (7 pages)</span>
+      <span class="chip">🟢 Source visuals: 5 (all embedded)</span>
+      <span class="chip">🔴 External visuals: 0</span>
+      <span class="chip">📚 13 content sections preserved</span>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📑 Table of Contents · 13 sections</h3>
+    <ol>
+      <li><a href="#s1">ILOs of this chapter</a></li>
+      <li><a href="#s2">Definition &amp; key terminology</a></li>
+      <li><a href="#s3">Figure 1 · Singleton vs Twin comparison</a></li>
+      <li><a href="#s4">Monozygotic vs Dizygotic twins (incidence, risk, classification)</a></li>
+      <li><a href="#s5">Figure 2 · Monozygotic cleavage timing (4 stages)</a></li>
+      <li><a href="#s6">Diagnosis (signs, abdominal exam, ultrasound)</a></li>
+      <li><a href="#s7">Figures 3&amp;4 · Chorionicity ultrasound markers (Lambda &amp; T signs)</a></li>
+      <li><a href="#s8">Management · Antenatal care</a></li>
+      <li><a href="#s9">Management · Obstetric care (route + timing + 3rd stage)</a></li>
+      <li><a href="#s10">Complications · Maternal</a></li>
+      <li><a href="#s11">Complications · Fetal</a></li>
+      <li><a href="#s12">Twin-to-Twin Transfusion Syndrome (TTTS)</a></li>
+      <li><a href="#s13">Student activity · Questions · References</a></li>
+    </ol>
+  </div>
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h3 class="sec"><span class="n">1</span>ILOs of this chapter</h3>
+    <div class="card">
+      <h4 class="sub" style="margin-top:0">Intended Learning Outcomes</h4>
+      <ol class="step-list">
+        <li>To <strong>understand the definition and variable developmental forms of multiple pregnancy</strong>.</li>
+        <li>To be able to <strong>describe the clinical picture, and obstetric management of multiple pregnancy</strong>.</li>
+        <li>To be able to <strong>outline the possible maternal and fetal complications of multiple pregnancy</strong>.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- §2 Definition + Key terminology -->
+  <section id="s2">
+    <h3 class="sec"><span class="n">2</span>Definition &amp; key terminology</h3>
+    <div class="def-card">
+      <h4>📋 Definition</h4>
+      <p><strong>A pregnancy with more than 1 fetus inside the uterus.</strong></p>
+    </div>
+    <p style="font-size:13.5px;color:#475569;margin:14px 0 6px">The chapter then defines the <strong>5 most important terms</strong> used in multiple pregnancy — these are the vocabulary that the rest of the chapter builds on, so they must be memorized first.</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:24%">Term</th>
+          <th>Definition (verbatim from source)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Zygosity</strong></td>
+          <td><strong>The genetic make up of a twin pregnancy</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Monozygotic twins</strong></td>
+          <td><strong>Result from division of a single zygote</strong><br>Share the same genetic material<br>Identical twins</td>
+        </tr>
+        <tr>
+          <td><strong>Dizygotic twins</strong></td>
+          <td><strong>Result from 2 separate eggs fertilized by 2 separate sperm</strong><br>Share approximately 50% of the genetic material<br>Fraternal twins</td>
+        </tr>
+        <tr>
+          <td><strong>Chorionicity</strong></td>
+          <td><strong>The number of chorions (equal to the number of placentas)</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Amnionicity</strong></td>
+          <td><strong>The number of amnions surrounding the fetuses</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card pearl">
+      <h5>💡 CLINICAL PEARL — "Zygote" vs "Chorion" vs "Amnion"</h5>
+      <p style="font-size:13px">These three words refer to three different layers of biology and three different diagnostic questions:</p>
+      <ul style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+        <li><strong>Zygote</strong> = the fertilized egg before it divides. <em>Zygosity</em> asks: <strong>"Did the twins come from one zygote or two?"</strong> → monozygotic (= one zygote → identical) vs dizygotic (= two zygotes → fraternal).</li>
+        <li><strong>Chorion</strong> = the outer fetal membrane that becomes the placenta. <em>Chorionicity</em> asks: <strong>"How many placentas do the twins share?"</strong> → dichorionic (= 2 placentas) vs monochorionic (= 1 shared placenta).</li>
+        <li><strong>Amnion</strong> = the inner fetal membrane that holds the amniotic fluid. <em>Amnionicity</em> asks: <strong>"How many amniotic sacs do the twins have?"</strong> → diamniotic (= 2 sacs) vs monoamniotic (= 1 shared sac).</li>
+      </ul>
+      <p style="font-size:13px;margin:6px 0 0">The <strong>timing</strong> of the monozygotic embryo's cleavage (see §5 + Figure 2) determines the chorionicity and amnionicity — the later the cleavage, the more structures the twins share. The clinical importance of chorionicity is that <strong>monochorionic twins share a placenta</strong> and can therefore develop <strong>twin-to-twin transfusion syndrome (TTTS)</strong> — see §12.</p>
+    </div>
+  </section>
+
+  <!-- §3 Figure 1 — Singleton vs Twin comparison -->
+  <section id="s3">
+    <h3 class="sec"><span class="n">3</span>Figure 1 · Singleton vs Twin comparison</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The opening visual of the chapter — a side-by-side comparison of a <strong>singleton pregnancy</strong> (one fetus) and a <strong>twin pregnancy</strong> (two fetuses). The same pink/peach cross-sectional illustration style is used for both, with the number of yellow smiley-face icons below each panel reinforcing the count.</p>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-000</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 1 — <strong>Singleton vs Twin pregnancy: visual comparison of one fetus versus two fetuses inside the uterus.</strong> A pair of pink/peach cross-sectional diagrams of pregnant uteruses, presented side-by-side. The left panel contains a single fetus in cephalic presentation with its umbilical cord, accompanied by one yellow smiley face below the panel. The right panel contains two fetuses in the same uterus, each with its own umbilical cord, accompanied by two yellow smiley faces below the panel. This figure visually anchors the chapter's core concept — a <strong>multiple pregnancy</strong> is simply a pregnancy with more than one fetus — and it is the only figure in the chapter that uses smiley-face icons as a counting aid.</div>
+    </div>
+    <div class="card note">
+      <h5>🧠 MEMORY ANCHOR — Why start with this comparison?</h5>
+      <p style="font-size:13px">The chapter opens with this comparison because the entire downstream management is driven by one question: <strong>how many fetuses?</strong> Antenatal care frequency, ultrasound schedule, delivery route, delivery timing, third-stage precautions, and complication surveillance <em>all</em> change when the answer is 2 (or 3+) instead of 1. The smiley-face icons below each panel are the simplest possible "count" — and they remind the clinician that everything that follows in the chapter is a consequence of that count being greater than 1.</p>
+    </div>
+  </section>
+
+  <!-- §4 Monozygotic vs Dizygotic twins -->
+  <section id="s4">
+    <h3 class="sec"><span class="n">4</span>Monozygotic vs Dizygotic twins</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Twins are classified by <strong>zygosity</strong> (genetic origin) into two main groups — <strong>monozygotic</strong> ("identical", from 1 zygote) and <strong>dizygotic</strong> ("fraternal", from 2 zygotes). The chapter gives the <strong>incidence</strong>, <strong>6 risk factors</strong> (one applies only to dizygotic), and the <strong>classification</strong> by chorionicity + amnionicity.</p>
+
+    <h4 class="sub">📊 Incidence</h4>
+    <div class="grid-2">
+      <div class="def-card">
+        <h4>Twins</h4>
+        <p><strong>1 in 80 pregnancies.</strong></p>
+      </div>
+      <div class="def-card">
+        <h4>Triplets</h4>
+        <p><strong>1 in 80² = 1 in 6,400 pregnancies.</strong></p>
+      </div>
+    </div>
+
+    <h4 class="sub">📋 Risk factors (6 — one applies only to dizygotic)</h4>
+    <div class="grid-2">
+      <div class="risk-card"><b>1. Prior history of multiple pregnancies</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Recurrence risk in subsequent pregnancies.</p></div>
+      <div class="risk-card"><b>2. History of twins in the maternal family</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Hereditary predisposition, particularly for dizygotic twinning.</p></div>
+      <div class="risk-card"><b>3. Maternal weight and height</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Women with a BMI &ge; 30 kg/m² <strong>and</strong> &ge; 165 cm are at <strong>&uarr; risk for dizygotic twin births</strong> (the only risk factor the source flags as <em>specific to dizygotic</em>).</p></div>
+      <div class="risk-card"><b>4. &uarr; Maternal age</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Older mothers have higher FSH levels, increasing the chance of multiple ovulation.</p></div>
+      <div class="risk-card"><b>5. &uarr; Parity</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Multiparous women have higher rates of multiple pregnancy.</p></div>
+      <div class="risk-card"><b>6. Racial and ethnic variation</b><p style="font-size:12px;color:#475569;margin:2px 0 0">Certain ethnic groups have higher baseline dizygotic twinning rates (e.g., West African populations have the highest rates worldwide; East Asian populations have among the lowest).</p></div>
+    </div>
+
+    <h4 class="sub">📋 Classification</h4>
+    <div class="grid-2">
+      <div class="def-card" style="border-left-color:#16A34A">
+        <h4 style="color:#166534">Dizygotic twins</h4>
+        <p><strong>Always dichorionic-diamniotic.</strong></p>
+        <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Two separate eggs + two separate sperm → two separate zygotes → each develops its own placenta and amniotic sac. There is no monochorionic form of dizygotic twinning.</em></p>
+      </div>
+      <div class="def-card" style="border-left-color:#0EA5E9">
+        <h4 style="color:#0E7490">Monozygotic twins</h4>
+        <p><strong>Classified based on the timing of cleavage after fertilization.</strong></p>
+        <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>The timing of cleavage determines chorionicity and amnionicity — the 4 stages are in §5 + Figure 2.</em></p>
+      </div>
+    </div>
+    <div class="card danger" style="margin-top:6px">
+      <h5>🚨 DANGER — BMI &ge; 30 AND height &ge; 165 cm is a SINGLE risk factor (not two)</h5>
+      <p style="font-size:13px">The source lists "Maternal weight and height" as a single risk factor, with the specific quantitative criterion <strong>BMI &ge; 30 kg/m² AND &ge; 165 cm</strong> applying to <strong>dizygotic twin births</strong> only. It is easy to misread this as two separate risk factors (one for weight, one for height), but the source treats it as a single combined criterion — both the BMI threshold <em>and</em> the height threshold must be met for the increased dizygotic risk to apply.</p>
+    </div>
+  </section>
+
+  <!-- §5 Figure 2 — Monozygotic cleavage timing -->
+  <section id="s5">
+    <h3 class="sec"><span class="n">5</span>Figure 2 · Monozygotic cleavage timing (4 stages)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">For monozygotic twins, the chapter's central embryological rule: <strong>the timing of cleavage after fertilization determines the chorionicity and amnionicity</strong>. The source lists 4 stages, ranging from <strong>days 1-3</strong> (earliest cleavage = most separate membranes) to <strong>after 12 days</strong> (latest cleavage = least separate = conjoined twins).</p>
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-001</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 2 — <strong>Monozygotic cleavage timing: 4 stages from morula to embryonic disc, with the resulting chorionicity/amnionicity.</strong> A 4-row embryology diagram. Each row has three panels: the left shows the embryo at that developmental stage, the middle indicates the cleavage (splitting) event, and the right shows the resulting twin configuration. <strong>Row 1 (Morula, days 1-3):</strong> solid mulberry-like cell cluster → splits → <strong>Dichorionic-Diamniotic</strong> twins (2 separate placentas, 2 separate sacs). <strong>Row 2 (Blastocyst, days 4-8):</strong> hollow ring of trophoblast with inner cell mass → splits → <strong>Monochorionic-Diamniotic</strong> twins (1 shared placenta, 2 separate sacs). <strong>Row 3 (Implanted blastocyst, days 8-13):</strong> blastocyst embedded in uterine wall → splits → <strong>Monochorionic-Monoamniotic</strong> twins (1 shared placenta, 1 shared sac, no intertwin membrane). <strong>Row 4 (Formed embryonic disc, days 13-15):</strong> bilaminar disc with primitive streak → incomplete splits → <strong>Conjoined twins</strong> (fused at varying body sites). The unifying principle: <strong>the later the cleavage, the more structures the twins must share</strong>.</div>
+    </div>
+
+    <h4 class="sub">📋 The 4 stages of monozygotic cleavage (verbatim from source)</h4>
+    <div class="grid-2">
+      <div class="timing-card" style="border-left-color:#16A34A">
+        <h4 style="color:#166534">Stage 1 · In 1st 3 days</h4>
+        <p><strong>&rarr; Dichorionic Diamniotic.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>Earliest cleavage. The morula splits before the chorion forms → each twin gets its own chorion and amnion, and its own placenta. The most separate form of identical twinning.</em></p>
+      </div>
+      <div class="timing-card" style="border-left-color:#0EA5E9">
+        <h4 style="color:#0E7490">Stage 2 · 4-8 days</h4>
+        <p><strong>&rarr; Monochorionic Diamniotic.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>The blastocyst splits after the chorion has formed but before the amnion forms → twins share one chorion (one placenta) but each has its own amnion. The most common form of identical twinning. Risk of TTTS (see §12).</em></p>
+      </div>
+      <div class="timing-card" style="border-left-color:#D97706">
+        <h4 style="color:#92400E">Stage 3 · 8-12 days</h4>
+        <p><strong>&rarr; Monochorionic Monoamniotic.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>The implanted blastocyst splits after the amnion has formed → twins share one chorion and one amnion (no intertwin membrane). Rare, and high-risk because of cord entanglement.</em></p>
+      </div>
+      <div class="timing-card" style="border-left-color:#DC2626">
+        <h4 style="color:#991B1B">Stage 4 · After 12 days</h4>
+        <p><strong>&rarr; Conjoined twins.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>The embryonic disc splits only partially after it has formed → the twins are physically fused at varying body sites. The rarest and most severe form of monozygotic twinning.</em></p>
+      </div>
+    </div>
+
+    <div class="card pearl">
+      <h5>💡 CLINICAL PEARL — "The later, the more shared" — the unifying rule</h5>
+      <p style="font-size:13px">Notice the pattern in the 4 stages: as the cleavage day number goes up (1-3 &rarr; 4-8 &rarr; 8-12 &rarr; &gt;12), the number of shared structures goes up (dichorionic-diamniotic &rarr; monochorionic-diamniotic &rarr; monochorionic-monoamniotic &rarr; conjoined). The biological reason is intuitive: the earlier the split, the more time each half-embryo has to develop its own membranes before the next membrane forms around it. Clinically, the more structures the twins share, the higher the risk of complications — so monochorionic-monoamniotic twins are higher-risk than monochorionic-diamniotic twins, which in turn are higher-risk than dichorionic-diamniotic twins.</p>
+    </div>
+  </section>
+
+  <!-- §6 Diagnosis -->
+  <section id="s6">
+    <h3 class="sec"><span class="n">6</span>Diagnosis (signs, abdominal exam, ultrasound)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The chapter divides the diagnosis of multiple pregnancy into three streams: <strong>signs and symptoms</strong> (subjective/observed), <strong>abdominal examination</strong> (clinical bedside — inspection, palpation, auscultation), and <strong>ultrasound findings</strong> (definitive imaging). Ultrasound is the gold standard.</p>
+
+    <h4 class="sub">📋 Signs and symptoms</h4>
+    <div class="card">
+      <ul style="font-size:13.5px;color:#475569;line-height:1.7;margin:6px 0 0;padding-left:20px">
+        <li><strong>Exaggerated early pregnancy symptoms (e.g. hyperemesis gravidarum).</strong> The higher β-hCG of a multiple pregnancy worsens nausea and vomiting in the first trimester.</li>
+        <li><strong>Symphyseal-fundal height is greater than expected for gestational age.</strong> Two fetuses fill the uterus faster than one, so the fundal height is disproportionately large.</li>
+        <li><strong>Abdominal overdistension.</strong> Visible abdominal distension beyond what is expected for dates.</li>
+      </ul>
+    </div>
+
+    <h4 class="sub">📋 Abdominal examination</h4>
+    <div class="diag-card exam">
+      <h4>I. Inspection</h4>
+      <p style="font-size:13.5px;margin:0 0 6px"><strong>Oversized uterus.</strong> The abdomen is visibly larger than expected for gestational age.</p>
+    </div>
+    <div class="diag-card exam">
+      <h4>II. Palpation</h4>
+      <ul>
+        <li><strong>Fundal level:</strong> higher than the period of amenorrhea (i.e. the fundus sits higher than the date would suggest).</li>
+        <li><strong>Fundal, umbilical and first pelvic grips:</strong> can detect <strong>multiple fetal poles (at least 3 poles should be palpated)</strong>. Fetal limbs are felt as multiple knobs.</li>
+      </ul>
+    </div>
+    <div class="diag-card exam">
+      <h4>III. Auscultation</h4>
+      <ul>
+        <li><strong>Fetal heart sounds are heard simultaneously by 2 observers with a minimum difference of 10 beats/minute.</strong> Two observers, two stethoscopes, two fetuses — the two heart rates differ by &ge; 10 bpm, confirming two distinct fetuses.</li>
+        <li><strong>Arnaux sign:</strong> The superimposition of 2 fetal heart sounds produce a <strong>gallop sound</strong>. (A "gallop" sound is a triphasic rhythm that emerges when two distinct but overlapping heart sounds fuse into one another at certain positions on the abdomen.)</li>
+      </ul>
+    </div>
+
+    <h4 class="sub">📋 Ultrasound findings</h4>
+    <div class="diag-card us">
+      <h4>Sonographic diagnosis (gold standard)</h4>
+      <ul>
+        <li><strong>&ge; 2 fetuses and &ge; 2 heart activities.</strong> Direct visualization of two or more fetuses, each with its own cardiac activity.</li>
+        <li><strong>Diagnosis of congenital anomalies and placenta previa.</strong> Ultrasound also allows early detection of structural anomalies and abnormal placental position.</li>
+      </ul>
+    </div>
+    <div class="card note">
+      <h5>🧠 MEMORY ANCHOR — "3 poles, 2 rates, 1 gallop"</h5>
+      <p style="font-size:13px">A simple way to remember the three bedside findings that distinguish a twin from a singleton pregnancy:</p>
+      <ul style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+        <li><strong>3 poles</strong> on palpation (instead of the usual 2 poles — head + breech) — at least 3 fetal poles must be palpable.</li>
+        <li><strong>2 rates</strong> on auscultation — two observers hearing two distinct heart rates that differ by &ge; 10 bpm.</li>
+        <li><strong>1 gallop</strong> on auscultation — Arnaux sign, the superimposition of two heart sounds producing a triphasic gallop rhythm.</li>
+      </ul>
+      <p style="font-size:13px;margin:6px 0 0">When all three findings are present, multiple pregnancy is highly likely at the bedside — and ultrasound is the next step to confirm and to determine chorionicity (see §7).</p>
+    </div>
+  </section>
+
+  <!-- §7 Chorionicity ultrasound markers -->
+  <section id="s7">
+    <h3 class="sec"><span class="n">7</span>Figures 3&amp;4 · Chorionicity ultrasound markers (Lambda &amp; T signs)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Once ultrasound has confirmed &ge; 2 fetuses, the next critical question is <strong>chorionicity</strong> — because the chorionicity determines the entire downstream management plan (frequency of ultrasounds, timing of delivery, risk of TTTS). The source describes the <strong>3 chorionicity patterns</strong> and their distinct ultrasound signatures.</p>
+
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-002 · Dichorionic Triplets</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 3 — <strong>Di-chorionic triplets: ultrasound showing one monochorionic-diamniotic twin pair + one singleton with its own chorion.</strong> A grayscale obstetric ultrasound image with three numbered fetuses (1, 2, 3). Fetus 1 is in the lower left, Fetus 2 is in the lower right, and Fetus 3 is in the upper right. An <strong>arrowhead</strong> (triangle) at the top of the image points to a <strong>thin intertwin membrane</strong> — the signature of a <strong>monochorionic-diamniotic (MCDA) twin pair</strong> (Fetuses 2 and 3 share one chorion, with a thin T-sign membrane between them). An <strong>arrow</strong> on the left points to a <strong>thick intertwin membrane</strong> with the <strong>lambda (twin peak) sign</strong> — the signature of a <strong>dichorionic-diamniotic (DCDA) separation</strong> (Fetus 1 has its own complete chorion). The image illustrates the most common form of "dichorionic" triplet pregnancy: one MCDA pair + one singleton sharing no chorion with either.</div>
+    </div>
+
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-003 · Trichorionic Triplets</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 4 — <strong>Tri-chorionic triplets: ultrasound showing three separate chorions, each with its own fetus and amniotic sac.</strong> A grayscale obstetric ultrasound image in the classic sector/fan-shaped format, with three labeled fetuses (1, 2, 3) in separate gestational sacs. Fetus 3 is in the upper portion, Fetus 2 in the center-left, and Fetus 1 in the lower right. <strong>Two white arrowheads</strong> (left and right) point to the <strong>thin intertwin membranes</strong> between the three chorionic sacs. The label box in the bottom right corner explicitly states <strong>"Tri-chorionic triplets"</strong>. This is the most favorable triplet configuration in terms of complications — there is no risk of TTTS because no two fetuses share a placenta.</div>
+    </div>
+
+    <h4 class="sub">📋 The 3 chorionicity patterns on ultrasound</h4>
+    <div class="chorio-card dcda">
+      <h4>🟢 Dichorionic-Diamniotic (DCDA)</h4>
+      <ul>
+        <li><strong>Lambda sign:</strong> a thick, triangular protrusion of tissue leading up to the intertwin membrane. (The "lambda" of the Greek letter &lambda; — the wedge of chorionic tissue between the two amniotic sacs.)</li>
+        <li><strong>Thick intertwin membrane.</strong></li>
+        <li><strong>2 separate placentae.</strong></li>
+      </ul>
+    </div>
+    <div class="chorio-card mcda">
+      <h4>🔵 Monochorionic-Diamniotic (MCDA)</h4>
+      <ul>
+        <li><strong>T sign:</strong> the interface between 2 amniotic membranes. (The "T" of the letter T — two thin amniotic membranes meeting the placenta at a right angle, with no wedge of chorion between them.)</li>
+        <li><strong>Thin intertwin membrane.</strong></li>
+        <li><strong>Single placenta.</strong></li>
+      </ul>
+    </div>
+    <div class="chorio-card mcma">
+      <h4>🟠 Monochorionic-Monoamniotic (MCMA)</h4>
+      <ul>
+        <li><strong>No intertwin membrane.</strong> (Because both fetuses share the same amniotic sac, there is no membrane separating them on ultrasound — this is the diagnostic feature.)</li>
+      </ul>
+    </div>
+
+    <div class="card pearl">
+      <h5>💡 CLINICAL PEARL — Lambda vs T sign in one line</h5>
+      <p style="font-size:13px"><strong>Lambda (&lambda;) = thick wedge = dichorionic</strong> (two placentas, the wedge is the chorion between them). <strong>T = thin interface = monochorionic</strong> (one placenta, the T is where the two amniotic membranes meet the shared placenta). This is the single most important ultrasound distinction in multiple pregnancy, because <strong>monochorionic = shared placenta = risk of TTTS</strong> (see §12).</p>
+    </div>
+  </section>
+
+  <!-- §8 Management — Antenatal care -->
+  <section id="s8">
+    <h3 class="sec"><span class="n">8</span>Management · Antenatal care</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The opening of the management section: <strong>multiple pregnancy is considered a high-risk pregnancy</strong> and the antenatal care schedule is intensified accordingly. The source lists 7 specific adjustments.</p>
+    <div class="card">
+      <h4 class="sub" style="margin-top:0">📋 Antenatal care adjustments (7 — verbatim from source)</h4>
+      <ol class="step-list">
+        <li><strong>Multiple pregnancy is considered a high-risk pregnancy.</strong> This is the rationale for all the adjustments that follow.</li>
+        <li><strong>More frequent prenatal visits.</strong> Standard prenatal visit frequency is insufficient for a multiple pregnancy.</li>
+        <li><strong>More frequent ultrasounds to monitor fetal growth.</strong> Twin pregnancies have higher rates of growth restriction and discordant growth; serial growth scans are required.</li>
+        <li><strong>Adequate maternal nutrition.</strong> Two fetuses require more calories, protein, iron, and folate than one.</li>
+        <li><strong>Monitoring for maternal complications (e.g. gestational diabetes and preeclampsia).</strong> Both GDM and preeclampsia are more common in multiple pregnancies (see §10 complications).</li>
+        <li><strong>Monitoring for fetal complications (e.g. congenital anomalies).</strong> The higher anomaly rate in multiple pregnancies (especially monozygotic) requires targeted sonographic surveillance.</li>
+        <li><strong>Prevention of preterm delivery.</strong> Preterm labor is the most common fetal complication of multiple pregnancy (see §11), and proactive measures (cervical-length screening, progesterone in selected cases, lifestyle modification) are part of standard care.</li>
+      </ol>
+    </div>
+    <div class="card note">
+      <h5>🧠 MEMORY ANCHOR — "7 Antenatal care adjustments" (the rule of "more")</h5>
+      <p style="font-size:13px">Notice that the theme running through all 7 adjustments is <strong>"more"</strong> — more visits, more ultrasounds, more nutrition, more monitoring (for both maternal and fetal complications), and more active prevention (of preterm delivery). The principle is: a multiple pregnancy concentrates the risks of a singleton pregnancy and adds new risks of its own, so antenatal care is intensified proportionally.</p>
+    </div>
+  </section>
+
+  <!-- §9 Management — Obstetric care -->
+  <section id="s9">
+    <h3 class="sec"><span class="n">9</span>Management · Obstetric care (route + timing + 3rd stage)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The obstetric management of multiple pregnancy has three components: <strong>route of delivery</strong> (4 presentation-based rules), <strong>timing of delivery</strong> (3 chorionicity-based windows), and <strong>third-stage precautions</strong> (5 specific steps to reduce PPH and sepsis risk).</p>
+
+    <h4 class="sub">📋 Route of delivery</h4>
+    <div class="route-card cs">
+      <h4>🚨 Cesarean section (CS) — mandatory in two situations</h4>
+      <p><strong>Multiple pregnancies in which the presenting fetus is not vertex and for all higher-order multiple pregnancies (triplets) &rarr; Cesarean section.</strong></p>
+      <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Why: a non-vertex presenting twin (breech or transverse) cannot be safely delivered vaginally because the second twin is at high risk of head entrapment or cord prolapse. Triplets (&ge; 3 fetuses) are also delivered by CS by convention — the logistical complexity of monitoring and delivering three fetuses in sequence makes vaginal delivery unsafe.</em></p>
+    </div>
+    <div class="route-card cs">
+      <h4>🚨 Cesarean section — also mandatory for monochorionic-monoamniotic twins</h4>
+      <p><strong>Monochorionic-monoamniotic twins &rarr; Cesarean section.</strong></p>
+      <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Why: MCMA twins share one amniotic sac with no intertwin membrane, so their umbilical cords can become entangled — vaginal delivery would risk sudden fetal death from cord compression during labor.</em></p>
+    </div>
+    <div class="route-card vag">
+      <h4>✅ Vaginal delivery — vertex/vertex presentation</h4>
+      <p><strong>Vertex/vertex presentation &rarr; vaginal delivery.</strong></p>
+      <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>Both twins in cephalic presentation — the safest configuration for vaginal delivery.</em></p>
+    </div>
+    <div class="route-card mixed">
+      <h4>🟠 Vaginal delivery of 1st twin + maneuver for 2nd twin — vertex/nonvertex</h4>
+      <p><strong>Vertex/nonvertex presentation &rarr; vaginal delivery of the 1st twin. Then, external cephalic version or internal podalic version and breech extraction of 2nd twin.</strong></p>
+      <p style="font-size:12.5px;color:#475569;margin:6px 0 0"><em>The first twin is delivered vaginally in cephalic presentation. The second twin (non-vertex) is then either turned to cephalic by external version, or delivered breech by internal podalic version followed by breech extraction. This combined approach is the standard of care for vertex/nonvertex twins.</em></p>
+    </div>
+
+    <h4 class="sub">📋 Timing of delivery in uncomplicated cases</h4>
+    <p style="font-size:13.5px;color:#475569;margin:6px 0 8px">The source's rule: <strong>depending on chorionicity and amnionicity</strong>. The later the chorionicity in the cleavage timing (i.e. the more structures shared), the <strong>earlier</strong> the delivery — because the risk of shared-placenta complications (TTTS, cord entanglement) rises with gestational age.</p>
+    <div class="grid-3">
+      <div class="timing-card" style="border-left-color:#16A34A">
+        <h4 style="color:#16634D">🟢 Dichorionic-Diamniotic</h4>
+        <p><strong>38 0/7 weeks – 38 6/7 weeks.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>Lowest-risk chorionicity → can safely go to early term (38 weeks).</em></p>
+      </div>
+      <div class="timing-card" style="border-left-color:#0EA5E9">
+        <h4 style="color:#0E7490">🔵 Monochorionic-Diamniotic</h4>
+        <p><strong>34 0/7 weeks – 37 6/7 weeks.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>Shared placenta → higher late-pregnancy risk of TTTS and selective growth restriction → deliver before 38 weeks.</em></p>
+      </div>
+      <div class="timing-card" style="border-left-color:#D97706">
+        <h4 style="color:#92400E">🟠 Monochorionic-Monoamniotic</h4>
+        <p><strong>32 0/7 weeks – 34 6/7 weeks.</strong></p>
+        <p style="font-size:12px;margin-top:4px"><em>Highest late-pregnancy risk (cord entanglement + TTTS) → deliver even earlier, around 32-34 weeks.</em></p>
+      </div>
+    </div>
+
+    <h4 class="sub">📋 In the third stage of labor</h4>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 8px">5 precautions — the source lists them as 5 bullet points under "In the third stage":</p>
+    <div class="card">
+      <ol class="step-list">
+        <li><strong>Examine the placenta and the membranes for zygosity.</strong> After delivery, the placenta and membranes are inspected — chorionicity can be confirmed anatomically, and zygosity can be inferred (monochorionic = monozygotic with rare exceptions; dichorionic = either dizygotic or early-cleavage monozygotic).</li>
+        <li><strong>If retained, manual removal may be performed.</strong> The overdistended uterus is at higher risk of retained products; manual removal is performed if needed.</li>
+        <li><strong>Exploration of genital tract for retained products and lacerations.</strong> Multiple pregnancy + operative delivery (in vertex/nonvertex) increases the risk of genital-tract trauma.</li>
+        <li><strong>Guard against postpartum hemorrhage by uterine massage &amp; ecbolics.</strong> Uterine atony is a leading cause of PPH in multiple pregnancy — the overdistended uterus contracts poorly. Active management with uterine massage and ecbolic drugs (oxytocin, methylergometrine, misoprostol) is standard.</li>
+        <li><strong>Guard against puerperal sepsis.</strong> Multiple pregnancy is associated with higher rates of chorioamnionitis and postpartum infection — antibiotic prophylaxis and close monitoring are required.</li>
+      </ol>
+    </div>
+    <div class="card danger" style="margin-top:6px">
+      <h5>🚨 DANGER — Source typo "amnioniticy" in §9 (preserved verbatim, inline note added)</h5>
+      <p style="font-size:13px">The source's "Timing of delivery" subsection begins with the phrase "Depending on chorionicity and <strong>amnioniticy</strong>." The correct spelling is <strong>"amnionicity"</strong> (the property of having one or more amnions — parallel to "chorionicity"). The source's typo is preserved verbatim in the §9 heading below, and this inline DANGER callout explains the correction.</p>
+    </div>
+  </section>
+
+  <!-- §10 Maternal complications -->
+  <section id="s10">
+    <h3 class="sec"><span class="n">10</span>Complications · Maternal</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists <strong>9 maternal complications</strong> of multiple pregnancy. Most are conditions that are also seen in singleton pregnancy but at <strong>higher frequency</strong> in multiples (GDM, preeclampsia, anemia, PPH) — and a few are <strong>multiples-specific</strong> in mechanism (postpartum hemorrhage from uterine overdistension, increased cesarean rate from malpresentation).</p>
+    <div class="comp-card maternal">
+      <h4>🤰 Maternal Complications (9 — verbatim from source)</h4>
+      <ul>
+        <li><strong>Hyperemesis gravidarum.</strong> Exaggerated nausea + vomiting in early pregnancy, driven by higher β-hCG.</li>
+        <li><strong>Gestational diabetes mellitus.</strong> Higher placental mass → more insulin resistance.</li>
+        <li><strong>Hypertensive pregnancy disorders (e.g. preeclampsia).</strong> Larger placental mass + greater cardiovascular demand.</li>
+        <li><strong>Anemia.</strong> Greater iron + folate demand from two fetuses; iron-deficiency anemia is common.</li>
+        <li><strong>Excessive weight gain.</strong> Two fetuses + extra placental tissue + extra amniotic fluid + extra maternal blood volume.</li>
+        <li><strong>Postpartum hemorrhage (due to uterine atony or lacerations).</strong> Overdistended uterus contracts poorly (atony) and the higher rate of operative delivery increases genital-tract lacerations.</li>
+        <li><strong>Miscarriages.</strong> Higher first-trimester pregnancy loss rate, particularly vanishing-twin phenomenon (one twin resorbs, the other continues).</li>
+        <li><strong>Placental abnormalities (e.g., placenta previa).</strong> Larger placental footprint increases the chance that the placenta covers the cervical os.</li>
+        <li><strong>Increased risk for cesarean delivery.</strong> Higher rate of non-vertex presentation, fetal distress, and CS-mandatory configurations (triplets, MCMA, non-vertex presenting twin).</li>
+      </ul>
+    </div>
+    <div class="card note">
+      <h5>🧠 MEMORY ANCHOR — The "3-fold higher" rule for maternal complications</h5>
+      <p style="font-size:13px">A useful clinical rule of thumb: most of the complications in the list above (GDM, preeclampsia, anemia, PPH, preterm labor) occur <strong>2-3 times more often</strong> in twin pregnancies than in singleton pregnancies. The biological reason is that two fetuses effectively <strong>double</strong> the placental mass, the blood volume demand, the iron demand, the mechanical load on the uterus, and the cardiovascular workload — so every complication that scales with placental mass or cardiovascular demand is amplified proportionally.</p>
+    </div>
+  </section>
+
+  <!-- §11 Fetal complications -->
+  <section id="s11">
+    <h3 class="sec"><span class="n">11</span>Complications · Fetal</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source lists <strong>5 fetal complications</strong>. Twin-to-twin transfusion syndrome (TTTS) is the most distinctive — it is unique to monochorionic twins and is covered in detail in §12.</p>
+    <div class="comp-card fetal">
+      <h4>🍼 Fetal Complications (5 — verbatim from source)</h4>
+      <ul>
+        <li><strong>Preterm labor and birth.</strong> The most common fetal complication; overdistended uterus triggers earlier labor. Mean gestational age at delivery for twins is ~36 weeks, and ~50% of twin pregnancies deliver before 37 weeks.</li>
+        <li><strong>Congenital anomalies.</strong> Higher anomaly rate in multiples, especially monozygotic (cardiac, neural tube, and midline defects are all more common). Note: the same fetus cannot have two structurally identical anomalies from one set of genetic material, but monozygotic twins are at higher risk of structural defects than dizygotic twins.</li>
+        <li><strong>Low birth weight.</strong> Each twin tends to be smaller than a singleton of the same gestational age — and many twins deliver preterm, compounding the LBW risk.</li>
+        <li><strong>Discordant growth.</strong> Significant (&gt; 20%) difference in birth weight between the two twins. Discordant growth is associated with higher perinatal mortality, particularly when due to TTTS or selective fetal growth restriction (sFGR) in MCDA twins.</li>
+        <li><strong>Neonatal death.</strong> The most severe fetal outcome; driven by the combination of preterm delivery, LBW, anomalies, and TTTS-related complications.</li>
+      </ul>
+    </div>
+    <div class="card danger" style="margin-top:6px">
+      <h5>🚨 DANGER — "Neonatal death" is the only fatal complication on the list</h5>
+      <p style="font-size:13px">Of the 5 fetal complications, 4 (preterm labor, anomalies, LBW, discordant growth) are <strong>morbidities</strong> that may resolve with appropriate neonatal care — but <strong>neonatal death</strong> is a <strong>mortality</strong>, and it is what all the upstream interventions (intensified antenatal care, chorionicity-determined delivery timing, TTTS surveillance) are designed to prevent. Every other complication on the list is a risk factor for this one.</p>
+    </div>
+  </section>
+
+  <!-- §12 TTTS -->
+  <section id="s12">
+    <h3 class="sec"><span class="n">12</span>Twin-to-Twin Transfusion Syndrome (TTTS)</h3>
+    <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The chapter's most distinctive fetal complication: <strong>twin-to-twin transfusion syndrome</strong>, a disorder unique to <strong>monochorionic</strong> twins (twins sharing one placenta). The syndrome is driven by imbalanced blood flow through placental vascular anastomoses between the two fetuses.</p>
+
+    <div class="img-card src-viz">
+      <span class="badge">Source Image · img-004</span>
+      <div class="img-frame">
+        
+      </div>
+      <div class="cap">Figure 5 — <strong>Twin Pregnancy: Twin-to-Twin Transfusion — anatomical setup of a monochorionic twin pregnancy.</strong> A medical/educational illustration titled "Twin Pregnancy: Twin to Twin Transfusion" showing a cross-sectional, anatomical view of a pregnant uterus containing twins. The labeled structures are: <strong>Placenta</strong> (top right — the shared organ attached to the uterine wall where both umbilical cords connect), <strong>Umbilical Cord</strong> (two separate cords, one from each fetus, both attaching to the shared placenta), <strong>Fetus</strong> (two developing babies in curled fetal position, in different orientations), and <strong>Cervix</strong> (bottom — the lower portion of the uterus). The illustration highlights the anatomic prerequisite for TTTS: <strong>two fetuses sharing a single placenta</strong>. It is through this shared placenta that arterio-venous anastomoses allow imbalanced blood flow from one twin (the donor) to the other (the recipient).</div>
+    </div>
+
+    <div class="card danger">
+      <h5>🚨 TTTS — definition (verbatim from source)</h5>
+      <p style="font-size:13.5px;line-height:1.7;margin:0">
+        <strong>Occurs in 10%-15% of monochorionic twins.</strong><br>
+        <strong>Due to arterio-venous anastomosis with imbalanced blood flow.</strong><br>
+        <strong>Blood flows in a fixed direction from 1 fetus (donor) to another (recipient).</strong>
+      </p>
+    </div>
+
+    <h4 class="sub">📋 Donor twin vs Recipient twin — the asymmetric pathophysiology</h4>
+    <div class="ttts-grid">
+      <div class="ttts-card donor">
+        <h4>🩸 Donor twin — gives blood away</h4>
+        <ul>
+          <li><strong>Anemia</strong> (low red-cell mass from losing blood to the recipient).</li>
+          <li><strong>Growth restriction</strong> (poor perfusion of fetal tissues → IUGR).</li>
+          <li><strong>Oligohydramnios</strong> (low amniotic fluid — the donor's sac becomes visibly "stuck" against the uterine wall on ultrasound, the "stuck twin" sign).</li>
+        </ul>
+      </div>
+      <div class="ttts-card recipient">
+        <h4>💧 Recipient twin — receives excess blood</h4>
+        <ul>
+          <li><strong>Polycythemia</strong> (high red-cell mass from receiving excess blood).</li>
+          <li><strong>Macrosomia</strong> (oversized from excess perfusion and nutrients).</li>
+          <li><strong>Polyhydramnios</strong> (high amniotic fluid — the recipient's sac becomes visibly overdistended, the "polyhydramnios" sign).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4 class="sub">📋 Management of TTTS</h4>
+    <div class="card">
+      <ol class="step-list">
+        <li><strong>Amnioreduction.</strong> Needle drainage of excess amniotic fluid from the recipient twin's sac. Relieves the polyhydramnios temporarily and reduces the risk of preterm labor from uterine overdistension. Often performed serially.</li>
+        <li><strong>Fetoscopic laser occlusion of placental vessels.</strong> Definitive treatment for TTTS — a fetoscope is inserted into the uterus, and the vascular anastomoses on the surface of the shared placenta are identified and laser-ablated. This separates the two fetal circulations and stops the imbalanced blood flow. The preferred treatment for severe TTTS (Quintero stage II-IV).</li>
+      </ol>
+    </div>
+    <div class="card pearl">
+      <h5>💡 CLINICAL PEARL — "Donor anemia/oligo, recipient poly/macro"</h5>
+      <p style="font-size:13px">A simple way to remember the asymmetric picture of TTTS: <strong>the donor is "deficient"</strong> (anemia, growth restriction, oligohydramnios — all the "-penia" and "-restriction" words), and <strong>the recipient is "excessive"</strong> (polycythemia, macrosomia, polyhydramnios — all the "poly-" and "macro-" words). The same imbalanced blood flow that causes the donor's deficiency causes the recipient's excess — they are two sides of the same coin.</p>
+    </div>
+    <div class="card note">
+      <h5>🧠 MEMORY ANCHOR — "Anastomosis = imbalance = Donor vs Recipient"</h5>
+      <p style="font-size:13px">Three nested facts to remember about TTTS: (1) <strong>Anastomosis</strong> in the shared placenta is the anatomic prerequisite. (2) When the anastomoses are <strong>imbalanced</strong> (blood flows in one direction), the result is TTTS. (3) The clinical picture is always asymmetric — one twin (the donor) becomes deficient, the other (the recipient) becomes excessive. Fetoscopic laser occlusion is the definitive treatment because it eliminates the anatomic prerequisite by ablating the anastomoses themselves.</p>
+    </div>
+  </section>
+
+  <!-- §13 Clickable cards -->
+  <section id="s13">
+    <h3 class="sec"><span class="n">13</span>Student activity · Questions · References</h3>
+
+    <details class="click-card activity" open>
+      <summary>🎓 Student activity <span class="hint"></span></summary>
+      <div class="click-body">
+        <p><strong>The students' groups are requested to prepare illustrative diagrams of various developmental forms of twin pregnancy.</strong></p>
+        <p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>What this activity means in practice:</strong> the chapter's embryological content (Figure 2 in §5) is best learned by drawing it. The student groups should prepare a poster or hand-drawn diagram that captures the <strong>4 stages of monozygotic cleavage</strong> (days 1-3, 4-8, 8-12, &gt;12) and the resulting chorionicity/amnionicity. A good diagram will also show the <strong>dizygotic twin configuration</strong> (always DCDA) for comparison, and will label each configuration with its clinical risk profile (e.g. "MCDA — risk of TTTS").</p>
+        <p style="font-size:12.5px;color:#64748B;margin:6px 0 0"><strong>Suggested diagram elements:</strong></p>
+        <ol style="font-size:13px;line-height:1.6;margin:6px 0 0;padding-left:20px">
+          <li><strong>Morula stage (days 1-3)</strong> → morula cluster with cleavage arrow → two morulae → DCDA twins (2 placentas, 2 sacs).</li>
+          <li><strong>Blastocyst stage (days 4-8)</strong> → blastocyst with cleavage arrow → two blastocysts sharing one chorion → MCDA twins (1 placenta, 2 sacs).</li>
+          <li><strong>Implanted blastocyst stage (days 8-12)</strong> → implanted blastocyst with cleavage arrow → two embryonic discs sharing one chorion and one amnion → MCMA twins (1 placenta, 1 sac, no intertwin membrane).</li>
+          <li><strong>Embryonic disc stage (days &gt;12)</strong> → bilaminar disc with partial cleavage → two partially-fused embryos → conjoined twins.</li>
+          <li><strong>Side panel: Dizygotic twins</strong> → two eggs + two sperm → two zygotes → two implantations → DCDA twins (always).</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="click-card assessment" open>
+      <summary>✅ Self-assessment Questions <span class="hint"></span></summary>
+      <div class="click-body">
+        <p>Please complete the self-assessment Google Form:</p>
+        <p class="qref"><strong>Google Form:</strong> <a href="https://forms.gle/dsQLn79xRafpURMV9" style="color:#15803D;font-weight:700">https://forms.gle/dsQLn79xRafpURMV9</a></p>
+        <p style="font-size:13px;color:#475569;margin:8px 0 0"><strong>What the form covers (typical chapter checks):</strong></p>
+        <ul style="font-size:13px;color:#475569;line-height:1.6;margin:6px 0 0">
+          <li>Definition: pregnancy with more than 1 fetus inside the uterus.</li>
+          <li>Incidence: twins 1 in 80; triplets 1 in 80².</li>
+          <li>5 key terms: zygosity, monozygotic, dizygotic, chorionicity, amnionicity.</li>
+          <li>6 risk factors (1 prior history, 2 family history, 3 weight+height, 4 maternal age, 5 parity, 6 race/ethnicity).</li>
+          <li>BMI &ge; 30 AND &ge; 165 cm is the combined criterion for &uarr; dizygotic risk (single risk factor, not two).</li>
+          <li>Classification: dizygotic = always DCDA; monozygotic = classified by cleavage timing.</li>
+          <li>4 stages of monozygotic cleavage: days 1-3 (DCDA), 4-8 (MCDA), 8-12 (MCMA), &gt;12 (conjoined).</li>
+          <li>Diagnosis by signs + symptoms (hyperemesis, &uarr; fundal height, abdominal overdistension).</li>
+          <li>Diagnosis by abdominal exam (oversized uterus, &ge; 3 fetal poles, &ge; 2 heart rates &ge; 10 bpm apart, Arnaux sign/gallop).</li>
+          <li>Ultrasound findings: &ge; 2 fetuses + &ge; 2 heart activities, anomalies + previa.</li>
+          <li>Lambda sign = DCDA (thick wedge, 2 placentas, thick membrane).</li>
+          <li>T sign = MCDA (thin interface, 1 placenta, thin membrane).</li>
+          <li>MCMA = no intertwin membrane.</li>
+          <li>7 antenatal care adjustments (high-risk, more visits, more US, nutrition, monitor maternal + fetal, prevent preterm).</li>
+          <li>Route of delivery: CS for non-vertex presenting twin, triplets, MCMA; vaginal for vertex/vertex; vaginal 1st twin + version/extraction 2nd twin for vertex/nonvertex.</li>
+          <li>Timing of delivery: DCDA 38 0/7-38 6/7, MCDA 34 0/7-37 6/7, MCMA 32 0/7-34 6/7.</li>
+          <li>5 third-stage precautions (examine placenta/membranes, manual removal if retained, genital exploration, PPH guard with massage + ecbolics, puerperal sepsis guard).</li>
+          <li>9 maternal complications (hyperemesis, GDM, HTN/preeclampsia, anemia, weight gain, PPH, miscarriage, previa, &uarr; CS rate).</li>
+          <li>5 fetal complications (preterm labor, anomalies, LBW, discordant growth, neonatal death).</li>
+          <li>TTTS: 10-15% of monochorionic twins, AV anastomosis, fixed direction donor&rarr;recipient.</li>
+          <li>Donor: anemia, growth restriction, oligohydramnios.</li>
+          <li>Recipient: polycythemia, macrosomia, polyhydramnios.</li>
+          <li>TTTS management: amnioreduction + fetoscopic laser occlusion of placental vessels.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="click-card references" open>
+      <summary>📚 References &amp; visual sources <span class="hint"></span></summary>
+      <div class="click-body">
+        <ul style="font-size:13.5px;color:#334155;line-height:1.7;margin:0;padding-left:20px">
+          <li>The <strong>PDF source</strong> for this chapter is a 7-page document (p. 155-161).</li>
+          <li>The source contains <strong>5 embedded images</strong> spread across pages 155, 157, and 161. <strong>All 5 are embedded</strong> in this infographic as green <code>.src-viz</code> cards. They were extracted to <code>extracted_images/30_multiple_pregnancy/</code> for archival.</li>
+          <li><strong>No external images were used</strong> in this chapter — all 5 visuals come from the <em>Book Obstetrics 2025-2026</em> PDF.</li>
+          <li><strong>Image inventory and disposition (all 5 embedded):</strong>
+            <ul>
+              <li><strong>Figure 1 (img-000):</strong> Singleton vs Twin comparison (450×220, 9,930 B, page 155) — side-by-side pink/peach cross-sectional diagrams: one fetus + one smiley face on the left, two fetuses + two smiley faces on the right. Caption: visual comparison of one fetus versus two. EMBEDDED in §3.</li>
+              <li><strong>Figure 2 (img-001):</strong> Monozygotic cleavage timing (700×530, 59,421 B, page 156) — 4-row embryology diagram showing the 4 stages of monozygotic cleavage and the resulting chorionicity/amnionicity. No explicit source caption. EMBEDDED in §5.</li>
+              <li><strong>Figure 3 (img-002):</strong> Di-chorionic triplets ultrasound (450×340, 17,132 B, page 157) — grayscale ultrasound with 3 labeled fetuses, arrowhead pointing to a thin intertwin membrane (MCDA pair), arrow pointing to a thick intertwin membrane (lambda sign, DCDA). Source caption: "Di-chorionic triplets." EMBEDDED in §7.</li>
+              <li><strong>Figure 4 (img-003):</strong> Tri-chorionic triplets ultrasound (450×400, 20,819 B, page 157) — grayscale sector ultrasound with 3 labeled fetuses in separate sacs, 2 white arrowheads pointing to thin intertwin membranes. Source caption: "Tri-chorionic triplets." EMBEDDED in §7.</li>
+              <li><strong>Figure 5 (img-004):</strong> Twin Pregnancy: Twin to Twin Transfusion (470×340, 14,626 B, page 161) — anatomical cross-section of a twin pregnancy with 2 fetuses + 2 umbilical cords + 1 shared placenta + cervix labeled. Title: "Twin Pregnancy: Twin to Twin Transfusion." EMBEDDED in §12.</li>
+            </ul>
+          </li>
+          <li>Google Form self-assessment URL: <code>https://forms.gle/dsQLn79xRafpURMV9</code> (reproduced verbatim from source).</li>
+          <li>The source contains the typo <strong>"amnioniticy"</strong> in the §9 timing-of-delivery subsection (verbatim from source). The correct spelling is <strong>"amnionicity"</strong> (parallel to "chorionicity"). Preserved verbatim; a DANGER callout in §9 explains the correction.</li>
+          <li>The source's combined risk factor <strong>"Maternal weight and height" (BMI &ge; 30 AND &ge; 165 cm)</strong> applies specifically to <strong>dizygotic twin births</strong>. This is a single combined criterion, not two separate risk factors — preserved as a single risk-card in §4 with a DANGER callout explaining the combined-criterion reading.</li>
+          <li>The source's "Lambda sign" definition ("a thick, triangular protrusion of tissue leading up to the intertwin membrane") and "T sign" definition ("the interface between 2 amniotic membranes") are the two key ultrasound markers for distinguishing DCDA from MCDA in the first trimester — both are preserved verbatim in §7.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Topic 30 — Multiple Pregnancy · Generated from <em>Book Obstetrics 2025-2026</em>, Chapter 30 (p. 155-161, 7 pages) · Source-only visuals (5 of 5 in source) · 0 external visuals · Definition: pregnancy with &gt;1 fetus · Incidence: twins 1/80, triplets 1/80² · 6 risk factors (BMI&ge;30 + height&ge;165 = dizygotic) · Dizygotic = always DCDA; monozygotic = 4 cleavage stages (1-3d DCDA, 4-8d MCDA, 8-12d MCMA, &gt;12d conjoined) · Diagnosis: 3 poles + 2 rates &ge;10bpm + Arnaux gallop · Ultrasound: lambda sign (DCDA, thick wedge) vs T sign (MCDA, thin interface) · Management: 7 antenatal adjustments, 4 route rules (CS for non-vertex/triplets/MCMA), 3 timing windows (38w DCDA, 34-37w MCDA, 32-34w MCMA), 5 third-stage precautions · 9 maternal complications (hyperemesis, GDM, HTN, anemia, weight, PPH, miscarriage, previa, &uarr;CS) + 5 fetal (preterm, anomalies, LBW, discordant growth, neonatal death) · TTTS: 10-15% of monochorionic, AV anastomosis, donor (anemia/IUGR/oligo) vs recipient (polycythemia/macro/polyhydramnios), managed by amnioreduction + fetoscopic laser occlusion
+  </footer>
 
 </div>
 </body>

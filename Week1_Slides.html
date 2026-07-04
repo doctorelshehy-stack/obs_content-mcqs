@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 1 — OB/GYN Slide Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow:hidden;height:100%;background:#111}
+body{font-family:'Cairo',sans-serif;color:#1f2a37}
+
+/* ── Slide Container ── */
+.deck{position:relative;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#111}
+
+/* ── Single Slide ── */
+.slide{
+  width:1080px;height:1920px;
+  position:absolute;
+  background:#fff;
+  overflow:hidden;
+  display:none;
+  flex-direction:column;
+  font-size:28px;line-height:1.6;
+  box-shadow:0 0 80px rgba(0,0,0,.5);
+}
+.slide.active{display:flex}
+
+/* ── Title Slide ── */
+.slide-title{
+  justify-content:center;align-items:center;text-align:center;
+  padding:60px;color:#fff;
+}
+.slide-title .icon{font-size:140px;margin-bottom:30px}
+.slide-title .ch{font-size:32px;opacity:.85;font-weight:600;margin-bottom:10px}
+.slide-title h1{font-size:58px;font-weight:900;line-height:1.2;margin-bottom:20px;text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.slide-title .sub{font-size:28px;opacity:.9;font-weight:600}
+
+/* ── Content Slide ── */
+.slide-content{flex-direction:column}
+.slide-content .hdr{
+  padding:40px 50px 30px;color:#fff;display:flex;align-items:center;gap:20px;
+}
+.slide-content .hdr .icon{font-size:60px;flex-shrink:0}
+.slide-content .hdr h2{font-size:40px;font-weight:800;line-height:1.25}
+.slide-content .hdr .pg{font-size:24px;opacity:.75;font-weight:600;margin-right:auto}
+.slide-content .body{flex:1;padding:30px 50px 50px;overflow:hidden}
+
+/* ── Bullet List ── */
+.bullets{list-style:none;padding:0;margin:0}
+.bullets li{
+  position:relative;padding:16px 20px 16px 60px;
+  margin-bottom:12px;font-size:28px;line-height:1.55;
+  background:#f8fafc;border-radius:16px;border:1px solid #e2e8f0;
+}
+.bullets li::before{
+  content:attr(data-icon);position:absolute;right:16px;top:16px;
+  font-size:30px;width:34px;text-align:center;
+}
+.bullets li strong{color:#0f3a5f}
+.bullets li.warn{background:#fef2f2;border-color:#fca5a5}
+.bullets li.warn::before{content:'⚠️'}
+.bullets li.pearl{background:#f0fdf4;border-color:#86efac}
+.bullets li.pearl::before{content:'💎'}
+.bullets li.note{background:#eff6ff;border-color:#93c5fd}
+.bullets li.note::before{content:'📝'}
+.bullets li.danger{background:#fef2f2;border-color:#f87171}
+.bullets li.danger::before{content:'🚨'}
+
+/* ── Card Grid ── */
+.card-grid{display:grid;gap:16px}
+.card-grid.g2{grid-template-columns:1fr 1fr}
+.card-grid.g3{grid-template-columns:1fr 1fr 1fr}
+.card{
+  background:#f8fafc;border-radius:16px;padding:24px;
+  border:1px solid #e2e8f0;
+}
+.card h4{font-size:26px;font-weight:700;color:#0f3a5f;margin-bottom:8px}
+.card p,.card li{font-size:24px;line-height:1.5}
+.card ul{list-style:none;padding:0}
+.card ul li{padding:4px 0 4px 24px;position:relative}
+.card ul li::before{content:'•';position:absolute;right:0;color:#0f3a5f;font-weight:bold}
+
+/* ── Table ── */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;margin:16px 0;font-size:24px}
+.tbl th{background:#0f3a5f;color:#fff;padding:14px 16px;text-align:right;font-weight:700}
+.tbl td{padding:12px 16px;border-bottom:1px solid #e2e8f0;text-align:right}
+.tbl tr:nth-child(even) td{background:#f8fafc}
+
+/* ── Warning / Pearl Box ── */
+.box{border-radius:16px;padding:24px 28px;margin:16px 0;border-right:6px solid}
+.box-warn{background:#fef2f2;border-color:#ef4444}
+.box-pearl{background:#f0fdf4;border-color:#22c55e}
+.box-note{background:#eff6ff;border-color:#3b82f6}
+.box-danger{background:#fef2f2;border-color:#dc2626}
+.box h4{font-size:26px;font-weight:700;margin-bottom:6px}
+.box p{font-size:24px;line-height:1.55}
+
+/* ── Footer Nav ── */
+.nav-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(15,23,42,.95);backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  padding:14px 30px;gap:20px;
+}
+.nav-bar button{
+  background:rgba(255,255,255,.12);border:none;color:#fff;
+  width:64px;height:64px;border-radius:50%;font-size:28px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.nav-bar button:hover{background:rgba(255,255,255,.25)}
+.nav-bar .counter{color:rgba(255,255,255,.8);font-size:24px;font-weight:600;min-width:120px;text-align:center}
+.nav-bar button:disabled{opacity:.25;cursor:default}
+
+/* ── Scaling for screen fit ── */
+@media(max-height:100vh){
+  .deck{transform-origin:center center}
+}
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+<!-- ===================== SLIDE 1: TITLE — Physiology of Reproduction ===================== -->
+<div class="slide slide-title active" style="background:linear-gradient(135deg,#0f3a5f,#1a5276)">
+  <div class="icon">🧬</div>
+  <div class="ch">الفصل ١</div>
+  <h1>فيزيولوجيا الإنجاب</h1>
+  <div class="sub">Physiology of Reproduction</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#0f3a5f,#1a5276)">
+    <div class="icon">🧬</div>
+    <h2>الخصاب والغرس</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🥚"><strong>الخصاب:</strong> يحدث في أنبوب فالوب (القناة tubes) — الحويصلة تتحول إلى بويضة مخصبة (zygote)</li>
+      <li data-icon="🔬"><strong>التقسيم:</strong> البويضة المخصبة تنقسم بسرعة → morula (كتلة خلايا) خلال ٣ أيام</li>
+      <li data-icon="💧"><strong>البلاستوسست:</strong> تتراكم السوائل في الـ morula → تتحول إلى blastocyst خلال ٣ أيام إضافية</li>
+      <li data-icon="🎯"><strong>الغرس:</strong> يحدث في اليوم ٦-٧ بعد التبويض في بطانة الرحم الإفرازية (decidua basalis)</li>
+      <li data-icon="🏗️"><strong>وظائف الحويصلات (decidua):</strong> موقع الغرس، التغذية، تكوين المشيمة، حماية من غزو السائل الغروي</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#0f3a5f,#1a5276)">
+    <div class="icon">🧬</div>
+    <h2>تكوّن الأغصان والمشيمة</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🌿"><strong>تكوّن الأغصان:</strong> السائل الغروي يتفرع → أغصان أولية → ثانوية → نهائية (تحتوي أوعية دموية جنينية)</li>
+      <li data-icon="⚖️"><strong>أغصان تثبيتية</strong> (للالتصاق) و <strong>أغصان حرة</strong> (لتغذية الجنين وإفراز hCG)</li>
+      <li data-icon="🫀"><strong>المشيمة:</strong> شكلها قرصي، وزنها ٥٠٠ جم، قُطرها ٢٠-٢٥ سم، سُمكها ٢ سم في المركز</li>
+      <li data-icon="🔄"><strong>موجتان من الغزو:</strong> أولى (اليوم ١٢-١٥) وثانية (الأسبوع ٢٠) — فشل الثانية يسبب تسمم الحمل</li>
+      <li data-icon="⚡"><strong>وظائف المشيمة:</strong> نقل الغازات، التغذية، التخلص من الفضلات، إفراز الهرمونات</li>
+    </ul>
+    <div class="box box-pearl">
+      <h4>💎 لؤلؤة سريرية</h4>
+      <p>ال醭ة الغروية (syncytiotrophoblast) هي التي تفرز hCG, HPL, الإستروجين, البروجسترون</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#0f3a5f,#1a5276)">
+    <div class="icon">🧬</div>
+    <h2>الحبل السري وسائل المشيمة والأجسام الهرمونية</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🪢"><strong>الحبل السري:</strong> طوله ٥٠ سم، قطره ٢ سم، يحتوي شريانين + وريدة واحدة في وسط Wharton jelly</li>
+      <li data-icon="💧"><strong>سائل المشيمة:</strong> ٩٨% ماء، يزداد حتى ١٠٠٠ مل عند الأسبوع ٣٦ ثم ينخفض</li>
+      <li data-icon="🧫"><strong>hCG:</strong> يُكتشف قبل أسبوع من انقطاع الطمث، يتضاعف كل ٤٨ ساعة، يحافظ على الجسم الأصفر ١٠ أسابيع</li>
+      <li data-icon="🍼"><strong>HPL:</strong> يشبه هرمون النمو و prolactin — يوفر الجلوكوز والأحماض الدهنية للجنين</li>
+      <li data-icon="⚖️"><strong>الإستروجين والبروجسترون:</strong> مسؤولان عن معظم التغييرات في الحمل</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 5: TITLE — Maternal Adaptation ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">
+  <div class="icon">🤰</div>
+  <div class="ch">الفصل ٢</div>
+  <h1>تكيف الأم مع الحمل</h1>
+  <div class="sub">Maternal Adaptation to Pregnancy</div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">
+    <div class="icon">🤰</div>
+    <h2>التغييرات التناسلية والدمية</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🫄"><strong>الرحم:</strong> يتضاعف حجمه ٥٠٠ مرة، وزنه من ٥٠ جم إلى ١٠٠٠ جم، حجمه من ١٠ مل إلى ٥٠٠٠ مل</li>
+      <li data-icon="🔄"><strong>الدوران:</strong> تغيّر شكل الرحم من pear shape → globular (أسبوع ٨) → pear shape ثانية (أسبوع ١٦)</li>
+      <li data-icon="🩸"><strong>حجم الدم:</strong> يزداد ٣٠-٤٠% — البلازما تزداد ٤٥% والكريات الحمراء ٣٠% → فرط ترطيب دموي (فقر دم وظيفي)</li>
+      <li data-icon="⚠️"><strong>حالة التخثر:</strong> الفيبرينوجين يتضاعف، عامل VIII يتضاعف ٣ مرات → حالة فرط تخثر</li>
+      <li data-icon="💔"><strong>القلب:</strong> معدل النبض يزداد ١٠ نبضات/دقيقة، إخراج القلب يزداد ٤٠% عند الأسبوع ٢٠</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">
+    <div class="icon">🤰</div>
+    <h2>التغييرات التنفسية والبولية والهضمية</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🫁"><strong>التنفس:</strong> الحجم المدوي يزداد ٤٠% — فرط التنفس بسبب زيادة حساسية المركز التنفسي للبروجسترون</li>
+      <li data-icon="🫘"><strong>الكلى:</strong> تدفق الدم الكلوي ومعدل الترشيح يزداد ٥٠% → زيادة إفراز الجلوكوز (بول سكري كلوي)</li>
+      <li data-icon="🤢"><strong>الجهاز الهضمي:</strong> الغثيان والقيء (أسبوع ٤-١٢)، الحموضة، الإمساك — كلها بسبب ارتخاء العضلات الملساء بالبروجسترون</li>
+      <li data-icon="💪"><strong>الوزن:</strong> يزداد ١٠-١٢ كجم خلال الحمل</li>
+      <li data-icon="🐻"><strong>الثدي:</strong> الشهر ١ (تضخم + ألم)، الشهر ٢ (تصبغ + tubercles)، الشهر ٣ (الحليب الابتدائي)، الشهر ٥ (الحلقة الثانوية)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#1b5e20,#2e7d32)">
+    <div class="icon">🤰</div>
+    <h2>التغييرات الجلدية والغدد الصماء والعضلية الهيكلية</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🩹"><strong>الجلد:</strong> احمرار الأيدي (ارتفاع الإستروجين)، chloasma (الوجه)، linea nigra، Striae gravidarum</li>
+      <li data-icon="🧪"><strong>الغدد الصماء:</strong> تضخم النخامية + الدرقية + درك + فوق الكلى → زيادة الهرمونات</li>
+      <li data-icon="🦴"><strong>العظام والعضلات:</strong> ارتخاء مفاصل الحوض، تسطح القدم، lordosis متزايد</li>
+      <li data-icon="🔬"><strong>الدم:</strong> WBC يتضاعف أثناء المخاض — فibrinolytic activity تنخفض</li>
+      <li data-icon="⚠️"><strong>تحذير:</strong> الحمل هو حالة فرط تخثر — زيادة عوامل التخثر + انخفاض الفيبرينوليزز → ارتفاع خطر VTE</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 9: TITLE — Diagnosis of Pregnancy ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#c62828,#d32f2f)">
+  <div class="icon">🔬</div>
+  <div class="ch">الفصل ٣</div>
+  <h1>تشخيص الحمل</h1>
+  <div class="sub">Diagnosis of Pregnancy</div>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#c62828,#d32f2f)">
+    <div class="icon">🔬</div>
+    <h2>تشخيص الحمل المبكر (الثلث الأول)</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📅"><strong>الأعراض:</strong> انقطاع الطمث الثانوي، تكرار التبول، الغثيان والقيء (أسبوع ٦-١٢)، تضخم الثدي</li>
+      <li data-icon="🔍"><strong>العلامات:</strong> اصفرار المهبل والرحم، ازرقاق عنق الرحم، الرحم globe shape + طري النسج</li>
+      <li data-icon="✌️"><strong>علامة Hegar:</strong> فرق في الصلابة بين جسم الرحم (طري جداً) وعنقه</li>
+      <li data-icon="🧪"><strong>فحص الحمل:</strong> hCG في البول/الدم — يصبح إيجابياً قبل أسبوع من انقطاع الطمث</li>
+      <li data-icon="📡"><strong>التصوير بالموجات فوق الصوتية:</strong> ٤ أسابيع (حلقة) → ٥ أسابيع (حويصلة) → ٦ أسابيع (نبض قلب) → ١٠ أسابيع (صوت قلب جنيني)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 11 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#c62828,#d32f2f)">
+    <div class="icon">🔬</div>
+    <h2>تشخيص الحمل في الثلثين الثاني والثالث</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🤰"><strong>الثلث الثاني (١٢-٢٨ أسبوع):</strong> انقطاع الطمث + تضخم البطن + حركة الجنين الأولى (quickening)</li>
+      <li data-icon="👶"><strong>حركة الجنين الأولى:</strong> الأم البكراً (١٨-٢٠ أسبوع) — الأم多次 (١٦-١٨ أسبوع)</li>
+      <li data-icon="💪"><strong> Ballottement:</strong> خارجي بعد ٢٠ أسبوع — داخلي بعد ١٦ أسبوع (جسم صلب يتحرك في وسيط سائل)</li>
+      <li data-icon="💓"><strong>صوت القلب الجنيني + سعال الحبل السري:</strong> علامة يقينية للحمل</li>
+      <li data-icon="⚠️"><strong>تحذير:</strong> أعراض الحمل في الثلث الأول (انقطاع الطمث، الغثيان، تغييرات الثدي، hCG) هي علامات "محتملة" فقط — التشخيص اليقيني فقط عند سماع صوت القلب أو رؤية الجنين بالتصوير</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 12 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#c62828,#d32f2f)">
+    <div class="icon">🔬</div>
+    <h2>علامات الحمل اليقينية</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <div class="box box-note">
+      <h4>📝 علامات الحمل اليقينية</h4>
+      <p>① الشعور ب parts of the fetus ② الشعور بحركة الجنين ③ سماع صوت القلب الجنيني ④ سماع سعال الحبل السري ⑤ رؤية أجزاء الجنين بالموجات فوق الصوتية</p>
+    </div>
+    <ul class="bullets">
+      <li data-icon="⏱️"><strong>جدول التصوير بالألتراساوند:</strong> ٤ أسابيع (حلقة) → ٥ أسابيع (حويصلة) → ٦ أسابيع (نبض قلب) → ١٠ أسابيع (صوت قلب جنيني)</li>
+      <li data-icon="👂"><strong>سُعال الحبل السري (Umbilical Soufflé):</strong> صفير حاد بسبب تدفق الدم في أوعية الحبل السري — يتوافق مع نبضات الجنين</li>
+      <li data-icon="🫀"><strong>سُعال الرحم (Uterine Soufflé):</strong> صوت ناعم بسبب تدفق الدم في شرايين الرحم — يتوافق مع نبضات الأم</li>
+      <li data-icon="🔑"><strong>التمييز:</strong> سُعال الحبل السري يتوافق مع نبض الجنين — سُعال الرحم يتوافق مع نبض الأم</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 13: TITLE — Antenatal Care ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#1565c0,#1976d2)">
+  <div class="icon">🏥</div>
+  <div class="ch">الفصل ٤</div>
+  <h1>رعاية ما قبل الولادة</h1>
+  <div class="sub">Antenatal Care</div>
+</div>
+
+<!-- SLIDE 14 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#1565c0,#1976d2)">
+    <div class="icon">🏥</div>
+    <h2>تعريف وأهداف رعاية ما قبل الولادة</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> برنامج وقائي يشمل المراقبة والرعاية الطبية والفحوصات والنصائح لتحقيق أقرب حالة طبيعية ممكنة للحمل والمخاض</li>
+      <li data-icon="🎯"><strong>الأهداف:</strong> تحديد الحمل عالي الخطورة → مراقبته → اكتشاف المضاعفات مبكراً → النصائح → علاج المشاكل الشائعة</li>
+      <li data-icon="📅"><strong>تكرار الزيارات:</strong> منخفض الخطورة: شهرياً حتى ٢٨ أسبوع → كل أسبوعين حتى ٣٦ أسبوع → أسبوعياً حتى الولادة</li>
+      <li data-icon="🏥"><strong>عالي الخطورة:</strong> كل أسبوعين حتى ٢٨ أسبوع → أسبوعياً حتى ٣٦ أسبوع → госпл حتى الولادة</li>
+      <li data-icon="📝"><strong>الفحوصات الروتينية:</strong> فصيلة الدم و Rh، تحليل البول، CBC، الجلوكوز بعد الأكل، HBsAg، الأجسام المضادة للحميراء، مسحة عنق الرحم</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 15 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#1565c0,#1976d2)">
+    <div class="icon">🏥</div>
+    <h2>النصائح الغذائية والحياتية</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🍽️"><strong>السعرات الحرارية:</strong> ٢٧٠٠ سعر/يوم</li>
+      <li data-icon="🥩"><strong>البروتين:</strong> ١.٥ جم/كجم/يوم (نصفه على الأقل من الحيوان)</li>
+      <li data-icon="💊"><strong>الحديد:</strong> ٣٠-٦٠ مجم/يوم — <strong>حمض الفوليك:</strong> ٤٠٠ ميكروجرام/يوم — <strong>الكالسيوم:</strong> ١.٥ جم/يوم</li>
+      <li data-icon="⚖️)<strong>زيادة الوزن:</strong> ١٠-١٢ كجم</li>
+      <li data-icon="🚿"><strong>الاستحمام:</strong> تجنب الحمام الساخن ومسابح السباحة</li>
+      <li data-icon="🚫)<strong>التحذيرات:</strong> تجنب التدخين، الكحول، الأدوية بدون استشارة الطبيب، الأشعة التشخيصية والعلاجية</li>
+    </ul>
+    <div class="box box-danger">
+      <h4>⚠️ تحذير — اللقاحات</h4>
+      <p>اللقاحات الحية الم attenuated (MMR, شلل الأطفال) مُضادة للحمل — اللقاحات المُعطّلة (الإنفلونزا, الكلب) آمنة</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 16 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#1565c0,#1976d2)">
+    <div class="icon">🏥</div>
+    <h2>أعراض التحذير والأشعة</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <div class="box box-danger">
+      <h4>🚨 أعراض تحذيرية — اطلب العناية فوراً</h4>
+      <p>① صداع مستمر + تشوش رؤية + قيء + ألم تحت الصدر (TTN/PE) ② تورم الوجه والأطراف ③ إفرازات مائيةcessive ④ نزيف مهبلي ⑤ حمى + ضيق تنفس ⑥ ألم شديد بالبطن ⑦ انخفاض حركات الجنين</p>
+    </div>
+    <ul class="bullets">
+      <li data-icon="☢️"><strong>الأشعة:</strong> أقل من ٥ راد قد لا تُضر — ٥-٥٠ راد قد تُضر — أكثر من ٥٠ راد = تشوهات CNS</li>
+      <li data-icon="💊"><strong>الأدوية:</strong> تجنب في الثلث الأول — أقل جرعة فعالة لأقصر مدة — لا تتناول بدون استشارة</li>
+      <li data-icon="🧳"><strong>السفر:</strong> تجنب إذا كان هناك خطر إسقاط أو مخاض مبكر</li>
+      <li data-icon="😴><strong>النوم:</strong> ٨ ساعات ليلاً + ٢ ظهراً</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 17: TITLE — Abortion ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#e65100,#f57c00)">
+  <div class="icon">⚠️</div>
+  <div class="ch">الفصل ٥</div>
+  <h1>الإجهاض</h1>
+  <div class="sub">Abortion</div>
+</div>
+
+<!-- SLIDE 18 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#e65100,#f57c00)">
+    <div class="icon">⚠️</div>
+    <h2>تعريف وأسباب الإجهاض</h2>
+    <span class="pg">١ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> انتهاء الحمل قبل نضج الجنين (قبل الأسبوع ٢٠) — معدل الحدوث ١٢-٢٥%</li>
+      <li data-icon="🧬"><strong>التشوهات الكروموسومية:</strong> تسبب ٥٠% من الإجهاضات المبكرة — السبب الأهم</li>
+      <li data-icon="🦠"><strong>العدوى:</strong> الحمى الحادة عند الأم</li>
+      <li data-icon="🚑"><strong>الإصابات:</strong> خارجية أو أثناء العمليات الجراحية</li>
+      <li data-icon="🛡️"><strong>السبب المناعي:</strong> متلازمة الس食べて الغروية والجسم المضاد للدهون الفسفورية</li>
+      <li data-icon="🏗️)<strong>عيوب الرحم:</strong> الحاجز، متلازمة Asherman، نقص البروجسترون، قصور الدرقية</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 19 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#e65100,#f57c00)">
+    <div class="icon">⚠️</div>
+    <h2>أنواع الإجهاض</h2>
+    <span class="pg">٢ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🟡"><strong>مُهدد (Threatened):</strong> نزيف خفيف + ألم غياب/خفيف + عنق الرحم مُغلق + جنين حي بالأولتراساوند</li>
+      <li data-icon="🔴"><strong>حتمي (Inevitable):</strong> نزيف كثيف + جلطات + ألم colicky + عنق الرحم مفتوح</li>
+      <li data-icon="🟢"><strong>كامل (Complete):</strong> نزيف يقل + توقف الألم + عنق مُغلق + تجويف فارغ بالأولتراساوند</li>
+      <li data-icon="🟠"><strong>ناقص (Incomplete):</strong> نزيف مستمر + عنق مفتوح + جزء من النسيج المحوي متبقي</li>
+      <li data-icon="⚫"><strong>مفقود (Missed):</strong> موت الجنين + الرحم يتقلص + نزيف بنّي "عصير البرقوق" + عنق مغلق</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 20 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#e65100,#f57c00)">
+    <div class="icon">⚠️</div>
+    <h2>جدول مقارنة أنواع الإجهاض</h2>
+    <span class="pg">٣ / ٤</span>
+  </div>
+  <div class="body">
+    <table class="tbl">
+      <tr><th>النوع</th><th>النزيف</th><th>العنق</th><th>ال Treatment</th></tr>
+      <tr><td><strong>مُهدد</strong></td><td>خفيف، أحمر فاتح</td><td>مغلق</td><td>استراحة + بروجسترون</td></tr>
+      <tr><td><strong>حتمي</strong></td><td>كثيف + جلطات</td><td>مفتوح</td><td>أوكسيتوسين + تنظير</td></tr>
+      <tr><td><strong>كامل</strong></td><td>يقل تدريجياً</td><td>مغلق</td><td>إكبوليك + مضادات حيوية (بدون تنظير)</td></tr>
+      <tr><td><strong>ناقص</strong></td><td>مستمر</td><td>مفتوح</td><td>تنظيف (طبي أو جراحي)</td></tr>
+      <tr><td><strong>مفقود</strong></td><td>نزيف بنّي</td><td>مغلق</td><td>تنظيف (< ١٢ أسبوع جراحي، > ١٢ أسبوع طبي)</td></tr>
+    </table>
+    <div class="box box-pearl">
+      <h4>💎 لؤلؤة سريرية</h4>
+      <p>الإجهاض الكامل لا يحتاج تنظير — فقط أدوية + مضادات حيوية. التأكيد بالألتراساوند (تجويف فارغ) هو الخطوة الأهم</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 21 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#e65100,#f57c00)">
+    <div class="icon">⚠️</div>
+    <h2>الإجهاض العدوى والمتكرر</h2>
+    <span class="pg">٤ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🦠"><strong>الإجهاض العدوى (Septic):</strong> أي نوع + عدوى → حمى + قشعريرة + نبض سريع + تقيؤ + تصلب بطني + إفرازات كريهة</li>
+      <li data-icon="💊"><strong>العلاج:</strong> إنعاش فوري + مضادات حيوية واسعة الإطار IV + تنظير + وضع نصف جالس</li>
+      <li data-icon="🔄"><strong>الإجهاض المتكرر ( Habitual):</strong> ٣ إجهاضات متتالية → أسباب: جينية، تشريحية، متلازمة الأجسام المضادة للدهون الفسفورية، STORCH</li>
+      <li data-icon="💉"><strong>العلاج:</strong> علاج السبب القابل للتحديد قبل الحمل + بروجسترون + حضن عنق الرحم (McDonald cerclage) في الأسبوع ١٢-١٤</li>
+      <li data-icon="⚠️"><strong>تحذير:</strong> الإجهاض العدوى حالة طارئة — قد تحتاج إزالة الرحم كخيار أخير لإنقاذ الحياة</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 22: TITLE — Ectopic Pregnancy ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#b71c1c,#c62828)">
+  <div class="icon">🚨</div>
+  <div class="ch">الفصل ٦</div>
+  <h1>الحمل خارج الرحم</h1>
+  <div class="sub">Ectopic Pregnancy</div>
+</div>
+
+<!-- SLIDE 23 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#b71c1c,#c62828)">
+    <div class="icon">🚨</div>
+    <h2>تعريف وأسباب ومواقع الحمل خارج الرحم</h2>
+    <span class="pg">١ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> غرس البويضة المخصبة خارج تجويف الرحم — معدل الحدوث ٢% من جميع حالات الحمل</li>
+      <li data-icon="🎯"><strong>الموقع الأكثر شيوعاً:</strong> الأنبوب (٩٩%) —特别是 الزاوية (٨٠%) ثم الجذع (١٢%)</li>
+      <li data-icon="🔍"><strong>أسباب:</strong> عدوى الحوض (PID)، سابقة حمل خارج الرحم، جراحة الأنبوب، IUCD، التدخين، تعقيم الأنبوب</li>
+      <li data-icon="⚠️)<strong>تحذير:</strong> سابقة حمل خارج الرحم هي العامل الخطورة الأقوى — خطر التكرار يرتفع بشكل كبير</li>
+      <li data-icon="🩸)<strong>مواقع أخرى نادرة:</strong> الرحمي، المبيضي، العنقي، ندبة الس Cesarean، الحوض العريض، الحمل المختلط</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 24 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#b71c1c,#c62828)">
+    <div class="icon">🚨</div>
+    <h2>الصورة السريرية</h2>
+    <span class="pg">٢ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🏥"><strong>غير مقلقة:</strong> انقطاع الطمث + نزيف مهبلي + ألم بطني/حوضي + رحم طري + حساسية عنق الرحم</li>
+      <li data-icon="🚑"><strong>حاد مقلق:</strong> شحوب + إغماء + ألم الكتف + صدمة + نبض سريع + انخفاض ضغط + تصلب بطني + rebound</li>
+      <li data-icon="⚠️"><strong>تحذير:</strong> ألم الكتف + إغماء + صدمة + نبض سريع + انخفاض ضغط في أي حامل = حمل خارج الرحم مُنهار حتى يثبت العكس — أعد الإنعاش أولاً</li>
+      <li data-icon="📋"><strong>مزمن مقلق:</strong> ألم مستمر بالبطن السفلي + ثقل حوضي + تنميل المستقيم + حساسية عنق الرحم + تورم مرفقي مؤلم</li>
+      <li data-icon="🔬)<strong>تشخيص:</strong> حمض الهيومن الكوريونيك Beta hCG (تضاعف كل ٤٨ ساعة بشكل طبيعي)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 25 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#b71c1c,#c62828)">
+    <div class="icon">🚨</div>
+    <h2>الفحوصات والمنطقة التمييزية</h2>
+    <span class="pg">٣ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🔬"><strong>Beta hCG:</strong> ارتفاع أقل من ٦٦% خلال ٤٨ ساعة = مشتبه بحمل خارج الرحم</li>
+      <li data-icon="📡"><strong>الألتراساوند:</strong> تجويف رحمي فارغ + سوائل في pouch of Douglas + تورم مرفقي مع نبض جنيني = حمل خارج الرحم يقيني</li>
+      <li data-icon="📏"><strong>المنطقة التمييزية:</strong> الدرجة التي يجب فيها رؤية الحمل داخل الرحم — التصوير عبر البطن: ٦٠٠٠ mIU/ml — التصوير المهبلي: ٢٠٠٠ mIU/ml</li>
+      <li data-icon="💊"><strong>البروجسترون:</strong> أقل من ١٥ ng/ml في الحمل خارج الرحم</li>
+      <li data-icon="🔪"><strong>المنظار:</strong> للتشخيص والعلاج</li>
+    </ul>
+    <div class="box box-warn">
+      <h4>⚠️ تحذير</h4>
+      <p>التصوير المهبلي имеет منطقة تمييزية أقل بـ ٣ مرات (٢٠٠٠ مقابل ٦٠٠٠) — إذا كان hCG أعلى والرحم فارغ = حمل خارج الرحم</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 26 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#b71c1c,#c62828)">
+    <div class="icon">🚨</div>
+    <h2>العلاج — طرق ثلاث</h2>
+    <span class="pg">٤ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="👀"><strong>المراقبة الت预期ية:</strong> حالة مستقرة + كتلة < ٣.٥ سم + بدون نبض + hCG < ١٥٠٠ IU/L</li>
+      <li data-icon="💊"><strong>العلاج الدوائي (Methotrexate):</strong> ٥٠ مجم/م² — جرعتان بفارق ٤ أيام — مراقبة hCG كل ٤-٧ أيام — هبوط ١٥% = نجاح</li>
+      <li data-icon="🔪"><strong>العلاج الجراحي:</strong> حجم > ٣.٥ سم أو نبض جنيني أو hCG > ٥٠٠٠ IU/L أو ألم شديد</li>
+      <li data-icon="✂️)<strong>خياران جراحيان:</strong> سلبنقوستومي (إبقاء الأنبوب) vs سلبنقيكتومي (إزالة الأنبوب)</li>
+      <li data-icon="⚠️)<strong>تحذير:</strong> الحالة غير المستقرة = إنعاش فوري + خطين IV واسعين + مراقبة + عملية — التشخيص يمكن أن ينتظر، الصدمة لا</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 27: TITLE — GTD ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#6a1b9a,#7b1fa2)">
+  <div class="icon">🧪</div>
+  <div class="ch">الفصل ٧</div>
+  <h1>أمراض الأنسجة الغروية المشيمية</h1>
+  <div class="sub">Gestational Trophoblastic Disease</div>
+</div>
+
+<!-- SLIDE 28 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#6a1b9a,#7b1fa2)">
+    <div class="icon">🧪</div>
+    <h2>التعريف والتصنيف والأنواع</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> أورام ناشئة من خلايا الأنسجة الغروية لل placenta — من الحمولة الكاملة الحميدة إلى السرطان الخبيث</li>
+      <li data-icon="🟢"><strong>حميدة:</strong> الحمولة الكاملة (بلا جنين، ٤٦ كروموسوم أبوي فقط) + الحمولة الجزئية (جنين موجود، ٦٩ كروموسوم)</li>
+      <li data-icon="🔴"><strong>خبيثة:</strong> الحمولة الغازية + سرطان الغدد الغروية + ورم موقع المشيمة الغروي</li>
+      <li data-icon="⚠️"><strong>خطر التحول الخبيث:</strong> الحمولة الكاملة ١٦% — الحمولة الجزئية ٠.٥%</li>
+      <li data-icon="📊"><strong> معدل الحدوث:</strong> الحمولة الكاملة ١/١٠٠٠ — الجزئية ٣/١٠٠٠ — أكثر شيوعاً عند أكثر من ٤٥ سنة أو أقل من ١٦ سنة</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 29 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#6a1b9a,#7b1fa2)">
+    <div class="icon">🧪</div>
+    <h2>الصورة السريرية والتشخيص</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🤰"><strong>الأعراض:</strong> انقطاع الطمث + نزيف مهبلي + أعراض حمل مبالغ فيها + تسمم قبل الأسبوع ٢٠ + قيء شديد + فرط نشاط الدرقية</li>
+      <li data-icon="🔍"><strong>الفحص:</strong> رحم كبير (حجم أكبر من الحمل المتوقع) + طري النسج + لا parts من الجنين ولا صوت قلب</li>
+      <li data-icon="📡"><strong>الألتراساوند:</strong> مظهر "الثلج" (snow storm) + لا جنين + تكاثف بطاني المتعددة في المبيضين</li>
+      <li data-icon="🔬"><strong>Beta hCG:</strong> مرتفع جداً (> ١٠٠,٠٠٠ mIU/ml) — أعلى بكثير من الحمل الطبيعي</li>
+      <li data-icon="⚠️)<strong>تحذير:</strong> تسمم قبل الأسبوع ٢٠ = علامة حمراء — في الحمل الطبيعي لا يحدث تسمم بهذه المبكرية — فحص بالحمولة</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 30 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#6a1b9a,#7b1fa2)">
+    <div class="icon">🧪</div>
+    <h2>العلاج والمتابعة والchemo</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🔪"><strong>العلاج الأساسي:</strong> تنظير شفطي تحت التخدير العام + دم متشابه متاح (خطر نزيف كبير)</li>
+      <li data-icon="⚕️)<strong>إزالة الرحم:</strong> للنساء كبار السن أو العالية التparity أو النزيف غير المُتحكّم فيه</li>
+      <li data-icon="💊)<strong>الchemo:</strong> إذا ارتفع أو ثبت hCG بعد التنظير — أو تأكد سرطان الغدد الغروية</li>
+      <li data-icon="📋)<strong>المتابعة:</strong> hCG كل ١-٢ أسبوع حتى يصبح سالباً → شهرياً لمدة سنة مع موانع الحمل</li>
+      <li data-icon="🚫><strong>موانع الحمل:</strong> حبوب منع الحمل المركبة هي الطريقة المفضلة — لا حمل لمدة سنة كاملة</li>
+    </ul>
+    <div class="box box-pearl">
+      <h4>💎 لؤلؤة سريرية</h4>
+      <p>أمراض الأنسجة الغروية هي من أكثر الأورام المصلحة بالعلاج الكيميائي — حتى metastatic choriocarcinoma معدل الشفاء > ٩٠%</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 31: TITLE — Hypertension ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#4527a0,#512da8)">
+  <div class="icon">💉</div>
+  <div class="ch">الفصل ٨</div>
+  <h1>ارتفاع ضغط الدم مع الحمل</h1>
+  <div class="sub">Hypertension with Pregnancy</div>
+</div>
+
+<!-- SLIDE 32 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#4527a0,#512da8)">
+    <div class="icon">💉</div>
+    <h2>التعريف والتصنيف</h2>
+    <span class="pg">١ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> ضغط systolic ≥ ١٤٠ أو diastolic ≥ ٩٠ في فترتين منفصلتين على الأقل بعد ٦ ساعات — معدل الحدوث ١٠-٢٠%</li>
+      <li data-icon="🔴"><strong>السبب الثاني للوفاة عند الأم:</strong> بعد النزيف الشديد — يجب الفحص في كل زيارة</li>
+      <li data-icon="📊"><strong>التصنيف ٤ فئات:</strong> ① ارتفاع مزمن (قبل ٢٠ أسبوع) ② ارتفاع الحمل (بعد ٢٩ أسبوع بدون بيلة بولية) ③ تسمم الحمل ④ ارتفاع مزمن + تسمم مُضاف</li>
+      <li data-icon="🔑"><strong>المحور الرئيسي:</strong> الأسبوع ٢٠ — قبله = مزمن — بعده مع بيلة بولية = تسمم</li>
+      <li data-icon="⚠️)<strong>تحذير:</strong> ٢٥-٥٠% من ارتفاع الحمل يتحول لتسمم — لا تتوقف عن المراقبة حتى ٤٢ يوماً بعد الولادة</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 33 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#4527a0,#512da8)">
+    <div class="icon">💉</div>
+    <h2>تسمم الحمل — تعريف وأسباب ومرض</h2>
+    <span class="pg">٢ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> ارتفاع ≥ ١٤٠/٩٠ + بيلة بولية ≥ ٣٠٠ مجم/٢٤ ساعة بعد الأسبوع ٢٠ في امرأة previously normotensive — معدل ٥-١٠%</li>
+      <li data-icon="👩"><strong>عوامل الخطورة:</strong> البكراً، الحمل المتعدد، السكري،肥胖، أمراض الكلى المسبقة، أمراض الأوعية الدموية</li>
+      <li data-icon="🔬"><strong>السبب الأساسي:</strong> غزو غير مكتمل لشرايين الرحم اللولبية → نقص تروية المشيمة → عوامل مضادة للangogenesis → تلف الأوعية الدموية الجهازية</li>
+      <li data-icon="🧠"><strong>المرض:</strong> تقلص الأوعية + تكاثف الدم → ارتفاع ضغط + نقص في كل الأعضاء (دماغ، كلى، كبد، رئة، شبكية)</li>
+      <li data-icon="⚠️)<strong>تحذير:</strong> كل عضو هدف — لكن الدماغ والكلى والكبد ونظام التخثر هي التي تسبب معظم الوفيات</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 34 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#4527a0,#512da8)">
+    <div class="icon">💉</div>
+    <h2>تشخيص ومضاعفات تسمم الحمل</h2>
+    <span class="pg">٣ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🔍"><strong>الأعراض (تحذيرية):</strong> صداع + تشوش رؤية + ألم تحت الصدر/القائمة اليمنى + غثيان وقيء</li>
+      <li data-icon="🔬"><strong>الفحوصات:</strong> تحليل البول (بيلة)، وظائف الكلى، وظائف الكبد، العد الدموي، الفحص الشبكي</li>
+      <li data-icon="👶"><strong>تقييم الجنين:</strong> حركات الجنين يومياً، NST مرتين أسبوعياً، BPP، حجم السائل الأمنيوسي أسبوعياً، نمو الجنين كل ٣ أسابيع</li>
+      <li data-icon="🏥"><strong>مضاعفات الأم:</strong> عدوان المشيمة، فشل كلوي حاد، HELLP،وذمة رئوية، تسمم، DIC، سكتة دماغية</li>
+      <li data-icon="👶"><strong>مضاعفات الجنين:</strong> نقص نمو داخل الرحم (IUGR) بسبب نقص تروية المشيمة، موت داخل الرحم</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 35 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#4527a0,#512da8)">
+    <div class="icon">💉</div>
+    <h2>العلاج وتسمم الحمل الشديد والتقديم</h2>
+    <span class="pg">٤ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="💊"><strong>العلاج:</strong> فصل الحمل هو العلاج النهائي — MgSO4 لمنع التشنجات (جرعة تحميل ٤-٦ جم +Infusion ١-٢ جم/ساعة)</li>
+      <li data-icon="💉"><strong>مضادات ارتفاع الضغط:</strong> Methyldopa, Labetalol, Nifedipine, Hydralazine — الهدف: diastolic ٩٠-١٠٠ / systolic ١٤٠-١٥٠</li>
+      <li data-icon="⏰"><strong>توقيت الولادة:</strong> ≥ ٣٧ أسبوع → ولادة — < ٣٧ أسبوع → مراقبة — تسمم شديد ≥ ٣٤ أسبوع → ولادة بعد استقرار الأم</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> MgSO4 هو الدواء الوحيد الذي يمنع التسمم — مضادات ارتفاع الضغط تتحكم بالضغط فقط لا تمنع التشنجات</li>
+      <li data-icon="🚨"><strong>HELLP syndrome:</strong> تحلل + ارتفاع إنزيمات الكبد + انخفاض الصفائح — العلاج الوحيد = الولادة بغض النظر عن عمر الحمل</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 36: TITLE — DIC ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#d32f2f,#e53935)">
+  <div class="icon">🩸</div>
+  <div class="ch">الفصل ٩</div>
+  <h1>الetsار الموضعي المنتشر</h1>
+  <div class="sub">DIC — Disseminated Intravascular Coagulopathy</div>
+</div>
+
+<!-- SLIDE 37 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#d32f2f,#e53935)">
+    <div class="icon">🩸</div>
+    <h2>تعريف وأسباب وتشخيص</h2>
+    <span class="pg">١ / ٢</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> اضطراب في التخثر حيث تحدث تنشيط داخل الأوعية لكل من نظام التخثر والفيبرينوليز → استهلاك عوامل التخثر والصفائح</li>
+      <li data-icon="🚨"><strong>الصورة السريرية:</strong> نزيف من كل مكان + سيلان أثناء العمليات + نزيف بعد الولادة — "كل شيء ينزف"</li>
+      <li data-icon="🤰"><strong>الأسباب في الحمل:</strong> ① تسمم الحمل ② انصمام السائل الأمنيوسي ③ عدوان المشيمة ④ الحمولة العقدية ⑤ موت الجنين داخل الرحم</li>
+      <li data-icon="🔬"><strong>الفحوصات:</strong> PT مرتفع ↑ + PTT مرتفع ↑ + D-dimer مرتفع ↑ + صفائح منخفضة ↓ + فيبرينوجين منخفض ↓</li>
+      <li data-icon="💎)<strong>لؤلؤة:</strong> D-dimer طبيعي = استبعاد DIC — فيبرينوجين < ١٠٠ مجم/ديسيلتر في الحمل = مشتبه بـ DIC (طبيعي ٤٠٠-٦٠٠)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 38 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#d32f2f,#e53935)">
+    <div class="icon">🩸</div>
+    <h2>العلاج</h2>
+    <span class="pg">٢ / ٢</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🎯"><strong>١. علاج السبب أولاً:</strong> إزالة المحفز (تسليم الجنين في عدوان المشيمة، تنظير الحمولة، تسليم الجنين الميت) — لا كمية من البلازما توقف DIC إذا كان السبب موجوداً</li>
+      <li data-icon="💉"><strong>٢. نقل الدم:</strong> دم طازج + بلازما مجمدة طازجة + كريوبريسيبيتات + صفائح دموية</li>
+      <li data-icon="💊"><strong>٣. مضادات التخثر:</strong> تُستخدم بشكل انتقائي — في الحالات المزمنة (جنين ميت متبقي > ٤ أسابيع، حمولة عقدية) — تجنب في النزيف النشط</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> علاج السبب يأتي أولاً — تسليم الجنين في عدوان المشيمة هو نفسه العلاج</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> مضادات التخثر في DIC = سيف ذا حدّين — مفيدة في الحالات المزمنة، خطيرة في النزيف النشط</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 39: TITLE — DM ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#f57f17,#ff8f00)">
+  <div class="icon">🍬</div>
+  <div class="ch">الفصل ١٠</div>
+  <h1>السكري مع الحمل</h1>
+  <div class="sub">Diabetes Mellitus with Pregnancy</div>
+</div>
+
+<!-- SLIDE 40 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#f57f17,#ff8f00)">
+    <div class="icon">🍬</div>
+    <h2>التعريف والتصنيف والتشخيص</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> اضطراب في أيض الكربوهيدرات يتميز بارتفاع الجلوكوز والجلوكوز في البول</li>
+      <li data-icon="📊"><strong>التصنيف:</strong> ما قبل الحمل (النوع ١ + النوع ٢) — سكري الحمل (يُشخّص ٢٤-٢٨ أسبوع)</li>
+      <li data-icon="🔬"><strong>فحص الجلوكوز المُتحدٍي (GCT):</strong> ٥٠ جم جلوكوز بعد ساعة في الأسبوع ٢٤-٢٨ — طبيعي < ١٤٠ مجم/ديسيلتر</li>
+      <li data-icon="📊"><strong>فحص تحمل الجلوكوز (GTT):</strong> ١٠٠ جم بعد صيام ٨ ساعات — أي قيمتين أو أكثر من ٤ من Carpenter-Coustan = تشخيص</li>
+      <li data-icon="📈)<strong>ال_cut-offs:</strong> صائم ٩٥ — بعد ساعة ١٨٠ — بعد ساعتين ١٥٥ — بعد ٣ ساعات ١٤٠ (Carpenter-Coustan)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 41 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#f57f17,#ff8f00)">
+    <div class="icon">🍬</div>
+    <h2>تأثير الحمل على السكري وتأثير السكري على الحمل</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📈"><strong>الحمل يزيد السكري:</strong> احتياجات الإنسولين تزداد بعد الشهر الثالث حتى Term — السكري قد يظهر لأول مرة خلال الحمل</li>
+      <li data-icon="⚠️><strong>الketosis during الحمل:</strong> قد يحدث بجلوكوز أقل من الطبيعي بسبب تسارع الأيض</li>
+      <li data-icon="👶"><strong>تأثير السكري على الجنين:</strong> إسقاط + تشوهات (ضعف المعدلة) + macrosomia + مخاض مبكر + اختناق أثناء الولادة + نقص جلوكوز المولود</li>
+      <li data-icon="🤰"><strong>تأثير السكري على الأم:</strong> نقص جلوكوز + ketosis + سائل amniotic زائد + تسمم + نزيف بعد الولادة</li>
+      <li data-icon="🔴"><strong>خطورة macrosomia (فرضية Pedersen):</strong> جلوكوز أمومي مرتفع → جلوكوز جنيني مرتفع → إنسولين جنيني مرتفع → نمو مفرط + نقص جلوكوز المولود بعد الولادة</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 42 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#f57f17,#ff8f00)">
+    <div class="icon">🍬</div>
+    <h2>العلاج والمخاض</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🥗"><strong>GDM-A1:</strong> نظام غذائي فقط — ١٨٠٠-٢٤٠٠ سعر/يوم — ١٥-٢٠% بروتين + ٥٠-٦٠% كربوهيدرات + ٢٠% دهون</li>
+      <li data-icon="💊"><strong>GDM-A2:</strong> نظام غذائي + أدوية خفض الجلوكوز (Metformin أو الإنسولين)</li>
+      <li data-icon="📊"><strong>الهدف:</strong> صائم ≤ ٩٥ — بعد ساعة ≤ ١٤٠ — بعد ساعتين ≤ ١١٥</li>
+      <li data-icon="⏰><strong>الولادة:</strong> ٣٨ أسبوع في السكري المُتحكّم — قبل ٣٨ أسبوع إذا لم يُتحكّم أو مضاعفات</li>
+      <li data-icon="⚠️><strong>التحذير:</strong> cascade Pedersen = جلوكوز أمومي مرتفع → جلوكوز جنيني مرتفع → إنسولين جنيني مرتفع → نقص جلوكوز المولود → نوبات + وفاة — التحكم بالجلوكوز أثناء المخاض (٨٠-١٠٠ مجم/ديسيلتر) هو الأهم</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 43: TITLE — UTI ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#00695c,#00897b)">
+  <div class="icon">🦠</div>
+  <div class="ch">الفصل ١١</div>
+  <h1>عدوى المسالك البولية في الحمل</h1>
+  <div class="sub">UTI in Pregnancy</div>
+</div>
+
+<!-- SLIDE 44 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#00695c,#00897b)">
+    <div class="icon">🦠</div>
+    <h2>الفحوصات والعلاج</h2>
+    <span class="pg">١ / ٢</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🔬"><strong>المطلوب:</strong> زرع مسحة بول متوسطة (MSU) — وجود > ١٠٠,٠٠٠ كائن/مل = تشخيص البكتيرية البولية غير العرضية</li>
+      <li data-icon="🌡️)<strong>إذا كانت هناك حمى:</strong> CBC + وظائف الكلى (استبعاد انخراط الجهاز الكلوي)</li>
+      <li data-icon="🔄"><strong>إذا تكررت العدوى:</strong> أولتراساوند للمسالك البولية (استبعاد تشوه أو حصاة أو احتباس بول)</li>
+      <li data-icon="💊"><strong>البكتيرية البولية غير العرضية:</strong> مضاد حيووي فموي لمدة ٣ أيام</li>
+      <li data-icon="💊"><strong>التهاب المثانة:</strong> علاج لمدة ٧ أيام</li>
+      <li data-icon="🏥><strong>التهاب الحوض الكلوي:</strong> госпл + سوائل IV + مضادات حيوية parenteral (سب살وسورين) → فموي حسب الحساسية لمدة ١٠-١٤ يوم</li>
+    </ul>
+    <div class="box box-danger">
+      <h4>🚨 تحذير</h4>
+      <p>التهاب الحوض الكلوي في الحمل سبب رئيسي لصدمة إنتانية + مخاض مبكر + ARDS — أي حامل مع حمى + ألم في الخاصرة + بيلة بولية = التهاب حوض كلوي حتى يثبت العكس</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 45 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#00695c,#00897b)">
+    <div class="icon">🦠</div>
+    <h2>خطوات علاج التهاب الحوض الكلوي</h2>
+    <span class="pg">٢ / ٢</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🏥"><strong>الخطوة ١:</strong> госpl المريضة</li>
+      <li data-icon="💧"><strong>الخطوة ٢:</strong> سوائل IV + خافضات حرارة</li>
+      <li data-icon="💉"><strong>الخطوة ٣:</strong> مضادات حيوية واسعة الإطار parenteral (سب살وسورين) بشكل تجاري</li>
+      <li data-icon="⏰><strong>الخطوة ٤:</strong> المتابعة حتى نتائج الزرع أو هبوط الحمى</li>
+      <li data-icon="💊"><strong>الخطوة ٥:</strong> الانتقال لفموي حسب الحساسية لمدة ١٠-١٤ يوم (إجمالي)</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> أي حامل مع حمى + ألم خاصرة + بيلة = التهاب حوض كلوي — حدّ العلاج parenteral منخفض جداً</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 46: TITLE — Thromboembolism ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#283593,#303f9f)">
+  <div class="icon">🫀</div>
+  <div class="ch">الفصل ١٢</div>
+  <h1>الانصمام الخثري أثناء الحمل</h1>
+  <div class="sub">Thromboembolism during Pregnancy</div>
+</div>
+
+<!-- SLIDE 47 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#283593,#303f9f)">
+    <div class="icon">🫀</div>
+    <h2>الالتهاب السطحي والجلط العميق في الأوردة</h2>
+    <span class="pg">١ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🔵"><strong>الالتهاب السطحي:</strong> شائع في أوردة الساق والثDataGridViewTextBoxColumn والمنطقة الإربية والفرج — ألم + احمرار + تصلب خطي + حمى خفيفة</li>
+      <li data-icon="🔴"><strong>خطر DVT:</strong> الالتهاب السطحي يزيد خطر الجلطة العميقة</li>
+      <li data-icon="🦵"><strong>الجلط العميق (DVT):</strong> MOST في الوريد الأيسر — ألم + تورم + سخونة + ازرقاق + علامة Homan</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> ٥٠% من حالات DVT في الحمل بدون أعراض — غياب التورم لا يستبعد DVT</li>
+      <li data-icon="🔬"><strong>التشخيص:</strong> أولتراساوند دوبلر ضغطي (الخط الأول) + رسم وريدي + رنين مغناطيسي للأوردة الحوضية</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 48 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#283593,#303f9f)">
+    <div class="icon">🫀</div>
+    <h2>العلاج — Heparin</h2>
+    <span class="pg">٢ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="💊"><strong> UFH:</strong> جرعة تحميل ٥,٠٠٠ IU + ثم ١٥,٠٠٤ IU IV كل ١٢ ساعة لمدة ٥-١٠ أيام → صيانة ١٠,٠٠٠ IU SC كل ٨-١٢ ساعة</li>
+      <li data-icon="💊"><strong>LMWH (Enoxaparin):</strong> وقائي ٤٠ مجم يومياً — علاجي ١ مجم/كجم كل ١٢ ساعة — متابعة ٦-١٢ أسبوع بعد الولادة</li>
+      <li data-icon="🛡️)<strong>LMWH أفضل من UFH:</strong> توافر حيوي أفضل + نصف عمر أطول + خطر نزيف أقل — لا يعبر المشيمة</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> Warfarin ممنوع في الحمل (teratogenic) — Heparin هو الخيار الوحيد الآمن</li>
+      <li data-icon="💉"><strong>المضاد لـ UFH:</strong> Protamine sulphate ١% — ١٠ مجم (١ مجم لكل ١٠٠ IU من Heparin المستخدمة في آخر ساعتين)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 49 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#283593,#303f9f)">
+    <div class="icon">🫀</div>
+    <h2>الانصمام الرئوي (PE)</h2>
+    <span class="pg">٣ / ٣</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="🫁"><strong>الأعراض:</strong> ضيق تنفس + سعال + ألم صدر + بلغم رغوي مصفر + تنفّس دموي</li>
+      <li data-icon="🔍"><strong>العلامات:</strong> حمى خفيفة + نبض سريع + تنفس سريع + ازرقاق + ارتفاع ضغط الوريد Jugular + احتكاك أو استرواح</li>
+      <li data-icon="🔬"><strong>الفحوصات:</strong> ABGs + ECG + V/Q scan + CT صدري + رسم رئوي + موجات فوق صوتية للقلب</li>
+      <li data-icon="💊"><strong>العلاج:</strong> استقرار المريض + هبارين فوري (UFH IV هو المفضل) + فلتر IVC + تحليل خثار + إزالة انصمام</li>
+      <li data-icon="🚨><strong>تحذير:</strong> الإنصمام الرئوي الضخم (صدمة + انخفاض ضغط مستمر) = تشخيص سريري — لا تتأخر في العلاج التجريبي بالهبارين</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== SLIDE 50: TITLE — RH Incompatibility ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#880e4f,#ad1457)">
+  <div class="icon">🩸</div>
+  <div class="ch">الفصل ١٣</div>
+  <h1>تعارض Rh</h1>
+  <div class="sub">RH Incompatibility</div>
+</div>
+
+<!-- SLIDE 51 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#880e4f,#ad1457)">
+    <div class="icon">🩸</div>
+    <h2>التعريف والسبب والمسببات</h2>
+    <span class="pg">١ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="📋"><strong>التعريف:</strong> اضطراب مناعيresulting in تدمير الكريات الحمراء للجنين بواسطة أجسام مضادة تعبر المشيمة من دم الأم</li>
+      <li data-icon="🧬"><strong>الجينات:</strong> ٥ جينات رئيسية (C, D, E, c, e) — الجين D هو الأهم — ٨٥% Rh+ و ١٥% Rh-</li>
+      <li data-icon="👨‍👩‍👧"><strong>يحدث عندما:</strong> أم Rh- حامل من أب Rh+ — الأب homozygous (DD) = ١٠٠% Rh+ — heterozygous (Dd) = ٥٠% Rh+</li>
+      <li data-icon="🔄"><strong>استشعار الأم:</strong> عند دخول كريات حمراء Rh+ في الدورة الدموية للأم — أثناء الحمل (فصل المشيمة، إجهاض، amniocentesis) أو قبله (transfusion)</li>
+      <li data-icon="⚠️><strong>تحذير:</strong> الجدّة (الأم originally Rh+) قد تكون هي التي استشعرت الأم — "grandmother syndrome"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 52 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#880e4f,#ad1457)">
+    <div class="icon">🩸</div>
+    <h2>الأنواع السريرية والتشخيص</h2>
+    <span class="pg">٢ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="💀"><strong>Hydrops fetalis (الأكثر خطورة):</strong> فشل قلبي بسبب فقر الدم + تضخم الكبد والطحال + استسقاء + وفاة داخل الرحم — Hb < ٨ جم/ديسيلتر</li>
+      <li data-icon="🟡"><strong>Icterus gravis neonatorum (الأكثر شيوعاً):</strong> بعد الولادة — فقر الدم + يرقان + تضخم الكبد والطحال — إذا بلغ البيليروبين الدماغ = kernicterus</li>
+      <li data-icon="🟢"><strong>فقر الدم الخلقي الخفيف:</strong> فقر الدم الخفيف عند الولادة (Hb < ١٤) + شحوب خفيف + يرقان عابر</li>
+      <li data-icon="🔬"><strong>التشخيص:</strong> فصيلة الأم والأب + indirect Coomb's test (أموي) — titer > ١/١٦ = استشعار ملحوظ</li>
+      <li data-icon="📡"><strong>الألتراساوند:</strong> تورم فروة الرأس + سائل amniotic زائد + سماكة المشيمة + MCA Doppler (peak systolic velocity مرتفع = فقر الدم)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 53 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#880e4f,#ad1457)">
+    <div class="icon">🩸</div>
+    <h2>الوقاية والعلاج</h2>
+    <span class="pg">٣ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="💉"><strong>الوقاية:</strong> لا ت給予 أم Rh- دم Rh+ — إعطاء Anti-D immunoglobulin بعد الولادة أو الإجهاض</li>
+      <li data-icon="📊"><strong>إذا titer < ١/١٦:</strong> لا تدخل — عند الأسبوع ٢٨ جرعة Anti-D ٣٠٠ ميكروجرام</li>
+      <li data-icon="📈"><strong>إذا titer مرتفع:</strong> amniocentesis + رسم Liley curve — Zone 1 (minimal) → ولادة عند Term — Zone 2 (moderate) → ٣٢ أسبوع — Zone 3 (severe) → ولادة/ transfusion خلال ٧-١٠ أيام</li>
+      <li data-icon="🔬"><strong>التحديث:</strong> MCA Doppler يحل محل amniocentese في كثير من المراكز — يبدأ ١٦-١٨ أسبوع + كل ١-٢ أسبوع</li>
+      <li data-icon="💉"><strong> transfusion داخل الرحم (IUT):</strong> ٢٤-٢٢ أسبوع — دم Group O Rh- — (عدد الأسابيع - ٢٠) × ١٠ مل</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 54 -->
+<div class="slide slide-content">
+  <div class="hdr" style="background:linear-gradient(135deg,#880e4f,#ad1457)">
+    <div class="icon">🩸</div>
+    <h2>الولادة ورعاية المولود</h2>
+    <span class="pg">٤ / ٤</span>
+  </div>
+  <div class="body">
+    <ul class="bullets">
+      <li data-icon="👶"><strong>الولادة:</strong> مهبلية مفضلة — CS لدليل توليد أو جنين مُهدد — فصل الحبل فوراً + قطع على بُعد ٢-٣ بوصات</li>
+      <li data-icon="🩸"><strong>نقل الدم التبادلي:</strong> إذا بيليروBIN الحبل > ٥% أو Hb الحبل < ١٠ جم/ديسيلتر أو ارتفاع سريع للبيليروبين أو يرقان في أول ١٢ ساعة</li>
+      <li data-icon="💡"><strong>العلاج الضوئي (Phototherapy):</strong> ضوء أزرق/أخضر يحول البيليروبين غير المترافق إلى مركبات غير سامة قابلة للذوبان في الماء</li>
+      <li data-icon="💊"><strong>Phenobarbitone:</strong> محفّز للإنزيمات يزيد نشاط glucuronyl transferase → زيادة اقتران البيليروبين وإفرازه</li>
+      <li data-icon="🔴"><strong>ABO incompatibility:</strong> يختلف عن Rh — قد يُصيب الطفل الأول — خفيف نسبياً — علاج بالعلاج الضوئي فقط</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===================== END SLIDE ===================== -->
+<div class="slide slide-title" style="background:linear-gradient(135deg,#1a237e,#283593)">
+  <div class="icon">🎓</div>
+  <h1>انتهى الأسبوع الأول</h1>
+  <div class="sub">Week 1 — 13 topics covered</div>
+  <div style="margin-top:40px;font-size:28px;opacity:.8">
+    فيزيولوجيا الإنجاب · تكيف الأم · تشخيص الحمل<br>
+    رعاية ما قبل الولادة · الإجهاض · الحمل خارج الرحم<br>
+    أمراض الأنسجة الغروية · ارتفاع الضغط · DIC<br>
+    السكري · UTI · انصمام الخثار · تعارض Rh
+  </div>
+</div>
+
+</div><!-- end .deck -->
+
+<!-- ── Navigation Bar ── -->
+<div class="nav-bar">
+  <button id="prevBtn" onclick="go(-1)" disabled>▶</button>
+  <span class="counter" id="counter">1 / 55</span>
+  <button id="nextBtn" onclick="go(1)">◀</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let cur = 0;
+const total = slides.length;
+
+function show(i) {
+  slides[cur].classList.remove('active');
+  cur = i;
+  slides[cur].classList.add('active');
+  document.getElementById('counter').textContent = (cur+1) + ' / ' + total;
+  document.getElementById('prevBtn').disabled = cur === 0;
+  document.getElementById('nextBtn').disabled = cur === total - 1;
+}
+
+function go(d) { const n = cur + d; if (n >= 0 && n < total) show(n); }
+
+// Keyboard
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') go(e.key === 'ArrowRight' ? 1 : -1);
+});
+
+// Touch swipe
+let tx = 0;
+document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; });
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+});
+
+// Scale to fit screen
+function fit() {
+  const deck = document.getElementById('deck');
+  const sw = window.innerWidth, sh = window.innerHeight;
+  const scale = Math.min(sw / 1080, (sh - 60) / 1920);
+  deck.style.transform = `scale(${scale})`;
+  deck.style.transformOrigin = 'top center';
+  deck.style.marginTop = Math.max(0, (sh - 60 - 1920 * scale) / 2) + 'px';
+}
+fit();
+window.addEventListener('resize', fit);
+</script>
+</body>
+</html>

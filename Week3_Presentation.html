@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 3 — OB/GYN Presentation | Labor & Delivery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#fff;color:#1a1a2e;line-height:1.6;font-size:15px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:9999;background:linear-gradient(135deg,#0f3a5f,#1a1a2e);padding:8px 12px;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-row{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap}
+.nav-row::-webkit-scrollbar{display:none}
+.nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;background:rgba(255,255,255,.08);transition:all .2s;flex-shrink:0}
+.nav a:hover,.nav a:active{background:rgba(255,255,255,.25);color:#fff}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f3a5f 0%,#1a1a2e 50%,#0f3a5f 100%);color:#fff;text-align:center;padding:40px 20px 30px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 60%);animation:pulse 8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.hero h1{font-size:28px;font-weight:900;letter-spacing:-.5px;line-height:1.2}
+.hero .sub{font-size:14px;color:rgba(255,255,255,.75);margin-top:8px}
+.hero .stats{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.hero .st{background:rgba(255,255,255,.12);border-radius:12px;padding:8px 16px;text-align:center;backdrop-filter:blur(10px)}
+.hero .st .n{font-size:22px;font-weight:800}
+.hero .st .l{font-size:10px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em}
+
+/* CONTAINER */
+.ct{max-width:900px;margin:0 auto;padding:0 12px 40px}
+
+/* SECTION/SLIDE */
+.slide{margin-top:20px;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);background:#fff;border:1px solid #e8ecf1}
+.slide-hdr{padding:20px 24px;color:#fff;display:flex;align-items:center;gap:12px;position:relative;overflow:hidden}
+.slide-hdr::after{content:"";position:absolute;top:-20px;right:-20px;width:80px;height:80px;background:rgba(255,255,255,.08);border-radius:50%}
+.slide-hdr h2{font-size:22px;font-weight:800;line-height:1.3;flex:1;letter-spacing:-.3px}
+.slide-hdr .ico{font-size:32px;flex-shrink:0}
+.slide-bd{padding:20px 24px 24px}
+
+/* IMAGES */
+.topic-img{width:100%;border-radius:12px;margin:12px 0;border:2px solid #e8ecf1;max-height:350px;object-fit:cover}
+.img-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.img-grid img{width:100%;border-radius:10px;border:2px solid #e8ecf1;max-height:250px;object-fit:cover}
+.img-caption{font-size:11px;color:#666;text-align:center;margin-top:-8px;margin-bottom:12px;font-style:italic}
+
+/* HEADINGS */
+h3{margin:18px 0 8px;font-size:17px;color:#0f3a5f;padding-bottom:4px;border-bottom:2px solid #e3e8ef}
+h4{margin:14px 0 6px;font-size:15px;color:#1e6091}
+h5{margin:10px 0 4px;font-size:13px;color:#2a8fb5;font-weight:600}
+
+/* CONTENT */
+p{margin:4px 0;font-size:14px;line-height:1.6}
+ul,ol{padding-left:22px;margin:4px 0 8px}
+li{margin:3px 0;font-size:14px;line-height:1.6}
+strong{color:#0f3a5f}
+
+/* TABLES */
+.tw{overflow-x:auto;margin:10px 0;border-radius:10px;border:1px solid #e8ecf1}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{border:1px solid #e8ecf1;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#0f3a5f;color:#fff;font-weight:600;font-size:12px;white-space:nowrap}
+tr:nth-child(even) td{background:#f8fafc}
+tr:hover td{background:#eef5fa}
+
+/* CALLOUT BOXES */
+.co{border-left:4px solid;padding:10px 14px;margin:10px 0;border-radius:8px;background:#fff;font-size:13px}
+.co-p{border-color:#2e7d32;background:#eaf6ec}
+.co-n{border-color:#1e6091;background:#eef5fa}
+.co-w{border-color:#c62828;background:#fdecea}
+.co-t{font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:2px}
+.co-p .co-t{color:#1b5e20}
+.co-n .co-t{color:#0f3a5f}
+.co-w .co-t{color:#b71c1c}
+
+/* COMPARISON BOXES */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.cmp-card{background:#f8fafc;border-radius:12px;padding:14px;border:1px solid #e8ecf1}
+.cmp-card h5{margin:0 0 6px;font-size:14px;color:#0f3a5f}
+
+/* STAT CARDS */
+.stat-row{display:flex;gap:10px;margin:10px 0;flex-wrap:wrap}
+.stat-card{flex:1;min-width:120px;background:linear-gradient(135deg,#0f3a5f,#1a5276);color:#fff;border-radius:12px;padding:12px 16px;text-align:center}
+.stat-card .n{font-size:20px;font-weight:800}
+.stat-card .l{font-size:10px;color:rgba(255,255,255,.8);margin-top:2px}
+
+/* NUMBERED STEPS */
+.steps{counter-reset:step}
+.steps li{list-style:none;position:relative;padding-left:32px;margin:6px 0;font-size:14px}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:24px;height:24px;background:#0f3a5f;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+
+/* SECTION COLORS */
+.sec-1 .slide-hdr{background:linear-gradient(135deg,#0f3a5f,#1a5276)}
+.sec-2 .slide-hdr{background:linear-gradient(135deg,#1b5e20,#2e7d32)}
+.sec-3 .slide-hdr{background:linear-gradient(135deg,#b71c1c,#c62828)}
+.sec-4 .slide-hdr{background:linear-gradient(135deg,#1565c0,#1976d2)}
+.sec-5 .slide-hdr{background:linear-gradient(135deg,#e65100,#f57c00)}
+.sec-6 .slide-hdr{background:linear-gradient(135deg,#880e4f,#ad1457)}
+.sec-7 .slide-hdr{background:linear-gradient(135deg,#6a1b9a,#8e24aa)}
+.sec-8 .slide-hdr{background:linear-gradient(135deg,#4527a0,#5e35b1)}
+.sec-9 .slide-hdr{background:linear-gradient(135deg,#d32f2f,#e53935)}
+.sec-10 .slide-hdr{background:linear-gradient(135deg,#f57f17,#ff8f00)}
+.sec-11 .slide-hdr{background:linear-gradient(135deg,#00695c,#00897b)}
+.sec-12 .slide-hdr{background:linear-gradient(135deg,#283593,#3949ab)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .hero h1{font-size:22px}
+  .slide-bd{padding:16px}
+  .img-grid{grid-template-columns:1fr}
+  .cmp-grid{grid-template-columns:1fr}
+  .stat-row{flex-direction:column}
+  table{font-size:11px}
+  th,td{padding:5px 6px}
+}
+
+/* PRINT */
+@media print{.nav{display:none}.slide{break-inside:avoid;box-shadow:none;border:1px solid #ddd}}
+
+/* FOOTER */
+.footer{text-align:center;padding:30px 16px;font-size:12px;color:#999}
+.footer a{color:#0f3a5f;text-decoration:none}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div class="nav"><div class="nav-row">
+<a href="#t1">👶 Normal Labor</a>
+<a href="#t2">🦴 Female Pelvis</a>
+<a href="#t3">💀 Fetal Skull</a>
+<a href="#t4">🔄 Occipitoposterior</a>
+<a href="#t5">👤 Face Presentation</a>
+<a href="#t6">👀 Brow Presentation</a>
+<a href="#t7">⭕ Compound</a>
+<a href="#t8">👣 Breech</a>
+<a href="#t9">🦴 Shoulder</a>
+<a href="#t10">🔗 Cord Prolapse</a>
+<a href="#t11">🩺 Operative OB</a>
+<a href="#t12">🩹 Instruments</a>
+</div></div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Week 3 — OB/GYN Presentation</h1>
+<div class="sub">Labor, Delivery & Operative Obstetrics · 12 Comprehensive Topics</div>
+<div class="stats">
+<div class="st"><div class="n">12</div><div class="l">Topics</div></div>
+<div class="st"><div class="n">256K</div><div class="l">Characters</div></div>
+<div class="st"><div class="n">4638</div><div class="l">Lines</div></div>
+</div></div>
+
+<div class="ct">
+
+<!-- ===================== TOPIC 1: NORMAL LABOR ===================== -->
+<div class="slide sec-1" id="t1">
+<div class="slide-hdr"><span class="ico">👶</span><h2>1. Normal Labor</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Blausen_0329_Pregnancy_CervicalChanges.png/800px-Blausen_0329_Pregnancy_CervicalChanges.png" alt="Stages of Labor" class="topic-img">
+<div class="img-caption">Stages of Cervical Changes During Labor — Wikimedia Commons (CC)</div>
+
+<h3>Definition of Normal Labor</h3>
+<p><strong>Normal labor</strong> is the process of spontaneous delivery of a single full-term viable fetus presented by the vertex through the birth canal within reasonable time without interference or complications to the mother or the fetus.</p>
+
+<h3>Causes of Onset of Labor</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>1. Hormonal Factors</h5>
+<p>↑ Estrogen, ↓ Progesterone, ↑ Prostaglandin F2α and ↑ Oxytocin → uterine contraction.</p>
+</div>
+<div class="cmp-card">
+<h5>2. Mechanical Factors</h5>
+<p>Uterine distension and stretch of the lower uterine segment → uterine contraction.</p>
+</div>
+</div>
+
+<h3>The Four Functional Stages of Labor</h3>
+<div class="stat-row">
+<div class="stat-card"><div class="n">1st</div><div class="l">Onset → Full Dilatation (12h PR, 6h M)</div></div>
+<div class="stat-card"><div class="n">2nd</div><div class="l">Full Dilatation → Fetus Born (1-2h PR, 30min M)</div></div>
+<div class="stat-card"><div class="n">3rd</div><div class="l">Fetus Born → Placenta (~15min)</div></div>
+<div class="stat-card"><div class="n">4th</div><div class="l">1 Hour Observation Post-Placenta</div></div>
+</div>
+
+<h3>True vs False Labor Pains</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Feature</th><th>True Labor</th><th>False Labor</th></tr></thead>
+<tbody>
+<tr><td><strong>Cervical changes</strong></td><td>Present (dilatation & effacement)</td><td>Absent</td></tr>
+<tr><td><strong>Frequency</strong></td><td>Regular, gradually increase</td><td>Irregular</td></tr>
+<tr><td><strong>Pain radiation</strong></td><td>Lower abdomen & back → thighs</td><td>Lower abdomen only</td></tr>
+<tr><td><strong>Show</strong></td><td>Present</td><td>Absent</td></tr>
+<tr><td><strong>Relief with sedation</strong></td><td>No</td><td>Yes</td></tr>
+</tbody></table></div>
+
+<h3>Friedman Curve</h3>
+<p>The pattern of cervical dilatation during labor is a <strong>sigmoid curve</strong> (Friedman curve) with two phases:</p>
+<ul>
+<li><strong>Latent phase:</strong> cervix 0–3/5 cm, mainly effacement (12h PR, 8h M)</li>
+<li><strong>Active phase:</strong> cervix 3–10 cm, mainly dilatation
+<ul>
+<li>Acceleration phase: 3–4 cm</li>
+<li>Phase of maximum slope: 4–9 cm</li>
+<li>Deceleration phase: 9–10 cm</li>
+</ul></li>
+</ul>
+
+<h3>Mechanism of Labor (7 Cardinal Movements)</h3>
+<ol class="steps">
+<li><strong>Descent</strong> — caused by uterine contractions</li>
+<li><strong>Engagement</strong> — biparietal diameter passes through pelvic brim</li>
+<li><strong>Increased flexion</strong> — chin approaches chest</li>
+<li><strong>Internal rotation</strong> — occiput rotates to anterior</li>
+<li><strong>Extension</strong> — head extends under symphysis</li>
+<li><strong>Restitution</strong> — head rotates back 45° to realign with shoulders</li>
+<li><strong>External rotation</strong> — shoulders rotate to complete delivery</li>
+</ol>
+
+<h3>Abnormalities of Active Phase</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Feature</th><th>Cervical Dilatation</th><th>Descent of Head</th></tr></thead>
+<tbody>
+<tr><td><strong>Nulliparous (normal)</strong></td><td>1.2 cm/hr</td><td>1 cm/hr</td></tr>
+<tr><td><strong>Multiparous (normal)</strong></td><td>1.5 cm/hr</td><td>2 cm/hr</td></tr>
+</tbody></table></div>
+
+<div class="co co-w">
+<div class="co-t">⚠️ Warning</div>
+<strong>Arrest of dilatation:</strong> cessation for ≥ 2 hours. <strong>Arrest of descent:</strong> cessation for ≥ 1 hour. Causes: excessive sedation, epidural analgesia, fetal malposition, CPD.
+</div>
+
+<h3>Signs of Placental Separation (6 Signs)</h3>
+<ol>
+<li>Uterus becomes globular, hard and mobile</li>
+<li>Sudden gush of blood</li>
+<li>Suprapubic bulge in upper vagina</li>
+<li>Rise of fundal level above umbilicus</li>
+<li>Lengthening of the umbilical cord</li>
+<li>Absence of pulsation in the umbilical stump</li>
+</ol>
+
+<div class="co co-p">
+<div class="co-t">💎 Clinical Pearl</div>
+<strong>Active management of third stage</strong> (oxytocin + cord traction + uterine massage) is preferred over expectant management — it cuts third-stage duration from 15 min to 5 min and significantly lowers PPH risk and maternal mortality.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 2: FEMALE PELVIS ===================== -->
+<div class="slide sec-2" id="t2">
+<div class="slide-hdr"><span class="ico">🦴</span><h2>2. Female Pelvis</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pelvis_-_left_lateral_anterior_oblique_view.png/800px-Pelvis_-_left_lateral_anterior_oblique_view.png" alt="Female Pelvis Anatomy" class="topic-img">
+<div class="img-caption">Female Pelvis Anatomy — Anterior View — Wikimedia Commons (CC)</div>
+
+<h3>Anatomy of the Bony Pelvis — Three Compartments</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>1. Pelvic Inlet (Pelvic Brim)</h5>
+<p>The superior opening into the true pelvis. Bounded by the linea terminalis.</p>
+</div>
+<div class="cmp-card">
+<h5>2. Pelvic Cavity</h5>
+<p>Space between inlet and outlet where the fetus negotiates the birth canal.</p>
+</div>
+</div>
+<div class="cmp-card" style="margin:8px 0">
+<h5>3. Pelvic Outlet</h5>
+<p><strong>Anatomical outlet:</strong> lozenge-shaped (symphysis, pubic arch, ischial tuberosities, sacrotuberous ligaments, coccyx). <strong>Obstetric outlet:</strong> a segment bounded by the plane of least pelvic dimension above and anatomical outlet below.</p>
+</div>
+
+<h3>Pelvic Inlet Diameters</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Diameter</th><th>Value</th><th>Landmarks</th></tr></thead>
+<tbody>
+<tr><td><strong>True conjugate</strong></td><td><strong>11 cm</strong></td><td>Sacral promontory → upper border symphysis</td></tr>
+<tr><td><strong>Obstetric conjugate</strong></td><td><strong>10.5 cm</strong></td><td>Sacral promontory → most bulging point back of symphysis (shortest AP diameter)</td></tr>
+<tr><td><strong>Diagonal conjugate</strong></td><td><strong>12.5 cm</strong></td><td>Sacral promontory → lower border symphysis (only measurable clinically)</td></tr>
+<tr><td><strong>Anatomical transverse</strong></td><td><strong>13 cm</strong></td><td>Widest distance between iliopectineal lines (largest diameter in pelvis)</td></tr>
+<tr><td><strong>Obstetric transverse</strong></td><td><strong>12 cm</strong></td><td>Bisects the true conjugate</td></tr>
+<tr><td><strong>Oblique diameters</strong></td><td><strong>12 cm</strong></td><td>Right/left sacroiliac joint → opposite iliopectineal eminence</td></tr>
+<tr><td><strong>Sacro-cotyloid</strong></td><td><strong>9.5 cm</strong></td><td>Sacral promontory → iliopectineal eminence</td></tr>
+</tbody></table></div>
+
+<h3>Pelvic Outlet Diameters</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Diameter</th><th>Value</th><th>Landmarks</th></tr></thead>
+<tbody>
+<tr><td><strong>Obstetric AP of outlet</strong></td><td><strong>13 cm</strong></td><td>Tip of sacrum → lower border symphysis (coccyx moves back in 2nd stage)</td></tr>
+<tr><td><strong>Bituberous</strong></td><td><strong>11 cm</strong></td><td>Inner aspects of ischial tuberosities</td></tr>
+<tr><td><strong>Interspinous</strong></td><td><strong>10.5 cm</strong></td><td>Tips of ischial spines (smallest pelvic dimension — plane of arrest)</td></tr>
+</tbody></table></div>
+
+<h3>Caldwell-Moloy Classification — 4 Pelvic Types</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🟢 Gynecoid (50%)</h5>
+<p>The <strong>classic female pelvis</strong>. Round inlet, wide forepelvis, straight side walls. <strong>Optimally suited for vaginal delivery.</strong></p>
+</div>
+<div class="cmp-card">
+<h5>🔵 Android (20%)</h5>
+<p>The <strong>typical male pelvis</strong>. Heart-shaped inlet, narrow forepelvis. Increases risk of malposition and operative delivery.</p>
+</div>
+<div class="cmp-card">
+<h5>🟠 Anthropoid (25%)</h5>
+<p>AP diameter > transverse — ape-like inlet. Long oval shape.</p>
+</div>
+<div class="cmp-card">
+<h5>🟡 Platypelloid (5%)</h5>
+<p>Flat pelvis — transverse diameter > AP. Kidney-bean shaped inlet.</p>
+</div>
+</div>
+
+<div class="co co-p">
+<div class="co-t">💎 Clinical Pearl</div>
+<strong>Mnemonic "GAAAP":</strong> Gynecoid 50, Android 20, Anthropoid 25, Platypelloid 5 (relative incidence). Only the <strong>gynecoid</strong> pelvis is optimally suited for vaginal delivery. The diagonal conjugate ≥ 11.5 cm suggests adequate pelvic capacity.
+</div>
+
+<h3>The Obstetric Axis (Curve of Carus)</h3>
+<p>An imaginary J-shaped line representing the path the head passes during labor — <strong>downwards and backwards</strong> along the inlet axis till the ischial spines, then <strong>downwards and forwards</strong> along the outlet axis.</p>
+
+</div></div>
+
+<!-- ===================== TOPIC 3: FETAL SKULL ===================== -->
+<div class="slide sec-3" id="t3">
+<div class="slide-hdr"><span class="ico">💀</span><h2>3. Fetal Skull</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sutures_of_foetus.svg/800px-Sutures_of_foetus.svg.png" alt="Fetal Skull Sutures" class="topic-img">
+<div class="img-caption">Fetal Skull — Bones, Sutures & Fontanelles — Wikimedia Commons (CC)</div>
+
+<h3>Three Parts of the Fetal Skull</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>1. Base</h5>
+<p>From chin to foramen magnum. <strong>Rigid, non-compressible</strong> (bones fused).</p>
+</div>
+<div class="cmp-card">
+<h5>2. Face</h5>
+<p>From chin to root of nose and suborbital margin.</p>
+</div>
+</div>
+<div class="cmp-card" style="margin:8px 0">
+<h5>3. Vault</h5>
+<p>Consists of 5 flat bones joined by fibrous sutures. <strong>Compressible</strong> — allows moulding during labor.</p>
+</div>
+
+<h3>Bones of the Vault & Sutures</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Bones</th><th>Separating Suture</th></tr></thead>
+<tbody>
+<tr><td><strong>2 frontal bones</strong></td><td>Frontal (metopic) suture</td></tr>
+<tr><td><strong>2 parietal bones</strong></td><td>Sagittal suture</td></tr>
+<tr><td><strong>Occipital bone</strong></td><td>Lambdoid suture (from parietal bones)</td></tr>
+<tr><td><strong>Frontal ↔ Parietal</strong></td><td>Coronal suture</td></tr>
+<tr><td><strong>Parietal ↔ Temporal</strong></td><td>Temporal suture (each side)</td></tr>
+</tbody></table></div>
+
+<h3>Anterior vs Posterior Fontanelle</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Feature</th><th>Anterior (Bregma)</th><th>Posterior (Lambda)</th></tr></thead>
+<tbody>
+<tr><td><strong>Shape</strong></td><td>Large, lozenge/diamond</td><td>Small, triangular</td></tr>
+<tr><td><strong>Bones surrounding</strong></td><td>4 (2 frontal + 2 parietal)</td><td>3 (2 parietal + occipital)</td></tr>
+<tr><td><strong>Floor</strong></td><td>Membranous</td><td>Bony</td></tr>
+<tr><td><strong>Closure</strong></td><td>~1.5 years after birth</td><td>At full term</td></tr>
+<tr><td><strong>Moulding behavior</strong></td><td>Bones do NOT overlap</td><td>Bones overlap</td></tr>
+</tbody></table></div>
+
+<div class="co co-p">
+<div class="co-t">💎 Memory Aid</div>
+<strong>Anterior</strong> → "After birth" (closes ~1.5 years). <strong>Posterior</strong> → "Pre-birth / at term" (closes at term). Shape: Anterior = Diamond, Posterior = Triangle.
+</div>
+
+<h3>Longitudinal Diameters (6)</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Diameter</th><th>Length</th><th>Clinical Role</th></tr></thead>
+<tbody>
+<tr><td><strong>Suboccipito-bregmatic</strong></td><td>9.5 cm</td><td>Engagement in OA with complete flexion</td></tr>
+<tr><td><strong>Suboccipito-frontal</strong></td><td>10 cm</td><td>Engagement in OA with incomplete flexion</td></tr>
+<tr><td><strong>Occipito-frontal</strong></td><td>11.5 cm</td><td>Engagement in OP position; distends vulva in face-to-pubis</td></tr>
+<tr><td><strong>Submento-bregmatic</strong></td><td>9.5 cm</td><td>Engagement in face presentation (complete extension)</td></tr>
+<tr><td><strong>Submento-vertical</strong></td><td>11.5 cm</td><td>Engagement in incompletely extended face</td></tr>
+<tr><td><strong>Mento-vertical</strong></td><td>13.5 cm</td><td>Engagement in brow presentation — <strong>head CANNOT enter pelvis</strong></td></tr>
+</tbody></table></div>
+
+<h3>Transverse Diameters (4)</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Diameter</th><th>Length</th><th>Landmarks</th></tr></thead>
+<tbody>
+<tr><td><strong>Biparietal</strong></td><td>9.5 cm</td><td>Between parietal eminencies (standard US measurement)</td></tr>
+<tr><td><strong>Subparietal supraparietal</strong></td><td>9 cm</td><td>Below one eminence → above opposite (asynclitism)</td></tr>
+<tr><td><strong>Bitemporal</strong></td><td>8 cm</td><td>Between anterior ends of temporal sutures</td></tr>
+<tr><td><strong>Bimastoid</strong></td><td>7.5 cm</td><td>Between tips of mastoid processes</td></tr>
+</tbody></table></div>
+
+<div class="co co-w">
+<div class="co-t">⚠️ Danger Diameter</div>
+<strong>Mento-vertical (13.5 cm)</strong> exceeds the largest pelvic inlet diameter (anatomical transverse = 13 cm). In brow presentation, the head CANNOT enter the pelvis — this is why brow presentation requires cesarean section.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 4: OCCIPITOPOSTERIOR ===================== -->
+<div class="slide sec-4" id="t4">
+<div class="slide-hdr"><span class="ico">🔄</span><h2>4. Occipitoposterior Position</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Blausen_0330_Presentation_OcciputAnteriorandPosterior.png/800px-Blausen_0330_Presentation_OcciputAnteriorandPosterior.png" alt="Occipitoposterior Position" class="topic-img">
+<div class="img-caption">Occiput Anterior vs Occiput Posterior — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<p>The <strong>most common fetal malposition</strong>. It is vertex presentation in which the <strong>fetal back is directed posteriorly</strong> — also called "sunny-side up."</p>
+
+<h3>Etiology</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Fetal Causes (7)</h5>
+<ul>
+<li>Marked deflexion of fetal head</li>
+<li>Prematurity</li>
+<li>Macrosomia</li>
+<li>Multiple pregnancy</li>
+<li>Polyhydramnios</li>
+<li>Congenital anomalies (anencephaly, hydrocephalus)</li>
+<li>Cord around the neck</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>Maternal Causes (6)</h5>
+<ul>
+<li>Android and anthropoid pelvis</li>
+<li>Pendulous abdomen</li>
+<li>Placenta previa</li>
+<li>Pelvic tumors</li>
+<li>Uterine anomalies (bicornuate, septate)</li>
+<li>Abnormal uterine contractions</li>
+</ul>
+</div>
+</div>
+
+<h3>Four Positions of OP</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Left O.P.</h5>
+<p>Occiput over left sacroiliac joint.</p>
+</div>
+<div class="cmp-card">
+<h5>Right O.P. (more common)</h5>
+<p>Occiput over right sacroiliac joint. More common due to dextrorotation and sigmoid colon on left.</p>
+</div>
+<div class="cmp-card">
+<h5>Direct O.P.</h5>
+<p>Occiput over the sacrum.</p>
+</div>
+<div class="cmp-card">
+<h5>Occipito-transverse</h5>
+<p>Occiput lies transverse in pelvis.</p>
+</div>
+</div>
+
+<h3>Mechanism of Labor — 4 Outcomes</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Outcome</th><th>Incidence</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>Long anterior rotation</strong></td><td>90%</td><td>Head rotates 135° to direct OA → vaginal delivery</td></tr>
+<tr><td><strong>Direct OP (face-to-pubis)</strong></td><td>6%</td><td>Delivers in OP position — episiotomy needed</td></tr>
+<tr><td><strong>Persistent OP</strong></td><td>3%</td><td>No rotation → obstructed labor</td></tr>
+<tr><td><strong>Deep transverse arrest</strong></td><td>1%</td><td>Short rotation 45° → obstructed labor</td></tr>
+</tbody></table></div>
+
+<h3>Management</h3>
+<h4>First Stage</h4>
+<ul>
+<li>Avoid unnecessary PV examinations</li>
+<li>Avoid uterine inertia (encourage adequate contractions)</li>
+<li>Evacuate bladder and rectum</li>
+<li>Close maternal and fetal observation</li>
+</ul>
+
+<h4>Second Stage</h4>
+<ul>
+<li>Wait for descent and long anterior rotation (90% of cases)</li>
+<li><strong>CS if:</strong> prolonged labor, poor progress, no rotation, fetal distress</li>
+<li><strong>Episiotomy</strong> for direct OP (face-to-pubis) to avoid perineal laceration</li>
+</ul>
+
+<h3>Complications</h3>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Maternal</h5>
+<ul><li>Early PROM, cord prolapse, prolonged/obstructed labor, vaginal/cervical tears, rupture uterus</li></ul>
+</div>
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Fetal</h5>
+<ul><li>Fetal hypoxia, skull fracture (left parietal bone impinges on ischial spine)</li></ul>
+</div>
+</div>
+
+<div class="co co-w">
+<div class="co-t">⚠️ Danger</div>
+Persistent OP with obstructed labor is a leading cause of <strong>rupture uterus</strong> — a maternal life-threatening emergency.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 5: FACE PRESENTATION ===================== -->
+<div class="slide sec-5" id="t5">
+<div class="slide-hdr"><span class="ico">👤</span><h2>5. Face Presentation</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Presentation_face.png/800px-Presentation_face.png" alt="Face Presentation" class="topic-img">
+<div class="img-caption">Face Presentation — Mentoanterior Position — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<p>A <strong>rare cephalic malpresentation</strong> (~0.1–0.2%) in which the fetal head is <strong>completely hyperextended</strong> — the occiput touches the fetal back and the <strong>chin (mentum) becomes the presenting part</strong>. The denominator is the <strong>mentum</strong>.</p>
+
+<h3>Causes</h3>
+<ul>
+<li>All causes of OP position (deflexion, prematurity, macrosomia, polyhydramnios, anomalies, cord around neck, android pelvis, pendulous abdomen, etc.)</li>
+<li><strong>Specific to face:</strong> neck tumors, cystic hygroma, large fetal thyroid gland — all prevent flexion</li>
+</ul>
+
+<h3>Three Position Groups</h3>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #2e7d32">
+<h5 style="color:#2e7d32">🟢 Mentoanterior (favorable)</h5>
+<p>Chin directed anteriorly (symphysis). Direct MA, R MA, L MA. <strong>Vaginal delivery possible.</strong></p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #e65100">
+<h5 style="color:#e65100">🟡 Mentoposterior (unfavorable)</h5>
+<p>Chin directed posteriorly (sacrum). Direct MP, R MP, L MP. <strong>Usually requires CS.</strong></p>
+</div>
+</div>
+<div class="cmp-card" style="margin:8px 0;border-left:4px solid #1565c0">
+<h5 style="color:#1565c0">🔵 Mentotransverse</h5>
+<p>Chin lies transverse. R MT, L MT.</p>
+</div>
+
+<h3>Diagnosis</h3>
+<h4>PV Examination</h4>
+<p>The <strong>mouth, nose, orbital bones and chin</strong> are felt. Key: mouth and malar eminences form a <strong>triangle</strong> (vs ischial tuberosities and anus in a straight line).</p>
+
+<h3>Mechanism — Mentoanterior</h3>
+<ol class="steps">
+<li>Descent</li>
+<li>Engagement by <strong>submento-bregmatic diameter (9.5 cm)</strong></li>
+<li>Increased extension</li>
+<li>Internal rotation of chin 1/8 cycle anteriorly</li>
+<li>Head delivered by flexion</li>
+<li>Restitution</li>
+<li>External rotation</li>
+</ol>
+
+<h3>Mechanism — Mentoposterior</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Outcome</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>Long anterior rotation</strong></td><td>Chin rotates to anterior → delivered as MA (safe)</td></tr>
+<tr><td><strong>Deep transverse arrest</strong></td><td>Short anterior rotation → chin arrested transverse</td></tr>
+<tr><td><strong>Persistent mentoposterior</strong></td><td>No rotation → chin remains posterior</td></tr>
+<tr><td><strong>Direct mentoposterior</strong></td><td>Short posterior rotation → chin moves posteriorly</td></tr>
+</tbody></table></div>
+
+<h3>Management — Do's and Don'ts</h3>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">❌ Don'ts</h5>
+<ul>
+<li>Don't convert face to vertex (risk: uterine rupture, cord prolapse)</li>
+<li>Don't apply vacuum extractor</li>
+<li>Don't apply internal scalp electrode</li>
+</ul>
+</div>
+<div class="cmp-card" style="border-left:4px solid #2e7d32">
+<h5 style="color:#2e7d32">✅ Do's</h5>
+<ul>
+<li>Wait for spontaneous rotation (high chance of anterior rotation)</li>
+<li>Large episiotomy if vaginal delivery</li>
+<li>Epidural analgesia for prolonged labor</li>
+<li>Forceps in mentoanterior (chin anterior, head low)</li>
+<li><strong>CS for:</strong> persistent MP, deep transverse arrest, direct MP</li>
+</ul>
+</div>
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 6: BROW PRESENTATION ===================== -->
+<div class="slide sec-6" id="t6">
+<div class="slide-hdr"><span class="ico">👀</span><h2>6. Brow Presentation</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Presentation_brow.png/800px-Presentation_brow.png" alt="Brow Presentation" class="topic-img">
+<div class="img-caption">Brow Presentation — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<p>A rare cephalic malpresentation in which the fetal head is <strong>midway between flexion and extension</strong> — the brow is the presenting part and the <strong>frontal bone is the denominator</strong>.</p>
+
+<h3>Causes</h3>
+<p>Same as occipito-posterior position (see Topic 4).</p>
+
+<h3>Positions</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Frontoanterior</h5>
+<p>Right and Left. Frontal bone oriented anteriorly.</p>
+</div>
+<div class="cmp-card">
+<h5>Frontoposterior</h5>
+<p>Right and Left. Frontal bone oriented posteriorly.</p>
+</div>
+</div>
+
+<h3>Diagnosis</h3>
+<h4>During Pregnancy</h4>
+<ul>
+<li>Occiput and sinciput felt at the <strong>same level</strong> on abdominal palpation</li>
+<li><strong>Ultrasound is conclusive</strong></li>
+</ul>
+<h4>During Labor (PV)</h4>
+<ul>
+<li><strong>Frontal bone, supraorbital ridge, and root of nose</strong> are felt</li>
+<li><strong>Chin is NOT felt</strong> — key distinguishing feature from face presentation</li>
+</ul>
+
+<div class="co co-w">
+<div class="co-t">⚠️ Danger — Mento-vertical Diameter</div>
+The engaged diameter is <strong>mento-vertical 13.75 cm</strong> which is <strong>longer than ANY diameter of the female pelvic inlet</strong> (largest AP = 11 cm true conjugate, largest transverse = 13 cm). <strong>Labor becomes obstructed from the start.</strong>
+</div>
+
+<h3>Mechanism of Labor</h3>
+<p><strong>NO mechanism of labor is possible</strong> in brow presentation:</p>
+<ul>
+<li>Not flexed enough to behave like vertex</li>
+<li>Not extended enough to behave like face</li>
+<li>The head is locked at the largest diameter of the skull</li>
+</ul>
+
+<h3>Management</h3>
+<div class="co co-w">
+<div class="co-t">🚨 Cesarean Section is the Only Safe Option</div>
+Because the mento-vertical diameter (13.75 cm) cannot pass through the pelvic inlet, vaginal delivery is impossible. <strong>Cesarean section</strong> as soon as the diagnosis is confirmed.
+</div>
+
+<h3>Complications</h3>
+<ul>
+<li><strong>Maternal:</strong> PROM, cord prolapse</li>
+<li><strong>Fetal:</strong> Related to operative delivery and obstructed labor</li>
+</ul>
+
+</div></div>
+
+<!-- ===================== TOPIC 7: COMPOUND PRESENTATION ===================== -->
+<div class="slide sec-7" id="t7">
+<div class="slide-hdr"><span class="ico">⭕</span><h2>7. Compound Presentation</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Presentation_compound.png/800px-Presentation_compound.png" alt="Compound Presentation" class="topic-img">
+<div class="img-caption">Compound Presentation — Limb Prolapsed Beside Head — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<p>A <strong>cephalic presentation in which a limb (usually upper limb, less commonly lower limb) prolapses beside the presenting part</strong>. Two parts present simultaneously at the pelvic inlet.</p>
+
+<h3>Causes (7 Factors)</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Causes creating excess room</h5>
+<ul>
+<li><strong>Prematurity</strong> — smaller fetus, more space</li>
+<li><strong>Polyhydramnios</strong> — excess fluid, mobile fetus</li>
+<li><strong>Multiparity</strong> — lax abdominal walls</li>
+<li><strong>Twins</strong> — crowding + limb descent</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>Causes preventing head engagement</h5>
+<ul>
+<li><strong>PROM</strong> — loss of forewaters cushion</li>
+<li><strong>Contracted pelvis</strong> — head can't engage</li>
+<li><strong>Pelvic tumors</strong> — space-occupying lesion</li>
+</ul>
+</div>
+</div>
+
+<h3>Diagnosis</h3>
+<ul>
+<li><strong>Delayed engagement</strong> — head doesn't descend at expected time</li>
+<li><strong>PV examination:</strong> prolapsed limb felt <strong>beside the presenting part</strong></li>
+</ul>
+
+<h3>Management</h3>
+<h4>Conservative Step</h4>
+<p><strong>Gently try to reduce the prolapsed limb</strong> upwards above the pelvic brim between contractions, hold it till contraction, then push the head down into the pelvis.</p>
+
+<h4>CS Indicated If:</h4>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">1. Abnormal FHR Pattern</h5>
+<p>Fetal heart rate abnormalities signal fetal compromise.</p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">2. Cord Prolapse</h5>
+<p>Compound presentation is high-risk for cord prolapse — emergency CS required.</p>
+</div>
+</div>
+<div class="cmp-card" style="margin:8px 0;border-left:4px solid #c62828">
+<h5 style="color:#c62828">3. Poor Progress of Labor</h5>
+<p>Head doesn't engage / labor doesn't advance despite conservative maneuver.</p>
+</div>
+
+<div class="co co-w">
+<div class="co-t">🚨 Critical Watch-item</div>
+<strong>Cord prolapse</strong> is the critical complication. Because the presenting part does not fit snugly, the cord can slip past. A sudden FHR deceleration should be assumed cord prolapse until proven otherwise.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 8: BREECH PRESENTATION ===================== -->
+<div class="slide sec-8" id="t8">
+<div class="slide-hdr"><span class="ico">👣</span><h2>8. Breech Presentation</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Blausen_0333_BreechBaby.png/800px-Blausen_0333_BreechBaby.png" alt="Breech Presentation Types" class="topic-img">
+<div class="img-caption">Types of Breech Presentation — Wikimedia Commons (CC)</div>
+
+<h3>Definition & Incidence</h3>
+<p><strong>Breech presentation:</strong> fetus in longitudinal lie where the presenting part is the buttocks or feet (podalic part). Occurs in <strong>3–4% of all deliveries</strong> — most common malpresentation at term.</p>
+
+<h3>Types of Breech</h3>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #2e7d32">
+<h5 style="color:#2e7d32">Frank Breech (50–70%)</h5>
+<p><strong>Hips flexed, knees extended</strong> (pike position). Legs along abdomen, feet near head. <em>Most common type.</em></p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #1565c0">
+<h5 style="color:#1565c0">Complete Breech (5–10%)</h5>
+<p><strong>Hips flexed, knees flexed</strong> (cannonball). Fetus sitting cross-legged, feet beside buttocks.</p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Footling / Incomplete (10–30%)</h5>
+<p><strong>One or both hips extended, foot presenting.</strong> Higher risk of cord prolapse. <strong>Indication for CS.</strong></p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #e65100">
+<h5 style="color:#e65100">Knee Presentation (rare)</h5>
+<p>Hip extended, knee flexed on one or both sides.</p>
+</div>
+</div>
+
+<h3>Etiology (8 Predisposing Factors)</h3>
+<ul>
+<li><strong>Prematurity</strong> — smaller fetus, easier to flip</li>
+<li><strong>Uterine malformations or fibroids</strong></li>
+<li><strong>Polyhydramnios</strong></li>
+<li><strong>Placenta previa</strong> — blocks head engagement</li>
+<li><strong>Fetal abnormalities</strong> (CNS, neck masses, aneuploidy)</li>
+<li><strong>Multiple gestations</strong></li>
+<li><strong>Cord around the neck</strong></li>
+<li><strong>Pelvic tumors</strong></li>
+</ul>
+
+<h3>Positions (Denominator = Sacrum)</h3>
+<div class="cmp-grid">
+<div class="cmp-card"><h5>LSA</h5><p>Left Sacro-Anterior (most common)</p></div>
+<div class="cmp-card"><h5>RSA</h5><p>Right Sacro-Anterior</p></div>
+<div class="cmp-card"><h5>LSP</h5><p>Left Sacro-Posterior</p></div>
+<div class="cmp-card"><h5>RSP</h5><p>Right Sacro-Posterior</p></div>
+</div>
+
+<h3>Mechanism of Labor (Sacro-Anterior)</h3>
+<h4>A) Buttocks</h4>
+<ul>
+<li>Engagement by <strong>bi-trochanteric diameter (10 cm)</strong></li>
+<li>Internal rotation 1/8 circle → anterior buttock hinges under symphysis</li>
+<li>Posterior buttock delivered by lateral flexion; anterior by straightening</li>
+</ul>
+<h4>B) Shoulders</h4>
+<ul>
+<li>Engagement by <strong>bisacromial diameter (11.8 cm)</strong></li>
+<li>Anterior shoulder hinges under symphysis; delivered same as buttocks</li>
+</ul>
+<h4>C) Head (most difficult part)</h4>
+<ul>
+<li>Engagement by <strong>occipito-frontal diameter (11.5 cm)</strong></li>
+<li>Head delivered by flexion</li>
+</ul>
+
+<h3>External Cephalic Version (ECV)</h3>
+<ul>
+<li>Performed at <strong>36–37 weeks</strong></li>
+<li>Manual rotation of fetus from breech to cephalic</li>
+<li>Success rate: ~50–60%</li>
+<li>Requires continuous fetal monitoring</li>
+</ul>
+
+<h3>Methods to Deliver the Aftercoming Head</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>1. MSV (Mauriceau-Smellie-Veit)</h5>
+<p>Two fingers on maxilla + middle finger on occiput for flexion + shoulder traction. <em>Most commonly used.</em></p>
+</div>
+<div class="cmp-card">
+<h5>2. Burns-Marshall</h5>
+<p>Let baby hang by own weight + suprapubic pressure. Lift body toward abdomen when nape visible.</p>
+</div>
+</div>
+<div class="cmp-card" style="margin:8px 0">
+<h5>3. Piper's Forceps</h5>
+<p>Special forceps applied to the aftercoming head when it is engaged but not yet delivered.</p>
+</div>
+
+<h3>Indications for CS in Breech</h3>
+<div class="co co-w">
+<div class="co-t">🚨 CS Indications</div>
+<ul>
+<li><strong>Footling breech</strong> (cord prolapse risk)</li>
+<li><strong>Extended legs (Frank breech) in primigravida</strong></li>
+<li><strong>Previous unsuccessful ECV</strong></li>
+<li><strong>Contracted pelvis / CPD</strong></li>
+<li><strong>Fetal distress</strong></li>
+<li><strong>Prolonged labor / arrest</strong></li>
+</ul>
+</div>
+
+<h3>Complications</h3>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Maternal</h5>
+<ul><li>Prolonged labor, cord prolapse, PPH, cervical/l vaginal lacerations</li></ul>
+</div>
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Fetal</h5>
+<ul><li>Cord prolapse (especially footling), head entrapment, birth injuries (spinal cord, brachial plexus), hypoxia</li></ul>
+</div>
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 9: SHOULDER PRESENTATION ===================== -->
+<div class="slide sec-9" id="t9">
+<div class="slide-hdr"><span class="ico">🦴</span><h2>9. Shoulder Presentation</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Presentation_shoulder.png/800px-Presentation_shoulder.png" alt="Shoulder Presentation" class="topic-img">
+<div class="img-caption">Shoulder (Transverse Lie) Presentation — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<p><strong>Shoulder presentation</strong> occurs when the fetus lies with its long axis <strong>transverse or oblique</strong> to the maternal long axis. The presenting part is the <strong>shoulder (acromion process)</strong>. It is a type of <strong>transverse lie</strong>.</p>
+
+<h3>Etiology</h3>
+<ul>
+<li>Prematurity — fetus too small to maintain longitudinal lie</li>
+<li>Polyhydramnios — excess fluid, mobile fetus</li>
+<li>Placenta previa — blocks lower segment</li>
+<li>Contracted pelvis</li>
+<li>Uterine anomalies (bicornuate)</li>
+<li>Multiple pregnancies</li>
+<li>Pelvic tumors</li>
+<li>Pendulous abdomen</li>
+<li>Short cord</li>
+</ul>
+
+<h3>Diagnosis</h3>
+<h4>Abdominal Examination</h4>
+<ul>
+<li><strong>Fundal grip:</strong> neither head nor breech felt — both are at same level (flanks)</li>
+<li><strong>Umbilical grip:</strong> back felt across the midline; limbs on both sides</li>
+<li><strong>Pelvic grip:</strong> neither head nor breech felt in pelvis</li>
+</ul>
+<h4>PV Examination</h4>
+<ul>
+<li><strong>Scapula and ribs</strong> are felt</li>
+<li><strong>Eclamptic grip</strong> (shoulder grip): grasp the shoulder and try to push it above the pelvic brim while pushing the other shoulder down</li>
+</ul>
+
+<h3>Management</h3>
+<div class="cmp-grid">
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Before 24 Weeks</h5>
+<p>Usually <strong>resolves spontaneously</strong> as the fetus grows. Monitor with US.</p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #e65100">
+<h5 style="color:#e65100">After 36 Weeks</h5>
+<p><strong>Planned cesarean section</strong> is recommended. Transverse lie at term is not suitable for vaginal delivery.</p>
+</div>
+</div>
+
+<h3>Internal Podalic Version (IPV)</h3>
+<p>A procedure to convert a transverse lie to a <strong>footling presentation</strong> by turning the fetus internally and extracting it by the feet. Performed in <strong>early labor with intact membranes</strong> as an emergency procedure.</p>
+
+<div class="co co-w">
+<div class="co-t">⚠️ Warning</div>
+<strong>Obstructed labor</strong> is inevitable in shoulder presentation at term — the acromion (11 cm) cannot negotiate the pelvis in transverse orientation. <strong>Emergency CS</strong> is required if shoulder presentation is diagnosed in labor.
+</div>
+
+<h3>Complications</h3>
+<ul>
+<li><strong>Maternal:</strong> Obstructed labor, cord prolapse, uterine rupture, maternal death</li>
+<li><strong>Fetal:</strong> Hypoxia, death (very high mortality if untreated)</li>
+</ul>
+
+</div></div>
+
+<!-- ===================== TOPIC 10: CORD PRESENTATION & PROLAPSE ===================== -->
+<div class="slide sec-10" id="t10">
+<div class="slide-hdr"><span class="ico">🔗</span><h2>10. Cord Presentation & Prolapse</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Nuchal_cord.png/800px-Nuchal_cord.png" alt="Cord Prolapse" class="topic-img">
+<div class="img-caption">Cord Prolapse — Umbilical Cord Ahead of Presenting Part — Wikimedia Commons (CC)</div>
+
+<h3>Definitions</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Cord Presentation</h5>
+<p><strong>Umbilical cord presents</strong> ahead of the presenting part with <strong>membranes intact</strong>. Diagnosed by US or vaginal examination.</p>
+</div>
+<div class="cmp-card" style="border-left:4px solid #c62828">
+<h5 style="color:#c62828">Cord Prolapse</h5>
+<p><strong>Umbilical cord prolapses</strong> through the cervix <strong>alongside or ahead of the presenting part</strong> with membranes ruptured. This is an <strong>obstetric emergency</strong>.</p>
+</div>
+</div>
+
+<h3>Risk Factors for Cord Prolapse</h3>
+<ul>
+<li><strong>Malpresentation:</strong> breech (especially footling), transverse lie, face/brow</li>
+<li><strong>Compound presentation</strong></li>
+<li><strong>Prematurity</strong> — small presenting part doesn't occlude cervix</li>
+<li><strong>Polyhydramnios</strong> — sudden gush of fluid washes cord down</li>
+<li><strong>Artificial rupture of membranes (AROM)</strong> — if cord is above presenting part</li>
+<li><strong>Long cord</strong></li>
+<li><strong>Battledore/velamentous insertion</strong></li>
+<li><strong>Low-lying placenta</strong></li>
+</ul>
+
+<h3>Diagnosis</h3>
+<ul>
+<li><strong>Sudden, dramatic fetal bradycardia</strong> (variable decelerations → prolonged bradycardia)</li>
+<li><strong>PV examination:</strong> cord felt in the vagina or through the cervix</li>
+<li>Visible cord at the vulva in overt prolapse</li>
+</ul>
+
+<div class="co co-w">
+<div class="co-t">🚨 Emergency — Every Minute Counts</div>
+Cord prolapse causes <strong>compression of the umbilical vessels</strong> between the fetal presenting part and the maternal pelvis → acute fetal hypoxia → fetal death if not delivered urgently. Average time from prolapse to fetal death: <strong>~15 minutes</strong>.
+</div>
+
+<h3>Management — Emergency Protocol</h3>
+<ol class="steps">
+<li><strong>Call for emergency CS immediately</strong> — do not delay</li>
+<li><strong>Elevate the presenting part</strong> off the cord (push head up per vagina, knee-chest position, Trendelenburg)</li>
+<li><strong>IV fluids + left lateral position</strong></li>
+<li><strong>Tocolytics</strong> (terbutaline) to relax uterus and reduce cord compression</li>
+<li><strong>Oxygen to mother</strong></li>
+<li><strong>Continuous FHR monitoring</strong></li>
+<li><strong>Emergency cesarean section</strong> — the definitive management</li>
+</ol>
+
+<h3>Classification by Severity</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Type</th><th>Description</th><th>Urgency</th></tr></thead>
+<tbody>
+<tr><td><strong>Overt cord prolapse</strong></td><td>Cord visible at vulva or felt in vagina with ROM</td><td><strong>Highest urgency</strong></td></tr>
+<tr><td><strong>Funic presentation</strong></td><td>Cord presents with intact membranes</td><td>High — prepare for CS</td></tr>
+<tr><td><strong>Cord ahead of presenting part</strong></td><td>Cord below presenting part (not yet prolapsed)</td><td>High risk — close monitoring</td></tr>
+</tbody></table></div>
+
+<div class="co co-p">
+<div class="co-t">💎 Clinical Pearl</div>
+In <strong>all non-cephalic presentations</strong> (breech, transverse, face, brow), the cord should be excluded by <strong>vaginal examination before AROM</strong>. Never artificially rupture membranes without first ruling out cord presentation.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 11: OPERATIVE OBSTETRICS ===================== -->
+<div class="slide sec-11" id="t11">
+<div class="slide-hdr"><span class="ico">🩺</span><h2>11. Operative Obstetrics</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Caesarean_section.png/800px-Caesarean_section.png" alt="Operative Obstetrics" class="topic-img">
+<div class="img-caption">Operative Obstetrics — Forceps, Vacuum & Cesarean Section — Wikimedia Commons (CC)</div>
+
+<h3>Overview</h3>
+<p>Operative obstetrics encompasses all <strong>instrumental and surgical procedures</strong> used to assist or complete delivery when spontaneous vaginal delivery is not possible or is unsafe.</p>
+
+<h3>A. Operative Vaginal Delivery</h3>
+<h4>Indications (Common)</h4>
+<ul>
+<li><strong>Prolonged second stage</strong> of labor</li>
+<li><strong>Fetal distress</strong> in second stage</li>
+<li><strong>Maternal exhaustion</strong></li>
+<li><strong>Maternal medical conditions</strong> (cardiac disease, pre-eclampsia)</li>
+<li><strong>Malposition</strong> (OP position requiring rotation)</li>
+</ul>
+
+<h4>Prerequisites for Operative Vaginal Delivery</h4>
+<ol>
+<li><strong>Cervix fully dilated</strong> (10 cm)</li>
+<li><strong>Membranes ruptured</strong></li>
+<li><strong>Fetal head engaged</strong></li>
+<li><strong>Bladder empty</strong></li>
+<li><strong>Adequate anesthesia</strong></li>
+<li><strong>Head position known</strong></li>
+</ol>
+
+<h3>B. Vacuum Extraction (Ventouse)</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Mechanism</h5>
+<p>Suction cup applied to the flexion point on the fetal scalp. Negative pressure (0.6–0.8 kg/cm²) creates a "chignon" (edema) that allows traction.</p>
+</div>
+<div class="cmp-card">
+<h5>Advantages</h5>
+<ul>
+<li>Easier to apply than forceps</li>
+<li>Less maternal perineal trauma</li>
+<li>Can be used for rotational delivery</li>
+<li>Less anesthesia required</li>
+</ul>
+</div>
+</div>
+
+<h4>Vacuum vs Forceps</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Feature</th><th>Vacuum</th><th>Forceps</th></tr></thead>
+<tbody>
+<tr><td><strong>Anesthesia</strong></td><td>Minimal/local</td><td>Regional preferred</td></tr>
+<tr><td><strong>Maternal trauma</strong></td><td>Less</td><td>More (perineal tears)</td></tr>
+<tr><td><strong>Fetal scalp injury</strong></td><td>More (cephalohematoma, retinal hemorrhage)</td><td>Less</td></tr>
+<tr><td><strong>Failed attempt rate</strong></td><td>Higher</td><td>Lower</td></tr>
+<tr><td><strong>Useful for rotation</strong></td><td>Yes</td><td>Yes (Kielland's)</td></tr>
+</tbody></table></div>
+
+<h3>C. Cesarean Section</h3>
+<h4>Types of Incision</h4>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Low Transverse (LTC)</h5>
+<p><strong>Most common.</strong> Incision in lower uterine segment. Lower risk of rupture in subsequent pregnancies. Preferred incision.</p>
+</div>
+<div class="cmp-card">
+<h5>Classical (Vertical)</h5>
+<p>Vertical incision in the upper segment. Used in emergencies (extreme prematurity, transverse lie, placenta previa). Higher rupture risk.</p>
+</div>
+</div>
+
+<h4>Indications for CS</h4>
+<h5>Absolute (Grade I)</h5>
+<ul>
+<li><strong>CPD</strong> (cephalopelvic disproportion)</li>
+<li><strong>Placenta previa</strong></li>
+<li><strong>Transverse lie</strong> at term</li>
+<li><strong>Prolapsed cord</strong></li>
+<li><strong>Fetal distress</strong> not responding to conservative measures</li>
+<li><strong>Obstructed labor</strong></li>
+<li><strong>Eclampsia</strong> not responding to treatment</li>
+</ul>
+
+<h5>Relative (Grade II)</h5>
+<ul>
+<li>Previous CS (VBAC trial vs repeat CS)</li>
+<li>Breech in primigravida</li>
+<li>Moderate CPD with adequate trial of labor</li>
+<li>Severe pre-eclampsia with unfavorable cervix</li>
+<li>Maternal request (in some settings)</li>
+</ul>
+
+<h3>Active Management of Third Stage (AMTSL)</h3>
+<ol class="steps">
+<li>Administration of <strong>uterotonic</strong> (oxytocin 10 IU IM or ergometrine) soon after delivery of baby</li>
+<li><strong>Delayed cord clamping</strong> (1–3 minutes)</li>
+<li><strong>Controlled cord traction</strong> (CCT) with simultaneous uterine counter-pressure</li>
+<li><strong>Uterine massage</strong> after placental delivery</li>
+</ol>
+
+<div class="co co-p">
+<div class="co-t">💎 Clinical Pearl</div>
+<strong>AMTSL reduces PPH</strong> by reducing third-stage duration from 15 min to 5 min and decreasing the incidence of blood loss > 500 mL. It is the standard of care for all vaginal deliveries.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 12: INSTRUMENTS ===================== -->
+<div class="slide sec-12" id="t12">
+<div class="slide-hdr"><span class="ico">🩹</span><h2>12. Obstetric Instruments</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Obstetrical_forceps.jpg/800px-Obstetrical_forceps.jpg" alt="Obstetric Forceps" class="topic-img">
+<div class="img-caption">Obstetric Forceps — Wikimedia Commons (CC)</div>
+
+<h3>Classification of Obstetric Instruments</h3>
+<h4>1. Forceps — Types</h4>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>a) Simpson's Forceps</h5>
+<p><strong>Most commonly used.</strong> For rotation and traction of the aftercoming head in OP or OA position. Has cephalic curve for the fetal head and pelvic curve for the birth canal.</p>
+</div>
+<div class="cmp-card">
+<h5>b) Kielland's Forceps</h5>
+<p><strong>Rotational forceps.</strong> Used for rotation of the head in deep transverse arrest. Minimal pelvic curve. Used with a sliding lock.</p>
+</div>
+</div>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>c) Piper's Forceps</h5>
+<p><strong>Specialized for aftercoming head in breech delivery.</strong> Applied from below after the body has been delivered. Long, narrow blades.</p>
+</div>
+<div class="cmp-card">
+<h5>d) Wrigley's Forceps</h5>
+<p><strong>Short forceps for outlet delivery.</strong> Used when head is on the perineum (crowning). Quick application at delivery.</p>
+</div>
+</div>
+
+<h4>2. Vacuum Extractor (Ventouse)</h4>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Malmström's Ventouse</h5>
+<p>Metal cup with chain traction. Creates a "chignon" edema on the scalp.</p>
+</div>
+<div class="cmp-card">
+<h5>Silastic (Oxford) Cup</h5>
+<p>Soft rubber cup — less scalp trauma. More commonly used today.</p>
+</div>
+</div>
+
+<h3>Parts of Obstetric Forceps</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Part</th><th>Function</th></tr></thead>
+<tbody>
+<tr><td><strong>Blade</strong></td><td>Applied to the sides of the fetal head. Has cephalic and pelvic curves.</td></tr>
+<tr><td><strong>Shank</strong></td><td>Connects blade to handle. May be parallel (Simpson's) or crossed (Kielland's).</td></tr>
+<tr><td><strong>Lock</strong></td><td>Joins the two blades. English lock (Simpson's) or sliding lock (Kielland's).</td></tr>
+<tr><td><strong>Handle</strong></td><td>Grip for the operator. Used for traction and rotation.</td></tr>
+</tbody></table></div>
+
+<h3>Classification by Application</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Category</th><th>Level</th><th>Instrument</th></tr></thead>
+<tbody>
+<tr><td><strong>Outlet forceps</strong></td><td>Scalp visible at introitus without separation</td><td>Wrigley's</td></tr>
+<tr><td><strong>Low forceps</strong></td><td>Leading point at station +2 or below</td><td>Simpson's</td></tr>
+<tr><td><strong>Mid-cavity forceps</strong></td><td>Leading point above station +2</td><td>Kielland's</td></tr>
+<tr><td><strong>High forceps</strong></td><td>Head not engaged</td><td><strong>Contraindicated</strong></td></tr>
+</tbody></table></div>
+
+<h3>Vacuum Extractor — Application</h3>
+<ol class="steps">
+<li>Apply cup to the <strong>flexion point</strong> (3 cm anterior to posterior fontanelle along the sagittal suture)</li>
+<li>Create vacuum: 0.2 kg/cm² initially → increase to 0.6–0.8 kg/cm²</li>
+<li>Apply traction <strong>only during contractions</strong> + maternal pushing</li>
+<li>Avoid rotating > 45° with vacuum</li>
+<li>Maximum 3 pulls — if unsuccessful, convert to forceps or CS</li>
+</ol>
+
+<h3>Contraindications to Operative Vaginal Delivery</h3>
+<div class="co co-w">
+<div class="co-t">🚨 Absolute Contraindications</div>
+<ul>
+<li><strong>Unengaged head</strong></li>
+<li><strong>Incomplete cervical dilatation</strong></li>
+<li><strong>Face or brow presentation</strong> (for vacuum)</li>
+<li><strong>Cephalopelvic disproportion</strong></li>
+<li><strong>Known fetal bleeding disorder</strong></li>
+<li><strong>Fetal bone demineralization</strong> (osteogenesis imperfecta)</li>
+<li><strong>Prior fetal scalp electrode</strong> (for vacuum)</li>
+</ul>
+</div>
+
+<h3>Forceps Application Technique</h3>
+<ol class="steps">
+<li>Identify head position and station by PV</li>
+<li>Apply <strong>left blade first</strong> (held in left hand, inserted along left side of pelvis)</li>
+<li>Apply <strong>right blade second</strong> (held in right hand, inserted along right side)</li>
+<li>Lock the blades — check for correct application (sagittal suture in midline, no gap between blade and head)</li>
+<li>Apply traction <strong>downward and backward</strong> initially, then <strong>upward and forward</strong> as head crowns</li>
+<li>Remove blades when head is delivered</li>
+</ol>
+
+<div class="co co-p">
+<div class="co-t">💎 Clinical Pearl</div>
+<strong>Forceps leave marks</strong> on the fetal face (usually disappear within 24–48 hours). The key principle is: <strong>never apply forceps to a head that is not engaged</strong>. When in doubt, deliver by cesarean section.
+</div>
+
+</div></div>
+
+</div><!-- end .ct -->
+
+<!-- FOOTER -->
+<div class="footer">
+<p>Week 3 — Labor, Delivery & Operative Obstetrics · 12 Comprehensive Topics</p>
+<p>Source: <em>Book Obstetrics 2025-2026</em> · Images from Wikimedia Commons (CC)</p>
+<p style="margin-top:8px"><a href="https://doctorelshehy-stack.github.io/obs_content-mcqs/weeks.html">← Back to Weeks Overview</a></p>
+</div>
+
+</body>
+</html>

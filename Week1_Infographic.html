@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obstetrics Week 1 — Complete Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --surface: #F8FAFC;
+  --surface-glass: rgba(255,255,255,0.7);
+  --text: #1E293B;
+  --text-secondary: #64748B;
+  --border: #E2E8F0;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 20px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', 'Cairo', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  min-height: 100vh;
+}
+.page-wrapper { max-width: 920px; margin: 0 auto; padding: 0 16px 80px; }
+
+/* ====== HERO HEADER ====== */
+.hero {
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 20%, #EC4899 40%, #F59E0B 60%, #14B8A6 80%, #6366F1 100%);
+  background-size: 300% 300%;
+  animation: heroGradient 8s ease infinite;
+  color: white;
+  padding: 60px 40px 48px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes heroGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
+  animation: shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+.hero-emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 12px;
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.hero h1 {
+  font-family: 'Cairo', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  position: relative;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  letter-spacing: -0.5px;
+}
+.hero-subtitle {
+  position: relative;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 12px 28px;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 12px 0 20px;
+}
+.hero-stats {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat-num {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: 'Cairo', sans-serif;
+}
+.hero-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.85;
+  font-weight: 600;
+}
+.hero-float-emoji {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  animation: floatSlow 6s ease-in-out infinite;
+}
+.hero-float-emoji:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
+.hero-float-emoji:nth-child(2) { top: 20%; right: 10%; animation-delay: 1.5s; }
+.hero-float-emoji:nth-child(3) { bottom: 25%; left: 15%; animation-delay: 3s; }
+.hero-float-emoji:nth-child(4) { bottom: 15%; right: 8%; animation-delay: 4.5s; }
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(5deg); }
+}
+
+/* ====== TABLE OF CONTENTS ====== */
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin: 24px 0;
+  box-shadow: var(--shadow);
+}
+.toc h3 {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.toc-item:hover {
+  background: white;
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.toc-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+.toc-emoji { font-size: 1.1rem; flex-shrink: 0; }
+.toc-count {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  background: var(--border);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ====== STICKY NAVIGATION ====== */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 16px;
+  margin: 0 -16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.nav-scroll {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 4px 0;
+}
+.nav-scroll::-webkit-scrollbar { display: none; }
+.nav-item {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-item:hover {
+  background: var(--surface);
+  border-color: #94a3b8;
+  color: var(--text);
+}
+.nav-item.active {
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+}
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ====== TOPIC SECTIONS ====== */
+.topic-section {
+  margin-bottom: 40px;
+  scroll-margin-top: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.topic-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 28px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.section-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+.section-header::before {
+  content: attr(data-num);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: 'Cairo', sans-serif;
+  opacity: 0.12;
+  pointer-events: none;
+  line-height: 1;
+}
+.section-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: 'Cairo', sans-serif;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,0.3);
+  position: relative;
+}
+.section-emoji { font-size: 1.6rem; position: relative; }
+.section-title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  position: relative;
+}
+.section-body {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ====== CARDS — GLASSMORPHISM ====== */
+.card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+.card-title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.6);
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.3px;
+}
+.card-icon { font-size: 1.15rem; }
+.card-content {
+  padding: 18px;
+  font-size: 0.93rem;
+  line-height: 1.8;
+}
+
+/* Card Variants */
+.definition-card { border-left: 5px solid #14B8A6 !important; background: linear-gradient(135deg, rgba(240,253,250,0.8) 0%, rgba(248,250,252,0.7) 100%); }
+.definition-card .card-title { color: #0D9488; background: rgba(20, 184, 166, 0.1); }
+
+.ilos-card { border-left: 5px solid #6366F1 !important; background: linear-gradient(135deg, rgba(238,242,255,0.8) 0%, rgba(248,250,252,0.7) 100%); }
+.ilos-card .card-title { color: #4F46E5; background: rgba(99, 102, 241, 0.1); }
+
+.investigations-card { border-left: 5px solid #8B5CF6 !important; background: linear-gradient(135deg, rgba(245,243,255,0.8) 0%, rgba(248,250,252,0.7) 100%); }
+.investigations-card .card-title { color: #7C3AED; background: rgba(124, 58, 237, 0.1); }
+
+.management-card { border-left: 5px solid #059669 !important; background: linear-gradient(135deg, rgba(236,253,245,0.8) 0%, rgba(248,250,252,0.7) 100%); }
+.management-card .card-title { color: #047857; background: rgba(5, 150, 105, 0.1); }
+
+.complications-card { border-left: 5px solid #EF4444 !important; background: linear-gradient(135deg, rgba(254,242,242,0.8) 0%, rgba(248,250,252,0.7) 100%); }
+.complications-card .card-title { color: #DC2626; background: rgba(239, 68, 68, 0.1); }
+
+.clinical-features-card { border-left: 5px solid #0EA5E9 !important; background: linear-gradient(135deg, rgba(240,249,255,0.8) 0%, rgba(248,250,252,0.7) 100%); }
+.clinical-features-card .card-title { color: #0284C7; background: rgba(14, 165, 233, 0.1); }
+
+.content-card { border-left: 5px solid #64748B !important; background: linear-gradient(135deg, rgba(248,250,252,0.8) 0%, rgba(255,255,255,0.7) 100%); }
+.content-card .card-title { color: #475569; background: rgba(100, 116, 139, 0.1); }
+
+/* ====== SPECIAL BOXES ====== */
+.clinical-pearl {
+  background: linear-gradient(135deg, rgba(255,251,235,0.9) 0%, rgba(254,243,199,0.8) 100%);
+  backdrop-filter: blur(8px);
+  border: 2px solid #F59E0B;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  position: relative;
+  margin: 16px 0;
+  box-shadow: inset 0 0 20px rgba(245,158,11,0.08), var(--shadow);
+}
+.clinical-pearl::before {
+  content: '💎';
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+  padding: 3px 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(245,158,11,0.2);
+}
+.clinical-pearl h4 {
+  color: #92400E;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.high-yield {
+  background: linear-gradient(135deg, rgba(236,253,245,0.9) 0%, rgba(209,250,229,0.8) 100%);
+  backdrop-filter: blur(8px);
+  border: 2px solid #10B981;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  position: relative;
+  margin: 16px 0;
+  box-shadow: inset 0 0 20px rgba(16,185,129,0.08), var(--shadow);
+}
+.high-yield::before {
+  content: '⚡';
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+  padding: 3px 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(16,185,129,0.2);
+}
+.high-yield h4 {
+  color: #065F46;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.warning-box {
+  background: linear-gradient(135deg, rgba(254,242,242,0.9) 0%, rgba(254,226,226,0.8) 100%);
+  backdrop-filter: blur(8px);
+  border: 2px solid #EF4444;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  position: relative;
+  margin: 16px 0;
+  box-shadow: inset 0 0 20px rgba(239,68,68,0.08), var(--shadow);
+}
+.warning-box::before {
+  content: '⚠️';
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, #FEE2E2, #FECACA);
+  padding: 3px 8px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(239,68,68,0.2);
+}
+.warning-box h4 {
+  color: #991B1B;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* ====== CONTENT ====== */
+.content-pre {
+  font-family: 'Inter', 'Cairo', sans-serif;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.8;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+p { margin-bottom: 8px; }
+ul, ol { padding-left: 24px; margin-bottom: 8px; }
+li { margin-bottom: 6px; padding-left: 4px; line-height: 1.8; }
+li ul, li ol { margin-top: 6px; margin-bottom: 0; }
+strong { color: #0F172A; font-weight: 700; }
+.sub-header {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 16px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--border);
+  display: inline-block;
+}
+
+/* ====== TABLES ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.88rem;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+tbody tr:nth-child(even) { background: var(--surface); }
+tbody tr:hover { background: #F1F5F9; transition: background 0.2s; }
+
+/* ====== FOOTER ====== */
+.footer {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+/* ====== PROGRESS BAR ====== */
+.progress-bar-container {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 200px;
+  background: var(--border);
+  border-radius: 3px;
+  z-index: 200;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #6366F1, #EC4899, #14B8A6);
+  border-radius: 3px;
+  transition: height 0.15s ease;
+}
+
+/* ====== BACK TO TOP ====== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(99,102,241,0.4);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(99,102,241,0.5);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero { padding: 40px 24px 36px; }
+  .toc-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 16px; }
+  .hero-stat-num { font-size: 1.4rem; }
+  .section-header { padding: 18px 20px; }
+  .section-title { font-size: 1.15rem; }
+  .card-content { padding: 14px; }
+  .progress-bar-container { display: none; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.6rem; }
+  .hero-subtitle { font-size: 0.9rem; padding: 8px 16px; }
+}
+
+/* ====== SCROLLBAR ====== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* ====== PRINT ====== */
+@media print {
+  @page { size: A4 portrait; margin: 15mm; }
+  body { font-size: 11px; background: white; }
+  .hero { break-after: avoid; }
+  .toc { break-after: page; }
+  .topic-section { break-inside: avoid; opacity: 1; transform: none; }
+  .section-header { break-after: avoid; }
+  .card { break-inside: avoid; }
+  .page-wrapper { max-width: 100%; padding: 0; }
+  .progress-bar-container, .back-to-top, .sticky-nav { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== HERO HEADER ====== -->
+<header class="hero">
+  <span class="hero-float-emoji">🏥</span>
+  <span class="hero-float-emoji">🧬</span>
+  <span class="hero-float-emoji">🩺</span>
+  <span class="hero-float-emoji">💊</span>
+  <span class="hero-emoji">🤰</span>
+  <h1>Obstetrics Week 1</h1>
+  <div class="hero-subtitle">📚 Complete Study Guide &amp; Infographic</div>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="hero-stat-num">13</span><span class="hero-stat-label">Topics</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">89</span><span class="hero-stat-label">Pages</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">91K</span><span class="hero-stat-label">Characters</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">A–Z</span><span class="hero-stat-label">Coverage</span></div>
+  </div>
+</header>
+
+<div class="page-wrapper">
+
+<!-- ====== TABLE OF CONTENTS ====== -->
+<nav class="toc">
+  <h3>📑 Table of Contents</h3>
+  <div class="toc-grid">
+    <a href="#topic-1" class="toc-item"><span class="toc-num" style="background: #6366F1;">1</span><span class="toc-emoji">🧬</span><span>Physiology of Reproduction</span><span class="toc-count">7 sections</span></a>
+    <a href="#topic-2" class="toc-item"><span class="toc-num" style="background: #EC4899;">2</span><span class="toc-emoji">🤰</span><span>Maternal Adaptation</span><span class="toc-count">6 sections</span></a>
+    <a href="#topic-3" class="toc-item"><span class="toc-num" style="background: #14B8A6;">3</span><span class="toc-emoji">🔍</span><span>Diagnosis of Pregnancy</span><span class="toc-count">3 sections</span></a>
+    <a href="#topic-4" class="toc-item"><span class="toc-num" style="background: #F59E0B;">4</span><span class="toc-emoji">🏥</span><span>Antenatal Care</span><span class="toc-count">3 sections</span></a>
+    <a href="#topic-5" class="toc-item"><span class="toc-num" style="background: #EF4444;">5</span><span class="toc-emoji">⚠️</span><span>Abortion</span><span class="toc-count">10 sections</span></a>
+    <a href="#topic-6" class="toc-item"><span class="toc-num" style="background: #DC2626;">6</span><span class="toc-emoji">🚨</span><span>Ectopic Pregnancy</span><span class="toc-count">7 sections</span></a>
+    <a href="#topic-7" class="toc-item"><span class="toc-num" style="background: #7C3AED;">7</span><span class="toc-emoji">🔬</span><span>Gestational Trophoblastic Disease</span><span class="toc-count">7 sections</span></a>
+    <a href="#topic-8" class="toc-item"><span class="toc-num" style="background: #B91C1C;">8</span><span class="toc-emoji">💉</span><span>Hypertension with Pregnancy</span><span class="toc-count">10 sections</span></a>
+    <a href="#topic-9" class="toc-item"><span class="toc-num" style="background: #9333EA;">9</span><span class="toc-emoji">🩸</span><span>DIC</span><span class="toc-count">4 sections</span></a>
+    <a href="#topic-10" class="toc-item"><span class="toc-num" style="background: #0EA5E9;">10</span><span class="toc-emoji">🍬</span><span>Diabetes Mellitus with Pregnancy</span><span class="toc-count">4 sections</span></a>
+    <a href="#topic-11" class="toc-item"><span class="toc-num" style="background: #059669;">11</span><span class="toc-emoji">🔬</span><span>UTI in Pregnancy</span><span class="toc-count">5 sections</span></a>
+    <a href="#topic-12" class="toc-item"><span class="toc-num" style="background: #E11D48;">12</span><span class="toc-emoji">🫁</span><span>Thromboembolism</span><span class="toc-count">8 sections</span></a>
+    <a href="#topic-13" class="toc-item"><span class="toc-num" style="background: #0D9488;">13</span><span class="toc-emoji">🅰️</span><span>Rh Incompatibility</span><span class="toc-count">7 sections</span></a>
+    <a href="#summary" class="toc-item"><span class="toc-num" style="background: #1E293B;">⚡</span><span class="toc-emoji">💎</span><span>High-Yield Summary</span><span class="toc-count">2 boxes</span></a>
+  </div>
+</nav>
+
+<!-- ====== STICKY NAVIGATION ====== -->
+<div class="sticky-nav"><div class="nav-scroll">
+  <a href="#topic-1" class="nav-item" data-topic="1"><span class="nav-dot" style="background: #6366F1;"></span>🧬 1</a>
+  <a href="#topic-2" class="nav-item" data-topic="2"><span class="nav-dot" style="background: #EC4899;"></span>🤰 2</a>
+  <a href="#topic-3" class="nav-item" data-topic="3"><span class="nav-dot" style="background: #14B8A6;"></span>🔍 3</a>
+  <a href="#topic-4" class="nav-item" data-topic="4"><span class="nav-dot" style="background: #F59E0B;"></span>🏥 4</a>
+  <a href="#topic-5" class="nav-item" data-topic="5"><span class="nav-dot" style="background: #EF4444;"></span>⚠️ 5</a>
+  <a href="#topic-6" class="nav-item" data-topic="6"><span class="nav-dot" style="background: #DC2626;"></span>🚨 6</a>
+  <a href="#topic-7" class="nav-item" data-topic="7"><span class="nav-dot" style="background: #7C3AED;"></span>🔬 7</a>
+  <a href="#topic-8" class="nav-item" data-topic="8"><span class="nav-dot" style="background: #B91C1C;"></span>💉 8</a>
+  <a href="#topic-9" class="nav-item" data-topic="9"><span class="nav-dot" style="background: #9333EA;"></span>🩸 9</a>
+  <a href="#topic-10" class="nav-item" data-topic="10"><span class="nav-dot" style="background: #0EA5E9;"></span>🍬 10</a>
+  <a href="#topic-11" class="nav-item" data-topic="11"><span class="nav-dot" style="background: #059669;"></span>🔬 11</a>
+  <a href="#topic-12" class="nav-item" data-topic="12"><span class="nav-dot" style="background: #E11D48;"></span>🫁 12</a>
+  <a href="#topic-13" class="nav-item" data-topic="13"><span class="nav-dot" style="background: #0D9488;"></span>🅰️ 13</a>
+</div></div>
+
+<!-- ====== TOPIC 1: PHYSIOLOGY OF REPRODUCTION ====== -->
+<section class="topic-section" id="topic-1">
+  <div class="section-header" style="background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);" data-num="1">
+    <span class="section-number">1</span>
+    <span class="section-emoji">🧬</span>
+    <h2 class="section-title">Physiology of Reproduction</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the important milestones of reproduction, fertilization and implantation</li>
+          <li>To be able to describe the early stages of placental development</li>
+          <li>To understand the anatomy and different functions of the placenta together with its abnormal shapes</li>
+          <li>To understand the origin, contents and functions of amniotic fluid</li>
+          <li>To describe the anatomy of umbilical cord</li>
+          <li>To understand the endocrinal function of the placenta</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Fertilization</h3>
+      <div class="card-content">
+        <ul>
+          <li>Ovum is surrounded by Zona pellucida.</li>
+          <li>Sperm undergoes capacitation, head swells, ↑ hyaluronidase enzymes.</li>
+          <li>Fertilization occurs at the <strong>ampulla of the fallopian tube</strong> → zygote.</li>
+          <li>Zygote rapidly divides → morula (round mass of cells).</li>
+        </ul>
+        <p>The Morula reaches the uterine cavity <strong>3 days</strong> after fertilization. Movement is aided by the cilia motility.</p>
+        <ul>
+          <li>Fluid will accumulate in morula → blastocyst.</li>
+        </ul>
+        <p>It remains free for <strong>3 days</strong> in the uterine cavity. It is nourished by secretions from the endometrium.</p>
+        <ul>
+          <li>The blastocyst will be divided into 2 masses:
+            <ul>
+              <li>Inner cell mass → embryonic mass → will form the embryo.</li>
+              <li>Outer cell mass → trophoblast → responsible for nutrition.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Implantation</h3>
+      <div class="card-content">
+        <p>This occurs on <strong>6th–7th days</strong> after ovulation by penetration of the trophoblast into the secretory endometrium (decidua basalis).</p>
+        <p class="sub-header">Functions of the decidua:</p>
+        <ul>
+          <li>Site of implantation &amp; nutrition of the blastocyst.</li>
+          <li>Shares in formation of the placenta.</li>
+          <li>Protective layer against the invasive power of trophoblast.</li>
+        </ul>
+        <p class="sub-header">Formation of the villi:</p>
+        <ul>
+          <li>The trophoblast is differentiated into 2 layers:
+            <ul>
+              <li>Cytotrophoblast (inner)</li>
+              <li>Syncytiotrophoblast (outer)</li>
+            </ul>
+          </li>
+          <li>Trophoblast forms finger like projections into decidua → <strong>1° villus</strong>.</li>
+          <li>Mesoderm develops in the 1° villus (CT core) → <strong>2° villus</strong>.</li>
+          <li>Vascularization of 2° villus with fetal vessels → <strong>3° villus</strong>.</li>
+        </ul>
+        <p>There are two types of villi: <strong>Anchoring villi</strong> (fixation &amp; attachment) and <strong>Free villi</strong> (food &amp; nutrition, highly vascular).</p>
+        <p>Functional unit (HCG → maintain CL for 10 wks).</p>
+        <p class="sub-header">Formation of choriodecidual spaces:</p>
+        <ul>
+          <li>The trophoblast invades the mouth of endometrial vessels → delivers maternal blood into the chorio-decidual space → <strong>1° wave of invasion</strong>.</li>
+          <li>At <strong>20 weeks</strong>, the trophoblast invades &amp; destroys the media of spiral vessels which convert into wide mouthed sinuses → <strong>2° wave of invasion</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Placenta</h3>
+      <div class="card-content">
+        <p class="sub-header">Structure:</p>
+        <ul>
+          <li>Shape: <strong>discoid</strong>, 500 gm, 20–25 cm in diameter.</li>
+          <li>Thickness: <strong>2 cm</strong> in center and gradually thins towards periphery.</li>
+          <li>Cord insertion: eccentric.</li>
+          <li>2 Surfaces: <strong>Fetal surface</strong> is smooth &amp; covered by membranes. <strong>Maternal surface</strong> is divided into 12–15 cotyledons.</li>
+          <li>2 Parts: Fetal part → Chorion frondosum. Maternal part → Decidua basalis.</li>
+        </ul>
+        <p>The rest of chorion which is not sharing in placental formation → <strong>Chorion laeve</strong>. The rest of the decidua overlying the developing ovum → <strong>Decidua capsularis</strong>. The decidua covering the rest of uterine cavity → <strong>Decidua parietalis (vera)</strong>.</p>
+        <p class="sub-header">Functions of placenta:</p>
+        <ul>
+          <li><strong>Gas transport, Nutrition, and Excretion:</strong>
+            <ul>
+              <li>Water &amp; electrolytes by simple diffusion.</li>
+              <li>Glucose, amino acids by facilitated diffusion.</li>
+              <li>Ca, Fe, minerals by active transport.</li>
+              <li>Immunoglobulins &amp; LDL by pinocytosis.</li>
+            </ul>
+          </li>
+          <li><strong>Hormones</strong> → HCG, HPL, estrogen and progesterone.</li>
+          <li><strong>Placental barrier</strong> → trophoblast, villous stroma, and fetal blood vessels endothelium.</li>
+        </ul>
+        <p class="sub-header">Abnormalities of placenta:</p>
+        <ul>
+          <li><strong>Abnormal shape:</strong>
+            <ul>
+              <li>Bipartite: two parts united by vessels &amp; membranes.</li>
+              <li>Bilobate: two lobes connected by placenta tissue.</li>
+              <li>Placenta succenturiata (accessory lobe).</li>
+              <li>Placenta circumvallate: a whitish ring composed of decidua around the placenta from its fetal surface.</li>
+              <li>Placenta fenestrate: an opening in the placenta is present.</li>
+            </ul>
+          </li>
+          <li><strong>Abnormal site of implantation:</strong> in the lower uterine segment (LUS) → placenta previa.</li>
+          <li><strong>Abnormal Size:</strong> Small (associated with IUGR or infarcts). Large (hyperplacentosis): Rh, DM, twins, syphilis.</li>
+          <li><strong>Abnormal adherence</strong> → placenta accreta.</li>
+          <li><strong>Tumors of placenta</strong> → vesicular mole, choriocarcinoma, chorioangioma.</li>
+          <li><strong>Abnormal attachment of the cord.</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Umbilical Cord</h3>
+      <div class="card-content">
+        <p class="sub-header">Structure:</p>
+        <ul>
+          <li>Shape: <strong>50 cm</strong> long &amp; <strong>2 cm</strong> in diameter.</li>
+          <li>Contents: <strong>2 arteries &amp; 1 vein</strong> in Wharton jelly.</li>
+        </ul>
+        <p>One vein carries oxygenated blood to the fetus. Two arteries carry reduced blood from the fetus to placenta.</p>
+        <p class="sub-header">Abnormalities:</p>
+        <ul>
+          <li><strong>Length:</strong> Very long → coiling around fetus, cord prolapse. Short cord → malpresentation &amp; non-engagement.</li>
+          <li><strong>Abnormal attachment</strong> → central, marginal (battledore), velamentous (vasa previa).</li>
+          <li><strong>Knots in cord</strong> → true and false (localized collection of Wharton's jelly).</li>
+          <li>Congenital tumors or cysts.</li>
+          <li>Absence of one umbilical artery → congenital fetal malformation (CFMF), intrauterine growth restriction (IUGR).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Amniotic Fluid</h3>
+      <div class="card-content">
+        <p class="sub-header">Source of amniotic fluid:</p>
+        <ul>
+          <li><strong>Maternal:</strong> transudation through placenta &amp; cord (mainly 1st half of pregnancy).</li>
+          <li><strong>Fetal:</strong> urine (mainly in the 2nd half of pregnancy).</li>
+        </ul>
+        <p>Then it is removed by transudation + fetal swallowing i.e. dynamic circulation. Balance between production &amp; absorption keeps its volume at normal range.</p>
+        <p><strong>Volume milestones:</strong> At 6 wks → <strong>5ml</strong> | At 10 wks → <strong>30ml</strong> | At 20 wks → <strong>300ml</strong> | At 30 wks → <strong>600ml</strong> | At 36 wks → <strong>1000 ml</strong> | Between 38–40 wks → <strong>800ml</strong></p>
+        <p><strong>Composition:</strong> <strong>98%</strong> clear water, 1–<strong>2%</strong> crystalloids (slightly alkaline), enzymes, lipids, hormones, and proteins.</p>
+        <p class="sub-header">Functions of amniotic fluid:</p>
+        <ul>
+          <li><strong>During pregnancy:</strong> Protection against trauma, prevents adhesions between fetal skin &amp; amnion, prevents infection, thermoregulation, allow free movement of fetus → muscular development, development of alveoli.</li>
+          <li><strong>During labor:</strong> Helps cervical dilatation, prevents direct fetal &amp; placental compression by the uterine wall, wash of birth canal.</li>
+        </ul>
+        <p class="sub-header">Abnormalities:</p>
+        <ul>
+          <li>Volume: ↑ → polyhydramnios, ↓ → oligohydramnios.</li>
+          <li>Meconium staining → meconium aspiration syndrome.</li>
+          <li>Inflammation → chorioamnionitis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Placental Hormones</h3>
+      <div class="card-content">
+        <p class="sub-header">Proteins (glycoproteins):</p>
+        <p><strong>Human Chorionic Gonadotrophin (HCG)</strong></p>
+        <ul>
+          <li>Source → syncytiotrophoblast</li>
+          <li>Can be detected one week before the missed period.</li>
+          <li>It is composed of 2 subunits: alpha subunit (similar to FSH, LH and TSH) and beta subunit (specific to hCG).</li>
+        </ul>
+        <ul>
+          <li><strong>Function:</strong> Maintenance of CL (luteotropic), immunological suppressive action, stimulates fetal testosterone secretion.</li>
+          <li><strong>Uses:</strong> Diagnosis of pregnancy, diagnoses of pregnancy abnormalities (↑in Down syndrome), diagnoses and follow up of v.mole.</li>
+        </ul>
+        <p><strong>Human Placental Lactogen (HPL)</strong></p>
+        <ul>
+          <li>Source: syncytiotrophoblast</li>
+          <li>Very similar to GH &amp; prolactin → may stimulate growth of breasts.</li>
+          <li>On CHO &amp; fat (anti-insulin effect) → spares glucose &amp; fatty acids for fetus.</li>
+        </ul>
+        <p class="sub-header">Steroid hormones:</p>
+        <p><strong>Estrogen:</strong> Estrogens are formed by the conversion of DHEAS (dehydroepiandrosterone) from maternal and fetal sources (adrenal gland mainly) to estradiol (E2) and estriol (E3). It is responsible with progesterone for the most of the maternal changes due to pregnancy especially in the genital tract and breasts.</p>
+        <p><strong>Progesterone:</strong> It is synthesized by syncytiotrophoblast from maternal cholesterol. It provides a precursor for the fetal adrenal to produce glucocorticoids and mineralocorticoids.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 2: MATERNAL ADAPTATION ====== -->
+<section class="topic-section" id="topic-2">
+  <div class="section-header" style="background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);" data-num="2">
+    <span class="section-number">2</span>
+    <span class="section-emoji">🤰</span>
+    <h2 class="section-title">Maternal Adaptation to Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the genital and other maternal organs changes during pregnancy to help body adaptation to this important event of woman life.</li>
+          <li>To be able to describe the hematological, metabolic and endocrinal changes of pregnancy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Genital Changes</h3>
+      <div class="card-content">
+        <p class="sub-header">I. Whole uterus</p>
+        <ul>
+          <li><strong>Position:</strong> Dextrorotation</li>
+          <li><strong>Size:</strong> 2.5×5×7.5 cm (non-pregnant) → 20×25×35 cm at term</li>
+          <li><strong>Shape:</strong> Pyriform (non-pregnant) → Globular at <strong>8 weeks</strong> → Pyriform at <strong>16 weeks</strong> till term</li>
+          <li><strong>Weight:</strong> 50 gm (non-pregnant) → <strong>1000 gm</strong> at term</li>
+          <li><strong>Volume:</strong> <strong>10 ml</strong> (non-pregnant) → <strong>5000 ml</strong> at term</li>
+          <li><strong>Consistency:</strong> softer due to increased vascularity and presence of amniotic fluid.</li>
+          <li><strong>Contractility:</strong> Braxton Hicks contractions that cause discomfort late in pregnancy and may account for false labor pains.</li>
+        </ul>
+        <p class="sub-header">II. Myometrial changes</p>
+        <ul>
+          <li><strong>Hypertrophy:</strong> estrogenic effect.</li>
+          <li><strong>Hyperplasia:</strong> progesterone effect.</li>
+          <li><strong>Isthmus:</strong> area of the cervix between anatomical internal os above and the histological internal os below. It is 4–5 mm and lined by atrophic endometrium.</li>
+        </ul>
+        <p>Significance: the isthmus and lower 1/2 inch of the body of the uterus develop to form the <strong>lower uterine segment</strong> that starts to be formed at <strong>12 weeks</strong> and gradually increases to 10 cm at full term.</p>
+        <p class="sub-header">III–VIII. Other organs</p>
+        <ul>
+          <li><strong>Uterine vasculature:</strong> Uterine artery lumen is doubled and uterine blood flow increases progressively and reaches about 500 ml/min at term.</li>
+          <li><strong>Cervix:</strong> Hypertrophy, soft and bluish due to increased vascularity.</li>
+          <li><strong>Vagina:</strong> Violet and edematous due to increased vascularity.</li>
+          <li><strong>Vulva:</strong> Violet and edematous due to increased vascularity.</li>
+          <li><strong>Fallopian tube:</strong> elongated, tortuous.</li>
+          <li><strong>Ovary:</strong> Increased size due to increased vascularity particularly the ovary that contains the corpus luteum.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Hematological Changes</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>Blood Volume:</strong> increases gradually above the non-pregnant level by <strong>30%–40%</strong> to reach its maximum by <strong>32 weeks</strong> then remains constant till full term.
+            <ul>
+              <li>Plasma volume: <strong>45%</strong> increase.</li>
+              <li>Red cell mass: <strong>30%</strong> increase.</li>
+            </ul>
+          </li>
+          <li>The increases in plasma volume is more than the increases in red blood cell mass resulting in <strong>hemodilution (physiological anemia)</strong>.</li>
+        </ul>
+        <p class="sub-header">Blood Indices:</p>
+        <p>RBCs and hemoglobin concentrations decrease due to hemodilution. WBCs increases from 7000/mm³ to 10,500/mm³ and up to 160,000/mm³ during labor.</p>
+        <p class="sub-header">Coagulation factors:</p>
+        <ul>
+          <li>Platelets: increase or decrease (controversial).</li>
+          <li>Fibrinogen increases nearly doubled (from 200–<strong>400 mg%</strong> to 400–<strong>600 mg%</strong>).</li>
+          <li>Factor VIII: tripled.</li>
+          <li>Factor VII and X doubled.</li>
+          <li>Fibrinolytic activity is decreased.</li>
+        </ul>
+        <p><strong>So pregnancy is a hypercoagulable state.</strong></p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Cardiovascular &amp; Respiratory Changes</h3>
+      <div class="card-content">
+        <p class="sub-header">Cardiovascular system:</p>
+        <ul>
+          <li><strong>Heart:</strong> Position: the uterus elevates the diaphragm and the apex beat is displaced upwards and to the left. Pulse rate: increases by <strong>10 beats/min</strong>. Heart sounds: splitting of the 1st heart sounds and appearance of 3rd heart sound.</li>
+          <li><strong>Cardiac output:</strong> increases above the non-pregnant level to reach its maximum by <strong>40%</strong> above the non-pregnant level at <strong>20 weeks</strong>, then remains constant till term (6.5 L/min). This is due to increased stroke volume and heart rate.</li>
+          <li><strong>During labor:</strong> COP increases more especially during second stage of labor due to uterine contractions and bearing down efforts.</li>
+          <li><strong>Arterial blood pressure:</strong> Although COP is increased, blood pressure is decreased especially in second trimester due to decreased peripheral resistance.</li>
+        </ul>
+        <p class="sub-header">Respiratory system:</p>
+        <ul>
+          <li><strong>Anatomically:</strong> the enlarged uterus displaces the diaphragm up to 4 cm that leads to reduced diaphragmatic mobility, and widened subcostal angle.</li>
+          <li><strong>Respiratory functions:</strong> Tidal volume is increased throughout pregnancy by about <strong>40%</strong>. Residual volume is reduced.</li>
+          <li><strong>Hyperventilation:</strong> due to increased tidal volume due to increased sensitivity of respiratory center to excess progesterone.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Urinary &amp; GI Changes</h3>
+      <div class="card-content">
+        <p class="sub-header">Urinary system:</p>
+        <ul>
+          <li><strong>Kidney:</strong> renal blood flow and glomerular filtration rate increase by (<strong>50%</strong>). This leads to increased excretion, so: decreased creatinine, decreased urea, increased excretion of glucose that leads to reduced renal glucose threshold and renal glucosuria.</li>
+          <li><strong>Ureters:</strong> Dilated due to relaxing effect of progesterone and pressure against pelvic brim by the uterus especially on the right side due to dextrorotation of the uterus.</li>
+          <li><strong>Urinary bladder:</strong> Frequency is common in early pregnancy due to pressure on the bladder by enlarging uterus, congestion of the bladder mucosa, and increased glomerular filtration rate.</li>
+        </ul>
+        <p class="sub-header">Gastrointestinal tract:</p>
+        <ul>
+          <li><strong>Gingivitis:</strong> due to increased vascularity and hypertrophy of interdental papillae.</li>
+          <li><strong>Ptyalism:</strong> increased salivation due to increased vascularity of salivary glands.</li>
+          <li><strong>Appetite changes (longing):</strong> the pregnant woman likes some foods. Reduced taste buds create the desire for markedly sweet, sour and salt foods.</li>
+          <li><strong>Nausea and vomiting:</strong> starts between 4th and 6th weeks and improves by about 12th weeks of pregnancy.</li>
+          <li><strong>Heart burn:</strong> due to reflux of acidic gastric contents to the esophagus due to relaxing effect of progesterone on the esophageal sphincter.</li>
+          <li><strong>Indigestion and flatulence:</strong> due to reduced gastric motility and reflux of alkaline intestinal contents.</li>
+          <li><strong>Constipation:</strong> due to reduced large intestinal motility due to relaxing effect of progesterone.</li>
+          <li><strong>Piles:</strong> due to laxity of the wall of the veins by progesterone.</li>
+          <li><strong>Appendix:</strong> is displaced upward and laterally.</li>
+          <li><strong>Gall bladder:</strong> more tendency for gall bladder stones due to delayed emptying.</li>
+          <li><strong>Liver:</strong> decreased albumin and increased globulin (↓ A/G ratio) and increased alkaline phosphatase enzyme.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Metabolic, Endocrine, Skin &amp; Breast Changes</h3>
+      <div class="card-content">
+        <p class="sub-header">Metabolic changes:</p>
+        <ul>
+          <li><strong>Weight gain:</strong> increased by 10–<strong>12 kg</strong> in pregnancy.</li>
+          <li><strong>Water metabolism:</strong> tendency to water and sodium retention due to increased aldosterone.</li>
+          <li><strong>Protein metabolism:</strong> +ve nitrogen balance and increase daily requirements for protein intake.</li>
+          <li><strong>Carbohydrate:</strong> mild fasting hypoglycemia and postprandial hyperglycemia. Pregnancy is diabetogenic due to pregnancy hormones.</li>
+          <li><strong>Lipid:</strong> increase levels of total lipids and cholesterol.</li>
+        </ul>
+        <p class="sub-header">Musculoskeletal changes:</p>
+        <p>Progressive softening of pelvic joints caused by progressive lordosis and foot flattening.</p>
+        <p class="sub-header">Endocrine changes:</p>
+        <ul>
+          <li><strong>Anterior pituitary:</strong> hypertrophy and increased vascularity and increased number of prolactin secreting cells.</li>
+          <li><strong>Thyroid gland:</strong> slight enlargement due to increased vascularity that leads to increased gland activity ↑TBG, ↑ total T3 and T4, ↓TSH, and ↑ BMR.</li>
+          <li><strong>Parathyroid gland:</strong> hypertrophy with increased demand for calcium.</li>
+          <li><strong>Suprarenal gland:</strong> hypertrophy due to increased vascularity leading to increased aldosterone and cortisol.</li>
+        </ul>
+        <p class="sub-header">Skin changes:</p>
+        <ul>
+          <li><strong>Palmer erythema:</strong> due to increased estrogen.</li>
+          <li><strong>Chloasma gravidarum:</strong> in the face.</li>
+          <li><strong>Linea nigra pigmentation:</strong> in midline below the umbilicus.</li>
+          <li><strong>Stria gravidarum:</strong> pigmentation in the lower abdomen flanks, inner thigh and buttocks due to mechanical stretching.</li>
+        </ul>
+        <p class="sub-header">Breast changes:</p>
+        <ul>
+          <li><strong>I. First Month:</strong> Increased size and vascularity. Mastodynia (from tingling to frank pain).</li>
+          <li><strong>II. Second Month:</strong> skin pigmentation. Increased pigmentation of nipple and primary areola. Montgomery tubercles: hypertrophy of the lips of the orifices of the lacteal ducts.</li>
+          <li><strong>III. Third Month:</strong> Colostrum secretion.</li>
+          <li><strong>IV. Fifth Month:</strong> secondary areola pigmented area around the primary areola.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 3: DIAGNOSIS OF PREGNANCY ====== -->
+<section class="topic-section" id="topic-3">
+  <div class="section-header" style="background: linear-gradient(135deg, #14B8A6 0%, #0D9488 100%);" data-num="3">
+    <span class="section-number">3</span>
+    <span class="section-emoji">🔍</span>
+    <h2 class="section-title">Diagnosis of Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul><li>To be able to diagnose pregnancy at 1st, 2nd and 3rd trimesters.</li></ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> 1st Trimester Diagnosis</h3>
+      <div class="card-content">
+        <p class="sub-header">Symptoms:</p>
+        <ul>
+          <li>Secondary amenorrhea.</li>
+          <li>Frequency of micturition: pressure by the enlarged pregnant uterus on U.B and pelvic congestion.</li>
+          <li>Nausea and vomiting: usually appears at <strong>6 weeks</strong> and usually disappears at <strong>12 weeks</strong> of pregnancy.</li>
+          <li>Breast symptoms: enlargement, mastodynia and fullness.</li>
+        </ul>
+        <p class="sub-header">Signs:</p>
+        <ul>
+          <li>Skin: chloasma, linea nigra, striae gravidarum.</li>
+          <li>Breast: enlargement, pigmentation, Montgomery tubercles.</li>
+          <li>Vaginal and cervical bluish discoloration (Chadwick's sign) due to increased vascularity.</li>
+        </ul>
+        <p class="sub-header">Uterine signs:</p>
+        <ul>
+          <li>Size: increased</li>
+          <li>Shape: Globular</li>
+          <li>Consistency: Soft</li>
+          <li><strong>Hegar sign:</strong> depends on the difference in consistency between the cervix and the body of the uterus (body is softer), detected by manual examination.</li>
+          <li><strong>Palmar sign:</strong> painless contractions followed by relaxation not accompanied by cervical dilatation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>Pregnancy test:</strong> depend on the detection of hCG either in urine or serum. Serum HCG (sensitive at 25 IU/ml). +ve one week before the missed period.</li>
+          <li><strong>Ultrasonography:</strong> Ring (<strong>4 weeks</strong>). Sac (<strong>5 weeks</strong>). Cardiac activity (<strong>6 weeks</strong>). FHS (<strong>10 weeks</strong>).</li>
+        </ul>
+        <p class="sub-header">Diagnosis of 2nd trimester (12–28 weeks)</p>
+        <p><strong>Symptoms:</strong> Amenorrhea. Morning sickness and frequency of micturition decrease. Abdominal enlargement. <strong>Quickening:</strong> first perception of fetal movement — Primigravida (18–20 weeks), Multigravida (16–18 weeks).</p>
+        <p><strong>Signs:</strong> Skin and breast changes as 1st trimester + 2° areola. <strong>Uterus:</strong> felt abdominally. <strong>Braxton Hicks contractions:</strong> intermittent painless contractions. <strong>Ballottement</strong> (solid body moving in fluid medium), external (positive after 20 weeks) or internal (positive after 16 weeks). <strong>Uterine soufflé:</strong> soft blowing murmur synchronous with maternal pulse. <strong>Auscultation of FHS</strong> and umbilical soufflé (sure sign of pregnancy).</p>
+        <p class="sub-header">Diagnosis of 3rd trimester (28–40 weeks)</p>
+        <p><strong>Symptoms:</strong> Same as 2nd trimester in addition to engagement symptoms like increased frequency of micturition and lightening. <strong>Signs:</strong> more evident. Ultrasonography is diagnostic.</p>
+        <p><strong>Sure signs of pregnancy:</strong> Palpation of fetal parts, palpation of fetal movement, auscultation of FHS, auscultation of umbilical soufflé, detection of fetal parts by ultrasonography.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 4: ANTENATAL CARE ====== -->
+<section class="topic-section" id="topic-4">
+  <div class="section-header" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);" data-num="4">
+    <span class="section-number">4</span>
+    <span class="section-emoji">🏥</span>
+    <h2 class="section-title">Antenatal Care</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul><li>To understand the goal of antenatal care together with different components of antenatal program</li></ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition</h3>
+      <div class="card-content">
+        <p>Preventive obstetric program including a group of observations, medical care, investigations and advices aiming at getting pregnancy, labor and puerperium as near to normal as possible.</p>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">📋</span> Objectives &amp; Protocol</h3>
+      <div class="card-content">
+        <p class="sub-header">Objectives:</p>
+        <ul>
+          <li>Identification of high risk pregnancy.</li>
+          <li>Monitoring of high risk pregnancy.</li>
+          <li>Early detection of complications.</li>
+          <li>Giving advice for all pregnant patients.</li>
+          <li>Management of common minor problems.</li>
+        </ul>
+        <p class="sub-header">Frequency of visits:</p>
+        <ul>
+          <li><strong>Low risk group:</strong> Every month till <strong>28 weeks</strong> then every <strong>2 weeks</strong> till <strong>36 weeks</strong> then every week till delivery.</li>
+          <li><strong>High risk group:</strong> Every <strong>2 weeks</strong> till <strong>28 weeks</strong> then every week till <strong>36 weeks</strong> then hospitalization till delivery.</li>
+        </ul>
+        <p class="sub-header">Initial visit:</p>
+        <ul><li>Diagnosis of pregnancy and accurate dating. Complete clinical evaluation: history, general, abdominal, and local examination.</li></ul>
+        <p class="sub-header">Subsequent visits:</p>
+        <ul>
+          <li>Ask about any complaints.</li>
+          <li>BP, weight, edema, and abdominal examination.</li>
+          <li>Local examination (if indicated).</li>
+          <li>Urine for albumin, sugar, and other investigations according to the situation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">📋</span> Screening Tests &amp; Advices</h3>
+      <div class="card-content">
+        <p class="sub-header">Routine screening tests:</p>
+        <ul>
+          <li>ABO grouping and Rh typing.</li>
+          <li>Urine analysis for albumin, sugar and bacterial count.</li>
+          <li>CBC.</li>
+          <li>One hour postprandial glucose test.</li>
+          <li>HBsAg.</li>
+          <li>Rubella antibodies.</li>
+          <li>Cervicovaginal smear.</li>
+        </ul>
+        <p class="sub-header">For specific population:</p>
+        <ul>
+          <li>Sexually transmitted diseases (HIV, Syphilis, etc).</li>
+          <li>Thalassemia (A in Asians) and (B in Mediterranean).</li>
+          <li>Sickle cell anemia (in black women).</li>
+          <li>Tuberculin skin test.</li>
+          <li>Screen for short cervix by transvaginal ultrasound.</li>
+          <li>Screening or diagnostic testing for trisomy 21 and other genetic disorders.</li>
+          <li>Screen for red blood cell antibodies and administer anti-D immune globulin to D-negative patients.</li>
+        </ul>
+        <p class="sub-header">Antenatal Advices:</p>
+        <ul>
+          <li><strong>Nutrition:</strong> Total calories: 2700 cal/day. Protein: 1.5 gm/kg/day. Iron: 30–60 mg/day. Calcium: 1.5 gm/day. Folic acid: 400 µg/day. Weight gain: 10–12 kg.</li>
+          <li><strong>Teeth care:</strong> Daily cleaning by tooth paste.</li>
+          <li><strong>Clothing:</strong> Light clothes, avoid high heeled shoes.</li>
+          <li><strong>Bathing:</strong> avoid hot bathing and swimming pools.</li>
+          <li><strong>Sexual activity:</strong> Avoided if there is a threat of abortion or preterm labor.</li>
+          <li><strong>Sleep:</strong> <strong>8 hours</strong> at night and 2 afternoon.</li>
+          <li><strong>Travelling:</strong> avoided if there is a risk of abortion or PTL.</li>
+          <li><strong>Special habits:</strong> avoid smoking, alcohol.</li>
+        </ul>
+        <p class="sub-header">Immunization during pregnancy:</p>
+        <ul>
+          <li>Live attenuated viral vaccines as MMR &amp; polio are contraindicated.</li>
+          <li>Inactivated viral vaccines as influenza and rabies are safe.</li>
+        </ul>
+        <p class="sub-header">Warning symptoms of pregnancy:</p>
+        <ul>
+          <li>1. Any symptoms suggestive of PIH: persistent headache, blurring of vision, vomiting, and epigastric pain.</li>
+          <li>2. Swelling of the face, fingers and limbs.</li>
+          <li>3. Excessive watery vaginal discharge.</li>
+          <li>4. Vaginal bleeding.</li>
+          <li>5. Fever, dyspnea.</li>
+          <li>6. Severe abdominal pain.</li>
+          <li>7. Decreased fetal kicks.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 5: ABORTION ====== -->
+<section class="topic-section" id="topic-5">
+  <div class="section-header" style="background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);" data-num="5">
+    <span class="section-number">5</span>
+    <span class="section-emoji">⚠️</span>
+    <h2 class="section-title">Abortion</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To be able to differentiate different types of abortion</li>
+          <li>To be able to describe the clinical management of variable types of abortion</li>
+          <li>To be able to explain the etiology, investigations and management of recurrent abortion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition</h3>
+      <div class="card-content">
+        <p>Termination of pregnancy before viability of the fetus i.e. before <strong>20 weeks</strong>. Incidence: varies between 12–<strong>25%</strong>.</p>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">🔬</span> Etiology</h3>
+      <div class="card-content">
+        <ul>
+          <li>Chromosomal abnormalities: <strong>50%</strong> of early abortions.</li>
+          <li>Maternal infections: Acute fever.</li>
+          <li>Trauma: external or during operations.</li>
+          <li>Immunological causes: Systemic lupus erythematosus and Antiphospholipid antibodies.</li>
+          <li>Uterine defects: Septum, Asherman's syndrome.</li>
+          <li>Idiopathic.</li>
+          <li>Endocrine: Progesterone deficiency, Hypothyroidism.</li>
+          <li>Drugs and environmental causes.</li>
+          <li>Maternal anoxia and malnutrition.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Threatened Abortion</h3>
+      <div class="card-content">
+        <p><strong>clinical features:</strong> Symptoms and signs of pregnancy coincide with its duration. Vaginal bleeding: slight or mild, bright red. Pain: absent or slight. Cervix: closed. U/S: living fetus.</p>
+        <p class="sub-header">Management:</p>
+        <ul>
+          <li>Bed rest and avoid strenuous activity and sexual intercourse.</li>
+          <li>Progesterone.</li>
+          <li>Follow up.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Inevitable Abortion</h3>
+      <div class="card-content">
+        <p><strong>Clinical features:</strong> Symptoms and signs of pregnancy. Heavy vaginal bleeding with clots. Suprapubic colic referred to the back. Dilated cervix.</p>
+        <p class="sub-header">Management:</p>
+        <ul>
+          <li>Medical: oxytocin drip, prostaglandins.</li>
+          <li>Surgical: evacuation.</li>
+          <li>Blood transfusion if needed.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Complete Abortion</h3>
+      <div class="card-content">
+        <p><strong>Clinical features:</strong> Bleeding: mild and decreases. Cessation of pain. Closed cervix. Uterus: slightly larger than normal. Ultrasound: shows empty cavity.</p>
+        <p><strong>Management:</strong> Ecbolics and antibiotics and no evacuation.</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Incomplete Abortion</h3>
+      <div class="card-content">
+        <p><strong>Clinical features:</strong> Passage of a part of the conception products. Bleeding is continuous. Opened cervix. Uterus: less than period of amenorrhea. Ultrasonography: shows the retained contents.</p>
+        <p><strong>Management:</strong> Evacuation (medical or surgical).</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Cervical Abortion</h3>
+      <div class="card-content">
+        <p>Bleeding with severe lower abdominal pain referred to the back. On examination, the products of conception are felt through the dilated cervix.</p>
+        <p><strong>Management:</strong> Cervical dilatation and evacuation of cervical contents followed by curettage.</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Missed Abortion</h3>
+      <div class="card-content">
+        <p><strong>Definition:</strong> Retention of dead products of conception.</p>
+        <p class="sub-header">Symptoms:</p>
+        <ul>
+          <li>Regression of pregnancy symptoms as nausea, vomiting and breast symptoms.</li>
+          <li>The abdomen does not increase.</li>
+          <li>The fetal movements are not felt.</li>
+          <li>A dark brown vaginal discharge may occur (prune juice discharge).</li>
+        </ul>
+        <p class="sub-header">Signs:</p>
+        <ul>
+          <li>The uterus fails to grow and becomes firmer.</li>
+          <li>The cervix is closed.</li>
+          <li>Absent fetal heart sounds.</li>
+        </ul>
+        <p class="sub-header">Investigations:</p>
+        <ul>
+          <li>Pregnancy test becomes negative within two weeks from the ovum death.</li>
+          <li>Ultrasound shows a collapsed gestational sac, absent fetal heart pulsations or fetal movement.</li>
+        </ul>
+        <p class="sub-header">Treatment:</p>
+        <ul>
+          <li>&lt;<strong>12 weeks</strong>: Surgical evacuation is done.</li>
+          <li>&gt;<strong>12 weeks</strong>: Medical evacuation (e.g. by Prostaglandins or Oxytocin).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Septic Abortion</h3>
+      <div class="card-content">
+        <p class="sub-header">General examination:</p>
+        <p>Pyrexia, Rigors and tachycardia. Malaise, sweating, headache, and joint pain. Jaundice.</p>
+        <p class="sub-header">Abdominal examination:</p>
+        <p>Tenderness, rigidity and distension.</p>
+        <p class="sub-header">Local examination:</p>
+        <p>Offensive vaginal discharge. Tender uterus.</p>
+        <p class="sub-header">Treatment:</p>
+        <ul>
+          <li>Resuscitation</li>
+          <li>Prompt administration of intravenous broad-spectrum antibiotics followed by uterine evacuation.</li>
+          <li>Rest in semi-sitting position.</li>
+          <li>Observation for vital signs.</li>
+          <li>Oxytocin infusion: to control bleeding and enhances expulsion.</li>
+          <li>Evacuation of the uterus after commencing IV therapy.</li>
+          <li>Hysterectomy may be the last choice to save life.</li>
+        </ul>
+        <p><strong>Other types:</strong> Therapeutic Abortion (induced for medical indication). Criminal Abortion (illegal, non-medical indication).</p>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">🔍</span> Recurrent (Habitual) Abortion</h3>
+      <div class="card-content">
+        <p class="sub-header">Causes (Persistent causes):</p>
+        <ul>
+          <li>Genetic factors: Paternal chromosomal rearrangements, embryonic chromosomal Abnormalities.</li>
+          <li>Anatomical factors: septate uterus / cervical incompetence.</li>
+          <li>Antiphospholipid syndrome.</li>
+          <li>Endocrinological abnormalities: DM, thyroid abnormalities.</li>
+          <li>Thrombophilias.</li>
+          <li>Infective agents: STORCH.</li>
+        </ul>
+        <p class="sub-header">Investigations:</p>
+        <ul>
+          <li>1. Laboratory: Urine analysis, Blood: serum creatinine, antiphospholipid antibodies and coagulation profile.</li>
+          <li>2. U.S: To exclude submucous fibroid, incompetent cervix.</li>
+          <li>3. HSG: To exclude submucous fibroid, incompetent cervix, intrauterine adhesions.</li>
+          <li>4. Hysteroscopy: To exclude submucous fibroid, intrauterine adhesions, congenital anomalies.</li>
+          <li>5. Genetic study: of the abortus to exclude chromosomal aberrations.</li>
+        </ul>
+        <p class="sub-header">Treatment:</p>
+        <ul>
+          <li><strong>a- Before pregnancy:</strong> treat detectable causes: e.g. Hysteroscopic resection of uterine septum or submucous fibroid. Treatment of luteal phase defect. Strict control of DM.</li>
+          <li><strong>b- During pregnancy:</strong> Rest: Physical, mental (sedation) and sexual abstinence. Diet: Good balanced diet. Natural progesterone: if proved progesterone deficiency. Others: Strict DM control, cerclage for incompetent cervix, Heparin for the Antiphospholipid syndrome.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 6: ECTOPIC PREGNANCY ====== -->
+<section class="topic-section" id="topic-6">
+  <div class="section-header" style="background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);" data-num="6">
+    <span class="section-number">6</span>
+    <span class="section-emoji">🚨</span>
+    <h2 class="section-title">Ectopic Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To identify variable risk factors of ectopic pregnancy</li>
+          <li>To identify different types of ectopic pregnancy</li>
+          <li>To be able to describe clinical picture of ectopic pregnancy</li>
+          <li>To be able request suitable investigations for diagnosis of ectopic pregnancy</li>
+          <li>To understand the concept of discriminatory zone when both ultrasound and human chorionic gonadotrophin level are used for diagnosis</li>
+          <li>To be able to describe variable treatment policies of ectopic pregnancy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition &amp; Etiology</h3>
+      <div class="card-content">
+        <p>Implantation of the fertilized ovum outside the uterine cavity. Incidence: <strong>2%</strong> of all pregnancies.</p>
+        <p class="sub-header">Sites:</p>
+        <ul>
+          <li><strong>Tubal pregnancy:</strong> The commonest site (<strong>99%</strong> of all ectopic pregnancy). Ampulla: <strong>80%</strong>. Isthmus: <strong>12%</strong>. Interstitial part. Fimbrial end.</li>
+          <li>Cervical, rudimentary horn, corneal, ovarian, abdominal, broad ligamentary pregnancy.</li>
+        </ul>
+        <p class="sub-header">Risk Factors:</p>
+        <ul>
+          <li>PID. Previous ectopic. Previous tubal surgery. Previous pelvic or abdominal surgery. Tubal pathology. IUCD. Tubal sterilization. Cigarette smoking.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Clinical Picture</h3>
+      <div class="card-content">
+        <p><strong>Symptoms:</strong> History of missed period. Vaginal bleeding. Abdominal or pelvic pain.</p>
+        <p class="sub-header">Signs:</p>
+        <ul>
+          <li>General: Signs of pregnancy. Pallor, fainting attacks, shoulder pain (if ruptured). Shock, tachycardia and hypotension.</li>
+          <li>Abdominal: Abdominal or pelvic tenderness. Rebound tenderness. Abdominal rigidity.</li>
+          <li>Vaginal: Soft enlarged uterus. Cervical motion tenderness (jumping sign).</li>
+        </ul>
+        <p class="sub-header">Types:</p>
+        <ul>
+          <li><strong>Undisturbed ectopic:</strong> clinical picture as above.</li>
+          <li><strong>Acute disturbed ectopic:</strong> signs of pregnancy + pallor, shock, severe jumping sign.</li>
+          <li><strong>Chronic disturbed ectopic:</strong> recurrent lower abdominal pain, pelvic heaviness, rectal tenesmus, tender cervical motion and adnexal swelling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>1. Quantitative β-hCG:</strong> If negative, ectopic is excluded. <strong>Doubling time:</strong> In normal pregnancy, β-hCG doubles every <strong>48 hours</strong> during first <strong>42 days</strong>. Ectopic usually shows less than <strong>66%</strong> increase in 48 hours.</li>
+          <li><strong>2. Ultrasound and Doppler:</strong> Signs: Empty uterine cavity, Free fluid in Douglas pouch, Adnexal swelling with fetal pulsation → sure sign of ectopic.</li>
+          <li><strong>3. HCG + U/S — The Discriminatory zone:</strong> Transabdominal U/S (TAU): <strong>6000 mIU/ml</strong>. Transvaginal U/S (TVU): <strong>2000 mIU/ml</strong>. If HCG above discriminatory zone and uterus empty → ectopic.</li>
+          <li><strong>4. Progesterone:</strong> Lower in ectopic (&lt; 15 ng/ml).</li>
+          <li><strong>5. Laparoscopy:</strong> For diagnosis and treatment.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Treatment</h3>
+      <div class="card-content">
+        <p class="sub-header">Resuscitation (unstable patient):</p>
+        <p>2 large bore I.V lines + fluids. Oxygen: <strong>100%</strong> by mask. Cardiac monitor and pulse-oximetry. CBC and blood groups. Blood transfusion.</p>
+        <p class="sub-header">Expectant management:</p>
+        <p>Clinically stable, size &lt; 3.5 cm with no visible heartbeat, serum β-hCG &lt; 1500 IU/L.</p>
+        <p class="sub-header">Medical treatment (Methotrexate):</p>
+        <p>No significant pain, unruptured tubal ectopic with adnexal mass &lt; 3.5 cm, no visible fetal cardiac pulsations, β-hCG &lt; 1500 IU/L, no intrauterine pregnancy, patient able to return for follow up.</p>
+        <p><strong>Contraindications:</strong> Hepatic dysfunction, renal disease (creatinine &gt; 1.5 mg/dL), active peptic ulcer, leukocyte count &lt;3000 cells/µL, platelet count &lt;100,000/µL, poor compliance, breast feeding, known sensitivity to methotrexate, active pulmonary disease.</p>
+        <p class="sub-header">Surgical treatment:</p>
+        <p>Indications: Significant pain, mass &gt; 3.5 cm or with visible fetal cardiac pulsations, β-hCG &gt; 5000 IU/L.</p>
+        <ul>
+          <li><strong>Salpingostomy:</strong> Removal of gestational sac through linear tubal incision. When future fertility is required.</li>
+          <li><strong>Salpingectomy:</strong> Removal of the tube. Indications: &gt; 40 years, completed family, uncontrolled bleeding.</li>
+        </ul>
+        <p class="sub-header">Special types:</p>
+        <ul>
+          <li><strong>Interstitial (Cornual):</strong> implants in proximal tubal segment. Risk of severe hemorrhage. Cornual resection needed. High risk of uterine rupture in subsequent pregnancies.</li>
+          <li><strong>Ovarian:</strong> Diagnosed by Spiegelberg criteria. Treatment: oophorectomy.</li>
+          <li><strong>Cervical:</strong> Early diagnosis important. Treatment: methotrexate or cervical evacuation. Severe bleeding → hysterectomy.</li>
+          <li><strong>Cesarean scar:</strong> Implantation within scar of previous CS. Treatment: methotrexate or resection.</li>
+          <li><strong>Heterotopic:</strong> uterine + extrauterine pregnancy. Potassium chloride into tubal sac. Methotrexate contraindicated.</li>
+        </ul>
+        <p><strong>Pregnancy of unknown location (PUL):</strong> Positive pregnancy test and absent intrauterine sac without extrauterine evidence. Term used till final diagnosis.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 7: GTD ====== -->
+<section class="topic-section" id="topic-7">
+  <div class="section-header" style="background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);" data-num="7">
+    <span class="section-number">7</span>
+    <span class="section-emoji">🔬</span>
+    <h2 class="section-title">Gestational Trophoblastic Disease</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the pathogenesis of molar pregnancy</li>
+          <li>To be able to describe the clinical picture of GTD</li>
+          <li>To be able to outline the management of this pregnancy associated disorder</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition &amp; Classification</h3>
+      <div class="card-content">
+        <p>Tumors arising from the trophoblastic cells of the placenta.</p>
+        <p class="sub-header">Classifications:</p>
+        <ul>
+          <li><strong>A. Benign (Hydatidiform mole):</strong> Complete hydatidiform mole. Partial hydatidiform mole.</li>
+          <li><strong>B. Malignant (Gestational trophoblastic tumor):</strong> Invasive mole. Choriocarcinoma. Placental site trophoblastic tumor.</li>
+        </ul>
+        <p class="sub-header">Incidence:</p>
+        <p>Complete mole: <strong>1/1000</strong> pregnancy. Partial mole: <strong>3/1000</strong> pregnancy.</p>
+        <p class="sub-header">Types:</p>
+        <ul>
+          <li><strong>(i) Complete mole:</strong> The uterus is full of vesicles. No embryo is present. Result of fertilization of anucleated ovum with a normal sperm → duplicate → 46 chromosomes of paternal origin only.</li>
+          <li><strong>(ii) Partial mole:</strong> A part of trophoblastic tissue only shows molar changes. A fetus or parts of it is present. Fertilization of an ovum by 2 sperms → 69 chromosomes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">⚠️</span> Risk Factors &amp; Pathology</h3>
+      <div class="card-content">
+        <ul>
+          <li>(1) <strong>Age:</strong> pregnancies below 16 years and above 45 years have the highest risk.</li>
+          <li>(2) <strong>Previous GTN:</strong> following one mole, risk &lt; <strong>2%</strong>; following two moles, risk rises to 16%; following three moles, risk becomes <strong>50%</strong>.</li>
+          <li>(3) Family history.</li>
+          <li>(4) <strong>Dietary factor:</strong> low intake of animal fat may be associated with increased risk.</li>
+          <li>(5) <strong>Ethnic groups:</strong> more in Asian.</li>
+        </ul>
+        <p class="sub-header">Pathology:</p>
+        <p>The uterus is full of thin walled, translucent, grape-like vesicles of different sizes. Trophoblastic proliferation with mitotic activity leading to excessive secretion of hCG, chorionic thyrotrophin and progesterone. The high hCG → multiple theca lutein cysts. The high hCG → exaggeration of early pregnancy symptoms and signs.</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Clinical Features</h3>
+      <div class="card-content">
+        <ul>
+          <li>Amenorrhea.</li>
+          <li>Vaginal bleeding.</li>
+          <li>Symptoms of pregnancy in exaggerated form.</li>
+          <li>Early onset pre-eclampsia before 20th weeks.</li>
+          <li>Hyperemesis gravidarum.</li>
+          <li>Hyperthyroidism.</li>
+          <li>Complications of theca lutein cyst of ovary (rupture, torsion).</li>
+        </ul>
+        <p class="sub-header">Examinations:</p>
+        <ul>
+          <li><strong>Abdominal:</strong> Uterus is large and its consistency is soft and doughy. No fetal part or fetal heart can be detected.</li>
+          <li><strong>Pelvic:</strong> Sometimes grape like vesicles of mole may be detected which confirm the diagnosis.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>A) Ultrasound:</strong> Snow storm appearance (uterine cavity filled with multiple sonolucent areas of varying size and shape). Absence of fetus. Theca lutein cyst of ovary.</li>
+          <li><strong>B) β-hCG:</strong> Is highly elevated (&gt; <strong>100,000 mIU/ml</strong>).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Treatment</h3>
+      <div class="card-content">
+        <ul>
+          <li>Evacuation by <strong>suction curettage</strong> under general anesthesia with available blood.</li>
+          <li><strong>Hysterectomy</strong> is indicated for: older women or those of high parity, severe uncontrolled hemorrhage.</li>
+          <li>Theca lutein cysts regress in size and need no special treatment unless complicated.</li>
+          <li>Anti-D should be given to non-sensitized Rh negative mother.</li>
+        </ul>
+        <p class="sub-header">Postmolar follow up:</p>
+        <ul>
+          <li>hCG measurement every 1 to <strong>2 weeks</strong> until it becomes -ve.</li>
+          <li>Monthly for 1 year after hCG becomes -ve.</li>
+          <li>Aim is to detect malignant transformation because <strong>16%</strong> of complete mole and <strong>0.5%</strong> of partial mole undergo malignant transformation.</li>
+          <li>Contraception: combined oral pills is the method of choice.</li>
+        </ul>
+        <p><strong>Chemotherapy indicated if:</strong> hCG titer rises or plateaus during follow up. Evidence of choriocarcinoma. Persistent uterine bleeding and positive hCG.</p>
+        <p><strong>In subsequent pregnancy:</strong> Early ultrasound because of the 1–<strong>2%</strong> risk of recurrence.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 8: HYPERTENSION ====== -->
+<section class="topic-section" id="topic-8">
+  <div class="section-header" style="background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);" data-num="8">
+    <span class="section-number">8</span>
+    <span class="section-emoji">💉</span>
+    <h2 class="section-title">Hypertension with Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the definition of hypertension of pregnancy</li>
+          <li>To be able to classify hypertensive disorders of pregnancy</li>
+          <li>To be able to outline risk factors of preeclampsia</li>
+          <li>To be able to explain the clinical management of preeclampsia</li>
+          <li>To be able to describe the clinical management of gestational hypertension and chronic hypertension</li>
+          <li>To be able to describe the clinical management of eclampsia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition &amp; Classification</h3>
+      <div class="card-content">
+        <p>Systolic blood pressure ≥ <strong>140 mmHg</strong> or diastolic blood pressure ≥ <strong>90 mmHg</strong> on two separate occasions at least <strong>6 hours</strong> apart during pregnancy. Incidence: 10–<strong>20%</strong> of all pregnancies. It is the second leading cause of maternal death.</p>
+        <p class="sub-header">Classifications:</p>
+        <ul>
+          <li>Chronic hypertension (diagnosed before 20th week).</li>
+          <li>Gestational hypertension.</li>
+          <li>Chronic hypertension plus superimposed preeclampsia.</li>
+          <li>Preeclampsia.</li>
+        </ul>
+        <p><strong>Chronic (pre-existing) hypertension:</strong> BP ≥ 140/<strong>90 mmHg</strong> diagnosed before pregnancy or before <strong>20 weeks</strong> or persists &gt; <strong>42 days</strong> postpartum. Causes: chronic kidney disease, primary aldosteronism or pheochromocytoma.</p>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Management of Chronic &amp; Gestational HTN</h3>
+      <div class="card-content">
+        <p class="sub-header">Chronic hypertension:</p>
+        <ul>
+          <li><strong>Mild:</strong> Serial antenatal screening, BP measurement, urine protein assessment. Delivery at 37 wks. Termination by induction if cervix is favorable.</li>
+          <li><strong>Severe:</strong> Start antihypertensive medications (alpha methyldopa, labetalol or calcium channel blockers) to maintain BP &lt; 160/<strong>100 mmHg</strong>. If delivery planned before 34 wks, steroids for fetal lung maturity.</li>
+        </ul>
+        <p><strong>Chronic hypertension plus superimposed preeclampsia:</strong> Pre-existing HTN with worsening BP after <strong>20 weeks</strong>, followed by proteinuria (≥ 3g/24h). Management same as preeclampsia.</p>
+        <p class="sub-header">Gestational hypertension:</p>
+        <ul>
+          <li>Conservative outpatient management.</li>
+          <li>Serial laboratory testing to rule out preeclampsia.</li>
+          <li>Antihypertensive only if BP &gt; 160/<strong>100 mmHg</strong>.</li>
+          <li>Delivery at term.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">📊</span> Preeclampsia — Overview</h3>
+      <div class="card-content">
+        <p><strong>Incidence:</strong> 5–<strong>10%</strong> of pregnancies.</p>
+        <p class="sub-header">Risk Factors:</p>
+        <p>More in primigravida. Conditions with enlarged placenta (DM, multiple pregnancies, hydrops). Pre-existing HTN or renal diseases. Pre-existing vascular disease. Obesity.</p>
+        <p class="sub-header">Etiology:</p>
+        <p>Preeclampsia is a disorder of unknown etiology peculiar to human pregnancy. Many theories: Abnormal placentation, abnormal trophoblastic invasion, immunologic phenomena, renin-angiotensin system, coagulation abnormalities, abnormal cardiovascular adaptation, dietary factors, genetic factors, vasculopathy and inflammatory changes.</p>
+        <p class="sub-header">Pathology:</p>
+        <p>Vasospasm and hemoconcentration are the main pathology. It leads to vascular changes and local hypoxia leading to hemorrhage, necrosis and other pathological changes.</p>
+        <ul>
+          <li>1. CNS: ischemia, hemorrhages and oedema.</li>
+          <li>2. Liver: subcapsular hemorrhage, periportal necrosis and infarctions.</li>
+          <li>3. Kidney: decrease in renal blood flow, glomerular endotheliosis → ↓GFR by <strong>50%</strong>, proteinuria.</li>
+          <li>4. Heart and lungs: myocardial hemorrhage and necrosis.</li>
+          <li>5. Retina: hemorrhage, exudate and rarely retinal detachment.</li>
+          <li>6. Coagulation: ↑fibrin production, ↓fibrinolytic activity, ↑Factor VII, VIII, ↑FDP, thrombocytopenia.</li>
+          <li>7. Endocrine glands: necrosis in pituitary, pancreas and adrenal glands.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">✅</span> Diagnostic Criteria &amp; Investigations</h3>
+      <div class="card-content">
+        <p class="sub-header">Signs:</p>
+        <ul>
+          <li>1. <strong>Hypertension:</strong> BP ≥ 140/<strong>90 mmHg</strong> after <strong>20 weeks</strong>.</li>
+          <li>2. <strong>Proteinuria:</strong> urinary protein &gt; 0.3gm/L in <strong>24 hours</strong> or spot urine protein/creatinine ratio ≥ 0.3.</li>
+        </ul>
+        <p><strong>Symptoms:</strong> Headache, blurred vision, epigastric or RUQ pain, nausea and vomiting.</p>
+        <p class="sub-header">Investigations:</p>
+        <ul>
+          <li>1. Complete urine examination for proteinuria.</li>
+          <li>2. Kidney function.</li>
+          <li>3. Liver function tests.</li>
+          <li>4. Coagulation status: Platelet count, fibrinogen and FDP.</li>
+          <li>5. Fundus examination.</li>
+          <li>6. Fetal assessment: kick counts, NST twice weekly, BPP if nonreactive NST, AFI weekly, U/S growth every <strong>3 weeks</strong>.</li>
+        </ul>
+        <p class="sub-header">Types of preeclampsia:</p>
+        <ul>
+          <li><strong>Preeclampsia:</strong> BP &lt; 160/<strong>110 mmHg</strong> with absence of symptoms and normal laboratory data.</li>
+          <li><strong>Preeclampsia with severe features:</strong> BP ≥ 160/<strong>110 mmHg</strong> on two occasions ≥6 hours apart, ↑Liver enzymes, ↑Creatinine, HELLP syndrome, IUGR, oligohydramnios, IUFD, placental abruption, headache, blurring of vision, epigastric pain, oliguria (&lt; <strong>500 ml</strong>/24h), pulmonary edema, thrombocytopenia (&lt;100,000).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card complications-card">
+      <h3 class="card-title"><span class="card-icon">⚠️</span> Complications of Preeclampsia</h3>
+      <div class="card-content">
+        <p class="sub-header">Maternal:</p>
+        <ul>
+          <li>Accidental hemorrhage. Acute renal failure. HELLP syndrome. Acute pulmonary edema &amp; heart failure. Ante partum eclampsia. DIC. Cerebrovascular accidents. Residual and recurrent hypertension.</li>
+        </ul>
+        <p class="sub-header">Fetal:</p>
+        <ul>
+          <li>IUGR: due to placental insufficiency caused by vasospasm. IUFD.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Treatment of Preeclampsia</h3>
+      <div class="card-content">
+        <p class="sub-header">Prophylactic:</p>
+        <ul><li>1- Proper antenatal care. 2- Low dose aspirin. 3- Calcium. 4- Antioxidants.</li></ul>
+        <p class="sub-header">Curative:</p>
+        <p>Delivery remains the ultimate treatment. Vaginal delivery is preferable. Regional anesthesia preferred (contraindicated if coagulopathy).</p>
+        <ul>
+          <li>1-<strong>General measures:</strong> Hospitalization.</li>
+          <li>2-<strong>Medical treatment:</strong> Antihypertensive drugs: alpha-methyl-dopa (Aldomet), calcium channel blockers (Nifedipine), Labetalol and Hydralazine. Diuretics: in cases of heart failure and pulmonary edema.</li>
+          <li>3-<strong>Obstetric management:</strong> Magnesium sulphate to prevent convulsions (4–6 g loading dose then 1–2 gm/hour). Control maternal BP. Induction of labor.</li>
+        </ul>
+        <p class="sub-header">Timing of delivery:</p>
+        <ul>
+          <li>At ≥ <strong>37 weeks</strong> → Delivery.</li>
+          <li>&lt; <strong>37 weeks</strong> → Expectant management.</li>
+          <li>Severe PE at ≥ <strong>34 weeks</strong>: Delivery after rapid stabilization.</li>
+          <li>Severe PE &lt; <strong>34 weeks</strong>: Expectant management in tertiary center if BP controlled.</li>
+        </ul>
+        <p class="sub-header">Antihypertensives:</p>
+        <ul>
+          <li><strong>Hydralazine:</strong> 5–<strong>10 mg</strong> boluses every 20–30min (max <strong>20 mg</strong>).</li>
+          <li><strong>Labetalol:</strong> 20–<strong>40 mg</strong> boluses (max <strong>220mg</strong>). Then <strong>200 mg</strong> orally every 8h (max <strong>600 mg</strong> every 6h).</li>
+          <li><strong>Nifedipine:</strong> 10–<strong>20 mg</strong> orally every 30 min (max <strong>50mg</strong>). Then 10–<strong>20 mg</strong> every 4–6h (max <strong>120 mg</strong>/day). Aim: diastolic 90–<strong>100</strong>, systolic 140–<strong>150 mmHg</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Eclampsia</h3>
+      <div class="card-content">
+        <p>It is that of PE plus fits (convulsions). Each fit occurs in 4 stages:</p>
+        <ul>
+          <li><strong>Premonitory stage:</strong> Pupils dilated, eyes move side to side. Muscular twitches in tongue, face &amp; hands.</li>
+          <li><strong>Tonic stage:</strong> All voluntary muscles undergo tonic contraction. Respiratory muscles affected → cyanosis. Swallowing muscles affected → saliva accumulation.</li>
+          <li><strong>Clonic stage:</strong> Irregular intermittent contractions &amp; relaxation. Tongue may be bitten. Involuntary urination/defecation.</li>
+          <li><strong>Coma stage:</strong> May last for minutes, hours or days.</li>
+        </ul>
+        <p><strong>Causes:</strong> Cerebral edema and vasoconstriction → ischemia &amp; hypoxia, microthrombi or retention of sodium ions causing cerebral irritability.</p>
+        <p><strong>Types:</strong> Antepartum (during pregnancy), Intrapartum (during labor), Postpartum (after delivery, usually within 48 hours).</p>
+        <p class="sub-header">Signs of bad prognosis (Eden's criteria):</p>
+        <p>Two or more: Number of fits &gt; 10, coma duration &gt; <strong>6 hours</strong>, pulse &gt; <strong>120/min</strong>, temp &gt; 39°C, systolic BP &gt; <strong>200mmHg</strong>, RR &gt; 40/min.</p>
+      </div>
+    </div>
+
+    <div class="card complications-card">
+      <h3 class="card-title"><span class="card-icon">⚠️</span> Complications &amp; Treatment of Eclampsia</h3>
+      <div class="card-content">
+        <p><strong>Complications:</strong> Abruptio placentae, Acute renal failure, Intracerebral hemorrhage, Pulmonary edema, Aspiration pneumonia, Retinal detachment.</p>
+        <p class="sub-header">Treatment:</p>
+        <p>Basic principles: stabilization of general condition then termination of pregnancy.</p>
+        <ul>
+          <li><strong>Support of cardio-respiratory functions:</strong> Airway patency, suction as needed, padded bed side-rails, oxygen.</li>
+          <li><strong>Control of convulsions:</strong> Magnesium sulphate therapy (same dose as preeclampsia). Monitor for toxicity: absence of patellar reflex (first sign), urinary output &lt; <strong>30 ml</strong>/hour, respiratory depression.</li>
+          <li><strong>If magnesium toxicity:</strong> <strong>10 ml</strong> of <strong>10%</strong> calcium gluconate IV.</li>
+        </ul>
+        <p>Delivery remains the ultimate treatment for eclampsia.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 9: DIC ====== -->
+<section class="topic-section" id="topic-9">
+  <div class="section-header" style="background: linear-gradient(135deg, #9333EA 0%, #7C3AED 100%);" data-num="9">
+    <span class="section-number">9</span>
+    <span class="section-emoji">🩸</span>
+    <h2 class="section-title">Disseminated Intravascular Coagulopathy (DIC)</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the meaning of DIC</li>
+          <li>To be able to outline variable causes of DIC in a pregnant woman</li>
+          <li>To be able to explain the management of such disorder with pregnancy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition</h3>
+      <div class="card-content">
+        <p>A disorder of hemostasis in which intravascular activation of both clotting and fibrinolytic systems occurs leading to consumption of coagulation factors and platelets.</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Clinical Picture &amp; Etiology</h3>
+      <div class="card-content">
+        <p>The patient will experience systemic hemorrhage and oozing during operations. Postpartum hemorrhage.</p>
+        <p class="sub-header">Etiology:</p>
+        <ul>
+          <li>Preeclampsia and eclampsia.</li>
+          <li>Amniotic fluid embolism.</li>
+          <li>Abruptio placenta.</li>
+          <li>Vesicular mole.</li>
+          <li>IUFD and missed abortion.</li>
+          <li>Incompatible blood transfusion.</li>
+          <li>Rupture uterus and placenta accreta.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations</h3>
+      <div class="card-content">
+        <p>Increased prothrombin time, partial thromboplastin time, and fibrin degradation products (D-dimer). Platelet counts and fibrinogen are decreased.</p>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Treatment</h3>
+      <div class="card-content">
+        <ul>
+          <li>Treatment of the cause.</li>
+          <li>Transfusion of fresh blood, fresh frozen plasma, cryoprecipitate and platelets.</li>
+          <li>Anticoagulant.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 10: DIABETES ====== -->
+<section class="topic-section" id="topic-10">
+  <div class="section-header" style="background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);" data-num="10">
+    <span class="section-number">10</span>
+    <span class="section-emoji">🍬</span>
+    <h2 class="section-title">Diabetes Mellitus with Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the effect of diabetes on pregnancy and vice versa</li>
+          <li>To be able to describe how to screen for diabetes mellitus in pregnancy</li>
+          <li>To be able to explain the management of diabetic pregnant woman</li>
+        </ul>
+        <p><strong>Definition:</strong> A disorder in the carbohydrate metabolism characterized by hyperglycemia and glucosuria. Incidence: 3–<strong>5%</strong> gestational, 0.5–<strong>1%</strong> pregestational.</p>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">📋</span> Classification &amp; Effects</h3>
+      <div class="card-content">
+        <p class="sub-header">Classification:</p>
+        <ul>
+          <li><strong>[A] Pregestational diabetes:</strong> Type 1 → Juvenile onset (autoimmune). Type 2 → Adult onset (insulin resistance).</li>
+          <li><strong>[B] Gestational diabetes:</strong> Carbohydrate intolerance first diagnosed during pregnancy. Classic GDM at 24–<strong>28 weeks</strong>. Diagnosed before <strong>24 weeks</strong> → probably undiagnosed type 2 DM.</li>
+        </ul>
+        <p class="sub-header">Physiologic changes during pregnancy:</p>
+        <p>Hyperplasia of pancreatic islet cells → doubling in insulin production. Initial increase in insulin sensitivity during first trimester. Progressive glucose intolerance due to insulin-resistant hormones (HPL, glucagon, progesterone). Increased glucose uptake by fetus. Reduced renal tubular threshold → glucosuria. Overall, fasting glucose levels fall by 10–<strong>20%</strong>, postprandial levels are higher.</p>
+        <p class="sub-header">Effect of pregnancy on DM:</p>
+        <p>Insulin requirements gradually increase after 3rd month until term. Ketoacidosis can occur with lower glucose levels. Aggravation of microangiopathy. During delivery, liability to hypoglycemia. After delivery, insulin requirement decreases.</p>
+        <p class="sub-header">Fetal risks:</p>
+        <p>Miscarriage. Congenital anomaly (doubled). Macrosomia. Prematurity. Shoulder dystocia. Respiratory distress. Neonatal hypoglycemia. IUFD. IUGR. Neonatal hyperbilirubinemia, hypocalcemia, hypothermia. Risk of DM: <strong>15%</strong> in type 2 &amp; <strong>2%</strong> in type 1.</p>
+        <p class="sub-header">Maternal risks:</p>
+        <p>Hypoglycemia. Diabetic ketoacidosis. Polyhydramnios. Obstructed labor. Operative delivery. Worsening of retinal/renal disease. Pre-eclampsia. PPH and infection.</p>
+        <p class="sub-header">Risk factors for GDM:</p>
+        <p>BMI &gt; <strong>30 kg</strong>/m². Previous macrosomic infant ≥ <strong>4.5kg</strong>. Previous GD (30–<strong>84%</strong>). First degree relative with diabetes. Glycosuria 2+. Unexplained IUFD. Current macrosomia and polyhydramnios.</p>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🔍</span> Screening</h3>
+      <div class="card-content">
+        <p class="sub-header">One-hour glucose challenge test (GCT):</p>
+        <p>A 50-g one-hour GCT at 24–<strong>28 weeks</strong>. No fasting required. Normal: &lt; <strong>140 mg</strong>/dL. Positive → confirm with GTT.</p>
+        <p class="sub-header">Three-hour oral glucose tolerance test (GTT):</p>
+        <p>100g glucose after fasting <strong>8 hours</strong>. Carpenter and Coustan values:</p>
+        <ul>
+          <li>Fasting: <strong>95 mg</strong>/dl (<strong>5.3 mmol/l</strong>)</li>
+          <li>1-hour: <strong>180 mg</strong>/dl (<strong>10.0 mmol/l</strong>)</li>
+          <li>2-hour: <strong>155 mg</strong>/dl (<strong>8.6 mmol/l</strong>)</li>
+          <li>3-hour: <strong>140 mg</strong>/dl (<strong>7.8 mmol/l</strong>)</li>
+        </ul>
+        <p>If any two or more met → diagnosis of GDM.</p>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Management</h3>
+      <div class="card-content">
+        <p class="sub-header">Gestational DM management:</p>
+        <ul>
+          <li>Frequent antenatal care visits.</li>
+          <li><strong>Glycemic targets:</strong> Fasting: <strong>95 mg</strong>/dl. 1hr post-meals: <strong>140 mg</strong>/dl. 2hr: <strong>115 mg</strong>/dl.</li>
+        </ul>
+        <p><strong>GDM-A1:</strong> Diet alone (1,800–2,400 kcal/day, 30 kcal/kg/day). Exercise.</p>
+        <p><strong>GDM-A2:</strong> Insulin needed. Goal: Fasting 60–<strong>90</strong>, 1hr &lt; <strong>140</strong>, 2hr &lt; <strong>120</strong>, bedtime &lt; <strong>120</strong>. Metformin for those who decline insulin.</p>
+        <p class="sub-header">Pre-gestational DM:</p>
+        <ul>
+          <li>HbA1C reflects control over 8–<strong>12 weeks</strong>. Overt diabetes: A1C ≥ <strong>6.5%</strong>.</li>
+          <li><strong>Insulin dosage (classical two-dose):</strong> 7 units/kg in 1st trimester, 8 units/kg in 2nd, 9–11 units/kg in 3rd. Total divided: 2/3 NPH + 1/3 rapid (morning), 1/2 NPH + 1/2 rapid (evening).</li>
+        </ul>
+        <p class="sub-header">Management of labor:</p>
+        <ul>
+          <li><strong>Timing:</strong> At <strong>38 weeks</strong>: controlled DM. Before 38 weeks: uncontrolled DM, fetal/maternal complications.</li>
+          <li><strong>Route:</strong> Induction (controlled DM). C.S.: uncontrolled, macrosomia, malpresentations.</li>
+          <li><strong>Glucose control:</strong> Target 80–<strong>100 mg</strong>/dl. Check every 1–<strong>2 hours</strong>. Withhold morning insulin dose on induction day.</li>
+        </ul>
+        <p class="sub-header">Postpartum:</p>
+        <ul>
+          <li>Check glucose every 4–<strong>6 hours</strong> with 5% dextrose infusion. Short-acting insulin when glucose &gt; 150 mg/dL. Once full diet: 1/3 to 1/2 antepartum dose.</li>
+          <li><strong>Breastfeeding:</strong> snack before/during feeding. Metformin safe in type 2 DM.</li>
+          <li><strong>Contraception:</strong> Progesterone only methods and mechanical methods. Combined pills contraindicated.</li>
+          <li><strong>Follow-up:</strong> Fasting glucose and 2-hr 75-g GTT at 6–<strong>12 weeks</strong> postpartum.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 11: UTI ====== -->
+<section class="topic-section" id="topic-11">
+  <div class="section-header" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" data-num="11">
+    <span class="section-number">11</span>
+    <span class="section-emoji">🔬</span>
+    <h2 class="section-title">Urinary Tract Infection in Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the incidence and risk factors of UTI during pregnancy</li>
+          <li>To be able to describe the clinical picture of UTI during pregnancy</li>
+          <li>To be able to explain the management of UTI during pregnancy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">📊</span> Incidence &amp; Risk Factors</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>Asymptomatic bacteriuria</strong> (presence of &gt;100,000 organisms/ml without symptoms) occurs in about 4–<strong>7%</strong> of all pregnancies.</li>
+          <li><strong>Cystitis</strong> complicates about <strong>1%</strong> of pregnancies.</li>
+          <li><strong>1–2%</strong> of pregnant women develop pyelonephritis.</li>
+        </ul>
+        <p class="sub-header">Risk Factors:</p>
+        <ul>
+          <li>History of UTI in previous pregnancy or before pregnancy.</li>
+          <li>Diabetic patient.</li>
+          <li>Patient receiving steroids or immunosuppression.</li>
+          <li>Patient with congenital abnormalities of the urinary tract.</li>
+          <li>Patient with renal calculi.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Clinical Picture</h3>
+      <div class="card-content">
+        <p>Patient with asymptomatic bacteriuria typically has no symptom and if left untreated, about <strong>40%</strong> of them will develop symptomatic UTI.</p>
+        <p>Thus all pregnant females should be screened for asymptomatic bacteriuria with MSU at booking, if negative the chance of developing UTI in pregnancy is &lt; <strong>2%</strong>.</p>
+        <ul>
+          <li><strong>Cystitis:</strong> frequency, dysuria, hematuria, proteinuria, and suprapubic pain.</li>
+          <li><strong>Pyelonephritis:</strong> fever, rigors, vomiting, and loin pain.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations</h3>
+      <div class="card-content">
+        <ul>
+          <li>Urine analysis: dipstick for nitrites and leukocyte esterase.</li>
+          <li>Culture of midstream urine (MSU) is mandatory. Presence of &gt;100,000 organisms/ml is diagnostic.</li>
+          <li>CBC and RFT in presence of pyrexia.</li>
+          <li>U/S of the urinary tract in repeated infections.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Treatment</h3>
+      <div class="card-content">
+        <p>Antibiotic choice depends on sensitivity.</p>
+        <ul>
+          <li>For asymptomatic bacteriuria: oral antibiotic for <strong>3 days</strong>.</li>
+          <li>Cystitis: treatment for <strong>7 days</strong>.</li>
+          <li>All bacteriuria in pregnancy should be treated to prevent pyelonephritis and preterm delivery.</li>
+          <li>Pyelonephritis: hospitalized, IV fluid, antipyretics, parenteral broad spectrum antibiotics (cephalosporins) till culture results or fever settles, then oral antibiotic according to sensitivity for a total of 10–<strong>14 days</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 12: THROMBOEMBOLISM ====== -->
+<section class="topic-section" id="topic-12">
+  <div class="section-header" style="background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);" data-num="12">
+    <span class="section-number">12</span>
+    <span class="section-emoji">🫁</span>
+    <h2 class="section-title">Thromboembolism during Pregnancy</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand meaning, forms and predisposing factors of thromboembolism</li>
+          <li>To be able to describe the clinical pictures of various forms of thromboembolism</li>
+          <li>To be able to describe the management of such serious clinical situations during pregnancy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Superficial Thrombophlebitis</h3>
+      <div class="card-content">
+        <p>Common in veins of calf, thigh, inguinal region and vulva.</p>
+        <p><strong>Clinical picture:</strong> Localized discomfort, erythema, localized superficial tenderness, pain, palpable lump or palpable cord over the course of the affected superficial veins, low grade fever.</p>
+        <p><strong>Complications:</strong> Superficial venous thrombosis increases the risk of DVT.</p>
+        <p><strong>Treatment:</strong> bed rest, analgesic and elastic support. Give heparin if DVT is confirmed.</p>
+      </div>
+    </div>
+
+    <div class="card content-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Deep Venous Thrombosis (DVT)</h3>
+      <div class="card-content">
+        <p>A medical condition that occurs when a blood clot forms in a deep vein (lower leg, thigh, or pelvis).</p>
+        <p class="sub-header">Predisposing factors in pregnancy (Virchow's triad):</p>
+        <ul>
+          <li>Hypercoagulation (increased procoagulants like fibrinogen).</li>
+          <li>Vascular damage.</li>
+          <li>Venous stasis (compression of left iliac vein, decreased fibrinolysis).</li>
+        </ul>
+        <p class="sub-header">Risk Factors:</p>
+        <p>Past history of VTE. Thrombophilia. Old age. DM. Hypertension. Prolonged labor. CS. Dehydration. Gross varicose veins. Prolonged immobilization.</p>
+        <p class="sub-header">Clinical Picture:</p>
+        <p>Most common in deep veins of left side.</p>
+        <ul>
+          <li>Fever. Leg swelling and pain. Hotness and cyanosis of the leg.</li>
+          <li>Tender calf muscle. Positive homan's sign (calf pain with foot dorsiflexion).</li>
+          <li><strong>50%</strong> of cases are asymptomatic.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations (DVT &amp; PE)</h3>
+      <div class="card-content">
+        <p class="sub-header">For DVT:</p>
+        <ul>
+          <li>Compression Duplex ultrasonography.</li>
+          <li>Venography.</li>
+          <li>MRI in suspected pelvic veins thrombosis.</li>
+          <li>CBC, coagulation profile, D-dimer.</li>
+        </ul>
+        <p class="sub-header">For PE: If obvious → start heparin immediately, then:</p>
+        <ul>
+          <li>Arterial blood gases (hypoxia and hypercapnea).</li>
+          <li>ECG. Ventilation/perfusion imaging. Chest spiral CT. Pulmonary angiography. MRA.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Management</h3>
+      <div class="card-content">
+        <p class="sub-header">Prophylactic:</p>
+        <ul>
+          <li>Early ambulation after delivery.</li>
+          <li>Prophylactic heparin in risky cases.</li>
+        </ul>
+        <p class="sub-header">Active management:</p>
+        <ul>
+          <li>Graduated compression stockings.</li>
+          <li>Start anticoagulant therapy.</li>
+        </ul>
+        <p class="sub-header">1- Unfractionated Heparin:</p>
+        <p>Mode of action: Enhance antithrombin activity, increase factor Xa inhibitor activity, inhibit platelet aggregation.</p>
+        <p>Dose: Bolus 5000 IU then IV 15000 IU every 12 hours for 5–<strong>10 days</strong>, then maintenance SC 10000 IU/8–12 hours. PTT target: 1.5–2.5 times control.</p>
+        <p><strong>Complications:</strong> Hemorrhage, Osteoporosis, Thrombocytopenia, Skin necrosis. <strong>Antidote:</strong> <strong>1%</strong> protamine sulphate <strong>10 mg</strong>.</p>
+        <p class="sub-header">2- Low molecular weight heparin (Enoxaparin):</p>
+        <ul>
+          <li>Inhibit factor Xa activity. Given SC once or twice daily.</li>
+          <li><strong>Advantages:</strong> Better bioavailability, Longer plasma half-life, Lower risk of hemorrhagic complications.</li>
+        </ul>
+        <p><strong>Dose of Enoxaparin:</strong> Prophylactic: <strong>40 mg</strong> daily. Therapeutic: <strong>1 mg</strong>/kg body weight/<strong>12 hours</strong>. Treatment continue 6–<strong>12 weeks</strong> after delivery.</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Pulmonary Embolism</h3>
+      <div class="card-content">
+        <p class="sub-header">Symptoms:</p>
+        <p>Dyspnea, cough, chest pain, frothy blood stained sputum, hemoptysis.</p>
+        <p class="sub-header">Signs:</p>
+        <p>Mild pyrexia, tachycardia, tachypnea, cyanosis, raised jugular venous pressure, pleural friction, and pleural effusion.</p>
+        <p class="sub-header">Treatment:</p>
+        <ul>
+          <li>1- Stabilization of the patient.</li>
+          <li>2- Start immediately anticoagulant (IV unfractionated heparin preferred).</li>
+          <li>3- IVC filter.</li>
+          <li>4- Thrombolysis.</li>
+          <li>5- Pulmonary embolectomy.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== TOPIC 13: RH INCOMPATIBILITY ====== -->
+<section class="topic-section" id="topic-13">
+  <div class="section-header" style="background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);" data-num="13">
+    <span class="section-number">13</span>
+    <span class="section-emoji">🅰️</span>
+    <h2 class="section-title">Rh Incompatibility</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="card ilos-card">
+      <h3 class="card-title"><span class="card-icon">🎯</span> Intended Learning Objectives</h3>
+      <div class="card-content">
+        <ul>
+          <li>To understand the definition of Rh incompatibility and its etiology</li>
+          <li>To be able to describe how such clinical problem can be diagnosed during pregnancy</li>
+          <li>To be able to explain how to avoid the occurrence of such obstetric problem and how to manage it</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card definition-card">
+      <h3 class="card-title"><span class="card-icon">📖</span> Definition &amp; Etiology</h3>
+      <div class="card-content">
+        <p>It is an immunological disorder resulting in destruction of fetal red blood cells by antibodies which pass through placenta from maternal blood.</p>
+        <p>There are 5 main Rh genes (C, D, E, c, and e) the most important gene is <strong>D</strong>. Rh factor is lipoprotein component on cell wall of red blood cells. In human about <strong>85%</strong> are Rh positive and about <strong>15%</strong> are Rh negative.</p>
+        <p class="sub-header">Etiology:</p>
+        <p>The problem occurs when Rh negative mother is pregnant from Rh positive husband. The fetus will be Rh positive or Rh negative according to whether the father is homozygous (DD) or heterozygous (Dd). If homozygous, <strong>100%</strong> Rh positive. If heterozygous, <strong>50%</strong> Rh positive and <strong>50%</strong> Rh negative.</p>
+        <p class="sub-header">Sensitization occurs when Rh+ RBCs enter maternal circulation:</p>
+        <ul>
+          <li><strong>During pregnancy:</strong> Placental separation (most important), abortion, ectopic pregnancy, vesicular mole, amniocentesis, external cephalic version, antepartum hemorrhage.</li>
+          <li><strong>Before pregnancy:</strong> Previous blood transfusion of Rh+ blood. While still in utero from her Rh+ mother (grandmother syndrome).</li>
+        </ul>
+        <p>When maternal antibodies pass into fetal circulation they cause hemolysis of fetal RBCs and jaundice.</p>
+        <p class="sub-header">Pathogenesis:</p>
+        <p>Attachment of IgG to fetal RBCs cause hemolysis leading to: Anemia → anemic heart failure and generalized edema. Extramedullary hematopoiesis → hepatosplenomegaly → portal hypertension, ascites, hypoproteinemia. Excess bilirubin production.</p>
+      </div>
+    </div>
+
+    <div class="card clinical-features-card">
+      <h3 class="card-title"><span class="card-icon">🩺</span> Clinical Varieties</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>Hydrops fetalis:</strong> Most severe form, leads to IUFD. Baby is macrosomic with severe hemolytic anemia (cord Hb &lt; <strong>8gm/dL</strong>), hepatosplenomegaly, generalized edema, ascites, scalp edema, hydrothorax and large edematous placenta.</li>
+          <li><strong>Icterus gravis neonatorum:</strong> Commonest form occurring after delivery with nausea, vomiting, anemia (Hb 8–<strong>12 gm/dL</strong>), jaundice and hepatosplenomegaly. In severe cases bilirubin crosses immature BBB → <strong>kernicterus</strong>. Increased bilirubin → yellow staining of amniotic fluid, cord and vernix.</li>
+          <li><strong>Congenital hemolytic anemia:</strong> Mildest form with mild anemia at birth (Hb &lt; <strong>14 gm/dL</strong>) causing mild pallor and transient jaundice.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card investigations-card">
+      <h3 class="card-title"><span class="card-icon">🧪</span> Investigations</h3>
+      <div class="card-content">
+        <p class="sub-header">I. Screening:</p>
+        <p>Assessment of maternal and paternal blood group and Rh. If Rh-negative and husband Rh-positive, indirect Coomb's test. If titer &gt; <strong>1/16</strong> (critical titer) → significant sensitization.</p>
+        <p class="sub-header">II. Diagnosis of affected fetus:</p>
+        <ul>
+          <li>During pregnancy: amniocentesis, cordocentesis and ultrasound.</li>
+          <li>After delivery: cord blood sampling.</li>
+        </ul>
+        <p>Fetal/neonatal blood examined for: ABO &amp; Rh typing, Hemoglobin &amp; Hct, Reticulocytic count, Direct Coomb's test, Bilirubin level, Serum protein level.</p>
+        <p class="sub-header">Ultrasound:</p>
+        <ul>
+          <li>Signs of hydrops fetalis: scalp edema, increased amniotic fluid, placental thickening, hepatosplenomegaly.</li>
+          <li>Doppler on middle cerebral artery to predict fetal anemia by measuring peak systolic velocity.</li>
+        </ul>
+        <p class="sub-header">Serial amniocentesis:</p>
+        <ul>
+          <li>Indications: High maternal antibody titer, past history of hydrops fetalis or exchange transfusion.</li>
+          <li>Value: indirect assessment by measuring amniotic fluid bilirubin by spectrophotometry plotted on <strong>Liley chart</strong>.</li>
+          <li>Timing: before 22–<strong>24 weeks</strong> if high titer, otherwise 30–<strong>32 weeks</strong>. Past IUFD → <strong>10 weeks</strong> before expected time.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">🛡️</span> Prophylaxis</h3>
+      <div class="card-content">
+        <ul>
+          <li>No Rh+ blood is given to Rh negative mother.</li>
+          <li>Anti D immunoglobulin should be given to Rh-ve mothers after labor or abortion.</li>
+        </ul>
+        <p class="sub-header">During pregnancy:</p>
+        <ul>
+          <li>If titer &lt; <strong>1/16</strong> (unsensitized): at 28 weeks, standard dose of <strong>300 µg</strong> of anti D immunoglobulin.</li>
+          <li>If indirect coomb's test above critical value: do amniocentesis, put results on Liley curve:</li>
+        </ul>
+        <ul>
+          <li><strong>Zone 1 (A):</strong> Minimal or absent fetal affection. Deliver at term.</li>
+          <li><strong>Zone 2 (B):</strong> Moderate affection. Allow until AF bilirubin increases or 32 weeks.</li>
+          <li><strong>Zone 3 (C):</strong> Severe fetal affection. Risk of IUFD within 7–<strong>10 days</strong>. Must be delivered or transfused.</li>
+        </ul>
+        <ul>
+          <li><strong>MCA Doppler:</strong> Noninvasive test for fetal anemia. Done every 1–<strong>2 weeks</strong> starting 16–<strong>18 weeks</strong>. MCA peak systolic velocity increased in severe anemia.</li>
+        </ul>
+        <p class="sub-header">Maternal plasmapheresis:</p>
+        <p>To wash antibodies. Indicated for severe cases before <strong>24 weeks</strong> when intrauterine transfusion cannot be done.</p>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Intrauterine Fetal Transfusion &amp; Delivery</h3>
+      <div class="card-content">
+        <p class="sub-header">Intrauterine fetal transfusion:</p>
+        <ul>
+          <li><strong>Timing:</strong> 24–<strong>32 weeks</strong> gestation.</li>
+          <li><strong>Indications:</strong> Severe fetal affection, high zone 2 or zone 3 on Liley chart, <strong>10 weeks</strong> earlier than previous IUFD.</li>
+          <li><strong>Type of blood:</strong> group O, Rh–negative blood.</li>
+          <li><strong>Procedure:</strong> Intraperitoneal or intravascular (umbilical vein).</li>
+          <li><strong>Amount:</strong> (Gestational age in weeks − 20) × 10 ml for each week after <strong>20 weeks</strong>.</li>
+          <li><strong>Complications:</strong> fetal injuries, bradycardia, cord hematoma, fetal death, chorioamnionitis.</li>
+        </ul>
+        <p class="sub-header">Obstetric management:</p>
+        <p>Route: vaginal (CS for obstetric indication). After delivery, cord immediately clamped to avoid further antibody passage. Manual placenta removal should be avoided.</p>
+        <p class="sub-header">Postpartum:</p>
+        <ul>
+          <li>Both patient and infant screened.</li>
+          <li>If neonate Rh D-ve: anti D not necessary.</li>
+          <li>If neonate Rh D+ve and mother antibody negative: standard dose of anti D within <strong>72 hours</strong>.</li>
+          <li>If neonate Rh D+ve and mother antibody positive: no anti D, next pregnancy managed as Rh sensitized.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card management-card">
+      <h3 class="card-title"><span class="card-icon">💊</span> Management of the Newborn</h3>
+      <div class="card-content">
+        <ul>
+          <li>Immediate cord clamping.</li>
+          <li>Admission to neonatal ICU.</li>
+          <li>Cord blood sample for blood group, Rh, hemoglobin, hematocrit, serum bilirubin, direct coomb's test.</li>
+        </ul>
+        <p class="sub-header">Exchange transfusion — Indications:</p>
+        <ul>
+          <li>Cord blood bilirubin &gt; <strong>5 mg%</strong>.</li>
+          <li>Cord hemoglobin &lt; 10 gm.</li>
+          <li>Rapidly rising bilirubin in first <strong>24 hours</strong>.</li>
+          <li>Clinical jaundice in first <strong>12 hours</strong>.</li>
+          <li>Past history of severely affected baby.</li>
+        </ul>
+        <p><strong>Aims:</strong> Correction of neonatal anemia. Removal of excess bilirubin.</p>
+        <p class="sub-header">Phototherapy and hydration:</p>
+        <p>Blue or blue-green light converts unconjugated bilirubin into non-toxic, water-soluble isomers which are excreted in bile and urine.</p>
+        <p><strong>Phenobarbitone:</strong> Enzyme inducer that increases Glucuronyl transferase activity → increases bilirubin conjugation and excretion.</p>
+        <p class="sub-header">ABO incompatibility:</p>
+        <ul>
+          <li>Can affect the first baby (most group O women have Anti-A and Anti-B).</li>
+          <li>Most anti-A and anti-B antibodies are IgM type → cannot cross placenta.</li>
+          <li>Mild condition, rarely significant anemia. Treated by phototherapy.</li>
+          <li>Negative Coomb's test. No progressive course. More common than Rh incompatibility.</li>
+        </ul>
+        <p class="sub-header">Causes of neonatal jaundice:</p>
+        <p>Physiological jaundice. Rh incompatibility. ABO incompatibility. Congenital biliary atresia. Breast milk jaundice. Infections: hepatitis, STORCH. Congenital spherocytosis. Infant of diabetic mother. Drug induced.</p>
+        <p class="sub-header">Hydrops Fetalis:</p>
+        <p><strong>Definition:</strong> Accumulation of fluid in the interstitial tissue (skin) and two or more body cavities (pleural, pericardial effusions or ascites).</p>
+        <ul>
+          <li><strong>Immune:</strong> due to Rh and ABO incompatibility.</li>
+          <li><strong>Non-immune:</strong> Genetic disorders (aneuploidy), Cardiovascular (AVSD, hypoplastic Rt, cardiomyopathy, arrhythmia), Pulmonary (lymphangiectasia), Infections (CMV, Toxoplasma), Renal/GI (congenital nephrosis, gut duplication), Hematological (alpha thalassemia, aplastic anemia), Placental (AV fistula, chorioangiomas), Others (twin to twin transfusion, liver cirrhosis, true knots of umbilical cord).</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== HIGH-YIELD SUMMARY ====== -->
+<section class="topic-section" id="summary">
+  <div class="section-header" style="background: linear-gradient(135deg, #1E293B 0%, #334155 100%);" data-num="⚡">
+    <span class="section-emoji">⚡</span>
+    <h2 class="section-title">High-Yield Summary &amp; Clinical Pearls</h2>
+  </div>
+  <div class="section-body">
+
+    <div class="clinical-pearl">
+      <h4>💎 Top Clinical Pearls — Week 1</h4>
+      <ul>
+        <li><strong>Physiology:</strong> Placenta is discoid, 500g, 20-25cm. Umbilical cord: 2 arteries + 1 vein in Wharton's jelly. Amniotic fluid peaks at 1000ml @ 36 weeks.</li>
+        <li><strong>Maternal Adaptation:</strong> Blood volume ↑30-40% (plasma 45%, RBC 30%) → physiological anemia. Fibrinogen doubled, Factor VIII tripled → hypercoagulable state.</li>
+        <li><strong>Diagnosis:</strong> β-hCG detects pregnancy 1wk before missed period. US: ring (4wk), sac (5wk), cardiac activity (6wk), FHS (10wk).</li>
+        <li><strong>Ectopic:</strong> Discriminatory zone: TAU 6000 mIU/mL, TVU 2000 mIU/mL. β-hCG doubling &lt;66% in 48hrs → ectopic until proven otherwise.</li>
+        <li><strong>Abortion Types:</strong> Threatened (closed cervix, living fetus), Inevitable (open cervix, heavy bleeding), Complete (empty cavity), Incomplete (retained products), Missed (dead fetus retained).</li>
+        <li><strong>Hypertension:</strong> BP ≥140/90 on 2 occasions ≥6hrs apart after 20 weeks. MgSO₄: loading 4-6g then 1-2g/hr. Monitor: patellar reflex, urine output ≥30ml/hr, RR.</li>
+        <li><strong>GDM:</strong> Screen 24-28 weeks with 50g GCT. 3hr GTT thresholds: fasting 95, 1hr 180, 2hr 155, 3hr 140 mg/dl (Carpenter-Coustan). HbA1c ≥6.5% = overt DM.</li>
+        <li><strong>Rh Incompatibility:</strong> Anti-D 300µg at 28 weeks for unsensitized Rh-ve. Critical titer &gt;1/16. MCA Doppler detects fetal anemia.</li>
+        <li><strong>DIC:</strong> Causes: Pre-eclampsia, abruption, amniotic fluid embolism, IUFD, vesicular mole. Labs: ↑PT, ↑PTT, ↑D-dimer, ↓platelets, ↓fibrinogen.</li>
+        <li><strong>Thromboembolism:</strong> Virchow's triad in pregnancy. LMWH preferred (Enoxaparin 40mg prophylactic, 1mg/kg/12hr therapeutic). PE: IV unfractionated heparin.</li>
+        <li><strong>UTI:</strong> Asymptomatic bacteriuria 4-7% of pregnancies. Screen all pregnant women with MSU at booking. Treat to prevent pyelonephritis &amp; preterm labor.</li>
+        <li><strong>GTD:</strong> Complete mole 1/1000, Partial 3/1000. β-hCG &gt;100,000 mIU/ml. Snow storm US appearance. Suction curettage. Follow hCG for 1 year.</li>
+      </ul>
+    </div>
+
+    <div class="high-yield">
+      <h4>⚡ Must-Know Numbers &amp; Values</h4>
+      <ul>
+        <li><strong>Fertilization site:</strong> Ampulla of fallopian tube • <strong>Implantation:</strong> Day 6-7 → decidua basalis</li>
+        <li><strong>Uterus at term:</strong> 20×25×35cm, 1000g, 5000ml • Blood flow: ~500 ml/min</li>
+        <li><strong>Quickening:</strong> Primigravida 18-20wks, Multigravida 16-18wks</li>
+        <li><strong>FHS:</strong> Doppler 10 weeks, Stethoscope 18-20 weeks</li>
+        <li><strong>Pregnancy weight gain:</strong> 10-12 kg total</li>
+        <li><strong>Cardiac output:</strong> 40% above baseline at 20 weeks (6.5 L/min)</li>
+        <li><strong>RBC in pregnancy:</strong> WBC 7000→10,500/mm³ (up to 160,000 during labor)</li>
+        <li><strong>Amniotic fluid:</strong> 5ml@6wk → 300ml@20wk → 1000ml@36wk → 800ml@38-40wk</li>
+        <li><strong>HCG:</strong> Detectable 1wk before missed period, doubles every 48hrs in normal pregnancy</li>
+        <li><strong>Ectopic sites:</strong> Tubal 99% (Ampulla 80%, Isthmus 12%)</li>
+        <li><strong>Molar pregnancy:</strong> Complete 1/1000, Partial 3/1000 • β-hCG &gt;100,000 mIU/ml</li>
+        <li><strong>Pre-eclampsia:</strong> 5-10% pregnancies • BP ≥140/90 + proteinuria ≥300mg/24hr</li>
+        <li><strong>UTI:</strong> Asymptomatic bacteriuria 4-7%, Cystitis 1%, Pyelonephritis 1-2%</li>
+        <li><strong>GDM:</strong> 3-5% gestational, 0.5-1% pregestational</li>
+        <li><strong>Rh:</strong> 85% Rh positive, 15% Rh negative</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <p><strong>Obstetrics Week 1 — Complete Study Guide</strong></p>
+  <p>Generated for medical students • Print-friendly format</p>
+  <p style="margin-top: 8px; font-size: 0.8rem;">📎 Tip: Use Ctrl+P to print • All 13 topics covered</p>
+</footer>
+
+</div><!-- /page-wrapper -->
+
+<!-- ====== PROGRESS BAR ====== -->
+<div class="progress-bar-container"><div class="progress-bar-fill" id="progressFill"></div></div>
+
+<!-- ====== BACK TO TOP ====== -->
+<button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+
+<script>
+// ====== INTERSECTION OBSERVER — Fade-in on scroll ======
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.topic-section').forEach(s => observer.observe(s));
+
+// ====== ACTIVE NAV HIGHLIGHT ======
+const navItems = document.querySelectorAll('.nav-item');
+const sections = [];
+for (let i = 1; i <= 13; i++) {
+  const sec = document.getElementById('topic-' + i);
+  if (sec) sections.push({ el: sec, num: i });
+}
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const num = entry.target.id.replace('topic-', '');
+      navItems.forEach(n => {
+        n.classList.remove('active');
+        if (n.dataset.topic === num) {
+          n.classList.add('active');
+          n.style.background = n.querySelector('.nav-dot').style.background;
+          n.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    }
+  });
+}, { threshold: 0.15, rootMargin: '-60px 0px -60% 0px' });
+
+sections.forEach(s => navObserver.observe(s.el));
+
+// ====== PROGRESS BAR ======
+const progressFill = document.getElementById('progressFill');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = Math.min((scrollTop / docHeight) * 100, 100);
+  progressFill.style.height = pct + '%';
+}, { passive: true });
+
+// ====== BACK TO TOP ======
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+}, { passive: true });
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>

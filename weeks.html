@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملخصات المرئية — ObsTaric</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 560px;
+      width: 100%;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #64748b;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #2563eb; }
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a202c;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #64748b;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+      transform: translateY(-2px);
+    }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .card-icon.w1 { background: #eef2ff; color: #6366f1; }
+    .card-icon.w2 { background: #fdf2f8; color: #ec4899; }
+    .card-icon.w3 { background: #f0fdfa; color: #14b8a6; }
+    .card-icon.w4 { background: #fffbeb; color: #f59e0b; }
+    .card-icon.fm { background: #ecfdf5; color: #059669; }
+    .card-content { flex: 1; }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 4px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 8px;
+      margin-top: 4px;
+    }
+    .badge-w1 { background: #eef2ff; color: #4f46e5; }
+    .badge-w2 { background: #fdf2f8; color: #db2777; }
+    .badge-w3 { background: #f0fdfa; color: #0d9488; }
+    .badge-w4 { background: #fffbeb; color: #d97706; }
+    .badge-fm { background: #ecfdf5; color: #047857; }
+    .badge-coming { background: #fef2f2; color: #dc2626; }
+    .card-arrow {
+      font-size: 18px;
+      color: #94a3b8;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+    .card:hover .card-arrow {
+      transform: translateX(4px);
+    }
+    .card.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f1117; }
+      h1 { color: #e2e8f0; }
+      .card { background: #1a1b26; border-color: #2d3748; }
+      .card:hover { border-color: #60a5fa; }
+      .card-title { color: #e2e8f0; }
+      .card-icon.w1 { background: #1e1b4b; color: #818cf8; }
+      .card-icon.w2 { background: #4a1942; color: #f472b6; }
+      .card-icon.w3 { background: #042f2e; color: #2dd4bf; }
+      .card-icon.w4 { background: #451a03; color: #fbbf24; }
+      .card-icon.fm { background: #022c22; color: #34d399; }
+      .badge-w1 { background: #1e1b4b; color: #818cf8; }
+      .badge-w2 { background: #4a1942; color: #f472b6; }
+      .badge-w3 { background: #042f2e; color: #2dd4bf; }
+      .badge-w4 { background: #451a03; color: #fbbf24; }
+      .badge-fm { background: #022c22; color: #34d399; }
+      .back-link { color: #64748b; }
+      .back-link:hover { color: #60a5fa; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">→ العودة للرئيسية</a>
+
+    <h1>📊 الملخصات المرئية</h1>
+    <p class="subtitle">خرائط معرفية شاملة — اختر الأسبوع</p>
+
+    <div class="cards">
+      <a class="card" href="Week1_Infographic.html">
+        <div class="card-icon w1">🧬</div>
+        <div class="card-content">
+          <div class="card-title">Week 1 — Physiology & Early Pregnancy</div>
+          <div class="card-desc">فيزيولوجيا التكاثر، التكيف مع الحمل، التشخيص، الرعاية前置، الإجهاض، الحمل خارج الرحم، ومضاعفات الحمل</div>
+          <span class="card-badge badge-w1">13 موضوع · جاهز ✅</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a class="card disabled" href="#">
+        <div class="card-icon w2">🤰</div>
+        <div class="card-content">
+          <div class="card-title">Week 2 — High-Risk Pregnancy</div>
+          <div class="card-desc">القية، فقر الدم، أمراض القلب، الأمراض المعدية، سائل الأمنيون، الكبح الكتفي، التوائم</div>
+          <span class="card-badge badge-coming">قريباً 🔜</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a class="card disabled" href="#">
+        <div class="card-icon w3">👶</div>
+        <div class="card-content">
+          <div class="card-title">Week 3 — Labor & Delivery</div>
+          <div class="card-desc">الولادة الطبيعية، الحوض الأنثوي، الجمجمة الجنينية، مقدمات الوجه، العرض المixed، العرض المقعسي</div>
+          <span class="card-badge badge-coming">قريباً 🔜</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a class="card disabled" href="#">
+        <div class="card-icon w4">🏥</div>
+        <div class="card-content">
+          <div class="card-title">Week 4 — Postpartum & Complications</div>
+          <div class="card-desc">المضاعفات الولادية، الدوحة ال肩 الكتفية، تقدم الحبل، الولادة العسيرة، ما بعد الولادة</div>
+          <span class="card-badge badge-coming">قريباً 🔜</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a class="card disabled" href="#">
+        <div class="card-icon fm">👨‍⚕️</div>
+        <div class="card-content">
+          <div class="card-title">Family Medicine</div>
+          <div class="card-desc">طب الأسرة — مراجعة شاملة للمواد الأساسية</div>
+          <span class="card-badge badge-coming">قريباً 🔜</span>
+        </div>
+        <span class="card-arrow">←</span>
+      </a>
+    </div>
+
+    <div class="footer">
+      <span>الملخصات المرئية للobstetrics — تحديث مستمر</span>
+    </div>
+  </div>
+</body>
+</html>

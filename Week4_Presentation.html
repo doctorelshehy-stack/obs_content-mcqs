@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 4 — OB/GYN Presentation | Postpartum Complications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#fff;color:#1a1a2e;line-height:1.6;font-size:15px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:9999;background:linear-gradient(135deg,#0f3a5f,#1a1a2e);padding:8px 12px;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-row{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap}
+.nav-row::-webkit-scrollbar{display:none}
+.nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;background:rgba(255,255,255,.08);transition:all .2s;flex-shrink:0}
+.nav a:hover,.nav a:active{background:rgba(255,255,255,.25);color:#fff}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f3a5f 0%,#1a1a2e 50%,#0f3a5f 100%);color:#fff;text-align:center;padding:40px 20px 30px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 60%);animation:pulse 8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.hero h1{font-size:28px;font-weight:900;letter-spacing:-.5px;line-height:1.2}
+.hero .sub{font-size:14px;color:rgba(255,255,255,.75);margin-top:8px}
+.hero .stats{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.hero .st{background:rgba(255,255,255,.12);border-radius:12px;padding:8px 16px;text-align:center;backdrop-filter:blur(10px)}
+.hero .st .n{font-size:22px;font-weight:800}
+.hero .st .l{font-size:10px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em}
+
+/* CONTAINER */
+.ct{max-width:900px;margin:0 auto;padding:0 12px 40px}
+
+/* SECTION/SLIDE */
+.slide{margin-top:20px;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);background:#fff;border:1px solid #e8ecf1}
+.slide-hdr{padding:20px 24px;color:#fff;display:flex;align-items:center;gap:12px;position:relative;overflow:hidden}
+.slide-hdr::after{content:"";position:absolute;top:-20px;right:-20px;width:80px;height:80px;background:rgba(255,255,255,.08);border-radius:50%}
+.slide-hdr h2{font-size:22px;font-weight:800;line-height:1.3;flex:1;letter-spacing:-.3px}
+.slide-hdr .ico{font-size:32px;flex-shrink:0}
+.slide-bd{padding:20px 24px 24px}
+
+/* IMAGES */
+.topic-img{width:100%;border-radius:12px;margin:12px 0;border:2px solid #e8ecf1;max-height:350px;object-fit:cover}
+.img-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.img-grid img{width:100%;border-radius:10px;border:2px solid #e8ecf1;max-height:250px;object-fit:cover}
+.img-caption{font-size:11px;color:#666;text-align:center;margin-top:-8px;margin-bottom:12px;font-style:italic}
+
+/* HEADINGS */
+h3{margin:18px 0 8px;font-size:17px;color:#0f3a5f;padding-bottom:4px;border-bottom:2px solid #e3e8ef}
+h4{margin:14px 0 6px;font-size:15px;color:#1e6091}
+h5{margin:10px 0 4px;font-size:13px;color:#2a8fb5;font-weight:600}
+
+/* CONTENT */
+p{margin:4px 0;font-size:14px;line-height:1.6}
+ul,ol{padding-left:22px;margin:4px 0 8px}
+li{margin:3px 0;font-size:14px;line-height:1.6}
+strong{color:#0f3a5f}
+
+/* TABLES */
+.tw{overflow-x:auto;margin:10px 0;border-radius:10px;border:1px solid #e8ecf1}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{border:1px solid #e8ecf1;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#0f3a5f;color:#fff;font-weight:600;font-size:12px;white-space:nowrap}
+tr:nth-child(even) td{background:#f8fafc}
+tr:hover td{background:#eef5fa}
+
+/* CALLOUT BOXES */
+.co{border-left:4px solid;padding:10px 14px;margin:10px 0;border-radius:8px;background:#fff;font-size:13px}
+.co-p{border-color:#2e7d32;background:#eaf6ec}
+.co-n{border-color:#1e6091;background:#eef5fa}
+.co-w{border-color:#c62828;background:#fdecea}
+.co-t{font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:2px}
+.co-p .co-t{color:#1b5e20}
+.co-n .co-t{color:#0f3a5f}
+.co-w .co-t{color:#b71c1c}
+
+/* COMPARISON BOXES */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.cmp-card{background:#f8fafc;border-radius:12px;padding:14px;border:1px solid #e8ecf1}
+.cmp-card h5{margin:0 0 6px;font-size:14px;color:#0f3a5f}
+
+/* STAT CARDS */
+.stat-row{display:flex;gap:10px;margin:10px 0;flex-wrap:wrap}
+.stat-card{flex:1;min-width:120px;background:linear-gradient(135deg,#0f3a5f,#1a5276);color:#fff;border-radius:12px;padding:12px 16px;text-align:center}
+.stat-card .n{font-size:20px;font-weight:800}
+.stat-card .l{font-size:10px;color:rgba(255,255,255,.8);margin-top:2px}
+
+/* NUMBERED STEPS */
+.steps{counter-reset:step}
+.steps li{list-style:none;position:relative;padding-left:32px;margin:6px 0;font-size:14px}
+.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:24px;height:24px;background:#0f3a5f;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+
+/* SECTION COLORS */
+.sec-1 .slide-hdr{background:linear-gradient(135deg,#b71c1c,#c62828)}
+.sec-2 .slide-hdr{background:linear-gradient(135deg,#880e4f,#ad1457)}
+.sec-3 .slide-hdr{background:linear-gradient(135deg,#6a1b9a,#8e24aa)}
+.sec-4 .slide-hdr{background:linear-gradient(135deg,#1a237e,#283593)}
+.sec-5 .slide-hdr{background:linear-gradient(135deg,#0d47a1,#1565c0)}
+.sec-6 .slide-hdr{background:linear-gradient(135deg,#006064,#00838f)}
+.sec-7 .slide-hdr{background:linear-gradient(135deg,#1b5e20,#2e7d32)}
+.sec-8 .slide-hdr{background:linear-gradient(135deg,#bf360c,#e64a19)}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .hero h1{font-size:22px}
+  .slide-bd{padding:16px}
+  .img-grid{grid-template-columns:1fr}
+  .cmp-grid{grid-template-columns:1fr}
+  .stat-row{flex-direction:column}
+  table{font-size:11px}
+  th,td{padding:5px 6px}
+}
+
+/* PRINT */
+@media print{.nav{display:none}.slide{break-inside:avoid;box-shadow:none;border:1px solid #ddd}}
+
+/* FOOTER */
+.footer{text-align:center;padding:30px 16px;font-size:12px;color:#999}
+.footer a{color:#0f3a5f;text-decoration:none}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div class="nav"><div class="nav-row">
+<a href="#t1">🔬 Abnormal Uterine Action</a>
+<a href="#t2">🚨 Obstructed Labor</a>
+<a href="#t3">🦴 Contracted Pelvis</a>
+<a href="#t4">🩸 Third Stage Complications</a>
+<a href="#t5">🫁 Amniotic Fluid Embolism</a>
+<a href="#t6">👶 Normal & Abnormal Puerperium</a>
+<a href="#t7">🦠 Puerperal Sepsis</a>
+<a href="#t8">🧸 Fetal Birth Injuries</a>
+</div></div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Week 4 — OB/GYN Presentation</h1>
+<div class="sub">Postpartum Complications & Labor Emergencies · 8 Comprehensive Topics</div>
+<div class="stats">
+<div class="st"><div class="n">8</div><div class="l">Topics</div></div>
+<div class="st"><div class="n">241K</div><div class="l">Characters</div></div>
+<div class="st"><div class="n">4062</div><div class="l">Lines</div></div>
+</div></div>
+
+<div class="ct">
+
+<!-- ===================== TOPIC 1 ===================== -->
+<div class="slide sec-1" id="t1">
+<div class="slide-hdr"><span class="ico">🔬</span><h2>1. Abnormal Uterine Action</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/An_atonic_uterus.jpg/800px-An_atonic_uterus.jpg" alt="Atonic Uterus" class="topic-img">
+<div class="img-caption">Atonic Uterus — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<p><strong>Inefficient, weak and/or inordinate uterine contractions</strong> which fail to cause progressive cervical dilatation and effacement. Abnormal uterine action is one of the <strong>3 "P" s of dystocia</strong>: <strong>Power</strong> (contractions), <strong>Passages</strong> (pelvis), <strong>Passenger</strong> (fetus).</p>
+
+<div class="stat-row">
+<div class="stat-card"><div class="n">3</div><div class="l">Frequency (1 in 3 min)</div></div>
+<div class="stat-card"><div class="n">45</div><div class="l">Duration (45 sec)</div></div>
+<div class="stat-card"><div class="n">60</div><div class="l">Amplitude (60 mmHg)</div></div>
+</div>
+
+<h3>Classification</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>✅ Coordinate (normal polarity)</h5>
+<ul>
+<li><strong>Hypertonic</strong> — precipitate labor</li>
+<li><strong>Tonic contraction</strong> — Bandl's ring</li>
+<li><strong>Hypotonic</strong> — hypotonic inertia</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>❌ Incoordinate (abnormal polarity)</h5>
+<ul>
+<li>Spastic lower segment</li>
+<li>Colicky uterus</li>
+<li>Constriction ring</li>
+<li>Generalized tonic contraction</li>
+<li>Cervical dystocia</li>
+</ul>
+</div>
+</div>
+
+<h3>Excessive Uterine Action — Definitions</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Term</th><th>Definition</th></tr></thead>
+<tbody>
+<tr><td><strong>Uterine tachysystole</strong></td><td>4 or more contractions in 10 minutes</td></tr>
+<tr><td><strong>Uterine hyperstimulation</strong></td><td>Tachysystole + occurs with oxytocin + FHR abnormality</td></tr>
+<tr><td><strong>Tetanic contraction</strong></td><td>Single contraction sustained for &gt; 3 minutes</td></tr>
+<tr><td><strong>Hypertonic contraction</strong></td><td>Elevated basal tone &gt; 20 mmHg</td></tr>
+</tbody></table></div>
+
+<h3>First-Aid for Uterine Overactivity (5 Steps)</h3>
+<ol class="steps">
+<li><strong>Lateral position</strong> — relieves aortocaval compression</li>
+<li><strong>Oxygenation</strong> — supplemental O₂</li>
+<li><strong>Discontinue oxytocin</strong> — most common reversible cause</li>
+<li><strong>Tocolytic agent</strong> — terbutaline or MgSO₄</li>
+<li><strong>Consider immediate delivery</strong> — if persistently ominous FHR</li>
+</ol>
+
+<h3>Precipitate Labor</h3>
+<p>Labor lasting <strong>less than 3 hours</strong>. More common in <strong>multiparas</strong> with strong contractions, small baby, and roomy pelvis.</p>
+
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🤰 Maternal Complications</h5>
+<ul>
+<li>Lacerations of cervix, vagina, perineum</li>
+<li>Placental abruption</li>
+<li>Shock</li>
+<li>Inversion of the uterus</li>
+<li>PPH (no time for retraction)</li>
+<li>Sepsis</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>👶 Fetal Complications</h5>
+<ul>
+<li>Intracranial hemorrhage</li>
+<li>Fetal asphyxia</li>
+<li>Avulsion of umbilical cord</li>
+<li>Fetal injury from falling</li>
+</ul>
+</div>
+</div>
+
+<h3>Bandl's Ring (Pathological Retraction Ring)</h3>
+<p>A <strong>groove between symphysis and umbilicus</strong> during obstructed labor due to marked retraction and thickening of the upper segment while the lower segment is markedly stretched and thinned. <strong>Sign of impending uterine rupture — obstetric emergency!</strong></p>
+
+<h3>Hypotonic Inertia</h3>
+<p><strong>Infrequent weak uterine contractions.</strong> Predisposing factors: elderly primigravida, anemia, anxiety, improper analgesics, malpresentations, overdistended uterus.</p>
+
+<div class="co co-n">
+<div class="co-t">📋 Management of Hypotonic Inertia</div>
+<strong>General:</strong> Exclude disproportion, encourage ambulation/hydration. <strong>Amniotomy</strong> if cervix &gt;3 cm and head engaged. <strong>Oxytocin augmentation</strong> — start 2 miu/min, increase until 3 contractions/10 min. <strong>Delivery:</strong> Vaginal with instrumental aid if cervix fully dilated; CS if failure.
+</div>
+
+<h3>Hypertonic Inertia</h3>
+<p><strong>Reversed polarity — fundal dominance lacking.</strong> Types: spastic lower segment, colicky uterus. Irregular painful contractions with no relaxation. Management: obstetric analgesia (pethidine, epidural); CS if CPD or fetal distress.</p>
+
+<h3>Constriction Ring</h3>
+<p><strong>Persistent localized annular spasm</strong> at any part of uterus, usually at junction of upper and lower segments. <strong>Felt only vaginally</strong> (unlike Bandl's ring which is seen abdominally). Management: tocolytic or general anesthesia; if relaxed → forceps; if not → CS.</p>
+
+<div class="co co-p">
+<div class="co-t">💡 Key Difference</div>
+<strong>Bandl's ring</strong> = rising between symphysis & umbilicus, seen/felt abdominally, sign of impending rupture. <strong>Constriction ring</strong> = at any level, felt only vaginally, may be relaxed by anesthesia.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 2 ===================== -->
+<div class="slide sec-2" id="t2">
+<div class="slide-hdr"><span class="ico">🚨</span><h2>2. Obstructed Labor</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dystocia_%28shoulder_dystocia%29.png/800px-Dystocia_%28shoulder_dystocia%29.png" alt="Dystocia" class="topic-img">
+<div class="img-caption">Shoulder Dystocia — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<div class="co co-w">
+<div class="co-t">⚠️ Key Definition</div>
+<strong>Failure of delivery of fetus in spite of good uterine contractions due to mechanical obstruction.</strong> Vaginal delivery is <strong>contraindicated</strong> — cesarean section is the only safe route.
+</div>
+
+<h3>Causes</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🤰 Maternal (Passages)</h5>
+<ul>
+<li><strong>Contracted pelvis</strong></li>
+<li>Abnormal pelvis (android/anthropoid)</li>
+<li>Pelvic tumor (fibroid, ovarian tumor)</li>
+<li>Tumors of rectum, bladder, pelvic bone</li>
+<li>Cervical stenosis</li>
+<li>Vaginal septum</li>
+<li>Constricting ring</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>👶 Fetal (Passenger)</h5>
+<ul>
+<li><strong>Macrosomic baby</strong></li>
+<li>Malpresentation</li>
+<li>Malposition</li>
+<li>Malformed fetus (hydrocephalos, conjoint twins, fetal ascitis)</li>
+<li>Locked twins</li>
+</ul>
+</div>
+</div>
+
+<h3>Diagnosis — The Triad</h3>
+<h4>A. General Examination</h4>
+<ul>
+<li>Labor prolonged <strong>&gt; 12 hours</strong></li>
+<li>Mother <strong>exhausted, anxious, weak</strong></li>
+<li>Maternal distress: dehydration, ketoacidosis, tachypnea, scanty urine</li>
+</ul>
+
+<h4>B. Abdominal Examination</h4>
+<ul>
+<li>Uterus hard and tender</li>
+<li><strong>Pathological retraction ring</strong> (Bandl's ring)</li>
+<li>Distended bladder</li>
+<li>Fetal distress or absent FHS</li>
+</ul>
+
+<h4>C. Vaginal Examination</h4>
+<ul>
+<li>Vulva edematous, vagina dry and hot</li>
+<li>Cervix fully/partially dilated and edematous</li>
+<li>Membranes ruptured</li>
+<li>Presenting part high, not engaged — <strong>large caput and moulding</strong></li>
+<li>Cause of obstruction detected</li>
+</ul>
+
+<h3>Management</h3>
+<h4>Prevention</h4>
+<ol>
+<li>Proper ANC assessment</li>
+<li>Early detection of maternal/fetal causes</li>
+<li><strong>Strict partogram use</strong></li>
+</ol>
+
+<h4>General Management</h4>
+<ol>
+<li>Assess maternal condition</li>
+<li>IV fluid correction</li>
+<li>Broad-spectrum antibiotics</li>
+<li>Catheterization</li>
+<li>Correction of acidosis</li>
+</ol>
+
+<h4>Obstetric Management</h4>
+<div class="co co-w">
+<div class="co-t">🚨 Emergency</div>
+<strong>Cesarean section</strong> with active management of third stage (for fear of PPH). Exploration of birth canal post-CS for cervical tears, vaginal lacerations, vesicovaginal fistula.
+</div>
+
+<h3>Complications</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🤰 Maternal</h5>
+<ul>
+<li><strong>Postpartum hemorrhage</strong></li>
+<li><strong>Rupture uterus</strong></li>
+<li><strong>Sepsis</strong></li>
+<li><strong>Fistula (vesicovaginal)</strong></li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>👶 Fetal</h5>
+<ul>
+<li><strong>Neonatal sepsis</strong></li>
+<li><strong>Convulsions (fits)</strong></li>
+<li><strong>Severe asphyxia</strong></li>
+<li><strong>Death</strong></li>
+</ul>
+</div>
+</div>
+
+<div class="co co-p">
+<div class="co-t">💎 Vesicovaginal Fistula</div>
+Pressure necrosis of the bladder base against the pubic symphysis → ischemic sloughing 5–7 days postpartum → <strong>continuous urinary incontinence</strong>. Almost entirely preventable by timely CS.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 3 ===================== -->
+<div class="slide sec-3" id="t3">
+<div class="slide-hdr"><span class="ico">🦴</span><h2>3. Contracted Pelvis</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Female_pelvis.png/800px-Female_pelvis.png" alt="Female Pelvis" class="topic-img">
+<div class="img-caption">Female Pelvis Anatomy — Wikimedia Commons (CC)</div>
+
+<h3>Definitions</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🟣 Anatomical</h5>
+<p>"A pelvis in which one or more of its diameters is reduced below normal by one or more centimeters."</p>
+</div>
+<div class="cmp-card">
+<h5>🌸 Obstetric (the one that matters)</h5>
+<p>"A pelvis that is abnormally small in one or more of its principal diameters that interferes with normal childbirth and the normal mechanism of labor."</p>
+</div>
+</div>
+
+<h3>Etiology</h3>
+<h4>A. Congenital (4 forms)</h4>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🦴 Naegele's Pelvis</h5>
+<p><strong>Asymmetric / obliquely</strong> contracted — <strong>absence of one sacral ala</strong>.</p>
+</div>
+<div class="cmp-card">
+<h5>🦴 Robert's Pelvis</h5>
+<p><strong>Transversely</strong> contracted — <strong>absence of 2 sacral alae</strong> (double Naegele).</p>
+</div>
+<div class="cmp-card">
+<h5>🦴 High Assimilation</h5>
+<p>Sacrum has <strong>6 fused segments</strong> (5th lumbar absorbed).</p>
+</div>
+<div class="cmp-card">
+<h5>🦴 Low Assimilation</h5>
+<p>Sacrum has <strong>4 fused segments</strong> (1st sacral absorbed into lumbar).</p>
+</div>
+</div>
+
+<h4>B. Acquired</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Category</th><th>Causes</th></tr></thead>
+<tbody>
+<tr><td><strong>Pelvic bones</strong></td><td>Fractures, tumors, rickets, osteomalacia</td></tr>
+<tr><td><strong>Vertebral column</strong></td><td>Kyphosis, scoliosis, spondylolisthesis</td></tr>
+<tr><td><strong>Lower limb</strong></td><td>Missing/shortening, fractures, TB osteomyelitis</td></tr>
+</tbody></table></div>
+
+<h3>Classification by Level</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Level</th><th>Definition</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td><strong>Inlet</strong></td><td>A-P &lt; 10 cm or Transverse &lt; 12 cm; DC &lt; 11.5 cm</td><td>Common</td></tr>
+<tr><td><strong>Midpelvic</strong></td><td>Interspinous + posterior sagittal &lt; 13.5 cm</td><td><strong>Most common</strong></td></tr>
+<tr><td><strong>Outlet</strong></td><td>Bituberous &lt; 8 cm + narrow subpubic angle</td><td>1% (rarest)</td></tr>
+<tr><td><strong>Both</strong></td><td>All diameters uniformly reduced</td><td>Generally contracted</td></tr>
+</tbody></table></div>
+
+<h3>Four Degrees of Contraction</h3>
+<div class="stat-row">
+<div class="stat-card"><div class="n">I</div><div class="l">Minor: 9-10 cm<br>Spontaneous delivery</div></div>
+<div class="stat-card"><div class="n">II</div><div class="l">Moderate: 8-9 cm<br>Trial of labor</div></div>
+<div class="stat-card" style="background:linear-gradient(135deg,#c62828,#e53935)"><div class="n">III</div><div class="l">Severe: 6-8 cm<br>C-section required</div></div>
+<div class="stat-card" style="background:linear-gradient(135deg,#b71c1c,#d32f2f)"><div class="n">IV</div><div class="l">Extreme: &lt;6 cm<br>Absolutely contracted</div></div>
+</div>
+
+<h3>CPD Tests</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>✋ Pinard Method (Abdominal)</h5>
+<p>Grasp head with left hand, two fingers on symphysis pubis, push head down and backward. <strong>No overlap</strong> = no disproportion; <strong>0.5 cm overlap</strong> = moderate; <strong>overhangs</strong> = severe.</p>
+</div>
+<div class="cmp-card">
+<h5>🤚 Muller-Kerr Method (Bimanual)</h5>
+<p>Left hand pushes head, right hand does vaginal exam with thumb on symphysis. <strong>More valuable method</strong> than Pinard.</p>
+</div>
+</div>
+
+<h3>Trial of Labor</h3>
+<div class="co co-n">
+<div class="co-t">📋 Definition</div>
+"It is the conduction of spontaneous labor of moderate degree of disproportion hoping for a vaginal delivery." A test of <strong>power, passage, and passenger</strong>.
+</div>
+<p><strong>Conditions:</strong> (1) Fetal + maternal monitoring, (2) No oral feeding, IV drip, (3) Adequate analgesic, (4) Augmentation by Pitocin.</p>
+
+<h3>Management by Degree</h3>
+<ul>
+<li><strong>Minor degree:</strong> Vaginal delivery recommended</li>
+<li><strong>Moderate degree:</strong> Trial of labor; if failed → CS</li>
+<li><strong>Severe/extreme:</strong> Cesarean section required</li>
+</ul>
+
+<div class="co co-w">
+<div class="co-t">🚨 Danger</div>
+<strong>"Extreme disproportion whether the fetus is living or dead"</strong> — CS is mandated regardless of fetal viability when disproportion is extreme.
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 4 ===================== -->
+<div class="slide sec-4" id="t4">
+<div class="slide-hdr"><span class="ico">🩸</span><h2>4. Third Stage Complications</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Blausen_0237_Pregnancy.png/800px-Blausen_0237_Pregnancy.png" alt="Pregnancy Anatomy" class="topic-img">
+<div class="img-caption">Pregnancy Anatomy — Wikimedia Commons (CC)</div>
+
+<h3>Postpartum Hemorrhage (PPH)</h3>
+<div class="co co-w">
+<div class="co-t">⚠️ Definition</div>
+Blood loss following birth exceeding <strong>500 ml (vaginal)</strong> or <strong>1000 ml (cesarean)</strong> with manifestation of hypovolemia.
+</div>
+
+<h4>Types</h4>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Primary PPH (Early)</h5>
+<p>Within <strong>24 hours</strong> after childbirth. More common.</p>
+</div>
+<div class="cmp-card">
+<h5>Secondary PPH (Late)</h5>
+<p>After 24 hours until <strong>6 weeks</strong> (end of puerperium).</p>
+</div>
+</div>
+
+<h4>The "4 T's" of PPH</h4>
+<div class="stat-row">
+<div class="stat-card"><div class="n">T₁</div><div class="l">Tone (Atony)<br>Most common ~70-80%</div></div>
+<div class="stat-card"><div class="n">T₂</div><div class="l">Trauma<br>Lacerations</div></div>
+<div class="stat-card"><div class="n">T₃</div><div class="l">Tissue<br>Retained placenta</div></div>
+<div class="stat-card"><div class="n">T₄</div><div class="l">Thrombin<br>Coagulopathies/DIC</div></div>
+</div>
+
+<h3>Management of Atonic PPH</h3>
+<ol class="steps">
+<li><strong>Resuscitation:</strong> IV fluids, blood products rapidly</li>
+<li><strong>Uterine massage:</strong> Bimanual compression (one hand vagina, one hand abdomen)</li>
+<li><strong>Aortic compression:</strong> Closed fist against vertebrae superior to sacral promontory</li>
+<li><strong>Uterotonic agents:</strong>
+<ul>
+<li><strong>Oxytocin</strong> 10-40 IU IM/IV (first-line)</li>
+<li><strong>Ergometrine</strong> 0.2-0.4 mg IM (contraindicated in hypertension)</li>
+<li><strong>Carboprost</strong> 0.25 mg IM (may repeat q15min, max 2mg)</li>
+<li><strong>Misoprostol</strong> 200-1000 mcg SL/oral/vaginal</li>
+</ul></li>
+<li><strong>Surgical:</strong> B-Lynch suture, uterine/ovarian/internal iliac artery ligation, embolization, hysterectomy</li>
+<li><strong>Balloon tamponade:</strong> Sengstaken-Blakemore or Bakri balloon</li>
+</ol>
+
+<div class="co co-w">
+<div class="co-t">🚨 Contraindication Alert</div>
+<strong>Hypertension</strong> is the unifying contraindication for ergot alkaloids AND carboprost — both raise BP. In preeclamptic PPH, use <strong>oxytocin</strong> and <strong>misoprostol</strong> only.
+</div>
+
+<h3>Uterine Inversion</h3>
+<div class="co co-w">
+<div class="co-t">⚠️ Definition</div>
+<strong>Collapse of the fundus into the uterine cavity — uterus turned inside out.</strong> Incidence: 1-2 per 1000 deliveries.
+</div>
+
+<h4>Degrees</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Degree</th><th>Name</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>1st</strong></td><td>Incomplete</td><td>Fundus depressed within endometrial cavity</td></tr>
+<tr><td><strong>2nd</strong></td><td>Complete</td><td>Fundus protrudes through cervical os</td></tr>
+<tr><td><strong>3rd</strong></td><td>Prolapsed</td><td>Fundus protrudes to or beyond introitus</td></tr>
+</tbody></table></div>
+
+<h4>Treatment</h4>
+<ol class="steps">
+<li><strong>Resuscitation:</strong> IV fluids, blood, stop cord traction</li>
+<li><strong>Manual replacement:</strong> Push fundus up along vaginal axis with tocolytics for relaxation. <strong>Do NOT remove placenta first!</strong></li>
+<li><strong>Hydrostatic reduction (O'Sullivan):</strong> Warmed sterile saline infused into vagina</li>
+<li><strong>Surgical reduction:</strong> Posterior/anterior cervix incision (last resort)</li>
+</ol>
+
+<h3>Retained Placenta</h3>
+<div class="co co-n">
+<div class="co-t">📋 Definition</div>
+Placenta fails to separate within <strong>30 minutes</strong> after delivery. <strong>Second leading cause of PPH.</strong>
+</div>
+
+<h4>Etiology</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Category</th><th>Causes</th></tr></thead>
+<tbody>
+<tr><td><strong>Separated & retained</strong></td><td>Uterine atony, contraction ring</td></tr>
+<tr><td><strong>Non-separated & retained</strong></td><td>Simple adhesion, abnormal adhesion (accreta/increta/percreta)</td></tr>
+<tr><td><strong>Escape into peritoneum</strong></td><td>Complete uterine rupture</td></tr>
+</tbody></table></div>
+
+<h4>Placenta Accreta Spectrum</h4>
+<div class="stat-row">
+<div class="stat-card"><div class="n">Accreta</div><div class="l">Villi → superficial myometrium</div></div>
+<div class="stat-card"><div class="n">Increta</div><div class="l">Villi → deep myometrium</div></div>
+<div class="stat-card" style="background:linear-gradient(135deg,#c62828,#e53935)"><div class="n">Percreta</div><div class="l">Villi → peritoneal coat</div></div>
+</div>
+
+<h3>Postpartum Collapse</h3>
+<div class="co co-w">
+<div class="co-t">⚠️ Definition</div>
+Acute event involving cardiorespiratory systems and/or brain, resulting in reduced/absent conscious level, at any stage in pregnancy and up to 6 weeks postpartum.
+</div>
+
+<h4>8 Causes</h4>
+<p>Anesthetic complication, Myocardial infarction, Pulmonary embolism, <strong>Amniotic fluid embolism</strong>, Rupture uterus, Uterine inversion, Postpartum eclampsia, Diabetic ketoacidosis.</p>
+
+<div class="co co-p">
+<div class="co-t">💡 5-Minute Rule</div>
+<strong>CPR then treatment of the cause.</strong> If no response within <strong>5 minutes</strong> of maternal collapse during pregnancy → <strong>emergency perimortem cesarean section</strong>. Emptying uterus restores venous return.
+</div>
+
+<h3>Complications of PPH</h3>
+<ul>
+<li><strong>Early:</strong> 20% blood volume loss → tachycardia, narrowed pulse pressure, ischemic organ injury</li>
+<li><strong>Late:</strong> <strong>Sheehan syndrome</strong> (postpartum hypopituitarism from pituitary infarction during massive hemorrhage)</li>
+</ul>
+
+</div></div>
+
+<!-- ===================== TOPIC 5 ===================== -->
+<div class="slide sec-5" id="t5">
+<div class="slide-hdr"><span class="ico">🫁</span><h2>5. Amniotic Fluid Embolism</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Pulmonary_embolism.png/800px-Pulmonary_embolism.png" alt="Pulmonary Embolism" class="topic-img">
+<div class="img-caption">Pulmonary Embolism Diagram — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<div class="co co-w">
+<div class="co-t">⚠️ Key Definition</div>
+<strong>It is a condition in which fetal fluid, tissue, or debris enters the maternal circulation via the placental bed and causes acute anaphylaxis.</strong> Also called "anaphylactoid syndrome of pregnancy." NOT a true embolism — dominant mechanism is anaphylaxis-like reaction.
+</div>
+
+<div class="stat-row">
+<div class="stat-card"><div class="n">1-2</div><div class="l">per 40,000 deliveries</div></div>
+<div class="stat-card"><div class="n">5-15%</div><div class="l">of maternal deaths</div></div>
+<div class="stat-card"><div class="n">&gt;50%</div><div class="l">immediate death rate</div></div>
+</div>
+
+<h3>How AF Enters Maternal Circulation</h3>
+<ol>
+<li><strong>Increased intrauterine pressure</strong> — abruption, oxytocin overdose</li>
+<li><strong>Opened uterine/endocervical veins</strong> — genital tract lacerations, rupture uterus</li>
+</ol>
+
+<div class="co co-w">
+<div class="co-t">🚨 Meconium Potentiator</div>
+Fetal distress → meconium-stained AF → <strong>potentiates toxic nature</strong> of amniotic fluid and worsens the condition.
+</div>
+
+<h3>Pathophysiology Cascade</h3>
+<ol class="steps">
+<li><strong>Entry of AF</strong> into maternal veins via placental bed</li>
+<li><strong>Acute anaphylactoid reaction</strong> — mast-cell degranulation, complement activation</li>
+<li><strong>Pulmonary vascular obstruction</strong> — particulate matter (squames, lanugo, vernix) lodges in pulmonary arterioles</li>
+<li><strong>Acute cor pulmonale</strong> — right heart failure, left heart under-filled</li>
+<li><strong>Abrupt hypoxia &amp; cardiogenic shock</strong> — V/Q mismatch, ↓ cardiac output</li>
+<li><strong>DIC</strong> — tissue factor from AF triggers systemic coagulation</li>
+<li><strong>Deep coma → death</strong> — hypoxic brain injury, multi-organ failure</li>
+</ol>
+
+<h3>Classic AFE Triad</h3>
+<div class="stat-row">
+<div class="stat-card"><div class="n">H</div><div class="l">Hypoxia / Respiratory Distress<br>Dyspnea, cyanosis, pulmonary edema</div></div>
+<div class="stat-card"><div class="n">C</div><div class="l">Cardiovascular Collapse<br>Hypotension, cor pulmonale, arrest</div></div>
+<div class="stat-card"><div class="n">D</div><div class="l">DIC / Coagulopathy<br>Bleeding from all sites, low fibrinogen</div></div>
+</div>
+
+<div class="co co-p">
+<div class="co-t">💡 Diagnostic Rule</div>
+<strong>"It is suspected in any case of sudden postpartum collapse and DIC."</strong> — AFE is a clinical diagnosis of exclusion with no confirmatory test in real time.
+</div>
+
+<h3>Risk Factors (9)</h3>
+<p>Induced labor, Advanced maternal age, Multiparity, Uterine rupture, Abdominal trauma, Placental abruption, Diabetes, Cervical lacerations, Operative delivery.</p>
+<div class="co co-w">
+<div class="co-t">⚠️ Source Caveat</div>
+AFE can occur in <strong>any</strong> pregnancy — most cases occur with <strong>NO identifiable risk factor</strong>. A "low-risk" patient is not protected.
+</div>
+
+<h3>Management (3 Pillars)</h3>
+<div class="stat-row">
+<div class="stat-card"><div class="n">1</div><div class="l">Cardiopulmonary Support<br>ICU · CPR · inotropes · ventilation</div></div>
+<div class="stat-card"><div class="n">2</div><div class="l">DIC Management<br>FFP · cryoprecipitate · platelets</div></div>
+<div class="stat-card"><div class="n">3</div><div class="l">Emergent Delivery<br>For fetal &amp; maternal benefit</div></div>
+</div>
+<p><strong>Additional:</strong> Corticosteroids (anaphylactoid component), Heparin (controversial), Multi-organ monitoring.</p>
+
+</div></div>
+
+<!-- ===================== TOPIC 6 ===================== -->
+<div class="slide sec-6" id="t6">
+<div class="slide-hdr"><span class="ico">👶</span><h2>6. Normal & Abnormal Puerperium</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Uterine_involution.png/800px-Uterine_involution.png" alt="Uterine Involution" class="topic-img">
+<div class="img-caption">Uterine Involution During Puerperium — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<div class="co co-n">
+<div class="co-t">📋 Key Definition</div>
+<strong>Puerperium</strong> is the time from delivery till <strong>6 weeks (42 days) postpartum</strong>, during which most changes of pregnancy, labor, and delivery have resolved and the body has reverted to the non-pregnant state.
+</div>
+
+<h3>Genital Tract Changes</h3>
+<h4>Uterus — Involution Timeline</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Timepoint</th><th>Weight</th><th>Fundal Height</th></tr></thead>
+<tbody>
+<tr><td>Immediately after labor</td><td><strong>1000 gm</strong></td><td>At the umbilicus</td></tr>
+<tr><td>After 1 week</td><td><strong>500 gm</strong></td><td>Descending ~1-2 cm/day</td></tr>
+<tr><td>After 2 weeks</td><td><strong>250 gm</strong></td><td>Not palpable abdominally</td></tr>
+<tr><td>By end of 6 weeks</td><td><strong>60-80 gm</strong></td><td>Non-pregnant size</td></tr>
+</tbody></table></div>
+
+<h4>Other Organs</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Organ</th><th>Change</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td><strong>Cervix</strong></td><td>External os closed (finger not easily introduced)</td><td>By 1 week</td></tr>
+<tr><td><strong>Vagina</strong></td><td>Rugae reappear (faster in non-lactating)</td><td>Gradual</td></tr>
+<tr><td><strong>Vulva/Perineum</strong></td><td>Swelling and engorgement gone</td><td>1-2 weeks</td></tr>
+<tr><td><strong>Ovary</strong></td><td>Return of ovulation</td><td>1.5-2 mo (non-lactating); 6 mo (lactating)</td></tr>
+</tbody></table></div>
+
+<h3>General Body Changes</h3>
+<div class="tw">
+<table>
+<thead><tr><th>System</th><th>Expected Change</th></tr></thead>
+<tbody>
+<tr><td><strong>Pulse</strong></td><td>Normal. Tachycardia (&gt;100 b/m) = infection or anemia.</td></tr>
+<tr><td><strong>Temperature</strong></td><td>May rise &lt;38°C in first 24 hrs (muscular effort). Should be &lt;38°C lasting &lt;24 hrs.</td></tr>
+<tr><td><strong>Breasts</strong></td><td>Larger, firmer. Colostrum for first 2-3 days. True milk day 3-5.</td></tr>
+<tr><td><strong>After pains</strong></td><td>Painful uterine contractions increasing with suckling (oxytocin release).</td></tr>
+<tr><td><strong>Abdominal wall</strong></td><td>Striae become white (albicans).</td></tr>
+<tr><td><strong>Urinary tract</strong></td><td>Increased diuresis after delivery.</td></tr>
+<tr><td><strong>GIT</strong></td><td>Constipation from atony, abdominal laxity, decreased fluid intake.</td></tr>
+<tr><td><strong>Blood</strong></td><td>Increased thrombosis liability in first 2 weeks.</td></tr>
+</tbody></table></div>
+
+<div class="co co-w">
+<div class="co-t">🚨 Danger</div>
+<strong>Postpartum thromboembolism window:</strong> Pregnancy hypercoagulable state persists ~2 weeks postpartum. Combine with immobility and dehydration → highest-risk window for DVT/PE.
+</div>
+
+<h3>Management of Normal Puerperium (11 Pillars)</h3>
+<ol class="steps">
+<li><strong>Vital signs</strong> — frequent observation after delivery</li>
+<li><strong>Uterine massage</strong> — every 15 min for at least 1 hour</li>
+<li><strong>Semi-sitting position</strong> — encourages lochia drainage</li>
+<li><strong>Ambulation</strong> — minimize DVT risk</li>
+<li><strong>Diet</strong> — 2 hrs after uncomplicated vaginal delivery, no restriction</li>
+<li><strong>Perineal care</strong> — antiseptic wash + local antibiotic if stitches</li>
+<li><strong>Breast care</strong> — wash nipple/areola with warm water and soap before feeds</li>
+<li><strong>Bowel care</strong> — green vegetables and fruits to avoid constipation</li>
+<li><strong>Newborn care</strong> — anti-D within 72 hrs if Rh–ve mother / Rh+ve baby</li>
+<li><strong>Pelvic floor exercise</strong> — alternating contraction and relaxation</li>
+<li><strong>Future contraception</strong> — counsel before discharge</li>
+</ol>
+
+<h3>Abnormal Puerperium</h3>
+<h4>Subinvolution</h4>
+<div class="co co-w">
+<div class="co-t">⚠️ Definition</div>
+<strong>The uterus did not regress to its pre-pregnancy size by the end of the puerperium.</strong>
+</div>
+<p><strong>Causes:</strong> (1) Retained placental fragments, (2) Infection, (3) Antepartum overdistension, (4) Non-lactating women.</p>
+<p><strong>Treatment:</strong> Treatment of the cause + ecbolics and antibiotics.</p>
+
+<h4>Puerperal Pyrexia</h4>
+<div class="co co-w">
+<div class="co-t">⚠️ Definition</div>
+A rise of temperature reaching <strong>≥38°C and lasting ≥24 hours during the first 10 days</strong> of puerperium.
+</div>
+
+<p><strong>7 Causes:</strong></p>
+<div class="tw">
+<table>
+<thead><tr><th>#</th><th>Cause</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>Milk engorgement</strong></td><td>Most common (days 3-5)</td></tr>
+<tr><td>2</td><td><strong>Puerperal sepsis</strong></td><td>Most serious</td></tr>
+<tr><td>3</td><td>UTI</td><td></td></tr>
+<tr><td>4</td><td>Breast infection</td><td></td></tr>
+<tr><td>5</td><td>Respiratory infection</td><td></td></tr>
+<tr><td>6</td><td>DVT</td><td></td></tr>
+<tr><td>7</td><td>Intercurrent illness</td><td>e.g., typhoid</td></tr>
+</tbody></table></div>
+
+<div class="co co-p">
+<div class="co-t">💡 Clinical Rule</div>
+<strong>"Any case of puerperal pyrexia should be considered puerperal infection (sepsis) until proved otherwise."</strong>
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 7 ===================== -->
+<div class="slide sec-7" id="t7">
+<div class="slide-hdr"><span class="ico">🦠</span><h2>7. Puerperal Sepsis</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Streptococcus_pyogenes_01.jpg/800px-Streptococcus_pyogenes_01.jpg" alt="Streptococcus pyogenes" class="topic-img">
+<div class="img-caption">Streptococcus pyogenes (Group A) — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<div class="co co-w">
+<div class="co-t">⚠️ Key Definition</div>
+It is a <strong>genital tract infection resulted from bacterial invasion</strong> during or after labor or abortion.
+</div>
+
+<h3>Causative Organisms</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>🟢 Aerobic Organisms</h5>
+<p><strong>Gram +ve:</strong> Hemolytic streptococcus group A (severe), Non-hemolytic streptococci, S. aureus</p>
+<p><strong>Gram –ve:</strong> E. coli, Pseudomonas, Klebsiella</p>
+</div>
+<div class="cmp-card">
+<h5>🔴 Anaerobic Organisms</h5>
+<p><strong>Gram +ve:</strong> Anaerobic streptococci <strong>(the commonest)</strong></p>
+<p><strong>Gram –ve:</strong> Cl. Welchii, Bacteroids</p>
+</div>
+</div>
+
+<div class="co co-p">
+<div class="co-t">💡 Memory Anchor</div>
+Remember <strong>A-G-A</strong>: <strong>A</strong>erobic Gram+ / <strong>G</strong>ram– / <strong>A</strong>naerobic Gram+ (commonest) + Gram– (Cl. Welchii, Bacteroids). Anaerobic streptococci = single most common organism.
+</div>
+
+<h3>Mode of Infection</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Endogenous Origin</h5>
+<p>Anaerobic streptococci are normal <strong>non-pathogenic commensals</strong> that become pathogenic in presence of devitalized tissues.</p>
+</div>
+<div class="cmp-card">
+<h5>Exogenous Origin</h5>
+<p>From infected attendants, dust, instruments, etc.</p>
+</div>
+</div>
+
+<h3>Predisposing Factors</h3>
+<h4>General</h4>
+<p>Bad general condition: anemia, diabetes, debilitating diseases.</p>
+<h4>Local (7 Factors)</h4>
+<ol>
+<li><strong>P</strong>remature rupture of membranes</li>
+<li><strong>P</strong>rolonged labor</li>
+<li><strong>I</strong>nstrumental delivery</li>
+<li><strong>L</strong>acerations</li>
+<li><strong>M</strong>arked blood loss</li>
+<li><strong>R</strong>etained products of conception</li>
+<li><strong>I</strong>mproper aseptic techniques</li>
+</ol>
+
+<h3>Sites of Infection & Pathology</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>I. Primary Sites</h5>
+<ol>
+<li>Lacerations of vulva, vagina or cervix</li>
+<li>Uterus: placental site, retained tissue/membranes</li>
+</ol>
+</div>
+<div class="cmp-card">
+<h5>II. Secondary Sites</h5>
+<ol>
+<li><strong>Pelvic spread:</strong> Acute PID, parametritis, pelvic abscess</li>
+<li><strong>Blood spread:</strong> bacteremia → septicemia → septic shock → multi-organ failure</li>
+</ol>
+</div>
+</div>
+
+<h3>Diagnosis</h3>
+<h4>A. Symptoms (48-72 hrs postpartum)</h4>
+<ul>
+<li>Fever and rigors</li>
+<li>Abdominal pain and tenderness</li>
+<li>Offensive vaginal discharge</li>
+<li>Symptoms of complications</li>
+</ul>
+
+<h4>B. Examination</h4>
+<ul>
+<li><strong>General:</strong> Temperature &gt;38°C for 24 hours</li>
+<li><strong>Abdominal:</strong> Subinvoluted tender uterus</li>
+<li><strong>Local:</strong> Offensive vaginal discharge, secondary PPH</li>
+<li><strong>Speculum:</strong> Inspect cervix and vagina</li>
+</ul>
+
+<h3>Complications</h3>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>Early</h5>
+<ul>
+<li>Spread to secondary sites (pelvic abscess)</li>
+<li>Complications of septicemia/pyemia</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>Remote</h5>
+<ul>
+<li>Infertility</li>
+<li>Ectopic pregnancy</li>
+<li>Asherman's syndrome</li>
+<li>Sheehan's syndrome</li>
+</ul>
+</div>
+</div>
+
+<h3>Investigations</h3>
+<ul>
+<li><strong>Blood picture:</strong> Leucocytosis</li>
+<li><strong>Urine analysis &amp; culture:</strong> Midstream or catheter specimen</li>
+<li><strong>Swab &amp; culture:</strong> Cervix/upper vagina for aerobic AND anaerobic cultures</li>
+<li><strong>Blood culture</strong></li>
+<li><strong>U/S:</strong> Retained parts and pelvic abscess</li>
+</ul>
+
+<h3>Prevention (3 Phases)</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Phase</th><th>Measures</th></tr></thead>
+<tbody>
+<tr><td><strong>Antenatal</strong></td><td>Proper diet, vitamins, minerals. Treat anemia, diabetes, local/distant infection.</td></tr>
+<tr><td><strong>Intranatal</strong></td><td>Strict asepsis. Minimize vaginal exams. Avoid excessive blood loss. Suture lacerations immediately. Prophylactic antibiotics in PROM/prolonged/instrumental delivery.</td></tr>
+<tr><td><strong>Postnatal</strong></td><td>Maintain aseptic precautions. Perineal/abdominal wound care. Early isolation of sepsis cases.</td></tr>
+</tbody></table></div>
+
+<h3>Treatment</h3>
+<ol class="steps">
+<li><strong>Isolation</strong> — separate room or fever hospital</li>
+<li><strong>Diet</strong> — light, rich in vitamins/minerals, plenty of fluids</li>
+<li><strong>Supportive</strong> — fluid/electrolyte correction, correct anemia</li>
+<li><strong>Symptomatic</strong> — analgesics, antipyretics, cold fomentations</li>
+<li><strong>Observations</strong> — pulse, temp, BP, bleeding, lochia, DVT</li>
+<li><strong>Antibiotics:</strong>
+<ul>
+<li><strong>Ampicillin/cephalosporin + gentamicin + metronidazole</strong></li>
+<li><em>or</em> <strong>Clindamycin + gentamicin</strong></li>
+<li>Antitoxin serum for Cl. welchii</li>
+</ul></li>
+<li><strong>Promote drainage:</strong> Fowler's position, remove stitches if purulent, misoprostol/ergometrine for lochia</li>
+<li><strong>Incision &amp; drainage:</strong> Pelvic abscess → posterior colpotomy + drain; Parametric abscess → incision + drain at pointing point</li>
+<li><strong>Treat complications:</strong> DIC, renal failure, thrombophlebitis (anticoagulants)</li>
+</ol>
+
+<div class="co co-w">
+<div class="co-t">🚨 Danger</div>
+Failure to drain a pelvic/parametric abscess leads to ongoing sepsis despite antibiotics. <strong>Drainage is definitive — antibiotics alone are insufficient for abscess.</strong>
+</div>
+
+</div></div>
+
+<!-- ===================== TOPIC 8 ===================== -->
+<div class="slide sec-8" id="t8">
+<div class="slide-hdr"><span class="ico">🧸</span><h2>8. Fetal Birth Injuries</h2></div>
+<div class="slide-bd">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Erb%27s_palsy.jpg/800px-Erb%27s_palsy.jpg" alt="Erb's Palsy" class="topic-img">
+<div class="img-caption">Erb's Palsy (Brachial Plexus Injury) — Wikimedia Commons (CC)</div>
+
+<h3>Definition</h3>
+<div class="co co-n">
+<div class="co-t">📋 Key Definition</div>
+<strong>Birth trauma:</strong> Marked compression or sudden compression-decompression during delivery.
+</div>
+
+<h3>Causes — The 3 P's + Iatrogenic</h3>
+<div class="tw">
+<table>
+<thead><tr><th>Mechanism</th><th>Causes</th></tr></thead>
+<tbody>
+<tr><td><strong>Passages</strong></td><td>Contracted pelvis, soft tissue obstruction</td></tr>
+<tr><td><strong>Passenger</strong></td><td>Fetal macrosomia, malpresentation, malposition</td></tr>
+<tr><td><strong>Power</strong></td><td>Precipitate labor</td></tr>
+<tr><td><strong>Iatrogenic</strong></td><td>Ventouse, forceps, internal podalic version, breech extraction</td></tr>
+</tbody></table></div>
+
+<h3>Types of Birth Injuries</h3>
+<h4>A. Fractures</h4>
+<p><strong>Hierarchy of frequency:</strong></p>
+<ol>
+<li><strong>Clavicle</strong> (most frequent)</li>
+<li><strong>Humerus</strong></li>
+<li><strong>Femur</strong></li>
+<li><strong>Skull bones</strong> (most serious — underlying hemorrhage must be considered)</li>
+</ol>
+<p>Most neonatal fractures heal with <strong>conservative treatment</strong>. Clavicle: mild analgesia. Long bones: simple splinting.</p>
+
+<h4>B. Cephalohematoma vs Caput Succedaneum</h4>
+<div class="tw">
+<table>
+<thead><tr><th>Feature</th><th>Cephalohematoma</th><th>Caput Succedaneum</th></tr></thead>
+<tbody>
+<tr><td><strong>Onset</strong></td><td>Hours/days after birth</td><td>Present at birth</td></tr>
+<tr><td><strong>Nature</strong></td><td>Localized hematoma, limited by sutures</td><td>Diffuse tissue oedema over &gt;1 bone</td></tr>
+<tr><td><strong>Edges</strong></td><td>Well-defined</td><td>Ill-defined</td></tr>
+<tr><td><strong>Consistency</strong></td><td>Elastic (does not pit)</td><td>Soft (pits on pressure)</td></tr>
+<tr><td><strong>Resolution</strong></td><td>Few weeks</td><td>1-2 days</td></tr>
+</tbody></table></div>
+
+<div class="co co-w">
+<div class="co-t">⚠️ Rule Out Associated Injury</div>
+Skull fracture or intracranial bleeding should always be ruled out with cephalohematoma.
+</div>
+
+<h4>C. Nerve Palsies</h4>
+<div class="cmp-grid">
+<div class="cmp-card">
+<h5>💪 Erb's Palsy (Most Common)</h5>
+<ul>
+<li>Damage to <strong>brachial plexus (C5, C6, C7)</strong></li>
+<li>Traction on neck and shoulders during difficult delivery</li>
+<li>Result: <strong>flaccid arm held in pronated and internally rotated position</strong></li>
+<li>Management: Physiotherapy; surgical nerve repair available</li>
+</ul>
+</div>
+<div class="cmp-card">
+<h5>😀 Facial Palsy</h5>
+<ul>
+<li>Caused by obstetric maneuvers (forceps pressure)</li>
+<li>Usually <strong>lower motor neuron</strong> injury</li>
+<li>Prognosis: <strong>Excellent</strong></li>
+<li>If upper motor neuron suspected → investigate for cerebral injury</li>
+</ul>
+</div>
+</div>
+
+<h4>D. Sternocleidomastoid Tumor</h4>
+<ul>
+<li>Bleeding into sternocleidomastoid muscle</li>
+<li>Not recognized at birth; obvious at <strong>a few weeks of age</strong></li>
+<li>Management: <strong>Physiotherapy</strong> to prevent contracture</li>
+<li>Prognosis: <strong>Good</strong></li>
+</ul>
+
+<h4>E. Lacerations</h4>
+<ul>
+<li>Usually during <strong>cesarean section</strong></li>
+<li>Usually superficial, heal without problems</li>
+<li>Deeper wounds may require suturing</li>
+</ul>
+
+</div></div>
+
+</div><!-- /ct -->
+
+<!-- FOOTER -->
+<div class="footer">
+<p><strong>Week 4 — OB/GYN Presentation</strong> | Postpartum Complications & Labor Emergencies</p>
+<p>8 Comprehensive Topics · Based on Book Obstetrics 2025-2026</p>
+<p><a href="https://doctorelshehy-stack.github.io/obs_content-mcqs/weeks.html">← Back to Weeks</a></p>
+</div>
+
+</body>
+</html>

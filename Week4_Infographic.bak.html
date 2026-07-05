@@ -3,93 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Week 4 — Postpartum &amp; Complications</title>
+<title>Week 4 — Postpartum & Complications</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{overflow-x:hidden}
-body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;background:#f0f2f5;line-height:1.55;font-size:14px;-webkit-font-smoothing:antialiased}
-.nav{position:sticky;top:0;z-index:9999;background:linear-gradient(135deg,#0f3a5f,#0f3a5f);padding:10px 14px;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+body{
+  font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  color:#1f2a37;background:#f0f2f5;
+  line-height:1.55;font-size:14px;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:none;text-size-adjust:none;
+}
+.nav{position:sticky;top:0;z-index:9999;background:linear-gradient(135deg,#b71c1c,#b71c1c);padding:10px 14px;box-shadow:0 2px 10px rgba(0,0,0,.3)}
 .nav-row{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .nav-row::-webkit-scrollbar{display:none}
 .nav a{color:rgba(255,255,255,.8);text-decoration:none;font-size:11px;font-weight:600;padding:5px 10px;border-radius:8px;white-space:nowrap;background:rgba(255,255,255,.08);transition:all .2s}
-.nav a:hover{background:rgba(255,255,255,.2);color:#fff}
+.nav a:hover,.nav a:active{background:rgba(255,255,255,.2);color:#fff}
 .nav-back{color:#fff!important;background:rgba(255,255,255,.15)!important;margin-right:4px}
-.hero{background:linear-gradient(135deg,#0f3a5f,#0f3a5f);color:#fff;text-align:center;padding:28px 18px 22px;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,#b71c1c 0%,#b71c1c 100%);color:#fff;text-align:center;padding:28px 18px 22px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(255,255,255,.06);border-radius:50%}
-.hero h1{font-size:22px;font-weight:800;letter-spacing:-.3px}
+.hero h1{font-size:22px;font-weight:800;line-height:1.25;letter-spacing:-.3px}
 .hero .sub{font-size:13px;color:rgba(255,255,255,.75);margin-top:6px}
 .hero .stats{display:flex;justify-content:center;gap:12px;margin-top:12px;flex-wrap:wrap}
 .hero .st{background:rgba(255,255,255,.12);border-radius:10px;padding:6px 14px;text-align:center}
 .hero .st .n{font-size:18px;font-weight:800}
 .hero .st .l{font-size:10px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.04em}
-.ct{padding:0 10px 30px;max-width:900px;margin:0 auto}
-.topic-section{margin-top:20px;border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.08)}
-.topic-hdr{padding:16px 20px}
-.topic-ttl{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.2px}
-.topic-body{padding:16px;background:#fff;display:flex;flex-direction:column;gap:12px}
-.card{background:#fff;border-radius:12px;border-left:4px solid;padding:16px 18px;box-shadow:0 1px 6px rgba(0,0,0,.04);transition:box-shadow .2s}
-.card:hover{box-shadow:0 3px 12px rgba(0,0,0,.08)}
-.card-hd{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #eef0f4}
-.cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.cttl{font-size:16px;font-weight:700;color:#1f2a37;line-height:1.3}
-.cbd p{margin:4px 0;font-size:13px;line-height:1.6;color:#2d3748}
-.cbd ul{list-style:none;padding:0;margin:4px 0 6px}
-.cbd ul li{position:relative;padding-left:18px;margin:3px 0;font-size:13px;line-height:1.5;color:#2d3748}
-.cbd ul li::before{content:"\2022";position:absolute;left:4px;top:0;font-weight:bold;font-size:14px}
-.cbd ul.dash-sub{margin:2px 0 2px 16px}
-.cbd ul.dash-sub li{padding-left:14px;font-size:12.5px;color:#4a5568}
-.cbd ul.dash-sub li::before{content:"\2013";left:2px;font-size:12px;color:#888}
-.cbd ol{padding-left:22px;margin:4px 0 6px}
-.cbd ol li{margin:3px 0;font-size:13px;line-height:1.5;color:#2d3748}
-.cbd h4{margin:10px 0 4px;font-size:14px;font-weight:700;color:#1f2a37;padding-bottom:2px;border-bottom:1px dashed #e2e8f0}
-.cbd h5{margin:8px 0 3px;font-size:13px;font-weight:600;color:#4a5568}
-.callout{border-left:3px solid;padding:8px 12px;margin:8px 0;border-radius:8px;font-size:13px;line-height:1.5}
-.callout.pearl{background:#eaf6ec;border-color:#2e7d32;color:#1b5e20}
-.callout.note{background:#eef5fa;border-color:#1e6091;color:#0f3a5f}
-.callout.warn{background:#fdecea;border-color:#c62828}
-.callout.danger{background:#fdecea;border-color:#b71c1c}
-.callout.cyan{background:#e0f7fa;border-color:#009688;color:#00695c}
-.callout .ct{font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:2px}
-.cbd table{width:100%;border-collapse:collapse;font-size:12px;margin:6px 0;direction:ltr;text-align:left}
-.cbd th,td{border:1px solid #e0e0e0;padding:5px 6px;vertical-align:top}
-.cbd th{background:#0f3a5f;color:#fff;font-weight:600;font-size:11px;white-space:nowrap}
-.cbd tr:nth-child(even) td{background:#fafafa}
-.cbd strong{color:#0f3a5f}
-.card-grid-3,.card-grid-2{display:grid;gap:8px;margin:6px 0}
-.card-grid-3{grid-template-columns:1fr 1fr 1fr}
-.card-grid-2{grid-template-columns:1fr 1fr}
-.cbd .card-blue,.cbd .card-green,.cbd .card-amber,.cbd .card-purple{padding:8px 12px;border-radius:8px;font-size:12.5px;line-height:1.4}
-.cbd .card-blue{background:#e8f0fe;color:#1a3a6b}
-.cbd .card-green{background:#e6f4ea;color:#1b5e20}
-.cbd .card-amber{background:#fef7e0;color:#7b5e00}
-.cbd .card-purple{background:#f3e8ff;color:#4a1d7a}
+.ct{padding:0 10px 30px}
+.sec{margin-top:14px;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.1);background:#fff}
+.sec-hdr{padding:14px 16px;color:#fff;display:flex;align-items:center;gap:10px}
+.sec-hdr h2{font-size:17px;font-weight:700;line-height:1.3;flex:1}
+.sec-bd{padding:12px 16px 16px}
+.sec-bd h3{margin:14px 0 6px;font-size:15px;color:#0f3a5f;padding-bottom:3px;border-bottom:2px solid #e3e8ef}
+.sec-bd h4{margin:10px 0 4px;font-size:13px;color:#1e6091}
+.sec-bd h5{margin:8px 0 3px;font-size:12px;color:#2a8fb5;font-weight:600}
+.sec-bd p{margin:3px 0;font-size:13px;line-height:1.5}
+ul{list-style:none;padding:0;margin:3px 0 6px}
+ul li{position:relative;padding-left:16px;margin:2px 0;font-size:13px;line-height:1.5}
+ul li::before{content:"\2022";color:#b71c1c;position:absolute;left:3px;top:1px;font-weight:bold;font-size:13px}
+ul.sl{padding-left:18px;margin:2px 0 4px}
+ul.sl li{padding-left:14px;font-size:12px;color:#374151;margin:1px 0}
+ul.sl li::before{content:"\203A";color:#999;left:2px;top:0;font-size:11px}
+ol{padding-left:20px;margin:3px 0 6px}
+ol li{margin:2px 0;font-size:13px;line-height:1.5}
+.co{border-left:3px solid;padding:7px 10px;margin:7px 0;border-radius:6px;background:#fff;font-size:12.5px}
+.co-p{border-color:#2e7d32;background:#eaf6ec}
+.co-n{border-color:#1e6091;background:#eef5fa}
+.co-w{border-color:#c62828;background:#fdecea}
+.co-t{font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:1px}
+.co-p .co-t{color:#1b5e20}
+.co-n .co-t{color:#0f3a5f}
+.co-w .co-t{color:#b71c1c}
+.tw{overflow-x:auto;margin:6px 0;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:11.5px;direction:ltr;text-align:left}
+th,td{border:1px solid #e0e0e0;padding:5px 6px;text-align:left;vertical-align:top;direction:ltr}
+th{background:#b71c1c;color:#fff;font-weight:600;font-size:11px;white-space:nowrap}
+tr:nth-child(even) td{background:#fafafa}
+strong{color:#b71c1c}
+.ball{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;font-size:11px;font-weight:800;flex-shrink:0;box-shadow:0 2px 4px rgba(0,0,0,.3);margin-right:6px;vertical-align:middle;line-height:1}
 .footer{text-align:center;padding:20px 14px;font-size:11px;color:#999}
-@media(prefers-color-scheme:dark){
-  body{background:#0f1117;color:#e2e8f0}
-  .hero{background:linear-gradient(135deg,#0a1a2e,#0a1a2e)}
-  .topic-body{background:#1a1b26}
-  .card{background:#1e2030;box-shadow:0 1px 6px rgba(0,0,0,.2)}
-  .card:hover{box-shadow:0 3px 12px rgba(0,0,0,.4)}
-  .cttl{color:#e2e8f0}
-  .card-hd{border-bottom-color:#2d3748}
-  .cbd p{color:#cbd5e1}
-  .cbd ul li{color:#cbd5e1}
-  .cbd ul.dash-sub li{color:#94a3b8}
-  .cbd ol li{color:#cbd5e1}
-  .cbd h4{color:#e2e8f0;border-bottom-color:#2d3748}
-  .cbd h5{color:#94a3b8}
-  .cbd strong{color:#60a5fa}
-  .cbd td{border-color:#2d3748;color:#cbd5e1}
-  .cbd th{background:#0f3a5f}
-  .cbd tr:nth-child(even) td{background:#1a1b26}
-  .cbd .card-blue{background:#1a2744;color:#93c5fd}
-  .cbd .card-green{background:#1a3a1a;color:#86efac}
-  .cbd .card-amber{background:#3a2e00;color:#fde68a}
-  .cbd .card-purple{background:#2d1a3a;color:#d8b4fe}
-}
+.footer a{color:#b71c1c;text-decoration:none}
+.sec{break-inside:avoid}
+@media print{.nav{display:none}.sec{break-inside:avoid;box-shadow:none;border:1px solid #ddd}}
 </style>
 </head>
 <body>
+
 <div class="nav"><div class="nav-row">
 <a href="https://doctorelshehy-stack.github.io/obs_content-mcqs/weeks.html" class="nav-back">Weeks</a>
 <a href="#33_abnormal_uterine_action">Abnormal Uterine Act</a>
@@ -106,18 +84,60 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 <div class="sub">Comprehensive Infographic — All 8 Topics, No Summaries</div>
 <div class="stats">
 <div class="st"><div class="n">8</div><div class="l">Topics</div></div>
+<div class="st"><div class="n">241K</div><div class="l">Characters</div></div>
+</div></div>
 <div class="ct">
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#b71c1c">
-    <h2 class="topic-ttl">Abnormal Uterine Action</h2>
+<div class="sec" id="33_abnormal_uterine_action">
+<div class="sec-hdr" style="background:#b71c1c"><h2>Abnormal Uterine Action</h2></div>
+<div class="sec-bd" style="background:#ffebee">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 33 — Abnormal Uterine Action</title>
+
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="pill">Topic <span class="ball">1</span>Chapter <span class="ball">2</span>Abnormal Uterine Action</span>
+    <h1>Abnormal Uterine Action</h1>
+    <p>Disordered <strong>uterine contractions</strong> — inefficient, weak, inordinate, excessive, or incoordinate — that fail to cause progressive cervical dilatation and effacement. Abnormal uterine action is one of the <strong>3 "P"s of dystocia</strong> (Power, Passages, Passenger) and encompasses the entire spectrum: precipitate labor, hypotonic uterine inertia, hypertonic inertia, pathological retraction (Bandl's) ring, constriction (contraction) ring, and cervical dystocia. This chapter covers the characteristics of normal adequate uterine contraction, the tocodynamometry tracings used to assess it, the formal classification (coordinate vs incoordinate), and the clinical features + management of each form of abnormal uterine action.</p>
+    <div class="chips">
+      <span class="chip">📖 Book Obstetrics 2025-<span class="ball">3</span>p. 169-179 (11 pages)</span>
+      <span class="chip">🟢 Source visuals: 5 (all embedded)</span>
+      <span class="chip">🔴 External visuals: 0</span>
+      <span class="chip">📚 15 content sections preserved</span>
+    </div>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">1ILOs of this chapter</h3>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📑 Table of Contents · 15 sections</h3>
+    <ol>
+      <li><a href="#s1">ILOs of this chapter</a></li>
+      <li><a href="#s2">Introduction · The 3 "P"s of dystocia</a></li>
+      <li><a href="#s3">Characteristics of normal adequate uterine contraction</a></li>
+      <li><a href="#s4">Assessment of uterine contraction (External + Internal toco)</a></li>
+      <li><a href="#s5">Figure <span class="ball">4</span>External toco dynamometry tracing paper</a></li>
+      <li><a href="#s6">Clinical definitions of excessive uterine action</a></li>
+      <li><a href="#s7">First-aid measures for uterine overactivity (5 steps)</a></li>
+      <li><a href="#s8">Classification of abnormal uterine action (Coordinate vs Incoordinate)</a></li>
+      <li><a href="#s9">Precipitate labor · Definition, Etiology, Complications, Management</a></li>
+      <li><a href="#s10">Pathological retraction ring (Bandl's ring)</a></li>
+      <li><a href="#s11">Figures 2 + <span class="ball">5</span>Physiological vs Pathological retraction ring diagrams + clinical photo</a></li>
+      <li><a href="#s12">Uterine inertia · Hypotonic inertia (Definition → Management)</a></li>
+      <li><a href="#s13">Constriction (contraction) ring + Figure 4 + Comparison table</a></li>
+      <li><a href="#s14">Hypertonic inertia &amp; Cervical dystocia</a></li>
+      <li><a href="#s15">Student activity · Questions · References</a></li>
+    </ol>
   </div>
-  <div class="cbd">
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h3 class="sec"><span class="n">1</span>ILOs of this chapter</h3>
     <div class="card">
       <h4 class="sub" style="margin-top:0">Intended Learning Outcomes</h4>
       <ol class="step-list">
@@ -125,13 +145,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <li>To be able to <strong>outline the classification of abnormal uterine action</strong>.</li>
         <li>To be able to <strong>describe the clinical features and management of various forms of abnormal uterine action</strong> and its possible associated complications.</li>
       </ol>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">2Introduction · The 3 &quot;P&quot;s of dystocia</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §2 Introduction -->
+  <section id="s2">
+    <h3 class="sec"><span class="n">2</span>Introduction · The 3 "P"s of dystocia</h3>
     <div class="card">
       <h4 class="sub" style="margin-top:0">What is abnormal uterine action?</h4>
       <p style="font-size:14px;margin:0 0 10px"><strong>Inefficient, weak and / or inordinate uterine contractions</strong> which fail to cause progressive cervical dilatation and effacement.</p>
@@ -145,13 +164,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <li><strong>Passenger</strong> — the fetus (size, lie, presentation, position).</li>
       </ul>
       <p style="font-size:13px;color:#6D28D9;margin:8px 0 0;font-style:italic">Whenever labor fails to progress, all three Ps must be evaluated systematically before attributing the dystocia to the "Power" alone.</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">3Characteristics of normal adequate uterine contraction</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §3 Normal adequate uterine contraction -->
+  <section id="s3">
+    <h3 class="sec"><span class="n">3</span>Characteristics of normal adequate uterine contraction</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">A "normal adequate" uterine contraction has a reproducible quantitative profile. The four measurable parameters are <strong>frequency, duration, amplitude, and basal tone</strong>.</p>
     <div class="grid-2">
       <div class="defn-card cyan">
@@ -174,13 +192,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card pearl">
       <h5>💡 MEMORY ANCHOR · The "3·45·60" rule of an adequate contraction</h5>
       <p style="font-size:13.5px;margin:0">Frequency 1 in <strong>3</strong> min · Duration <strong>45</strong> sec · Amplitude <strong>60</strong> mmHg · Basal tone 5–20 mmHg. Any contraction that deviates significantly from this profile on a tocograph is, by definition, <strong>abnormal</strong> uterine action — and the first branch of the classification (§8) tells you which kind.</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">4Assessment of uterine contraction</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §4 Assessment of uterine contraction -->
+  <section id="s4">
+    <h3 class="sec"><span class="n">4</span>Assessment of uterine contraction</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Uterine contractions can be quantified by <strong>two complementary methods</strong> — external (non-invasive, belts) and internal (invasive, catheter).</p>
     <div class="grid-2">
       <div class="defn-card">
@@ -191,13 +208,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <h4>Internal tocodynamometry</h4>
         <p>Using an <strong>intrauterine pressure catheter (IUPC)</strong> inserted through the cervix into the amniotic cavity (after membrane rupture). The gold standard — gives <strong>true pressure in mmHg</strong> for amplitude and baseline tone.</p>
       </div>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">5Figure 6External toco dynamometry tracing paper</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §5 Figure 1 — External toco tracing -->
+  <section id="s5">
+    <h3 class="sec"><span class="n">5</span>Figure <span class="ball">6</span>External toco dynamometry tracing paper</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">A representative external toco tracing showing the <strong>two parallel paper-strip outputs</strong> of every modern cardiotocograph (CTG): the upper FHR strip and the lower contraction (toco) strip. Three contraction peaks labelled "Beginning · Peak · End" are visible; the source's caption notes that <strong>contractions are measured peak-to-peak</strong> and are occurring <strong>every 2–3 minutes</strong> in this sample — consistent with active labor.</p>
     <div class="img-card src-viz">
       <span class="badge">Source Image · img-000</span>
@@ -205,13 +221,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         
       </div>
       <div class="cap">Figure 1 — <strong>External toco dynamometry tracing paper.</strong> The upper strip is the fetal heart rate (FHR) tracing (left scale 30–240 bpm; right mirrored scale; baseline 120–150 bpm highlighted in cyan as the normal FHR band). The lower strip is the external toco tracing (left scale 0–100 mmHg; right alternate 0–12 units) with three contraction peaks and a blue speech-bubble annotation: <em>"Contractions can be measured from peak-to-peak. Here, contractions are every 2–3 mins."</em> Three red arrows label the landmarks of a single contraction — <strong>Beginning</strong> (rise from baseline), <strong>Peak</strong> (maximum amplitude), and <strong>End</strong> (return to baseline). The "INOP" marker is a typical artifact when the external transducer slips or loses contact.</div>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">6Clinical definitions of excessive uterine action</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §6 Clinical definitions of excessive uterine action -->
+  <section id="s6">
+    <h3 class="sec"><span class="n">6</span>Clinical definitions of excessive uterine action</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Four formal terms describe the upper end of the abnormal-uterine-action spectrum. They are <strong>not synonyms</strong> — each has its own trigger criteria and clinical implication.</p>
     <table>
       <thead>
@@ -242,13 +257,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card pearl">
       <h5>💡 CLINICAL PEARL · Tachysystole vs hyperstimulation</h5>
       <p style="font-size:13.5px;margin:0"><strong>Tachysystole</strong> = &gt; 5 contractions in 10 min, averaged over 30 min (formal ACOG definition). <strong>Hyperstimulation</strong> = the same excessive activity, but specifically triggered by <strong>oxytocin</strong> <em>and</em> accompanied by an <strong>FHR abnormality</strong> — which makes it a clinical emergency requiring immediate action (§7). Memorize the difference: tachysystole = the number; hyperstimulation = the number <strong>PLUS</strong> the cause (oxytocin) <strong>PLUS</strong> the consequence (FHR abnormality).</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">7First-aid measures for uterine overactivity</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §7 First-aid measures for uterine overactivity -->
+  <section id="s7">
+    <h3 class="sec"><span class="n">7</span>First-aid measures for uterine overactivity</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source's clinical question: <em>"What are the first aid measures you will take to manage any of the above-mentioned uterine overactivity?"</em> The answer is a <strong>5-step sequence</strong>.</p>
     <ol class="step-list">
       <li><strong>Positioning of the patient into lateral position</strong> — relieves aortocaval compression and improves uteroplacental perfusion.</li>
@@ -260,13 +274,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card danger">
       <h5>🚨 DANGER · When step 5 becomes step 1</h5>
       <p style="font-size:13.5px;margin:0">If the FHR tracing is <strong>persistently ominous (Category III)</strong> despite all four conservative measures, the next step is <strong>immediate delivery</strong> — not continued tocolysis. In the second stage, that means operative vaginal delivery (forceps / ventouse); in the first stage, it means <strong>emergency cesarean section</strong>. The tocolytic buys time, it does not replace delivery when the fetus is in jeopardy.</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">8Classification of abnormal uterine action</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §8 Classification of abnormal uterine action -->
+  <section id="s8">
+    <h3 class="sec"><span class="n">8</span>Classification of abnormal uterine action</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The single most testable framework in this chapter. Abnormal uterine action divides into two great branches based on the <strong>polarity of the contraction</strong> — i.e. whether the normal fundal-dominant gradient of uterine activity is preserved (coordinate) or lost (incoordinate).</p>
     <div class="class-tree">
       <ul>
@@ -291,13 +304,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card pearl">
       <h5>💡 MEMORY ANCHOR · Coordinate vs Incoordinate in one line</h5>
       <p style="font-size:13.5px;margin:0"><strong>Coordinate</strong> = the fundus still leads — the contraction wave starts at the fundus and propagates downward correctly (precipitate, Bandl's, hypotonic inertia are all variants of <em>preserved</em> polarity). <strong>Incoordinate</strong> = the fundal dominance is lost — the lower segment or a localized ring contracts more than the fundus, producing the spastic / colicky / constriction / tonic / cervical-dystocia cluster.</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">9Precipitate labor</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §9 Precipitate labor -->
+  <section id="s9">
+    <h3 class="sec"><span class="n">9</span>Precipitate labor</h3>
     <div class="defn-card">
       <h4>Definition</h4>
       <p>A labor lasting <strong>less than 3 hours</strong>.</p>
@@ -350,13 +362,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <h4>After delivery</h4>
         <p>Proper examination of the <strong>genital system and fetus for any injuries</strong>.</p>
       </div>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">10Pathological retraction ring (Bandl&#x27;s ring)</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §10 Pathological retraction ring -->
+  <section id="s10">
+    <h3 class="sec"><span class="n">10</span>Pathological retraction ring (Bandl's ring)</h3>
     <h4 class="sub">Physiological retraction ring</h4>
     <div class="defn-card green">
       <h4>Definition</h4>
@@ -370,13 +381,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card danger">
       <h5>🚨 DANGER · Impending uterine rupture</h5>
       <p style="font-size:13.5px;margin:0"><strong>Clinical picture: obstructed labor with impending rupture uterus.</strong> Obstructed labor should be <strong>immediately treated</strong>, otherwise the thinned lower uterine segment will <strong>rupture</strong>. Bandl's ring is the visual landmark that the lower segment is at the breaking point — it is an obstetric emergency, not a finding to be observed.</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">11Figures 2 + 7Physiological vs Pathological retraction ring</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §11 Figures 2 + 3 -->
+  <section id="s11">
+    <h3 class="sec"><span class="n">11</span>Figures 2 + <span class="ball">7</span>Physiological vs Pathological retraction ring</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The source pairs a <strong>schematic diagram</strong> (Figure 2) with a <strong>clinical photograph</strong> (Figure 3) to drive home the same message: a pathological retraction ring is something you can <strong>see and feel</strong> on the maternal abdomen, rising between the symphysis pubis and the umbilicus as a transverse groove.</p>
 
     <div class="img-card src-viz">
@@ -398,13 +408,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card pearl">
       <h5>💡 CLINICAL PEARL · Why "rings" are easy to confuse</h5>
       <p style="font-size:13.5px;margin:0">Two completely different rings share the same word. <strong>Pathological retraction ring (Bandl's)</strong> = global, at the junction of upper and lower segments, <strong>rising upward</strong>, <strong>seen and felt abdominally</strong>, and a sign of <strong>impending rupture</strong>. <strong>Constriction ring</strong> = localized, can be at <em>any</em> level, <strong>does not change position</strong>, <strong>felt only vaginally</strong>, and may be relaxed by anesthesia. The differences are tabulated explicitly in §13 Figure 4.</p>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">12Uterine inertia · Hypotonic inertia</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §12 Uterine inertia -->
+  <section id="s12">
+    <h3 class="sec"><span class="n">12</span>Uterine inertia · Hypotonic inertia</h3>
     <div class="defn-card">
       <h4>Definition</h4>
       <p><strong>Infrequent weak uterine contractions.</strong></p>
@@ -497,13 +506,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
           <li>Non reassuring CTG and cervix incompletely dilated.</li>
         </ul>
       </div>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">13Constriction (contraction) ring + Figure 4 + Comparison table</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §13 Constriction ring + Figure 4 + comparison table -->
+  <section id="s13">
+    <h3 class="sec"><span class="n">13</span>Constriction (contraction) ring + Figure 4 + Comparison table</h3>
     <div class="defn-card">
       <h4>Definition</h4>
       <p><strong>Persistent localized annular spasm of the circular muscles of the uterus.</strong> It occurs at <strong>any part of the uterus</strong> but usually at <strong>junction of the upper and lower uterine segments</strong>. It can occur at the <strong>1st, 2nd or 3rd stage of labor</strong>.</p>
@@ -556,13 +564,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         
       </div>
       <div class="cap">Figure 5 — <strong>Differences between pathological retraction and constriction rings.</strong> A side-by-side two-column comparison table that distills the 8 clinical discriminators between the two rings. <strong>Pathological retraction ring</strong> (left): occurs in prolonged 2nd stage · always at the junction of upper &amp; lower segments · rising up between symphysis &amp; umbilicus · felt and seen abdominally · uterus tonically retracted &amp; tender · fetal parts cannot be felt · maternal distress always present · fetal distress or may be death · relieved <em>only</em> by delivery as rupture of uterus is impending. <strong>Constriction ring</strong> (right): may occur at any stage · at any level · does not change its position · felt only vaginally · uterus not tonically retracted · fetal parts can be felt · maternal distress may or may not be present · fetal distress may not exist · may be relieved by anaesthesia or tocolysis. The key bedside discriminator: <strong>palpable abdominally = Bandl's; palpable only vaginally = Constriction</strong>.</div>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">14Hypertonic inertia &amp;amp; Cervical dystocia</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §14 Hypertonic inertia & Cervical dystocia -->
+  <section id="s14">
+    <h3 class="sec"><span class="n">14</span>Hypertonic inertia &amp; Cervical dystocia</h3>
     <div class="defn-card">
       <h4>Hypertonic inertia — Definition</h4>
       <p>It represents a case of <strong>reversed polarity</strong> where the <strong>fundal dominance is lacking</strong>.</p>
@@ -627,13 +634,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <li>Analgesics or antispasmodics.</li>
       <li>Cesarean section is mostly required in case of cervical dystocia.</li>
     </ul>
-  </div>
-</div><div class="card" style="border-left-color:#b71c1c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#b71c1c"></span>
-    <h3 class="cttl">15Student activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §15 Student activity / Questions / References -->
+  <section id="s15">
+    <h3 class="sec"><span class="n">15</span>Student activity · Questions · References</h3>
+
     <details class="click-card activity" open>
       <summary>🎓 Student activity <span class="hint">click to expand</span></summary>
       <div class="click-body">
@@ -680,22 +686,60 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         </ul>
       </div>
     </details>
-  </div>
-</div>
-  </div>
-</div>
+  </section>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#880e4f">
-    <h2 class="topic-ttl">Obstructed Labor</h2>
+  <footer>
+    <strong>Topic 33 — Abnormal Uterine Action</strong> · Book Obstetrics 2025-<span class="ball">10</span>p. 169-179 (11 pages) · 5 source visuals embedded · 0 external visuals · 15 content sections preserved · Google Form: <a href="https://forms.gle/Dprcd1XYptjuRejv5" style="color:#1D4ED8" target="_blank" rel="noopener">forms.gle/Dprcd1XYptjuRejv5</a>
+  </footer>
+
+</div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="34_obstructed_labor">
+<div class="sec-hdr" style="background:#880e4f"><h2>Obstructed Labor</h2></div>
+<div class="sec-bd" style="background:#fce4ec">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 34 — Obstructed Labor</title>
+
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="pill">Topic <span class="ball">1</span>Chapter <span class="ball">2</span>Obstructed Labor</span>
+    <h1>Obstructed Labor</h1>
+    <p><strong>Mechanical failure of delivery</strong> — the fetus cannot traverse the birth canal despite <strong>good (adequate) uterine contractions</strong>, because of a <strong>passage</strong> problem (maternal bony pelvis or soft tissue) or a <strong>passenger</strong> problem (fetal size, lie, presentation, position, or malformation). Obstructed labor is one of the most <strong>serious obstetric emergencies</strong>, and a leading cause of <strong>maternal and perinatal mortality</strong> in low-resource settings. The condition is almost entirely <strong>preventable</strong> through proper antenatal care, early detection of risk factors, and strict use of the <strong>partogram</strong>; once established, delivery is by <strong>cesarean section</strong> — vaginal delivery is contraindicated.</p>
+    <div class="chips">
+      <span class="chip">📖 Book Obstetrics 2025-<span class="ball">3</span>p. 180-182 (3 pages)</span>
+      <span class="chip">🟢 Source visuals: 0 (text-only chapter)</span>
+      <span class="chip">🔴 External visuals: 0</span>
+      <span class="chip">📚 7 content sections preserved</span>
+    </div>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">1ILOs of this chapter</h3>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📑 Table of Contents · 7 sections</h3>
+    <ol>
+      <li><a href="#s1">ILOs of this chapter</a></li>
+      <li><a href="#s2">Definition · The 3 P's revisited</a></li>
+      <li><a href="#s3">Causes · Maternal (Passages) + Fetal (Passenger)</a></li>
+      <li><a href="#s4">Diagnosis · General + Abdominal + Vaginal examination</a></li>
+      <li><a href="#s5">Management · Prevention + General + Obstetrics</a></li>
+      <li><a href="#s6">Complications · Maternal + Fetal</a></li>
+      <li><a href="#s7">Student activity · Questions · References</a></li>
+    </ol>
   </div>
-  <div class="cbd">
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h3 class="sec"><span class="n">1</span>ILOs of this chapter</h3>
     <div class="card">
       <h4 class="sub" style="margin-top:0">Intended Learning Outcomes</h4>
       <ol class="step-list">
@@ -704,13 +748,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <li>To be able to <strong>describe the clinical picture and management of obstructed labor</strong>.</li>
         <li>To be able to <strong>outline the complications of this obstetric serious problem</strong>.</li>
       </ol>
-  </div>
-</div><div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">2Definition · The 3 P&#x27;s revisited</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §2 Definition -->
+  <section id="s2">
+    <h3 class="sec"><span class="n">2</span>Definition · The 3 P's revisited</h3>
     <div class="card keydef">
       <h5>📘 KEY DEFINITION · Obstructed Labor</h5>
       <p class="def-block" style="font-size:15.5px;margin:0"><strong>Failure of delivery of fetus in spite of good uterine contractions due to mechanical obstruction.</strong></p>
@@ -722,13 +765,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card note">
       <h5>📝 NOTE · The 3 P's of dystocia (recall from Chapter 33)</h5>
       <p style="font-size:13.5px;margin:0">Whenever labor is not progressing, systematically evaluate the 3 P's: <strong>Power</strong> (contractions), <strong>Passages</strong> (maternal pelvis + soft tissues), and <strong>Passenger</strong> (fetus). Obstructed labor is a <em>Passages</em> and/or <em>Passenger</em> problem <em>with</em> a normal <em>Power</em> — that combination is the diagnostic signature.</p>
-  </div>
-</div><div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">3Causes · Maternal (Passages) + Fetal (Passenger)</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §3 Causes -->
+  <section id="s3">
+    <h3 class="sec"><span class="n">3</span>Causes · Maternal (Passages) + Fetal (Passenger)</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The obstruction is <strong>always mechanical</strong>. Causes are split into two groups — <em>passages</em> (maternal) and <em>passenger</em> (fetal) — reflecting the two halves of the fetopelvic relationship.</p>
 
     <div class="grid-2">
@@ -765,13 +807,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card note">
       <h5>📝 MEMORY ANCHOR · Source spelling preserved</h5>
       <p style="font-size:13.5px;margin:0">The source uses <strong>"hydrocephalos"</strong>, <strong>"ascitis"</strong> (not "ascites"), and <strong>"conjoint twins"</strong> (one word, not "conjoined"). All three forms are preserved verbatim in the lists above. The terms are clinically well-understood despite the variant spellings; what matters is the underlying pathology — an enlarged or distorted fetal part that cannot pass the pelvic inlet or outlet.</p>
-  </div>
-</div><div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">4Diagnosis · General + Abdominal + Vaginal examination</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §4 Diagnosis -->
+  <section id="s4">
+    <h3 class="sec"><span class="n">4</span>Diagnosis · General + Abdominal + Vaginal examination</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">The diagnosis is a <strong>clinical diagnosis</strong> — based on a <strong>triad</strong> of examination findings: (1) prolonged labor with maternal distress on general inspection, (2) characteristic abdominal findings, and (3) characteristic vaginal findings. No single sign is diagnostic; the combination is.</p>
 
     <h4 class="sub">A · General examination</h4>
@@ -815,13 +856,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card danger">
       <h5>🚨 DANGER · "Large caput and moulding" — the cardinal vaginal sign</h5>
       <p style="font-size:13.5px;margin:0">The combination of <strong>large caput succedaneum</strong> (edematous swelling of the presenting scalp from prolonged pressure against the pelvic bones) and <strong>moulding</strong> (over-riding of the fetal skull bones) is the <strong>cardinal vaginal sign of obstructed labor</strong>. It tells you two things simultaneously: (1) the head has been <em>trying</em> to descend for a long time, and (2) the pelvis is <em>too small</em> to let it through. <strong>Continuing to push in this scenario risks uterine rupture</strong> — the decision must shift to cesarean section.</p>
-  </div>
-</div><div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">5Management · Prevention + General + Obstetrics</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §5 Management -->
+  <section id="s5">
+    <h3 class="sec"><span class="n">5</span>Management · Prevention + General + Obstetrics</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Management has <strong>three pillars</strong> — <em>Prevention</em> (antenatal), <em>General management</em> (stabilize the mother), and <em>Obstetric management</em> (deliver the baby). All three are required; none is optional.</p>
 
     <h4 class="sub">A · Prevention</h4>
@@ -863,13 +903,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card warn">
       <h5>⚠️ WARN · Why instrumental delivery is contraindicated</h5>
       <p style="font-size:13.5px;margin:0">In obstructed labor, the presenting part is either <strong>high and unengaged</strong> or <strong>impacted</strong> in the pelvis — neither is a safe situation for forceps or ventouse. Attempted instrumental delivery in this setting risks: <strong>fetal intracranial hemorrhage</strong>, <strong>shoulder dystocia</strong>, <strong>maternal soft-tissue injuries</strong> (cervical, vaginal, perineal), and <strong>uterine rupture</strong> if a fetal part is forcibly pulled through. <strong>Cesarean section is the only safe route</strong>.</p>
-  </div>
-</div><div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">6Complications · Maternal + Fetal</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §6 Complications -->
+  <section id="s6">
+    <h3 class="sec"><span class="n">6</span>Complications · Maternal + Fetal</h3>
     <p style="font-size:13.5px;color:#475569;margin:0 0 12px">Obstructed labor is a <strong>dual-injury</strong> condition: both mother and fetus are at risk. The maternal complications are dominated by hemorrhage, rupture, and infection; the fetal complications are dominated by asphyxia and trauma.</p>
 
     <div class="grid-2">
@@ -902,13 +941,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="card pearl">
       <h5>💡 CLINICAL PEARL · Vesicovaginal fistula — the social devastation</h5>
       <p style="font-size:13.5px;margin:0">Of all four maternal complications, <strong>vesicovaginal fistula (VVF)</strong> is the one with the most lasting social impact: a young woman is left with <strong>continuous urinary incontinence</strong> for the rest of her life (unless surgically repaired). The mechanism is <strong>pressure necrosis</strong> — the fetal head compresses the bladder base against the pubic symphysis, cutting off blood supply; the ischemic tissue sloughs 5–7 days postpartum, leaving a fistula. It is almost entirely <strong>preventable</strong> by timely CS, which is the strongest argument for the prevention pillar in §5.</p>
-  </div>
-</div><div class="card" style="border-left-color:#880e4f">
-  <div class="card-hd">
-    <span class="cdot" style="background:#880e4f"></span>
-    <h3 class="cttl">7Student activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §7 Student activity + Questions + References -->
+  <section id="s7">
+    <h3 class="sec"><span class="n">7</span>Student activity · Questions · References</h3>
+
     <details class="click-card activity" open>
       <summary>📚 Student activity <span class="hint"></span></summary>
       <div class="click-body">
@@ -967,23 +1006,53 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
       </div>
     </details>
-  </div>
-</div>
-  </div>
-</div>
+  </section>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#4a148c">
-    <h2 class="topic-ttl">Contracted Pelvis</h2>
+  <!-- FOOTER -->
+  <footer>
+    <strong>Topic <span class="ball">4</span>Obstructed Labor</strong> · Book Obstetrics 2025-2026, p. 180-182 (3 pages) · 7 content sections preserved · 🟢 Source visuals: 0 (text-only chapter) · 🔴 External visuals: <span class="ball">5</span>Self-assessment: <a href="https://forms.gle/iKh9gfcPh7pLBNKW6" target="_blank" rel="noopener" style="color:#1D4ED8">forms.gle/iKh9gfcPh7pLBNKW6</a>
+  </footer>
+
+</div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="35_contracted_pelvis">
+<div class="sec-hdr" style="background:#4a148c"><h2>Contracted Pelvis</h2></div>
+<div class="sec-bd" style="background:#f3e5f5">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 35 — Contracted Pelvis</title>
+
+</head>
+<body>
+<div class="page">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <span class="pill">Topic <span class="ball">1</span>Obstetrics</span>
+  <h1>Contracted Pelvis</h1>
+  <p>A contracted pelvis is one in which one or more of the principal pelvic diameters is reduced below normal — with consequences for engagement, mechanism, and mode of delivery. This chapter covers definitions, etiology (congenital and acquired), the four-level classification (inlet / midpelvic / outlet / both), four degrees of contraction, diagnostic workup (Pinard &amp; Muller–kerr tests + clinical + imaging pelvimetry), complications, and the trial-of-labor decision.</p>
+  <div class="chips">
+    <span class="chip">📖 Book source: p. 183-189 (7 pages)</span>
+    <span class="chip">🟢 Source visuals: 3</span>
+    <span class="chip">🔴 External visuals: 0</span>
+    <span class="chip">📌 9 content sections preserved</span>
+    <span class="chip">🔍 Etiology → Classification → Diagnosis → Management</span>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">1ILOs of this chapter</h3>
-  </div>
-  <div class="cbd">
-    <div class="card">
+</header>
+
+<!-- ============ TOC ============ -->
+
+
+<!-- ============ §1 ILOs ============ -->
+<section id="s1">
+<h3 class="sec"><span class="n">1</span>ILOs of this chapter</h3>
+
+<div class="card">
   <p style="margin:0 0 6px;font-size:13.5px;color:#475569">By the end of this chapter the student should be able to:</p>
   <ul class="b">
     <li>To understand the <b>anatomical and obstetric definition</b> of contracted pelvis</li>
@@ -994,14 +1063,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <h5>📝 NOTE — Chapter aim</h5>
     <p>The chapter explicitly asks the student to <i>outline</i> (i.e. recognise &amp; name) the different pelvises — not only the contracted forms. Mastery of the 4 congenital forms (Naegele, Robert, High / Low assimilation) plus the 3 levels of contraction is the core recall task.</p>
   </div>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">2Definition</h3>
-  </div>
-  <div class="cbd">
-    <div class="grid2">
+</div>
+</section>
+
+<!-- ============ §2 DEFINITION ============ -->
+<section id="s2">
+<h3 class="sec"><span class="n">2</span>Definition</h3>
+
+<div class="grid2">
   <div class="card keydef">
     <h5>🟣 KEY DEFINITION · Anatomical</h5>
     <p class="def-block">"a pelvis in with one or more of its diameters is reduced below normal by one or more centimeters."</p>
@@ -1021,14 +1090,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <li><b>Obstetric</b> → consequence (interferes with mechanism)</li>
     <li>Mnemonic: <b>A</b>natomical = <b>A</b>bstract (numbers); <b>O</b>bstetric = <b>O</b>utcome (labour)</li>
   </ul>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">3Etiology</h3>
-  </div>
-  <div class="cbd">
-    <div class="card note">
+</div>
+</section>
+
+<!-- ============ §3 ETIOLOGY ============ -->
+<section id="s3">
+<h3 class="sec"><span class="n">3</span>Etiology</h3>
+
+<div class="card note">
   <h5>📝 NOTE · Two broad categories</h5>
   <p>The source organises aetiology into <b>A. Congenital</b> (developmental — abnormal bone formation) and <b>B. Acquired</b> (diseases of pelvic bones, vertebral column, or lower limb that secondarily distort the pelvis). The unifying principle: anything that reduces a principal pelvic diameter.</p>
 </div>
@@ -1096,14 +1165,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 <div class="memanchor">
   <h5>💡 MEMORY ANCHOR · Etiology mnemonic</h5>
   <p>Acquired causes sit in 3 anatomical compartments: <b>B</b>ones (pelvic) · <b>V</b>ertebrae (column) · <b>L</b>egs (lower limb) — <b>B-V-L</b> "Bowl, Vertebra, Legs" = the 3 load-bearing columns that shape the pelvis.</p>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">4Classification by level of contraction</h3>
-  </div>
-  <div class="cbd">
-    <div class="pearl">
+</div>
+</section>
+
+<!-- ============ §4 CLASSIFICATION BY LEVEL ============ -->
+<section id="s4">
+<h3 class="sec"><span class="n">4</span>Classification by level of contraction</h3>
+
+<div class="pearl">
   <h5>🌸 CLINICAL PEARL · Four levels, not just "inlet"</h5>
   <p>The source classifies contraction by the <b>plane of the pelvis</b> affected: <b>A. Inlet</b>, <b>B. Midpelvic</b> (more common), <b>C. Outlet</b> (1% — rarest), and <b>D. Both inlet &amp; outlet</b> (generally contracted pelvis). Each level has its own definition, diagnosis, and effect on labour.</p>
 </div>
@@ -1166,14 +1235,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 <div class="memanchor">
   <h5>💡 MEMORY ANCHOR · "I-M-O" — Inlet, Midpelvic, Outlet</h5>
   <p>3 cardinal levels of the birth canal + 1 "both" (uniformly small). Mnemonic: <b>I-M-O-B</b> = <b>I'M One Bad</b> (pelvis). Frequency order: <b>Midpelvic (most common) &gt; Inlet &gt; Outlet (1%, rarest)</b>.</p>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">5Four degrees of contraction</h3>
-  </div>
-  <div class="cbd">
-    <div class="card note">
+</div>
+</section>
+
+<!-- ============ §5 DEGREES OF CONTRACTION ============ -->
+<section id="s5">
+<h3 class="sec"><span class="n">5</span>Four degrees of contraction</h3>
+
+<div class="card note">
   <h5>📝 NOTE · Degree = severity, Level = location</h5>
   <p>The source gives <b>4 degrees</b> of contraction (by true conjugate measurement) — these apply to the inlet / generally contracted pelvis. They drive the <b>management decision</b> (vaginal trial vs immediate CS).</p>
 </div>
@@ -1204,14 +1273,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 <div class="pearl">
   <h5>🌸 CLINICAL PEARL · The 10-8-6 cutoff</h5>
   <p>The clinical decision pivots on the 4 thresholds: <b>≥ 10</b> = vaginal OK · <b>8-9</b> = trial · <b>6-8</b> = CS · <b>&lt; 6</b> = absolutely contracted. Mnemonic: <b>10-9-8-6</b> (read downward) — "the lower you go, the harder the case".</p>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">6Diagnosis</h3>
-  </div>
-  <div class="cbd">
-    <h4 class="sub">A · History</h4>
+</div>
+</section>
+
+<!-- ============ §6 DIAGNOSIS ============ -->
+<section id="s6">
+<h3 class="sec"><span class="n">6</span>Diagnosis</h3>
+
+<h4 class="sub">A · History</h4>
 <div class="card">
   <ul class="b">
     <li><b>Past history of trauma or disease</b> that cause pelvic contractions e.g. <b>rickets, osteomalacia, poliomyelitis, TB, fractures &amp; orthopedic surgery</b></li>
@@ -1344,14 +1413,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 <div class="pearl">
   <h5>🌸 CLINICAL PEARL · Internal vs External pelvimetry</h5>
   <p><b>Internal</b> examines what the patient has (sacral promontory, spines, coccyx, side walls — i.e. the true pelvic diameters) — done <b>after 36 weeks</b> when the head is presenting. <b>External</b> measures what you can reach from the outside (subpubic angle, bituberous diameter, A-P outlet). The two are <b>complementary</b> — internal maps the inlet and midplane, external maps the outlet.</p>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">7Complications</h3>
-  </div>
-  <div class="cbd">
-    <div class="grid2">
+</div>
+</section>
+
+<!-- ============ §7 COMPLICATIONS ============ -->
+<section id="s7">
+<h3 class="sec"><span class="n">7</span>Complications</h3>
+
+<div class="grid2">
   <div class="card">
     <h5>🤰 Maternal</h5>
     <ul class="b">
@@ -1391,14 +1460,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <h5>💡 MEMORY ANCHOR · P-P-O-F-H · I-B-F-N-I</h5>
   <p><b>Maternal (P-P-O-F-H):</b> Pendulous abdomen · Prolonged labor · (cord) Prolapse / PROM · <b>O</b>bstructed labor + rupture · Fistula · Hemorrhage (PPH).<br>
   <b>Fetal (I-B-F-N-I):</b> Intracranial hemorrhage · Birth asphyxia · <b>F</b>racture skull · Nerve injury · Intra-amniotic infection.</p>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">8Management</h3>
-  </div>
-  <div class="cbd">
-    <h4 class="sub">By degree of contraction</h4>
+</div>
+</section>
+
+<!-- ============ §8 MANAGEMENT ============ -->
+<section id="s8">
+<h3 class="sec"><span class="n">8</span>Management</h3>
+
+<h4 class="sub">By degree of contraction</h4>
 <div class="card">
   <ul class="b">
     <li><b>Minor degree of contracted pelvis:</b> <b>vaginal delivery</b> is recommended</li>
@@ -1485,14 +1554,14 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 <div class="memanchor">
   <h5>💡 MEMORY ANCHOR · Trial of labor conditions — "M-F-N-A" mnemonic</h5>
   <p>The 4 conditions: <b>M</b>onitoring (fetal + maternal) · <b>F</b>asting (no oral feeding, IV drip) · <b>N</b>o-pain (adequate analgesic) · <b>A</b>ugmentation (Pitocin). Read as "M-F-N-A — the trial of labor alphabet".</p>
-  </div>
-</div><div class="card" style="border-left-color:#4a148c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#4a148c"></span>
-    <h3 class="cttl">9Student activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
-    <details class="click-blue" open>
+</div>
+</section>
+
+<!-- ============ §9 ACTIVITY / QUESTIONS / REFS ============ -->
+<section id="s9">
+<h3 class="sec"><span class="n">9</span>Student activity · Questions · References</h3>
+
+<details class="click-blue" open>
   <summary>📘 Student Activity (click to collapse)</summary>
   <div class="body">
     <p>The students in groups are requested to prepare <b>illustrative diagrams of various female pelves with characteristic features</b>.</p>
@@ -1558,31 +1627,46 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
 </div>
 
-
+<!-- ============ FOOTER ============ -->
 <footer>
   <p><b>Topic 35 — Contracted Pelvis</b> · Book Obstetrics 2025-2026 (p. 183-189) · 7 pages</p>
   <p>Self-assessment: <a href="https://forms.gle/qGm1djZpViFBjKdw5" target="_blank" rel="noopener">https://forms.gle/qGm1djZpViFBjKdw5</a></p>
   <p><span class="src">🟢 Source visuals: 3</span> · <span class="gen">🔴 External visuals: 0</span> · 9 content sections · Verbatim text preserved throughout</p>
 </footer>
 
+</body>
+</html>
 
-</h
-  </div>
-</div>
-  </div>
-</div>
+</div></div>
+<div class="sec" id="36_third_stage_complications">
+<div class="sec-hdr" style="background:#1a237e"><h2>Third Stage Complications</h2></div>
+<div class="sec-bd" style="background:#e8eaf6">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 36 — Complications of the Third Stage of Labor</title>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#1a237e">
-    <h2 class="topic-ttl">Third Stage Complications</h2>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Topic 36 — Complications of the Third Stage of Labor</h1>
+    <div class="sub">Postpartum Hemorrhage · Uterine Inversion · Retained Placenta · Postpartum Collapse</div>
+    <div class="meta">
+      <span class="chip">📖 Book source: p. 190-201 (12 pages)</span>
+      <span class="chip">🟢 Source visuals: 4 (medical)</span>
+      <span class="chip">🔴 External visuals: 0</span>
+      <span class="chip">📌 9 content sections preserved</span>
+      <span class="chip">🔍 PPH → Inversion → Retained → Collapse</span>
+    </div>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">1 Intended Learning Outcomes (ILOs)</h3>
-  </div>
-  <div class="cbd">
+
+  
+
+  <section id="s1">
+    <h3 class="sec"><span class="ball">1</span> Intended Learning Outcomes (ILOs)</h3>
     <p>At the end of this chapter, the student should be able to:</p>
     <ol>
       <li>Describe the <b>definition, etiology, classification, diagnosis and management of postpartum hemorrhage</b>.</li>
@@ -1590,14 +1674,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <li>Describe the <b>definition, etiology, clinical diagnosis, complications and management of retained placenta</b>.</li>
       <li>Describe the <b>definition, etiology and management of postpartum collapse</b>.</li>
     </ol>
-    <div class="anchor">The chapter has <b>four sub-topics</b>, in order: Postpartum hemorrhage → Uterine inversion → Retained placenta → Postpartum collapse. All four are <b>post-delivery emergencies</b> with overlapping etiologies — PPH is the unifying thread, and the other three (especially inversion and retained placenta) are also <b>causes of PPH</b>.
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">2 Postpartum Hemorrhage — Definition &amp;amp; Types</h3>
-  </div>
-  <div class="cbd">
+    <div class="anchor">The chapter has <b>four sub-topics</b>, in order: Postpartum hemorrhage → Uterine inversion → Retained placenta → Postpartum collapse. All four are <b>post-delivery emergencies</b> with overlapping etiologies — PPH is the unifying thread, and the other three (especially inversion and retained placenta) are also <b>causes of PPH</b>.</div>
+  </section>
+
+  <section id="s2">
+    <h3 class="sec"><span class="ball">2</span> Postpartum Hemorrhage — Definition &amp; Types</h3>
+
     <div class="keydef">
       <b>Postpartum hemorrhage (PPH):</b> Blood loss following birth exceeding <b>500 ml following vaginal delivery</b> or <b>1000 ml following cesarean section</b> with manifestation of hypovolemia.
     </div>
@@ -1620,14 +1702,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <b>The 24-hour boundary is the key clinical pivot.</b> Primary PPH is the <b>acute life-threatening</b> emergency (atonic PPH, trauma, retained tissue) requiring resuscitation <i>now</i>. Secondary PPH is the <b>subacute infection/retention</b> problem (retained placental remnants, sepsis, choriocarcinoma) — same volume, different timeframe, different workup.
     </div>
 
-    <div class="note">Volume thresholds (500 ml vaginal / 1000 ml CS) are <b>classical</b> definitions. In practice, PPH is also diagnosed when bleeding causes <b>hemodynamic compromise</b> (tachycardia, hypotension) regardless of absolute volume — <i>any</i> blood loss making the mother unstable is PPH.
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">3 Primary PPH — Etiology (the &quot;4 T’s&quot;) &amp;amp; Risk Factors</h3>
-  </div>
-  <div class="cbd">
+    <div class="note">Volume thresholds (500 ml vaginal / 1000 ml CS) are <b>classical</b> definitions. In practice, PPH is also diagnosed when bleeding causes <b>hemodynamic compromise</b> (tachycardia, hypotension) regardless of absolute volume — <i>any</i> blood loss making the mother unstable is PPH.</div>
+  </section>
+
+  <section id="s3">
+    <h3 class="sec"><span class="ball">3</span> Primary PPH — Etiology (the "4 T’s") &amp; Risk Factors</h3>
+
     <h4 class="sub">The "Four T’s" of PPH</h4>
     <div class="grid-2">
       <div class="card">
@@ -1675,13 +1755,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       </div>
     </div>
     <p style="font-size:12px;color:#64748B"><i>All 13 risk factors preserved verbatim from source. The "13" count is one more than the textbook’s 4 T’s + 12 listed; here the 13th is "General anesthesia" (a separate item in the source list).</i></p>
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">4 Primary PPH — Diagnosis &amp;amp; Prevention</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <section id="s4">
+    <h3 class="sec"><span class="ball">4</span> Primary PPH — Diagnosis &amp; Prevention</h3>
+
     <h4 class="sub">Diagnosis (clinical)</h4>
     <div class="grid-3">
       <div class="card">
@@ -1733,13 +1811,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
           <li><b>Careful observation in the fourth stage of labor (1-2 hours postpartum)</b></li>
         </ul>
       </div>
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">5 Management of Atonic PPH</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <section id="s5">
+    <h3 class="sec"><span class="ball">5</span> Management of Atonic PPH</h3>
+
     <div class="danger">
       <b>FIRST:</b> <b>Intravenous (IV) fluids, blood, and blood products should be given rapidly to prevent shock.</b> Every minute of resuscitation buys time for the definitive treatment to work — start two large-bore IVs, type &amp; crossmatch, call for help.
     </div>
@@ -1818,14 +1895,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <h4 class="sub">Step 5 — Medical devices (balloon tamponade)</h4>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Uterine balloon tamponade using <b>Sengstaken–Blakemore tube or Bakri balloon</b> can stop postpartum hemorrhage."</p>
 
-    <div class="anchor"><b>Step-wise approach to atonic PPH (mnemonic — "4 + 1"):</b> <b>(1)</b> Resuscitate (IV/blood) · <b>(2)</b> Massage + bimanual compression · <b>(3)</b> Aortic compression if severe · <b>(4)</b> Medications (oxytocin → ergometrine → carboprost → misoprostol) · <b>(+1)</b> Surgery (B-Lynch → artery ligation → hysterectomy) <i>or</i> balloon tamponade (Bakri / Sengstaken-Blakemore).
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">6 Traumatic PPH · Complications · Secondary PPH</h3>
-  </div>
-  <div class="cbd">
+    <div class="anchor"><b>Step-wise approach to atonic PPH (mnemonic — "4 + 1"):</b> <b>(1)</b> Resuscitate (IV/blood) · <b>(2)</b> Massage + bimanual compression · <b>(3)</b> Aortic compression if severe · <b>(4)</b> Medications (oxytocin → ergometrine → carboprost → misoprostol) · <b>(+1)</b> Surgery (B-Lynch → artery ligation → hysterectomy) <i>or</i> balloon tamponade (Bakri / Sengstaken-Blakemore).</div>
+  </section>
+
+  <section id="s6">
+    <h3 class="sec"><span class="ball">6</span> Traumatic PPH · Complications · Secondary PPH</h3>
+
     <h4 class="sub">Management of traumatic PPH</h4>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Bleeding caused by traumatic causes should be managed by surgical repair. When there is bleeding due to uterine rupture a repair or hysterectomy can be performed."</p>
 
@@ -1868,13 +1943,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <h5>Treatment</h5>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Treatment of the cause."</p>
     <p style="font-size:12.5px;color:#64748B"><i>The source’s treatment-of-secondary-PPH entry is one line: "Treatment of the cause." Diagnosis-specific interventions (evacuation of retained tissue, antibiotics for sepsis, chemotherapy for choriocarcinoma, repositioning for inversion) are implied.</i></p>
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">7 Uterine Inversion</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <section id="s7">
+    <h3 class="sec"><span class="ball">7</span> Uterine Inversion</h3>
+
     <div class="keydef">
       <b>Uterine inversion:</b> <b>Collapse of the fundus into the uterine cavity.</b> <b>Uterus is turned inside outward.</b>
     </div>
@@ -1989,13 +2062,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <li><b>Fibroid polyp</b></li>
     </ul>
     <p style="font-size:12.5px;color:#64748B"><i>Source differential diagnosis is two items; both preserved verbatim. In practice, the key is whether the mass has the <b>uterine body attached</b> (inversion) or is a separate pedunculated mass (fibroid) / vaginal-wall descent (prolapse).</i></p>
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">8 Retained Placenta &amp;amp; Postpartum Collapse</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <section id="s8">
+    <h3 class="sec"><span class="ball">8</span> Retained Placenta &amp; Postpartum Collapse</h3>
+
     <h4 class="sub">A. Retained placenta</h4>
 
     <div class="keydef">
@@ -2106,14 +2177,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <h5>Management</h5>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"<b>Cardiopulmonary resuscitation (CPR) then treatment of the cause.</b> If there is no response within <b>5 minutes of maternal collapse during pregnancy, delivery should be done to assist maternal resuscitation. This should be achieved within 5 minutes of the collapse</b>."</p>
 
-    <div class="pearl"><b>The "5-minute rule" for in-pregnancy collapse:</b> If no response to CPR within 5 minutes, perform an <b>emergency perimortem cesarean section</b>. The rationale: the gravid uterus compresses the IVC, preventing effective cardiac output — emptying the uterus restores venous return. The fetus is essentially a bystander benefit; the operation is for the mother.
-  </div>
-</div><div class="card" style="border-left-color:#1a237e">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1a237e"></span>
-    <h3 class="cttl">9 Student Activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
+    <div class="pearl"><b>The "5-minute rule" for in-pregnancy collapse:</b> If no response to CPR within 5 minutes, perform an <b>emergency perimortem cesarean section</b>. The rationale: the gravid uterus compresses the IVC, preventing effective cardiac output — emptying the uterus restores venous return. The fetus is essentially a bystander benefit; the operation is for the mother.</div>
+  </section>
+
+  <section id="s9">
+    <h3 class="sec"><span class="ball">9</span> Student Activity · Questions · References</h3>
+
     <h4 class="sub">Student activity</h4>
     <details open>
       <summary>Illustrative diagrams of PPH and collapse (tutor-led)</summary>
@@ -2152,36 +2221,58 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
     <h4 class="sub">End of Topic 36</h4>
     <p style="text-align:center;margin-top:14px"><a class="gf-link" href="https://forms.gle/DH4XFpZ7vchmqPCt5" target="_blank" rel="noopener">📝 Take the Topic 36 Self-Assessment Quiz</a></p>
-  </div>
-</div>
-  </div>
-</div>
+  </section>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#0d47a1">
-    <h2 class="topic-ttl">Amniotic Fluid Embolism</h2>
+  <footer>
+    <p>Topic 36 — Complications of the Third Stage of Labor · Source: <i>Book Obstetrics 2025-2026</i>, p. 190-<span class="ball">10</span>9 sections · 4 source visuals · 0 external visuals · <a href="https://forms.gle/DH4XFpZ7vchmqPCt5" target="_blank" rel="noopener">Self-assessment form</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="37_amniotic_fluid_embolism">
+<div class="sec-hdr" style="background:#0d47a1"><h2>Amniotic Fluid Embolism</h2></div>
+<div class="sec-bd" style="background:#e3f2fd">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 37 — Amniotic Fluid Embolism</title>
+
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Topic 37 — Amniotic Fluid Embolism</h1>
+    <div class="sub">Anaphylactoid syndrome of pregnancy · Catastrophic obstetric emergency</div>
+    <div class="meta">
+      <span class="chip">📖 Book source: p. 203–204 (2 pages)</span>
+      <span class="chip">🟢 Source visuals: 0 (text-only chapter)</span>
+      <span class="chip">🔴 Generated diagrams: 2 (mechanism + 3-pillar management)</span>
+      <span class="chip">📌 8 content sections preserved</span>
+      <span class="chip">🔍 Entry → Anaphylaxis → Pulm. collapse → DIC</span>
+    </div>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">1 Intended Learning Outcomes (ILOs)</h3>
-  </div>
-  <div class="cbd">
+
+  
+
+  <section id="s1">
+    <h3 class="sec"><span class="ball">1</span> Intended Learning Outcomes (ILOs)</h3>
     <p>At the end of this chapter, the student should be able to:</p>
     <ol>
       <li><b>To understand the definition of amniotic fluid embolism</b></li>
       <li><b>To be able to explain the possible etiologies of this obstetric catastrophe</b></li>
       <li><b>To be able to describe the clinical picture and management of amniotic fluid embolism</b></li>
     </ol>
-    <div class="note"><b>Source wording preserved verbatim.</b> The source uses "obstetric catastrophe" and "obstetric serious problem" to describe AFE — a deliberate emphasis on the severity and high mortality.
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">2 Definition</h3>
-  </div>
-  <div class="cbd">
+    <div class="note"><b>Source wording preserved verbatim.</b> The source uses "obstetric catastrophe" and "obstetric serious problem" to describe AFE — a deliberate emphasis on the severity and high mortality.</div>
+  </section>
+
+  <section id="s2">
+    <h3 class="sec"><span class="ball">2</span> Definition</h3>
+
     <div class="keydef">
       <b>Amniotic fluid embolism (AFE):</b> <b>It is a condition in which, fetal fluid, tissue, or debris enters the maternal circulation via the placental bed and causes acute anaphylaxis.</b>
     </div>
@@ -2193,14 +2284,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <li>Despite the name, it is <b>NOT a true embolism</b> in the classical sense — the dominant mechanism is <b>anaphylaxis-like reaction</b> to fetal antigens (similar to anaphylactic shock) combined with mechanical obstruction of pulmonary vessels by fetal debris.</li>
     </ul>
 
-    <div class="pearl"><b>Why "via the placental bed"?</b> The placenta is a high-flow, low-resistance vascular interface between mother and fetus. Disruption of this barrier (e.g., by placental abruption, uterine trauma, or operative delivery) is the gateway for fetal material to enter the maternal venous circulation.
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">3 Conditions Allowing Amniotic Fluid to Enter the Maternal Circulation</h3>
-  </div>
-  <div class="cbd">
+    <div class="pearl"><b>Why "via the placental bed"?</b> The placenta is a high-flow, low-resistance vascular interface between mother and fetus. Disruption of this barrier (e.g., by placental abruption, uterine trauma, or operative delivery) is the gateway for fetal material to enter the maternal venous circulation.</div>
+  </section>
+
+  <section id="s3">
+    <h3 class="sec"><span class="ball">3</span> Conditions Allowing Amniotic Fluid to Enter the Maternal Circulation</h3>
+
     <p>Amniotic fluid may enter the maternal circulation in the following conditions (verbatim from source):</p>
 
     <ol>
@@ -2218,14 +2307,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <h4 class="sub">Potentiation by meconium</h4>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"The above factors also lead to <b>fetal distress → meconium stained amniotic fluid → this potentiate the toxic nature of amniotic fluid and worsen the condition.</b>"</p>
 
-    <div class="danger"><b>Meconium = potentiator, not initiator.</b> Meconium-stained AF carries vasoactive substances (bile acids, free fatty acids) and particulate matter that amplify the anaphylactoid reaction. Fetal distress is therefore both a consequence of the entry conditions and a worsening factor once AF enters the circulation.
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">4 Pathophysiology Cascade</h3>
-  </div>
-  <div class="cbd">
+    <div class="danger"><b>Meconium = potentiator, not initiator.</b> Meconium-stained AF carries vasoactive substances (bile acids, free fatty acids) and particulate matter that amplify the anaphylactoid reaction. Fetal distress is therefore both a consequence of the entry conditions and a worsening factor once AF enters the circulation.</div>
+  </section>
+
+  <section id="s4">
+    <h3 class="sec"><span class="ball">4</span> Pathophysiology Cascade</h3>
+
     <p>Once amniotic fluid enters the maternal circulation, the following pathophysiologic cascade unfolds:</p>
 
     <div class="ext-viz">
@@ -2250,11 +2337,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </linearGradient>
   </defs>
 
-  
+  <!-- Title -->
   <text x="390" y="28" text-anchor="middle" font-size="18" font-weight="800" fill="#7F1D1D">Pathophysiology Cascade of Amniotic Fluid Embolism</text>
   <text x="390" y="48" text-anchor="middle" font-size="11" fill="#64748B" font-style="italic">Fetal fluid / tissue / debris → maternal anaphylactoid reaction</text>
 
-  
+  <!-- Step 1: Entry -->
   <rect x="220" y="72" width="340" height="64" rx="10" fill="url(#gg)" stroke="#7F1D1D" stroke-width="2"/>
   <text x="390" y="96" text-anchor="middle" font-size="14" font-weight="800" fill="#7F1D1D">STEP 1 — Entry of AF into maternal veins</text>
   <text x="390" y="115" text-anchor="middle" font-size="11" fill="#1E293B">via placental bed (↑ pressure OR opened veins)</text>
@@ -2262,7 +2349,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="390" y1="136" x2="390" y2="160" stroke="#7F1D1D" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  
+  <!-- Step 2: Anaphylaxis -->
   <rect x="220" y="162" width="340" height="62" rx="10" fill="url(#gg)" stroke="#7F1D1D" stroke-width="2"/>
   <text x="390" y="186" text-anchor="middle" font-size="14" font-weight="800" fill="#7F1D1D">STEP 2 — Acute anaphylactoid reaction</text>
   <text x="390" y="205" text-anchor="middle" font-size="11" fill="#1E293B">Mast-cell degranulation · complement activation</text>
@@ -2270,7 +2357,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="390" y1="224" x2="390" y2="248" stroke="#7F1D1D" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  
+  <!-- Step 3: Pulmonary vascular obstruction -->
   <rect x="200" y="250" width="380" height="68" rx="10" fill="url(#gg2)" stroke="#B91C1C" stroke-width="2"/>
   <text x="390" y="274" text-anchor="middle" font-size="14" font-weight="800" fill="#7F1D1D">STEP 3 — Pulmonary vascular obstruction</text>
   <text x="390" y="293" text-anchor="middle" font-size="11" fill="#1E293B">Particulate matter (squames, lanugo, vernix) lodges</text>
@@ -2278,7 +2365,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="390" y1="318" x2="390" y2="342" stroke="#7F1D1D" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  
+  <!-- Step 4: Core pulmonale -->
   <rect x="220" y="344" width="340" height="62" rx="10" fill="url(#gg2)" stroke="#B91C1C" stroke-width="2"/>
   <text x="390" y="368" text-anchor="middle" font-size="14" font-weight="800" fill="#7F1D1D">STEP 4 — Acute core pulmonale</text>
   <text x="390" y="387" text-anchor="middle" font-size="11" fill="#1E293B">Abrupt ↑ RV afterload · ↓ LV preload</text>
@@ -2286,7 +2373,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="390" y1="406" x2="390" y2="430" stroke="#7F1D1D" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  
+  <!-- Step 5: Hypoxia + CHF -->
   <rect x="200" y="432" width="380" height="68" rx="10" fill="url(#gg3)" stroke="#7F1D1D" stroke-width="2.5"/>
   <text x="390" y="456" text-anchor="middle" font-size="14" font-weight="800" fill="white">STEP 5 — Abrupt hypoxia &amp; cardiogenic shock</text>
   <text x="390" y="475" text-anchor="middle" font-size="11.5" fill="white">V/Q mismatch · ↓ cardiac output · pulmonary edema</text>
@@ -2294,7 +2381,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="390" y1="500" x2="390" y2="524" stroke="#7F1D1D" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  
+  <!-- Step 6: DIC -->
   <rect x="220" y="526" width="340" height="68" rx="10" fill="url(#gg3)" stroke="#7F1D1D" stroke-width="2.5"/>
   <text x="390" y="550" text-anchor="middle" font-size="14" font-weight="800" fill="white">STEP 6 — Disseminated Intravascular Coagulation</text>
   <text x="390" y="569" text-anchor="middle" font-size="11" fill="white">Tissue factor from AF triggers systemic coagulation</text>
@@ -2302,13 +2389,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="390" y1="594" x2="390" y2="618" stroke="#7F1D1D" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  
+  <!-- Step 7: Coma + death -->
   <rect x="200" y="620" width="380" height="76" rx="10" fill="#7F1D1D" stroke="#450A0A" stroke-width="2.5"/>
   <text x="390" y="645" text-anchor="middle" font-size="14" font-weight="800" fill="white">STEP 7 — Deep coma → death</text>
   <text x="390" y="665" text-anchor="middle" font-size="12" fill="white">Hypoxic brain injury · multi-organ failure</text>
   <text x="390" y="685" text-anchor="middle" font-size="13" font-weight="800" fill="#FECACA">Immediate death in &gt;50% of cases</text>
 
-  
+  <!-- Side annotation -->
   <rect x="600" y="260" width="160" height="350" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5" stroke-dasharray="4,3"/>
   <text x="680" y="282" text-anchor="middle" font-size="11" font-weight="800" fill="#7F1D1D">CLINICAL CLUES</text>
   <text x="610" y="305" font-size="10" fill="#1E293B">• Sudden dyspnea / cyanosis</text>
@@ -2325,7 +2412,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
   <line x1="600" y1="490" x2="600" y2="490" stroke="none"/>
 
-  
+  <!-- Bottom box: where to detect it -->
   <rect x="20" y="710" width="380" height="248" rx="8" fill="#F0F9FF" stroke="#0EA5E9" stroke-width="1.5"/>
   <text x="210" y="734" text-anchor="middle" font-size="12" font-weight="800" fill="#0C4A6E">INVESTIGATIONS (source p. 203)</text>
   <text x="32" y="758" font-size="10.5" fill="#1E293B"><tspan font-weight="700">1.</tspan> ABG, serum electrolytes,</text>
@@ -2364,13 +2451,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
     <h4 class="sub">Verbatim clinical-picture description (from source)</h4>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"Immediately or shortly after difficult delivery: <b>Respiratory distress (RDS) (severe dyspnea and cyanosis), circulatory collapse (extensive pulmonary vascular obstruction due to the amniotic fluid particulate matter → acute core pulmonale → abrupt hypoxia and CHF.</b> <b>DIC → bleeding from genital tract and all other sites of trauma, deep coma and immediate death in more than 50% of cases.</b>"</p>
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">8 Risk Factors</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <section id="s5">
+    <h3 class="sec"><span class="ball">8</span> Risk Factors</h3>
+
     <p>The source lists the following risk factors (verbatim):</p>
 
     <div class="card">
@@ -2420,14 +2505,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       </div>
     </div>
 
-    <div class="warn"><b>Source caveat:</b> AFE can occur in <b>any</b> pregnancy — most cases occur in women with NO identifiable risk factor. The list above describes <i>statistical associations</i>, not deterministic causes. A "low-risk" patient is not protected.
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">9 Clinical Picture</h3>
-  </div>
-  <div class="cbd">
+    <div class="warn"><b>Source caveat:</b> AFE can occur in <b>any</b> pregnancy — most cases occur in women with NO identifiable risk factor. The list above describes <i>statistical associations</i>, not deterministic causes. A "low-risk" patient is not protected.</div>
+  </section>
+
+  <section id="s6">
+    <h3 class="sec"><span class="ball">9</span> Clinical Picture</h3>
+
     <p>Source: "Immediately or shortly after difficult delivery:"</p>
 
     <h4 class="sub">A. Respiratory distress (RDS)</h4>
@@ -2476,14 +2559,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <td>Bleeding from all sites · low fibrinogen</td>
       </tr>
     </table>
-    <div class="anchor"><b>Mnemonic: "H-C-D" — Hypoxia, Collapse, DIC.</b> Any 2 of 3 within minutes of delivery should trigger AFE protocol.
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">10 Investigations</h3>
-  </div>
-  <div class="cbd">
+    <div class="anchor"><b>Mnemonic: "H-C-D" — Hypoxia, Collapse, DIC.</b> Any 2 of 3 within minutes of delivery should trigger AFE protocol.</div>
+  </section>
+
+  <section id="s7">
+    <h3 class="sec"><span class="ball">10</span> Investigations</h3>
+
     <p>Source investigations list (verbatim):</p>
     <ol>
       <li><b>Arterial blood gas, serum electrolytes, calcium and magnesium levels, coagulation profile, and complete blood count.</b></li>
@@ -2543,14 +2624,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <p style="font-size:11.5px;color:#475569;margin-top:6px"><i>This is the only histopathologically confirmatory test. In survivors, the diagnosis remains presumptive (clinical + lab + imaging).</i></p>
     </div>
 
-    <div class="pearl"><b>No test confirms AFE in real time.</b> The clinical triad (hypoxia + collapse + DIC) within minutes of a difficult delivery, in the absence of another clear cause, is the working definition used to start AFE resuscitation.
-  </div>
-</div><div class="card" style="border-left-color:#0d47a1">
-  <div class="card-hd">
-    <span class="cdot" style="background:#0d47a1"></span>
-    <h3 class="cttl">11 Management · Student Activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
+    <div class="pearl"><b>No test confirms AFE in real time.</b> The clinical triad (hypoxia + collapse + DIC) within minutes of a difficult delivery, in the absence of another clear cause, is the working definition used to start AFE resuscitation.</div>
+  </section>
+
+  <section id="s8">
+    <h3 class="sec"><span class="ball">11</span> Management · Student Activity · Questions · References</h3>
+
     <h4 class="sub">A. Management (verbatim from source p. 204)</h4>
     <p style="background:#F8FAFC;padding:8px 12px;border-left:3px solid #94A3B8;font-style:italic">"In ICU: Cardiopulmonary support. <b>Emergent delivery is required for both fetal and maternal benefits.</b> Management of DIC. Corticosteroids. Heparin. Monitoring of different organs."</p>
 
@@ -2581,7 +2660,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <text x="390" y="30" text-anchor="middle" font-size="16" font-weight="800" fill="#7F1D1D">The 3 Pillars of AFE Resuscitation</text>
   <text x="390" y="48" text-anchor="middle" font-size="11" fill="#64748B" font-style="italic">All three start simultaneously · supported by corticosteroids, heparin, multi-organ monitoring</text>
 
-  
+  <!-- Pillar 1 -->
   <rect x="40" y="80" width="220" height="240" rx="14" fill="url(#pillar)" stroke="#7F1D1D" stroke-width="2.5"/>
   <text x="150" y="110" text-anchor="middle" font-size="32" font-weight="800" fill="#7F1D1D">1</text>
   <text x="150" y="135" text-anchor="middle" font-size="13" font-weight="800" fill="#7F1D1D">CARDIOPULMONARY</text>
@@ -2596,7 +2675,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <text x="150" y="290" text-anchor="middle" font-size="10" font-weight="700" fill="#1E293B">Source: p. 204 line 1</text>
   <text x="150" y="305" text-anchor="middle" font-size="9" fill="#475569">"Cardiopulmonary support"</text>
 
-  
+  <!-- Pillar 2 -->
   <rect x="280" y="80" width="220" height="240" rx="14" fill="url(#pillar)" stroke="#7F1D1D" stroke-width="2.5"/>
   <text x="390" y="110" text-anchor="middle" font-size="32" font-weight="800" fill="#7F1D1D">2</text>
   <text x="390" y="135" text-anchor="middle" font-size="13" font-weight="800" fill="#7F1D1D">DIC</text>
@@ -2611,7 +2690,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <text x="390" y="290" text-anchor="middle" font-size="10" font-weight="700" fill="#1E293B">Source: p. 204 line 3 + 5</text>
   <text x="390" y="305" text-anchor="middle" font-size="9" fill="#475569">"Management of DIC. Heparin."</text>
 
-  
+  <!-- Pillar 3 -->
   <rect x="520" y="80" width="220" height="240" rx="14" fill="url(#pillar)" stroke="#7F1D1D" stroke-width="2.5"/>
   <text x="630" y="110" text-anchor="middle" font-size="32" font-weight="800" fill="#7F1D1D">3</text>
   <text x="630" y="135" text-anchor="middle" font-size="13" font-weight="800" fill="#7F1D1D">EMERGENT</text>
@@ -2681,35 +2760,71 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
     <h4 class="sub">End of Topic 37</h4>
     <p style="text-align:center;margin-top:14px"><a class="gf-link" href="https://forms.gle/Qdr6qfyCTKNZCGFD6" target="_blank" rel="noopener">📝 Take the Topic 37 Self-Assessment Quiz</a></p>
-  </div>
-</div>
-  </div>
-</div>
+  </section>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#006064">
-    <h2 class="topic-ttl">Normal &amp; Abnormal Puerperium</h2>
+  <footer>
+    <p>Topic 37 — Amniotic Fluid Embolism · Source: <i>Book Obstetrics 2025-2026</i>, p. 203–<span class="ball">12</span>8 sections · 0 source visuals · 2 generated diagrams · <a href="https://forms.gle/Qdr6qfyCTKNZCGFD6" target="_blank" rel="noopener">Self-assessment form</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="38_normal_and_abnormal_puerperium">
+<div class="sec-hdr" style="background:#006064"><h2>Normal & Abnormal Puerperium</h2></div>
+<div class="sec-bd" style="background:#e0f7fa">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 38 — Normal and Abnormal Puerperium</title>
+
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Topic 38 — Normal and Abnormal Puerperium</h1>
+    <div class="sub">The 6-week (42-day) postpartum period: genital &amp; systemic involution, routine care, and recognition of subinvolution and puerperal pyrexia</div>
+    <div class="meta">
+      <span class="chip">📄 Chapter · p. 205-208</span>
+      <span class="chip">🎯 3 ILOs</span>
+      <span class="chip">🖼️ 1 source image</span>
+      <span class="chip">📑 8 sections</span>
+    </div>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">1 ILOs of this chapter</h3>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">§1</span> ILOs of this chapter</a>
+      <a href="#s2"><span class="num">§2</span> Definition of puerperium</a>
+      <a href="#s3"><span class="num">§3</span> Genital tract changes</a>
+      <a href="#s4"><span class="num">§4</span> General body changes</a>
+      <a href="#s5"><span class="num">§5</span> Source image — Uterine involution</a>
+      <a href="#s6"><span class="num">§6</span> Management of normal puerperium</a>
+      <a href="#s7"><span class="num">§7</span> Abnormal puerperium · Subinvolution &amp; Pyrexia</a>
+      <a href="#s8"><span class="num">§8</span> Activity · Questions · References</a>
+    </div>
   </div>
-  <div class="cbd">
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h3 class="sec"><span class="ball">1</span> ILOs of this chapter</h3>
     <p>By the end of this chapter the student should be able to:</p>
     <ol>
       <li>Understand the definition of normal and abnormal puerperium</li>
       <li>Describe the genital and non genital body changes during puerperium</li>
       <li>Explain the etiology of both uterine subinvolution and puerperal pyrexia and their management</li>
     </ol>
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">2 Definition of the Puerperium</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §2 Definition -->
+  <section id="s2">
+    <h3 class="sec"><span class="ball">2</span> Definition of the Puerperium</h3>
     <div class="keydef">
       <p><strong>Puerperium</strong> is the time from the delivery till <strong>6 weeks (42 days) post-partum</strong>, during which most of the changes of pregnancy, labor, and delivery have resolved and the body has reverted to the non-pregnant state.</p>
     </div>
@@ -2718,13 +2833,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </div>
     <div class="anchor">
       <strong>The 6 W's of puerperium recall:</strong> <strong>W</strong>omb involution (uterus back to 60-80 g), <strong>W</strong>ound healing (cervix, vagina, perineum), <strong>W</strong>eaning preparation (lactation physiology), <strong>W</strong>hite striae (striae albicans), <strong>W</strong>eight loss (fluid + uterine), <strong>W</strong>atch for sepsis (puerperal pyrexia rule).
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">3 Genital tract changes</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §3 Genital tract changes -->
+  <section id="s3">
+    <h3 class="sec"><span class="ball">3</span> Genital tract changes</h3>
     <p>Five organ systems undergo characteristic involutional changes during the puerperium:</p>
 
     <h4 class="sub">1. Uterus</h4>
@@ -2798,13 +2912,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <div style="font-size:11px;color:#134E4A;font-weight:800;letter-spacing:0.05em;">OVARY</div>
         <div style="font-size:12px;color:#1E293B;margin-top:4px;">Menses 1.5-2 mo<br>(non-lactating)</div>
       </div>
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">4 General body changes</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §4 General body changes -->
+  <section id="s4">
+    <h3 class="sec"><span class="ball">4</span> General body changes</h3>
     <p>Puerperal changes extend well beyond the genital tract. Every system mentioned below must be reviewed in the daily ward round.</p>
 
     <table>
@@ -2867,13 +2980,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
     <div class="note">
       <strong>After-pains are not a complication — they are a sign of effective involution.</strong> Each painful contraction is the uterus shrinking. They are typically more severe in multiparous women (less uterine muscle tone) and worsen during suckling (oxytocin surge). Reassurance + simple analgesia is the appropriate response.
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">5 Source image — Uterine involution</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §5 Source image -->
+  <section id="s5">
+    <h3 class="sec"><span class="ball">5</span> Source image — Uterine involution</h3>
     <p>The source PDF (page 1) contains one anatomical figure illustrating the time course of uterine involution during the early puerperium. It depicts five nested dashed-line outlines of the uterus within a female pelvic-anatomy drawing, showing the progressive shrinkage from delivery through Day 9.</p>
 
     <div class="src-viz">
@@ -2891,13 +3003,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
     <div class="anchor">
       <strong>Clinical use:</strong> Daily fundal-height measurement in the first 10 postpartum days is the bedside equivalent of this diagram. A fundus that fails to descend (or that is boggy/tender) = suspect retained products, infection, or both — the two top causes of subinvolution in §7.
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">6 Management of normal puerperium</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §6 Management of normal puerperium -->
+  <section id="s6">
+    <h3 class="sec"><span class="ball">6</span> Management of normal puerperium</h3>
     <p>The 11 pillars of routine postpartum care, all stated verbatim in the source. Every item should appear in the discharge checklist.</p>
 
     <div class="step"><span class="stepnum">1</span><strong>Vital signs</strong> — frequent observation is done after delivery.</div>
@@ -2926,13 +3037,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
 
     <div class="note">
       <strong>The 11-pillar discharge checklist is the minimum, not the maximum.</strong> Add: rubella vaccine if non-immune, tetanus toxoid if wound care is needed, family-planning counseling (item 11), screening for postnatal depression, and scheduled follow-up at 1 week and 6 weeks.
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">7 Abnormal puerperium · Subinvolution &amp;amp; Puerperal pyrexia</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §7 Abnormal puerperium: Subinvolution + Puerperal pyrexia -->
+  <section id="s7">
+    <h3 class="sec"><span class="ball">7</span> Abnormal puerperium · Subinvolution &amp; Puerperal pyrexia</h3>
+
     <h4 class="sub">A. Uterine sub-involution</h4>
     <div class="keydef">
       <p><strong>Sub-involution:</strong> The uterus did not regress to its pre-pregnancy size by the end of the puerperium.</p>
@@ -3040,13 +3151,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         </tr>
       </tbody>
     </table>
-  </div>
-</div><div class="card" style="border-left-color:#006064">
-  <div class="card-hd">
-    <span class="cdot" style="background:#006064"></span>
-    <h3 class="cttl">8 Student activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §8 Student activity + Questions + References -->
+  <section id="s8">
+    <h3 class="sec"><span class="ball">8</span> Student activity · Questions · References</h3>
+
     <details class="click-card blue" open>
       <summary>📘 Student activity</summary>
       <div class="body">
@@ -3124,23 +3234,63 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     <div class="footer">
       <p>Topic <span class="ball">9</span>Normal and Abnormal Puerperium · <a href="https://forms.gle/khJQEkyMMA64rRV28" target="_blank" rel="noopener">Self-assessment form</a></p>
       <p>Generated from Book Obstetrics 2025-2026, p. 205-<span class="ball">10</span>Source visuals embedded with attribution · No external images used</p>
-  </div>
+    </div>
+  </section>
+
 </div>
-  </div>
+</body>
+</html>
+
+</div></div>
+<div class="sec" id="39_puerperal_sepsis">
+<div class="sec-hdr" style="background:#1b5e20"><h2>Puerperal Sepsis</h2></div>
+<div class="sec-bd" style="background:#e8f5e9">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 39 — Puerperal Sepsis</title>
+
+</head>
+<body>
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="chapter-tag">Chapter 39</div>
+  <h1>Puerperal Sepsis</h1>
+  <p class="subtitle">Definition · Causative Organisms · Mode of Infection · Predisposing Factors · Sites & Pathology · Diagnosis · Complications · Investigations · Prevention · Treatment</p>
 </div>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#1b5e20">
-    <h2 class="topic-ttl">Puerperal Sepsis</h2>
-  </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s1</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+<!-- ═══════════════════════════════════════════════════════════════════════
+     TABLE OF CONTENTS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="toc">
+  <h3>Table of Contents</h3>
+  <ol class="toc-grid">
+    <li><a href="#s1">ILOs of This Chapter</a></li>
+    <li><a href="#s2">Definition</a></li>
+    <li><a href="#s3">Causative Organisms</a></li>
+    <li><a href="#s4">Mode of Infection</a></li>
+    <li><a href="#s5">Predisposing Factors</a></li>
+    <li><a href="#s6">Sites of Infection & Pathology</a></li>
+    <li><a href="#s7">Diagnosis</a></li>
+    <li><a href="#s8">Complications</a></li>
+    <li><a href="#s9">Investigations</a></li>
+    <li><a href="#s10">Prevention (3 Phases)</a></li>
+    <li><a href="#s11">Treatment</a></li>
+    <li><a href="#s12">Student Activity · Questions · References</a></li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §1  ILOs
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s1">
+  <div class="section-head">
     <div class="section-num">1</div>
     <div class="section-title">ILOs of This Chapter</div>
   </div>
@@ -3151,13 +3301,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <li>To be able to describe the management and prevention of puerperal sepsis</li>
     </ul>
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s2</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §2  DEFINITION
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s2">
+  <div class="section-head">
     <div class="section-num">2</div>
     <div class="section-title">Definition</div>
   </div>
@@ -3167,18 +3317,18 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-pearl">
     <span class="pill pill-pearl">CLINICAL PEARL</span> "Puerperal sepsis" is specifically a <em>genital tract</em> infection — distinct from generalised sepsis which can originate elsewhere. The timing window is broad: <strong>during</strong> labor, <strong>after</strong> labor, or <strong>after</strong> abortion.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s3</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §3  CAUSATIVE ORGANISMS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s3">
+  <div class="section-head">
     <div class="section-num">3</div>
     <div class="section-title">Causative Organisms</div>
   </div>
 
-  
+  <!-- Aerobic -->
   <div class="card card-green">
     <div class="card-title">Aerobic Organisms</div>
     <div class="grid-2">
@@ -3201,7 +3351,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </div>
   </div>
 
-  
+  <!-- Anaerobic -->
   <div class="card card-green">
     <div class="card-title">Anaerobic Organisms</div>
     <div class="grid-2">
@@ -3224,13 +3374,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-anchor">
     <span class="pill pill-anchor">MEMORY ANCHOR</span> Remember <strong>A-G-A</strong>: <strong>A</strong>erobic Gram+ / <strong>G</strong>ram− / <strong>A</strong>naerobic Gram+ (commonest) + Gram− (Cl. Welchii, Bacteroids). Anaerobic streptococci = the single most common organism.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s4</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §4  MODE OF INFECTION
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s4">
+  <div class="section-head">
     <div class="section-num">4</div>
     <div class="section-title">Mode of Infection</div>
   </div>
@@ -3249,13 +3399,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-pearl">
     <span class="pill pill-pearl">CLINICAL PEARL</span> The endogenous pathway is the more insidious: organisms that were harmless commensals <em>before</em> delivery become virulent once devitalised tissue (lacerations, retained products) provides a substrate.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s5</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §5  PREDISPOSING FACTORS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s5">
+  <div class="section-head">
     <div class="section-num">5</div>
     <div class="section-title">Predisposing Factors</div>
   </div>
@@ -3281,13 +3431,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-anchor">
     <span class="pill pill-anchor">MEMORY ANCHOR</span> Mnemonic <strong>P-P-I-L-M-R-I</strong>: <strong>P</strong>PROM → <strong>P</strong>rolonged labor → <strong>I</strong>nstrumental delivery → <strong>L</strong>acerations → <strong>M</strong>arked blood loss → <strong>R</strong>etained products → <strong>I</strong>mproper aseptic technique.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s6</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §6  SITES OF INFECTION & PATHOLOGY
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s6">
+  <div class="section-head">
     <div class="section-num">6</div>
     <div class="section-title">Sites of Infection & Pathology</div>
   </div>
@@ -3312,18 +3462,18 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-danger">
     <span class="pill pill-danger">DANGER</span> Blood spread can rapidly progress to septicemia → septic shock → multi-organ failure. Early recognition of secondary spread is critical.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s7</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §7  DIAGNOSIS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s7">
+  <div class="section-head">
     <div class="section-num">7</div>
     <div class="section-title">Diagnosis</div>
   </div>
 
-  
+  <!-- A — History -->
   <div class="card card-cyan">
     <div class="card-title">A — History: of Risk Factors</div>
     <p><strong>Symptoms:</strong> Appear shortly (48–72 hours) following labor or abortion.</p>
@@ -3335,7 +3485,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ol>
   </div>
 
-  
+  <!-- B — Examination -->
   <div class="card card-green">
     <div class="card-title">B — Examination</div>
     <ul>
@@ -3349,13 +3499,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-warn">
     <span class="pill pill-warn">WARN</span> The 48–72 hour window after labor/abortion is the classic presentation time. Any fever &gt; 38°C persisting for 24 hours in this window should raise immediate suspicion of puerperal sepsis.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s8</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §8  COMPLICATIONS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s8">
+  <div class="section-head">
     <div class="section-num">8</div>
     <div class="section-title">Complications</div>
   </div>
@@ -3385,13 +3535,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-pearl">
     <span class="pill pill-pearl">CLINICAL PEARL</span> <strong>Sheehan's syndrome</strong> = postpartum pituitary necrosis due to hemorrhage + hypotension + sepsis — remember the triad: hemorrhage + sepsis + hypotension.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s9</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §9  INVESTIGATIONS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s9">
+  <div class="section-head">
     <div class="section-num">9</div>
     <div class="section-title">Investigations</div>
   </div>
@@ -3410,18 +3560,18 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-note">
     <span class="pill pill-note">NOTE</span> Swab must cover <em>both</em> aerobic and anaerobic cultures — most cases are caused by anaerobic streptococci, which a standard aerobic-only culture would miss.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s10</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §10  PREVENTION (3 PHASES)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s10">
+  <div class="section-head">
     <div class="section-num">10</div>
     <div class="section-title">Prevention — 3 Phases</div>
   </div>
 
-  
+  <!-- Antenatal -->
   <div class="card card-green">
     <div class="card-title">Antenatal</div>
     <ul>
@@ -3431,7 +3581,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ul>
   </div>
 
-  
+  <!-- Intranatal -->
   <div class="card card-cyan">
     <div class="card-title">Intranatal</div>
     <ul>
@@ -3443,7 +3593,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ul>
   </div>
 
-  
+  <!-- Postnatal -->
   <div class="card card-blue">
     <div class="card-title">Postnatal</div>
     <ul>
@@ -3456,18 +3606,18 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-anchor">
     <span class="pill pill-anchor">MEMORY ANCHOR</span> Prevention follows a chronological triad: <strong>A</strong>ntenatal → <strong>I</strong>ntranatal → <strong>P</strong>ostnatal (A-I-P). Each phase has its own specific measures.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s11</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §11  TREATMENT
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s11">
+  <div class="section-head">
     <div class="section-num">11</div>
     <div class="section-title">Treatment</div>
   </div>
 
-  
+  <!-- General measures -->
   <div class="card card-green">
     <div class="card-title">General Measures</div>
     <ul>
@@ -3477,7 +3627,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ul>
   </div>
 
-  
+  <!-- Symptomatic -->
   <div class="card card-cyan">
     <div class="card-title">Symptomatic Treatment</div>
     <ul>
@@ -3486,13 +3636,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ul>
   </div>
 
-  
+  <!-- Observations -->
   <div class="card card-orange">
     <div class="card-title">Observations</div>
     <p>Pulse, temperature, blood pressure, vaginal bleeding, lochia, manifestations of DVT.</p>
   </div>
 
-  
+  <!-- Antibiotic therapy -->
   <div class="card card-red">
     <div class="card-title">Antibiotic Therapy</div>
     <ul>
@@ -3505,7 +3655,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </div>
   </div>
 
-  
+  <!-- Promotion of drainage -->
   <div class="card card-cyan">
     <div class="card-title">Promotion of Drainage</div>
     <ul>
@@ -3515,7 +3665,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ul>
   </div>
 
-  
+  <!-- Incision and drainage -->
   <div class="card card-red">
     <div class="card-title">Incision and Drainage of the Abscess</div>
     <ul>
@@ -3524,7 +3674,7 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </ul>
   </div>
 
-  
+  <!-- Treatment of complications -->
   <div class="card card-orange">
     <div class="card-title">Treatment of Complications</div>
     <ul>
@@ -3536,13 +3686,13 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
   <div class="callout callout-danger">
     <span class="pill pill-danger">DANGER</span> Failure to drain a pelvic/parametric abscess leads to ongoing sepsis despite antibiotics. Drainage is definitive — antibiotics alone are insufficient for abscess.
   </div>
-</div><div class="card" style="border-left-color:#1b5e20">
-  <div class="card-hd">
-    <span class="cdot" style="background:#1b5e20"></span>
-    <h3 class="cttl">s12</h3>
-  </div>
-  <div class="cbd">
-    <div class="section-head">
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     §12  STUDENT ACTIVITY · QUESTIONS · REFERENCES
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="section" id="s12">
+  <div class="section-head">
     <div class="section-num">12</div>
     <div class="section-title">Student Activity · Questions · References</div>
   </div>
@@ -3620,33 +3770,72 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       </ol>
     </div>
   </details>
-  </div>
-</div>
-  </div>
 </div>
 
-<div class="topic-section">
-  <div class="topic-hdr" style="background:#bf360c">
-    <h2 class="topic-ttl">Fetal Birth Injuries</h2>
+<!-- ═══════════════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="footer">
+  <p>Topic 39 — Puerperal Sepsis · Source: Book Obstetrics 2025-2026, pp. 209–<span class="ball">1</span>Generated by Hermes Agent</p>
+</div>
+
+</div><!-- /container -->
+</body>
+</html>
+</div></div>
+<div class="sec" id="44_fetal_birth_injuries">
+<div class="sec-hdr" style="background:#bf360c"><h2>Fetal Birth Injuries</h2></div>
+<div class="sec-bd" style="background:#fbe9e7">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Topic 44 — Fetal Birth Injuries</title>
+
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Topic 44 — Fetal Birth Injuries</h1>
+    <div class="sub">Trauma during delivery: causes, types, and management
+Source: Book Obstetrics 2025-2026, p. 225-227</div>
+    <div class="meta">
+      <span class="chip">Chapter · p. 225-227</span>
+      <span class="chip">2 ILOs</span>
+      <span class="chip">0 source images</span>
+      <span class="chip">8 sections</span>
+    </div>
   </div>
-  <div class="topic-body">
-    <div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">1 ILOs of this chapter</h3>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <div class="toc-grid">
+      <a href="#s1"><span class="num">§1</span> ILOs of this chapter</a>
+      <a href="#s2"><span class="num">§2</span> Causes of birth trauma</a>
+      <a href="#s3"><span class="num">§3</span> Types — Fractures</a>
+      <a href="#s4"><span class="num">§4</span> Types — Cephalohematomas</a>
+      <a href="#s5"><span class="num">§5</span> Nerve palsies</a>
+      <a href="#s6"><span class="num">§6</span> Sternomastoid tumors</a>
+      <a href="#s7"><span class="num">§7</span> Lacerations</a>
+      <a href="#s8"><span class="num">§8</span> Student activity · Questions · References</a>
+    </div>
   </div>
-  <div class="cbd">
+
+  <!-- §1 ILOs -->
+  <section id="s1">
+    <h3 class="sec"><span class="ball">1</span> ILOs of this chapter</h3>
     <ol>
       <li>To be able to explain the etiology of fetal injuries</li>
       <li>To be able to describe various forms of fetal injuries</li>
     </ol>
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">2 Causes of birth trauma</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §2 Causes -->
+  <section id="s2">
+    <h3 class="sec"><span class="ball">2</span> Causes of birth trauma</h3>
     <div class="keydef">
       <p><strong>Birth trauma:</strong> Marked compression or sudden compression-decompression during delivery.</p>
     </div>
@@ -3671,13 +3860,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       <li>Instrumental delivery: ventouse, forceps.</li>
       <li>Intrauterine manipulation: internal podalic version, breech extraction.</li>
     </ul>
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">3 Types — Fractures</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §3 Fractures -->
+  <section id="s3">
+    <h3 class="sec"><span class="ball">3</span> Types — Fractures</h3>
     <p>Fractures usually result from traumatic deliveries as in shoulder dystocia and difficult instrumental deliveries.</p>
     <h4 class="sub">Hierarchy of frequency</h4>
     <ol>
@@ -3703,13 +3890,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </div>
     <div class="pearl">
       <strong>Outlook:</strong> The majority of neonatal fractures will heal with conservative treatment.
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">4 Types — Cephalohematomas</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §4 Cephalohematomas -->
+  <section id="s4">
+    <h3 class="sec"><span class="ball">4</span> Types — Cephalohematomas</h3>
     <p>These result from bleeding between the periosteum and skull bones, and take the shape of the underlying skull bone.</p>
     <div class="warn">
       <strong>Rule out associated injury:</strong> Skull fracture or intracranial bleeding should always be ruled out.
@@ -3751,13 +3937,11 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
         <td>Disappears within 1-2 days.</td>
       </tr>
     </table>
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">5 Nerve palsies</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §5 Nerve palsies -->
+  <section id="s5">
+    <h3 class="sec"><span class="ball">5</span> Nerve palsies</h3>
     <h4 class="sub">Erb’s palsy</h4>
     <ul>
       <li>Most common nerve palsy.</li>
@@ -3786,13 +3970,12 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </div>
     <div class="pearl">
       <strong>Treatment:</strong> No specific treatment is required for facial palsy.
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">6 Sternomastoid tumors</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §6 Sternomastoid -->
+  <section id="s6">
+    <h3 class="sec"><span class="ball">6</span> Sternomastoid tumors</h3>
     <ul>
       <li>Result from bleeding into the sternomastoid muscle.</li>
       <li>Not normally recognized at birth.</li>
@@ -3804,25 +3987,23 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
     </div>
     <div class="pearl">
       <strong>Prognosis:</strong> Good.
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">7 Lacerations</h3>
-  </div>
-  <div class="cbd">
+    </div>
+  </section>
+
+  <!-- §7 Lacerations -->
+  <section id="s7">
+    <h3 class="sec"><span class="ball">7</span> Lacerations</h3>
     <ul>
       <li>The infant may suffer skin lacerations during delivery, usually during Caesarean section.</li>
       <li>They are usually superficial and heal without problems.</li>
       <li>Suturing may be needed for deeper wounds.</li>
     </ul>
-  </div>
-</div><div class="card" style="border-left-color:#bf360c">
-  <div class="card-hd">
-    <span class="cdot" style="background:#bf360c"></span>
-    <h3 class="cttl">8 Student activity · Questions · References</h3>
-  </div>
-  <div class="cbd">
+  </section>
+
+  <!-- §8 Student activity + Questions + References -->
+  <section id="s8">
+    <h3 class="sec"><span class="ball">8</span> Student activity · Questions · References</h3>
+
     <details class="click-card blue" open>
       <summary>Student activity</summary>
       <div class="body">
@@ -3867,12 +4048,16 @@ body{font-family:'Inter',-apple-system,'Segoe UI',sans-serif;color:#1f2a37;backg
       </div>
     </details>
 
-    <div class="footer">Source: Book Obstetrics 2025-2026, Chapter 44 — Fetal Birth Injuries (p. 225-227)
-  </div>
-</div>
-  </div>
-</div>
-<div class="footer">Week 4 — Postpartum &amp; Complications — Card View</div>
+    <div class="footer">Source: Book Obstetrics 2025-2026, Chapter 44 — Fetal Birth Injuries (p. 225-227)</div>
+  </section>
+
 </div>
 </body>
 </html>
+
+</div></div>
+</div>
+<div class="footer">
+<p>Week 4 — Postpartum & Complications — Comprehensive Infographic</p>
+<p><a href="https://doctorelshehy-stack.github.io/obs_content-mcqs/weeks.html">&larr; Back to Weeks</a></p>
+</div></body></html>

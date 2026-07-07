@@ -1,11 +1,12 @@
 /* =====================================================================
    storage.js — LocalStorage persistence layer
    ---------------------------------------------------------------------
-   Responsibilities:
-     • Save / load / clear the in-progress exam session (so a refresh
-       resumes automatically).
-     • Maintain the persistent mistake database (dedup by question id).
-     • Persist small user settings (last chosen duration, theme).
+   Persistent stores:
+     • session  — the in-progress exam (so a refresh resumes exactly).
+     • mistakes — the mistake DB (dedup by id, with mastery tracking).
+     • history  — per-question learning history (seen / counts).
+     • results  — last finished exam summary (for quick re-view).
+     • settings — small UI preferences (last duration, etc).
    All reads are defensive: a corrupt value never throws.
    ===================================================================== */
 (function (global) {
@@ -14,8 +15,9 @@
   const KEYS = {
     session: "mcq.session",
     mistakes: "mcq.mistakes",
+    history: "mcq.history",
+    results: "mcq.lastResults",
     settings: "mcq.settings",
-    lastResults: "mcq.lastResults",
   };
 
   function safeGet(key) {
@@ -27,7 +29,6 @@
       return null;
     }
   }
-
   function safeSet(key, value) {
     try {
       localStorage.setItem(key, JSON.stringify(value));
@@ -37,13 +38,10 @@
       return false;
     }
   }
-
   function safeRemove(key) {
     try {
       localStorage.removeItem(key);
-    } catch (e) {
-      /* ignore */
-    }
+    } catch (e) {}
   }
 
   /* ---------- Session (active exam) ---------- */
@@ -62,62 +60,133 @@
     },
   };
 
-  /* ---------- Mistakes database ---------- */
+  /* ---------- Mistake database (with mastery tracking) ----------
+     Each record:
+       { id, userAnswer, correctAnswer, question, topic, ts,
+         consecutiveCorrect }
+     `consecutiveCorrect` counts successive correct answers in practice
+     mode; the record is dropped once it reaches the mastery threshold. */
   const mistakes = {
-    /** Returns the array of mistake records (oldest first). */
     getAll() {
       const arr = safeGet(KEYS.mistakes);
       return Array.isArray(arr) ? arr : [];
     },
-
-    /** Number of stored mistakes (unique question ids). */
     count() {
       return this.getAll().length;
     },
-
-    /**
-     * Merge a list of new mistake records into the database.
-     * Each record: { id, userAnswer, correctAnswer, question, topic, ts }
-     * Dedup by question id — a newer attempt overwrites the old one,
-     * so the database always reflects the most recent wrong answer.
-     */
+    _save(arr) {
+      return safeSet(KEYS.mistakes, arr);
+    },
+    /** Merge new wrong-answer records (dedup by id, reset mastery). */
     add(records) {
-      if (!Array.isArray(records) || records.length === 0) return this.getAll();
       const map = new Map();
-      // seed with existing records (kept in insertion order)
       this.getAll().forEach((r) => map.set(r.id, r));
-      records.forEach((r) => {
+      (records || []).forEach((r) => {
         if (!r || !r.id) return;
-        map.set(r.id, r);
+        map.set(r.id, {
+          id: r.id,
+          userAnswer: r.userAnswer,
+          correctAnswer: r.correctAnswer,
+          question: r.question,
+          topic: r.topic,
+          ts: Date.now(),
+          consecutiveCorrect: 0,
+        });
       });
       const merged = [...map.values()];
-      safeSet(KEYS.mistakes, merged);
+      this._save(merged);
       return merged;
     },
-
-    /** Remove a single question id from the mistake database. */
+    /** Called on a correct answer. Returns true if the record was removed. */
+    markCorrect(id, threshold) {
+      threshold = threshold || 2;
+      const all = this.getAll();
+      const i = all.findIndex((r) => r.id === id);
+      if (i === -1) return false;
+      const r = all[i];
+      r.consecutiveCorrect = (r.consecutiveCorrect || 0) + 1;
+      r.ts = Date.now();
+      if (r.consecutiveCorrect >= threshold) {
+        all.splice(i, 1);
+        this._save(all);
+        return true;
+      }
+      this._save(all);
+      return false;
+    },
     remove(id) {
       const filtered = this.getAll().filter((r) => r.id !== id);
-      safeSet(KEYS.mistakes, filtered);
+      this._save(filtered);
       return filtered;
     },
-
-    /** Wipe everything (used by "restart" / settings). */
     clear() {
       safeRemove(KEYS.mistakes);
+    },
+  };
+
+  /* ---------- Per-question learning history ---------- */
+  const history = {
+    getAll() {
+      const o = safeGet(KEYS.history);
+      return o && typeof o === "object" ? o : {};
+    },
+    get(id) {
+      return this.getAll()[id] || null;
+    },
+    _save(map) {
+      return safeSet(KEYS.history, map);
+    },
+    _blank(id) {
+      return {
+        id: id,
+        hasBeenSeen: false,
+        lastSeenDate: null,
+        correctCount: 0,
+        wrongCount: 0,
+        totalAttempts: 0,
+      };
+    },
+    /** Mark a question as having been presented to the user. */
+    markSeen(id) {
+      const m = this.getAll();
+      const r = m[id] || this._blank(id);
+      r.hasBeenSeen = true;
+      if (!r.lastSeenDate) r.lastSeenDate = new Date().toISOString();
+      m[id] = r;
+      this._save(m);
+    },
+    /** Record the outcome of an answer (correct / wrong). */
+    record(id, isCorrect) {
+      const m = this.getAll();
+      const r = m[id] || this._blank(id);
+      r.hasBeenSeen = true;
+      if (!r.lastSeenDate) r.lastSeenDate = new Date().toISOString();
+      r.totalAttempts = (r.totalAttempts || 0) + 1;
+      if (isCorrect) r.correctCount = (r.correctCount || 0) + 1;
+      else r.wrongCount = (r.wrongCount || 0) + 1;
+      m[id] = r;
+      this._save(m);
+    },
+    /** Number of questions marked seen at least once. */
+    seenCount() {
+      const m = this.getAll();
+      return Object.keys(m).filter((k) => m[k].hasBeenSeen).length;
+    },
+    clear() {
+      safeRemove(KEYS.history);
     },
   };
 
   /* ---------- Last results (for quick "view again") ---------- */
   const results = {
     save(data) {
-      return safeSet(KEYS.lastResults, data);
+      return safeSet(KEYS.results, data);
     },
     load() {
-      return safeGet(KEYS.lastResults);
+      return safeGet(KEYS.results);
     },
     clear() {
-      safeRemove(KEYS.lastResults);
+      safeRemove(KEYS.results);
     },
   };
 
@@ -133,5 +202,5 @@
     },
   };
 
-  global.Storage = { session, mistakes, results, settings };
+  global.Storage = { session, mistakes, history, results, settings };
 })(window);

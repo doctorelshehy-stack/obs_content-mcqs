@@ -2,25 +2,30 @@
    quiz.js — Quiz engine
    ---------------------------------------------------------------------
    Owns the run-time state of a single exam attempt:
-     • builds a question pool (all / mistakes-only),
-     • Fisher–Yates shuffle so every question appears once per attempt,
+     • builds the question pool (unseen-first rotation / mistake pool),
+     • tracks which questions were actually PRESENTED (rendered) so the
+       score is computed only over presented questions,
+     • records per-question history (seen / correct / wrong) and updates
+       the mistake DB with mastery tracking,
      • renders ONE question at a time (perf-friendly),
-     • records the answer, plays the selection animation, locks the
-       question, and auto-advances after ~450ms (no Next button),
-     • tracks mistakes and persists the session to LocalStorage so a
-       refresh resumes exactly where the user left off,
-     • finishes when time expires OR all questions are answered.
+     • auto-advances after ~450ms (no Next button),
+     • finishes when time expires OR all presented questions are answered,
+     • persists the session so a refresh resumes exactly.
    ===================================================================== */
 (function (global) {
   "use strict";
 
-  const AUTO_ADVANCE_MS = 450; // sweet spot between "fast" and "readable"
-  const ADVANCE_KEYS = ["1", "2", "3", "4", "5", "a", "A", "b", "B", "c", "C", "d", "D", "e", "E"];
+  const AUTO_ADVANCE_MS = 450; // fast yet readable
+  const MASTERY_THRESHOLD = 2; // correct-in-a-row to clear a mistake
+  const ADVANCE_KEYS = [
+    "1", "2", "3", "4", "5",
+    "a", "A", "b", "B", "c", "C", "d", "D", "e", "E",
+  ];
 
   /* ---------- Data access ----------
-     The source of truth is the global QUESTIONS_DATA produced by
-     questions-data.js (the same data the reference dashboard uses).
-     Questions are parsed dynamically — their text is never rewritten. */
+     QUESTIONS_DATA is the global produced by questions-data.js (the same
+     data the reference dashboard uses). Questions are parsed at runtime
+     and never rewritten; only answerable MCQs are kept. */
   function getAllQuestions() {
     let all = [];
     try {
@@ -28,7 +33,6 @@
     } catch (e) {
       all = [];
     }
-    // Keep only answerable MCQs (must have options + a known correct answer)
     return all.filter(function (q) {
       return (
         q &&
@@ -43,7 +47,6 @@
     });
   }
 
-  /** Map a question id -> the full question object (for review lookups). */
   function indexById() {
     const map = {};
     getAllQuestions().forEach(function (q) {
@@ -52,7 +55,7 @@
     return map;
   }
 
-  /** Build a pool of mistakes (question objects) from the mistake DB. */
+  /** Question objects for the current mistake list (for review/practice). */
   function getMistakeQuestions() {
     const byId = indexById();
     return global.Storage.mistakes.getAll().map(function (m) {
@@ -60,7 +63,7 @@
     }).filter(Boolean);
   }
 
-  /* ---------- Fisher–Yates shuffle (pure, returns a new array) ---------- */
+  /* ---------- Fisher–Yates shuffle (pure) ---------- */
   function shuffle(arr) {
     const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -72,17 +75,38 @@
     return a;
   }
 
+  /* ---------- Exam pool with unseen-first rotation ----------
+     Unseen questions come first (so the student always works through new
+     material), then previously-seen questions. Because an exam only
+     presents as many questions as time allows, the unseen ones are hit
+     first; never-presented questions simply stay unseen for next time.
+     Once every question has been seen, there are no unseen left and the
+     pool falls back to a fresh full-bank shuffle (a new randomized pass). */
+  function buildExamPool(bank) {
+    const unseen = [];
+    const seen = [];
+    bank.forEach(function (q) {
+      const h = global.Storage.history.get(q.id);
+      if (h && h.hasBeenSeen) seen.push(q);
+      else unseen.push(q);
+    });
+    return shuffle(unseen).concat(shuffle(seen));
+  }
+
   /* ---------- Engine ---------- */
   function Quiz(opts) {
     opts = opts || {};
-    this.mode = opts.mode || "exam"; // "exam" | "review"
+    this.mode = opts.mode || "exam"; // "exam" | "review" | "practice"
     this.durationSec = opts.durationSec || 30 * 60;
-    this.questions = opts.questions || []; // ordered list of question objects
+    this.questions = opts.questions || []; // already ordered pool
     this.answers = opts.answers || {}; // id -> { selected, correct }
     this.index = opts.index || 0;
+    this.presentedCount = opts.presentedCount || 0; // # rendered so far
     this.timer = null;
     this.finished = false;
+    this._startedAt = null;
     this._advanceTimer = null;
+    this._finishReason = null;
     this._onUpdate = opts.onUpdate || function () {};
     this._onFinish = opts.onFinish || function () {};
     this._onAnswer = opts.onAnswer || function () {};
@@ -104,7 +128,7 @@
     return Object.prototype.hasOwnProperty.call(this.answers, id);
   };
 
-  /** Persist current progress so a refresh can resume. */
+  /** Persist current progress (enables refresh-resume). */
   Quiz.prototype.persist = function () {
     global.Storage.session.save({
       mode: this.mode,
@@ -116,6 +140,7 @@
       index: this.index,
       startedAt: this._startedAt,
       remaining: this.timer ? this.timer.remaining : this.durationSec,
+      presentedCount: this.presentedCount,
     });
   };
 
@@ -126,26 +151,25 @@
       if (byId[id]) restored.push(byId[id]);
     });
     // The saved order is the source of truth; only include questions that
-    // still exist in the bank. (Questions removed from the bank are dropped.)
+    // still exist in the bank (removed questions are dropped).
     return restored;
   };
 
-  /**
-   * Start (or resume) the exam.
-   * If `resumeState` is provided, the engine restores order/answers/index.
-   */
+  /** Start (or resume) the exam. */
   Quiz.prototype.start = function (resumeState) {
-    const self = this;
     if (resumeState && resumeState.order) {
       this.questions = this._restoreQuestions(resumeState.order);
       this.answers = resumeState.answers || {};
       this.index = Math.min(resumeState.index || 0, this.questions.length - 1);
+      this.presentedCount = resumeState.presentedCount || this.index + 1;
       this._startedAt = resumeState.startedAt || Date.now();
     } else {
-      this.questions = shuffle(this.questions);
+      // Pool is already ordered by the caller (unseen-first or mistake pool).
+      this.presentedCount = 0;
       this._startedAt = Date.now();
     }
 
+    const self = this;
     this.timer = new global.Timer({
       durationSec: this.durationSec,
       remaining:
@@ -165,12 +189,17 @@
     this._onUpdate({ type: "render" });
   };
 
-  /** Render the current question into `container`. */
+  /** Render the current question; mark it as presented + seen. */
   Quiz.prototype.render = function (container) {
     const q = this.current();
     if (!q) return;
-    const answered = this.answers[q.id];
+
+    // This question is now presented to the user.
+    this.presentedCount = Math.max(this.presentedCount, this.index + 1);
+    global.Storage.history.markSeen(q.id);
+
     const UI = global.UI;
+    const answered = this.answers[q.id];
 
     const optsHtml = q.options
       .map(function (o) {
@@ -194,7 +223,9 @@
           '" data-label="' +
           UI.escapeHtml(o.label) +
           '" ' +
-          (answered ? 'aria-disabled="true"' : 'aria-label="Option ' + UI.escapeHtml(o.label.toUpperCase()) + '"') +
+          (answered
+            ? 'aria-disabled="true"'
+            : 'aria-label="Option ' + UI.escapeHtml(o.label.toUpperCase()) + '"') +
           ">" +
           '<span class="opt-label">' +
           UI.escapeHtml(o.label.toUpperCase()) +
@@ -214,15 +245,13 @@
       '<section class="q-card" aria-live="polite">' +
         '<div class="q-meta">' +
         '<span class="q-tag">' +
-        (this.mode === "review" ? "Review" : "Exam") +
+        (this.mode === "exam" ? "Exam" : "Practice") +
         "</span>" +
         '<span class="q-tag topic">' +
         UI.escapeHtml(topicLabel) +
         "</span>" +
         '<span class="q-number">Q ' +
         (this.index + 1) +
-        " / " +
-        this.total() +
         "</span>" +
         "</div>" +
         '<h2 class="q-text">' +
@@ -234,12 +263,11 @@
         "</section>"
     );
 
-    // wire option clicks
     if (!answered) {
       const self = this;
       UI.$all(".opt", card).forEach(function (btn) {
         btn.addEventListener("click", function () {
-          self_answer(self, q, btn.dataset.label, card);
+          self._answer(q, btn.dataset.label, card);
         });
       });
     }
@@ -247,7 +275,6 @@
     container.innerHTML = "";
     container.appendChild(card);
 
-    // keyboard support (only when not yet answered)
     if (!answered) this._bindKeys(card);
   };
 
@@ -257,13 +284,12 @@
     this._keyHandler = function (e) {
       if (self.answeredCount() && self.isAnswered(q.id)) return;
       const k = e.key;
-      const idx = ADVANCE_KEYS.indexOf(k);
-      if (idx === -1) return;
       const label = k.toLowerCase();
+      if (ADVANCE_KEYS.indexOf(k) === -1) return;
       const btn = card.querySelector('.opt[data-label="' + label + '"]');
       if (btn) {
         e.preventDefault();
-        self_answer(self, q, label, card);
+        self._answer(q, label, card);
       }
     };
     document.addEventListener("keydown", this._keyHandler);
@@ -277,12 +303,30 @@
   };
 
   /* ---------- Answer handling ---------- */
-  function self_answer(self, q, label, card) {
-    if (self.isAnswered(q.id) || self.finished) return;
+  Quiz.prototype._answer = function (q, label, card) {
+    if (this.isAnswered(q.id) || this.finished) return;
     const isCorrect = label === q.answer;
 
-    self.answers[q.id] = { selected: label, correct: q.answer };
-    self._onAnswer({ id: q.id, selected: label, correct: q.answer, isCorrect: isCorrect });
+    this.answers[q.id] = { selected: label, correct: q.answer };
+
+    // Learning history + mistake DB (persisted immediately so a refresh
+    // mid-exam never loses progress).
+    global.Storage.history.record(q.id, isCorrect);
+    if (isCorrect) {
+      global.Storage.mistakes.markCorrect(q.id, MASTERY_THRESHOLD);
+    } else {
+      global.Storage.mistakes.add([
+        {
+          id: q.id,
+          userAnswer: label,
+          correctAnswer: q.answer,
+          question: q.question,
+          topic: q.topic,
+        },
+      ]);
+    }
+
+    this._onAnswer({ id: q.id, selected: label, correct: q.answer, isCorrect: isCorrect });
 
     // visual feedback
     const UI = global.UI;
@@ -312,15 +356,16 @@
       }
     });
 
-    self.persist();
-    self._onUpdate({ type: "progress" });
+    this.persist();
+    this._onUpdate({ type: "progress" });
 
     // auto-advance (no Next button)
-    clearTimeout(self._advanceTimer);
-    self._advanceTimer = setTimeout(function () {
+    const self = this;
+    clearTimeout(this._advanceTimer);
+    this._advanceTimer = setTimeout(function () {
       self.next();
     }, AUTO_ADVANCE_MS);
-  }
+  };
 
   Quiz.prototype.next = function () {
     this._unbindKeys();
@@ -346,56 +391,54 @@
     }
   };
 
-  /** Compute the per-question result set. */
+  /** Compute results over PRESENTED questions only. */
   Quiz.prototype.computeResults = function () {
+    const presented = this.questions.slice(0, this.presentedCount);
     let correct = 0;
     let wrong = 0;
     let skipped = 0;
-    const mistakeRecords = [];
-    const byId = indexById();
+    let answered = 0;
 
-    this.questions.forEach(function (q) {
+    presented.forEach(function (q) {
       const a = this.answers[q.id];
       if (!a) {
-        skipped += 1;
+        skipped += 1; // presented but never answered
         return;
       }
-      if (a.selected === a.correct) {
-        correct += 1;
-      } else {
-        wrong += 1;
-        mistakeRecords.push({
-          id: q.id,
-          userAnswer: a.selected,
-          correctAnswer: a.correct,
-          question: q.question,
-          topic: q.topic,
-          ts: Date.now(),
-        });
-      }
+      answered += 1;
+      if (a.selected === a.correct) correct += 1;
+      else wrong += 1;
     }, this);
 
-    const total = this.questions.length;
+    const total = presented.length; // presented count (NOT the whole bank)
     const attempted = correct + wrong;
     const scorePct = total ? Math.round((correct / total) * 100) : 0;
     const accuracy = attempted ? Math.round((correct / attempted) * 100) : 0;
+    const completion = total ? Math.round((answered / total) * 100) : 0;
     const timeUsed = this.durationSec - (this.timer ? this.timer.remaining : this.durationSec);
+    const timeRemaining = this.timer ? this.timer.remaining : 0;
+    const bankSize = getAllQuestions().length;
+    const neverPresented = Math.max(0, bankSize - total);
 
     return {
       mode: this.mode,
-      total: total,
+      bankSize: bankSize,
+      presented: total,
+      answered: answered,
       correct: correct,
       wrong: wrong,
       skipped: skipped,
       scorePct: scorePct,
       accuracy: accuracy,
+      completion: completion,
       timeUsedSec: timeUsed,
+      timeRemainingSec: timeRemaining,
+      neverPresented: neverPresented,
       finishedReason: this._finishReason || "complete",
-      mistakeRecords: mistakeRecords,
     };
   };
 
-  /** End the exam and hand results to the finish callback. */
+  /** End the exam; destroy the session; report results. */
   Quiz.prototype.finish = function (reason) {
     if (this.finished) return;
     this.finished = true;
@@ -405,18 +448,15 @@
     if (this.timer) this.timer.stop();
 
     const result = this.computeResults();
-    // Persist the mistake database (dedup handled inside storage)
-    if (result.mistakeRecords.length) {
-      global.Storage.mistakes.add(result.mistakeRecords);
-    }
-    // clear the in-progress session; the attempt is over
+    // History + mistakes were already updated per answer; nothing to do here
+    // except clear the in-progress session and stash the summary.
     global.Storage.session.clear();
     global.Storage.results.save(result);
 
     this._onFinish(result);
   };
 
-  /* ---------- small helpers ---------- */
+  /* ---------- helpers ---------- */
   function topicName(key) {
     try {
       const t = global.QUESTIONS_DATA.topics;
@@ -431,7 +471,9 @@
     },
     getAllQuestions: getAllQuestions,
     getMistakeQuestions: getMistakeQuestions,
+    buildExamPool: buildExamPool,
     shuffle: shuffle,
     topicName: topicName,
+    MASTERY_THRESHOLD: MASTERY_THRESHOLD,
   };
 })(window);

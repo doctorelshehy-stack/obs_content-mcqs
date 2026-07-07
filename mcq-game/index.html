@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="MCQ Challenge — a timed, randomized OB/GYN exam game." />
+    <title>MCQ Challenge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- The question bank. Content is never rewritten; it is parsed at runtime. -->
+    <script src="data/questions-data.js"></script>
+    <!-- Expose the (const-scoped) global on window so modules can read it. -->
+    <script>
+      window.QUESTIONS_DATA = window.QUESTIONS_DATA || QUESTIONS_DATA;
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <div class="container">
+        <section class="home-card" aria-labelledby="homeTitle">
+          <div class="brand-badge" aria-hidden="true">🎯</div>
+          <h1 class="home-title" id="homeTitle">MCQ Challenge</h1>
+          <p class="home-subtitle">Timed, randomized quizzes from your question bank</p>
+
+          <div class="home-actions">
+            <button class="btn btn-primary btn-lg btn-block" id="startBtn" data-act="start">
+              🎮 Start Game
+            </button>
+            <button class="btn btn-ghost btn-lg btn-block" id="reviewBtn" data-act="review">
+              ❌ Review Mistakes
+            </button>
+          </div>
+
+          <div class="home-stats" id="homeStats" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Duration selection modal (shared by Start & Review) -->
+    <div class="modal-overlay" id="durationOverlay" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="durationTitle">
+        <h3 class="modal-title" id="durationTitle">Choose Exam Duration</h3>
+        <p class="modal-desc" id="durationDesc">How long should the timer run?</p>
+        <div class="duration-grid" id="durationGrid" role="radiogroup" aria-label="Exam duration"></div>
+        <div class="modal-actions">
+          <button class="btn btn-ghost" id="durationCancel">Cancel</button>
+          <button class="btn btn-primary" id="durationStart">Start</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts: load order matters (each attaches to window) -->
+    <script src="js/storage.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

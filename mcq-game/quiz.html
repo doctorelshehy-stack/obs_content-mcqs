@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="MCQ Challenge — exam in progress." />
+    <title>MCQ Challenge — Exam</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- The question bank. Parsed at runtime, never rewritten. -->
+    <script src="data/questions-data.js"></script>
+    <!-- Expose the (const-scoped) global on window so modules can read it. -->
+    <script>
+      window.QUESTIONS_DATA = window.QUESTIONS_DATA || QUESTIONS_DATA;
+    </script>
+  </head>
+  <body>
+    <!-- ===== Quiz view ===== -->
+    <div class="quiz-page" id="quizView">
+      <header class="topbar">
+        <button class="icon-btn" id="quitBtn" title="Quit exam" aria-label="Quit exam">✕</button>
+        <div class="progress-wrap">
+          <div class="progress-meta">
+            <span class="progress-count"><strong id="progNow">1</strong> / <span id="progTotal">0</span></span>
+            <span id="progPct">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progFill"></div>
+          </div>
+        </div>
+        <div class="timer" id="timer" role="timer" aria-live="off">
+          <span class="timer-icon" aria-hidden="true">⏱️</span>
+          <span id="timerText">00:00</span>
+        </div>
+      </header>
+
+      <div class="quiz-body" id="quizBody"></div>
+    </div>
+
+    <!-- ===== Results / Review host ===== -->
+    <main class="results-page" id="resultsView" style="display:none">
+      <div class="container" id="resultsHost"></div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/quiz-app.js"></script>
+  </body>
+</html>

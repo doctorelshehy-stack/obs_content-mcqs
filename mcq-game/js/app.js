@@ -36,15 +36,20 @@
 
     /* ---- Home stats ---- */
     function refreshStats() {
-      const total = global.Quiz.getAllQuestions().length;
+      const bank = global.Quiz.getAllQuestions().length;
+      const seen = global.Storage.history.seenCount();
+      const unseen = Math.max(0, bank - seen);
       const wrong = global.Storage.mistakes.count();
       statsEl.innerHTML =
         '<span class="stat-chip"><strong>' +
-        total +
+        bank +
         "</strong> questions</span>" +
         '<span class="stat-chip"><strong>' +
+        unseen +
+        "</strong> unseen</span>" +
+        '<span class="stat-chip"><strong>' +
         wrong +
-        "</strong> mistakes saved</span>";
+        "</strong> mistakes</span>";
     }
 
     /* ---- Duration modal ---- */
@@ -109,7 +114,7 @@
     reviewBtn.addEventListener("click", function () {
       const wrong = global.Storage.mistakes.count();
       if (wrong === 0) {
-        UI.toast("No mistakes available yet. Complete at least one exam first.");
+        UI.toast("No mistakes available.");
         return;
       }
       openDuration("review");

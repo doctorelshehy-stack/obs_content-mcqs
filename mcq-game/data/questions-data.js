@@ -581,8 +581,8 @@ const QUESTIONS_DATA = {
           "text": "Occipito-anterior"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Mento-anterior",
+      "answer": "c",
+      "answerText": "c) Occipito-posterior",
       "justification": null,
       "type": "mcq"
     },
@@ -1329,8 +1329,8 @@ const QUESTIONS_DATA = {
           "text": "Shoulder pain"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Amenorrhea",
+      "answer": "b",
+      "answerText": "b) Abdominal pain",
       "justification": null,
       "type": "mcq"
     },
@@ -2882,7 +2882,7 @@ const QUESTIONS_DATA = {
       "id": "exams_q96",
       "number": 96,
       "topic": "exams",
-      "question": "Ms. Nora just had a positive pregnancy test and wonders if you can tell her when she is likely due. Her LMP was June 30. Her expected date of confinement (EDC) is approximately which of the following? There is good evidence that a woman who gave birth to an infant with a neural tube defect (NTD) can substantially reduce the risk of recurrence by taking periconceptional folic acid supplementation.",
+      "question": "Ms. Nora just had a positive pregnancy test and wonders if you can tell her when she is likely due. Her LMP was June 30. Her expected date of confinement (EDC) is approximately which of the following?",
       "options": [
         {
           "label": "a",
@@ -2905,16 +2905,16 @@ const QUESTIONS_DATA = {
           "text": "April 7"
         }
       ],
-      "answer": "b",
-      "answerText": "b) March 7",
-      "justification": null,
+      "answer": "e",
+      "answerText": "e) April 7",
+      "justification": "By Naegele's rule: LMP June 30 + 9 months + 7 days = April 7.",
       "type": "mcq"
     },
     {
       "id": "exams_q97",
       "number": 97,
       "topic": "exams",
-      "question": "What is the recommended dose?",
+      "question": "There is good evidence that a woman who gave birth to an infant with a neural tube defect (NTD) can substantially reduce the risk of recurrence by taking periconceptional folic acid supplementation. What is the recommended dose?",
       "options": [
         {
           "label": "a",
@@ -3714,7 +3714,7 @@ const QUESTIONS_DATA = {
       "id": "exams_q122",
       "number": 122,
       "topic": "exams",
-      "question": "A 23 year old female with regular menstruation comes for the clinic seeking for IUD insertion. Which of the following is the optimal period for inserting an IUD? You are conducting premarital counseling for a couple few month before marriage.",
+      "question": "A 23 year old female with regular menstruation comes for the clinic seeking for IUD insertion. Which of the following is the optimal period for inserting an IUD?",
       "options": [
         {
           "label": "a",
@@ -3746,7 +3746,7 @@ const QUESTIONS_DATA = {
       "id": "exams_q123",
       "number": 123,
       "topic": "exams",
-      "question": "Which of the following should be included in the counselling session?",
+      "question": "You are conducting premarital counseling for a couple few month before marriage. Which of the following should be included in the counselling session?",
       "options": [
         {
           "label": "a",
@@ -3766,7 +3766,7 @@ const QUESTIONS_DATA = {
         },
         {
           "label": "e",
-          "text": "A screening for sexually transmitted diseases because they can be a causative agent in preterm labor and ectopic pregnancy Body mass index BMI 24 kg/m2. When she was seen in the clinic at 14 weeks of gestation, she had gained 1.8 kg since conception."
+          "text": "A screening for sexually transmitted diseases because they can be a causative agent in preterm labor and ectopic pregnancy"
         }
       ],
       "answer": "c",
@@ -3778,7 +3778,7 @@ const QUESTIONS_DATA = {
       "id": "exams_q124",
       "number": 124,
       "topic": "exams",
-      "question": "How would you interpret this?",
+      "question": "Body mass index BMI 24 kg/m2. When she was seen in the clinic at 14 weeks of gestation, she had gained 1.8 kg since conception. How would you interpret this?",
       "options": [
         {
           "label": "a",
@@ -5526,7 +5526,7 @@ const QUESTIONS_DATA = {
         },
         {
           "label": "e",
-          "text": "Fetal body movement A 35 year old woman, G2 P1+0 presents to antenatal clinic at 35 weeks of pregnancy with sudden gush of watery vaginal discharge. Sample of pooled liquid turned red litmus paper blue and the ferning was present."
+          "text": "Fetal body movement"
         }
       ],
       "answer": "b",
@@ -5538,7 +5538,7 @@ const QUESTIONS_DATA = {
       "id": "quizzes_q10",
       "number": 10,
       "topic": "quizzes",
-      "question": "The temperature of the patient was 38°C and her pulse was 102 per minute. What is the next step in management?",
+      "question": "A 35 year old woman, G2 P1+0 presents to antenatal clinic at 35 weeks of pregnancy with sudden gush of watery vaginal discharge. Sample of pooled liquid turned red litmus paper blue and the ferning was present. The temperature of the patient was 38°C and her pulse was 102 per minute. What is the next step in management?",
       "options": [
         {
           "label": "a",
@@ -5561,8 +5561,8 @@ const QUESTIONS_DATA = {
           "text": "Administer magnesium sulphate"
         }
       ],
-      "answer": "e",
-      "answerText": "e) Administer magnesium sulphate",
+      "answer": "c",
+      "answerText": "c) Administer antibiotics",
       "justification": "* PPROM at 35w with fever (38°C), tachycardia (102) = clinical chorioamnionitis. Requires prompt antibiotics and delivery.",
       "type": "mcq"
     },
@@ -5845,9 +5845,9 @@ const QUESTIONS_DATA = {
           "text": "11 cm"
         }
       ],
-      "answer": "d",
-      "answerText": "d) 10.5 cm",
-      "justification": "* The sub-occipito-bregmatic diameter (presenting diameter in well-flexed vertex) measures 9.5 cm.",
+      "answer": "b",
+      "answerText": "b) 9.5 cm",
+      "justification": "The suboccipito-bregmatic diameter is 9.5 cm.",
       "type": "mcq"
     },
     {
@@ -6369,9 +6369,9 @@ const QUESTIONS_DATA = {
           "text": "Allows widening of the birth canal"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Allows widening of the birth canal",
-      "justification": "* Anal sphincter involvement is a 3rd degree tear (not 4th). 4th degree involves the rectal mucosa.",
+      "answer": "a",
+      "answerText": "a) Involvement of the anal sphincter is classified as 4th degree perineal tear",
+      "justification": "Anal sphincter involvement is a third-degree tear; fourth-degree involves rectal mucosa.",
       "type": "mcq"
     },
     {
@@ -6521,9 +6521,9 @@ const QUESTIONS_DATA = {
           "text": "Vitamin B6 deficiency"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Folate deficiency",
-      "justification": "* Repeat of Q30. Microcytic anemia + normal iron stores = thalassemia.",
+      "answer": "c",
+      "answerText": "c) Thalassemia",
+      "justification": "Microcytic anemia with normal iron stores is most consistent with thalassemia, not folate deficiency.",
       "type": "mcq"
     },
     {
@@ -6584,7 +6584,7 @@ const QUESTIONS_DATA = {
       "answer": null,
       "answerText": null,
       "justification": "* Leopold maneuvers: fundal grip (1st), lateral/umbilical grip (2nd), Pawlik's grip (3rd), pelvic grip (4th). Need the image to identify.",
-      "type": "mcq"
+      "type": "image_mcq"
     },
     {
       "id": "quizzes_q44",
@@ -6737,9 +6737,9 @@ const QUESTIONS_DATA = {
           "text": "Use of epidural analgesia for pain relief"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Use of epidural analgesia for pain relief",
-      "justification": "* Mitral stenosis patient — ergometrine is contraindicated due to increased venous return and risk of pulmonary edema.",
+      "answer": "b",
+      "answerText": "b) Use of ergometrine in the third stage of labor",
+      "justification": "Ergometrine should be avoided in mitral stenosis/heart disease because it increases venous return and can precipitate pulmonary edema.",
       "type": "mcq"
     },
     {
@@ -6769,8 +6769,8 @@ const QUESTIONS_DATA = {
           "text": "Serial quantitative B-hCG"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "c",
+      "answerText": "c) Quantitative B-hCG, then ultrasound",
       "justification": "* First trimester bleeding evaluation: quantitative beta-HCG first to determine level, then ultrasound for gestational sac location.",
       "type": "mcq"
     },
@@ -6865,9 +6865,9 @@ const QUESTIONS_DATA = {
           "text": "Start intramuscular corticosteroids and intravenous ritodrine"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Start intravenous broad-spectrum antibiotics",
-      "justification": "* Preterm labor at 32 weeks: betamethasone for fetal lung maturity + tocolysis (ritodrine) to delay delivery.",
+      "answer": "e",
+      "answerText": "e) Start intramuscular corticosteroids and intravenous ritodrine",
+      "justification": "At 32 weeks with preterm labor and intact membranes, corticosteroids plus tocolysis is preferred among the listed choices.",
       "type": "mcq"
     },
     {
@@ -6893,8 +6893,8 @@ const QUESTIONS_DATA = {
           "text": "Stage IV"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "b",
+      "answerText": "b) Stage II",
       "justification": "* Cervical dilatation 10 cm with bearing down = second stage of labor.",
       "type": "mcq"
     },
@@ -6953,9 +6953,9 @@ const QUESTIONS_DATA = {
           "text": "Increased alveolar residual volume"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Increased fibrinogen",
-      "justification": "* In pregnancy, the diaphragm is elevated, causing decreased (not increased) residual volume and functional residual capacity. GFR, fibrinogen, and cardiac output all increase.",
+      "answer": "d",
+      "answerText": "d) Increased alveolar residual volume",
+      "justification": "Pregnancy increases fibrinogen, cardiac output, and GFR; residual volume does not increase.",
       "type": "mcq"
     },
     {
@@ -7417,9 +7417,9 @@ const QUESTIONS_DATA = {
           "text": "Uterus contracting"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Station 0 or +1",
-      "justification": "* Outlet forceps require station +3 (on perineum). Station 0/+1 is mid-forceps level. (Same as Q40.)",
+      "answer": "d",
+      "answerText": "d) Uterus contracting",
+      "justification": "Outlet forceps require low/outlet station; uterine contraction is not a prerequisite.",
       "type": "mcq"
     },
     {
@@ -7445,9 +7445,9 @@ const QUESTIONS_DATA = {
           "text": "Maternal tachycardia"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Severe continuous abdominal pain",
-      "justification": "* FHR abnormalities are the earliest sign of uterine scar rupture during VBAC trial.",
+      "answer": "c",
+      "answerText": "c) Fetal distress",
+      "justification": "Fetal heart rate abnormality is the common earliest warning sign of uterine scar rupture during TOLAC.",
       "type": "mcq"
     },
     {
@@ -7477,9 +7477,9 @@ const QUESTIONS_DATA = {
           "text": "C1, C2, T1"
         }
       ],
-      "answer": "b",
-      "answerText": "b) C7, C8, T2",
-      "justification": "* Klumpke's palsy = lower trunk of brachial plexus (C8–T1).",
+      "answer": "c",
+      "answerText": "c) C8, T1",
+      "justification": "Klumpke palsy involves the lower brachial plexus, classically C8-T1.",
       "type": "mcq"
     },
     {
@@ -7509,9 +7509,9 @@ const QUESTIONS_DATA = {
           "text": "Well defined edges"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Normal overlying skin",
-      "justification": "* Cephalohematoma takes 2–4 weeks to resolve. (Same as Q31.)",
+      "answer": "b",
+      "answerText": "b) Disappears within two days",
+      "justification": "Cephalohematoma is limited by sutures, has normal overlying skin, appears after birth, and resolves over weeks, not two days.",
       "type": "mcq"
     },
     {
@@ -7649,9 +7649,9 @@ const QUESTIONS_DATA = {
           "text": "Placenta accreta encountered during cesarean section"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Placenta accreta encountered during cesarean section",
-      "justification": "* Couvelaire uterus alone is NOT an indication for cesarean hysterectomy; it resolves spontaneously. The question asks which statement is NOT true.",
+      "answer": "b",
+      "answerText": "b) Presence of Couvelaire uterus",
+      "justification": "Mere presence of Couvelaire uterus is not by itself an indication for cesarean hysterectomy.",
       "type": "mcq"
     },
     {
@@ -7677,9 +7677,9 @@ const QUESTIONS_DATA = {
           "text": "Heart disease"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Heart disease",
-      "justification": "* Ventouse is contraindicated in preterm labor. (Same as Q34.)",
+      "answer": "c",
+      "answerText": "c) Preterm labor",
+      "justification": "Vacuum extraction is contraindicated in preterm labor because of fetal cranial injury risk.",
       "type": "mcq"
     },
     {
@@ -7705,9 +7705,9 @@ const QUESTIONS_DATA = {
           "text": "Perform laparoscopic examination"
         }
       ],
-      "answer": "c",
-      "answerText": "Answer: c) Repeat ultrasound scan after 7 days",
-      "justification": "* Pregnancy of unknown location: the recommended next step is a repeat scan in 7 days. Serial beta-hCG can be used but the question asks about the next step.",
+      "answer": "a",
+      "answerText": "a) Perform two serum beta-HCG tests 48 hours apart",
+      "justification": "Stable pregnancy of unknown location is evaluated with serial quantitative beta-hCG measurements.",
       "type": "mcq"
     },
     {
@@ -7881,9 +7881,9 @@ const QUESTIONS_DATA = {
           "text": "Uterine souffle"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Umbilical souffle",
-      "justification": "* Umbilical soufflé (funic souffle) is the sound of blood in umbilical vessels — not a sure sign of pregnancy. Sure signs: FHS auscultation, palpation of fetal parts, US visualization.",
+      "answer": "d",
+      "answerText": "d) Uterine souffle",
+      "justification": "Uterine souffle is a maternal/probable sign, not a sure sign of pregnancy.",
       "type": "mcq"
     },
     {
@@ -7941,9 +7941,9 @@ const QUESTIONS_DATA = {
           "text": "Placental insufficiency"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Post maturity",
-      "justification": "* Duodenal atresia causes polyhydramnios. (Same as Q69.)",
+      "answer": "d",
+      "answerText": "d) Duodenal atresia",
+      "justification": "Duodenal atresia can cause polyhydramnios by impaired fetal swallowing/intestinal obstruction.",
       "type": "mcq"
     },
     {
@@ -7973,9 +7973,9 @@ const QUESTIONS_DATA = {
           "text": "Fetal heart accelerations during uterine contractions"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Two fetal heart rate accelerations are noted in 10 minutes",
-      "justification": "* (Same as Q63.)",
+      "answer": "d",
+      "answerText": "d) Two fetal heart rate accelerations are noted in 20 minutes",
+      "justification": "A reactive NST requires two qualifying fetal heart rate accelerations in 20 minutes.",
       "type": "mcq"
     },
     {
@@ -8001,9 +8001,9 @@ const QUESTIONS_DATA = {
           "text": "Has different blood groups"
         }
       ],
-      "answer": "b",
-      "answerText": "b) More susceptible to twin-to-twin transfusion syndrome",
-      "justification": "* (Same as Q65.) Monozygotic twins have same blood group.",
+      "answer": "d",
+      "answerText": "d) Has different blood groups",
+      "justification": "Monozygotic twins usually have the same blood group; different blood groups is the EXCEPT statement.",
       "type": "mcq"
     },
     {
@@ -8033,9 +8033,9 @@ const QUESTIONS_DATA = {
           "text": "Delivery of posterior arm"
         }
       ],
-      "answer": "b",
-      "answerText": "b) McRobert's position",
-      "justification": "* (Same as Q66.)",
+      "answer": "a",
+      "answerText": "a) Fundal pressure",
+      "justification": "Fundal pressure is not a recommended shoulder dystocia maneuver.",
       "type": "mcq"
     },
     {
@@ -8093,9 +8093,9 @@ const QUESTIONS_DATA = {
           "text": "Meconium aspiration syndrome"
         }
       ],
-      "answer": "e",
-      "answerText": "e) Meconium aspiration syndrome",
-      "justification": "* (Same as Q67.) DIC is not a sequela of macrosomia.",
+      "answer": "a",
+      "answerText": "a) Disseminated intravascular coagulopathy",
+      "justification": "DIC is not a usual direct sequela of fetal macrosomia.",
       "type": "mcq"
     },
     {
@@ -8213,9 +8213,9 @@ const QUESTIONS_DATA = {
           "text": "Can be relieved by anesthesia"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Can be felt",
-      "justification": "* (Same as Q51.) Pathological retraction ring cannot be relieved by anesthesia; it requires C-section.",
+      "answer": "e",
+      "answerText": "e) Can be relieved by anesthesia",
+      "justification": "A pathological retraction ring cannot be relieved by anesthesia; a constriction ring may be relieved by anesthesia.",
       "type": "mcq"
     },
     {
@@ -8337,9 +8337,9 @@ const QUESTIONS_DATA = {
           "text": "Jaw flexion shoulder traction"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Burns Marshall technique",
-      "justification": "* (Same as Q14.) Lovset maneuver is for shoulders/arms, not the aftercoming head.",
+      "answer": "d",
+      "answerText": "d) Lovset maneuver",
+      "justification": "Lovset maneuver is for delivery of the shoulders/arms in breech, not the aftercoming head.",
       "type": "mcq"
     },
     {
@@ -8493,9 +8493,9 @@ const QUESTIONS_DATA = {
           "text": "Disappears within two days"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Develops hours after birth",
-      "justification": "* (Same as Q31/74.)",
+      "answer": "e",
+      "answerText": "e) Disappears within two days",
+      "justification": "Cephalohematoma is limited by sutures, has normal overlying skin, appears after birth, and resolves over weeks, not two days.",
       "type": "mcq"
     },
     {
@@ -8525,9 +8525,9 @@ const QUESTIONS_DATA = {
           "text": "Can be used for non-engaged head"
         }
       ],
-      "answer": "d",
-      "answerText": "Answer: d) Can be used before full cervical dilatation",
-      "justification": "* The vacuum extractor (ventouse) can be applied before full dilatation in some settings. However, most guidelines state full dilatation is preferred — this was likely the intended 'except' feature.",
+      "answer": "c",
+      "answerText": "c) More compression force",
+      "justification": "Ventouse does not have more compression force than forceps; less compression is an advantage.",
       "type": "mcq"
     },
     {
@@ -8589,9 +8589,9 @@ const QUESTIONS_DATA = {
           "text": "C5, C6"
         }
       ],
-      "answer": "b",
-      "answerText": "b) C1, C2, T1",
-      "justification": "* (Same as Q37/73.)",
+      "answer": "c",
+      "answerText": "c) C8, T1",
+      "justification": "Klumpke palsy involves the lower brachial plexus, classically C8-T1.",
       "type": "mcq"
     },
     {
@@ -8685,9 +8685,9 @@ const QUESTIONS_DATA = {
           "text": "Vertex at +1 station, cervix completely dilated, membranes intact"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Vertex at +3 station, cervix 8 cm dilated, membranes ruptured",
-      "justification": "* Forceps require: fully dilated cervix, membranes ruptured, known station/position. Mento-anterior face presentation is appropriate. Transverse lie, breech with intact membranes, and cervix not fully dilated are all contraindications.",
+      "answer": "d",
+      "answerText": "d) Mentum anterior, +3 station, cervix completely dilated, membranes ruptured",
+      "justification": "Forceps can be applied to mentum-anterior face presentation when the cervix is fully dilated, membranes ruptured, and station is low.",
       "type": "mcq"
     },
     {
@@ -8713,9 +8713,9 @@ const QUESTIONS_DATA = {
           "text": "One week"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Three weeks",
-      "justification": "* (Same as Q33/75.)",
+      "answer": "c",
+      "answerText": "c) Two weeks",
+      "justification": "The postpartum uterus usually becomes a pelvic organ by about two weeks.",
       "type": "mcq"
     },
     {
@@ -8841,9 +8841,9 @@ const QUESTIONS_DATA = {
           "text": "Use of epidural analgesia for pain relief"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Ventouse delivery in the second stage of labor if delivery does not occur in half hour",
-      "justification": "* (Same as Q28/48.) Mitral stenosis — avoid ergometrine.",
+      "answer": "c",
+      "answerText": "c) Use of ergometrine in the third stage of labor",
+      "justification": "Ergometrine should be avoided in mitral stenosis/heart disease because it increases venous return and can precipitate pulmonary edema.",
       "type": "mcq"
     },
     {
@@ -9065,8 +9065,8 @@ const QUESTIONS_DATA = {
           "text": "Abruptio placenta"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "e",
+      "answerText": "e) Abruptio placenta",
       "justification": "* Hypertensive patient with abdominal pain, vaginal bleeding, loss of fetal movement, hypertonic uterus, absent FHS = classic severe abruption.",
       "type": "mcq"
     },
@@ -9129,8 +9129,8 @@ const QUESTIONS_DATA = {
           "text": "14-18 weeks"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "c",
+      "answerText": "c) 11-14 weeks",
       "justification": "* Best time to determine chorionicity in twins is first trimester (11–14 weeks) when the membrane is clearly visible at the nuchal translucency scan.",
       "type": "mcq"
     },
@@ -9289,9 +9289,9 @@ const QUESTIONS_DATA = {
           "text": "Direct oxytocin injection after delivery of the shoulders"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Immediate cutting and cord clamping",
-      "justification": "* (Same as Q18/54.) Delayed cord clamping preferred.",
+      "answer": "e",
+      "answerText": "e) Direct oxytocin injection after delivery of the shoulders",
+      "justification": "Direct oxytocin injection after delivery of the shoulders is not a component of active management of the third stage.",
       "type": "mcq"
     },
     {
@@ -9353,9 +9353,9 @@ const QUESTIONS_DATA = {
           "text": "Brow"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Vertex",
-      "justification": "* (Same as Q16.) Brow presentation requires C-section.",
+      "answer": "e",
+      "answerText": "e) Brow",
+      "justification": "Persistent brow presentation generally requires cesarean delivery.",
       "type": "mcq"
     },
     {
@@ -9417,8 +9417,8 @@ const QUESTIONS_DATA = {
           "text": "No intervention; labor is progressing normally"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "e",
+      "answerText": "e) No intervention; labor is progressing normally",
       "justification": "* Progress from 3 cm to 5 cm in 1 hour in active labor is normal (≥1 cm/hr). No augmentation needed.",
       "type": "mcq"
     },
@@ -9481,9 +9481,9 @@ const QUESTIONS_DATA = {
           "text": "11 cm"
         }
       ],
-      "answer": "d",
-      "answerText": "d) 9 cm",
-      "justification": "* (Same as Q19/50.)",
+      "answer": "c",
+      "answerText": "c) 9.5 cm",
+      "justification": "The suboccipito-bregmatic diameter is 9.5 cm.",
       "type": "mcq"
     },
     {
@@ -9509,8 +9509,8 @@ const QUESTIONS_DATA = {
           "text": "Knee presentation"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "a",
+      "answerText": "a) Frank",
       "justification": "* Hips flexed, knees extended = frank breech.",
       "type": "mcq"
     },
@@ -9541,9 +9541,9 @@ const QUESTIONS_DATA = {
           "text": "Occurs between upper and lower uterine segment"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Associated with maternal dehydration",
-      "justification": "* (Same as Q51/98.)",
+      "answer": "c",
+      "answerText": "c) Can be relieved by anesthesia",
+      "justification": "A pathological retraction ring cannot be relieved by anesthesia; a constriction ring may be relieved by anesthesia.",
       "type": "mcq"
     },
     {
@@ -9661,9 +9661,9 @@ const QUESTIONS_DATA = {
           "text": "Fetal distress"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Fresh vaginal bleeding",
-      "justification": "* (Same as Q32/72/111.)",
+      "answer": "d",
+      "answerText": "d) Fetal distress",
+      "justification": "Fetal heart rate abnormality is the common earliest warning sign of uterine scar rupture during TOLAC.",
       "type": "mcq"
     },
     {
@@ -9689,9 +9689,9 @@ const QUESTIONS_DATA = {
           "text": "Alba, serosa, rubra"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Alba, mucosa, serosa",
-      "justification": "* (Same as Q35/78.)",
+      "answer": "b",
+      "answerText": "b) Rubra, serosa, alba",
+      "justification": "Lochia progresses rubra, serosa, then alba.",
       "type": "mcq"
     },
     {
@@ -9745,9 +9745,9 @@ const QUESTIONS_DATA = {
           "text": "Persistent mento posterior"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Maternal heart disease",
-      "justification": "* (Same as Q38/76.)",
+      "answer": "d",
+      "answerText": "d) Persistent mento posterior",
+      "justification": "Persistent mento-posterior face presentation is a contraindication to forceps delivery.",
       "type": "mcq"
     },
     {
@@ -9773,9 +9773,9 @@ const QUESTIONS_DATA = {
           "text": "Persistent occipito posterior position"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Persistent occipito posterior position",
-      "justification": "* (Same as Q34/80.)",
+      "answer": "b",
+      "answerText": "b) Preterm labor",
+      "justification": "Vacuum extraction is contraindicated in preterm labor because of fetal cranial injury risk.",
       "type": "mcq"
     },
     {
@@ -9805,9 +9805,9 @@ const QUESTIONS_DATA = {
           "text": "thyroid function test"
         }
       ],
-      "answer": "c",
-      "answerText": "c) testing for antiphospholipid syndrome",
-      "justification": "* Creatinine clearance is not part of recurrent pregnancy loss workup. Standard: TSH, antiphospholipid antibodies, karyotyping, uterine anatomy evaluation.",
+      "answer": "d",
+      "answerText": "d) testing for TORCH",
+      "justification": "TORCH testing is not routinely ordered for recurrent early pregnancy loss; APS testing is indicated.",
       "type": "mcq"
     },
     {
@@ -9933,9 +9933,9 @@ const QUESTIONS_DATA = {
           "text": "iron deficiency anemia"
         }
       ],
-      "answer": "a",
-      "answerText": "a) folate deficiency",
-      "justification": "* (Same as Q30/41/117.)",
+      "answer": "b",
+      "answerText": "b) thalassemia",
+      "justification": "Microcytic anemia with normal iron stores is most consistent with thalassemia, not folate deficiency.",
       "type": "mcq"
     },
     {
@@ -9965,8 +9965,8 @@ const QUESTIONS_DATA = {
           "text": "Qualitative beta human chorionic gonadotropin (hCG) and complete blood count (CBC)"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "c",
+      "answerText": "c) Quantitative B-hCG, then U/S",
       "justification": "* (Same as Q49.)",
       "type": "mcq"
     },
@@ -10157,8 +10157,8 @@ const QUESTIONS_DATA = {
           "text": "Placenta previa"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "d",
+      "answerText": "d) Abruptio placenta",
       "justification": "* (Same as Q125.)",
       "type": "mcq"
     },
@@ -10253,8 +10253,8 @@ const QUESTIONS_DATA = {
           "text": "Ritodrine"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "a",
+      "answerText": "a) Phenobarbitone",
       "justification": "* Phenobarbitone is an anticonvulsant/barbiturate, NOT a tocolytic. Ritodrine (beta-agonist), indomethacin (NSAID), nifedipine (CCB), and MgSO4 are tocolytics.",
       "type": "mcq"
     },
@@ -10317,9 +10317,9 @@ const QUESTIONS_DATA = {
           "text": "Stage I"
         }
       ],
-      "answer": "e",
-      "answerText": "e) Stage I",
-      "justification": "* (Same as Q53/101.)",
+      "answer": "a",
+      "answerText": "a) Stage II",
+      "justification": "Full cervical dilatation with bearing down is the second stage of labor.",
       "type": "mcq"
     },
     {
@@ -10377,9 +10377,9 @@ const QUESTIONS_DATA = {
           "text": "Can be felt"
         }
       ],
-      "answer": "d",
-      "answerText": "d) May be associated with intrauterine fetal death",
-      "justification": "* (Same as Q51/98/140.)",
+      "answer": "a",
+      "answerText": "a) Can be relieved by anesthesia",
+      "justification": "A pathological retraction ring cannot be relieved by anesthesia; a constriction ring may be relieved by anesthesia.",
       "type": "mcq"
     },
     {
@@ -10409,9 +10409,9 @@ const QUESTIONS_DATA = {
           "text": "More common in multipara"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Thigh extended, knee extended",
-      "justification": "* (Same as Q12/99.) Frank breech definition.",
+      "answer": "b",
+      "answerText": "b) Thigh flexed, knee extended",
+      "justification": "Frank breech has flexed hips and extended knees.",
       "type": "mcq"
     },
     {
@@ -10441,8 +10441,8 @@ const QUESTIONS_DATA = {
           "text": "Cesarean section"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "b",
+      "answerText": "b) Expectant management",
       "justification": "* Mento-anterior face presentation with adequate progress — allow labor to continue. (Same as Q97.)",
       "type": "mcq"
     },
@@ -10505,9 +10505,9 @@ const QUESTIONS_DATA = {
           "text": "Burns Marshall"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Jaw flexion shoulder traction",
-      "justification": "* (Same as Q14/102.) Lovset is for shoulders, not the aftercoming head.",
+      "answer": "c",
+      "answerText": "c) Lovset maneuver",
+      "justification": "Lovset maneuver is for delivery of the shoulders/arms in breech, not the aftercoming head.",
       "type": "mcq"
     },
     {
@@ -10537,9 +10537,9 @@ const QUESTIONS_DATA = {
           "text": "Localized over one bone"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Well defined edges",
-      "justification": "* (Same as Q31/74/107.)",
+      "answer": "b",
+      "answerText": "b) Disappears within two days",
+      "justification": "Cephalohematoma is limited by sutures, has normal overlying skin, appears after birth, and resolves over weeks, not two days.",
       "type": "mcq"
     },
     {
@@ -10597,9 +10597,9 @@ const QUESTIONS_DATA = {
           "text": "Two weeks"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Three weeks",
-      "justification": "* (Same as Q33/75/114.)",
+      "answer": "d",
+      "answerText": "d) Two weeks",
+      "justification": "The postpartum uterus usually becomes a pelvic organ by about two weeks.",
       "type": "mcq"
     },
     {
@@ -10661,9 +10661,9 @@ const QUESTIONS_DATA = {
           "text": "Severe chorioamnionitis"
         }
       ],
-      "answer": "e",
-      "answerText": "Answer: e) Severe chorioamnionitis",
-      "justification": "* Severe chorioamnionitis is a contraindication to cervical cerclage (increases risk of ascending infection).",
+      "answer": "b",
+      "answerText": "b) Severe abdominal adhesions during CS",
+      "justification": "Severe abdominal adhesions are not an indication for cesarean hysterectomy.",
       "type": "mcq"
     },
     {
@@ -10841,8 +10841,8 @@ const QUESTIONS_DATA = {
           "text": "After heavy lunch"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "b",
+      "answerText": "b) Inferior vena cava compression",
       "justification": "* (Same as Q123.)",
       "type": "mcq"
     },
@@ -10869,9 +10869,9 @@ const QUESTIONS_DATA = {
           "text": "Uterine soufflé"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Umbilical soufflé",
-      "justification": "* (Same as Q87.) Not a sure sign of pregnancy.",
+      "answer": "d",
+      "answerText": "d) Uterine soufflé",
+      "justification": "Uterine souffle is a maternal/probable sign, not a sure sign of pregnancy.",
       "type": "mcq"
     },
     {
@@ -11057,9 +11057,9 @@ const QUESTIONS_DATA = {
           "text": "Forceps delivery"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Mauriceau Smillie Veit technique",
-      "justification": "* (Same as Q14/102/171.)",
+      "answer": "c",
+      "answerText": "c) Lovset maneuver",
+      "justification": "Lovset maneuver is for delivery of the shoulders/arms in breech, not the aftercoming head.",
       "type": "mcq"
     },
     {
@@ -11121,9 +11121,9 @@ const QUESTIONS_DATA = {
           "text": "May be associated with intrauterine fetal death"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Occurs between upper and lower uterine segment",
-      "justification": "* (Same as Q51/98/140/167.)",
+      "answer": "b",
+      "answerText": "b) Can be relieved by anesthesia",
+      "justification": "A pathological retraction ring cannot be relieved by anesthesia; a constriction ring may be relieved by anesthesia.",
       "type": "mcq"
     },
     {
@@ -11185,9 +11185,9 @@ const QUESTIONS_DATA = {
           "text": "Thigh flexed, knee extended"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Both are flexed",
-      "justification": "* (Same as Q12/99/168.) Frank breech.",
+      "answer": "e",
+      "answerText": "e) Thigh flexed, knee extended",
+      "justification": "Frank breech has flexed hips and extended knees.",
       "type": "mcq"
     },
     {
@@ -11281,9 +11281,9 @@ const QUESTIONS_DATA = {
           "text": "Incomplete abortion"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Inevitable abortion",
-      "justification": "* (Same as Q109.)",
+      "answer": "a",
+      "answerText": "a) Cervical ripening",
+      "justification": "Ergometrine is not used for cervical ripening.",
       "type": "mcq"
     },
     {
@@ -11313,9 +11313,9 @@ const QUESTIONS_DATA = {
           "text": "Normal overlying skin"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Localized over one bone",
-      "justification": "* (Same as Q31/74/107/172.)",
+      "answer": "c",
+      "answerText": "c) Disappears within two days",
+      "justification": "Cephalohematoma is limited by sutures, has normal overlying skin, appears after birth, and resolves over weeks, not two days.",
       "type": "mcq"
     },
     {
@@ -11345,9 +11345,9 @@ const QUESTIONS_DATA = {
           "text": "Severe continuous abdominal pain"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Maternal tachycardia",
-      "justification": "* (Same as Q32/72/111/144/177.)",
+      "answer": "d",
+      "answerText": "d) Fetal distress",
+      "justification": "Fetal heart rate abnormality is the common earliest warning sign of uterine scar rupture during TOLAC.",
       "type": "mcq"
     },
     {
@@ -11533,9 +11533,9 @@ const QUESTIONS_DATA = {
           "text": "Have different blood groups"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Accounts for 20% of twin pregnancies",
-      "justification": "* (Same as Q65/91.) Monozygotic twins have same blood group (though fingerprints differ).",
+      "answer": "e",
+      "answerText": "e) Have different blood groups",
+      "justification": "Monozygotic twins usually have the same blood group; different blood groups is the EXCEPT statement.",
       "type": "mcq"
     },
     {
@@ -11565,9 +11565,9 @@ const QUESTIONS_DATA = {
           "text": "Mc-Robert's position"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Episiotomy",
-      "justification": "* (Same as Q66/92.)",
+      "answer": "a",
+      "answerText": "a) Fundal pressure",
+      "justification": "Fundal pressure is not a recommended shoulder dystocia maneuver.",
       "type": "mcq"
     },
     {
@@ -11597,9 +11597,9 @@ const QUESTIONS_DATA = {
           "text": "Absent kidneys"
         }
       ],
-      "answer": "b",
-      "answerText": "b) IUGR",
-      "justification": "* (Same as Q69/89.)",
+      "answer": "a",
+      "answerText": "a) Duodenal atresia",
+      "justification": "Duodenal atresia can cause polyhydramnios by impaired fetal swallowing/intestinal obstruction.",
       "type": "mcq"
     },
     {
@@ -11629,9 +11629,9 @@ const QUESTIONS_DATA = {
           "text": "Fetal heart accelerations during uterine contractions"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Three heart rate accelerations are noted in 30 minutes",
-      "justification": "* (Same as Q63/90.)",
+      "answer": "c",
+      "answerText": "c) Two fetal heart rate accelerations are noted in 20 minutes",
+      "justification": "A reactive NST requires two qualifying fetal heart rate accelerations in 20 minutes.",
       "type": "mcq"
     },
     {
@@ -11661,9 +11661,9 @@ const QUESTIONS_DATA = {
           "text": "Rubella"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Pneumococcus",
-      "justification": "* (Same as Q96.)",
+      "answer": "e",
+      "answerText": "e) Rubella",
+      "justification": "Live attenuated rubella vaccine is contraindicated in pregnancy.",
       "type": "mcq"
     },
     {
@@ -11809,8 +11809,8 @@ const QUESTIONS_DATA = {
           "text": "Administer tocolytics"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "a",
+      "answerText": "a) Administer antibiotics",
       "justification": "* (Same as Q10/47/130.)",
       "type": "mcq"
     },
@@ -11865,9 +11865,9 @@ const QUESTIONS_DATA = {
           "text": "Perform laparoscopic examination"
         }
       ],
-      "answer": "a",
-      "answerText": "Answer: a) Repeat ultrasound scan after 7 days",
-      "justification": "* Same as Q81 — pregnancy of unknown location: repeat scan in 7 days.",
+      "answer": "c",
+      "answerText": "c) Perform two serum beta HCG tests 48 hours apart",
+      "justification": "Stable pregnancy of unknown location is evaluated with serial quantitative beta-hCG measurements.",
       "type": "mcq"
     },
     {
@@ -11893,9 +11893,9 @@ const QUESTIONS_DATA = {
           "text": "Uterine soufflé"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Auscultation of fetal heart sounds (FIHS)",
-      "justification": "* (Same as Q87/183.)",
+      "answer": "d",
+      "answerText": "d) Uterine soufflé",
+      "justification": "Uterine souffle is a maternal/probable sign, not a sure sign of pregnancy.",
       "type": "mcq"
     },
     {
@@ -12089,9 +12089,9 @@ const QUESTIONS_DATA = {
           "text": "Perform laparoscopic salpingectomy"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Treat with intramuscular methyl ergometrine",
-      "justification": "* (Same as Q59.) Ectopic pregnancy suitable for medical management.",
+      "answer": "b",
+      "answerText": "b) Treat with intramuscular methotrexate",
+      "justification": "Stable unruptured ectopic pregnancy with small adnexal mass and hCG 2200 is suitable for methotrexate.",
       "type": "mcq"
     },
     {
@@ -12173,9 +12173,9 @@ const QUESTIONS_DATA = {
           "text": "Increased alveolar residual volume"
         }
       ],
-      "answer": "b",
-      "answerText": "b) Increased cardiac output",
-      "justification": "* (Same as Q55.) Residual volume decreases, not increases.",
+      "answer": "d",
+      "answerText": "d) Increased alveolar residual volume",
+      "justification": "Pregnancy increases fibrinogen, cardiac output, and GFR; residual volume does not increase.",
       "type": "mcq"
     },
     {
@@ -12201,9 +12201,9 @@ const QUESTIONS_DATA = {
           "text": "It is a soft blowing systolic murmur heard on the sides of the pregnant uterus"
         }
       ],
-      "answer": "d",
-      "answerText": "d) It is a soft blowing systolic murmur heard on the sides of the pregnant uterus",
-      "justification": "* (Same as Q62.) Uterine soufflé is due to uterine (not umbilical) artery flow.",
+      "answer": "b",
+      "answerText": "b) It is due to increased blood flow through the umbilical artery",
+      "justification": "Uterine souffle is maternal uterine blood flow; umbilical/funic souffle is fetal cord flow.",
       "type": "mcq"
     },
     {
@@ -12285,8 +12285,8 @@ const QUESTIONS_DATA = {
           "text": "Vasa previa"
         }
       ],
-      "answer": null,
-      "answerText": null,
+      "answer": "a",
+      "answerText": "a) Abruptio placenta",
       "justification": "* (Same as Q125/160.)",
       "type": "mcq"
     },
@@ -12801,9 +12801,9 @@ const QUESTIONS_DATA = {
           "text": "Allows widening of the birth canal"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Allows widening of the birth canal",
-      "justification": "* (Same as Q36/77/141.)",
+      "answer": "a",
+      "answerText": "a) Involvement of the anal sphincter is classified as 4th degree perineal tear",
+      "justification": "Anal sphincter involvement is a third-degree tear; fourth-degree involves rectal mucosa.",
       "type": "mcq"
     },
     {
@@ -12861,9 +12861,9 @@ const QUESTIONS_DATA = {
           "text": "Persistent mento posterior"
         }
       ],
-      "answer": "c",
-      "answerText": "c) Deep transverse arrest",
-      "justification": "* (Same as Q38/76/147.)",
+      "answer": "d",
+      "answerText": "d) Persistent mento posterior",
+      "justification": "Persistent mento-posterior face presentation is a contraindication to forceps delivery.",
       "type": "mcq"
     },
     {
@@ -12893,9 +12893,9 @@ const QUESTIONS_DATA = {
           "text": "Operable carcinoma of the cervix during pregnancy"
         }
       ],
-      "answer": "d",
-      "answerText": "d) Uncontrolled postpartum hemorrhage",
-      "justification": "* (Same as Q79/142.) Couvelaire uterus alone is NOT an indication for cesarean hysterectomy.",
+      "answer": "c",
+      "answerText": "c) The mere presence of couvelaire uterus",
+      "justification": "Mere presence of Couvelaire uterus is not by itself an indication for cesarean hysterectomy.",
       "type": "mcq"
     },
     {
@@ -13013,9 +13013,9 @@ const QUESTIONS_DATA = {
           "text": "First day of last menstrual period (LMP) + 9 months + 1 week"
         }
       ],
-      "answer": "a",
-      "answerText": null,
-      "justification": "First day of LMP + 8 months + 1 week — Naegele's rule: LMP + 7 days − 3 months. Equivalent to LMP + 9 months + 7 days (or + 8 months + 1 week in some textbooks).",
+      "answer": "e",
+      "answerText": "e) First day of last menstrual period (LMP) + 9 months + 1 week",
+      "justification": "Naegele rule uses the first day of LMP plus 9 months plus 7 days.",
       "type": "mcq"
     },
     {
@@ -13473,9 +13473,9 @@ const QUESTIONS_DATA = {
           "text": "First day of last menstrual period (LMP) + 9 months + 1 week"
         }
       ],
-      "answer": "a",
-      "answerText": null,
-      "justification": "First day of LMP + 3 months + 1 week — Another way to express Naegele's rule is LMP + 3 months + 1 week (since 9 months − 6 months of backward calculation = 3 months + 1 week).",
+      "answer": "e",
+      "answerText": "e) First day of last menstrual period (LMP) + 9 months + 1 week",
+      "justification": "Naegele rule uses the first day of LMP plus 9 months plus 7 days.",
       "type": "mcq"
     },
     {
@@ -14240,7 +14240,7 @@ const QUESTIONS_DATA = {
       "answer": null,
       "answerText": null,
       "justification": "a, c, d — Iron supplements with orange juice (vitamin C enhances absorption), lean meats/eggs (heme iron), and dark green leafy vegetables (non-heme iron) are recommended. Option b (20 mg/day) is too low for treatment-dose iron.",
-      "type": "mcq"
+      "type": "multi_select"
     },
     {
       "id": "other_q45",
@@ -15289,9 +15289,9 @@ const QUESTIONS_DATA = {
           "text": "Palpation of fetal movements"
         }
       ],
-      "answer": "d",
-      "answerText": null,
-      "justification": "Umbilical soufflé — A uterine soufflé is heard over the uterine vessels; an umbilical soufflé is the sound of fetal blood flowing through the umbilical arteries, synchronous with the FHR.",
+      "answer": "c",
+      "answerText": "c) Uterine soufflé",
+      "justification": "Uterine souffle is a maternal/probable sign, not a sure sign of pregnancy.",
       "type": "mcq"
     },
     {
@@ -15449,9 +15449,9 @@ const QUESTIONS_DATA = {
           "text": "Palpation of fetal movements"
         }
       ],
-      "answer": "d",
-      "answerText": null,
-      "justification": "Umbilical soufflé — Same as Q77 — the soufflé heard over the fetal abdomen that is synchronous with the FHS is the umbilical soufflé.",
+      "answer": "c",
+      "answerText": "c) Uterine soufflé",
+      "justification": "Uterine souffle is a maternal/probable sign, not a sure sign of pregnancy.",
       "type": "mcq"
     },
     {
@@ -15723,19 +15723,31 @@ const QUESTIONS_DATA = {
         {
           "label": "b",
           "text": "False"
-        },
-        {
-          "label": "c",
-          "text": "True"
-        },
-        {
-          "label": "d",
-          "text": "False Non-breastfeeding women postpartum should wait three months before beginning contraception."
         }
       ],
       "answer": "b",
       "answerText": null,
       "justification": "False — Progestin-only contraceptives (mini-pill, DMPA, implant) do not negatively affect milk production; only estrogen-containing methods do.",
+      "type": "mcq"
+    },
+    {
+      "id": "other_q92b",
+      "number": 92.1,
+      "topic": "other",
+      "question": "Non-breastfeeding women postpartum should wait three months before beginning contraception.",
+      "options": [
+        {
+          "label": "a",
+          "text": "True"
+        },
+        {
+          "label": "b",
+          "text": "False"
+        }
+      ],
+      "answer": "b",
+      "answerText": null,
+      "justification": "False — Non-breastfeeding postpartum women do not need to wait three months before starting contraception; method timing depends on the contraceptive type and medical eligibility.",
       "type": "mcq"
     },
     {
@@ -15857,9 +15869,9 @@ const QUESTIONS_DATA = {
           "text": "First day of last menstrual period (LMP) + 9 months + 1 week"
         }
       ],
-      "answer": "a",
-      "answerText": null,
-      "justification": "First day of LMP + 8 months + 1 week — Same as Q3 — the alternative expression of Naegele's rule.",
+      "answer": "e",
+      "answerText": "e) First day of last menstrual period (LMP) + 9 months + 1 week",
+      "justification": "Naegele rule uses the first day of LMP plus 9 months plus 7 days.",
       "type": "mcq"
     },
     {
@@ -16233,9 +16245,9 @@ const QUESTIONS_DATA = {
           "text": "Uterine soufflé"
         }
       ],
-      "answer": "c",
-      "answerText": null,
-      "justification": "Umbilical soufflé — The normal soufflé heard over the fetal abdomen at the same rate as FHS is the umbilical soufflé (fetal blood flow in umbilical vessels).",
+      "answer": "d",
+      "answerText": "d) Uterine soufflé",
+      "justification": "Uterine souffle is a maternal/probable sign, not a sure sign of pregnancy.",
       "type": "mcq"
     },
     {
@@ -18066,12 +18078,44 @@ const QUESTIONS_DATA = {
         },
         {
           "label": "e",
-          "text": "Chorion In case of diabetes mellitus with pregnancy:"
+          "text": "Chorion"
         }
       ],
-      "answer": null,
+      "answer": "a",
       "answerText": null,
-      "justification": "f) There is increased incidence of hydramnios and preeclampsia — Multiple pregnancy (twins) is associated with increased incidence of both polyhydramnios and preeclampsia.",
+      "justification": "Decidua — Decidua is maternal endometrium, while chorion, allantois, yolk sac, and connecting stalk are fetal/extraembryonic structures.",
+      "type": "mcq"
+    },
+    {
+      "id": "other_q170b",
+      "number": 170.1,
+      "topic": "other",
+      "question": "In case of diabetes mellitus with pregnancy:",
+      "options": [
+        {
+          "label": "a",
+          "text": "The best screening test is urine glucose"
+        },
+        {
+          "label": "b",
+          "text": "Oral hypoglycemics are preferred to insulin therapy"
+        },
+        {
+          "label": "c",
+          "text": "Insulin requirement decreases as pregnancy advances"
+        },
+        {
+          "label": "d",
+          "text": "Congenital malformations are unrelated to diabetic control"
+        },
+        {
+          "label": "e",
+          "text": "There is increased incidence of hydramnios and preeclampsia"
+        }
+      ],
+      "answer": "e",
+      "answerText": null,
+      "justification": "There is increased incidence of hydramnios and preeclampsia — Diabetes in pregnancy increases the risk of polyhydramnios and preeclampsia.",
       "type": "mcq"
     },
     {
@@ -18130,12 +18174,44 @@ const QUESTIONS_DATA = {
         },
         {
           "label": "e",
-          "text": "Serum prolactin more than 20 ng/dl All of the physiological changes during pregnancy except:"
+          "text": "Serum prolactin more than 20 ng/dl"
         }
       ],
       "answer": "a",
       "answerText": null,
       "justification": "Beta HCG more than 2000 IU/l with no gestational sac in the uterus by transvaginal US — This is the discriminatory zone criterion for ectopic pregnancy diagnosis.",
+      "type": "mcq"
+    },
+    {
+      "id": "other_q172b",
+      "number": 172.1,
+      "topic": "other",
+      "question": "All of the physiological changes during pregnancy except:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Increased fibrinogen"
+        },
+        {
+          "label": "b",
+          "text": "Decreased thyroxin binding globulin"
+        },
+        {
+          "label": "c",
+          "text": "Increased tidal volume"
+        },
+        {
+          "label": "d",
+          "text": "Increased glomerular filtration rate"
+        },
+        {
+          "label": "e",
+          "text": "Increased stroke volume"
+        }
+      ],
+      "answer": "b",
+      "answerText": null,
+      "justification": "Decreased thyroxin binding globulin — Thyroxin-binding globulin increases during pregnancy; fibrinogen, tidal volume, GFR, and stroke volume also increase.",
       "type": "mcq"
     },
     {
@@ -18645,9 +18721,9 @@ const QUESTIONS_DATA = {
           "text": "For delivery of the legs in breech presentation"
         }
       ],
-      "answer": "b",
-      "answerText": null,
-      "justification": "For delivery of the head in normal labor — The Ritgen manoeuvre controls extension of the fetal head during vertex delivery through the perineum.",
+      "answer": "a",
+      "answerText": "a) For delivery of the head in normal labor",
+      "justification": "Ritgen maneuver assists controlled delivery of the fetal head in normal labor.",
       "type": "mcq"
     },
     {
@@ -20508,15 +20584,23 @@ const QUESTIONS_DATA = {
       "number": 2,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "The following statements are related to cord prolapse except A) Common in malpresentation cord D) High risk of fetal distress",
+      "question": "The following statements are related to cord prolapse except",
       "options": [
+        {
+          "label": "a",
+          "text": "Common in malpresentation"
+        },
         {
           "label": "b",
           "text": "A loop of cord may be brought down to confirm the pulsation"
         },
         {
           "label": "c",
-          "text": "One of the first aid management is to lift the presenting part of the"
+          "text": "One of the first aid management is to lift the presenting part of the cord"
+        },
+        {
+          "label": "d",
+          "text": "High risk of fetal distress"
         },
         {
           "label": "e",
@@ -20533,8 +20617,12 @@ const QUESTIONS_DATA = {
       "number": 3,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "A 39 year-old pregnant lady with gestational age of 38 weeks. CTG monitoring revealed transient decrease in fetal heart rate after beginning of uterine contractions and subsided after ending of the contractions.What is your diagnosis A) Early deceleration",
+      "question": "A 39 year-old pregnant lady with gestational age of 38 weeks. CTG monitoring revealed transient decrease in fetal heart rate after beginning of uterine contractions and subsided after ending of the contractions. What is your diagnosis?",
       "options": [
+        {
+          "label": "a",
+          "text": "Early deceleration"
+        },
         {
           "label": "b",
           "text": "Late deceleration"
@@ -20562,8 +20650,12 @@ const QUESTIONS_DATA = {
       "number": 4,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "The oxytocin infusion is contraindicated in all except A) Obstructed labour",
+      "question": "The oxytocin infusion is contraindicated in all except",
       "options": [
+        {
+          "label": "a",
+          "text": "Obstructed labour"
+        },
         {
           "label": "b",
           "text": "Trial of labour"
@@ -20591,8 +20683,12 @@ const QUESTIONS_DATA = {
       "number": 5,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "A 25 year-old pregnant lady at 39weeks of gestation. During labor, a hand is found beside the head in cephalic presentation. What is your diagnosis A) Occipito-anterior position",
+      "question": "A 25 year-old pregnant lady at 39 weeks of gestation. During labor, a hand is found beside the head in cephalic presentation. What is your diagnosis?",
       "options": [
+        {
+          "label": "a",
+          "text": "Occipito-anterior position"
+        },
         {
           "label": "b",
           "text": "occipito-posterior position"
@@ -20636,7 +20732,7 @@ const QUESTIONS_DATA = {
         },
         {
           "label": "d",
-          "text": ".0"
+          "text": "0"
         },
         {
           "label": "e",
@@ -20653,8 +20749,12 @@ const QUESTIONS_DATA = {
       "number": 7,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "Vaginal examination during pregnancy is contraindicated in A) Carcinoma of the cervix",
+      "question": "Vaginal examination during pregnancy is contraindicated in",
       "options": [
+        {
+          "label": "a",
+          "text": "Carcinoma of the cervix"
+        },
         {
           "label": "b",
           "text": "Gonorrhea"
@@ -20682,8 +20782,12 @@ const QUESTIONS_DATA = {
       "number": 8,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "All of the following are components of biophysical profile except A) Oxytocin challenge test",
+      "question": "All of the following are components of biophysical profile except",
       "options": [
+        {
+          "label": "a",
+          "text": "Oxytocin challenge test"
+        },
         {
           "label": "b",
           "text": "Non stress test"
@@ -20744,8 +20848,12 @@ const QUESTIONS_DATA = {
       "number": 10,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "A woman with 20 weeks gestation presents with vaginal bleeding. On speculum examination, the cervical os is open but no products have come out. The diagnosis is A) Inevitable abortion",
+      "question": "A woman with 20 weeks gestation presents with vaginal bleeding. On speculum examination, the cervical os is open but no products have come out. The diagnosis is",
       "options": [
+        {
+          "label": "a",
+          "text": "Inevitable abortion"
+        },
         {
           "label": "b",
           "text": "Missed abortion"
@@ -20773,8 +20881,12 @@ const QUESTIONS_DATA = {
       "number": 11,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "With reference to fetal heart rates considered reactive when A) Twa fetal heart rate accelerations are noted in 20 minutes",
+      "question": "With reference to fetal heart rates, a non-stress test is considered reactive when",
       "options": [
+        {
+          "label": "a",
+          "text": "Two fetal heart rate accelerations are noted in 20 minutes"
+        },
         {
           "label": "b",
           "text": "One fetal heart rate acceleration is noted in 20 minutes"
@@ -20835,8 +20947,12 @@ const QUESTIONS_DATA = {
       "number": 13,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "Ligation of which artery can control postpartum hemorrhage A) Origin of internal iliac artery",
+      "question": "Ligation of which artery can control postpartum hemorrhage?",
       "options": [
+        {
+          "label": "a",
+          "text": "Origin of internal iliac artery"
+        },
         {
           "label": "b",
           "text": "Anterior division of internal iliac artery"
@@ -20864,8 +20980,12 @@ const QUESTIONS_DATA = {
       "number": 14,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "Folic acid supplement reduces the risk of A) Anencephaly",
+      "question": "Folic acid supplement reduces the risk of",
       "options": [
+        {
+          "label": "a",
+          "text": "Anencephaly"
+        },
         {
           "label": "b",
           "text": "Preeclampsia"
@@ -20893,8 +21013,12 @@ const QUESTIONS_DATA = {
       "number": 15,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "Preterm premature rupture of the membranes is most strictly defined as spontaneous rupture at any time prior to which of the following A) Fetal viability",
+      "question": "Preterm premature rupture of the membranes is most strictly defined as spontaneous rupture at any time prior to which of the following",
       "options": [
+        {
+          "label": "a",
+          "text": "Fetal viability"
+        },
         {
           "label": "b",
           "text": "Second stage of labor"
@@ -20922,8 +21046,12 @@ const QUESTIONS_DATA = {
       "number": 16,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "First trimester abortion is mostly due to A) Cervical insufficiency",
+      "question": "First trimester abortion is mostly due to",
       "options": [
+        {
+          "label": "a",
+          "text": "Cervical insufficiency"
+        },
         {
           "label": "b",
           "text": "Aneuploidy"
@@ -20984,8 +21112,12 @@ const QUESTIONS_DATA = {
       "number": 18,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "A woman complains of sudden onset of watery vaginal discharge at a period of amenorrhea 32 weeks. What is the first step in management A) Commence broad spectrum antibiotics",
+      "question": "A woman complains of sudden onset of watery vaginal discharge at a period of amenorrhea 32 weeks. What is the first step in management?",
       "options": [
+        {
+          "label": "a",
+          "text": "Commence broad spectrum antibiotics"
+        },
         {
           "label": "b",
           "text": "Commence corticosteroids"
@@ -21013,8 +21145,12 @@ const QUESTIONS_DATA = {
       "number": 19,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "Variable deceleration denotes A) Head compression",
+      "question": "Variable deceleration denotes",
       "options": [
+        {
+          "label": "a",
+          "text": "Head compression"
+        },
         {
           "label": "b",
           "text": "Cord compression"
@@ -21042,8 +21178,12 @@ const QUESTIONS_DATA = {
       "number": 20,
       "topic": "final_41",
       "section": "MCQs (Q9)",
-      "question": "Ventouse in second stage of labor is contraindicated in A) Persistent occipto posterior position ## III) Family Medicine Questions",
+      "question": "Ventouse in second stage of labor is contraindicated in",
       "options": [
+        {
+          "label": "a",
+          "text": "Persistent occipto posterior position"
+        },
         {
           "label": "b",
           "text": "Heart disease"
@@ -21231,13 +21371,13 @@ const QUESTIONS_DATA = {
     },
     "quizzes": {
       "label": "Quizzes",
-      "mcqCount": 252,
+      "mcqCount": 251,
       "totalCount": 252
     },
     "other": {
       "label": "Other",
-      "mcqCount": 247,
-      "totalCount": 247
+      "mcqCount": 249,
+      "totalCount": 250
     },
     "final_41": {
       "label": "Final 41",

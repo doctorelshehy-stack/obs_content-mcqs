@@ -581,8 +581,8 @@ const QUESTIONS_DATA = {
           "text": "Occipito-anterior"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Mento-anterior",
+      "answer": "c",
+      "answerText": "c) Occipito-posterior",
       "justification": null,
       "type": "mcq"
     },
@@ -1329,8 +1329,8 @@ const QUESTIONS_DATA = {
           "text": "Shoulder pain"
         }
       ],
-      "answer": "a",
-      "answerText": "a) Amenorrhea",
+      "answer": "b",
+      "answerText": "b) Abdominal pain",
       "justification": null,
       "type": "mcq"
     },
